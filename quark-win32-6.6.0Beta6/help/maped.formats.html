@@ -1,0 +1,223 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"  "http://www.w3.org/TR/html4/loose.dtd">
+<html lang="en">
+<head>
+  <title>Supported Map Formats</title>
+  <meta name="Description" content="QuArK Information Database - Page: 2.8.&nbsp;Supported Map Formats">
+  <meta name="Keywords" content="QuArK InfoBase Quake Army Knife QRK QKM Python PY Map Editor Hexen Heretic Half-Life Sin Kingpin Soldier-of-Fortune Star-Trek-Voyager Elite-Force">
+  <link rel=stylesheet href="standard.css" type="text/css">
+</head>
+
+<body>
+<a name="__top__"></a>
+<table width="100%" border=0 cellspacing=0>
+  <tr>
+    <td width=213>
+      <a target="_blank" href="http://quark.sourceforge.net/"><img src="quarkicon.png" width=213 height=90 border=0 alt="Go to QuArK Web Site"></a>
+    </td>
+    <td width="70%" align=center>
+      <div class="topheadline">Supported Map Formats</div>
+      <div class="sm">Updated&nbsp;07 Mar 2010</div>
+    </td>
+    <td width="30%" valign=bottom nowrap>
+      Upper&nbsp;levels:<br>-&nbsp;<a href="index.html">QuArK&nbsp;Information&nbsp;Base</a><br>-&nbsp;<a href="maped.html">2.&nbsp;Map&nbsp;editing</a><br>
+    </td>
+  </tr>
+</table>
+<table width="100%" border=0 cellspacing=0>
+  <tr class="headline">
+    <td width="99%">
+      <p class="headline">&nbsp;2.8.&nbsp;Supported Map Formats</p>
+    </td>
+    <td width="1%" align=right nowrap>
+      &nbsp;[&nbsp;<span class="navenable"><a href="maped.builderrors.console.html">Prev</a></span>&nbsp;-&nbsp;<span class="navenable"><a href="maped.html">Up</a></span>&nbsp;-&nbsp;<span class="navenable"><a href="adv.html">Next</a></span>&nbsp;]&nbsp;
+    </td>
+  </tr>
+</table>
+<table border=0 width="100%" cellspacing=10><tr><td><p>QuArK writes maps in a considerable range of formats, but also has
+the peculiarity of allowing (and indeed in certain ways promoting) the writing of
+faces with non-integer coordinates.  This is considered to be profoundly
+evil by some people, and can certainly cause problems, although I don't
+think it's always so bad (especially for example with non-structural brushes).
+At the least, it can create problems in using QuArK together with map
+editors that don't tolerate floating point coordinates well.
+</p>
+
+</td></tr></table>
+<br>
+
+<table width="100%" border=0 cellspacing=0>
+  <tr class="headline">
+    <td width="100%">
+      <p class="subheadline">&nbsp;Index</p>
+    </td>
+  </tr>
+</table>
+<ul class="index">
+  <li>- <a href="#floating">Floating Point Issues</a>&nbsp;<span class="added">(29 Dec 2002)</span>
+  <li>- <a href="#formats">Formats</a>&nbsp;<span class="added">(07 Mar 2010)</span>
+  <li>- <a href="#q62conv">Conversion from QuArK 6.2</a>&nbsp;<span class="added">(25 Jul 2009)</span>
+</ul>
+<br>
+
+
+<a name="floating"></a>
+  <table width="100%" border=0 cellspacing=0>
+    <tr class="headline">
+      <td>
+        <p class="item">&nbsp;Floating Point Issues</p>
+      </td>
+      <td align=right>
+        <font size=-2>tiglari&nbsp;-&nbsp;29 Dec 2002</font>
+      </td>
+      <td width="1%" align=right nowrap>
+        &nbsp;&nbsp;[&nbsp;<a href="#__top__">Top</a>&nbsp;]&nbsp;
+      </td>
+    </tr>
+  </table>
+  <table border=0 width="100%" cellspacing=10><tr><td>
+<p>In Quake-engine games, the faces of brushes are defined by three points, which can
+be located anywhere on the face of the plane, as long as they don't sit on one
+line (note especially: they do <strong>not</strong> have to be vertexes of the
+face, although they can be).  Early Quake editors and the build-tools required
+these points to have integer coordinates, but QuArK introduced floating point
+coordinates, which allow precise placement of rotated brushes, and are also
+necessary for its 'enhanced texture positioning' scheme, which provides more more
+flexible texture-positioning than the original 'Classic Quake' system.
+</p><p>Unfortunately, floating-point coordinates can also introduce various problem,
+especially in conjunction with build-tools that can't read them.  The way they
+were involved with enhanced texture positioning is particularly problematic, since
+repositioning textures involved moving the face-coordinates, and so could drag
+face vertices subtly and unfixably off grid, which tends to drives people crazy,
+whether or not it caused real problems.  And furthermore, build-tools that
+can't read floating point coordinates are very likely to have problems with maps
+written by QuArK, even if floating-point coordinate writing is suppressed (since
+the truncations shift the faces around, and thereby can cause leaks).
+</p><p>So QuArK 6.3 has a different internal representation for texture-scales than
+earlier versions (called 'tv6', since it involves a 'tv6' specific on faces
+that specifies 6 numbers), so that moving textures doesn't shift the face
+threepoints, and also has some tools for finding and fixing faces with
+non-integral threepoints.  The finder, on the search menu, is the 'Find
+Non-integral Threepoints' command, and will produce a list of faces with
+non-integral coordinates.  Then the fixer, on the commands menu, 'Integralize
+Selected Faces', will attempt to fix the selected faces automatically,
+by forcing threepoints that are slightly off-integer to integral values,
+and also coopting integral vertexes of the faces, if it can find enough.
+On exit, it leaves selected the faces it has fixed, so that they can be
+inspected (conveniently with 'Browse Multiple Selection' on the Selection
+menu) for bad effects on texture-scales, etc.  Then you can run the finder
+again to see the recalcitrant cases, and decide what to do about them by
+hand.
+</p><p>It is quite plausible that you might want to allow certain vertexes to
+be non-integral (for decorations, etc); if a group has a 'nonintegral'
+specific, the finder will ignore the nonintegral faces within it.
+</p><p>With these tools, and the 'Don't Write Floating Point Coordinates' map
+option, it will hopefully be possible to control floating point issues
+adequately.
+</p>
+
+  </td></tr></table>
+  <br>
+
+<a name="formats"></a>
+  <table width="100%" border=0 cellspacing=0>
+    <tr class="headline">
+      <td>
+        <p class="item">&nbsp;Formats</p>
+      </td>
+      <td align=right>
+        <font size=-2>tiglari&nbsp;-&nbsp;07 Mar 2010</font>
+      </td>
+      <td width="1%" align=right nowrap>
+        &nbsp;&nbsp;[&nbsp;<a href="#__top__">Top</a>&nbsp;]&nbsp;
+      </td>
+    </tr>
+  </table>
+  <table border=0 width="100%" cellspacing=10><tr><td>
+<p>Aside from the floating point issue, map formats have two aspects: features which
+are supported by particular games, such as texture-flags, etc, and features that
+are supported by particular buld-tools.  The first are controlled by a combination
+hard-coding in the QuArK exe and some not-easily-editable flags in the setup
+files, while the latter are selected in the `Output Map Format' dropdown box in
+the configuration section for each game.
+</p><p>The currently supported main types, choosable in the Output Map Format box,
+are:
+<UL>
+<LI>Classic Quake: the original, with hardcoded variants for Quake1/2/3,
+Hexen II, Sin.  Limited in the range of texture positioning and scaling
+it can code.
+</p><p><LI>Quark etp: a variant of Classic Quake in which the texture position and
+scaling is given by the face threepoints, with a `TX' code 1 or 2 to indicate
+whether the texture should be mirror-imaged or not.  This gives full
+flexibility in positioning textures, but makes essential use of floating-point
+face-coordinates, and therefore <I>may</I> be associated with
+some small errors in vertex positioning (it's not certain that this is
+really a problem in output maps).  The 'tx' versions of qbsp for Q1 and Q2,
+and Zoner's tools, have full support for etp; other tools may or may not
+handle it with various degrees of success.
+</p><p><LI>Valve 220: Valve's enhancement of Classic Quake.
+</p><p><LI>Brush Primitives: Id's enhancement of Classic Quake, for Q3 and RCTW
+(will probably be supported for any games that GtkRadiant comes to support).
+</UL>
+The configuration defaults are set for the build-tools recommended on the
+QuArK homepage; don't change them unless you have some idea what you are doing,
+or are experimenting in order to more closely attain this exalted state.
+</p><p>Two other format options you can teak in the Map|Options section of the
+config screen are whether or not to write comments, and whether or not
+to write floating-point coordinates in the map files.  QuArK normally writes
+a fair amount of information about brush-numbering etc. into maps; this may
+cause problems for some build-tools, so the first option suppresses it.
+The second option simply truncates the floating point coordinates, which can
+cause problems, although it again might be necessary to use in conjunction
+with certain build-tools.  So this option should probably only be used in
+conjunction with the floating-point control techniques discussed above, to
+suppress floating point coordinates in structurally important brushes.</p>
+  </td></tr></table>
+  <br>
+
+<a name="q62conv"></a>
+  <table width="100%" border=0 cellspacing=0>
+    <tr class="headline">
+      <td>
+        <p class="item">&nbsp;Conversion from QuArK 6.2</p>
+      </td>
+      <td align=right>
+        <font size=-2>tiglari&nbsp;-&nbsp;25 Jul 2009</font>
+      </td>
+      <td width="1%" align=right nowrap>
+        &nbsp;&nbsp;[&nbsp;<a href="#__top__">Top</a>&nbsp;]&nbsp;
+      </td>
+    </tr>
+  </table>
+  <table border=0 width="100%" cellspacing=10><tr><td>
+<p>Because the representation of texture scales in QuArK 6.3 is different from
+that of 6.2, some care should be taken with transferring projects.  First,
+make sure the project is backed up, then open it in 6.3 and make sure
+that the scales look correct, and that it builds correctly.  Then, as
+you further edit the map, faces that are operated on will shift their
+texture-representation to the new one, so keep an eye on things to make
+sure nothing is going wrong.  If problems occur, announce them to the
+<a target="_blank" href="http://quark.sourceforge.net/forums/">QuArK forum</a>, so we can figure out what has gone wrong.
+</p><p>QuArK 6.2 will not correctly read .qrk's and .qkm's written by QuArK 6.3,
+so migration to 6.3 is basically a one-way street (we could probably
+come up with a retrogression tool if one was really wanted, but
+no guarantees; 6.3 is supposed to be better!)
+</p>
+  </td></tr></table>
+  <br>
+
+<br>
+
+<table width="100%" border=0 cellspacing=0>
+  <tr class="headline">
+    <td width="99%" align=center>
+      <p class="sm">
+        Copyright (c) 2009, GNU General Public License by The QuArK (Quake Army Knife) Community - <a target="_blank" href="http://quark.sourceforge.net/">http://quark.sourceforge.net/</a><br>
+      </p>
+    </td>
+    <td width="1%" align=right nowrap>
+      &nbsp;[&nbsp;<span class="navenable"><a href="maped.builderrors.console.html">Prev</a></span>&nbsp;-&nbsp;<a href="#__top__">Top</a>&nbsp;-&nbsp;<span class="navenable"><a href="adv.html">Next</a></span>&nbsp;]&nbsp;
+    </td>
+  </tr>
+</table>
+</body>
+</html>

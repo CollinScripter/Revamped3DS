@@ -1,0 +1,283 @@
+QQRKSRC1
+{
+  QuArKProtected = "1"
+  Description = "HL Textures - Action Half-Life"
+
+//
+// Action Half-Life
+//
+  AHLTextures.qtx =
+  {
+    ToolBox = "Texture Browser..."
+    Root = "Action Half-Life Textures.qtxfolder"
+    HTML = "intro.texturebrowser.html"
+
+    t_ahl_actcity2:incl = { s = "action" d = "actcity2" h = "C" }
+    t_ahl_dreamteam:incl = { s = "action" d = "dreamteam" h = "C" }
+    t_ahl_heatmiser:incl = { s = "action" d = "heatmiser" h = "C" }
+    t_ahl_wikked:incl = { s = "action" d = "wikked" h = "C" }
+    t_ahl_prison:incl = { s = "action" d = "prison" h = "C" }
+    t_ahl_Axel:incl = { s = "action" d = "Axel" h = "C" }
+    t_ahl_Hondo1:incl = { s = "action" d = "Hondo1" h = "C" }
+
+    Action Half-Life Textures.qtxfolder =
+    {
+      actcity2.txlist =
+      {
+        16STEP.wl = {t_ahl_actcity2=!}
+        16STEPB.wl = {t_ahl_actcity2=!}
+        AD1.wl = {t_ahl_actcity2=!}
+        AD2.wl = {t_ahl_actcity2=!}
+        ASPHALT.wl = {t_ahl_actcity2=!}
+        BOARD.wl = {t_ahl_actcity2=!}
+        BOOKSLF1.wl = {t_ahl_actcity2=!}
+        BOOKSLFB.wl = {t_ahl_actcity2=!}
+        BRICK1_1.wl = {t_ahl_actcity2=!}
+        BRNWALL.wl = {t_ahl_actcity2=!}
+        BRNW_BTN.wl = {t_ahl_actcity2=!}
+        BRPLAIN.wl = {t_ahl_actcity2=!}
+        CASINO.wl = {t_ahl_actcity2=!}
+        CBOX1_1.wl = {t_ahl_actcity2=!}
+        CBOX2_1.wl = {t_ahl_actcity2=!}
+        CRFLOOR1.wl = {t_ahl_actcity2=!}
+        CRLITE.wl = {t_ahl_actcity2=!}
+        CZELSIGN.wl = {t_ahl_actcity2=!}
+        C_BRICK1.wl = {t_ahl_actcity2=!}
+        DOOR.wl = {t_ahl_actcity2=!}
+        DRAWERS.wl = {t_ahl_actcity2=!}
+        ELEVDOOR.wl = {t_ahl_actcity2=!}
+        ELEVDR.wl = {t_ahl_actcity2=!}
+        ELEVDR2.wl = {t_ahl_actcity2=!}
+        FLCARPET.wl = {t_ahl_actcity2=!}
+        FLWOOD.wl = {t_ahl_actcity2=!}
+        GBBRICKS.wl = {t_ahl_actcity2=!}
+        GRAFFITI.wl = {t_ahl_actcity2=!}
+        GRAYWL.wl = {t_ahl_actcity2=!}
+        GRND1.wl = {t_ahl_actcity2=!}
+        METBAR1.wl = {t_ahl_actcity2=!}
+        MOTEL.wl = {t_ahl_actcity2=!}
+        PAINTN.wl = {t_ahl_actcity2=!}
+        SIDEWLK1.wl = {t_ahl_actcity2=!}
+        STSIGN1.wl = {t_ahl_actcity2=!}
+        STSIGN2.wl = {t_ahl_actcity2=!}
+        STSIGN3.wl = {t_ahl_actcity2=!}
+        WALL1.wl = {t_ahl_actcity2=!}
+        WNDOW1.wl = {t_ahl_actcity2=!}
+        WNDOW1_CMT.wl = {t_ahl_actcity2=!}
+        WOOD3_1.wl = {t_ahl_actcity2=!}
+      }
+      dreamteam.txlist =
+      {
+        bunny1.wl = {t_ahl_dreamteam=!}
+        burger.wl = {t_ahl_dreamteam=!}
+        kit_sign.wl = {t_ahl_dreamteam=!}
+        pizza.wl = {t_ahl_dreamteam=!}
+        snowboard.wl = {t_ahl_dreamteam=!}
+        more.wl = {t_ahl_dreamteam=!}
+        preview.wl = {t_ahl_dreamteam=!}
+      }
+      heatmiser.txlist =
+      {
+        +0EYES.wl = {t_ahl_heatmiser=!}
+        +0HOTEL.wl = {t_ahl_heatmiser=!}
+        +1EYES.wl = {t_ahl_heatmiser=!}
+        +1HOTEL.wl = {t_ahl_heatmiser=!}
+        +2EYES.wl = {t_ahl_heatmiser=!}
+        +2HOTEL.wl = {t_ahl_heatmiser=!}
+        +3EYES.wl = {t_ahl_heatmiser=!}
+        +3HOTEL.wl = {t_ahl_heatmiser=!}
+        +4EYES.wl = {t_ahl_heatmiser=!}
+        +4HOTEL.wl = {t_ahl_heatmiser=!}
+        +5EYES.wl = {t_ahl_heatmiser=!}
+        +5HOTEL.wl = {t_ahl_heatmiser=!}
+        +6HOTEL.wl = {t_ahl_heatmiser=!}
+        ASIAN1.wl = {t_ahl_heatmiser=!}
+        ASIAN2.wl = {t_ahl_heatmiser=!}
+        ASIAN3.wl = {t_ahl_heatmiser=!}
+        BLACKLIGHT.wl = {t_ahl_heatmiser=!}
+        BLACKWALL.wl = {t_ahl_heatmiser=!}
+        BLINDS.wl = {t_ahl_heatmiser=!}
+        BLUESTONE.wl = {t_ahl_heatmiser=!}
+        BRICKOUA2.wl = {t_ahl_heatmiser=!}
+        BRIDGES1.wl = {t_ahl_heatmiser=!}
+        BRIDGES2.wl = {t_ahl_heatmiser=!}
+        CARPETHEAT.wl = {t_ahl_heatmiser=!}
+        CARPETOUA1.wl = {t_ahl_heatmiser=!}
+        DEMONS.wl = {t_ahl_heatmiser=!}
+        ENOUWEE.wl = {t_ahl_heatmiser=!}
+        GEISHA.wl = {t_ahl_heatmiser=!}
+        GODHEAD.wl = {t_ahl_heatmiser=!}
+        GRAFFITTI1.wl = {t_ahl_heatmiser=!}
+        GRANITEGARGOYLE.wl = {t_ahl_heatmiser=!}
+        HAUNTWALL.wl = {t_ahl_heatmiser=!}
+        HEATMISER.wl = {t_ahl_heatmiser=!}
+        JEDI.wl = {t_ahl_heatmiser=!}
+        KOJIRO.wl = {t_ahl_heatmiser=!}
+        KOJIRO2.wl = {t_ahl_heatmiser=!}
+        MAXTA.wl = {t_ahl_heatmiser=!}
+        MECH.wl = {t_ahl_heatmiser=!}
+        METER.wl = {t_ahl_heatmiser=!}
+        OUABRICK1.wl = {t_ahl_heatmiser=!}
+        RAWHYDE.wl = {t_ahl_heatmiser=!}
+        REV.wl = {t_ahl_heatmiser=!}
+        SAMURAI.wl = {t_ahl_heatmiser=!}
+        SAMURAIA.wl = {t_ahl_heatmiser=!}
+        SAMURAIB.wl = {t_ahl_heatmiser=!}
+        SAMURAIC.wl = {t_ahl_heatmiser=!}
+        SAMURAID.wl = {t_ahl_heatmiser=!}
+        SGLASS1.wl = {t_ahl_heatmiser=!}
+        SIGN1.wl = {t_ahl_heatmiser=!}
+        SLEEPSIGN1.wl = {t_ahl_heatmiser=!}
+        SLEEPSIGN2.wl = {t_ahl_heatmiser=!}
+        SLEEPSIGN3.wl = {t_ahl_heatmiser=!}
+        SLEEPSIGN4.wl = {t_ahl_heatmiser=!}
+        SYCO.wl = {t_ahl_heatmiser=!}
+        TECHWALL1OUA.wl = {t_ahl_heatmiser=!}
+        UNTITLED-1.wl = {t_ahl_heatmiser=!}
+        WAR.wl = {t_ahl_heatmiser=!}
+        WEBS.wl = {t_ahl_heatmiser=!}
+        XENCOMWALL.wl = {t_ahl_heatmiser=!}
+        XENCOMWALLBLANK.wl = {t_ahl_heatmiser=!}
+        {ARM.wl = {t_ahl_heatmiser=!}
+        {BUTT.wl = {t_ahl_heatmiser=!}
+        {GARGOYLE.wl = {t_ahl_heatmiser=!}
+        {GEISHADOLL.wl = {t_ahl_heatmiser=!}
+        {GOTHWINDOW.wl = {t_ahl_heatmiser=!}
+        {HAUNTWALL.wl = {t_ahl_heatmiser=!}
+        {MASKS.wl = {t_ahl_heatmiser=!}
+        {NEEDLE.wl = {t_ahl_heatmiser=!}
+        {NEWSPAPER.wl = {t_ahl_heatmiser=!}
+        {NOPARK1.wl = {t_ahl_heatmiser=!}
+        {NOPARK2.wl = {t_ahl_heatmiser=!}
+        {ORNAMENT.wl = {t_ahl_heatmiser=!}
+        {OVERON.wl = {t_ahl_heatmiser=!}
+        {POLE.wl = {t_ahl_heatmiser=!}
+        {RUBBER.wl = {t_ahl_heatmiser=!}
+        {SIGN2A.wl = {t_ahl_heatmiser=!}
+        {SIGN2B.wl = {t_ahl_heatmiser=!}
+        {SIGN3.wl = {t_ahl_heatmiser=!}
+        {SPIDEY.wl = {t_ahl_heatmiser=!}
+        {STATUE.wl = {t_ahl_heatmiser=!}
+        {STATUE2.wl = {t_ahl_heatmiser=!}
+        {STATUE3.wl = {t_ahl_heatmiser=!}
+        {TRASH1.wl = {t_ahl_heatmiser=!}
+        {TREEUNDERSIDE.wl = {t_ahl_heatmiser=!}
+      }
+      wikked.txlist =
+      {
+        out_1.wl = {t_ahl_wikked=!}
+        raw_bluh.wl = {t_ahl_wikked=!}
+        raw_bw1.wl = {t_ahl_wikked=!}
+        raw_tal1.wl = {t_ahl_wikked=!}
+        raw_tal2.wl = {t_ahl_wikked=!}
+        {needle.wl = {t_ahl_wikked=!}
+        {nopark2.wl = {t_ahl_wikked=!}
+        {overon.wl = {t_ahl_wikked=!}
+        {pole.wl = {t_ahl_wikked=!}
+        {sign2a.wl = {t_ahl_wikked=!}
+        {sign2b.wl = {t_ahl_wikked=!}
+        {sign3.wl = {t_ahl_wikked=!}
+        blacklight.wl = {t_ahl_wikked=!}
+        bluestone.wl = {t_ahl_wikked=!}
+        brickoua2.wl = {t_ahl_wikked=!}
+        carpetheat.wl = {t_ahl_wikked=!}
+        heatsign1.wl = {t_ahl_wikked=!}
+        rawhyde.wl = {t_ahl_wikked=!}
+        heatmiser.wl = {t_ahl_wikked=!}
+        raw_noent.wl = {t_ahl_wikked=!}
+      }
+      prison.txlist =
+      {
+        {lowertext.wl = {t_ahl_prison=!}
+        {uppertext.wl = {t_ahl_prison=!}
+      }
+      Axel.txlist =
+      {
+        greenp.wl = {t_ahl_Axel=!}
+        pinb.wl = {t_ahl_Axel=!}
+        pinb3.wl = {t_ahl_Axel=!}
+        pinb4.wl = {t_ahl_Axel=!}
+        aparcade.wl = {t_ahl_Axel=!}
+        aparcade2.wl = {t_ahl_Axel=!}
+        +0arc1.wl = {t_ahl_Axel=!}
+        +1arc1.wl = {t_ahl_Axel=!}
+        +2arc1.wl = {t_ahl_Axel=!}
+        +3arc1.wl = {t_ahl_Axel=!}
+        +4arc1.wl = {t_ahl_Axel=!}
+        pinb1.wl = {t_ahl_Axel=!}
+        wtex.wl = {t_ahl_Axel=!}
+        wtest2.wl = {t_ahl_Axel=!}
+        window2.wl = {t_ahl_Axel=!}
+        grass1.wl = {t_ahl_Axel=!}
+        ~drklgt.wl = {t_ahl_Axel=!}
+        exchang1.wl = {t_ahl_Axel=!}
+        rwin.wl = {t_ahl_Axel=!}
+        shelf2.wl = {t_ahl_Axel=!}
+        mshop.wl = {t_ahl_Axel=!}
+        edsad.wl = {t_ahl_Axel=!}
+        scrollesc.wl = {t_ahl_Axel=!}
+        scrollwb.wl = {t_ahl_Axel=!}
+        bigad2.wl = {t_ahl_Axel=!}
+        +0cafes.wl = {t_ahl_Axel=!}
+        +1cafes.wl = {t_ahl_Axel=!}
+        +2cafes.wl = {t_ahl_Axel=!}
+        +3cafes.wl = {t_ahl_Axel=!}
+        +4cafes.wl = {t_ahl_Axel=!}
+        +5cafes.wl = {t_ahl_Axel=!}
+        +6cafes.wl = {t_ahl_Axel=!}
+        +7cafes.wl = {t_ahl_Axel=!}
+        +8cafes.wl = {t_ahl_Axel=!}
+        +9cafes.wl = {t_ahl_Axel=!}
+        pap1.wl = {t_ahl_Axel=!}
+        pap2.wl = {t_ahl_Axel=!}
+        pap3.wl = {t_ahl_Axel=!}
+        pap4.wl = {t_ahl_Axel=!}
+        cafad.wl = {t_ahl_Axel=!}
+        gunad.wl = {t_ahl_Axel=!}
+        bigad1.wl = {t_ahl_Axel=!}
+        axad2.wl = {t_ahl_Axel=!}
+        cafad2.wl = {t_ahl_Axel=!}
+        axex.wl = {t_ahl_Axel=!}
+        axad3.wl = {t_ahl_Axel=!}
+        pinup.wl = {t_ahl_Axel=!}
+        menu.wl = {t_ahl_Axel=!}
+        myad.wl = {t_ahl_Axel=!}
+        cuddly.wl = {t_ahl_Axel=!}
+        trash.wl = {t_ahl_Axel=!}
+        try.wl = {t_ahl_Axel=!}
+        movad.wl = {t_ahl_Axel=!}
+        blue.wl = {t_ahl_Axel=!}
+      }
+      Hondo1.txlist =
+      {
+        cpt1_bk.wl = {t_ahl_Hondo1=!}
+        Roadline.wl = {t_ahl_Hondo1=!}
+        road.wl = {t_ahl_Hondo1=!}
+        cpt2_lg.wl = {t_ahl_Hondo1=!}
+        oldwood.wl = {t_ahl_Hondo1=!}
+        nwood2.wl = {t_ahl_Hondo1=!}
+        nwood1.wl = {t_ahl_Hondo1=!}
+        wood_plank1.wl = {t_ahl_Hondo1=!}
+        stucco_filthy_1.wl = {t_ahl_Hondo1=!}
+        stucco_smudge_3.wl = {t_ahl_Hondo1=!}
+        stucco_filthy_3.wl = {t_ahl_Hondo1=!}
+        stucco_smudge_2.wl = {t_ahl_Hondo1=!}
+        stucco_filthy_2.wl = {t_ahl_Hondo1=!}
+        stucco_streak_1.wl = {t_ahl_Hondo1=!}
+        stucco_smudge_1.wl = {t_ahl_Hondo1=!}
+        stucco_streak_2.wl = {t_ahl_Hondo1=!}
+        glasscrack.wl = {t_ahl_Hondo1=!}
+        wpaper1.wl = {t_ahl_Hondo1=!}
+        hide.wl = {t_ahl_Hondo1=!}
+        x.wl = {t_ahl_Hondo1=!}
+        stucco_filthy_w.wl = {t_ahl_Hondo1=!}
+        sign01.wl = {t_ahl_Hondo1=!}
+        stucco_filthy_l.wl = {t_ahl_Hondo1=!}
+        brick_beatup.wl = {t_ahl_Hondo1=!}
+        tunneltile.wl = {t_ahl_Hondo1=!}
+        sign02.wl = {t_ahl_Hondo1=!}
+        cpt1_bk_rip1.wl = {t_ahl_Hondo1=!}
+      }
+    }
+  }
+}

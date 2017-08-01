@@ -1,0 +1,3133 @@
+QQRKSRC1
+// WildWest Entities file for Quark
+
+//$Header: /cvsroot/quark/runtime/addons/WildWest/WildWestEntities.qrk,v 1.2 2008/05/14 20:38:13 cdunde Exp $
+// ----------- REVISION HISTORY ------------
+//$Log: WildWestEntities.qrk,v $
+//Revision 1.2  2008/05/14 20:38:13  cdunde
+//Fixed basic lighting in all games and a few other small typo errors.
+//
+//Revision 1.1  2008/03/28 19:14:22  cdunde
+//Cleaned up, fixed if needed and brought into sync with all QuArK addons.
+//
+//
+
+{
+  QuArKProtected = "1"
+  Description = "WildWest Entities"
+
+  Toolbox Folders.qtx =
+  {
+    Toolbox = "New map items..."
+    Root = "WildWest Entities.qtxfolder"
+    WildWest Entities.qtxfolder =
+    {
+      ;desc = "Created from entities.def"
+      _* entities.qtxfolder =
+      {
+        _decal:b =
+        {
+          angle = "360"
+          ;incl = "defpoly"
+        }
+      }
+      camera_* entities.qtxfolder =
+      {
+        camera_cam:e =
+        {
+          angle = "360"
+          origin = "0 0 0"
+        }
+        camera_reset_player:b =
+        {
+          angle = "360"
+          ;incl = "defpoly"
+        }
+      }
+      func_* entities.qtxfolder =
+      {
+        func_bobbing:b =
+        {
+          angle = "360"
+          ;incl = "defpoly"
+        }
+        func_button:b =
+        {
+          angle = "360"
+          ;incl = "defpoly"
+        }
+        func_door:b =
+        {
+          angle = "360"
+          ;incl = "defpoly"
+        }
+        func_door_rotating:b =
+        {
+          angle = "360"
+          ;incl = "defpoly"
+        }
+        func_explosive:b =
+        {
+          angle = "360"
+          ;incl = "defpoly"
+        }
+        func_group:b =
+        {
+          angle = "360"
+          ;incl = "defpoly"
+        }
+        func_invisible_user:b =
+        {
+          angle = "360"
+          ;incl = "defpoly"
+        }
+        func_leaky:b =
+        {
+          angle = "360"
+          ;incl = "defpoly"
+        }
+        func_pendulum:b =
+        {
+          angle = "360"
+          ;incl = "defpoly"
+        }
+        func_plat:b =
+        {
+          angle = "360"
+          ;incl = "defpoly"
+        }
+        func_rotating:b =
+        {
+          angle = "360"
+          ;incl = "defpoly"
+        }
+        func_static:b =
+        {
+          angle = "360"
+          ;incl = "defpoly"
+        }
+        func_timer:e =
+        {
+          angle = "360"
+          origin = "0 0 0"
+        }
+        func_train_rotating:b =
+        {
+          angle = "360"
+          ;incl = "defpoly"
+        }
+      }
+      info_* entities.qtxfolder =
+      {
+        info_camp:e =
+        {
+          angle = "360"
+          origin = "0 0 0"
+        }
+        info_notnull:e =
+        {
+          angle = "360"
+          origin = "0 0 0"
+        }
+        info_notnull_big:e =
+        {
+          angle = "360"
+          origin = "0 0 0"
+        }
+        info_null:e =
+        {
+          angle = "360"
+          origin = "0 0 0"
+        }
+        info_player_checkpoint:e =
+        {
+          angle = "360"
+          origin = "0 0 0"
+        }
+        info_player_deathmatch:e =
+        {
+          angle = "360"
+          origin = "0 0 0"
+        }
+        info_player_intermission:e =
+        {
+          angle = "360"
+          origin = "0 0 0"
+        }
+        info_player_start:e =
+        {
+          angle = "360"
+          origin = "0 0 0"
+        }
+      }
+      item_* entities.qtxfolder =
+      {
+        item_treasure:e =
+        {
+          angle = "360"
+          origin = "0 0 0"
+        }
+      }
+      misc_* entities.qtxfolder =
+      {
+        misc_bubbles16:e =
+        {
+          angle = "360"
+          origin = "0 0 0"
+        }
+        misc_bubbles32:e =
+        {
+          angle = "360"
+          origin = "0 0 0"
+        }
+        misc_bubbles64:e =
+        {
+          angle = "360"
+          origin = "0 0 0"
+        }
+        misc_bubbles8:e =
+        {
+          angle = "360"
+          origin = "0 0 0"
+        }
+        misc_gamemodel:e =
+        {
+          angle = "360"
+          origin = "0 0 0"
+        }
+        misc_light_surface:e =
+        {
+          angle = "360"
+          origin = "0 0 0"
+        }
+        misc_mg42:e =
+        {
+          angle = "360"
+          origin = "0 0 0"
+        }
+        misc_model:e =
+        {
+          angle = "360"
+          origin = "0 0 0"
+        }
+        misc_portal_camera:e =
+        {
+          angle = "360"
+          origin = "0 0 0"
+        }
+        misc_portal_surface:e =
+        {
+          angle = "360"
+          origin = "0 0 0"
+        }
+        misc_spawner:e =
+        {
+          angle = "360"
+          origin = "0 0 0"
+        }
+        misc_spotlight:e =
+        {
+          angle = "360"
+          origin = "0 0 0"
+        }
+        misc_teleporter_dest:e =
+        {
+          angle = "360"
+          origin = "0 0 0"
+        }
+        misc_vis_dummy:e =
+        {
+          angle = "360"
+          origin = "0 0 0"
+        }
+        misc_vis_dummy_multiple:e =
+        {
+          angle = "360"
+          origin = "0 0 0"
+        }
+      }
+      other entities.qtxfolder =
+      {
+        corona:e =
+        {
+          angle = "360"
+          origin = "0 0 0"
+        }
+        dlight:e =
+        {
+          angle = "360"
+          origin = "0 0 0"
+        }
+        light:e =
+        {
+          light = "300"
+          _color = "1 1 1"
+          angle = "360"
+          origin = "0 0 0"
+        }
+        lightJunior:e =
+        {
+          light = "300"
+          _color = "1 1 1"
+          angle = "360"
+          origin = "0 0 0"
+        }
+        worldspawn:b =
+        {
+        }
+      }
+      path_* entities.qtxfolder =
+      {
+        path_corner:e =
+        {
+          angle = "360"
+          origin = "0 0 0"
+        }
+      }
+      props_* entities.qtxfolder =
+      {
+        props_chair:e =
+        {
+          angle = "360"
+          origin = "0 0 0"
+        }
+        props_chair_chat:e =
+        {
+          angle = "360"
+          origin = "0 0 0"
+        }
+        props_chair_chatarm:e =
+        {
+          angle = "360"
+          origin = "0 0 0"
+        }
+        props_chair_hiback:e =
+        {
+          angle = "360"
+          origin = "0 0 0"
+        }
+        props_chair_side:e =
+        {
+          angle = "360"
+          origin = "0 0 0"
+        }
+        props_damageinflictor:e =
+        {
+          angle = "360"
+          origin = "0 0 0"
+        }
+        props_decoration:e =
+        {
+          angle = "360"
+          origin = "0 0 0"
+        }
+        props_decoration_scale:e =
+        {
+          angle = "360"
+          origin = "0 0 0"
+        }
+        props_decorBRUSH:b =
+        {
+          angle = "360"
+          ;incl = "defpoly"
+        }
+        props_ExploPart:e =
+        {
+          angle = "360"
+          origin = "0 0 0"
+        }
+        props_FireColumn:e =
+        {
+          angle = "360"
+          origin = "0 0 0"
+        }
+        props_skyportal:e =
+        {
+          angle = "360"
+          origin = "0 0 0"
+        }
+        props_smokedust:e =
+        {
+          angle = "360"
+          origin = "0 0 0"
+        }
+        props_statue:e =
+        {
+          angle = "360"
+          origin = "0 0 0"
+        }
+        props_statueBRUSH:b =
+        {
+          angle = "360"
+          ;incl = "defpoly"
+        }
+      }
+      script_* entities.qtxfolder =
+      {
+        script_camera:e =
+        {
+          angle = "360"
+          origin = "0 0 0"
+        }
+        script_model_med:e =
+        {
+          angle = "360"
+          origin = "0 0 0"
+        }
+        script_mover:b =
+        {
+          angle = "360"
+          ;incl = "defpoly"
+        }
+        script_multiplayer:e =
+        {
+          angle = "360"
+          origin = "0 0 0"
+        }
+      }
+      shooter_* entities.qtxfolder =
+      {
+        shooter_grenade:e =
+        {
+          angle = "360"
+          origin = "0 0 0"
+        }
+      }
+      target_* entities.qtxfolder =
+      {
+        target_counter:e =
+        {
+          angle = "360"
+          origin = "0 0 0"
+        }
+        target_delay:e =
+        {
+          angle = "360"
+          origin = "0 0 0"
+        }
+        target_effect:e =
+        {
+          angle = "360"
+          origin = "0 0 0"
+        }
+        target_fog:e =
+        {
+          angle = "360"
+          origin = "0 0 0"
+        }
+        target_give:e =
+        {
+          angle = "360"
+          origin = "0 0 0"
+        }
+        target_kill:e =
+        {
+          angle = "360"
+          origin = "0 0 0"
+        }
+        target_location:e =
+        {
+          angle = "360"
+          origin = "0 0 0"
+        }
+        target_lock:e =
+        {
+          angle = "360"
+          origin = "0 0 0"
+        }
+        target_print:e =
+        {
+          angle = "360"
+          origin = "0 0 0"
+        }
+        target_push:e =
+        {
+          angle = "360"
+          origin = "0 0 0"
+        }
+        target_relay:e =
+        {
+          angle = "360"
+          origin = "0 0 0"
+        }
+        target_remove_powerups:e =
+        {
+          angle = "360"
+          origin = "0 0 0"
+        }
+        target_rumble:e =
+        {
+          angle = "360"
+          origin = "0 0 0"
+        }
+        target_score:e =
+        {
+          angle = "360"
+          origin = "0 0 0"
+        }
+        target_script_trigger:e =
+        {
+          angle = "360"
+          origin = "0 0 0"
+        }
+        target_smoke:e =
+        {
+          angle = "360"
+          origin = "0 0 0"
+        }
+        target_speaker:e =
+        {
+          angle = "360"
+          origin = "0 0 0"
+        }
+        target_teleporter:e =
+        {
+          angle = "360"
+          origin = "0 0 0"
+        }
+      }
+      team_* entities.qtxfolder =
+      {
+        team_CTF_blueflag:e =
+        {
+          angle = "360"
+          origin = "0 0 0"
+        }
+        team_CTF_blueplayer:e =
+        {
+          angle = "360"
+          origin = "0 0 0"
+        }
+        team_CTF_bluespawn:e =
+        {
+          angle = "360"
+          origin = "0 0 0"
+        }
+        team_CTF_redflag:e =
+        {
+          angle = "360"
+          origin = "0 0 0"
+        }
+        team_CTF_redplayer:e =
+        {
+          angle = "360"
+          origin = "0 0 0"
+        }
+        team_CTF_redspawn:e =
+        {
+          angle = "360"
+          origin = "0 0 0"
+        }
+        team_WOLF_checkpoint:e =
+        {
+          angle = "360"
+          origin = "0 0 0"
+        }
+        team_WOLF_objective:e =
+        {
+          angle = "360"
+          origin = "0 0 0"
+        }
+      }
+      trigger_* entities.qtxfolder =
+      {
+        trigger_always:e =
+        {
+          angle = "360"
+          origin = "0 0 0"
+        }
+        trigger_deathCheck:b =
+        {
+          angle = "360"
+          ;incl = "defpoly"
+        }
+        trigger_flagonly:b =
+        {
+          angle = "360"
+          ;incl = "defpoly"
+        }
+        trigger_hurt:b =
+        {
+          angle = "360"
+          ;incl = "defpoly"
+        }
+        trigger_multiple:b =
+        {
+          angle = "360"
+          ;incl = "defpoly"
+        }
+        trigger_objective_info:b =
+        {
+          angle = "360"
+          ;incl = "defpoly"
+        }
+        trigger_once:b =
+        {
+          angle = "360"
+          ;incl = "defpoly"
+        }
+        trigger_push:b =
+        {
+          angle = "360"
+          ;incl = "defpoly"
+        }
+        trigger_teleport:b =
+        {
+          angle = "360"
+          ;incl = "defpoly"
+        }
+      }
+      weapon_* entities.qtxfolder =
+      {
+        weapon_coltRifle:e =
+        {
+          angle = "360"
+          origin = "0 0 0"
+        }
+        weapon_dagger:e =
+        {
+          angle = "360"
+          origin = "0 0 0"
+        }
+        weapon_dragoon:e =
+        {
+          angle = "360"
+          origin = "0 0 0"
+        }
+        weapon_fusedBomb:e =
+        {
+          angle = "360"
+          origin = "0 0 0"
+        }
+        weapon_GatlingGun:e =
+        {
+          angle = "360"
+          origin = "0 0 0"
+        }
+        weapon_henry:e =
+        {
+          angle = "360"
+          origin = "0 0 0"
+        }
+        weapon_molotov:e =
+        {
+          angle = "360"
+          origin = "0 0 0"
+        }
+        weapon_musket:e =
+        {
+          angle = "360"
+          origin = "0 0 0"
+        }
+        weapon_pattersons:e =
+        {
+          angle = "360"
+          origin = "0 0 0"
+        }
+        weapon_tntStick:e =
+        {
+          angle = "360"
+          origin = "0 0 0"
+        }
+        weapon_volleyGun:e =
+        {
+          angle = "360"
+          origin = "0 0 0"
+        }
+      }
+    }
+  }
+  t_models_form:form =
+  {
+    Style = "5"
+    model: = { typ="C" txt="animated"
+      items=
+        "animated/governor_begging.md3"$0d
+        "animated/governor_shot.md3"$0d
+        "animated/pianist.md3"$0d
+        "animated/pianist_die.md3"
+      values=
+        "/models/ww_objects/animated/governor_begging.md3"$0d
+        "/models/ww_objects/animated/governor_shot.md3"$0d
+        "/models/ww_objects/animated/pianist.md3"$0d
+        "/models/ww_objects/animated/pianist_die.md3"
+    }
+    model: = { typ="C" txt="ww_villa"
+      items=
+        "box_dyno.md3"$0d
+        "exterior_door01.md3"$0d
+        "exterior_door01_south.md3"$0d
+        "fountain1_spray.md3"$0d
+        "interior_door01.md3"$0d
+        "interior_door01_north.md3"$0d
+        "interior_door01_south.md3"$0d
+        "rubble.md3"$0d
+        "palm_tree.md3"$0d
+        "plant_pot.md3"$0d
+        "lantern.md3"$0d
+        "statue.md3"$0d
+        "cliff_path.md3"$0d
+        "bigrock1.md3"$0d
+        "fence_skull.md3"$0d
+        "cart_90.md3"$0d
+        "sun_dial.md3"$0d
+        "barrel_horiz.md3"$0d
+        "wine_rack_less.md3"$0d
+        "kitchen_table.md3"$0d
+        "vase_decorated.md3"$0d
+        "vase_orange.md3"$0d
+        "vase_red.md3"$0d
+        "log.md3"$0d
+        "posh_curtains.md3"$0d
+        "posh_curtainsR.md3"$0d
+        "posh_table.md3"$0d
+        "wine_rack.md3"$0d
+        "candle_table.md3"$0d
+        "posh_door.md3"$0d
+        "candle_chandelier.md3"$0d
+        "bath_tub.md3"$0d
+        "bed01.md3"$0d
+        "bookshelf.md3"$0d
+        "desert_rock03.md3"$0d
+        "desert_rock02.md3"$0d
+        "desert_rock04.md3"$0d
+        "desert_rock05.md3"$0d
+        "laundry_basket.md3"$0d
+        "track1.md3"$0d
+        "track2.md3"$0d
+        "fence.md3"$0d
+        "candle_wall.md3"$0d
+        "apple_basket.md3"$0d
+        "basket.md3"$0d
+        "blue_chair.md3"$0d
+        "blue_table.md3"$0d
+        "white_rock.md3"$0d
+        "hay_pile01.md3"$0d
+        "posh_chair.md3"$0d
+        "painting_frame.md3"$0d
+        "painting_frame2.md3"$0d
+        "fountain_base.md3"$0d
+        "stable_decor.md3"$0d
+        "cabinet01.md3"$0d
+        "desk01.md3"$0d
+        "drawers.md3"$0d
+        "tall_bookshelf.md3"$0d
+        "ditch03d.md3"$0d
+        "chillis.md3"$0d
+        "ditch03a.md3"$0d
+        "ditch03c.md3"$0d
+        "ditch03b.md3"$0d
+        "ditch03e.md3"$0d
+        "desert_rock01.md3"$0d
+        "barrel.md3"$0d
+        "sack.md3"
+      values=
+        "/models/ww_objects/ww_villa/box_dyno.md3"$0d
+        "/models/ww_objects/ww_villa/exterior_door01.md3"$0d
+        "/models/ww_objects/ww_villa/exterior_door01_south.md3"$0d
+        "/models/ww_objects/ww_villa/fountain1_spray.md3"$0d
+        "/models/ww_objects/ww_villa/interior_door01.md3"$0d
+        "/models/ww_objects/ww_villa/interior_door01_north.md3"$0d
+        "/models/ww_objects/ww_villa/interior_door01_south.md3"$0d
+        "/models/ww_objects/ww_villa/rubble.md3"$0d
+        "/models/ww_objects/ww_villa/palm_tree.md3"$0d
+        "/models/ww_objects/ww_villa/plant_pot.md3"$0d
+        "/models/ww_objects/ww_villa/lantern.md3"$0d
+        "/models/ww_objects/ww_villa/statue.md3"$0d
+        "/models/ww_objects/ww_villa/cliff_path.md3"$0d
+        "/models/ww_objects/ww_villa/bigrock1.md3"$0d
+        "/models/ww_objects/ww_villa/fence_skull.md3"$0d
+        "/models/ww_objects/ww_villa/cart_90.md3"$0d
+        "/models/ww_objects/ww_villa/sun_dial.md3"$0d
+        "/models/ww_objects/ww_villa/barrel_horiz.md3"$0d
+        "/models/ww_objects/ww_villa/wine_rack_less.md3"$0d
+        "/models/ww_objects/ww_villa/kitchen_table.md3"$0d
+        "/models/ww_objects/ww_villa/vase_decorated.md3"$0d
+        "/models/ww_objects/ww_villa/vase_orange.md3"$0d
+        "/models/ww_objects/ww_villa/vase_red.md3"$0d
+        "/models/ww_objects/ww_villa/log.md3"$0d
+        "/models/ww_objects/ww_villa/posh_curtains.md3"$0d
+        "/models/ww_objects/ww_villa/posh_curtainsR.md3"$0d
+        "/models/ww_objects/ww_villa/posh_table.md3"$0d
+        "/models/ww_objects/ww_villa/wine_rack.md3"$0d
+        "/models/ww_objects/ww_villa/candle_table.md3"$0d
+        "/models/ww_objects/ww_villa/posh_door.md3"$0d
+        "/models/ww_objects/ww_villa/candle_chandelier.md3"$0d
+        "/models/ww_objects/ww_villa/bath_tub.md3"$0d
+        "/models/ww_objects/ww_villa/bed01.md3"$0d
+        "/models/ww_objects/ww_villa/bookshelf.md3"$0d
+        "/models/ww_objects/ww_villa/desert_rock03.md3"$0d
+        "/models/ww_objects/ww_villa/desert_rock02.md3"$0d
+        "/models/ww_objects/ww_villa/desert_rock04.md3"$0d
+        "/models/ww_objects/ww_villa/desert_rock05.md3"$0d
+        "/models/ww_objects/ww_villa/laundry_basket.md3"$0d
+        "/models/ww_objects/ww_villa/track1.md3"$0d
+        "/models/ww_objects/ww_villa/track2.md3"$0d
+        "/models/ww_objects/ww_villa/fence.md3"$0d
+        "/models/ww_objects/ww_villa/candle_wall.md3"$0d
+        "/models/ww_objects/ww_villa/apple_basket.md3"$0d
+        "/models/ww_objects/ww_villa/basket.md3"$0d
+        "/models/ww_objects/ww_villa/blue_chair.md3"$0d
+        "/models/ww_objects/ww_villa/blue_table.md3"$0d
+        "/models/ww_objects/ww_villa/white_rock.md3"$0d
+        "/models/ww_objects/ww_villa/hay_pile01.md3"$0d
+        "/models/ww_objects/ww_villa/posh_chair.md3"$0d
+        "/models/ww_objects/ww_villa/painting_frame.md3"$0d
+        "/models/ww_objects/ww_villa/painting_frame2.md3"$0d
+        "/models/ww_objects/ww_villa/fountain_base.md3"$0d
+        "/models/ww_objects/ww_villa/stable_decor.md3"$0d
+        "/models/ww_objects/ww_villa/cabinet01.md3"$0d
+        "/models/ww_objects/ww_villa/desk01.md3"$0d
+        "/models/ww_objects/ww_villa/drawers.md3"$0d
+        "/models/ww_objects/ww_villa/tall_bookshelf.md3"$0d
+        "/models/ww_objects/ww_villa/ditch03d.md3"$0d
+        "/models/ww_objects/ww_villa/chillis.md3"$0d
+        "/models/ww_objects/ww_villa/ditch03a.md3"$0d
+        "/models/ww_objects/ww_villa/ditch03c.md3"$0d
+        "/models/ww_objects/ww_villa/ditch03b.md3"$0d
+        "/models/ww_objects/ww_villa/ditch03e.md3"$0d
+        "/models/ww_objects/ww_villa/desert_rock01.md3"$0d
+        "/models/ww_objects/ww_villa/barrel.md3"$0d
+        "/models/ww_objects/ww_villa/sack.md3"
+    }
+    model: = { typ="C" txt="ww_animals"
+      items=
+        "horse_ani1.md3"$0d
+        "horse_ani2.md3"
+      values=
+        "/models/ww_objects/ww_animals/horse_ani1.md3"$0d
+        "/models/ww_objects/ww_animals/horse_ani2.md3"
+    }
+    model: = { typ="C" txt="ww_town"
+      items=
+        "stream.md3"$0d
+        "rock02.md3"$0d
+        "rock04.md3"$0d
+        "rock03.md3"$0d
+        "rock01.md3"$0d
+        "chimney.md3"
+      values=
+        "/models/ww_objects/ww_town/stream.md3"$0d
+        "/models/ww_objects/ww_town/rock02.md3"$0d
+        "/models/ww_objects/ww_town/rock04.md3"$0d
+        "/models/ww_objects/ww_town/rock03.md3"$0d
+        "/models/ww_objects/ww_town/rock01.md3"$0d
+        "/models/ww_objects/ww_town/chimney.md3"
+    }
+    model: = { typ="C" txt="plants"
+      items=
+        "yellow_plant.md3"$0d
+        "century_plant.md3"$0d
+        "tall_yellow.md3"$0d
+        "bush.md3"$0d
+        "apple_tree.md3"$0d
+        "pond_rushes.md3"$0d
+        "pergola_leaves.md3"$0d
+        "pond_plant.md3"$0d
+        "bushd.md3"$0d
+        "reeds01.md3"$0d
+        "tree_poplar.md3"$0d
+        "reeds02.md3"$0d
+        "hedge2.md3"$0d
+        "willow.md3"$0d
+        "hedge1.md3"
+      values=
+        "/models/ww_objects/plants/yellow_plant.md3"$0d
+        "/models/ww_objects/plants/century_plant.md3"$0d
+        "/models/ww_objects/plants/tall_yellow.md3"$0d
+        "/models/ww_objects/plants/bush.md3"$0d
+        "/models/ww_objects/plants/apple_tree.md3"$0d
+        "/models/ww_objects/plants/pond_rushes.md3"$0d
+        "/models/ww_objects/plants/pergola_leaves.md3"$0d
+        "/models/ww_objects/plants/pond_plant.md3"$0d
+        "/models/ww_objects/plants/bushd.md3"$0d
+        "/models/ww_objects/plants/reeds01.md3"$0d
+        "/models/ww_objects/plants/tree_poplar.md3"$0d
+        "/models/ww_objects/plants/reeds02.md3"$0d
+        "/models/ww_objects/plants/hedge2.md3"$0d
+        "/models/ww_objects/plants/willow.md3"$0d
+        "/models/ww_objects/plants/hedge1.md3"
+    }
+    model: = { typ="C" txt="ww_mine"
+      items=
+        "mine_stream.md3"$0d
+        "mine_interior2.md3"$0d
+        "mine_roof01.md3"$0d
+        "mine_interior3.md3"$0d
+        "mine_roof02.md3"
+      values=
+        "/models/ww_objects/ww_mine/mine_stream.md3"$0d
+        "/models/ww_objects/ww_mine/mine_interior2.md3"$0d
+        "/models/ww_objects/ww_mine/mine_roof01.md3"$0d
+        "/models/ww_objects/ww_mine/mine_interior3.md3"$0d
+        "/models/ww_objects/ww_mine/mine_roof02.md3"
+    }
+    model: = { typ="C" txt="cowboys"
+      items=
+        "horse_ani1.md3"$0d
+        "kb_flagpole.md3"$0d
+        "kb_swag.md3"$0d
+        "kb_pot01.md3"$0d
+        "kb_heater.md3"$0d
+        "kb_bed.md3"$0d
+        "kb_longchair.md3"$0d
+        "kb_rifle.md3"$0d
+        "kb_glass.md3"$0d
+        "kb_whiskybottle.md3"$0d
+        "kb_chair01.md3"$0d
+        "kb_axe.md3"$0d
+        "kb_woodpile.md3"$0d
+        "kb_barrel.md3"$0d
+        "kb_telegraphtrans.md3"$0d
+        "kb_telegraphrec.md3"$0d
+        "kb_walllight.md3"$0d
+        "kb_walllightoff.md3"$0d
+        "kb_hay.md3"$0d
+        "kb_flour.md3"$0d
+        "kb_logpile.md3"$0d
+        "kb_saddle.md3"$0d
+        "kb_scythe.md3"$0d
+        "kb_paper.md3"$0d
+        "kb_paperfront.md3"$0d
+        "kb_cowboyhatside.md3"$0d
+        "kb_potplant.md3"$0d
+        "kb_firewood.md3"$0d
+        "flame.md3"$0d
+        "kb_oar.md3"$0d
+        "kb_oarrest.md3"$0d
+        "kb_firepole.md3"$0d
+        "shelf.md3"$0d
+        "kb_cactus.md3"$0d
+        "flameh1.md3"
+      values=
+        "/models/mapobjects/cowboys/horse_ani1.md3"$0d
+        "/models/mapobjects/cowboys/kb_flagpole.md3"$0d
+        "/models/mapobjects/cowboys/kb_swag.md3"$0d
+        "/models/mapobjects/cowboys/kb_pot01.md3"$0d
+        "/models/mapobjects/cowboys/kb_heater.md3"$0d
+        "/models/mapobjects/cowboys/kb_bed.md3"$0d
+        "/models/mapobjects/cowboys/kb_longchair.md3"$0d
+        "/models/mapobjects/cowboys/kb_rifle.md3"$0d
+        "/models/mapobjects/cowboys/kb_glass.md3"$0d
+        "/models/mapobjects/cowboys/kb_whiskybottle.md3"$0d
+        "/models/mapobjects/cowboys/kb_chair01.md3"$0d
+        "/models/mapobjects/cowboys/kb_axe.md3"$0d
+        "/models/mapobjects/ww_town/wood/kb_woodpile.md3"$0d
+        "/models/mapobjects/cowboys/kb_barrel.md3"$0d
+        "/models/mapobjects/cowboys/kb_telegraphtrans.md3"$0d
+        "/models/mapobjects/cowboys/kb_telegraphrec.md3"$0d
+        "/models/mapobjects/cowboys/kb_walllight.md3"$0d
+        "/models/mapobjects/cowboys/kb_walllightoff.md3"$0d
+        "/models/mapobjects/cowboys/kb_hay.md3"$0d
+        "/models/mapobjects/cowboys/kb_flour.md3"$0d
+        "/models/mapobjects/cowboys/kb_logpile.md3"$0d
+        "/models/mapobjects/cowboys/kb_saddle.md3"$0d
+        "/models/mapobjects/cowboys/kb_scythe.md3"$0d
+        "/models/mapobjects/cowboys/kb_paper.md3"$0d
+        "/models/mapobjects/cowboys/kb_paperfront.md3"$0d
+        "/models/mapobjects/cowboys/kb_cowboyhatside.md3"$0d
+        "/models/mapobjects/cowboys/kb_potplant.md3"$0d
+        "/models/mapobjects/cowboys/kb_firewood.md3"$0d
+        "/models/mapobjects/cowboys/flame.md3"$0d
+        "/models/mapobjects/cowboys/kb_oar.md3"$0d
+        "/models/mapobjects/cowboys/kb_oarrest.md3"$0d
+        "/models/mapobjects/cowboys/kb_firepole.md3"$0d
+        "/models/mapobjects/cowboys/shelf.md3"$0d
+        "/models/mapobjects/cowboys/kb_cactus.md3"$0d
+        "/models/mapobjects/cowboys/flameh1.md3"
+    }
+    model: = { typ="C" txt="furniture"
+      items=
+        "bench.md3"$0d
+        "bunks.md3"$0d
+        "sausage.md3"
+      values=
+        "/models/mapobjects/furniture/bench.md3"$0d
+        "/models/mapobjects/furniture/bunks.md3"$0d
+        "/models/mapobjects/furniture/sausage.md3"
+    }
+    model: = { typ="C" txt="wine"
+      items=
+        "wine.md3"
+      values=
+        "/models/mapobjects/wine/wine.md3"
+    }
+    model: = { typ="C" txt="toolshed"
+      items=
+        "shovel.md3"$0d
+        "shovel_flat.md3"$0d
+        "pickax.md3"
+      values=
+        "/models/mapobjects/toolshed/shovel.md3"$0d
+        "/models/mapobjects/toolshed/shovel_flat.md3"$0d
+        "/models/mapobjects/toolshed/pickax.md3"
+    }
+    model: = { typ="C" txt="book"
+      items=
+        "book.md3"
+      values=
+        "/models/mapobjects/book/book.md3"
+    }
+    model: = { typ="C" txt="vehicles"
+      items=
+        "wagon_tilt.md3"
+      values=
+        "/models/mapobjects/vehicles/wagon_tilt.md3"
+    }
+    model: = { typ="C" txt="debris"
+      items=
+        "brick000.md3"$0d
+        "brick001.md3"$0d
+        "brick002.md3"
+      values=
+        "/models/mapobjects/debris/brick000.md3"$0d
+        "/models/mapobjects/debris/brick001.md3"$0d
+        "/models/mapobjects/debris/brick002.md3"
+    }
+  }
+  Entity Forms.fctx =
+  {
+    t_model:incl =
+    {
+      model: =
+      {
+        Txt = "&"
+        Typ = "B"
+        Cap = "models..."
+        form = "t_models_form"
+        hint = "Available .MD3 files"
+      }
+    }
+    item_treasure:form =
+    {
+      help = "Items the player picks up that are just used to tally a score at"
+       " end-level"$0D22"model"$22" defaults to 'models/powerups/treasure/gold"
+       "bar.md3'"$0D22"noise"$22" sound to play on pickup.  defaults to 'sound"
+       "/pickup/treasure/gold.wav'"$0D22"message"$22" what to call the item wh"
+       "en it's picked up.  defaults to "$22"Treasure Item"$22" (SA: temp)"$0D
+       "-------- MODEL FOR RADIANT ONLY - DO NOT SET THIS AS A KEY --------"$0D
+       "model="$22"models/powerups/treasure/goldbar.md3"$22
+      bbox = '-8 -8 -8 8 8 8'
+      spawnflags: =
+      {
+        typ = "X1"
+        cap = "SUSPENDED"
+      }
+      spawnflags: =
+      {
+        typ = "X2"
+        cap = "SPIN"
+      }
+    }
+    weapon_dagger:form =
+    {
+      help = "-------- MODEL FOR RADIANT ONLY - DO NOT SET THIS AS A KEY -----"
+       "---"$0D"model="$22"models/ww_weapons/dagger/dagger.md3"$22
+      bbox = '-16 -16 -16 16 16 16'
+      spawnflags: =
+      {
+        typ = "X1"
+        cap = "SUSPENDED"
+      }
+      spawnflags: =
+      {
+        typ = "X2"
+        cap = "SPIN"
+      }
+      spawnflags: =
+      {
+        typ = "X8"
+        cap = "RESPAWN"
+      }
+    }
+    weapon_musket:form =
+    {
+      help = $22"stand"$22" values: < Huey not implimented yet"$0D"no value:  "
+       "  laying in a default position on it's side (default)"$0D"2:          "
+       "  upright, barrel pointing up, slightly angled (rack mount)"$0D"------"
+       "-- MODEL FOR RADIANT ONLY - DO NOT SET THIS AS A KEY --------"$0D"mode"
+       "l="$22"models/ww_weapons/harpers/harpers.md3"$22
+      bbox = '-16 -16 -16 16 16 16'
+      spawnflags: =
+      {
+        typ = "X1"
+        cap = "SUSPENDED"
+      }
+      spawnflags: =
+      {
+        typ = "X2"
+        cap = "SPIN"
+      }
+      spawnflags: =
+      {
+        typ = "X8"
+        cap = "RESPAWN"
+      }
+    }
+    weapon_volleyGun:form =
+    {
+      help = $22"stand"$22" values: < Huey not implimented yet"$0D"no value:  "
+       "  laying in a default position on it's side (default)"$0D"2:          "
+       "  upright, barrel pointing up, slightly angled (rack mount)"$0D"------"
+       "-- MODEL FOR RADIANT ONLY - DO NOT SET THIS AS A KEY --------"$0D"mode"
+       "l="$22"models/ww_weapons/volley/volley.md3"$22
+      bbox = '-16 -16 -16 16 16 16'
+      spawnflags: =
+      {
+        typ = "X1"
+        cap = "SUSPENDED"
+      }
+      spawnflags: =
+      {
+        typ = "X2"
+        cap = "SPIN"
+      }
+      spawnflags: =
+      {
+        typ = "X8"
+        cap = "RESPAWN"
+      }
+    }
+    weapon_coltRifle:form =
+    {
+      help = $22"stand"$22" values: < Huey not implimented yet"$0D"no value:  "
+       "  laying in a default position on it's side (default)"$0D"2:          "
+       "  upright, barrel pointing up, slightly angled (rack mount)"$0D"------"
+       "-- MODEL FOR RADIANT ONLY - DO NOT SET THIS AS A KEY --------"$0D"mode"
+       "l="$22"models/ww_weapons/colt_rifle/colt_rifle.md3"$22
+      bbox = '-16 -16 -16 16 16 16'
+      spawnflags: =
+      {
+        typ = "X1"
+        cap = "SUSPENDED"
+      }
+      spawnflags: =
+      {
+        typ = "X2"
+        cap = "SPIN"
+      }
+      spawnflags: =
+      {
+        typ = "X8"
+        cap = "RESPAWN"
+      }
+    }
+    weapon_dragoon:form =
+    {
+      help = "-------- MODEL FOR RADIANT ONLY - DO NOT SET THIS AS A KEY -----"
+       "---"$0D"model="$22"models/ww_weapons/dragoon/dragoon.md3"$22
+      bbox = '-16 -16 -16 16 16 16'
+      spawnflags: =
+      {
+        typ = "X1"
+        cap = "SUSPENDED"
+      }
+      spawnflags: =
+      {
+        typ = "X2"
+        cap = "SPIN"
+      }
+      spawnflags: =
+      {
+        typ = "X8"
+        cap = "RESPAWN"
+      }
+    }
+    weapon_pattersons:form =
+    {
+      help = "-------- MODEL FOR RADIANT ONLY - DO NOT SET THIS AS A KEY -----"
+       "---"$0D"model="$22"models/ww_weapons/pattersons/pu_pattersons.md3"$22
+      bbox = '-16 -16 -16 16 16 16'
+      spawnflags: =
+      {
+        typ = "X1"
+        cap = "SUSPENDED"
+      }
+      spawnflags: =
+      {
+        typ = "X2"
+        cap = "SPIN"
+      }
+      spawnflags: =
+      {
+        typ = "X8"
+        cap = "RESPAWN"
+      }
+    }
+    weapon_henry:form =
+    {
+      help = $22"stand"$22" values: < Huey not implimented yet"$0D"no value:  "
+       "  laying in a default position on it's side (default)"$0D"2:          "
+       "  upright, barrel pointing up, slightly angled (rack mount)"$0D"------"
+       "-- MODEL FOR RADIANT ONLY - DO NOT SET THIS AS A KEY --------"$0D"mode"
+       "l="$22"models/ww_weapons/henry/henry.md3"$22
+      bbox = '-16 -16 -16 16 16 16'
+      spawnflags: =
+      {
+        typ = "X1"
+        cap = "SUSPENDED"
+      }
+      spawnflags: =
+      {
+        typ = "X2"
+        cap = "SPIN"
+      }
+      spawnflags: =
+      {
+        typ = "X8"
+        cap = "RESPAWN"
+      }
+    }
+    weapon_tntStick:form =
+    {
+      help = "-------- MODEL FOR RADIANT ONLY - DO NOT SET THIS AS A KEY -----"
+       "---"$0D"model="$22"models/ww_weapons/tnt_stick/tnt_stick.md3"$22
+      bbox = '-16 -16 -16 16 16 16'
+      spawnflags: =
+      {
+        typ = "X1"
+        cap = "SUSPENDED"
+      }
+      spawnflags: =
+      {
+        typ = "X2"
+        cap = "SPIN"
+      }
+      spawnflags: =
+      {
+        typ = "X8"
+        cap = "RESPAWN"
+      }
+    }
+    weapon_fusedBomb:form =
+    {
+      help = "-------- MODEL FOR RADIANT ONLY - DO NOT SET THIS AS A KEY -----"
+       "---"$0D"model="$22"models/ww_weapons/fused_bomb/fused_bomb.md3"$22
+      bbox = '-16 -16 -16 16 16 16'
+      spawnflags: =
+      {
+        typ = "X1"
+        cap = "SUSPENDED"
+      }
+      spawnflags: =
+      {
+        typ = "X2"
+        cap = "SPIN"
+      }
+      spawnflags: =
+      {
+        typ = "X8"
+        cap = "RESPAWN"
+      }
+    }
+    weapon_molotov:form =
+    {
+      help = "-------- MODEL FOR RADIANT ONLY - DO NOT SET THIS AS A KEY -----"
+       "---"$0D"model="$22"models/ww_weapons/molotov/molotov_pu.md3"$22
+      bbox = '-16 -16 -16 16 16 16'
+      spawnflags: =
+      {
+        typ = "X1"
+        cap = "SUSPENDED"
+      }
+      spawnflags: =
+      {
+        typ = "X2"
+        cap = "SPIN"
+      }
+      spawnflags: =
+      {
+        typ = "X8"
+        cap = "RESPAWN"
+      }
+    }
+    weapon_GatlingGun:form =
+    {
+      help = "-------- MODEL FOR RADIANT ONLY - DO NOT SET THIS AS A KEY -----"
+       "---"$0D"model="$22"models/ww_weapons/gatling/pu_gatling.md3"$22
+      bbox = '-16 -16 -16 16 16 16'
+      spawnflags: =
+      {
+        typ = "X1"
+        cap = "SUSPENDED"
+      }
+      spawnflags: =
+      {
+        typ = "X2"
+        cap = "SPIN"
+      }
+      spawnflags: =
+      {
+        typ = "X8"
+        cap = "RESPAWN"
+      }
+    }
+    info_player_deathmatch:form =
+    {
+      help = "potential spawning position for deathmatch games."$0D"The first "
+       "time a player enters the game, they will be at an 'initial' spot."$0D"T"
+       "argets will be fired when someone spawns in on them."$0D22"nobots"$22" "
+       "will prevent bots from using this spot."$0D22"nohumans"$22" will preve"
+       "nt non-bots from using this spot."$0D"If the start position is targeti"
+       "ng an entity, the players camera will start out facing that ent (like "
+       "an info_notnull)"
+      bbox = '-18 -18 -24 18 18 48'
+      spawnflags: =
+      {
+        typ = "X1"
+        cap = "initial"
+      }
+    }
+    info_player_checkpoint:form =
+    {
+      help = "these are start points /after/ the level start"$0D"the letter (a"
+       " b c d) designates the checkpoint that needs to be complete in order t"
+       "o use this start position"
+      bbox = '-18 -18 -24 18 18 48'
+      spawnflags: =
+      {
+        typ = "X1"
+        cap = "a"
+      }
+      spawnflags: =
+      {
+        typ = "X2"
+        cap = "b"
+      }
+      spawnflags: =
+      {
+        typ = "X4"
+        cap = "c"
+      }
+      spawnflags: =
+      {
+        typ = "X8"
+        cap = "d"
+      }
+    }
+    info_player_start:form =
+    {
+      help = "equivelant to info_player_deathmatch"
+      bbox = '-18 -18 -24 18 18 48'
+    }
+    info_player_intermission:form =
+    {
+      help = "The intermission will be viewed from this point.  Target an info"
+       "_notnull for the view direction."$0D"AXIS        This intermission poi"
+       "nt will be used if Axis win the match"$0D"ALLIED        This intermiss"
+       "ion point will be used if Allies win the match"
+      bbox = '-16 -16 -24 16 16 32'
+      spawnflags: =
+      {
+        typ = "X1"
+        cap = "AXIS"
+      }
+      spawnflags: =
+      {
+        typ = "X2"
+        cap = "ALLIED"
+      }
+    }
+    func_group:form =
+    {
+      help = "Used to group brushes together just for editor convenience.  The"
+       "y are turned into normal brushes by the utilities."
+    }
+    info_camp:form =
+    {
+      help = "Used as a positional target for calculations in the utilities (s"
+       "potlights, etc), but removed during gameplay."
+      bbox = '-4 -4 -4 4 4 4'
+    }
+    info_null:form =
+    {
+      help = "Used as a positional target for calculations in the utilities (s"
+       "potlights, etc), but removed during gameplay."
+      bbox = '-4 -4 -4 4 4 4'
+    }
+    info_notnull:form =
+    {
+      help = "Used as a positional target for in-game calculation, like jumppa"
+       "d targets."$0D"target_position does the same thing"
+      bbox = '-4 -4 -4 4 4 4'
+    }
+    info_notnull_big:form =
+    {
+      help = "info_notnull with a bigger box for ease of positioning"
+      bbox = '-16 -16 -24 16 16 32'
+    }
+    light:form =
+    {
+      help = "Non-displayed light."$0D22"light"$22" overrides the default 300 "
+       "intensity."$0D"Nonlinear checkbox gives inverse square falloff instead"
+       " of linear"$0D"Angle adds light:surface angle calculations (only valid"
+       " for "$22"Linear"$22" lights) (wolf)"$0D"Lights pointed at a target wi"
+       "ll be spotlights."$0D22"radius"$22" overrides the default 64 unit radi"
+       "us of a spotlight at the target point."$0D22"fade"$22" falloff/radius "
+       "adjustment value. multiply the run of the slope by "$22"fade"$22" (1.0"
+       "f default) (only valid for "$22"Linear"$22" lights) (wolf)"$0D22"q3map"
+       "_non-dynamic"$22" specifies that this light should not contribute to t"
+       "he world's 'light grid' and therefore will not light dynamic models in"
+       " the game.(wolf)"
+      bbox = '-8 -8 -8 8 8 8'
+      spawnflags: =
+      {
+        typ = "X1"
+        cap = "nonlinear"
+      }
+      spawnflags: =
+      {
+        typ = "X2"
+        cap = "angle"
+      }
+      spawnflags: =
+      {
+        typ = "X4"
+        cap = "negative_spot"
+      }
+      spawnflags: =
+      {
+        typ = "X8"
+        cap = "negative_point"
+      }
+      spawnflags: =
+      {
+        typ = "X16"
+        cap = "q3map_non"
+      }
+      spawnflags: =
+      {
+        typ = "X64"
+        cap = "dynamic"
+      }
+      light: =
+      {
+        Txt = "&"
+        Hint = "the light  intensity"
+      }
+      _color: =
+      {
+        Txt = "&"
+        Hint = "light color (not the intensity, only the color)"
+      }
+      _color: =
+      {
+        Txt = "&"
+        Typ = "LN"
+        Hint = "Click here to pick the light color."
+      }
+    }
+    lightJunior:form =
+    {
+      help = "Non-displayed light that only affects dynamic game models, but d"
+       "oes not contribute to lightmaps"$0D22"light"$22" overrides the default"
+       " 300 intensity."$0D"Nonlinear checkbox gives inverse square falloff in"
+       "stead of linear"$0D"Angle adds light:surface angle calculations (only "
+       "valid for "$22"Linear"$22" lights) (wolf)"$0D"Lights pointed at a targ"
+       "et will be spotlights."$0D22"radius"$22" overrides the default 64 unit"
+       " radius of a spotlight at the target point."$0D22"fade"$22" falloff/ra"
+       "dius adjustment value. multiply the run of the slope by "$22"fade"$22" "
+       "(1.0f default) (only valid for "$22"Linear"$22" lights) (wolf)"
+      bbox = '-8 -8 -8 8 8 8'
+      spawnflags: =
+      {
+        typ = "X1"
+        cap = "nonlinear"
+      }
+      spawnflags: =
+      {
+        typ = "X2"
+        cap = "angle"
+      }
+      spawnflags: =
+      {
+        typ = "X4"
+        cap = "negative_spot"
+      }
+      spawnflags: =
+      {
+        typ = "X8"
+        cap = "negative_point"
+      }
+      light: =
+      {
+        Txt = "&"
+        Hint = "the light  intensity"
+      }
+      _color: =
+      {
+        Txt = "&"
+        Hint = "light color (not the intensity, only the color)"
+      }
+      _color: =
+      {
+        Txt = "&"
+        Typ = "LN"
+        Hint = "Click here to pick the light color."
+      }
+    }
+    misc_teleporter_dest:form =
+    {
+      help = "Point teleporters at these."$0D"Now that we don't have teleport "
+       "destination pads, this is just"$0D"an info_notnull"
+      bbox = '-32 -32 -24 32 32 -16'
+    }
+    misc_spotlight:form =
+    {
+      help = $22"target"$22" - .camera (spline) file for light to track.  do n"
+       "ot specify file extension."$0D"BACK_AND_FORTH - when end of target spl"
+       "ine is hit, reverse direction rather than looping (looping is default)"
+       $0D"( /\ not active yet /\ )"
+      bbox = '-16 -16 -16 16 16 16'
+      spawnflags: =
+      {
+        typ = "X1"
+        cap = "START_ON"
+      }
+      spawnflags: =
+      {
+        typ = "X2"
+        cap = "BACK_AND_FORTH"
+      }
+    }
+    misc_model:form =
+    {
+      help = $22"model"$22"        arbitrary .md3 file to display"$0D22"models"
+       "cale"$22"    scale multiplier (defaults to 1x)"$0D22"modelscale_vec"$22
+       "    scale multiplier (defaults to 1 1 1, scales each axis as requested"
+       ")"$0D22"modelscale_vec"$22" - Set scale per-axis.  Overrides "$22"mode"
+       "lscale"$22", so if you have both, the "$22"modelscale"$22" is ignored"
+      bbox = '-16 -16 -16 16 16 16'
+    }
+    misc_gamemodel:form =
+    {
+      help = "md3 placed in the game at runtime (rather than in the bsp)"$0D22
+       "model"$22"            arbitrary .md3 file to display"$0D22"modelscale"$22
+       "    scale multiplier (defaults to 1x, and scales uniformly)"$0D22"mode"
+       "lscale_vec"$22"    scale multiplier (defaults to 1 1 1, scales each ax"
+       "is as requested)"$0D22"trunk"$22"            diameter of solid core (u"
+       "sed for trace visibility and collision (not ai pathing))"$0D22"trunkhe"
+       "ight"$22"    height of trunk"$0D"ORIENT_LOD - if flagged, the entity w"
+       "ill yaw towards the player when the LOD switches"$0D22"modelscale_vec"$22
+       " - Set scale per-axis.  Overrides "$22"modelscale"$22", so if you have"
+       " both, the "$22"modelscale"$22" is ignored"
+      bbox = '-16 -16 -16 16 16 16'
+      spawnflags: =
+      {
+        typ = "X1"
+        cap = "ORIENT_LOD"
+      }
+    }
+    misc_vis_dummy:form =
+    {
+      help = "If this entity is "$22"visible"$22" (in player's PVS) then it's "
+       "target is forced to be active whether it is in the player's PVS or not"
+       "."$0D"This entity itself is never visible or transmitted to clients."$0D
+       "For safety, you should have each dummy only point at one entity (howev"
+       "er, it's okay to have many dummies pointing at one entity)"
+      bbox = '-8 -8 -8 8 8 8'
+    }
+    misc_vis_dummy_multiple:form =
+    {
+      help = "If this entity is "$22"visible"$22" (in player's PVS) then it's "
+       "target is forced to be active whether it is in the player's PVS or not"
+       "."$0D"This entity itself is never visible or transmitted to clients."$0D
+       "This entity was created to have multiple speakers targeting it"
+      bbox = '-8 -8 -8 8 8 8'
+    }
+    misc_light_surface:form =
+    {
+      help = "The surfaces nearest these entities will be the only surfaces li"
+       "t by the targeting light"$0D"This must be within 64 world units of the"
+       " surface to be lit!"
+      bbox = '-8 -8 -8 8 8 8'
+    }
+    misc_portal_surface:form =
+    {
+      help = "The portal surface nearest this entity will show a view from the"
+       " targeted misc_portal_camera, or a mirror view if untargeted."$0D"This"
+       " must be within 64 world units of the surface!"
+      bbox = '-8 -8 -8 8 8 8'
+    }
+    misc_portal_camera:form =
+    {
+      help = "The target for a misc_portal_director.  You can set either angle"
+       "s or target another entity to determine the direction of view."$0D22"r"
+       "oll"$22" an angle modifier to orient the camera around the target vect"
+       "or;"
+      bbox = '-8 -8 -8 8 8 8'
+      spawnflags: =
+      {
+        typ = "X1"
+        cap = "slowrotate"
+      }
+      spawnflags: =
+      {
+        typ = "X2"
+        cap = "fastrotate"
+      }
+    }
+    shooter_grenade:form =
+    {
+      help = "Fires at either the target or the current direction."$0D22"rando"
+       "m"$22" is the number of degrees of deviance from the target. (1.0 defa"
+       "ult)"
+      bbox = '-16 -16 -16 16 16 16'
+    }
+    corona:form =
+    {
+      help = "Use color picker to set color or key "$22"color"$22".  values ar"
+       "e 0.0-1.0 for each color (rgb)."$0D22"scale"$22" will designate a mult"
+       "iplier to the default size.  (so 2.0 is 2xdefault size, 0.5 is half)"
+      bbox = '-4 -4 -4 4 4 4'
+      spawnflags: =
+      {
+        typ = "X1"
+        cap = "START_OFF"
+      }
+    }
+    dlight:form =
+    {
+      help = $22"style"$22": value is an int from 1-19 that contains a pre-def"
+       "ined 'flicker' string."$0D22"stylestring"$22": set your own 'flicker' "
+       "string.  (ex. "$22"klmnmlk"$22"). NOTE: this should be all lowercase"$0D
+       "Stylestring characters run at 10 cps in the game. (meaning the alphabe"
+       "t, at 24 characters, would take 2.4 seconds to cycle)"$0D22"offset"$22
+       ": change the initial index in a style string.  So val of 3 in the abov"
+       "e example would start this light at 'N'.  (used to get dlights using t"
+       "he same style out of sync)."$0D22"atten"$22": offset from the alpha va"
+       "lues of the stylestring.  stylestring of "$22"ddeeffzz"$22" with an at"
+       "ten of -1 would result in "$22"ccddeeyy"$220D"Use color picker to set "
+       "color or key "$22"color"$22".  values are 0.0-1.0 for each color (rgb)"
+       "."$0D"FORCEACTIVE    - toggle makes sure this light stays alive in a m"
+       "ap even if the user has r_dynamiclight set to 0."$0D"STARTOFF    - mea"
+       "ns the dlight doesn't spawn in until ent is triggered"$0D"ONETIME     "
+       "   - when the dlight is triggered, it will play through it's cycle onc"
+       "e, then shut down until triggered again"$0D22"shader"$22" name of shad"
+       "er to apply"$0D22"sound"$22" sound to loop every cycle (this actually "
+       "just plays the sound at the beginning of each cycle)"$0D"styles:"$0D"1"
+       " - "$22"mmnmmommommnonmmonqnmmo"$220D"2 - "$22"abcdefghijklmnopqrstuvw"
+       "xyzyxwvutsrqponmlkjihgfedcba"$220D"3 - "$22"mmmmmaaaaammmmmaaaaaabcdef"
+       "gabcdefg"$220D"4 - "$22"ma"$220D"5 - "$22"jklmnopqrstuvwxyzyxwvutsrqpo"
+       "nmlkj"$220D"6 - "$22"nmonqnmomnmomomono"$220D"7 - "$22"mmmaaaabcdefgmm"
+       "mmaaaammmaamm"$220D"8 - "$22"aaaaaaaazzzzzzzz"$220D"9 - "$22"mmamammmm"
+       "ammamamaaamammma"$220D"10 - "$22"abcdefghijklmnopqrrqponmlkjihgfedcba"$22
+       $0D"11 - "$22"mmnommomhkmmomnonmmonqnmmo"$220D"12 - "$22"kmamaamakmmmaa"
+       "kmamakmakmmmma"$220D"13 - "$22"kmmmakakmmaaamammamkmamakmmmma"$220D"14"
+       " - "$22"mmnnoonnmmmmmmmmmnmmmmnonmmmmmmm"$220D"15 - "$22"mmmmnonmmmmnm"
+       "mmmmnonmmmmmnmmmmmmm"$220D"16 - "$22"zzzzzzzzaaaaaaaa"$220D"17 - "$22"z"
+       "zzzzzzzaaaaaaaaaaaaaaaa"$220D"18 - "$22"aaaaaaaazzzzzzzzaaaaaaaa"$220D
+       "19 - "$22"aaaaaaaaaaaaaaaazzzzzzzz"$22
+      bbox = '-12 -12 -12 12 12 12'
+      spawnflags: =
+      {
+        typ = "X1"
+        cap = "FORCEACTIVE"
+      }
+      spawnflags: =
+      {
+        typ = "X2"
+        cap = "STARTOFF"
+      }
+      spawnflags: =
+      {
+        typ = "X4"
+        cap = "ONETIME"
+      }
+    }
+    misc_bubbles8:form =
+    {
+      help = "health = density defaults to 32"
+      bbox = '-8 -8 0 8 8 16'
+      spawnflags: =
+      {
+        typ = "X1"
+        cap = "TURBULENT"
+      }
+    }
+    misc_bubbles16:form =
+    {
+      help = "health = density defaults to 32"
+      bbox = '-16 -16 0 16 16 16'
+      spawnflags: =
+      {
+        typ = "X1"
+        cap = "TURBULENT"
+      }
+    }
+    misc_bubbles32:form =
+    {
+      help = "health = density defaults to 32"
+      bbox = '-32 -32 0 32 32 16'
+      spawnflags: =
+      {
+        typ = "X1"
+        cap = "TURBULENT"
+      }
+    }
+    misc_bubbles64:form =
+    {
+      help = "health = density defaults to 32"
+      bbox = '-64 -64 0 64 64 64'
+      spawnflags: =
+      {
+        typ = "X1"
+        cap = "TURBULENT"
+      }
+    }
+    misc_mg42:form =
+    {
+      help = "harc = horizonal fire arc Default is 115"$0D"varc = vertical fir"
+       "e arc Default is 45"$0D"health = how much damage can it take default i"
+       "s 50"$0D"damage = determines how much the weapon will inflict if a non"
+       " player uses it"$0D22"accuracy"$22" all guns are 100% accurate an entr"
+       "y of 0.5 would make it 50%"
+      bbox = '-16 -16 -24 16 16 24'
+      spawnflags: =
+      {
+        typ = "X1"
+        cap = "HIGH"
+      }
+      spawnflags: =
+      {
+        typ = "X2"
+        cap = "NOTRIPOD"
+      }
+    }
+    misc_spawner:form =
+    {
+      help = "use the pickup name when this entity gets used it will spawn an "
+       "item"$0D"that matches its spawnitem field"$0D"i.e."$0D"spawnitem"$0D"9"
+       "mm"
+      bbox = '-8 -8 -8 8 8 8'
+    }
+    func_door:form =
+    {
+      help = "TOGGLE      wait in both the start and end states for a trigger "
+       "event."$0D"START_OPEN  the door to moves to its destination when spawn"
+       "ed, and operate in reverse.  It is used to temporarily or permanently "
+       "close off an area when triggered (not useful for touch or takedamage d"
+       "oors)."$0D"NOMONSTER   monsters will not trigger this door"$0D"SHOOT-T"
+       "HRU    Bullets don't stop when they hit the door.  Set "$22"shoot_thru"
+       "_scale"$22" with bullet damage scale (see below)"$0D22"key"$22"       "
+       "-1 for locked, key number for which key opens, 0 for open.  default '0"
+       "' unless door is targeted.  (trigger_aidoor entities targeting this do"
+       "or do /not/ affect the key status)"$0D22"model2"$22"    .md3 model to "
+       "also draw"$0D22"angle"$22"        determines the opening direction"$0D
+       $22"targetname"$22" if set, no touch field will be spawned and a remote"
+       " button or trigger field activates the door."$0D22"speed"$22"        m"
+       "ovement speed (100 default)"$0D22"closespeed"$22" optional different m"
+       "ovement speed for door closing"$0D22"wait"$22"      wait before return"
+       "ing (3 default, -1 = never return)"$0D22"lip"$22"       lip remaining "
+       "at end of move (8 default)"$0D22"dmg"$22"       damage to inflict when"
+       " blocked (2 default)"$0D22"color"$22"     constantLight color"$0D22"li"
+       "ght"$22"     constantLight radius"$0D22"health"$22"    if set, the doo"
+       "r must be shot open"$0D22"team"$22"        team name.  other doors wit"
+       "h same team name will open/close in syncronicity"$0D22"shoot_thru_scal"
+       "e"$22"    Multiplier for how much damage bullets do that have passed t"
+       "hrough the door.  Effectively how much damage the door 'absorbs'.  0.0"
+       " - 1.0 (0.0 will turn SHOOT-THRU off, 1.0 is full damage)"$0D22"type"$22
+       "        use sounds based on construction of door:"$0D"0 - nosound (def"
+       "ault)"$0D"1 - metal"$0D"2 - stone"$0D"3 - lab"$0D"4 - wood"$0D"5 - iro"
+       "n/jail"$0D"6 - portcullis"$0D"7 - wood (quiet)"
+      spawnflags: =
+      {
+        typ = "X1"
+        cap = "START_OPEN"
+      }
+      spawnflags: =
+      {
+        typ = "X2"
+        cap = "TOGGLE"
+      }
+      spawnflags: =
+      {
+        typ = "X4"
+        cap = "CRUSHER"
+      }
+      spawnflags: =
+      {
+        typ = "X8"
+        cap = "TOUCH"
+      }
+      spawnflags: =
+      {
+        typ = "X16"
+        cap = "SHOOT"
+      }
+      spawnflags: =
+      {
+        typ = "X64"
+        cap = "THRU"
+      }
+    }
+    func_plat:form =
+    {
+      help = "Plats are always drawn in the extended position so they will lig"
+       "ht correctly."$0D22"lip"$22"        default 8, protrusion above rest p"
+       "osition"$0D22"height"$22"    total height of movement, defaults to mod"
+       "el height"$0D22"speed"$22"        overrides default 200."$0D22"dmg"$22
+       "        overrides default 2"$0D22"model2"$22"    .md3 model to also dr"
+       "aw"$0D22"color"$22"        constantLight color"$0D22"light"$22"       "
+       " constantLight radius"
+    }
+    func_button:form =
+    {
+      help = "When a button is touched, it moves some distance in the directio"
+       "n of it's angle, triggers all of it's targets, waits some time, then r"
+       "eturns to it's original position where it can be triggered again."$0D22
+       "model2"$22"    .md3 model to also draw"$0D22"angle"$22"        determi"
+       "nes the opening direction"$0D22"target"$22"    all entities with a mat"
+       "ching targetname will be used"$0D22"speed"$22"        override the def"
+       "ault 40 speed"$0D22"wait"$22"        override the default 1 second wai"
+       "t (-1 = never return)"$0D22"lip"$22"        override the default 4 pix"
+       "el lip remaining at end of move"$0D22"health"$22"    if set, the butto"
+       "n must be killed instead of touched"$0D22"color"$22"        constantLi"
+       "ght color"$0D22"light"$22"        constantLight radius"
+      spawnflags: =
+      {
+        typ = "X8"
+        cap = "TOUCH"
+      }
+      spawnflags: =
+      {
+        typ = "X64"
+        cap = "STAYOPEN"
+      }
+    }
+    path_corner:form =
+    {
+      help = "Train path corners."$0D"Target: next path corner and other targe"
+       "ts to fire"$0D22"targetname"$22" The script uses this name to identify"
+       " the corner"$0D22"speed"$22" speed to move to the next corner"$0D22"wa"
+       "it"$22" seconds to wait before behining move to next corner"$0D22"coun"
+       "t2"$22" used only in conjunction with the truck_cam to control playing"
+       " of gear changes"
+      bbox = '-8 -8 -8 8 8 8'
+      spawnflags: =
+      {
+        typ = "X1"
+        cap = "STOP"
+      }
+      spawnflags: =
+      {
+        typ = "X2"
+        cap = "END"
+      }
+      spawnflags: =
+      {
+        typ = "X4"
+        cap = "REVERSE"
+      }
+    }
+    func_train_rotating:form =
+    {
+      help = "*** use script_mover instead ***"$0D"A train is a mover that mov"
+       "es between path_corner target points."$0D"This train can also rotate a"
+       "long the X Y Z"$0D"Trains MUST HAVE AN ORIGIN BRUSH."$0D"The train spa"
+       "wns at the first target it is pointing at."$0D22"model2"$22"    .md3 m"
+       "odel to also draw"$0D22"dmg"$22"        default    2"$0D22"speed"$22" "
+       "       default 100"$0D22"noise"$22"        looping sound to play when "
+       "the train is in motion"$0D22"target"$22"    next path corner"$0D22"col"
+       "or"$22"        constantLight color"$0D22"light"$22"        constantLig"
+       "ht radius"$0D"On the path corner:"$0D"speed    departure speed from th"
+       "at corner"$0D"rotate   angle change for X Y Z to next corner"$0D"durat"
+       "ion duration for angle change (overrides speed)"
+      spawnflags: =
+      {
+        typ = "X1"
+        cap = "START_ON"
+      }
+      spawnflags: =
+      {
+        typ = "X2"
+        cap = "TOGGLE"
+      }
+      spawnflags: =
+      {
+        typ = "X4"
+        cap = "BLOCK_STOPS"
+      }
+    }
+    func_leaky:form =
+    {
+      help = $22"type"$22" - leaks particles of this type"$0D"1:oil"$0D"2:wate"
+       "r"$0D"3:steam"
+    }
+    func_static:form =
+    {
+      help = "A bmodel that just sits there, doing nothing.  Can be used for c"
+       "onditional walls and models."$0D22"model2"$22"    .md3 model to also d"
+       "raw"$0D22"color"$22"        constantLight color"$0D22"light"$22"      "
+       "  constantLight radius"$0D22"start_invis"$22" will start the entity as"
+       " non-existant"$0D"If targeted, it will toggle existance when triggered"
+       $0D"pain will use its target"$0D"When using pain you will need to speci"
+       "fy the delay time"$0D"value of 1 = 1 sec 2 = 2 sec so on..."$0D"defaul"
+       "t is 1 sec you can use decimals"$0D"example :"$0D"delay"$0D"1.27"$0D"p"
+       "ainEFX will spawn a shards"$0D"example:"$0D"shard"$0D"4"$0D"will spawn"
+       " rubble"$0D"shard default is 4"$0D"shard ="$0D"shard_glass = 0,"$0D"sh"
+       "ard_wood = 1,"$0D"shard_metal = 2,"$0D"shard_ceramic = 3,"$0D"shard_pe"
+       "bbles = 4"
+      spawnflags: =
+      {
+        typ = "X1"
+        cap = "start_invis"
+      }
+      spawnflags: =
+      {
+        typ = "X2"
+        cap = "pain"
+      }
+      spawnflags: =
+      {
+        typ = "X4"
+        cap = "painEFX"
+      }
+    }
+    func_rotating:form =
+    {
+      help = "You need to have an origin brush as part of this entity."$0D"The"
+       " center of that brush will be the point around which it is rotated. It"
+       " will rotate around the Z axis by default.  You can check either the X"
+       "_AXIS or Y_AXIS box to change that."$0D22"model2"$22"    .md3 model to"
+       " also draw"$0D22"speed"$22"        determines how fast it moves; defau"
+       "lt value is 100."$0D22"dmg"$22"        damage to inflict when blocked "
+       "(2 default)"$0D22"color"$22"        constantLight color"$0D22"light"$22
+       "        constantLight radius"
+      spawnflags: =
+      {
+        typ = "X1"
+        cap = "START_ON"
+      }
+      spawnflags: =
+      {
+        typ = "X2"
+        cap = "STARTINVIS"
+      }
+      spawnflags: =
+      {
+        typ = "X4"
+        cap = "X_AXIS"
+      }
+      spawnflags: =
+      {
+        typ = "X8"
+        cap = "Y_AXIS"
+      }
+    }
+    func_bobbing:form =
+    {
+      help = "Normally bobs on the Z axis"$0D22"model2"$22"    .md3 model to a"
+       "lso draw"$0D22"height"$22"    amplitude of bob (32 default)"$0D22"spee"
+       "d"$22"        seconds to complete a bob cycle (4 default)"$0D22"phase"$22
+       "        the 0.0 to 1.0 offset in the cycle to start at"$0D22"dmg"$22" "
+       "       damage to inflict when blocked (2 default)"$0D22"color"$22"    "
+       "    constantLight color"$0D22"light"$22"        constantLight radius"
+      spawnflags: =
+      {
+        typ = "X1"
+        cap = "X_AXIS"
+      }
+      spawnflags: =
+      {
+        typ = "X2"
+        cap = "Y_AXIS"
+      }
+    }
+    func_pendulum:form =
+    {
+      help = "You need to have an origin brush as part of this entity."$0D"Pen"
+       "dulums always swing north / south on unrotated models.  Add an angles "
+       "field to the model to allow rotation in other directions."$0D"Pendulum"
+       " frequency is a physical constant based on the length of the beam and "
+       "gravity."$0D22"model2"$22"    .md3 model to also draw"$0D22"speed"$22" "
+       "       the number of degrees each way the pendulum swings, (30 default"
+       ")"$0D22"phase"$22"        the 0.0 to 1.0 offset in the cycle to start "
+       "at"$0D22"dmg"$22"        damage to inflict when blocked (2 default)"$0D
+       $22"color"$22"        constantLight color"$0D22"light"$22"        const"
+       "antLight radius"
+    }
+    func_door_rotating:form =
+    {
+      help = "You need to have an origin brush as part of this entity."$0D"The"
+       " center of that brush will be the point around which it is rotated. It"
+       " will rotate around the Z axis by default.  You can check either the X"
+       "_AXIS or Y_AXIS box to change that (only one axis allowed. If both X a"
+       "nd Y are checked, the default of Z will be used)."$0D"FORCE        doo"
+       "r opens even if blocked"$0D"TAKE_KEY    removes the key from the playe"
+       "rs inventory"$0D"SHOOT-THRU    Bullets don't stop when they hit the do"
+       "or.  Set "$22"shoot_thru_scale"$22" with bullet damage scale (see belo"
+       "w)"$0D22"key"$22"       -1 for locked, key number for which key opens,"
+       " 0 for open.  default '0' unless door is targeted.  (trigger_aidoor en"
+       "tities targeting this door do /not/ affect the key status)"$0D22"model"
+       "2"$22"    .md3 model to also draw"$0D22"degrees"$22"   determines how "
+       "many degrees it will turn (90 default)"$0D22"speed"$22"        movemen"
+       "t speed (100 default)"$0D22"closespeed"$22" optional different movemen"
+       "t speed for door closing"$0D22"time"$22"      how many milliseconds it"
+       " will take to open 1 sec = 1000"$0D22"dmg"$22"       damage to inflict"
+       " when blocked (2 default)"$0D22"color"$22"     constantLight color"$0D
+       $22"light"$22"     constantLight radius"$0D22"shoot_thru_scale"$22"    "
+       "Multiplier for how much damage bullets do that have passed through the"
+       " door.  Effectively how much damage the door 'absorbs'.  0.0 - 1.0 (0."
+       "0 will turn SHOOT-THRU off, 1.0 is full damage)"$0D22"type"$22"       "
+       " use sounds based on construction of door:"$0D"0 - nosound (default)"$0D
+       "1 - metal"$0D"2 - stone"$0D"3 - lab"$0D"4 - wood"$0D"5 - iron/jail"$0D
+       "6 - portcullis"$0D"7 - wood (quiet)"$0D22"team"$22"        team name. "
+       " other doors with same team name will open/close in syncronicity"
+      spawnflags: =
+      {
+        typ = "X2"
+        cap = "TOGGLE"
+      }
+      spawnflags: =
+      {
+        typ = "X4"
+        cap = "X_AXIS"
+      }
+      spawnflags: =
+      {
+        typ = "X8"
+        cap = "Y_AXIS"
+      }
+      spawnflags: =
+      {
+        typ = "X16"
+        cap = "REVERSE"
+      }
+      spawnflags: =
+      {
+        typ = "X32"
+        cap = "FORCE"
+      }
+      spawnflags: =
+      {
+        typ = "X64"
+        cap = "STAYOPEN"
+      }
+      spawnflags: =
+      {
+        typ = "X128"
+        cap = "TAKE_KEY"
+      }
+    }
+    target_effect:form =
+    {
+      help = $22"mass"$22" defaults to 15.  This determines how much debris is"
+       " emitted when it explodes.  (number of pieces)"$0D22"dmg"$22" defaults"
+       " to 0.  damage radius blast when triggered"$0D22"type"$22" - if 'rubbl"
+       "e' is specified, this is the model type ("$22"glass"$22", "$22"wood"$22
+       ", "$22"metal"$22", "$22"gibs"$22", "$22"brick"$22", "$22"rock"$22", "$22
+       "fabric"$22") default is "$22"wood"$22
+      bbox = '-6 -6 -6 6 6 6'
+      spawnflags: =
+      {
+        typ = "X1"
+        cap = "TNT"
+      }
+      spawnflags: =
+      {
+        typ = "X2"
+        cap = "explode"
+      }
+      spawnflags: =
+      {
+        typ = "X4"
+        cap = "smoke"
+      }
+      spawnflags: =
+      {
+        typ = "X8"
+        cap = "rubble"
+      }
+      spawnflags: =
+      {
+        typ = "X16"
+        cap = "gore"
+      }
+      spawnflags: =
+      {
+        typ = "X32"
+        cap = "lowgrav"
+      }
+      spawnflags: =
+      {
+        typ = "X64"
+        cap = "debris"
+      }
+    }
+    func_explosive:form =
+    {
+      help = "EXPLO only explosives can damage it rockets grendades etc"$0D"DY"
+       "NOMITE only can be damaged by DY-NO-MITE!"$0D"Any brush that you want "
+       "to explode or break apart.  If you want an explosion, set dmg and it w"
+       "ill do a radius explosion of that amount at the center of the bursh."$0D
+       "TOUCHABLE means automatic use on player contact."$0D"USESHADER will ap"
+       "ply the shader used on the brush model to the debris."$0D"LOWGRAV spec"
+       "ifies that the debris will /always/ fall slowly"$0D22"model2"$22" opti"
+       "onal md3 to draw over the solid clip brush"$0D22"numLivingFrames"$22" "
+       "- how many frames to loop while the ent is 'alive' (model should have "
+       "two animations: living->dead. living always starts at frame '0')"$0D22
+       "numDeadFrames"$22" - how many frames to play when the ent 'dies' ('nnn"
+       "Frames' parameters must go together)"$0D22"wait"$22" - how long (in se"
+       "conds) to leave the model after it's 'dead'.  '-1' leaves forever."$0D
+       "NOTE: if you use model2, you must have an origin brush in the explosiv"
+       "e with the center of the origin at the origin of the model"$0D22"item"$22
+       " - when it explodes, pop this item out with the debirs (use QUAKED nam"
+       "e. ex: "$22"item_health_small"$22")"$0D22"dmg"$22" - how much radius d"
+       "amage should be done, defaults to 0"$0D22"health"$22" - defaults to 10"
+       "0.  If health is set to '0' the brush will not be shootable."$0D22"tar"
+       "getname"$22" - if set, no touch field will be spawned and a remote but"
+       "ton or trigger field triggers the explosion."$0D22"scriptname"$22" - s"
+       "cript whose death is triggered when the object is destroyed"$0D22"type"
+       $22" - type of debris ("$22"glass"$22", "$22"wood"$22", "$22"metal"$22","
+       " "$22"gibs"$22", "$22"brick"$22", "$22"rock"$22", "$22"fabric"$22") de"
+       "fault is "$22"wood"$220D22"mass"$22" - defaults to 75.  This determine"
+       "s how much debris is emitted when it explodes.  You get one large chun"
+       "k per 100 of mass (up to 8) and one small chunk per 25 of mass (up to "
+       "16).  So 800 gives the most."$0D22"noise"$22" - sound to play when tri"
+       "ggered.  The explosive will default to a sound that matches it's 'type"
+       "'.  Use the sound name "$22"nosound"$22" (case in-sensitive) if you wa"
+       "nt it silent."$0D"the default sounds are:"$0D22"wood"$22"    - "$22"so"
+       "und/world/boardbreak.wav"$220D22"glass"$22"    - "$22"sound/world/glas"
+       "sbreak.wav"$220D22"metal"$22"    - "$22"sound/world/metalbreak.wav"$22
+       $0D22"gibs"$22"    - "$22"sound/player/gibsplit1.wav"$220D22"brick"$22" "
+       "   - "$22"sound/world/brickfall.wav"$220D22"stone"$22"    - "$22"sound"
+       "/world/stonefall.wav"$220D22"fabric"$22"    - "$22"sound/world/metalbr"
+       "eak.wav"$22"    // (SA) temp"$0D22"fxdensity"$22" size of explosion 1 "
+       "- 100 (default is 10)"
+      spawnflags: =
+      {
+        typ = "X1"
+        cap = "START_INVIS"
+      }
+      spawnflags: =
+      {
+        typ = "X2"
+        cap = "TOUCHABLE"
+      }
+      spawnflags: =
+      {
+        typ = "X4"
+        cap = "USESHADER"
+      }
+      spawnflags: =
+      {
+        typ = "X8"
+        cap = "LOWGRAV"
+      }
+      spawnflags: =
+      {
+        typ = "X16"
+        cap = "NOBLOCKAAS"
+      }
+      spawnflags: =
+      {
+        typ = "X32"
+        cap = "EXPLO"
+      }
+      spawnflags: =
+      {
+        typ = "X64"
+        cap = "DYNOMITE"
+      }
+    }
+    func_invisible_user:form =
+    {
+      help = "when activated will use its target"$0D22"delay"$22" - time (in s"
+       "econds) before it can be used again"$0D22"offnoise"$22" - specifies an"
+       " alternate sound"$0D22"cursorhint"$22" - overrides the auto-location o"
+       "f targeted entity (list below)"$0D"Normally when a player 'activates' "
+       "this entity, if the entity has been turned 'off' (by a scripted comman"
+       "d) you will hear a sound to indicate that you cannot activate the user"
+       "."$0D"The sound defaults to "$22"sound/movers/invis_user_off.wav"$220D
+       "NO_OFF_NOISE - no sound will play if the invis_user is used when 'off'"
+       $0D"NOT_KICKABLE - kicking doesn't fire, only player activating"$0D22"c"
+       "ursorhint"$22" cursor types: (probably more, ask sherman if you think "
+       "the list is out of date)"$0D"they /don't/ need to be all uppercase"$0D
+       "HINT_NONE"$0D"HINT_PLAYER"$0D"HINT_ACTIVATE"$0D"HINT_DOOR"$0D"HINT_DOO"
+       "R_ROTATING"$0D"HINT_DOOR_LOCKED"$0D"HINT_DOOR_ROTATING_LOCKED"$0D"HINT"
+       "_MG42"$0D"HINT_BREAKABLE"$0D"HINT_BREAKABLE_BIG"$0D"HINT_CHAIR"$0D"HIN"
+       "T_ALARM"$0D"HINT_HEALTH"$0D"HINT_TREASURE"$0D"HINT_KNIFE"$0D"HINT_LADD"
+       "ER"$0D"HINT_BUTTON"$0D"HINT_WATER"$0D"HINT_CAUTION"$0D"HINT_DANGER"$0D
+       "HINT_SECRET"$0D"HINT_QUESTION"$0D"HINT_EXCLAMATION"$0D"HINT_CLIPBOARD"$0D
+       "HINT_WEAPON"$0D"HINT_AMMO"$0D"HINT_ARMOR"$0D"HINT_POWERUP"$0D"HINT_HOL"
+       "DABLE"$0D"HINT_INVENTORY"$0D"HINT_SCENARIC"$0D"HINT_EXIT"$0D"HINT_PLYR"
+       "_FRIEND"$0D"HINT_PLYR_NEUTRAL"$0D"HINT_PLYR_ENEMY"$0D"HINT_PLYR_UNKNOW"
+       "N"
+      spawnflags: =
+      {
+        typ = "X1"
+        cap = "STARTOFF"
+      }
+      spawnflags: =
+      {
+        typ = "X2"
+        cap = "HAS_USER"
+      }
+      spawnflags: =
+      {
+        typ = "X4"
+        cap = "NO_OFF_NOISE"
+      }
+      spawnflags: =
+      {
+        typ = "X8"
+        cap = "NOT_KICKABLE"
+      }
+    }
+    props_smokedust:form =
+    {
+      help = "health = how many pieces 16 is default"
+      bbox = '-8 -8 -8 8 8 8'
+    }
+    props_chair_chat:form =
+    {
+      help = "point entity"$0D"health = default = 10"$0D"wait = defaults to 5 "
+       "how many shards to spawn ( try not to exceed 20 )"$0D"shard ="$0D"shar"
+       "d_glass = 0,"$0D"shard_wood = 1,"$0D"shard_metal = 2,"$0D"shard_cerami"
+       "c = 3"
+      bbox = '-16 -16 0 16 16 32'
+    }
+    props_chair_chatarm:form =
+    {
+      help = "point entity"$0D"health = default = 10"$0D"wait = defaults to 5 "
+       "how many shards to spawn ( try not to exceed 20 )"$0D"shard ="$0D"shar"
+       "d_glass = 0,"$0D"shard_wood = 1,"$0D"shard_metal = 2,"$0D"shard_cerami"
+       "c = 3"
+      bbox = '-16 -16 0 16 16 32'
+    }
+    props_chair_side:form =
+    {
+      help = "point entity"$0D"health = default = 10"$0D"wait = defaults to 5 "
+       "how many shards to spawn ( try not to exceed 20 )"$0D"shard ="$0D"shar"
+       "d_glass = 0,"$0D"shard_wood = 1,"$0D"shard_metal = 2,"$0D"shard_cerami"
+       "c = 3"
+      bbox = '-16 -16 0 16 16 32'
+    }
+    props_chair_hiback:form =
+    {
+      help = "point entity"$0D"health = default = 10"$0D"wait = defaults to 5 "
+       "how many shards to spawn ( try not to exceed 20 )"$0D"shard ="$0D"shar"
+       "d_glass = 0,"$0D"shard_wood = 1,"$0D"shard_metal = 2,"$0D"shard_cerami"
+       "c = 3"
+      bbox = '-16 -16 0 16 16 32'
+    }
+    props_chair:form =
+    {
+      help = "point entity"$0D"health = default = 10"$0D"wait = defaults to 5 "
+       "how many shards to spawn ( try not to exceed 20 )"$0D"shard ="$0D"shar"
+       "d_glass = 0,"$0D"shard_wood = 1,"$0D"shard_metal = 2,"$0D"shard_cerami"
+       "c = 3"
+      bbox = '-16 -16 0 16 16 32'
+    }
+    props_damageinflictor:form =
+    {
+      help = "this entity when used will cause 9999 damage to all entities it "
+       "is targeting"$0D"then it will be removed"
+      bbox = '-8 -8 -8 8 8 8'
+    }
+    props_FireColumn:form =
+    {
+      help = "this entity will require a target use an infonotnull to specifiy"
+       " its direction"$0D"defaults:"$0D"will leave a flaming trail by default"
+       $0D"will not be affected by gravity"$0D"radius = distance flame will co"
+       "rkscrew from origin"$0D"speed = default is 900"$0D"duration = default "
+       "is 3 sec"$0D"start_size = default is 5"$0D"end_size = defaults 7 thru "
+       "17"$0D"count = defaults 100 thru 500"$0D"Pending:"$0D"delay before it "
+       "happens again use trigger_relay for now"$0D"assign a model"
+      bbox = '-8 -8 -8 8 8 8'
+      spawnflags: =
+      {
+        typ = "X1"
+        cap = "CORKSCREW"
+      }
+      spawnflags: =
+      {
+        typ = "X2"
+        cap = "SMOKE"
+      }
+      spawnflags: =
+      {
+        typ = "X4"
+        cap = "GRAVITY"
+      }
+      spawnflags: =
+      {
+        typ = "X8"
+        cap = "HALFGRAVITY"
+      }
+    }
+    props_ExploPart:form =
+    {
+      help = $22"model"$22" will load a discreet model"$0D22"noise"$22" will l"
+       "oad looping sound for the model"$0D22"target"$22" point to an infonotn"
+       "ull to specify dir default will be up"$0D22"speed"$22"    default to 9"
+       "00"$0D22"type"$22"  wood concrete or stone"$0D22"count"$22"in the abse"
+       "nse of a model count will determine the piece to spawn"$0D"for wood:"$0D
+       "it can be one of the following 64 48 32 24 16 8"$0D"for concrete:"$0D"f"
+       "or stone:"
+      bbox = '-8 -8 -16 8 8 16'
+    }
+    props_decoration:form =
+    {
+      help = $22"model2"$22" will specify the model to load"$0D22"noise"$22"  "
+       "the looping sound entity is to make"$0D22"type"$22" type of debris ("$22
+       "glass"$22", "$22"wood"$22", "$22"metal"$22", "$22"ceramic"$22", "$22"r"
+       "ubble"$22") default is "$22"wood"$220D22"count"$22" how much debris ei"
+       ". default 4 pieces"$0D"you will need to specify the bounding box for t"
+       "he entity"$0D22"high"$22"  default is 4"$0D22"wide"$22"    default is "
+       "4"$0D22"frames"$22"    how many frames of animation to play"$0D22"loop"
+       $22" when the animation is done start again on this frame"$0D22"starton"
+       "frame"$22" on what frame do you want to start the animation"
+      bbox = '-8 -8 0 8 8 16'
+      spawnflags: =
+      {
+        typ = "X1"
+        cap = "STARTINVIS"
+      }
+      spawnflags: =
+      {
+        typ = "X2"
+        cap = "DEBRIS"
+      }
+      spawnflags: =
+      {
+        typ = "X4"
+        cap = "ANIMATE"
+      }
+      spawnflags: =
+      {
+        typ = "X8"
+        cap = "KEEPBLOCK"
+      }
+      spawnflags: =
+      {
+        typ = "X16"
+        cap = "TOUCHACTIVATE"
+      }
+      spawnflags: =
+      {
+        typ = "X32"
+        cap = "LOOPING"
+      }
+      spawnflags: =
+      {
+        typ = "X64"
+        cap = "STARTON"
+      }
+    }
+    props_decorBRUSH:form =
+    {
+      help = "ANIMATE animate on death"$0D"STARTON playanimation on death"$0D"m"
+       "ust have an origin brush"$0D22"model2"$22" will specify the model to l"
+       "oad"$0D22"noise"$22"  the looping sound entity is to make"$0D22"type"$22
+       " type of debris ("$22"glass"$22", "$22"wood"$22", "$22"metal"$22", "$22
+       "ceramic"$22", "$22"rubble"$22") default is "$22"wood"$220D22"count"$22
+       " how much debris ei. default 4 pieces"$0D22"frames"$22"    how many fr"
+       "ames of animation to play"$0D22"loop"$22" when the animation is done s"
+       "tart again on this frame"$0D22"startonframe"$22" on what frame do you "
+       "want to start the animation"
+      spawnflags: =
+      {
+        typ = "X1"
+        cap = "STARTINVIS"
+      }
+      spawnflags: =
+      {
+        typ = "X2"
+        cap = "DEBRIS"
+      }
+      spawnflags: =
+      {
+        typ = "X4"
+        cap = "ANIMATE"
+      }
+      spawnflags: =
+      {
+        typ = "X8"
+        cap = "KEEPBLOCK"
+      }
+      spawnflags: =
+      {
+        typ = "X32"
+        cap = "LOOPING"
+      }
+      spawnflags: =
+      {
+        typ = "X64"
+        cap = "STARTON"
+      }
+    }
+    props_decoration_scale:form =
+    {
+      help = $22"modelscale"$22" - Scale multiplier (defaults to 1.0 and scale"
+       "s uniformly)"$0D22"modelscale_vec"$22" - Set scale per-axis.  Override"
+       "s "$22"modelscale"$22", so if you have both the "$22"modelscale"$22" i"
+       "s ignored"$0D22"model2"$22" will specify the model to load"$0D22"noise"
+       $22"  the looping sound entity is to make"$0D22"type"$22" type of debri"
+       "s ("$22"glass"$22", "$22"wood"$22", "$22"metal"$22", "$22"ceramic"$22","
+       " "$22"rubble"$22") default is "$22"wood"$220D22"count"$22" how much de"
+       "bris ei. default 4 pieces"$0D"you will need to specify the bounding bo"
+       "x for the entity"$0D22"high"$22"  default is 4"$0D22"wide"$22"    defa"
+       "ult is 4"$0D22"frames"$22"    how many frames of animation to play"$0D
+       $22"loop"$22" when the animation is done start again on this frame"$0D22
+       "startonframe"$22" on what frame do you want to start the animation"
+      bbox = '-8 -8 0 8 8 16'
+      spawnflags: =
+      {
+        typ = "X1"
+        cap = "STARTINVIS"
+      }
+      spawnflags: =
+      {
+        typ = "X2"
+        cap = "DEBRIS"
+      }
+      spawnflags: =
+      {
+        typ = "X4"
+        cap = "ANIMATE"
+      }
+      spawnflags: =
+      {
+        typ = "X8"
+        cap = "KEEPBLOCK"
+      }
+      spawnflags: =
+      {
+        typ = "X16"
+        cap = "TOUCHACTIVATE"
+      }
+      spawnflags: =
+      {
+        typ = "X32"
+        cap = "LOOPING"
+      }
+      spawnflags: =
+      {
+        typ = "X64"
+        cap = "STARTON"
+      }
+    }
+    props_skyportal:form =
+    {
+      help = $22"fov"$22" for the skybox default is 90"$0D"To have the portal "
+       "sky fogged, enter any of the following values:"$0D22"fogcolor"$22" (r "
+       "g b) (values 0.0-1.0)"$0D22"fognear"$22" distance from entity to start"
+       " fogging"$0D22"fogfar"$22" distance from entity that fog is opaque"
+      bbox = '-8 -8 0 8 8 16'
+    }
+    props_statue:form =
+    {
+      help = $22"model2"$22" will specify the model to load"$0D22"noise"$22"  "
+       "the sound entity is to make"$0D22"type"$22" type of debris ("$22"glass"
+       $22", "$22"wood"$22", "$22"metal"$22", "$22"ceramic"$22", "$22"rubble"$22
+       ") default is "$22"wood"$220D22"count"$22" how much debris ei. default "
+       "4 pieces"$0D"you will need to specify the bounding box for the entity"$0D
+       $22"high"$22"  default is 4"$0D22"wide"$22"    default is 4"$0D22"frame"
+       "s"$22"    how many frames of animation to play"$0D22"delay"$22"       "
+       " how long of a delay before damage is inflicted ei. 0.5 sec or 2.7 sec"
+       $0D22"damage"$22"    amount of damage to be inflicted"
+      bbox = '-8 -8 0 8 8 128'
+      spawnflags: =
+      {
+        typ = "X1"
+        cap = "HURT"
+      }
+      spawnflags: =
+      {
+        typ = "X2"
+        cap = "DEBRIS"
+      }
+      spawnflags: =
+      {
+        typ = "X4"
+        cap = "ANIMATE"
+      }
+      spawnflags: =
+      {
+        typ = "X8"
+        cap = "KEEPBLOCK"
+      }
+    }
+    props_statueBRUSH:form =
+    {
+      help = "needs an origin brush"$0D22"model2"$22" will specify the model t"
+       "o load"$0D22"noise"$22"  the sound entity is to make"$0D22"type"$22" t"
+       "ype of debris ("$22"glass"$22", "$22"wood"$22", "$22"metal"$22", "$22"c"
+       "eramic"$22", "$22"rubble"$22") default is "$22"wood"$220D22"count"$22" "
+       "how much debris ei. default 4 pieces"$0D22"frames"$22"    how many fra"
+       "mes of animation to play"$0D22"delay"$22"        how long of a delay b"
+       "efore damage is inflicted ei. 0.5 sec or 2.7 sec"$0D"THE damage has be"
+       "en disabled at the moment"$0D22"damage"$22"    amount of damage to be "
+       "inflicted"
+      spawnflags: =
+      {
+        typ = "X1"
+        cap = "HURT"
+      }
+      spawnflags: =
+      {
+        typ = "X2"
+        cap = "DEBRIS"
+      }
+      spawnflags: =
+      {
+        typ = "X4"
+        cap = "ANIMATE"
+      }
+      spawnflags: =
+      {
+        typ = "X8"
+        cap = "KEEPBLOCK"
+      }
+    }
+    script_mover:form =
+    {
+      help = "Scripted brush entity. A simplified means of moving brushes arou"
+       "nd based on events."$0D"Requires an origin brush."$0D22"modelscale"$22
+       " - Scale multiplier (defaults to 1, and scales uniformly)"$0D22"models"
+       "cale_vec"$22" - Set scale per-axis.  Overrides "$22"modelscale"$22", s"
+       "o if you have both the "$22"modelscale"$22" is ignored"$0D22"model2"$22
+       " optional md3 to draw over the solid clip brush"$0D22"scriptname"$22" "
+       "name used for scripting purposes (like aiName in AI scripting)"$0D22"h"
+       "ealth"$22" optionally make this entity damagable"
+      spawnflags: =
+      {
+        typ = "X1"
+        cap = "TRIGGERSPAWN"
+      }
+      spawnflags: =
+      {
+        typ = "X2"
+        cap = "SOLID"
+      }
+      spawnflags: =
+      {
+        typ = "X4"
+        cap = "EXPLOSIVEDAMAGEONLY"
+      }
+    }
+    script_model_med:form =
+    {
+      help = "MEDIUM SIZED scripted entity, used for animating a model, moving"
+       " it around, etc"$0D"SOLID spawnflag means this entity will clip the pl"
+       "ayer and AI, otherwise they can walk"$0D"straight through it"$0D22"mod"
+       "el"$22" the full path of the model to use"$0D22"scriptname"$22" name u"
+       "sed for scripting purposes (like aiName in AI scripting)"
+      bbox = '-16 -16 -24 16 16 64'
+      spawnflags: =
+      {
+        typ = "X1"
+        cap = "TriggerSpawn"
+      }
+      spawnflags: =
+      {
+        typ = "X2"
+        cap = "Solid"
+      }
+    }
+    script_camera:form =
+    {
+      help = "This is a camera entity. Used by the scripting to show cinematic"
+       "s, via special"$0D"camera commands. See scripting documentation."$0D22
+       "scriptname"$22" name used for scripting purposes (like aiName in AI sc"
+       "ripting)"
+      bbox = '-8 -8 -8 8 8 8'
+      spawnflags: =
+      {
+        typ = "X1"
+        cap = "TriggerSpawn"
+      }
+    }
+    script_multiplayer:form =
+    {
+      help = "This is used to script multiplayer maps.  Entity not displayed i"
+       "n game."$0D22"scriptname"$22" name used for scripting purposes (REQUIR"
+       "ED=='game_manager')"
+      bbox = '-8 -8 -8 8 8 8'
+    }
+    worldspawn:form =
+    {
+      help = "DHM - Nerve :: Worldspawn spawnflags to indicate if a gametype i"
+       "s not supported"$0D"Every map should have exactly one worldspawn."$0D22
+       "music"$22"     Music wav file"$0D22"gravity"$22"   800 is default grav"
+       "ity"$0D22"message"$22" Text to print during connection process"$0D22"a"
+       "mbient"$22"  Ambient light value (must use '_color')"$0D22"_color"$22" "
+       "   Ambient light color (must be used with 'ambient')"$0D22"sun"$22"   "
+       "     Shader to use for 'sun' image"$0D22"_blocksize"$22" q3map always "
+       "splits the BSP tree along the planes X=blocksize*n and Y=_blocksize*n."
+       " Default _blocksize value is 1024. Increase the _blocksize using large"
+       "r powers of 2 to reduce compile times on very large maps with low stru"
+       "ctural brush density."$0D22"gridsize"$22"   granularity of the light g"
+       "rid created by q3map. Values of three intergers by spaces, represents "
+       "number of units between grid points in X, Y and Z. Default gridsize is"
+       " 128 128 256. Use larger powers of 2 to reduce BSP size and compile ti"
+       "me on very large maps."$0D22"fogclip"$22"    Uses vis to exclude stuff"
+       " beyond the specified distance. q3map support varies."$0D22"wildwest"$22
+       " Required for a WildWest map.  Must be checked."
+
+      spawnflags: =
+      {
+        typ = "X1"
+        cap = "NO_GT_WOLF"
+      }
+      spawnflags: =
+      {
+        typ = "X2"
+        cap = "NO_STOPWATCH"
+      }
+      spawnflags: =
+      {
+        typ = "X4"
+        cap = "NO_CHECKPOINT"
+      }
+      spawnflags: =
+      {
+        typ = "X8"
+        cap = "wildwest"
+      }
+    }
+    target_give:form =
+    {
+      help = "Gives the activator all the items pointed to."
+      bbox = '-8 -8 -8 8 8 8'
+    }
+    target_remove_powerups:form =
+    {
+      help = "takes away all the activators powerups."$0D"Used to drop flight "
+       "powerups into death puts."
+      bbox = '-8 -8 -8 8 8 8'
+    }
+    target_delay:form =
+    {
+      help = $22"wait"$22" seconds to pause before firing targets."$0D22"rando"
+       "m"$22" delay variance, total delay = delay +/- random seconds"
+      bbox = '-8 -8 -8 8 8 8'
+    }
+    target_score:form =
+    {
+      help = $22"count"$22" number of points to add, default 1"$0D"The activat"
+       "or is given this many points."
+      bbox = '-8 -8 -8 8 8 8'
+    }
+    target_print:form =
+    {
+      help = $22"message"$22"    text to print"$0D"If "$22"private"$22", only "
+       "the activator gets the message.  If no checks, all clients get the mes"
+       "sage."
+      bbox = '-8 -8 -8 8 8 8'
+      spawnflags: =
+      {
+        typ = "X1"
+        cap = "redteam"
+      }
+      spawnflags: =
+      {
+        typ = "X2"
+        cap = "blueteam"
+      }
+      spawnflags: =
+      {
+        typ = "X4"
+        cap = "private"
+      }
+    }
+    target_speaker:form =
+    {
+      help = $22"noise"$22"        wav file to play"$0D"A global sound will pl"
+       "ay full volume throughout the level."$0D"Activator sounds will play on"
+       " the player that activated the target."$0D"Global and activator sounds"
+       " can't be combined with looping."$0D"Normal sounds play each time the "
+       "target is used."$0D"Looped sounds will be toggled by use functions."$0D
+       "Multiple identical looping sounds will just increase volume without an"
+       "y speed cost."$0D"NO_PVS - this sound will not turn off when not in th"
+       "e player's PVS"$0D22"wait"$22" : Seconds between auto triggerings, 0 ="
+       " don't auto trigger"$0D22"random"$22" : wait variance, default is 0"
+      bbox = '-8 -8 -8 8 8 8'
+      spawnflags: =
+      {
+        typ = "X1"
+        cap = "LOOPED_ON"
+      }
+      spawnflags: =
+      {
+        typ = "X2"
+        cap = "LOOPED_OFF"
+      }
+      spawnflags: =
+      {
+        typ = "X4"
+        cap = "GLOBAL"
+      }
+      spawnflags: =
+      {
+        typ = "X8"
+        cap = "ACTIVATOR"
+      }
+      spawnflags: =
+      {
+        typ = "X16"
+        cap = "VIS_MULTIPLE"
+      }
+      spawnflags: =
+      {
+        typ = "X32"
+        cap = "NO_PVS"
+      }
+    }
+    target_teleporter:form =
+    {
+      help = "The activator will be teleported away."
+      bbox = '-8 -8 -8 8 8 8'
+    }
+    target_relay:form =
+    {
+      help = "This doesn't perform any actions except fire its targets."$0D"Th"
+       "e activator can be forced to be from a certain team."$0D"if RANDOM is "
+       "checked, only one of the targets will be fired, not all of them"$0D22"k"
+       "ey"$22" specifies an item you can be carrying that affects the operati"
+       "on of this relay"$0D"this key is currently an int (1-16) which matches"
+       " the id of a key entity (key_key1 = 1, etc)"$0D"NOKEY_ONLY means "$22"f"
+       "ire only if I do /not/ have the specified key"$220D"TAKE_KEY removes t"
+       "he key from the players inventory"$0D22"lockednoise"$22" specifies a ."
+       "wav file to play if the relay is used and the player doesn't have the "
+       "necessary key."$0D"By default this sound is "$22"sound/movers/doors/de"
+       "fault_door_locked.wav"$220D"NO_LOCKED_NOISE specifies that it will be "
+       "silent if activated without proper key"
+      bbox = '-8 -8 -8 8 8 8'
+      spawnflags: =
+      {
+        typ = "X1"
+        cap = "RED_ONLY"
+      }
+      spawnflags: =
+      {
+        typ = "X2"
+        cap = "BLUE_ONLY"
+      }
+      spawnflags: =
+      {
+        typ = "X4"
+        cap = "RANDOM"
+      }
+      spawnflags: =
+      {
+        typ = "X8"
+        cap = "NOKEY_ONLY"
+      }
+      spawnflags: =
+      {
+        typ = "X16"
+        cap = "TAKE_KEY"
+      }
+      spawnflags: =
+      {
+        typ = "X32"
+        cap = "NO_LOCKED_NOISE"
+      }
+    }
+    target_kill:form =
+    {
+      help = "Kills the activator. (default)"$0D"If targets, they will be kill"
+       "ed when this is fired"$0D22"kill_user_too"$22" will still kill the act"
+       "ivator when this ent has targets (default is only kill targets, not ac"
+       "tivator)"
+      bbox = '-8 -8 -8 8 8 8'
+      spawnflags: =
+      {
+        typ = "X1"
+        cap = "kill_user_too"
+      }
+    }
+    target_location:form =
+    {
+      help = "Set "$22"message"$22" to the name of this location."$0D"Set "$22
+       "count"$22" to 0-7 for color."$0D"0:white 1:red 2:green 3:yellow 4:blue"
+       " 5:cyan 6:magenta 7:white"$0D"Closest target_location in sight used fo"
+       "r the location, if none"$0D"in site, closest in distance"
+      bbox = '-8 -8 -8 8 8 8'
+    }
+    target_fog:form =
+    {
+      help = "color picker chooses color of fog"$0D22"distance"$22" sets fog d"
+       "istance.  Use value '0' to give control back to the game (and use the "
+       "fog values specified in the sky shader if present)"$0D"distance value "
+       "sets the type of fog.  values > 1 are distance fog (ex. 2048), values "
+       "< 1 are density fog (ex. .0002)"$0D22"near"$22" is fog start distance "
+       "when using distance fog"$0D22"time"$22" time it takes to change fog to"
+       " new value.  default time is 1 sec"
+      bbox = '-8 -8 -8 8 8 8'
+    }
+    target_counter:form =
+    {
+      help = "Increments the counter pointed to."$0D22"count"$22" is the key f"
+       "or the count value"
+      bbox = '-8 -8 -8 8 8 8'
+    }
+    target_lock:form =
+    {
+      help = "Sets the door to a state requiring key n"$0D22"key"$22" is the r"
+       "equired key"$0D"so:"$0D"key:0  unlocks the door"$0D"key:-1 locks the d"
+       "oor until a target_lock with key:0"$0D"key:n  means the door now requi"
+       "res key n"
+      bbox = '-8 -8 -8 8 8 8'
+    }
+    target_smoke:form =
+    {
+      help = "1 second = 1000"$0D"1 FRAME = 100"$0D"delay = 100 = one millisec"
+       "ond default this is the maximum smoke that will show up"$0D"time = 500"
+       "0 default before the smoke disipates"$0D"duration = 2000 before the sm"
+       "oke starts to alpha"$0D"start_size = 24 default"$0D"end_size = 96 defa"
+       "ult"$0D"wait    = default is 50 the rate at which it will travel up"
+      bbox = '-32 -32 -16 32 32 16'
+      spawnflags: =
+      {
+        typ = "X1"
+        cap = "Black"
+      }
+      spawnflags: =
+      {
+        typ = "X2"
+        cap = "White"
+      }
+      spawnflags: =
+      {
+        typ = "X4"
+        cap = "SmokeON"
+      }
+      spawnflags: =
+      {
+        typ = "X8"
+        cap = "Gravity"
+      }
+    }
+    target_script_trigger:form =
+    {
+      help = "must have an aiName (or scriptname ???)"$0D"must have a target"$0D
+       "when used it will fire its targets"$0D22"target"$22"  The name of the "
+       "trigger"$0D22"scriptname"$22" This corrisponds to the block"$0D22"aina"
+       "me"$22" like script name but for SP ???"
+      bbox = '-8 -8 -8 8 8 8'
+    }
+    target_rumble:form =
+    {
+      help = "wait = default is 2 seconds = time the entity will enable rumble"
+       " effect"$0D22"pitch"$22" value from 1 to 10 default is 5"$0D22"yaw"$22
+       "   value from 1 to 10 default is 5"$0D22"rampup"$22" how much time it "
+       "will take to reach maximum pitch and yaw in seconds"$0D22"rampdown"$22
+       " how long till effect ends after rampup is reached in seconds"$0D22"st"
+       "artnoise"$22" startingsound"$0D22"noise"$22"  the looping sound entity"
+       " is to make"$0D22"endnoise"$22" endsound"$0D22"duration"$22" the amoun"
+       "t of time the effect is to last ei 1.0 sec 3.6 sec"
+      bbox = '-8 -8 -8 8 8 8'
+      spawnflags: =
+      {
+        typ = "X1"
+        cap = "STARTOFF"
+      }
+    }
+    team_CTF_redplayer:form =
+    {
+      help = "Only in CTF games.  Red players spawn here at game start."
+      bbox = '-18 -18 -24 18 18 48'
+    }
+    team_CTF_blueplayer:form =
+    {
+      help = "Only in CTF games.  Blue players spawn here at game start."
+      bbox = '-18 -18 -24 18 18 48'
+    }
+    team_CTF_redspawn:form =
+    {
+      help = "potential spawning position for axis team in wolfdm games."$0D"T"
+       "ODO: SelectRandomTeamSpawnPoint() will choose team_CTF_redspawn point "
+       "that:"$0D"1) has been activated (FL_SPAWNPOINT_ACTIVE)"$0D"2) isn't oc"
+       "cupied and"$0D"3) is closest to team_WOLF_objective"$0D"This allows sp"
+       "awnpoints to advance across the battlefield as new ones are"$0D"placed"
+       " and/or activated."$0D"If target is set, point spawnpoint toward targe"
+       "t activation"
+      bbox = '-18 -18 -24 18 18 48'
+      spawnflags: =
+      {
+        typ = "X1"
+        cap = "invulnerable"
+      }
+      spawnflags: =
+      {
+        typ = "X2"
+        cap = "startactive"
+      }
+    }
+    team_CTF_bluespawn:form =
+    {
+      help = "potential spawning position for allied team in wolfdm games."$0D
+       "TODO: SelectRandomTeamSpawnPoint() will choose team_CTF_bluespawn poin"
+       "t that:"$0D"1) has been activated (active)"$0D"2) isn't occupied and"$0D
+       "3) is closest to selected team_WOLF_objective"$0D"This allows spawnpoi"
+       "nts to advance across the battlefield as new ones are"$0D"placed and/o"
+       "r activated."$0D"If target is set, point spawnpoint toward target acti"
+       "vation"
+      bbox = '-18 -18 -24 18 18 48'
+      spawnflags: =
+      {
+        typ = "X1"
+        cap = "invulnerable"
+      }
+      spawnflags: =
+      {
+        typ = "X2"
+        cap = "startactive"
+      }
+    }
+    team_CTF_redflag:form =
+    {
+      help = "Can be used as an objective in Wolf."$0D22"model"$22"        Set"
+       " model to display in game"$0D22"message"$22"    Name of object in game"
+       " (ex: the War Documents)"
+      bbox = '-16 -16 -16 16 16 16'
+    }
+    team_CTF_blueflag:form =
+    {
+      help = "Can be used as an objective in Wolf."$0D22"model"$22"        Set"
+       " model to display in game"$0D22"message"$22"    Name of object in game"
+       " (ex: the War Documents)"
+      bbox = '-16 -16 -16 16 16 16'
+    }
+    team_WOLF_objective:form =
+    {
+      help = "marker for objective"$0D"This marker will be used to generate a "
+       "list of objectives"$0D"that players can elect to spawn near in the lim"
+       "bo spawn"$0D"screen."$0D22"description"$22"    short text key for obje"
+       "ctive name that"$0D"will appear in objective selection in limbo UI."
+      bbox = '-16 -16 -24 16 16 32'
+    }
+    team_WOLF_checkpoint:form =
+    {
+      help = "This is the flagpole players touch in Capture and Hold game scen"
+       "arios."$0D"It will call specific trigger funtions in the map script fo"
+       "r this object."$0D"When allies capture, it will call "$22"allied_captu"
+       "re"$22"."$0D"When axis capture, it will call "$22"axis_capture"$22"."$0D
+       "// if spawnpoint flag is set, capture will turn on targeted spawnpoint"
+       "s"$0D"// for capture team and turn *off* targeted spawnpoints for oppo"
+       "sing team"$0D22"model"$22"        model to use (will use same animatio"
+       "ns as flagpole however)"$0D22"scriptname"$22" name of script which con"
+       "tains allied_capture and axis_capture triggers"
+      bbox = '-16 -16 0 16 16 128'
+      spawnflags: =
+      {
+        typ = "X1"
+        cap = "spawnpoint"
+      }
+    }
+    camera_cam:form =
+    {
+      help = $22"track"$22" is the targetname of the entity providing the star"
+       "ting direction use an info_notnull"
+      bbox = '-8 -8 -8 8 8 8'
+      spawnflags: =
+      {
+        typ = "X1"
+        cap = "ON"
+      }
+      spawnflags: =
+      {
+        typ = "X2"
+        cap = "TRACKING"
+      }
+      spawnflags: =
+      {
+        typ = "X4"
+        cap = "MOVING"
+      }
+    }
+    camera_reset_player:form =
+    {
+      help = "touched will record the players position and fire off its target"
+       "s and or cameras"$0D"used will reset the player back to his last posit"
+       "ion"
+    }
+    trigger_multiple:form =
+    {
+      help = $22"wait"$22" : Seconds between triggerings, 0.5 default, -1 = on"
+       "e time only."$0D22"random"$22"    wait variance, default is 0"$0D"Vari"
+       "able sized repeatable trigger.  Must be targeted at one or more entiti"
+       "es."$0D"so, the basic time between firing is a random time between"$0D
+       "(wait - random) and (wait + random)"
+      spawnflags: =
+      {
+        typ = "X1"
+        cap = "AI_Touch"
+      }
+    }
+    trigger_always:form =
+    {
+      help = "This trigger will always fire.  It is activated by the world."
+      bbox = '-8 -8 -8 8 8 8'
+    }
+    trigger_push:form =
+    {
+      help = "Must point at a target_position, which will be the apex of the l"
+       "eap."$0D"This will be client side predicted, unlike target_push"
+      spawnflags: =
+      {
+        typ = "X1"
+        cap = "TOGGLE"
+      }
+      spawnflags: =
+      {
+        typ = "X2"
+        cap = "REMOVEAFTERTOUCH"
+      }
+      spawnflags: =
+      {
+        typ = "X4"
+        cap = "PUSHPLAYERONLY"
+      }
+    }
+    target_push:form =
+    {
+      help = "Pushes the activator in the direction.of angle, or towards a tar"
+       "get apex."$0D22"speed"$22"        defaults to 1000"$0D"if "$22"bouncep"
+       "ad"$22", play bounce noise instead of windfly"
+      bbox = '-8 -8 -8 8 8 8'
+      spawnflags: =
+      {
+        typ = "X1"
+        cap = "bouncepad"
+      }
+    }
+    trigger_teleport:form =
+    {
+      help = "Allows client side prediction of teleportation events."$0D"Must "
+       "point at a target_position, which will be the teleport destination."
+    }
+    trigger_hurt:form =
+    {
+      help = "Any entity that touches this will be hurt."$0D"It does dmg point"
+       "s of damage each server frame"$0D"Targeting the trigger will toggle it"
+       "s on / off state."$0D"SILENT            supresses playing the sound"$0D
+       "SLOW            changes the damage rate to once per second"$0D"NO_PROT"
+       "ECTION    *nothing* stops the damage"$0D22"dmg"$22"            default"
+       " 5 (whole numbers only)"$0D22"life"$22"    time this brush will exist "
+       "if value is zero will live for ever ei 0.5 sec 2.sec"$0D"default is ze"
+       "ro"$0D"the entity must be used first before it will count down its lif"
+       "e"
+      spawnflags: =
+      {
+        typ = "X1"
+        cap = "START_OFF"
+      }
+      spawnflags: =
+      {
+        typ = "X4"
+        cap = "SILENT"
+      }
+      spawnflags: =
+      {
+        typ = "X8"
+        cap = "NO_PROTECTION"
+      }
+      spawnflags: =
+      {
+        typ = "X16"
+        cap = "SLOW"
+      }
+      spawnflags: =
+      {
+        typ = "X32"
+        cap = "ONCE"
+      }
+    }
+    func_timer:form =
+    {
+      help = "This should be renamed trigger_timer..."$0D"Repeatedly fires its"
+       " targets."$0D"Can be turned on or off by using."$0D22"wait"$22"       "
+       "     base time between triggering all targets, default is 1"$0D22"rand"
+       "om"$22"        wait variance, default is 0"$0D"so, the basic time betw"
+       "een firing is a random time between"$0D"(wait - random) and (wait + ra"
+       "ndom)"
+      bbox = '-8 -8 -8 8 8 8'
+      spawnflags: =
+      {
+        typ = "X1"
+        cap = "START_ON"
+      }
+    }
+    trigger_once:form =
+    {
+      help = "Must be targeted at one or more entities."$0D"Once triggered, th"
+       "is entity is destroyed"$0D"(you can actually do the same thing with tr"
+       "igger_multiple with a wait of -1)"
+      spawnflags: =
+      {
+        typ = "X1"
+        cap = "AI_Touch"
+      }
+    }
+    trigger_deathCheck:form =
+    {
+      help = "GIBFLAG entity will never fire its target(s) if aiName entity wa"
+       "s gibbed"$0D"aiName entity making alertentity call"$0D"this entity wil"
+       "l test if aiName is in its volume"$0D"Must be targeted at one or more "
+       "entities."$0D"Once triggered, this entity is destroyed"
+      spawnflags: =
+      {
+        typ = "X2"
+        cap = "GIBFLAG"
+      }
+    }
+    trigger_flagonly:form =
+    {
+      help = "Player must be carrying the proper flag for it to trigger."$0D"I"
+       "t will call the "$22"death"$22" function in the object's script."$0D22
+       "scriptName"$22"    The object name in the script file"$0D"RED_FLAG -- "
+       "only trigger if player is carrying red flag"$0D"BLUE_FLAG -- only trig"
+       "ger if player is carrying blue flag"
+      spawnflags: =
+      {
+        typ = "X1"
+        cap = "RED_FLAG"
+      }
+      spawnflags: =
+      {
+        typ = "X2"
+        cap = "BLUE_FLAG"
+      }
+    }
+    trigger_objective_info:form =
+    {
+      help = "Players in this field will see a message saying that they are ne"
+       "ar an objective."$0D"Also, if targeting a dynamitable objective, the d"
+       "ynamite must be armed inside"$0D"of the trigger to blow up the objecti"
+       "ve."$0D22"track"$22"        Mandatory, this text will be appended to "$22
+       "You are near "$220D22"target"$22"        You may target dynamitable ob"
+       "jectives"$0D22"score"$22"        If targeting a dynamitable objective,"
+       " give this score when blown."$0D"AXIS_OBJECTIVE  -- Set if targeting a"
+       "n objective owned by AXIS, then only"$0D"allied dynamite will blow it "
+       "up."$0D"ALLIED_OBJECTIVE -- Set if targeting an objective owned by ALL"
+       "IES, then only"$0D"axis dynamite will blow it up."
+      spawnflags: =
+      {
+        typ = "X1"
+        cap = "AXIS_OBJECTIVE"
+      }
+      spawnflags: =
+      {
+        typ = "X2"
+        cap = "ALLIED_OBJECTIVE"
+      }
+    }
+    _decal:form =
+    {
+      help = "-------- KEYS --------"$0D22"target"$22" the name of the entity "
+       "targetted at for projection"$0D"-------- SPAWNFLAGS --------"$0D"(none"
+       ")"$0D"-------- NOTES --------"$0D"Compiler-only entity that specifies "
+       "a decal to be projected."$0D"Should contain 1 or more patch meshes (cu"
+       "rves) and target an info_null entity."$0D"The distance between the cen"
+       "ter of the _decal entity and the target is the axis and distance of pr"
+       "ojection."$0D"This is for Q3map2 version 2.5.5-test10 and upwards"
+    }
+  }
+}
+
+

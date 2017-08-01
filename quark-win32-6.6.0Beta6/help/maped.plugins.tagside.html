@@ -1,0 +1,293 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"  "http://www.w3.org/TR/html4/loose.dtd">
+<html lang="en">
+<head>
+  <title>Tag Side</title>
+  <meta name="Description" content="QuArK Information Database - Page: 2.5.1.&nbsp;Tag Side">
+  <meta name="Keywords" content="QuArK InfoBase Quake Army Knife QRK QKM Python PY Map Editor Hexen Heretic Half-Life Sin Kingpin Soldier-of-Fortune Star-Trek-Voyager Elite-Force">
+  <link rel=stylesheet href="standard.css" type="text/css">
+</head>
+
+<body>
+<a name="__top__"></a>
+<table width="100%" border=0 cellspacing=0>
+  <tr>
+    <td width=213>
+      <a target="_blank" href="http://quark.sourceforge.net/"><img src="quarkicon.png" width=213 height=90 border=0 alt="Go to QuArK Web Site"></a>
+    </td>
+    <td width="70%" align=center>
+      <div class="topheadline">Tag Side</div>
+      <div class="sm">Updated&nbsp;08 May 2003</div>
+    </td>
+    <td width="30%" valign=bottom nowrap>
+      Upper&nbsp;levels:<br>-&nbsp;<a href="index.html">QuArK&nbsp;Information&nbsp;Base</a><br>-&nbsp;<a href="maped.html">2.&nbsp;Map&nbsp;editing</a><br>-&nbsp;<a href="maped.plugins.html">2.5.&nbsp;Plug-in&nbsp;descriptions</a><br>
+    </td>
+  </tr>
+</table>
+<table width="100%" border=0 cellspacing=0>
+  <tr class="headline">
+    <td width="99%">
+      <p class="headline">&nbsp;2.5.1.&nbsp;Tag Side</p>
+    </td>
+    <td width="1%" align=right nowrap>
+      &nbsp;[&nbsp;<span class="navenable"><a href="maped.plugins.html">Prev</a></span>&nbsp;-&nbsp;<span class="navenable"><a href="maped.plugins.html">Up</a></span>&nbsp;-&nbsp;<span class="navenable"><a href="maped.plugins.madsel.html">Next</a></span>&nbsp;]&nbsp;
+    </td>
+  </tr>
+</table>
+<table border=0 width="100%" cellspacing=10><tr><td><p>The Tag Side plugin performs a variety of functions revolving
+around the 'tagging' of a face, to use as a basis for other
+operations, such as snapping another face into alignment with
+it, or wrapping a texture from it onto other faces.
+</p><!--
+The version described here is beta, intended for release with
+QuArK 5.11; for use with QuArK 5.10 it requires the included
+revisions of qmaphandles.py and qbaseeditor.py, which go into
+the <tt>quarkpy</tt> folder.
+-->
+
+</td></tr></table>
+<br>
+
+<table width="100%" border=0 cellspacing=0>
+  <tr class="headline">
+    <td width="100%">
+      <p class="subheadline">&nbsp;Index</p>
+    </td>
+  </tr>
+</table>
+<ul class="index">
+  <li>- <a href="#basic">Basic Tag and Glue</a>&nbsp;<span class="added">(20 Feb 2001)</span>
+  <li>- <a href="#texture">Texture Wrapping</a>&nbsp;<span class="added">(08 May 2003)</span>
+  <li>- <a href="#linking">Linking</a>&nbsp;<span class="added">(20 Feb 2001)</span>
+</ul>
+<br>
+
+
+<a name="basic"></a>
+  <table width="100%" border=0 cellspacing=0>
+    <tr class="headline">
+      <td>
+        <p class="item">&nbsp;Basic Tag and Glue</p>
+      </td>
+      <td align=right>
+        <font size=-2>tiglari&nbsp;-&nbsp;20 Feb 2001</font>
+      </td>
+      <td width="1%" align=right nowrap>
+        &nbsp;&nbsp;[&nbsp;<a href="#__top__">Top</a>&nbsp;]&nbsp;
+      </td>
+    </tr>
+  </table>
+  <table border=0 width="100%" cellspacing=10><tr><td>
+<p><img border=1 align=right src="maped.plugins.tagside.contextmenu.png">
+The most basic operation is to first tag a face, with the right
+mouse menu for faces, and then select another face, and click
+on the 'glue to tagged' command on the right mouse menu.  The
+selected face will then snap to the position of the tagged one.
+This command is useful for getting things into alignment, especially
+off the grid.
+</p><p>Below the 'Glue to Tagged' item is a submenu 'More Tagging',
+which offers additional commands:
+</p><p><ul>
+<LI>Add to tagged - the selected face will join the currently
+tagged face(s) to form or enlarge a set of tagged faces, which
+is useful for various things.
+</p><p><LI>Removed from tagged - the selected face is removed from the
+tagged set.
+</p><p><LI>Clear tag - all tags are erased
+</p><p><LI>Select tagged list - the tagged list becomes the multi-selection.
+This can be useful if you want to make a multi-selection of faces
+from different brushes, since you otherwise you need the tree-view
+to do this (if you have a face selected, to select one from another
+brush you have to select that brush, which looses your face selection).
+</ul>
+</p><p>So far we've only looked at the face menu.  Tag Side also puts commands
+on the speedmenus for other things, such as vertices.
+</p><p>Vertices have Tag Point and Glue to Tagged, and vertices can be
+glued to each other and to faces, and vice-versa.  For example,
+if you have a downward-sloping brush that is functioning as
+a ramp, and you want to align level surfaces precisely with
+the top and bottom of the ramp, you can tag the upper vertices,
+and glue the top of a brush to them.
+Empty points in
+space can also be tagged (the background menu), tho I'm not sure at
+this point how useful this really is.
+</p><p>A more complicated command on the vertex menu is 'align face to tagged'.
+If you tag a face, then select a side (left mouseclick its handle),
+then the 'align selection to tagged' command will appear on the
+speedmenu of the face's vertices.  This will swivel the face around
+the vertex so that it is parallel to the tagged face.  This can
+be used to align the ceiling of a sloping tunnel exactly
+parallel to the floor.
+</p><p>Finally there are some commands on the speedmenu for polys:
+</p><p><ul>
+<LI>Glue Linked Faces - covered <a href="#later">later</a>,
+when we talk about <a href="maped.plugins.tagside.html#linking">'Linking'</a>.
+</p><p><LI>Merge Polys - you can merge brushes that 'kiss' at a face
+(the polys each have a brush with the same location, orientiation,
+size and shape, but pointing in opposite directions), as long as
+this won't change the overall shape or create an invalid poly.
+To use it, tag the kissing face in one of the brushes, and select
+the other brush, and if everything is cool the menu item should
+become enabled.
+</p><p><LI>Cut poly along along tagged - So you can use some face of
+a brush as a cutting plane for other polys.
+</UL>
+</p>
+  </td></tr></table>
+  <br>
+
+<a name="texture"></a>
+  <table width="100%" border=0 cellspacing=0>
+    <tr class="headline">
+      <td>
+        <p class="item">&nbsp;Texture Wrapping</p>
+      </td>
+      <td align=right>
+        <font size=-2>tiglari&nbsp;-&nbsp;08 May 2003</font>
+      </td>
+      <td width="1%" align=right nowrap>
+        &nbsp;&nbsp;[&nbsp;<a href="#__top__">Top</a>&nbsp;]&nbsp;
+      </td>
+    </tr>
+  </table>
+  <table border=0 width="100%" cellspacing=10><tr><td>
+<p><img border=1 align=right src="maped.plugins.tagside.contextmenutexture.png">
+The next submenu we'll look at is concerned with 'texture wrapping',
+fitting textures across more than one face without seams;
+perhaps with a bit of fitting as well.  The commands of the
+Texture Wrapping submenu are:
+</p><p><UL>
+<LI><b>Wrap texture from tagged</b> - copies the texture from the tagged
+face onto this one, so that there are no seams where the faces
+meet.  No scaling or distortions are performed.  This is fine
+for wrapping a texture around a vertical edge, but would work
+out for say an obelisk.
+</p><p><LI>Wrap texture <b>Around pillar</b> - Tag a face that's the side of
+a pillar, then select the one next to it. Bring up the Texture Wrap
+Multiplier. Set the number of times the texture is to be repeated
+as it is wrapped and <u><b>do not</b></u> close the multiplier
+window. Reselect the face next to the tagged one and activate the
+Around pillar function.  The texture on the tagged face will be
+wrapped all the way around the pillar, in the direction of the
+pillar, and scaled to fit seamlessly. This only works if the edges
+where the faces to be wrapped around are all parallel
+(the whole pillar can however be at a slant).
+When the operation can't be performed, the item is disabled.
+</p><p><LI>Fit texture <b>Across tagged</b> - this is a bit like the pillar wrap,
+but here you tag a set of faces (using 'Add to tagged' from the
+More tagging submenu or 'Tag Toolbar'), then select the one you want to (copy) wrap from (which should be at one end).  The texture
+of that face will be copied to the others, and scaled
+so that it fits a full number of times across all the faces. If you want the selected texture to be 'spread across' the other faces, use the 'Texture Wrap Multiplier' as discribed above.
+Like the pillar wrap, this only works if the edges joining the
+faces are all parallel, and is disabled if it can't work.
+</p><p><LI><b>Project texture from tagged</b> - this is a new one.  Suppose
+you want to wrap a mesh like texture over a bunch of random faces making
+various angles with each other (like a mesh stretched over a
+jumble of stuff).  None of the above methods will work, but this
+will.  The texture of the tagged face is projected onto the
+selected face, so that a texture is projected from one face
+to several faces hooked up in complicated ways, it will seem to
+be wrapped smoothly over all of them.  So that for example you can do
+a four-sided obelisk by projecting textures from parallel
+brushes that project onto the obelisk faces but are ignored
+for building the map.  I think I have fixed the problem of things not working if the projected-from brush was not
+big enough.
+</UL>
+</p><p>There are also two options on the menu, the useful one is
+'preserve aspect ratio'; if this is checked, the fitting operations
+resize the textures evenly in all dimensions to make them fit
+in the pillar wrap and fit across tagged operations; otherwise
+they are just stretched  in the direction required.  The other
+one is 'shift tag to selected', which might causes the selected
+tagged to become the tagged face in the Wrap texture from tagged
+operation.</p>
+  </td></tr></table>
+  <br>
+
+<a name="linking"></a>
+  <table width="100%" border=0 cellspacing=0>
+    <tr class="headline">
+      <td>
+        <p class="item">&nbsp;Linking</p>
+      </td>
+      <td align=right>
+        <font size=-2>tiglari&nbsp;-&nbsp;20 Feb 2001</font>
+      </td>
+      <td width="1%" align=right nowrap>
+        &nbsp;&nbsp;[&nbsp;<a href="#__top__">Top</a>&nbsp;]&nbsp;
+      </td>
+    </tr>
+  </table>
+  <table border=0 width="100%" cellspacing=10><tr><td>
+<p>Linking is also new and rough around the edges; it's purpose to
+make 'permanent glue', so that faces that are meant to stay stuck
+together are more likely to do so.  The 'Glue to tagged' command
+will link the glued and glued-to faces if the 'Link on Glue'
+option from the Options menu is checked (by default it isn't,
+since this is new behavior).  When faces are linked, various
+things happen:
+</p><p><UL>
+<LI>If one of the faces, or a poly, group or entity containing
+one of the faces, is dragged, then all of the faces linked to
+that face are dragged along too.
+</p><p><LI>If some operations other than dragging result in some linked
+faces no longer being coplanar, they are all drawn in dotted
+red (and it's easy to get the coplanar again).  If one of them
+is selected, then it and those coplanar with it are drawn in
+dotted blue instead (doesn't always work).
+</UL>
+</p><p>The 'Linking' submenu for faces provides control over linking
+effects.  Its commands are:
+</p><p><UL>
+<LI>Glue linked faces - all faces linked to the selected one are
+glued to it.  This is the basic technique for fixing things up
+when linked faces become unaligned (there are many different
+things that can cause faces to move in QuArK, and it's probably
+not sensible to try to track them all automatically, and very
+un-sensible to assume that you're doing it successfully ..).
+</p><p><LI>Select linked faces - all the faces that are linked to
+the selected one become a multi-selection.  This gives quick
+access to the face-rotating handles.
+</p><p><LI>Unlink face - the selected face is detached from the others
+it's linked to.
+</p><p><LI>Unlink all - all the faces linked to the selected face are
+unlinked from each other.
+</p><p><LI>Link face to tagged - links the selected face to the tagged
+one, without moving it (so the dotted red lines appear).  I'm not
+sure if this one has a legitimate use, maybe it will disappear.
+</UL>
+</p><p>There are also two more options in the Options menu:
+</p><p><UL>
+<LI>Glue linked on drag - when something is dragged, things linked
+are dragged with it.  On by default.  If it's off, dragging
+something away from what it's linked to produces the dotted
+red lines.
+</p><p><LI>Multiselect on linked drag - if this is checked, the stuff
+that's dragged on a linked drag becomes the multiselection (QuArK
+does spontaneously for some reason, I'm not sure if it's useful,
+but I decided to make turning it off optional).
+</ul>
+</p><p><A name="later"></a>There is also a linking item on the speed menu for polys, groups
+and brush-entities, 'Glue Linked'.  This causes all the faces
+linked to some face in the group or whatever to snap to that
+face (for fixing things up when movements get linked faces out
+of alignment).
+</p>
+  </td></tr></table>
+  <br>
+
+<br>
+
+<table width="100%" border=0 cellspacing=0>
+  <tr class="headline">
+    <td width="99%" align=center>
+      <p class="sm">
+        Copyright (c) 2009, GNU General Public License by The QuArK (Quake Army Knife) Community - <a target="_blank" href="http://quark.sourceforge.net/">http://quark.sourceforge.net/</a><br>
+      </p>
+    </td>
+    <td width="1%" align=right nowrap>
+      &nbsp;[&nbsp;<span class="navenable"><a href="maped.plugins.html">Prev</a></span>&nbsp;-&nbsp;<a href="#__top__">Top</a>&nbsp;-&nbsp;<span class="navenable"><a href="maped.plugins.madsel.html">Next</a></span>&nbsp;]&nbsp;
+    </td>
+  </tr>
+</table>
+</body>
+</html>

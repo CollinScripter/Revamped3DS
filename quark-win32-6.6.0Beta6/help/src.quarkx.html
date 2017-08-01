@@ -1,0 +1,3329 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"  "http://www.w3.org/TR/html4/loose.dtd">
+<html lang="en">
+<head>
+  <title>QuarkX</title>
+  <meta name="Description" content="QuArK Information Database - Page: 4.8.&nbsp;QuarkX">
+  <meta name="Keywords" content="QuArK InfoBase Quake Army Knife QRK QKM Python PY Map Editor Hexen Heretic Half-Life Sin Kingpin Soldier-of-Fortune Star-Trek-Voyager Elite-Force">
+  <link rel=stylesheet href="standard.css" type="text/css">
+</head>
+
+<body>
+<a name="__top__"></a>
+<table width="100%" border=0 cellspacing=0>
+  <tr>
+    <td width=213>
+      <a target="_blank" href="http://quark.sourceforge.net/"><img src="quarkicon.png" width=213 height=90 border=0 alt="Go to QuArK Web Site"></a>
+    </td>
+    <td width="70%" align=center>
+      <div class="topheadline">QuarkX</div>
+      <div class="sm">Updated&nbsp;09 Jul 2012</div>
+    </td>
+    <td width="30%" valign=bottom nowrap>
+      Upper&nbsp;levels:<br>-&nbsp;<a href="index.html">QuArK&nbsp;Information&nbsp;Base</a><br>-&nbsp;<a href="src.html">4.&nbsp;The&nbsp;Source&nbsp;Code</a><br>
+    </td>
+  </tr>
+</table>
+<table width="100%" border=0 cellspacing=0>
+  <tr class="headline">
+    <td width="99%">
+      <p class="headline">&nbsp;4.8.&nbsp;QuarkX</p>
+    </td>
+    <td width="1%" align=right nowrap>
+      &nbsp;[&nbsp;<span class="navenable"><a href="src.bugs.destroy.html">Prev</a></span>&nbsp;-&nbsp;<span class="navenable"><a href="src.html">Up</a></span>&nbsp;-&nbsp;<span class="navenable"><a href="src.math.html">Next</a></span>&nbsp;]&nbsp;
+    </td>
+  </tr>
+</table>
+<table border=0 width="100%" cellspacing=10><tr><td>
+</td></tr></table>
+<br>
+
+<table width="100%" border=0 cellspacing=0>
+  <tr class="headline">
+    <td width="100%">
+      <p class="subheadline">&nbsp;Index</p>
+    </td>
+  </tr>
+</table>
+  <table border=0><tr><td width="50%" valign=top>
+<ul class="index">
+  <li>- <a href="#quarkandpython">What QuArK expects to find from Python</a>&nbsp;<span class="added">(15 Feb 2001)</span>
+  <li>- <a href="#quarkxspecificfunctions">QuArK-specific functions of the module quarkx</a>&nbsp;<span class="added">(09 Jul 2012)</span>
+  <li>- <a href="#quarkxspecialobjects">Functions of the module quarkx that build special objects</a>&nbsp;<span class="added">(06 Aug 2008)</span>
+  <li>- <a href="#quarkxlogpurpose">Logging functions of the module quarkx</a>&nbsp;<span class="added">(25 Jul 2009)</span>
+  <li>- <a href="#quarkxtexturefunctions">Texture functions of the module quarkx</a>&nbsp;<span class="added">(24 Feb 2008)</span>
+  <li>- <a href="#quarkxgeneralpurpose">Various general-purpose functions of the module quarkx</a>&nbsp;<span class="added">(28 Apr 2009)</span>
+  <li>- <a href="#quarkxreadonlyvariables">Read-only variables of the module quarkx</a>&nbsp;<span class="added">(15 Feb 2001)</span>
+  <li>- <a href="#quarkxreadwritevariables">Read-write variables of the module quarkx</a>&nbsp;<span class="added">(15 Feb 2001)</span>
+  <li>- <a href="#objectsinternal">Internal QuArK objects</a>&nbsp;<span class="added">(09 Jul 2012)</span>
+  <li>- <a href="#objectscommonattributes">Attributes common to all Internal objects</a>&nbsp;<span class="added">(09 Jul 2012)</span>
+  <li>- <a href="#attributesfileobject">Attributes common to Internal File objects</a>&nbsp;<span class="added">(15 Feb 2001)</span>
+  <li>- <a href="#attributes3dobject">Attributes common to Internal objects of class "3DObject"</a>&nbsp;<span class="added">(15 Feb 2001)</span>
+  <li>- <a href="#attributestreemap">Attributes common to Internal objects of class "TreeMap"</a>&nbsp;<span class="added">(09 Jul 2012)</span>
+  <li>- <a href="#attributespolyhedron">Attributes of Internal objects of class "Polyhedron"</a>&nbsp;<span class="added">(09 Jul 2012)</span>
+  <li>- <a href="#attributesface">Attributes of Internal objects of class "Face"</a>&nbsp;<span class="added">(07 Apr 2001)</span>
+  <li>- <a href="#attributesduplicator">Attributes of Internal objects of class "Duplicator"</a>&nbsp;<span class="added">(15 Feb 2001)</span>
+  <li>- <a href="#attributestreemapbrush">Attributes of Internal objects of class "TreeMapBrush"</a>&nbsp;<span class="added">(15 Feb 2001)</span>
+  <li>- <a href="#attributesbezier">Attributes of Internal objects of class "Bezier"</a>&nbsp;<span class="added">(15 Feb 2001)</span>
+  <li>- <a href="#qmacro_py">Macros expected by QuArK in the module qmacro.py</a>&nbsp;<span class="added">(11 Dec 2008)</span>
+  <li>- <a href="#3dvector">3D Vector objects</a>&nbsp;<span class="added">(09 Jul 2012)</span>
+  <li>- <a href="#matrix">Matrix objects</a>&nbsp;<span class="added">(09 Jul 2012)</span>
+</ul>
+  </td><td width="50%" valign=top>
+<ul class="index">
+  <li>- <a href="#moduleundo">The undo module</a>&nbsp;<span class="added">(21 Dec 2007)</span>
+  <li>- <a href="#moduleprogressbar">The progressbar module</a>&nbsp;<span class="added">(15 Feb 2001)</span>
+  <li>- <a href="#builtinprocess">Built-in process objects</a>&nbsp;<span class="added">(09 Jul 2012)</span>
+  <li>- <a href="#imagelist">Image List objects</a>&nbsp;<span class="added">(15 Feb 2001)</span>
+  <li>- <a href="#icon">Icon objects</a>&nbsp;<span class="added">(15 Feb 2001)</span>
+  <li>- <a href="#windows">Windows (forms)</a>&nbsp;<span class="added">(15 Feb 2001)</span>
+  <li>- <a href="#screencontrolsandpanels">Introduction to screen controls and panels</a>&nbsp;<span class="added">(09 Jul 2012)</span>
+  <li>- <a href="#screencontrolscommonattributes">Attributes common to all screen controls</a>&nbsp;<span class="added">(30 Aug 2008)</span>
+  <li>- <a href="#attributespanelcontrols">Additional attributes of Panel controls</a>&nbsp;<span class="added">(18 May 2009)</span>
+  <li>- <a href="#menubarskeyboardshortcuts">Menu bars, pop-up menus and keyboard shortcuts</a>&nbsp;<span class="added">(09 Jul 2012)</span>
+  <li>- <a href="#callbackfunctions">Callback functions in Python and Warning about circular references</a>&nbsp;<span class="added">(09 Jul 2012)</span>
+  <li>- <a href="#floatingtoolbars">Floating toolbars, Toolbar panels, and Buttons</a>&nbsp;<span class="added">(09 Jul 2012)</span>
+  <li>- <a href="#attributesfloatingwindows">Additionnal attributes of Floating Windows controls</a>&nbsp;<span class="added">(15 Feb 2001)</span>
+  <li>- <a href="#attributestreeview">Additionnal attributes of Tree view controls (Explorers)</a>&nbsp;<span class="added">(15 Feb 2001)</span>
+  <li>- <a href="#attributesdataform">Additionnal attributes of Data form controls</a>&nbsp;<span class="added">(21 Dec 2008)</span>
+  <li>- <a href="#attributesimagedisplayer">Additionnal attributes of Image Displayer controls</a>&nbsp;<span class="added">(09 Jul 2012)</span>
+  <li>- <a href="#canvas">Canvas objects</a>&nbsp;<span class="added">(15 Feb 2001)</span>
+  <li>- <a href="#mapviewmethods">Methods of Map View controls</a>&nbsp;<span class="added">(15 Feb 2001)</span>
+  <li>- <a href="#attributesmapview">Additionnal attributes of Map View controls</a>&nbsp;<span class="added">(24 Feb 2008)</span>
+  <li>- <a href="#objectsmodeleditor">Internal objects related to the Model Editor</a>&nbsp;<span class="added">(01 Nov 2011)</span>
+</ul>
+  </td></tr></table>
+<br>
+
+
+<a name="quarkandpython"></a>
+  <table width="100%" border=0 cellspacing=0>
+    <tr class="headline">
+      <td>
+        <p class="item">&nbsp;What QuArK expects to find from Python</p>
+      </td>
+      <td align=right>
+        <font size=-2>Armin Rigo&nbsp;-&nbsp;15 Feb 2001</font>
+      </td>
+      <td width="1%" align=right nowrap>
+        &nbsp;&nbsp;[&nbsp;<a href="#__top__">Top</a>&nbsp;]&nbsp;
+      </td>
+    </tr>
+  </table>
+  <table border=0 width="100%" cellspacing=10><tr><td>
+<p>When QuArK starts, it initializes the Python interpreter and loads the package called &nbsp;<tt>quarkpy</tt>&nbsp;.
+This should be a subdirectory in the directory that contains &nbsp;<tt>quark.exe</tt>&nbsp;. Once this package (i.e.
+the file &nbsp;<tt>quarkpy\__init__.py</tt>&nbsp;) has been loaded, QuArK calls its function
+&nbsp;<tt>RunQuArK()</tt>&nbsp;. See the file &nbsp;<tt>__init__.py</tt>&nbsp; for more details about the
+start-up process.
+</p><p>To answer to user actions, QuArK needs to call Python code. This is usually done by setting some variables that QuArK knows
+how to read so that they point to a Python function. In some cases, however, this is not possible; these cases are handled by
+the module &nbsp;<tt>qmacro.py</tt>&nbsp; which contains functions with special names, all beginning with
+&nbsp;<tt>MACRO_</tt>&nbsp;. See below for a list of all macros that QuArK expects to find there.
+</p><p>QuArK exposes all its features to Python code through the built-in module &nbsp;<tt>quarkx</tt>&nbsp;. Constant
+values and various utilities are found in the Python modules &nbsp;<tt>qutils.py</tt>&nbsp; and
+&nbsp;<tt>qeditor.py</tt>&nbsp;.
+</p><p>For examples about all the following stuff, see the &nbsp;<tt>.py</tt>&nbsp; files included with QuArK.
+</p>
+  </td></tr></table>
+  <br>
+
+<a name="quarkxspecificfunctions"></a>
+  <table width="100%" border=0 cellspacing=0>
+    <tr class="headline">
+      <td>
+        <p class="item">&nbsp;QuArK-specific functions of the module quarkx</p>
+      </td>
+      <td align=right>
+        <font size=-2>Armin Rigo&nbsp;-&nbsp;09 Jul 2012</font>
+      </td>
+      <td width="1%" align=right nowrap>
+        &nbsp;&nbsp;[&nbsp;<a href="#__top__">Top</a>&nbsp;]&nbsp;
+      </td>
+    </tr>
+  </table>
+  <table border=0 width="100%" cellspacing=10><tr><td>
+<p><table border=1 cellspacing=0 cellpadding=4>
+</p><p><tr><td class="doccode">
+Setup1(...)
+</td><td>
+Must be called at start-up for initialization only. See &nbsp;<tt>quark.py</tt>&nbsp;.
+</td></tr>
+</p><p><tr><td class="doccode">
+action()
+</td><td>
+Starts an undoable user action. Returns a copy of the &nbsp;<tt>undo</tt>&nbsp; module described below.
+</td></tr>
+</p><p><tr><td class="doccode">
+getchangednames()
+</td><td>
+Returns a list with, one or more, tuple lists &nbsp;<tt>(oldname, newname)</tt>&nbsp; inside it, each consisting of two string items that give the old and new names of an object that was renamed.
+Do not call this function directly or it will clear the list, call it using a variable to be set by it.<br>
+For example: <div class="doccode"><pre>changednames = quarkx.getchangednames()</pre></div><br>
+Then use the variable to work with. If nothing has been renamed then this function will only return &nbsp;<tt>None</tt>&nbsp;, but not as a string item.
+</td></tr>
+</p><p><tr><td class="doccode">
+undostate(obj)
+</td><td>
+Returns a tuple &nbsp;<tt>(undostr, redostr)</tt>&nbsp; with two strings that give the next operation that can be undone (resp. redone) on the object &nbsp;<tt>obj</tt>&nbsp;. &nbsp;<tt>undostr</tt>&nbsp; and &nbsp;<tt>redostr</tt>&nbsp; are set to &nbsp;<tt>None</tt>&nbsp; if there is no operation to undo (resp. redo).
+</td></tr>
+</p><p><tr><td class="doccode">
+boundingboxof(list)
+</td><td>
+Returns a bounding box &nbsp;<tt>(vmin, vmax)</tt>&nbsp; for the given &nbsp;<tt>list</tt>&nbsp; of map objects, or &nbsp;<tt>None</tt>&nbsp;. &nbsp;<tt>vmin</tt>&nbsp; and &nbsp;<tt>vmax</tt>&nbsp; are 3D vector objects. The list may also contain (non-projected) 3D vector objects that will be included in the returned bounding box.
+</td></tr>
+</p><p><tr><td class="doccode">
+texturesof(list)
+</td><td>
+Returns a sorted list of all texture names used in the given &nbsp;<tt>list</tt>&nbsp; of map objects.
+</td></tr>
+</p><p><tr><td class="doccode">
+extendcoplanar(list, lookin)<br>
+extendcoplanar(list, lookin, side)
+</td><td>
+&nbsp;<tt>list</tt>&nbsp; should be a list of polyhedron faces. This routine searches for faces in the objects in the list &nbsp;<tt>lookin</tt>&nbsp; that are coplanar and adjacent to the given faces, and appends them to &nbsp;<tt>list</tt>&nbsp;. All given faces must already be coplanar. &nbsp;<tt>side</tt>&nbsp; controls whether two faces of opposite normal vector match; &nbsp;<tt>1</tt>&nbsp; must be the same direction, &nbsp;<tt>-1</tt>&nbsp; must be opposite, &nbsp;<tt>0 </tt>&nbsp;(default) both. Note that the resulting &nbsp;<tt>list</tt>&nbsp; may contain a face more than once if it is shared by several polyhedron or if it was originally both in &nbsp;<tt>list</tt>&nbsp; and &nbsp;<tt>lookin</tt>&nbsp;.
+</td></tr>
+</p><p><tr><td class="doccode">
+forms()<br>
+forms(1)<br>
+forms(2)
+</td><td>
+Returns a list of all opened windows. Note that this is currently not very useful, because only Python-controlled windows are included. In the second form of the call, Floating windows are included as well. In the 3rd form of the call, non-Python windows are included as &nbsp;<tt>None</tt>&nbsp; in the list, and the order is such as the first item in the list represents the active window.
+</td></tr>
+</p><p><tr><td class="doccode">
+newform()
+</td><td>
+Opens a new window. Don’t use this. To create floating toolbox windows, see &nbsp;<tt>newfloating()</tt>&nbsp;.
+</td></tr>
+</p><p><tr><td class="doccode">
+update()<br>
+update(form)
+</td><td>
+Updates the window &nbsp;<tt>form</tt>&nbsp;, or all windows if not specified. Menu bars, toolbars, and buttons are updated. See below for more information.
+</td></tr>
+</p><p><tr><td class="doccode">
+opentoolbox(toolbox)<br>
+opentoolbox(toolbox, select)
+</td><td>
+Opens the toolbox given by name. If &nbsp;<tt>toolbox</tt>&nbsp; is empty ex: &nbsp;<tt>quarkx.opentoolbox(&quot;&quot;)</tt>&nbsp;, this function opens the texture browser. If &nbsp;<tt>select</tt>&nbsp; is the actual texture object (see quarkpy\mdlbtns.py texturebrowser function for code example), attempts to find and select this Internal object in the toolbox. If &nbsp;<tt>select</tt>&nbsp; is &nbsp;<tt>None</tt>&nbsp;, and if some objects were previously selected in the toolbox, they are unselected.
+</td></tr>
+</p><p><tr><td class="doccode">
+findtoolboxes()<br>
+findtoolboxes(tb)
+</td><td>
+Find all toolbox data objects. Returns a list of couples &nbsp;<tt>(&quot;toolbox name&quot;, rootofdata)</tt>&nbsp;. If &nbsp;<tt>tb</tt>&nbsp; is specified, it must be a string and &nbsp;<tt>findtoolboxes</tt>&nbsp; will only return data for this toolbox.
+</td></tr>
+</p><p><tr><td class="doccode">
+openconfigdlg()<br>
+openconfigdlg(path)<br>
+openconfigdlg(caption, obj, newobjlist)
+</td><td>
+Opens the Configuration dialog box. If &nbsp;<tt>path</tt>&nbsp; is given, the corresponding folder or subfolder is opened, e.g. &quot;&nbsp;<tt>Map:Options</tt>&nbsp;&quot;, or &quot;&nbsp;<tt>:</tt>&nbsp;&quot; for the current game’s configuration page. In the third form, &nbsp;<tt>obj</tt>&nbsp; is a &nbsp;<tt>:config</tt>&nbsp; object that gives alternate configuration data to display, and &nbsp;<tt>caption</tt>&nbsp; is the window caption. In this case, the dialog box is modal and &nbsp;<tt>openconfigdlg</tt>&nbsp; returns &nbsp;<tt>1</tt>&nbsp; or &nbsp;<tt>0</tt>&nbsp; to let you know if the user clicked on Ok or Cancel. &nbsp;<tt>newobjlist</tt>&nbsp; is a list of objects that the user can insert from buttons, or &nbsp;<tt>None</tt>&nbsp; if no editing of the object hierarchy is allowed.
+</td></tr>
+</p><p><tr><td class="doccode">
+globalaccept()<br>
+globalaccept(ok)
+</td><td>
+Ends pending user editing (e.g. in yellow edit boxes). If &nbsp;<tt>ok</tt>&nbsp; is &nbsp;<tt>True</tt>&nbsp; or omitted, the changes are accepted; otherwise, they are cancelled.
+</td></tr>
+</p><p></table>
+</p>
+  </td></tr></table>
+  <br>
+
+<a name="quarkxspecialobjects"></a>
+  <table width="100%" border=0 cellspacing=0>
+    <tr class="headline">
+      <td>
+        <p class="item">&nbsp;Functions of the module quarkx that build special objects</p>
+      </td>
+      <td align=right>
+        <font size=-2>Armin Rigo&nbsp;-&nbsp;06 Aug 2008</font>
+      </td>
+      <td width="1%" align=right nowrap>
+        &nbsp;&nbsp;[&nbsp;<a href="#__top__">Top</a>&nbsp;]&nbsp;
+      </td>
+    </tr>
+  </table>
+  <table border=0 width="100%" cellspacing=10><tr><td>
+<p><table border=1 cellspacing=0 cellpadding=4>
+</p><p><tr><td class="doccode">
+loadtexture(name)<br>
+loadtexture(name, altsrc)
+</td><td>
+Loads the texture name from the texture browser. Returns None if the texture is not found. altsrc is an optional parameter specifying an alternate place to look for textures first (for .bsp files, it is the .bsp’s own texture list). Note that the returned texture is often just a link to the actual texture in the Quake directory; see the textures' disktexture attribute.
+</td></tr>
+</p><p><tr><td class="doccode">
+maptextures(list, op)<br>
+maptextures(list, op, altsrc)
+</td><td>
+Loads a list of textures given by name. If the list contains animated textures, and some animation sequence are not complete, they are completed. Returns a list of all loaded textures, as loaded with loadtexture. If op is 1, this function writes all the textures to the tmpQuArK directory. If op is 2, extra files are written, too, as specified by ExtraFiles in Defaults.qrk. If op is 0, no file is written to the disk.
+</td></tr>
+</p><p><tr><td class="doccode">
+vect(x,y,z)<br>
+vect(x,y,z,s,t)<br>
+vect((x,y,z))<br>
+vect((x,y,z,s,t))<br>
+vect(string)
+</td><td>
+Returns a 3D (resp. 5D) vector object with coordinates x,y,z (resp. x,y,z,s,t) specified either as three (resp. five) parameters, as a single tuple parameter, or textually in a string as three (not 5, not supported, sorry) numbers separated with whitespaces.
+</td></tr>
+</p><p><tr><td class="doccode">
+matrix(v1,v2,v3)<br>
+matrix((a,b,c), (d,e,f), (g,h,i))<br>
+matrix(string)
+</td><td>
+Returns a matrix object. v1,v2,v3 are 3D vectors that are used as columns of the matrix. (a,b,c),(d,e,f),(g,h,i) is the line-by- line description of the 9 floats to put into the matrix. string textually contains 9 numbers separated with whitespaces (no parenthesis). As with vect above, instead of calling matrix with three arguments, you can call it with a single tuple argument.
+</td></tr>
+</p><p><tr><td class="doccode">
+newobj(name)
+</td><td>
+Creates a new Internal QuArK object called name. <a href="src.quarkx.html#objectsinternal">See below for a description of Internal QuArK objects.</a>
+</td></tr>
+</p><p><tr><td class="doccode">
+newfileobj(name)
+</td><td>
+Idem, but builds an Internal QuArK file object.
+</td></tr>
+</p><p><tr><td class="doccode">
+openfileobj(filename)
+</td><td>
+Opens an existing file and returns an Internal QuArK file object.
+</td></tr>
+</p><p><tr><td class="doccode">
+savefileobj(obj,FM_SaveAsFile,0,None,0)
+</td><td>
+Opens a 'Save File' window and saves any selected fileobject such as a texture image (Internal QuArK file object) or md2 file to any location.<br>
+<b>obj</b> the selected object in QuArK, <b>FM_SaveAsFile</b> enter as shown here (see others below), <b>0</b> to specify type of file to save as (see others below),
+<b>None</b> (default setting) specifies as dialog form, will not save the file until dialog closed, <b>0</b>
+this setting stops the saved file from showing up on the <a href="glossary.html#r">Recent files</a> menu list, setting the argument to <b>1</b>
+will place the name on the list.<br>
+<b><i>other settings available</i>&nbsp;</b> :<br>
+2nd argument:
+<div class="doccode"><pre>
+FM_Save           = 1
+FM_SaveAsFile     = 2
+FM_SaveIfModif    = 3
+FM_SaveTagOnly    = 4
+</pre></div>
+3rd argument
+<div class="doccode"><pre>
+0       = (default setting), any file type *.*
+1 - 8   = as shown in source code (Pcx, Tga, DDS, Bmp, JPeg, Png, M32, VTF)
+</pre></div>
+</td></tr>
+</p><p><tr><td class="doccode">
+setupsubset()<br>
+setupsubset(i)<br>
+setupsubset(i,subset)
+</td><td>
+Returns an Internal object from the Configuration dialog box. i is one of the SS_xxx constants, and subset is the name of the subset. If unspecified, returns the set SS_xxx. If i is unspecified, too, returns the subset corresponding to the current game.
+</td></tr>
+</p><p><tr><td class="doccode">
+copyobj(list)
+</td><td>
+Copy all QuArK objects in the list into the clipboard. The previous clipboard content is cleared.
+</td></tr>
+</p><p><tr><td class="doccode">
+pasteobj()<br>
+pasteobj(1)
+</td><td>
+With no argument, or with a False argument, returns 1 if there is one or several Internal object in the clipboard ready to be pasted, and 0 otherwise. With a True argument, returns a list of all objects from the clipboard, which will be empty if there is no such object.
+</td></tr>
+</p><p><tr><td class="doccode">
+getqctxlist()<br>
+getqctxlist(type)<br>
+getqctxlist(type, name)
+</td><td>
+Builds a list of objects from all .qctx objects found in Defaults.qrk and in the currently registered add-ons. If parameters are given, returns a list of objects within .qctx objects that match the specified criteria: they must have the correct type and, if specified, the correct name.
+</td></tr>
+</p><p><tr><td class="doccode">
+loadimages(filename)<br>
+loadimages(fn, width)<br>
+loadimages(fn, width, (x,y))
+</td><td>
+Loads an image list from a .bmp file. Each image in the list has the given width (default 16), and all pixels of the same color as the one at coordinates (x,y), if specified, are considered to be transparent. See Image List objects below. If width is a floating-point number, it represents the ratio width/height instead of a pixel count.
+</td></tr>
+</p><p><tr><td class="doccode">
+newfaceex(vertices)
+</td><td>
+Makes a new polyhedron face with the given vertices list. Not for building polyhedrons!! Only for special uses!! The resulting face should only be used to check for intersection with other polyhedrons or to be displayed (with a &quot;broken face&quot; cyan border).
+</td></tr>
+</p><p><tr><td class="doccode">
+needgamefile(file)<br>
+needgamefile(file, base)
+</td><td>
+Loads a file from the current game's datas. The file path should be specified in a .pak-style fashion, e.g. &quot;maps/base1.bsp&quot;. If base is present, QuArK only looks in this base directory; otherwise, it looks in all configured base directories, just like the game itself. Returns an Internal File Object. Raises quarkx.error if not found.
+</td></tr>
+</p><p></table>
+</p>
+  </td></tr></table>
+  <br>
+
+<a name="quarkxlogpurpose"></a>
+  <table width="100%" border=0 cellspacing=0>
+    <tr class="headline">
+      <td>
+        <p class="item">&nbsp;Logging functions of the module quarkx</p>
+      </td>
+      <td align=right>
+        <font size=-2>DanielPharos&nbsp;-&nbsp;25 Jul 2009</font>
+      </td>
+      <td width="1%" align=right nowrap>
+        &nbsp;&nbsp;[&nbsp;<a href="#__top__">Top</a>&nbsp;]&nbsp;
+      </td>
+    </tr>
+  </table>
+  <table border=0 width="100%" cellspacing=10><tr><td>
+<p>The default filename for the main log file is 'QUARK.LOG'.<br>
+The default filename for the console log file is 'Console.txt'.<br>
+</p><p><table border=1 cellspacing=0 cellpadding=4>
+</p><p><tr><td class="doccode">
+log(string [, level])
+</td><td>
+Writes a line of text to the main log file. It'll be marked with 'PythonLog'. &nbsp;<tt>level</tt>&nbsp; is the loglevel used for this output.
+</td></tr>
+</p><p><tr><td class="doccode">
+startconsolelog()
+</td><td>
+Opens the console log file. Console output is automatically written to the log file if it is open.
+</td></tr>
+</p><p><tr><td class="doccode">
+stopconsolelog()
+</td><td>
+Closes the console log file. This stops any console output from being written to it.
+</td></tr>
+</p><p><tr><td class="doccode">
+clearconsolelog()
+</td><td>
+Deletes the console log file. Should be used with caution!
+</td></tr>
+</p><p></table>
+</p>
+  </td></tr></table>
+  <br>
+
+<a name="quarkxtexturefunctions"></a>
+  <table width="100%" border=0 cellspacing=0>
+    <tr class="headline">
+      <td>
+        <p class="item">&nbsp;Texture functions of the module quarkx</p>
+      </td>
+      <td align=right>
+        <font size=-2>cdunde&nbsp;-&nbsp;24 Feb 2008</font>
+      </td>
+      <td width="1%" align=right nowrap>
+        &nbsp;&nbsp;[&nbsp;<a href="#__top__">Top</a>&nbsp;]&nbsp;
+      </td>
+    </tr>
+  </table>
+  <table border=0 width="100%" cellspacing=10><tr><td>
+<p>Functions for actually changing a texture image, weather it be in the
+<a href="intro.modeleditor.toolpalettes.paintmodes.html">Model Editor</a> as a <a href="glossary.html#s">skin texture</a> or the
+<a href="intro.mapeditor.dataforms.html#faceview">Map Editor</a> as a <a href="glossary.html#f">face texture</a> (not implemented yet).
+These can also be used to set and apply dialog pen colors to change a texture or in conjunction with
+a view's <a href="src.quarkx.html#canvas">Canvas objects</a> to set their various color functions.
+</p><p>In addition, other useful related functions can be found in the quarkpy\qutils.py file <a href="glossary.html#t">Texture and Color Utilities</a> section such as:<br>
+<a href="glossary.html#r">RGBToColor(RGB)</a> : Converts separate Red, Green, Blue color components into a long integer color.<br>
+<a href="glossary.html#c">ColorToRGB(Color)</a> : Converts long integer color number into separate color components Red Green Blue (RGB).<br>
+</p><p>As well as specific functions for the <a href="intro.modeleditor.toolpalettes.paintmodes.html">Model Editor</a> in its quarkpy/mdlutils.py file for:<br>
+<a href="glossary.html#t">TexturePixelLocation(editor, view, x, y, triangleface)</a> : To get the
+<a href="triangleUV/triangleUV.htm">u, v texture position of any triangle</a> where the cursor is pointing in any view.
+</p><p><b><u>Argument Definitions and examples to use for these functions</u></b>:<br>
+<a href="glossary.html#t">texshortname = editor.Root.currentcomponent.currentskin.shortname</a> (be SURE to use the <a href="glossary.html#s">shortname</a> and not <a href="glossary.html#n">name</a> or the function breaks!)<br>
+<a href="glossary.html#t">texparent = editor.Root.currentcomponent.currentskin.parent</a><br>
+<a href="glossary.html#p">pixU, pixV =</a> The texture u, v location in a view (get by using the mdlutils.py TexturePixelLocation function).<br>
+<a href="glossary.html#p">PalIndex =</a> An actual integer palette number, not the <a href="glossary.html#s">string</a> equivalent of an integer value.<br>
+<a href="glossary.html#p">paintcolor =</a> As a palette index intiger, hex number, or Long intiger for ex:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="glossary.html#p">PalIndex = int(quarkx.setupsubset(SS_MODEL, "Colors")["Paint_PalettePenColor"])</a> # 8 bit texture PalIndex number.<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="glossary.html#h">hex2longint = MapColor("Paint_RGBPenColor", SS_MODEL)</a> # 24 bit texture, as a hex number converted to a long int.<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="glossary.html#l">longint = 13283574</a>
+</p><p><table border=1 cellspacing=0 cellpadding=4>
+</p><p><tr><td class="doccode">
+getpixel(texshortname, texparent, pixU, pixV)
+</td><td>
+This is NOT the same function as the view.canvas() <a href="src.quarkx.html#canvas">getpixel</a> function.
+which is a pixel of a view that can be distorted, inaccurate, not a true texture pixel.<br>
+If the texture being sent is a palette texture, such as a .pcx texture,
+then the function returns the PalIndex number as an integer (not a string of an integer).
+</p><p>If the texture being sent is a 24 bit texture, such as a .tga texture
+which do not use a palette - only RGB colors, then the color's long integer number is returned.<br>
+</p><p>If an RBG color, returns a long integer of that pixel, this can be used for the <a href="glossary.html#s">setpixelpal</a>
+function below to paint (change) that texture.<br>
+<a href="glossary.html#<"><u>Use example:</u></a><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="glossary.html#p">paintcolor = quarkx.getpixel(texshortname, texparent, pixU, pixV)</a>
+</td></tr>
+</p><p><tr><td class="doccode">
+getpixelpal(texshortname, texparent, PalIndex)
+</td><td>
+Returns the color of the PalIndex as an RGB long integer. Used to set RGB pen color from a palette color.<br>
+<a href="glossary.html#<"><u>Use example:</u></a><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="glossary.html#p">paintcolor = quarkx.getpixelpal(texshortname, texparent, PalIndex)</a>
+</td></tr>
+</p><p><tr><td class="doccode">
+getpixelalpha(texshortname, texparent, pixU, pixV)
+</td><td>
+This function is an RGB function ONLY! And ONLY works with OpenGL in QuArK. Returns the &quot;alphavalue&quot; as a long integer.<br>
+<a href="glossary.html#<"><u>Use example:</u></a><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="glossary.html#a">alphavalue = quarkx.getpixelalpha(texshortname, texparent, pixU, pixV)</a>
+</td></tr>
+</p><p><tr><td class="doccode">
+setpixel(texshortname, texparent, pixU, pixV, integer)
+</td><td>
+Changes the actual texture image color to the new Palette integer color, or for RGB colors the hex2longint or longint. (does the color painting)<br>
+<a href="glossary.html#<"><u>Use examples:</u></a><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="glossary.html#q">quarkx.setpixel(texshortname, texparent, pixU, pixV, PalIndex)</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; or<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="glossary.html#q">quarkx.setpixel(texshortname, texparent, pixU, pixV, hex2longint)</a>&nbsp;&nbsp; or<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="glossary.html#q">quarkx.setpixel(texshortname, texparent, pixU, pixV, longint)</a>
+</td></tr>
+</p><p><tr><td class="doccode">
+setpixelpal(texshortname, texparent, PalIndex, paintcolor)
+</td><td>
+Used to CHANGE a model's palette color to ANY RGB color, to be saved with the model file. It actually changes the model's palette.<br>
+<a href="glossary.html#<"><u>Use example:</u></a><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="glossary.html#q">quarkx.setpixelpal(texshortname, texparent, PalIndex, paintcolor)</a>
+</td></tr>
+</p><p><tr><td class="doccode">
+setpixelalpha(texshortname, texparent, pixU, pixV, alphavalue)
+</td><td>
+This function is an RGB function ONLY! And ONLY works with OpenGL in QuArK.
+Changes the actual alpha color <a href="glossary.html#a">alphavalue</a> of a texture, to the new <a href="glossary.html#a">alphavalue</a>.<br>
+(does the alpha painting, the <a href="glossary.html#a">alphavalue</a>, comes from <a href="glossary.html#g">getpixelalpha</a> function above)<br>
+<a href="glossary.html#<"><u>Use example:</u></a><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="glossary.html#q">quarkx.setpixelalpha(texshortname, texparent, pixU, pixV, alphavalue)</a>
+</td></tr>
+</p><p></table>
+</p>
+  </td></tr></table>
+  <br>
+
+<a name="quarkxgeneralpurpose"></a>
+  <table width="100%" border=0 cellspacing=0>
+    <tr class="headline">
+      <td>
+        <p class="item">&nbsp;Various general-purpose functions of the module quarkx</p>
+      </td>
+      <td align=right>
+        <font size=-2>Armin Rigo&nbsp;-&nbsp;28 Apr 2009</font>
+      </td>
+      <td width="1%" align=right nowrap>
+        &nbsp;&nbsp;[&nbsp;<a href="#__top__">Top</a>&nbsp;]&nbsp;
+      </td>
+    </tr>
+  </table>
+  <table border=0 width="100%" cellspacing=10><tr><td>
+<p><table border=1 cellspacing=0 cellpadding=4>
+</p><p><tr><td class="doccode">
+lines2list(string)
+</td><td>
+Convert a string with $0D end-of-line characters (as found in .qrk files) into a list of strings, one for each line.
+</td></tr>
+</p><p><tr><td class="doccode">
+list2lines(list)
+</td><td>
+lines2list’s inverse operation.
+</td></tr>
+</p><p><tr><td class="doccode">
+truncstr(string)
+</td><td>
+Returns the string up to but not including the first null character.
+</td></tr>
+</p><p><tr><td class="doccode">
+settimer(callback, info, delay)
+</td><td>
+Set up a timer. QuArK will call the function callback with the single user-specified argument info after delay milliseconds have elapsed. To set a repetitive timer, callback can return a number, which is the number of milliseconds until it should be called again. If callback returns None, the timer stops. To cancel a pending timer, call settimer with exactly the same (as the operator “ is ” would tell) callback and info and with a delay of 0.
+</td></tr>
+</p><p><tr><td class="doccode">
+rnd(float)
+</td><td>
+Rounds float to the nearest integer. Values that are almost exactly an integer and a half are rounded down, e.g. 2.49999, 2.5 and 2.50001 are all rounded to 2.
+</td></tr>
+</p><p><tr><td class="doccode">
+middlecolor(c1,c2,frac)
+</td><td>
+Returns a color interpolated between c1 and c2. frac is usually between 0 (which returns c2) and 1 (which returns c1) but can be outside this range; in this case, the R-G-B components are clamped to the valid range.
+</td></tr>
+</p><p><tr><td class="doccode">
+keydown(key)
+</td><td>
+Checks the state of the keyboard. See qkeys.py for a list of all keys. Returns 1 if the key is down, -1 if the key is up but has been pressed after the previous same call to keydown, and 0 otherwise.
+</td></tr>
+</p><p><tr><td class="doccode">
+setpoolobj(tagname, anything)
+</td><td>
+Stores anything into the pool under the name tagname. The pool is like a dictionnary, but objects that are put there will be periodically freed if they are not referencied any more by other variables. Use it to store complex memory-consuming objects that can be quickly rebuilt when necessary. This lets you use the same object from several places. If tagname is the empty string, the stored object cannot be retreived from the pool any more, but it guarantees that the object won’t be freed immediately (e.g. use it to store objects that take some time to be freed).
+</td></tr>
+</p><p><tr><td class="doccode">
+poolobj(tagname)
+</td><td>
+Returns the pool object called tagname, or None.
+</td></tr>
+</p><p><tr><td class="doccode">
+listfileext()
+</td><td>
+Returns a list of all known file types, each of the form (extension, description).
+</td></tr>
+</p><p><tr><td class="doccode">
+filedialogbox(...)
+</td><td>
+Opens an Open or Save dialog box. See the .py files for examples.
+</td></tr>
+</p><p><tr><td class="doccode">
+screenrect()
+</td><td>
+Returns the screen size minus the task bar (left,top,right,bottom).
+</td></tr>
+</p><p><tr><td class="doccode">
+seticons(i, icon)<br>
+seticons(i, ico1, ico2)
+</td><td>
+Assigns the given icon to the objects of kind i. See qutils.py for a complete list. If two icons are given, the second one is used when the object is not selected. The icon parameter(s) can be each either an item of an image list, or a function that QuArK will call whenever it needs the icon. The function has the actual Internal object as parameter, and must return an item of an image list.
+</td></tr>
+</p><p><tr><td class="doccode">
+msgbox(msg, typ, btn)
+</td><td>
+Displays a message box. See qutils.py for a list of available MT_ flags for typ and MB_ for btn.
+</td></tr>
+</p><p><tr><td class="doccode">
+textbox(msg, text, typ)
+</td><td>
+Displays a text box form. See qutils.py for a list of available MT_ flags for typ.<br>
+<u>Note</u> : Each line of the text must end with both \r\n and not just \n or improper marks will be displayed instead.
+</td></tr>
+</p><p><tr><td class="doccode">
+beep()<br>
+beep(kind)
+</td><td>
+Beeps. Use &nbsp;<tt>kind</tt>&nbsp; with &nbsp;<tt>MB_*</tt>&nbsp; constants to change the kind of beep-noise made.
+</td></tr>
+</p><p><tr><td class="doccode">
+wait()<br>
+wait(delay)<br>
+wait(delay, origin)
+</td><td>
+Waits delay milliseconds (0 if unspecified) and returns the current time, computed in milliseconds. If origin is specified, the delay is computed from the start time origin. This lets you make an animation at a given speed no matter how long it takes to display one image.
+</td></tr>
+</p><p><tr><td class="doccode">
+exit()
+</td><td>
+Exits QuArK.
+</td></tr>
+</p><p><tr><td class="doccode">
+progressbar(txt,count)
+</td><td>
+Sets up a new progressbar module. The progress bar displays the text qdictionnary.Strings[txt] (txt must be an integer, not a string!) and it reaches 100% after count steps. Returns a new copy a the progressbar module (see below).
+</td></tr>
+</p><p><tr><td class="doccode">
+ftos(float)
+</td><td>
+Returns a string representing the given float with at most one decimal. If float is almost an integer, the string contains no decimal part.
+</td></tr>
+</p><p><tr><td class="doccode">
+clipline(p1,p2)
+</td><td>
+Clips the line between the points p1 and p2 to its part before the camera. Returns a couple of points that represents the new line, or (None, None) if the line is completely behind the camera. The two returned points are computed so that their x and y coordinates can be used (i.e. the visible attribute of the points are True). clipline is automatically called by the line method of canvases. See below for more information about projected 3D points.
+</td></tr>
+</p><p><tr><td class="doccode">
+runprogram(cmdline, currentdir)<br>
+runprogram(cmdline, currentdir, stdout)<br>
+runprogram(cmdline, currentdir, stdout, stderr)
+</td><td>
+Runs the program given by cmdline. currentdir is the new program’s current directory. runprogram returns a process object, as described below. If the program is a console program, and if stdout is specified, it will use this console object instead of running in its own console. If stderr is omitted, it defaults to stdout.
+<table valign=top halign=left>
+<tr><td>
+<b>Code example:</b><br>cmdline = &quot;psp.exe&quot;<br>
+currentdir = &quot;C:\Programs\PSP&quot;<br>
+quarkx.runprogram(cmdline, currentdir)
+</td>
+<td>
+ # runs the program<br>
+ # sets the programs directory
+</td></tr>
+</table>
+</td></tr>
+</p><p><tr><td class="doccode">
+console()<br>
+console(visible)
+</td><td>
+Shows or hides the QuArK console. console() or console(1) shows it and console(0) hides it.
+</td></tr>
+</p><p><tr><td class="doccode">
+writeconsole(src, text)
+</td><td>
+Writes the text in the console. src should be an object of class qconsole.console. See the file qconsole.py for details.
+</td></tr>
+</p><p><tr><td class="doccode">
+getquakedir()
+</td><td>
+Returns the Quake dir. This is the directory containing the game's executable file.
+</td></tr>
+</p><p><tr><td class="doccode">
+getgamedir()
+</td><td>
+Returns the Game dir. This is the directory containing the pak files (note: can be different for mods!).
+</td></tr>
+</p><p><tr><td class="doccode">
+gettmpquark()
+</td><td>
+Returns the tmpquark dir. This is the directory QuArK outputs files to.
+</td></tr>
+</p><p><tr><td class="doccode">
+getbasedir()
+</td><td>
+Returns the base dir. This is the directory containing the game's (official) pak files.
+</td></tr>
+</p><p><tr><td class="doccode">
+outputfile(pathandname)
+</td><td>
+Expands pathandname into a complete path and name. pathandname is a name as seen by Quake, e.g. maps/xyz.bsp. The returned path is in the directory tmpQuArK. The directories are created if they don’t already exist. If the directory to Quake has not been set in the Configuration dialog box, outputfile warns the user and raises quarkx.abort.
+</td></tr>
+</p><p><tr><td class="doccode">
+outputpakfile()<br>
+outputpakfile(1)
+</td><td>
+Returns the file path and name of the .PAK file that should be created before running Quake, or None. outputpakfile never returns None if a True parameter is given.
+</td></tr>
+</p><p><tr><td class="doccode">
+getfileattr(filename)
+</td><td>
+Returns the file attributes, or -1 if the file doesn’t exist. See qutils.py for the list of attributes.
+</td></tr>
+</p><p><tr><td class="doccode">
+setfileattr(filename, attr)
+</td><td>
+Sets the file attributes. Use it to either clear a file’s archive attribute, or to delete the file by specifying -1 as attr. Raises quarkx.error if the file doesn’t exist.
+</td></tr>
+</p><p><tr><td class="doccode">
+reloadsetup()
+</td><td>
+Reload the settings of QuArK from the Setup objects.
+</td></tr>
+</p><p><tr><td class="doccode">
+htmldoc(url)<br>
+htmldoc(filename)
+</td><td>
+Opens the given HTML file or URL in the default browser. filename must give the full path, and may end with #section to jump directly to the specified section in the file.
+</td></tr>
+</p><p><tr><td class="doccode">
+helppopup(text)
+</td><td>
+Displays a pop-up window with the given help text.
+</td></tr>
+</p><p><tr><td class="doccode">
+helpmenuitem(text)
+</td><td>
+Adds an item into the '?' menu. Selecting this items call the MACRO_helpmenu macro.
+</td></tr>
+</p><p><tr><td class="doccode">
+getshorthint(hint)
+</td><td>
+Returns the &quot;short&quot; part of a hint string, that is, everything before the first &quot;|&quot;. This is the part of the hint that will be displayed in a small pop-up window when you leave the mouse over the control.
+</td></tr>
+</p><p><tr><td class="doccode">
+getlonghint(hint)
+</td><td>
+Returns the &quot;long&quot; part of a hint string. If there is a &quot;|&quot; in the string, this &quot;long&quot; part is everything after this bar. This is usually a longer description for the control action, suitable to be displayed with quarkx.helppopup.
+</td></tr>
+</p><p><tr><td class="doccode">
+listmapviews()
+</td><td>
+Returns a list with all currently opened map views in QuArK.
+</td></tr>
+</p><p><tr><td class="doccode">
+menuname(s)
+</td><td>
+Returns the string s with all '&amp;' signs doubled (required for menu items in which the '&amp;' sign should occur as is and not as a prefix for shortcut).
+</td></tr>
+</p><p><tr><td class="doccode">
+searchforholes(polys, startpoints)
+</td><td>
+Search for holes between the given list of polys, starting the search from the given list of startpoints. Returns a line going &quot;through&quot; the hole as a list of points, or None if no hole is found. startpoints may contain 3D vectors and/or Quake entities.
+</td></tr>
+</p><p></table>
+</p>
+  </td></tr></table>
+  <br>
+
+<a name="quarkxreadonlyvariables"></a>
+  <table width="100%" border=0 cellspacing=0>
+    <tr class="headline">
+      <td>
+        <p class="item">&nbsp;Read-only variables of the module quarkx</p>
+      </td>
+      <td align=right>
+        <font size=-2>Armin Rigo&nbsp;-&nbsp;15 Feb 2001</font>
+      </td>
+      <td width="1%" align=right nowrap>
+        &nbsp;&nbsp;[&nbsp;<a href="#__top__">Top</a>&nbsp;]&nbsp;
+      </td>
+    </tr>
+  </table>
+  <table border=0 width="100%" cellspacing=10><tr><td>
+<p><table border=1 cellspacing=0 cellpadding=4>
+</p><p><tr><td class="doccode">
+error
+</td><td>
+The exception type raised by all routines of QuArK when something goes wrong. The full name of the exception is quarkx.error.
+</td></tr>
+</p><p><tr><td class="doccode">
+aborted
+</td><td>
+Another exception, raised when there is not really an error but rather the operation must be aborted for some reason. This exception is not displayed in the console with a traceback; it is a “ silent ” exception.
+</td></tr>
+</p><p><tr><td class="doccode">
+version
+</td><td>
+Version of the executable (QUARK.EXE).
+</td></tr>
+</p><p><tr><td class="doccode">
+exepath
+</td><td>
+Complete directory to QUARK.EXE, with a trailing backslash.
+</td></tr>
+</p><p><tr><td class="doccode">
+toolboxmenu
+</td><td>
+The Toolboxes menu item, to put in menu bars.
+</td></tr>
+</p><p><tr><td class="doccode">
+helpmenu
+</td><td>
+The ‘?’ menu item. It is automatically added to menu bars.
+</td></tr>
+</p><p><tr><td class="doccode">
+clickform
+</td><td>
+The Window object in which the last menu or button click occured.
+</td></tr>
+</p><p><tr><td class="doccode">
+window_type<br>
+toolbar_type<br>
+imagelist_type<br>
+image1_type<br>
+panel_type<br>
+object_type<br>
+explorer_type<br>
+dataform_type<br>
+floating_type<br>
+mapview_type<br>
+imagectrl_type<br>
+btnpanel_type<br>
+vector_type<br>
+matrix_type<br>
+canvas_type<br>
+process_type
+</td><td>
+Types of all the built-in Python object types.
+</td></tr>
+</p><p></table>
+</p>
+  </td></tr></table>
+  <br>
+
+<a name="quarkxreadwritevariables"></a>
+  <table width="100%" border=0 cellspacing=0>
+    <tr class="headline">
+      <td>
+        <p class="item">&nbsp;Read-write variables of the module quarkx</p>
+      </td>
+      <td align=right>
+        <font size=-2>Armin Rigo&nbsp;-&nbsp;15 Feb 2001</font>
+      </td>
+      <td width="1%" align=right nowrap>
+        &nbsp;&nbsp;[&nbsp;<a href="#__top__">Top</a>&nbsp;]&nbsp;
+      </td>
+    </tr>
+  </table>
+  <table border=0 width="100%" cellspacing=10><tr><td>
+<p><table border=1 cellspacing=0 cellpadding=4>
+</p><p><tr><td class="doccode">
+editshortcuts
+</td><td>
+List of strings describing keys and shortcuts that are normally assigned to edit boxes. When the cursor is in an edit box, all the keys listed here are sent to the edit box instead of being used as a menu shortcut (this is particularly important for clipboard keys Ctrl-X, Ctrl-V,...)
+</td></tr>
+</p><p><tr><td class="doccode">
+setupchanged
+</td><td>
+Set by Python code to a function called whenever the configuration (from the Configuration dialog box) is changed. The function takes one parameter, which you can ignore for now.
+</td></tr>
+</p><p><tr><td class="doccode">
+redlinesicons
+</td><td>
+A tuple of 6 icons to use with the map editor red lines (top, topfocus, topmouse, bottom, bottomfocus, bottommouse).
+</td></tr>
+</p><p><tr><td class="doccode">
+buildmodes
+</td><td>
+A list of strings describing the available build modes for the big &quot;GO!&quot; button.
+</td></tr>
+</p><p></table>
+</p>
+  </td></tr></table>
+  <br>
+
+<a name="objectsinternal"></a>
+  <table width="100%" border=0 cellspacing=0>
+    <tr class="headline">
+      <td>
+        <p class="item">&nbsp;Internal QuArK objects</p>
+      </td>
+      <td align=right>
+        <font size=-2>Armin Rigo&nbsp;-&nbsp;09 Jul 2012</font>
+      </td>
+      <td width="1%" align=right nowrap>
+        &nbsp;&nbsp;[&nbsp;<a href="#__top__">Top</a>&nbsp;]&nbsp;
+      </td>
+    </tr>
+  </table>
+  <table border=0 width="100%" cellspacing=10><tr><td>
+<p>Internal Objects are all the objects that QuArK works with, stores in files, and displays in tree views. Each Internal object
+has a name, which usually contains an extension like files. The extension is called the type of the object, and the part of the
+name before the extension is the shortname. Internal File Objects are the Internal Objects that correspond directly to a file,
+e.g. BSP or QRK files. Such objects have the file extension as type, e.g. &quot;&nbsp;<tt>.bsp</tt>&nbsp;&quot; or &quot;&nbsp;<tt>.qrk</tt>&nbsp;&quot;. Non-File Objects are internals
+to a file, and cannot be stored into their own file. For example, polyhedrons and entities are Non-File. Such objects have a
+type that starts with &quot;&nbsp;<tt>:</tt>&nbsp;&quot; instead of &quot;&nbsp;<tt>.</tt>&nbsp;&quot;, e.g. &quot;&nbsp;<tt>:p</tt>&nbsp;&quot; for polyhedrons.
+</p><p>Besides this, all Internal Objects have a list of Specifics/Arg, much like Quake entities, as well as sub-items, as displayed
+in tree views. See <a href="src.struct.html#objects">'QObjects'</a> for more information.
+</p>
+  </td></tr></table>
+  <br>
+
+<a name="objectscommonattributes"></a>
+  <table width="100%" border=0 cellspacing=0>
+    <tr class="headline">
+      <td>
+        <p class="item">&nbsp;Attributes common to all Internal objects</p>
+      </td>
+      <td align=right>
+        <font size=-2>Armin Rigo&nbsp;-&nbsp;09 Jul 2012</font>
+      </td>
+      <td width="1%" align=right nowrap>
+        &nbsp;&nbsp;[&nbsp;<a href="#__top__">Top</a>&nbsp;]&nbsp;
+      </td>
+    </tr>
+  </table>
+  <table border=0 width="100%" cellspacing=10><tr><td>
+<p><table border=1 cellspacing=0 cellpadding=4>
+</p><p><tr><td class="doccode">
+classes
+</td><td>
+Tuple of all class names implemented into this object. For example, .bmp file objects returns (&quot;Object&quot;, &quot;FileObject&quot;, &quot;Image&quot;, &quot;Bmp&quot;).
+</td></tr>
+</p><p><tr><td class="doccode">
+dictitems
+</td><td>
+A dictionnary of all subitems with the format name:item. Modifying this dictionnary has no effect on the actual subitems of the object.
+</td></tr>
+</p><p><tr><td class="doccode">
+dictspec
+</td><td>
+A read-only dictionnary with all Specific/Arg pairs.<br>
+Note: known to cause memory leaks in older versons of QuArK, see: <a href="src.bugs.leaks.html#dicts">'Using dicts'</a>.
+</td></tr>
+</p><p><tr><td class="doccode">
+flags
+</td><td>
+OF_XXX flags. See qutils.py.
+</td></tr>
+</p><p><tr><td class="doccode">
+itemcount
+</td><td>
+Number of subitems.
+</td></tr>
+</p><p><tr><td class="doccode">
+name
+</td><td>
+Full name. Read-only.
+</td></tr>
+</p><p><tr><td class="doccode">
+parent
+</td><td>
+Object owning this object as subitem, or None.
+</td></tr>
+</p><p><tr><td class="doccode">
+selected
+</td><td>
+Is the object selected by the user?
+</td></tr>
+</p><p><tr><td class="doccode">
+shortname
+</td><td>
+Short name. Read-write. (writing to shortname was buggy in QuArK 5.0.c2 and 5.0.c3)
+</td></tr>
+</p><p><tr><td class="doccode">
+subitems
+</td><td>
+List of subitems. Read-only.
+</td></tr>
+</p><p><tr><td class="doccode">
+type
+</td><td>
+Type (extension).
+</td></tr>
+</p><p><tr><td class="doccode">
+treeparent
+</td><td>
+Like parent but is None if the parent is outside the scope of the tree view that displays the object, i.e. if the object is a root of its tree view.
+</td></tr>
+</p><p><tr><td class="doccode">
+subitem(i)
+</td><td>
+Returns the ith subitem.
+</td></tr>
+</p><p><tr><td class="doccode">
+appenditem(obj)
+</td><td>
+Appends the Internal object obj to the end of the subitems of the current object.
+</td></tr>
+</p><p><tr><td class="doccode">
+insertitem(i, ob)
+</td><td>
+Inserts ob at position i in the list of subitems.
+</td></tr>
+</p><p><tr><td class="doccode">
+removeitem(i)<br>
+removeitem(obj)
+</td><td>
+Removes a subitem specified by position or directly.
+</td></tr>
+</p><p><tr><td class="doccode">
+findname(name)
+</td><td>
+Finds the first subitems with the given name, or None.
+</td></tr>
+</p><p><tr><td class="doccode">
+findshortname(shortname)
+</td><td>
+Finds the first subitems with the given shortname, or None.
+</td></tr>
+</p><p><tr><td class="doccode">
+...[spec]
+</td><td>
+Like dictionnaries, use this notation to read or set a Specific. The values that can take a Specific are: None if not set, a string (that may be void), or a tuple of floats. To store an integer, either convert it from/to a string, or use the methods getint and setint below. As a special case, when using the &quot;&nbsp;<tt>[ ]</tt>&nbsp;&quot; notation to write an integer value, setint is called. However, when reading the same value, &quot;&nbsp;<tt>[ ]</tt>&nbsp;&quot; will return the packed string, not the integer. (QuArK 5.0.c2: you cannot set a Specific to None to delete it. All versions: setting a Specific to an empty string will delete it, although Specifics can exist with an empty Arg.)
+</td></tr>
+</p><p><tr><td class="doccode">
+getint(spec)
+</td><td>
+Reads the Specific spec and returns it as an integer. The Arg must not be a string describing an integer (&quot;5&quot;) but a packed string of zero to four bytes (&quot;\005&quot;).
+</td></tr>
+</p><p><tr><td class="doccode">
+setint(spec, int)
+</td><td>
+Sets the value of the Specific to the packed string that represents the integer int.
+</td></tr>
+</p><p><tr><td class="doccode">
+togglesel()
+</td><td>
+selected = not selected
+</td></tr>
+</p><p><tr><td class="doccode">
+copy()<br>
+copy(1)
+</td><td>
+Builds a copy of the object and all its subitems. The new copy has no parent. In the first form of the call, the new copies are initially unselected; in the second form of the call, the selection status is copied as well.
+</td></tr>
+</p><p><tr><td class="doccode">
+copyalldata(src)
+</td><td>
+Copies all Specifics and sub-items of the object from the ones of source. To make temporary changes on obj, do backup=obj.copy(), make the changes, and when done, call obj.copyalldata(backup).
+</td></tr>
+</p><p><tr><td class="doccode">
+acceptitem(ob)
+</td><td>
+Returns 1 if and only if the object ob can reasonnably be inserted into the list of subitems. For example, it is not reasonnable to insert a bitmap in an entity. Although it is possible, you should not try to do so.
+</td></tr>
+</p><p><tr><td class="doccode">
+nextingroup()
+</td><td>
+Returns the next object in the parent, or &nbsp;<tt>None</tt>&nbsp;.
+</td></tr>
+</p><p><tr><td class="doccode">
+findallsubitems(name, type)<br>
+findallsubitems(name, type, browsetype)
+</td><td>
+Returns a list of all objects that match the given name and type. If name is empty, all names are matched. Objects that can be returned include the object itself, all its subitems, all their own subitems, and so on, unless browsetype is set; in this case, only items whose type match browsetype are recursively looked into.
+</td></tr>
+</p><p><tr><td class="doccode">
+loadtext(fulltxt)
+</td><td>
+Loads a textual representation of the object from the string fulltxt, whose format should be the same as in full-text .QRK files. All Specifics and sub-items loaded are added to the object.
+</td></tr>
+</p><p><tr><td class="doccode">
+geticon()<br>
+geticon(selected)
+</td><td>
+Returns the icon used in tree views for this object. If selected is True, returns the selected version of the icon; otherwise, returns the unselected one. selected defaults to the current value of the object's attribute selected.
+</td></tr>
+</p><p></table>
+</p><p>Note that Internal Objects implement none of the operations like +,*,not, etc. Trying to use them, or even using an Internal
+Object in a boolean operation, will likely raise an Access Violation error. To test if a function returned an actual object or
+&nbsp;<tt>None</tt>&nbsp;, don’t write if obj:... but write if obj is not None:...
+</p>
+  </td></tr></table>
+  <br>
+
+<a name="attributesfileobject"></a>
+  <table width="100%" border=0 cellspacing=0>
+    <tr class="headline">
+      <td>
+        <p class="item">&nbsp;Attributes common to Internal File objects</p>
+      </td>
+      <td align=right>
+        <font size=-2>Armin rigo&nbsp;-&nbsp;15 Feb 2001</font>
+      </td>
+      <td width="1%" align=right nowrap>
+        &nbsp;&nbsp;[&nbsp;<a href="#__top__">Top</a>&nbsp;]&nbsp;
+      </td>
+    </tr>
+  </table>
+  <table border=0 width="100%" cellspacing=10><tr><td>
+<p>All Internal File Objects have the following additionnal attributes.
+</p><p><table border=1 cellspacing=0 cellpadding=4>
+</p><p><tr><td class="doccode">
+filename
+</td><td>
+Name of the file, if this object has been loaded directly from a file or if it will be stored in a file. Should include the full path.
+</td></tr>
+</p><p><tr><td class="doccode">
+tempfilename
+</td><td>
+Name of a temporary file where this data can be saved (for Auto-Save). The file name is based on the pointer address of the object: multiple reads of &nbsp;<tt>tempfilename</tt>&nbsp; will return the same value, and different objects will never have the same &nbsp;<tt>tempfilename</tt>&nbsp;.
+</td></tr>
+</p><p><tr><td class="doccode">
+savefile()<br>
+savefile(path)<br>
+savefile(path,astext)
+</td><td>
+Saves the file. If no argument is given, &nbsp;<tt>filename</tt>&nbsp; must be set before. If &nbsp;<tt>path</tt>&nbsp; is specified, saves a copy of the file into &nbsp;<tt>path</tt>&nbsp; (which should be a full path and file name). If &nbsp;<tt>astext</tt>&nbsp; is specified, it overrides the current file format and specifies whether the file must be saved in full-text or binary format.
+</td></tr>
+</p><p><tr><td class="doccode">
+conversion()<br>
+conversion(type)
+</td><td>
+Conversion between different object types. Mostly used for conversions between textures and images. With no argument, returns a list of all types this object can be converted to, including the current type (each one is a string giving the extension of the corresponding files with the dot); with a type argument, it attemps to convert the object to the given type.
+</td></tr>
+</p><p></table>
+</p><p>Subclasses of Internal File Objects don’t have more attributes. Most information is stored as Specifics-Args pairs and in
+subitems. Three exceptions:
+</p><p><ol>
+<li>.BSP file objects have a few attributes required to load them in the map editor.
+    See &nbsp;<tt>mapeditor.py</tt>&nbsp; for more information.
+<li>.PAK and .PAKFOLDER file objects have a method &nbsp;<tt>extract</tt>&nbsp;, which extracts all files and
+    subfolders into the directory given as parameter, which is created if required, as well as a method
+    &nbsp;<tt>getfolder</tt>&nbsp; that creates a given path inside the .PAK file and returns the resulting
+    .PAKFOLDER object.
+<li>Textures have an attribute &nbsp;<tt>disktexture</tt>&nbsp; that loads and returns an actual texture object if the
+    first texture were just a link.
+</ol>
+</p>
+  </td></tr></table>
+  <br>
+
+<a name="attributes3dobject"></a>
+  <table width="100%" border=0 cellspacing=0>
+    <tr class="headline">
+      <td>
+        <p class="item">&nbsp;Attributes common to Internal objects of class "3DObject"</p>
+      </td>
+      <td align=right>
+        <font size=-2>Armin Rigo&nbsp;-&nbsp;15 Feb 2001</font>
+      </td>
+      <td width="1%" align=right nowrap>
+        &nbsp;&nbsp;[&nbsp;<a href="#__top__">Top</a>&nbsp;]&nbsp;
+      </td>
+    </tr>
+  </table>
+  <table border=0 width="100%" cellspacing=10><tr><td>
+<p>Here are the additionnal attributes of Internal objects with &quot;3DObject&quot; in their class tuple. The Internal 3D Objects are the
+ones that have some kind of 3D position or shape. All objects present in the map editor’s tree view are Internal 3D Objects.
+This includes groups because you can move and resize whole groups.
+</p><p><table border=1 cellspacing=0 cellpadding=4>
+</p><p><tr><td class="doccode">
+origin
+</td><td>
+The origin point for the object, as a read-only 3D Vector.
+</td></tr>
+</p><p><tr><td class="doccode">
+translate(v)<br>
+translate(v, grid)
+</td><td>
+Translates (moves) the object by adding the vector &nbsp;<tt>v</tt>&nbsp;. If &nbsp;<tt>grid</tt>&nbsp; is set and is not zero, the origin of all objects is then forced to this grid. Note that the vector &nbsp;<tt>v</tt>&nbsp; does not have to be on the grid. To move an object by a distance which is a multiple of the grid step, first round &nbsp;<tt>v</tt>&nbsp; to the grid and then call &nbsp;<tt>translate</tt>&nbsp; with no &nbsp;<tt>grid</tt>&nbsp; argument.
+</td></tr>
+</p><p><tr><td class="doccode">
+forcetogrid(grid)
+</td><td>
+Forces the object to the grid. If the object is a group, all objects in this group are individually forced to the grid.
+</td></tr>
+</p><p><tr><td class="doccode">
+linear(v, m)
+</td><td>
+Applies the linear operation given by the matrix &nbsp;<tt>m</tt>&nbsp; by using the point &nbsp;<tt>v</tt>&nbsp; as center (fixed). See &nbsp;<tt>qeditor.py</tt>&nbsp; for functions that build matrices for common operations such as rotations.
+</td></tr>
+</p><p><tr><td class="doccode">
+inflate(z)
+</td><td>
+Inflates the polyhedron(s) by &nbsp;<tt>z</tt>&nbsp; pixels. &nbsp;<tt>z</tt>&nbsp; can be negative. When applied to a single face, the face is simply scrolled by &nbsp;<tt>z</tt>&nbsp; pixels perpendicularly to its plane.
+</td></tr>
+</p><p></table>
+</p>
+  </td></tr></table>
+  <br>
+
+<a name="attributestreemap"></a>
+  <table width="100%" border=0 cellspacing=0>
+    <tr class="headline">
+      <td>
+        <p class="item">&nbsp;Attributes common to Internal objects of class "TreeMap"</p>
+      </td>
+      <td align=right>
+        <font size=-2>Armin Rigo&nbsp;-&nbsp;09 Jul 2012</font>
+      </td>
+      <td width="1%" align=right nowrap>
+        &nbsp;&nbsp;[&nbsp;<a href="#__top__">Top</a>&nbsp;]&nbsp;
+      </td>
+    </tr>
+  </table>
+  <table border=0 width="100%" cellspacing=10><tr><td>
+<p>Here are the additionnal attributes of Internal objects with &quot;TreeMap&quot; in their class tuple. All objects present in the map
+editor’s tree view are TreeMap objects, and no other one.
+</p><p><table border=1 cellspacing=0 cellpadding=4>
+</p><p><tr><td class="doccode">
+replacetex(tx1, tx2)<br>
+replacetex(tx1, tx2, undomode)
+</td><td>
+Replaces all textures named tx1 with the texture tx2. If tx1 is empty, all textures are replaced. If undomode is specified and is True, this function does not change the textures in the polyhedron faces themselves, but creates a copy of each modified face and put it into the active undo operation list (see below). Returns the number of modified textures.
+</td></tr>
+</p><p><tr><td class="doccode">
+rebuildall()
+</td><td>
+Forces all polyhedrons to build themselves from their face objects. This is required in some circumstances, for example to know whether a polyhedron would be valid with a given set of planes as faces. Note that polyhedrons that are already built are not rebuilt (the name of the function is not well chosen). Returns a tuple (p,f) where p is the number of invalid polyhedrons and f is the number of unused faces (as shown by the &quot; broken &quot; versions of the polyhedron and face icons).
+</td></tr>
+</p><p></table>
+</p>
+  </td></tr></table>
+  <br>
+
+<a name="attributespolyhedron"></a>
+  <table width="100%" border=0 cellspacing=0>
+    <tr class="headline">
+      <td>
+        <p class="item">&nbsp;Attributes of Internal objects of class "Polyhedron"</p>
+      </td>
+      <td align=right>
+        <font size=-2>Armin Rigo&nbsp;-&nbsp;09 Jul 2012</font>
+      </td>
+      <td width="1%" align=right nowrap>
+        &nbsp;&nbsp;[&nbsp;<a href="#__top__">Top</a>&nbsp;]&nbsp;
+      </td>
+    </tr>
+  </table>
+  <table border=0 width="100%" cellspacing=10><tr><td>
+<p>Note: the class name &quot;Polyhedron&quot; is new in 5.0.c3. In version 5.0.c2, the name was in french, &quot;Polyedre&quot;.
+</p><p><table border=1 cellspacing=0 cellpadding=4>
+</p><p><tr><td class="doccode">
+error
+</td><td>
+A string describing the error, if the polyhedron is invalid (e.g. no interior).
+</td></tr>
+</p><p><tr><td class="doccode">
+faces
+</td><td>
+A list of all faces really used by the polyhedron. This can include faces outside the polyhedron (see the section about faces below). The list is empty if the polyhedron is invalid.
+</td></tr>
+</p><p><tr><td class="doccode">
+vertices
+</td><td>
+List of vertices (3D points). The list is empty if the polyhedron is invalid.
+</td></tr>
+</p><p><tr><td class="doccode">
+subtractfrom(list)
+</td><td>
+Subtracts the polyhedron from all polyhedrons in the given list. Returns a list with the resulting polyhedrons. Polyhedrons that don’t intersect the subtracting one are returned unchanged; other polyhedrons are replaced by zero or more pieces. New pieces are not attached to any parent, but it is invalid to read their parent attribute, which may return a wrong non-None value.
+</td></tr>
+</p><p><tr><td class="doccode">
+pieceof
+</td><td>
+Right after a subtraction, new pieces have this attribute set to the polyhedron they are a piece of. This is reset to None as soon as the piece is inserted into a group. Note that this attribute does not count for a reference, so it could become invalid if the original polyhedron is freed too early. A way to avoid that is to keep the original list of polyhedrons given to subtractfrom in a local variable until all pieceof attributes have been checked. If you give in the list of subtractfrom a polyhedron whose pieceof attribute is not None, and if the polyhedron is itself broken into pieces, the value of pieceof will be set as the new pieces’ pieceof, too. This lets you call subtractfrom several times with various subtracters and check the pieceof attributes only once.
+</td></tr>
+</p><p><tr><td class="doccode">
+broken
+</td><td>
+True or False depending on whether the polyhedron is broken or not.
+</td></tr>
+</p><p><tr><td class="doccode">
+intersects(poly)<br>
+intersects(face)<br>
+intersects(poly, face)
+</td><td>
+True or False depending on whether the polyhedron intersects or not the given polyhedron poly or the given face. If two arguments are given, face must be a face of poly and the intersection with this face of the polyhedron only is computed.
+</td></tr>
+</p><p><tr><td class="doccode">
+changedfaces()
+</td><td>
+Makes the Delphi code add + sign to poly in the tree-view without going through undo code.
+</td></tr>
+</p><p></table>
+</p>
+  </td></tr></table>
+  <br>
+
+<a name="attributesface"></a>
+  <table width="100%" border=0 cellspacing=0>
+    <tr class="headline">
+      <td>
+        <p class="item">&nbsp;Attributes of Internal objects of class "Face"</p>
+      </td>
+      <td align=right>
+        <font size=-2>Armin Rigo&nbsp;-&nbsp;07 Apr 2001</font>
+      </td>
+      <td width="1%" align=right nowrap>
+        &nbsp;&nbsp;[&nbsp;<a href="#__top__">Top</a>&nbsp;]&nbsp;
+      </td>
+    </tr>
+  </table>
+  <table border=0 width="100%" cellspacing=10><tr><td>
+<p>These objects are polyhedron faces. They are often found within Polyhedron objects, but use the polyhedron’s
+&nbsp;<tt>faces</tt>&nbsp; attribute instead of its &nbsp;<tt>subitem</tt>&nbsp; method to find them, because:
+<ol>
+<li>Polyhedrons don’t always use all their faces
+<li>Faces may lie outside polyhedrons, in which case they could be part of all polyhedrons within the group
+<li>In some cases, faces may be used in other contexts, e.g. as BSP faces.
+</ol>
+</p><p><table border=1 cellspacing=0 cellpadding=4>
+</p><p><tr><td class="doccode">
+faceof
+</td><td>
+List of all objects that this is a face of. Usually contains a single polyhedron. This list is never empty: if the face is not used at all, &nbsp;<tt>faceof</tt>&nbsp; will contain the face itself.
+</td></tr>
+</p><p><tr><td class="doccode">
+vertices
+</td><td>
+Vertices for each object that this is a face of. This is a list of lists of points. It is not simply a list of points! (You should generally use &nbsp;<tt>verticesof</tt>&nbsp; instead of &nbsp;<tt>vertices</tt>&nbsp;)
+</td></tr>
+</p><p><tr><td class="doccode">
+normal<br>
+dist
+</td><td>
+Plane containing the face, defined by a &nbsp;<tt>normal</tt>&nbsp; vector and its &nbsp;<tt>dist</tt>&nbsp;ance to origin. The plane contains all points &nbsp;<tt>p</tt>&nbsp; for which we have &nbsp;<tt>p*normal==dist</tt>&nbsp;. These attributes are read-only; to move the plane, either use the &nbsp;<tt>translate</tt>&nbsp; method common to all &quot;3DObject&quot;, or set the face’s &quot;&nbsp;<tt>v</tt>&nbsp;&quot; Specific, or call &nbsp;<tt>distortion</tt>&nbsp; below.
+</td></tr>
+</p><p><tr><td class="doccode">
+texturename
+</td><td>
+The name of the texture.
+</td></tr>
+</p><p><tr><td class="doccode">
+verticesof(obj)
+</td><td>
+List of vertices of this face, as used by the object &nbsp;<tt>obj</tt>&nbsp;, which must be in the &nbsp;<tt>faceof</tt>&nbsp; list.
+</td></tr>
+</p><p><tr><td class="doccode">
+threepoints(tex)<br>
+threepoints(2,texsrc)
+</td><td>
+Returns the three points defining the plane that contains the face. &nbsp;<tt>tex</tt>&nbsp; can be &nbsp;<tt>0</tt>&nbsp;, &nbsp;<tt>1</tt>&nbsp; or &nbsp;<tt>2</tt>&nbsp;. If &nbsp;<tt>tex</tt>&nbsp; is &nbsp;<tt>0</tt>&nbsp;, the points &nbsp;<tt>p1,p2,p3</tt>&nbsp; are set so that the cross product &nbsp;<tt>(p2-p1)^(p3-p1)</tt>&nbsp; points towards the outside of the polyhedron.
+If &nbsp;<tt>tex</tt>&nbsp; is &nbsp;<tt>1</tt>&nbsp; or &nbsp;<tt>3</tt>&nbsp;, &nbsp;<tt>p2</tt>&nbsp; and &nbsp;<tt>p3</tt>&nbsp; may be exchanged to reflect the texture mapping, i.e. &nbsp;<tt>p1</tt>&nbsp; maps to texture coordinates (0,0), &nbsp;<tt>p2</tt>&nbsp; maps to texture coordinates (128,0), and &nbsp;<tt>p3</tt>&nbsp; maps to (0,128).
+If &nbsp;<tt>tex</tt>&nbsp; is &nbsp;<tt>2</tt>&nbsp;, the points are moved to reflect the real texture size (if it can be loaded; otherwise a 64x64 texture is assumed) and so that they lie near the center of the face. &nbsp;<tt>texsrc</tt>&nbsp; tells where to load the texture from (see &nbsp;<tt>quarkx.loadtexture</tt>&nbsp;).
+</td></tr>
+</p><p><tr><td class="doccode">
+setthreepoints((p1,p2,p3), tex)<br>
+setthreepoints((p1,p2,p3), 2, texsrc)
+</td><td>
+Sets the three points defining the plane that contains the face. The position of the points also determines how the texture is mapped on the face. The second argument &nbsp;<tt>tex</tt>&nbsp; and the optional third argument &nbsp;<tt>texsrc</tt>&nbsp; are the same as for the method &nbsp;<tt>threepoints</tt>&nbsp; above.
+<br>
+&nbsp;<tt>setthreepoints</tt>&nbsp; must not be called with &nbsp;<tt>tex&gt;=2</tt>&nbsp; to change the plane containing the face, but only to move the texture on the face. This is the difference between &nbsp;<tt>tex==1</tt>&nbsp; and &nbsp;<tt>tex==3</tt>&nbsp;.
+</td></tr>
+</p><p><tr><td class="doccode">
+axisbase()
+</td><td>
+returns normalized vectors in the plane paralell to the face, the first
+one horizontal (makes nice coordinate system for positioning textures, etc.)
+</td></tr>
+</p><p><tr><td class="doccode">
+distortion(newnormal, fixpt)
+</td><td>
+Distort the face (actually it just rotates it) so that &nbsp;<tt>normal</tt>&nbsp; becomes &nbsp;<tt>newnormal</tt>&nbsp;. The rotation is done around the fixed point &nbsp;<tt>fixpt</tt>&nbsp;.
+</td></tr>
+</p><p><tr><td class="doccode">
+broken
+</td><td>
+&nbsp;<tt>True</tt>&nbsp; or &nbsp;<tt>False</tt>&nbsp; depending on whether the face is broken or not.
+</td></tr>
+</p><p><tr><td class="doccode">
+swapsides()
+</td><td>
+Exchanges the inner and outer sides of the face (&nbsp;<tt>normal = -normal</tt>&nbsp;).
+</td></tr>
+</p><p><tr><td class="doccode">
+extrudeprism(obj)
+</td><td>
+Returns a list of faces that make an infinite prism over the given face. &nbsp;<tt>obj</tt>&nbsp; has the same meaning as in the &nbsp;<tt>verticesof</tt>&nbsp; method.
+</td></tr>
+</p><p></table>
+</p>
+  </td></tr></table>
+  <br>
+
+<a name="attributesduplicator"></a>
+  <table width="100%" border=0 cellspacing=0>
+    <tr class="headline">
+      <td>
+        <p class="item">&nbsp;Attributes of Internal objects of class "Duplicator"</p>
+      </td>
+      <td align=right>
+        <font size=-2>Armin Rigo&nbsp;-&nbsp;15 Feb 2001</font>
+      </td>
+      <td width="1%" align=right nowrap>
+        &nbsp;&nbsp;[&nbsp;<a href="#__top__">Top</a>&nbsp;]&nbsp;
+      </td>
+    </tr>
+  </table>
+  <table border=0 width="100%" cellspacing=10><tr><td>
+<p>Here is the additionnal attribute of Internal objects with &quot;&nbsp;<tt>Duplicator</tt>&nbsp;&quot; in their class tuple.
+</p><p><table border=1 cellspacing=0 cellpadding=4>
+</p><p><tr><td class="doccode">
+images
+</td><td>
+List of all images built by the Duplicator.
+</td></tr>
+</p><p></table>
+</p>
+  </td></tr></table>
+  <br>
+
+<a name="attributestreemapbrush"></a>
+  <table width="100%" border=0 cellspacing=0>
+    <tr class="headline">
+      <td>
+        <p class="item">&nbsp;Attributes of Internal objects of class "TreeMapBrush"</p>
+      </td>
+      <td align=right>
+        <font size=-2>Armin Rigo&nbsp;-&nbsp;15 Feb 2001</font>
+      </td>
+      <td width="1%" align=right nowrap>
+        &nbsp;&nbsp;[&nbsp;<a href="#__top__">Top</a>&nbsp;]&nbsp;
+      </td>
+    </tr>
+  </table>
+  <table border=0 width="100%" cellspacing=10><tr><td>
+<p>TreeMapBrush objects are all Quake's &quot;Brush entities&quot;, that is, all entities with associated brushes. The top-level object
+worldspawn is a TreeMapBrush, and so are all doors, plats, etc. These objects have three additionnal read-only attributes.
+</p><p><table border=1 cellspacing=0 cellpadding=4>
+</p><p><tr><td class="doccode">
+listpolyhedrons
+</td><td>
+List of all polyhedrons within this brush entity. Operations of Diggers, negative polyhedrons, and Duplicators are computed, so the returned polyhedrons are not necessarily all found in the map tree. Polyhedrons from sub-brush-entities are not included, that is, if you apply listpolyhedrons to worldspawn, you will not get the polyhedrons from doors, plats, etc. listpolyhedron does exactly the same work as QuArK does when it should write the .MAP file section corresponding to a brush entity. This function returns polyhedrons with wrong texture positionning in the case of Quake 2 rotating objects; use Q2offset below.
+</td></tr>
+</p><p><tr><td class="doccode">
+listentities
+</td><td>
+List of all entities and brush entities within this brush entity, including the ones created by Duplicators, if any, and including the given brush entity itself.
+</td></tr>
+</p><p><tr><td class="doccode">
+listbeziers
+</td><td>
+List of all bezier patches within this brush entity, including the ones created by Duplicators, if any.
+</td></tr>
+</p><p><tr><td class="doccode">
+Q2offset
+</td><td>
+Relevant only in Quake 2 mode, and if the given entity is not worldspawn. Returns the texture offset computed from the &quot;origin&quot; brush in the entity, as with rotating doors. (Not implemented yet, ask me if you need this)
+</td></tr>
+</p><p></table>
+</p>
+  </td></tr></table>
+  <br>
+
+<a name="attributesbezier"></a>
+  <table width="100%" border=0 cellspacing=0>
+    <tr class="headline">
+      <td>
+        <p class="item">&nbsp;Attributes of Internal objects of class "Bezier"</p>
+      </td>
+      <td align=right>
+        <font size=-2>Armin Rigo&nbsp;-&nbsp;15 Feb 2001</font>
+      </td>
+      <td width="1%" align=right nowrap>
+        &nbsp;&nbsp;[&nbsp;<a href="#__top__">Top</a>&nbsp;]&nbsp;
+      </td>
+    </tr>
+  </table>
+  <table border=0 width="100%" cellspacing=10><tr><td>
+<p>These objects are Bezier patches (for Quake 3). They can actually represent any &quot;quilt&quot; of &nbsp;<tt>m</tt>&nbsp; times
+&nbsp;<tt>n</tt>&nbsp; joined quadratic Bezier patches, where &nbsp;<tt>m</tt>&nbsp; or
+&nbsp;<tt>n</tt>&nbsp; can be zero (for Bezier lines).
+</p><p>For more information about Bezier patches see <a href="src.pas.bezier.html">'Bezier.pas'</a>.
+</p><p><table border=1 cellspacing=0 cellpadding=4>
+</p><p><tr><td class="doccode">
+cp
+</td><td>
+This read/write attribute lists all control points of the Bezier face. It is a tuple of tuples of 5D vectors, making a rectangular array of control points. Both dimensions of the rectangle are odd numbers. When writing to this attribute, the following rules apply: the tuples can be replaced by lists, and the vectors can be 3D only (in which case the old texture coordinates are not modified).
+</td></tr>
+</p><p><tr><td class="doccode">
+texturename
+</td><td>
+The name of the texture.
+</td></tr>
+</p><p></table>
+</p>
+  </td></tr></table>
+  <br>
+
+<a name="qmacro_py"></a>
+  <table width="100%" border=0 cellspacing=0>
+    <tr class="headline">
+      <td>
+        <p class="item">&nbsp;Macros expected by QuArK in the module qmacro.py</p>
+      </td>
+      <td align=right>
+        <font size=-2>Armin Rigo&nbsp;-&nbsp;11 Dec 2008</font>
+      </td>
+      <td width="1%" align=right nowrap>
+        &nbsp;&nbsp;[&nbsp;<a href="#__top__">Top</a>&nbsp;]&nbsp;
+      </td>
+    </tr>
+  </table>
+  <table border=0 width="100%" cellspacing=10><tr><td>
+<p><table border=1 cellspacing=0 cellpadding=4>
+</p><p><tr><td class="doccode">
+MACRO_displaymap(self)
+</td><td>
+Called by QuArK when there is a map to display. self is the map as an Internal File Object. This is not the root of the map (“ worldspawn ”). See mapeditor.py for more information.
+</td></tr>
+</p><p><tr><td class="doccode">
+MACRO_displaybsp(self)
+</td><td>
+Called by QuArK when there is a BSP file to display. self is an Internal File Object. This is not the root of the map (“ worldspawn ”). See qmacro.py for more information.
+</td></tr>
+</p><p><tr><td class="doccode">
+MACRO_displaymdl(self)
+</td><td>
+Called by QuArK when there is a Model to display. self is an Internal File Object. This is not the root of the Model.
+</td></tr>
+</p><p><tr><td class="doccode">
+MACRO_duplicator(dup)
+</td><td>
+Called by QuArK to build the images of the Duplicator dup. Must return a list of new map objects. See qduplicator.py for more information.
+</td></tr>
+</p><p><tr><td class="doccode">
+MACRO_applylinear(entity, matrix)
+</td><td>
+Called whenever a linear operation is applied on an entity or a Duplicator. This lets Python code change Specifics accordingly. For example, upon rotation, the angle Specific of entities should be modified so that the entity appears to rotate.
+</td></tr>
+</p><p><tr><td class="doccode">
+MACRO_hint(form)<br>
+MACRO_hint(form, text)
+</td><td>
+Called to set or retrive the current help text.
+</td></tr>
+</p><p><tr><td class="doccode">
+MACRO_buildmaps(maps, mode, extracted [,cfgfile[,defaultbsp]])
+</td><td>
+Called to build maps and run Quake. maps is a list of Internal File Objects, each as the parameter self of MACRO_displaymap. mode is an integer describing the type of build required, as an index in the list quarkx.buildmodes. extracted is the list of all files already extracted: maps that would produce .BSP files with the corresponding names need not be rebuilt. cfg is the content of the configuration file to produce. The last parameter defaultbsp is the name of the first bsp found, if before a map. The last two parameters may be omitted.
+</td></tr>
+</p><p><tr><td class="doccode">
+MACRO_helpmenu(text)
+</td><td>
+Called when the user selects an item in the '?' menu. text is the string describing this item.
+</td></tr>
+</p><p><tr><td class="doccode">
+externaledit(obj)
+</td><td>
+A special quarkx function call allowing any (obj) object, such as text or a texture image, to be passed to it causing that object to be opened in an external editor, and would be used like this:
+<div class="doccode"><pre>
+    obj = quarkx.newfileobj(&quot;temp.txt&quot;)
+    obj['Data'] = editor.Root.currentcomponent.dictspec['mesh_shader']
+    quarkx.externaledit(obj)
+</pre></div>
+This can be used in conjunction with <a href="adv.intro.html#typ">a form button of Typ &quot;P&quot;</a>
+which uses its <b>Macro = &quot;the macro name&quot;</b> to call the <b>def macro_the macro name(btn)</b> that contains the
+<b>quarkx.externaledit(obj)</b> function call. This def of the macro is then registered with the quarkpy\qmacro.py
+file attaching itself to the other macros in that file, that code looks like this:
+<div class="doccode"><pre>
+quarkpy.qmacro.MACRO_opentexteditor = macro_opentexteditor
+</pre></div>
+For the complete code of the above examples see the plugins\ie_md5_import.py file.
+</td></tr>
+</p><p></table>
+</p>
+  </td></tr></table>
+  <br>
+
+<a name="3dvector"></a>
+  <table width="100%" border=0 cellspacing=0>
+    <tr class="headline">
+      <td>
+        <p class="item">&nbsp;3D Vector objects</p>
+      </td>
+      <td align=right>
+        <font size=-2>Armin Rigo&nbsp;-&nbsp;09 Jul 2012</font>
+      </td>
+      <td width="1%" align=right nowrap>
+        &nbsp;&nbsp;[&nbsp;<a href="#__top__">Top</a>&nbsp;]&nbsp;
+      </td>
+    </tr>
+  </table>
+  <table border=0 width="100%" cellspacing=10><tr><td>
+<p>3D Vector Objects are created with the function &nbsp;<tt>quarkx.vect</tt>&nbsp;. Vectors are immutable in the Python sense. Vector Objects usually
+represent 3D points or 3D vectors, but in some cases they are projections on a map view. See the second table below for the
+additionnal attributes that apply to projected vectors only. All vectors have a few attributes you can read, and you can use
+the arithmetic operations described below:
+</p><p><table border=1 cellspacing=0 cellpadding=4>
+</p><p><tr><td class="doccode">
+v+w<br>
+v-w<br>
+-v
+</td><td>
+Sum, difference, negation of vectors
+</td></tr>
+</p><p><tr><td class="doccode">
+v*float<br>
+float*v<br>
+v/float
+</td><td>
+Multiplication or division of a vector by a float
+</td></tr>
+</p><p><tr><td class="doccode">
+v*w
+</td><td>
+Dot product
+</td></tr>
+</p><p><tr><td class="doccode">
+v^w
+</td><td>
+Cross product
+</td></tr>
+</p><p><tr><td class="doccode">
+abs(v)
+</td><td>
+Norm (length) of a vector
+</td></tr>
+</p><p><tr><td class="doccode">
+boolean value
+</td><td>
+A vector is considered &nbsp;<tt>False</tt>&nbsp; if it is zero or almost zero, to accomodate for small computation
+errors.
+</td></tr>
+</p><p><tr><td class="doccode">
+str(v)
+</td><td>
+String representation. &nbsp;<tt>quarkx.vect(string)</tt>&nbsp; is the inverse operation.
+</td></tr>
+</p><p><tr><td class="doccode">
+v.copy
+</td><td>
+A copy of the vector (note: no &quot;&nbsp;<tt>()</tt>&nbsp;&quot;). Probably not useful, as vectors are immutable anyway.
+</td></tr>
+</p><p><tr><td class="doccode">
+v.normalized
+</td><td>
+A normalized copy of length 1 of the vector.
+</td></tr>
+</p><p><tr><td class="doccode">
+v.tuple
+</td><td>
+A tuple &nbsp;<tt>(x,y,z)</tt>&nbsp; with the vector coordinates.
+</td></tr>
+</p><p><tr><td class="doccode">
+v.x<br>
+v.y<br>
+v.z
+</td><td>
+The individual coordinates.
+</td></tr>
+</p><p></table>
+</p><p>Note: do not compare two vectors with &quot;&nbsp;<tt>v=w</tt>&nbsp;&quot;! Instead, make their difference and check if the
+result is &nbsp;<tt>True</tt>&nbsp; or &nbsp;<tt>False</tt>&nbsp; with a boolean operation.
+</p><p>About projected vectors: their &nbsp;<tt>x</tt>&nbsp; and &nbsp;<tt>y</tt>&nbsp; coordinates are pixels in the
+window, and the &nbsp;<tt>z</tt>&nbsp; coordinate represents the depth. Depending on the projection type, flat or
+perspective, the &nbsp;<tt>z</tt>&nbsp; coordinate has various meanings. You cannot tell which point is nearer by
+comparing their &nbsp;<tt>z</tt>&nbsp; values; instead, use the compare operators on the vectors themselves:
+</p><p><table border=1 cellspacing=0 cellpadding=4>
+</p><p><tr><td class="doccode">
+v&lt;w<br>
+v=w<br>
+v&gt;w
+</td><td>
+Compares the depth of vectors. &nbsp;<tt>v&lt;w</tt>&nbsp; if &nbsp;<tt>v</tt>&nbsp; is nearer than &nbsp;<tt>w</tt>&nbsp;.
+</td></tr>
+</p><p><tr><td class="doccode">
+v.visible
+</td><td>
+&nbsp;<tt>1</tt>&nbsp; or &nbsp;<tt>0</tt>&nbsp; depending on whether the original 3D point was in a visible screen region or not. It is &nbsp;<tt>0</tt>&nbsp; if, projected from a perspective view, the point was behind the camera. In this case, <b>don’t use</b> the values &nbsp;<tt>v.x</tt>&nbsp; and &nbsp;<tt>v.y</tt>&nbsp; to draw something! You would draw it somewhere in the middle of the window, where there is actually nothing. &nbsp;<tt>v.visible</tt>&nbsp; is &nbsp;<tt>-1</tt>&nbsp; if v is not a projected point.
+</td></tr>
+</p><p><tr><td class="doccode">
+v.offscreen
+</td><td>
+&nbsp;<tt>0</tt>&nbsp; if the point is really on-screen, and neither too far or too near. &nbsp;<tt>offscreen</tt>&nbsp; is actually a combination of flags that tell whether the point is too much to the left, too far, and so on.
+</td></tr>
+</p><p></table>
+</p><p>The control points of Bezier patches use an extension of the 3D vectors: 5D vectors. These vectors have two additionnal
+coordinates, representing the texture coordinates. 5D vectors have the same Python type as 3D vectors, and all operations you
+can do with 3D vectors can be done with 5D vectors too; here is the new stuff:
+</p><p><table border=1 cellspacing=0 cellpadding=4>
+</p><p><tr><td class="doccode">
+v+w<br>
+v-w<br>
+v*float<br>
+float*v<br>
+v/float
+</td><td>
+These operations apply on all 5 coordinates. Note that adding or subtracting a 3D and a 5D vector together will produce a 5D vector as expected.
+</td></tr>
+</p><p><tr><td class="doccode">
+v.tex_s<br>
+v.tex_t
+</td><td>
+The two additional coordinates of 5D vectors.
+</td></tr>
+</p><p><tr><td class="doccode">
+v.tex
+</td><td>
+The tuple &nbsp;<tt>(v.tex_s, v.tex_t)</tt>&nbsp;.
+</td></tr>
+</p><p></table>
+</p>
+  </td></tr></table>
+  <br>
+
+<a name="matrix"></a>
+  <table width="100%" border=0 cellspacing=0>
+    <tr class="headline">
+      <td>
+        <p class="item">&nbsp;Matrix objects</p>
+      </td>
+      <td align=right>
+        <font size=-2>Armin Rigo&nbsp;-&nbsp;09 Jul 2012</font>
+      </td>
+      <td width="1%" align=right nowrap>
+        &nbsp;&nbsp;[&nbsp;<a href="#__top__">Top</a>&nbsp;]&nbsp;
+      </td>
+    </tr>
+  </table>
+  <table border=0 width="100%" cellspacing=10><tr><td>
+<p>3x3 matrices are used to represent linear mappings. Use quarkx.matrix to create matrices. They are not immutable objects,
+because you can change values in individual cases, but in general they should be considered as immutable.
+</p><p><table border=1 cellspacing=0 cellpadding=4>
+</p><p><tr><td class="doccode">
+m+n<br>
+m-n<br>
+-m
+</td><td>
+Sum, difference, or negation of matrices
+</td></tr>
+</p><p><tr><td class="doccode">
+m*n
+</td><td>
+Matrix product
+</td></tr>
+</p><p><tr><td class="doccode">
+m*v
+</td><td>
+Product of a matrix and a vector
+</td></tr>
+</p><p><tr><td class="doccode">
+float*m<br>
+m*float<br>
+m/float
+</td><td>
+Product of a matrix and a float, or division of a matrix by a float
+</td></tr>
+</p><p><tr><td class="doccode">
+m/n
+</td><td>
+Product of m and the inverse of n
+</td></tr>
+</p><p><tr><td class="doccode">
+float/m
+</td><td>
+Product of a float and the inverse of n
+</td></tr>
+</p><p><tr><td class="doccode">
+~m
+</td><td>
+Inverted matrix (1/m)
+</td></tr>
+</p><p><tr><td class="doccode">
+abs(m)
+</td><td>
+Det of a matrix
+</td></tr>
+</p><p><tr><td class="doccode">
+boolean value
+</td><td>
+False if zero or almost zero
+</td></tr>
+</p><p><tr><td class="doccode">
+m[i,j]
+</td><td>
+The value (i,j) of the matrix, where i and j are in the range 1 to 3.
+</td></tr>
+</p><p><tr><td class="doccode">
+str(m)
+</td><td>
+String representation. quarkx.matrix(string) is the inverse operation.
+</td></tr>
+</p><p><tr><td class="doccode">
+m.copy
+</td><td>
+A copy of the matrix (note: no &quot;&nbsp;<tt>()</tt>&nbsp;&quot;)
+</td></tr>
+</p><p><tr><td class="doccode">
+m.cols
+</td><td>
+A tuple of three vectors whose value are the three columns of the matrix
+</td></tr>
+</p><p><tr><td class="doccode">
+m.transposed
+</td><td>
+copy of m, transposed (rows<->columns))
+</td></tr>
+</p><p><tr><td class="doccode">
+m.tuple
+</td><td>
+A tuple of three tuples of three values each: all nine values, line-by-line
+</td></tr>
+</p><p></table>
+</p>
+  </td></tr></table>
+  <br>
+
+<a name="moduleundo"></a>
+  <table width="100%" border=0 cellspacing=0>
+    <tr class="headline">
+      <td>
+        <p class="item">&nbsp;The undo module</p>
+      </td>
+      <td align=right>
+        <font size=-2>Armin Rigo&nbsp;-&nbsp;21 Dec 2007</font>
+      </td>
+      <td width="1%" align=right nowrap>
+        &nbsp;&nbsp;[&nbsp;<a href="#__top__">Top</a>&nbsp;]&nbsp;
+      </td>
+    </tr>
+  </table>
+  <table border=0 width="100%" cellspacing=10><tr><td>
+<p>As a general rule, you must never directly modify map objects. This would prevent the user from undoing his actions. Instead,
+when you have changes to make, you must call quarkx.action() which returns a module object where you will find the functions
+described in the next table. Duplicate the objects you want to change using their copy() method, make changes in the copies,
+and use the following functions to give the new objects to QuArK’s undo mechanism.
+</p><p>To finalize the undo call and action you must use the <a href="glossary.html#u">undo.ok(</a>base, text<a href="glossary.html#)">)</a> call. The <a href="glossary.html#b">base</a> is the main
+object such as <a href="glossary.html#e">editor.Root</a> and <a href="glossary.html#t">text</a> is the string text message that will be posted to the editor's
+<a href="glossary.html#u">Undo / Redo</a> list. One option does exist for this <a href="glossary.html#o">ok</a> call for the <a href="glossary.html#t">text</a>. In rare cases, the ability of the undo module to activate code
+that other functions do not, such as <a href="glossary.html#i">invlaidateallviews</a>, the undo function can be called as described and finalized
+with its <a href="glossary.html#t">text</a> argument like this <a href="glossary.html#u">undo.ok(</a>base, <a href="glossary.html#"">"")</a> giving no text within the two double quotes.
+This will still allow the acceptance of the undo action but will <b>NOT</b> post anything to the editor's <a href="glossary.html#u">Undo / Redo</a> list.
+</p><p><table border=1 cellspacing=0 cellpadding=4>
+</p><p><tr><td class="doccode">
+put(parent, new)<br>
+put(parent, new, insertbefore)
+</td><td>
+Operation that puts the new object into the group parent. It is inserted at the end of the subitems list, unless insertbefore is specified. insertbefore must be an existing subitem of parent.
+</td></tr>
+</p><p><tr><td class="doccode">
+exchange(old, new)
+</td><td>
+Operation that replaces the old object with the new one. If new is None, the old object is simply deleted.
+</td></tr>
+</p><p><tr><td class="doccode">
+setspec(obj, spec, arg)<br>
+setspec(obj, spec, arg, position)
+</td><td>
+Operation that sets a Specific/Arg pair in the object obj. spec is a string, and arg can be a string, a tuple of floats, or an integer, as the command obj[spec]=arg would do. If position is specified, it controls the position relative to other Specifics.
+</td></tr>
+</p><p><tr><td class="doccode">
+rename(obj, name)
+</td><td>
+Operation that changes the shortname of an object.
+</td></tr>
+</p><p><tr><td class="doccode">
+move(obj, target)<br>
+move(obj, target, insertbefore)
+</td><td>
+Operation that moves the object obj into the group target, inserting it before the item insertbefore. Don’t use this to move objects outside the tree view they belong to, or even between roots of this tree view (tree view with multiple roots may be found in toolboxes, for example).
+</td></tr>
+</p><p><tr><td class="doccode">
+end(root, text)
+</td><td>
+Operations are queued and applied only when you call this function. root is any object belonging to the tree view where changes where made (usually, you will pass the root, hence the name of the parameter). text is a short string describing the action. This string is displayed in the Edit menu as well as in the Undo/Redo window. Once you called end, you cannot continue to use other functions of the module.
+</td></tr>
+</p><p><tr><td class="doccode">
+cancel()
+</td><td>
+Cancels all operations. You don’t really have to call this if you choose to cancel the action; it simply lets QuArK free associated memory immediately instead of when the next call to quarkx.action is made.
+</td></tr>
+</p><p></table>
+</p>
+  </td></tr></table>
+  <br>
+
+<a name="moduleprogressbar"></a>
+  <table width="100%" border=0 cellspacing=0>
+    <tr class="headline">
+      <td>
+        <p class="item">&nbsp;The progressbar module</p>
+      </td>
+      <td align=right>
+        <font size=-2>Armin Rigo&nbsp;-&nbsp;15 Feb 2001</font>
+      </td>
+      <td width="1%" align=right nowrap>
+        &nbsp;&nbsp;[&nbsp;<a href="#__top__">Top</a>&nbsp;]&nbsp;
+      </td>
+    </tr>
+  </table>
+  <table border=0 width="100%" cellspacing=10><tr><td>
+<p>You create a progress bar by calling quarkx.progressbar(txt,count), which returns a copy of the module described in the
+following table.
+</p><p><table border=1 cellspacing=0 cellpadding=4>
+</p><p><tr><td class="doccode">
+progress()
+</td><td>
+Makes the bar go one step forward. When you called this function count time, the bar is at 100%. If the user clicked on the “ cancel ” button, progress() will raise an exception quarkx.aborted.
+</td></tr>
+</p><p><tr><td class="doccode">
+close()
+</td><td>
+Closes the progressbar module. This is very important! You should always use try...finally to make sure that close() is called.
+</td></tr>
+</p><p><tr><td class="doccode">
+count()
+</td><td>
+Returns the value of count given to quarkx.progressbar.
+</td></tr>
+</p><p><tr><td class="doccode">
+changecount(new)
+</td><td>
+Changes the value of count. Do this only if you really can’t compute the exact value at the beginning, because calling changecount can make the bar jump forward or backward!
+</td></tr>
+</p><p></table>
+</p>
+  </td></tr></table>
+  <br>
+
+<a name="builtinprocess"></a>
+  <table width="100%" border=0 cellspacing=0>
+    <tr class="headline">
+      <td>
+        <p class="item">&nbsp;Built-in process objects</p>
+      </td>
+      <td align=right>
+        <font size=-2>Armin Rigo&nbsp;-&nbsp;09 Jul 2012</font>
+      </td>
+      <td width="1%" align=right nowrap>
+        &nbsp;&nbsp;[&nbsp;<a href="#__top__">Top</a>&nbsp;]&nbsp;
+      </td>
+    </tr>
+  </table>
+  <table border=0 width="100%" cellspacing=10><tr><td>
+<p>A process object lets you know the state of a program executed by &nbsp;<tt>quarkx.runprogram</tt>&nbsp;. It has the following attributes:
+</p><p><table border=1 cellspacing=0 cellpadding=4>
+</p><p><tr><td class="doccode">
+exitcode
+</td><td>
+If the program is still running, exitcode is None; otherwise, it is the program’s exit code (as checked with MS-DOS’ &quot;if errorvalue xx&quot; command).
+</td></tr>
+</p><p><tr><td class="doccode">
+onexit(proc)
+</td><td>
+Set a callback function that is called when the program terminates, or immediately if the program is already terminated. If several callbacks are set, they will all be called, but in random order. The callbacks take a single argument, the process object itself.
+</td></tr>
+</p><p></table>
+</p><p>Note that this object might become obsolete in a future version of QuArK. Don’t rely on it. The stdout and stderr mechanism can
+be used to know when console processes terminate.
+</p>
+  </td></tr></table>
+  <br>
+
+<a name="imagelist"></a>
+  <table width="100%" border=0 cellspacing=0>
+    <tr class="headline">
+      <td>
+        <p class="item">&nbsp;Image List objects</p>
+      </td>
+      <td align=right>
+        <font size=-2>Armin Rigo&nbsp;-&nbsp;15 Feb 2001</font>
+      </td>
+      <td width="1%" align=right nowrap>
+        &nbsp;&nbsp;[&nbsp;<a href="#__top__">Top</a>&nbsp;]&nbsp;
+      </td>
+    </tr>
+  </table>
+  <table border=0 width="100%" cellspacing=10><tr><td>
+<p>Image Lists are built with the function quarkx.loadimages. They are similar to immutable sequences of icons, but only the
+following operations are defined on them:
+</p><p><table border=1 cellspacing=0 cellpadding=4>
+</p><p><tr><td class="doccode">
+len(imagelist)
+</td><td>
+The length (how many images the list contains)
+</td></tr>
+</p><p><tr><td class="doccode">
+imagelist[i]
+</td><td>
+The ith image, starting at 0
+</td></tr>
+</p><p></table>
+</p><p>Do not use Image List objects in places where a sequence could normally be used, e.g. in for. Instead of
+<div class="doccode"><pre>
+for icon in imagelist:
+  ...
+</pre></div>
+write
+<div class="doccode"><pre>
+for i in range(0, len(imagelist)):
+  icon = imagelist[i]
+  ...
+</pre></div>
+</p>
+  </td></tr></table>
+  <br>
+
+<a name="icon"></a>
+  <table width="100%" border=0 cellspacing=0>
+    <tr class="headline">
+      <td>
+        <p class="item">&nbsp;Icon objects</p>
+      </td>
+      <td align=right>
+        <font size=-2>Armin Rigo&nbsp;-&nbsp;15 Feb 2001</font>
+      </td>
+      <td width="1%" align=right nowrap>
+        &nbsp;&nbsp;[&nbsp;<a href="#__top__">Top</a>&nbsp;]&nbsp;
+      </td>
+    </tr>
+  </table>
+  <table border=0 width="100%" cellspacing=10><tr><td>
+<p>Icon Objects are the individual items of Image Lists.
+</p><p><table border=1 cellspacing=0 cellpadding=4>
+</p><p><tr><td class="doccode">
+icon.size
+</td><td>
+The (x,y) size of the icon. This is the same for all icons of an image list.
+</td></tr>
+</p><p><tr><td class="doccode">
+icon.disabledimage
+</td><td>
+The disabled (grayed out) version of the icon, returned as another icon.
+</td></tr>
+</p><p></table>
+</p>
+  </td></tr></table>
+  <br>
+
+<a name="windows"></a>
+  <table width="100%" border=0 cellspacing=0>
+    <tr class="headline">
+      <td>
+        <p class="item">&nbsp;Windows (forms)</p>
+      </td>
+      <td align=right>
+        <font size=-2>Armin Rigo&nbsp;-&nbsp;15 Feb 2001</font>
+      </td>
+      <td width="1%" align=right nowrap>
+        &nbsp;&nbsp;[&nbsp;<a href="#__top__">Top</a>&nbsp;]&nbsp;
+      </td>
+    </tr>
+  </table>
+  <table border=0 width="100%" cellspacing=10><tr><td>
+<p>Window Objects (commonly called “ forms ”) are the Python objects with which you can control a window’s aspect. In the current
+versions, only the map and model editors are Window objects; other windows cannot be accessed from Python. Here are the
+attributes of Window objects.
+</p><p><table border=1 cellspacing=0 cellpadding=4>
+</p><p><tr><td class="doccode">
+begincolor<br>
+endcolor
+</td><td>
+The colors used for the gradient caption. begincolor is the color at the left and endcolor is the color at the right. Please follow the convention that begincolor represents the window type (blue for editors, black for toolboxes,...) and endcolor represents the file type (black for maps,...)
+</td></tr>
+</p><p><tr><td class="doccode">
+fileobject
+</td><td>
+The Internal File Object displayed in this window
+</td></tr>
+</p><p><tr><td class="doccode">
+mainpanel
+</td><td>
+The main panel. See below for more information on Panel objects.
+</td></tr>
+</p><p><tr><td class="doccode">
+windowrect
+</td><td>
+The window position (left,top,right,bottom) in screen coordinates
+</td></tr>
+</p><p><tr><td class="doccode">
+windowstate
+</td><td>
+Window state: maximized, minimized, or normal. See qutils.py.
+</td></tr>
+</p><p><tr><td class="doccode">
+info
+</td><td>
+Any data for Python code use
+</td></tr>
+</p><p><tr><td class="doccode">
+menubar<br>
+shortcuts<br>
+numshortcuts
+</td><td>
+The menu bar and the key shortcuts. See Menus below.
+</td></tr>
+</p><p><tr><td class="doccode">
+focus
+</td><td>
+The control currently focused inside this window, if any. (read-only, ask me if you need it to be writeable)
+</td></tr>
+</p><p><tr><td class="doccode">
+macro(cmd)
+</td><td>
+Fires a macro command. Returns False if the macro failed or True otherwise. See the file TECHINFO.TXT in the tech info package for a list of macros. Note that macros are more or less obsolete now that QuArK supports Python.
+</td></tr>
+</p><p><tr><td class="doccode">
+newtoolbar(caption, buttons, canclose)
+</td><td>
+Makes a new floating tool bar. See below for more information on Toolbar objects. All parameters are optional; caption defaults to &quot;tool bar&quot; and canclose defaults to False. If canclose is True, when the toolbar is not docked (padded along a border of the window), it has a close box that hides it. The user should have a way to make the toolbar reappear, for example from the menus.
+</td></tr>
+</p><p><tr><td class="doccode">
+toolbars()
+</td><td>
+Returns a list of all toolbars in this window.
+</td></tr>
+</p><p><tr><td class="doccode">
+allbuttons()
+</td><td>
+Returns a list of all buttons used in this window, either on toolbars or on button panels.
+</td></tr>
+</p><p><tr><td class="doccode">
+newfloating(flags, caption)
+</td><td>
+Makes a new floating window attached to this window. See below for more infos. Parameters are optional: flags default to 0 and caption defaults to &quot;&quot;. See qutils.FWF_XXX for flags values.
+</td></tr>
+</p><p><tr><td class="doccode">
+floatings()
+</td><td>
+Returns a list of floating windows attached to this window.
+</td></tr>
+</p><p><tr><td class="doccode">
+choosecolor(color)
+</td><td>
+Displays a color picking dialog box. color is the default color. Returns the choosen color or None if the user cancelled the dialog box.
+</td></tr>
+</p><p></table>
+</p>
+  </td></tr></table>
+  <br>
+
+<a name="screencontrolsandpanels"></a>
+  <table width="100%" border=0 cellspacing=0>
+    <tr class="headline">
+      <td>
+        <p class="item">&nbsp;Introduction to screen controls and panels</p>
+      </td>
+      <td align=right>
+        <font size=-2>Armin Rigo&nbsp;-&nbsp;09 Jul 2012</font>
+      </td>
+      <td width="1%" align=right nowrap>
+        &nbsp;&nbsp;[&nbsp;<a href="#__top__">Top</a>&nbsp;]&nbsp;
+      </td>
+    </tr>
+  </table>
+  <table border=0 width="100%" cellspacing=10><tr><td>
+<p>Screen controls are the various units of a window design with which users interact. All screen controls - - map views, tree
+views, image displayers, data-entry forms, floating windows, etc. - - are distinct built-in object types, but they share common
+attributes. Note that toolbars are not screen controls in QuArK 5.0.c2, so they don’t have all these attributes, but this may
+change in a future version.
+</p><p>Controls are not positionned on screen by setting coordinates. They are put into panels, which are screen controls themselves.
+Panels are dummy gray rectangles that can contains other screen controls and that know how to set their position. Usually,
+panels are nested, starting from the main panel, which covers the whole window except its border, its caption, and its menu
+bar. For example, in the map editor’s Classical layout, the main panel contains three controls: the two map view and a
+left-aligned panel, which in turn contains other panels, and so on.
+</p><p>Panels are the only kind of screen controls that can contain other screen controls. Each panel knows how to align its own
+controls. There are two kinds of alignments a panel can perform: &quot; full-size sections &quot; and &quot; padded to a border &quot;. Within a
+panel, only subpanels can be padded to a border; other controls are always full-sized.
+</p><p>A panel can be divided into sections, i.e. rows and columns, like a table. By default, there is only one row and one column,
+taking up the whole panel size. For each subcontrols, you choose in which section it goes, and it takes the whole size of the
+section. Row and column size is given with a percentage of the total width or height. This keeps the same proportions when the
+window is resized. The user can manually resize the sections.
+</p><p>Panels can also contain border-padded subpanels. These subpanels are aligned so that they go along the whole left, top, right
+or bottom border. For left- and right-padded subpanels, you choose only the panel width, in pixels; for top- and bottom-padded
+subpanels, you choose only the panel height. The user can also resize these panels. The sizes are given in pixels and don’t
+change when the window is resized. Border-padded subpanels shrink the screen space allocated to sections.
+</p>
+  </td></tr></table>
+  <br>
+
+<a name="screencontrolscommonattributes"></a>
+  <table width="100%" border=0 cellspacing=0>
+    <tr class="headline">
+      <td>
+        <p class="item">&nbsp;Attributes common to all screen controls</p>
+      </td>
+      <td align=right>
+        <font size=-2>Armin Rigo&nbsp;-&nbsp;30 Aug 2008</font>
+      </td>
+      <td width="1%" align=right nowrap>
+        &nbsp;&nbsp;[&nbsp;<a href="#__top__">Top</a>&nbsp;]&nbsp;
+      </td>
+    </tr>
+  </table>
+  <table border=0 width="100%" cellspacing=10><tr><td>
+<p><table border=1 cellspacing=0 cellpadding=4>
+</p><p><tr><td class="doccode">
+owner
+</td><td>
+The Window that owns this control (read-only)
+</td></tr>
+</p><p><tr><td class="doccode">
+parent
+</td><td>
+The Panel that owns this control, or None for the main panel (read-only)
+</td></tr>
+</p><p><tr><td class="doccode">
+visible
+</td><td>
+To show or hide the control
+</td></tr>
+</p><p><tr><td class="doccode">
+section
+</td><td>
+If the parent Panel has several sections, this is the section for this control. Format: (column, row) where column and row range between 0 included and the total number of columns (resp. rows) of the parent Panel, excluded.
+</td></tr>
+</p><p><tr><td class="doccode">
+clientarea
+</td><td>
+The (x,y) size of the control (read-only). If the control has a border around it, it is excluded from this size.
+</td></tr>
+</p><p><tr><td class="doccode">
+hint
+</td><td>
+A string that pops up when the user leaves the mouse over the control
+</td></tr>
+</p><p><tr><td class="doccode">
+info
+</td><td>
+Reserved for Python code use
+</td></tr>
+</p><p><tr><td class="doccode">
+type
+</td><td>
+String describing the control type. (read-only)
+</td></tr>
+</p><p><tr><td class="doccode">
+close()
+</td><td>
+Closes (destroys) the control. You cannot use it any longer once it has been closed, much like you cannot use Python files any longer once you called their close() method.
+</td></tr>
+</p><p><tr><td class="doccode">
+show()
+</td><td>
+visible = 1
+</td></tr>
+</p><p><tr><td class="doccode">
+hide()
+</td><td>
+visible = 0
+</td></tr>
+</p><p><tr><td class="doccode">
+invalidate()
+invalidate(rebuild)
+</td><td>
+Forces a control to display itself again. For map views in textured mode, this also forces a rebuild of the scene if rebuild is present and not egal to 0. (note that this default behavior is new from QuArK 5.9.) The control is not repainted immediately.
+</td></tr>
+</p><p><tr><td class="doccode">
+invalidaterect<br>
+(ULx, ULy, LRx, LRy)
+</td><td>
+Forces a control (view area) to display (redraw) itself again within the given max. and min. rectangle area positions<br>(upper left x , upper left y , lower right x , lower right y).
+</td></tr>
+</p><p><tr><td class="doccode">
+repaint()
+</td><td>
+Repaint the control immediately.
+</td></tr>
+</p><p><tr><td class="doccode">
+update()
+</td><td>
+Immediately repaint the regions of the control that needs to be, if any.
+</td></tr>
+</p><p><tr><td class="doccode">
+popupmenu(list)
+popupmenu(list,dblclk)
+popupmenu(list,x, y)
+</td><td>
+Displays a pop-up menu with the items of the list. If x,y are specified, they give the position of the pop-up menu within the screen control. The default position is at the current mouse location. If only a second argument dblclk is specified, and is non-zero, the menu is not displayed, and its default item (if any) is clicked instead.
+</td></tr>
+</p><p><tr><td class="doccode">
+ondrop
+</td><td>
+Callback function. Called when the user drops objects on the screen control, with 5 arguments: the screen control itself, a list of objects dropped (which you should copy, not use directly), the x,y coordinates of the drop, and the source control or button. Note that the ondrop of Tree Views differs from this one. Also note that, when dropping objects onto a button, QuArK will call that button's ondrop callback instead if it has one.
+</td></tr>
+</p><p></table>
+</p>
+  </td></tr></table>
+  <br>
+
+<a name="attributespanelcontrols"></a>
+  <table width="100%" border=0 cellspacing=0>
+    <tr class="headline">
+      <td>
+        <p class="item">&nbsp;Additional attributes of Panel controls</p>
+      </td>
+      <td align=right>
+        <font size=-2>Armin Rigo&nbsp;-&nbsp;18 May 2009</font>
+      </td>
+      <td width="1%" align=right nowrap>
+        &nbsp;&nbsp;[&nbsp;<a href="#__top__">Top</a>&nbsp;]&nbsp;
+      </td>
+    </tr>
+  </table>
+  <table border=0 width="100%" cellspacing=10><tr><td>
+<p><table border=1 cellspacing=0 cellpadding=4>
+</p><p><tr><td class="doccode">
+sections
+</td><td>
+The sections: (columns, rows) where rows and columns are two tuples of floats giving the position of the separation between adjacent rows (resp. columns). For example, (0.1,0.8) means three columns, the first one between 0% and 10% of the width, the second one between 10% and 80% of the width, and the third one between 80% and 100% of the width. Be careful about tuples with a single value: when there are exactly two columns or two rows, don’t write (0.6) because Python interprets this as a float; instead, write (0.6,). The default value for one row and one column is ((),()). Use negative floats to prevent the user from resizing himself the sections.
+</td></tr>
+</p><p><tr><td class="doccode">
+size
+</td><td>
+The width or the height of the panel, in pixels, if it is border-padded.
+</td></tr>
+</p><p><tr><td class="doccode">
+align
+</td><td>
+A string giving the padding mode: &quot;left&quot;, &quot;right&quot;, &quot;top&quot;, &quot;bottom&quot;, or &quot;full&quot; if not border-padded. You can switch between the four first modes by changing this attribute.
+</td></tr>
+</p><p><tr><td class="doccode">
+controls()
+</td><td>
+Returns a list of the controls within this panel.
+</td></tr>
+</p><p><tr><td class="doccode">
+newleftpanel(size)<br>
+newleftpanel(size,resizable)
+</td><td>
+Makes and returns a new left-padded panel with width size. resizable defaults to True; if it is False, the user cannot resize the panel himself.
+</td></tr>
+</p><p><tr><td class="doccode">
+newrightpanel(..)<br>
+newtoppanel(..)<br>
+newbottompanel(..)
+</td><td>
+See newleftpanel(..).
+</td></tr>
+</p><p><tr><td class="doccode">
+newfullpanel()
+</td><td>
+Returns a new subpanel that is not border-padded.
+</td></tr>
+</p><p><tr><td class="doccode">
+newexplorer()
+</td><td>
+Returns a new Explorer control (a tree view).
+</td></tr>
+</p><p><tr><td class="doccode">
+newdataform()
+</td><td>
+Returns a new Data Form control.
+</td></tr>
+</p><p><tr><td class="doccode">
+newmapview()
+</td><td>
+Returns a new Map View control.
+</td></tr>
+</p><p><tr><td class="doccode">
+newimagectrl()<br>
+newimagectrl(icon)
+</td><td>
+Returns a new Image Displayer control. If specified, icon is the initial value of the image attribute.
+</td></tr>
+</p><p><tr><td class="doccode">
+newbtnpanel()<br>
+newbtnpanel(btns)
+</td><td>
+Returns a new Button Panel control. If specified, btns is the initial value of the buttons attribute.
+</td></tr>
+</p><p></table>
+</p>
+  </td></tr></table>
+  <br>
+
+<a name="menubarskeyboardshortcuts"></a>
+  <table width="100%" border=0 cellspacing=0>
+    <tr class="headline">
+      <td>
+        <p class="item">&nbsp;Menu bars, pop-up menus and keyboard shortcuts</p>
+      </td>
+      <td align=right>
+        <font size=-2>Armin Rigo&nbsp;-&nbsp;09 Jul 2012</font>
+      </td>
+      <td width="1%" align=right nowrap>
+        &nbsp;&nbsp;[&nbsp;<a href="#__top__">Top</a>&nbsp;]&nbsp;
+      </td>
+    </tr>
+  </table>
+  <table border=0 width="100%" cellspacing=10><tr><td>
+<p>Menus are not yet another type of built-in objects. Instead, they are completely defined with classic Python objects, and QuArK
+reads these objects’ attributes when it needs them to build the menu.
+</p><p>A menu bar or a pop-up menu is a list of one Python class instance for each item. The items need not really be class instances,
+but QuArK expects them to have a few attributes, and instances of classes are, with modules, the only kind of object you can
+give the attributes you want. &nbsp;<tt>qmenu.py</tt>&nbsp; defines two classes, one for normal menu items and one for menu items that open pop-up
+menus. I recommend to always use instances of these classes to populate your menus. Please refer to &nbsp;<tt>qmenu.py</tt>&nbsp; for more
+information about the expected attributes.
+</p><p>You set a Window’s menu bar by storing a list of instances of &nbsp;<tt>qmenu.popup</tt>&nbsp; into its menubar attribute. You can also assign
+keyboard shortcuts to menu items; however, this is not done by setting an attribute (e.g. shortcut) to the instances of the
+class &nbsp;<tt>qmenu.item</tt>&nbsp;. All shortcuts for a Window must be grouped in a dictionnary that must be assigned to the Window’s shortcuts
+attribute. The dictionnary should contain pairs &quot;shortcutkey&quot;:menuitem, where &quot;shortcutkey&quot; is a string describing the key
+(e.g. &quot;Ctrl+X&quot;) and menuitem is the item whose onclick attribute should be called. Although not required, I recommend that this
+menuitem appear somewhere in the menu bar, too. If it is the case, QuArK adds the shortcut key string to the right of the item
+in the menu. New in QuArK 5.5: a shortcut can be a number (a &quot;virtual key code&quot;) as obtained in the configuration dialog box
+(page Map, Keys). These shortcuts must be put in the attribute numshortcuts.
+</p>
+  </td></tr></table>
+  <br>
+
+<a name="callbackfunctions"></a>
+  <table width="100%" border=0 cellspacing=0>
+    <tr class="headline">
+      <td>
+        <p class="item">&nbsp;Callback functions in Python and Warning about circular references</p>
+      </td>
+      <td align=right>
+        <font size=-2>Armin Rigo&nbsp;-&nbsp;09 Jul 2012</font>
+      </td>
+      <td width="1%" align=right nowrap>
+        &nbsp;&nbsp;[&nbsp;<a href="#__top__">Top</a>&nbsp;]&nbsp;
+      </td>
+    </tr>
+  </table>
+  <table border=0 width="100%" cellspacing=10><tr><td>
+<p>At a lot of places, QuArK expects to find a callable Python object. For example, each menu item must have an attribute onclick
+that, if not &nbsp;<tt>None</tt>&nbsp;, will be called by QuArK. The arguments that the function should accept varies from case to case; for
+example, the menu item’s onclick is called with a single argument, which is the menu item itself. The call is made by
+simulating the Python command apply(onclick, args). This means that onclick doesn’t need to be a function; it can be anything
+that is valid to call with the arguments args. In the current Python code, it is often a method instead of a function: if you
+give onclick the value someobject.mymethod, that method will be called with one additionnal argument (often called self) before
+the normal ones given by QuArK: the object someobject itself.
+</p><p>This is pretty useful in all cases where the arguments given by QuArK are not enough to really know what occured. Typically,
+onclick will point to a method of the MapEditor object, so that we immediately know in which MapEditor instance we are.
+However, be careful about circular references: this technique makes a reference from the menu item’s onclick member to the
+given MapEditor instance, which in turn is likely to somehow reference the menu item through a pointer to the whole menu. In
+this kind of situation, neither the MapEditor instance nor the menu item will ever be freed from memory. This situation is
+allowed if you take care of breaking them: that’s why, when the MapEditor window is closed, a lot of its attributes are reset
+to &nbsp;<tt>None</tt>&nbsp;. This would free the menu, which in turn would let the MapEditor be freed.
+</p>
+  </td></tr></table>
+  <br>
+
+<a name="floatingtoolbars"></a>
+  <table width="100%" border=0 cellspacing=0>
+    <tr class="headline">
+      <td>
+        <p class="item">&nbsp;Floating toolbars, Toolbar panels, and Buttons</p>
+      </td>
+      <td align=right>
+        <font size=-2>Armin Rigo&nbsp;-&nbsp;09 Jul 2012</font>
+      </td>
+      <td width="1%" align=right nowrap>
+        &nbsp;&nbsp;[&nbsp;<a href="#__top__">Top</a>&nbsp;]&nbsp;
+      </td>
+    </tr>
+  </table>
+  <table border=0 width="100%" cellspacing=10><tr><td>
+<p>Floating Toolbars correspond to a built-in type. You create toolbars with the method newtoolbar of Window objects. The user can
+move Floating toolbars and either dock them (put them along the border of the window) or make them float (appear as a small
+stand-alone window). Note that Toolbars are not screen controls, as mentionned above. Here are all their attributes.
+</p><p><table border=1 cellspacing=0 cellpadding=4>
+</p><p><tr><td class="doccode">
+buttons
+</td><td>
+List of the buttons displayed on the toolbar. See below.
+</td></tr>
+</p><p><tr><td class="doccode">
+caption
+</td><td>
+Caption displayed above the buttons when the toolbar is not docked.
+</td></tr>
+</p><p><tr><td class="doccode">
+dock
+</td><td>
+Current dock position: &quot;topdock&quot;, &quot;leftdock&quot;, &quot;rightdock&quot;, &quot;bottomdock&quot;, or None. (Note: because of bug in QuArK 5.0.c2, you cannot set dock to None; instead, set it to &quot;floating&quot;.)
+</td></tr>
+</p><p><tr><td class="doccode">
+dockpos<br>
+dockrow
+</td><td>
+Position and row within the dock. (If they are several toolbars on the same dock, they can be organized in several rows.)
+</td></tr>
+</p><p><tr><td class="doccode">
+floatrect
+</td><td>
+Position of the toolbar when it is floating. (left,top,right,bottom). Changes to floatrect have no effect until the next dock=None.
+</td></tr>
+</p><p><tr><td class="doccode">
+visible
+</td><td>
+Is the toolbar visible?
+</td></tr>
+</p><p><tr><td class="doccode">
+update()
+</td><td>
+Refresh the toolbar buttons. (Was equivalent to buttons=buttons in previous versions, but now the recreation of buttons is not done immediately because it was causing some serious troubles). Required in some cases because QuArK doesn’t know, if you modify a single button, that it must update the displayed buttons. See also quarkx.update().
+</td></tr>
+</p><p><tr><td class="doccode">
+close()
+</td><td>
+Closes (destroys) the control. You cannot use it any longer once it has been closed, much like you cannot use Python files any longer once you called their close() method.
+</td></tr>
+</p><p><tr><td class="doccode">
+show()
+</td><td>
+visible = 1
+</td></tr>
+</p><p><tr><td class="doccode">
+hide()
+</td><td>
+visible = 0
+</td></tr>
+</p><p><tr><td class="doccode">
+ondrop
+</td><td>
+Same as ondrop for screen controls. (not implemented in 5.0.c4)
+</td></tr>
+</p><p></table>
+</p><p>Individual buttons are, like menu items, not built-in types, but rather instances of a standard Python class. See &nbsp;<tt>qtoolbar.py</tt>&nbsp;
+for more information.
+</p><p>Besides Floating Toolbars, buttons can also be displayed on fixed panels. Such panels are called Button Panels, and are created
+with a panel’s newbtnpanel() method. They are screen controls, with a few additionnal attributes:
+</p><p><table border=1 cellspacing=0 cellpadding=4>
+</p><p><tr><td class="doccode">
+buttons
+</td><td>
+List of the buttons displayed on the panel.
+</td></tr>
+</p><p><tr><td class="doccode">
+margins
+</td><td>
+Extra space between buttons, (x,y). Default (2,2).
+</td></tr>
+</p><p><tr><td class="doccode">
+update()
+</td><td>
+See the method update() of Floating toolbars.
+</td></tr>
+</p><p></table>
+</p><p>Button panels have additionnal formatting capabilities: by inserting special values in the list of buttons, you can create gaps
+between buttons, pad buttons to the right, or force a new button row to begin. See &nbsp;<tt>qtoolbar.py</tt>&nbsp;.
+</p>
+  </td></tr></table>
+  <br>
+
+<a name="attributesfloatingwindows"></a>
+  <table width="100%" border=0 cellspacing=0>
+    <tr class="headline">
+      <td>
+        <p class="item">&nbsp;Additionnal attributes of Floating Windows controls</p>
+      </td>
+      <td align=right>
+        <font size=-2>Armin Rigo&nbsp;-&nbsp;15 Feb 2001</font>
+      </td>
+      <td width="1%" align=right nowrap>
+        &nbsp;&nbsp;[&nbsp;<a href="#__top__">Top</a>&nbsp;]&nbsp;
+      </td>
+    </tr>
+  </table>
+  <table border=0 width="100%" cellspacing=10><tr><td>
+<p>Floating windows are created by a window’s newfloating() method. They are screen controls, and as all screen controls are, they
+are attached to their owner window. Unlike other screen controls, however, they can float anywhere on the screen and are never
+automatically aligned by a parent panel. In fact, their parent attribute is always None.
+</p><p><table border=1 cellspacing=0 cellpadding=4>
+</p><p><tr><td class="doccode">
+caption
+</td><td>
+Window caption.
+</td></tr>
+</p><p><tr><td class="doccode">
+begincolor<br>
+endcolor
+</td><td>
+The colors used for the gradient caption. See the begincolor and endcolor attributes of Window Objects for more info.
+</td></tr>
+</p><p><tr><td class="doccode">
+mainpanel
+</td><td>
+The main panel. (read-only)
+</td></tr>
+</p><p><tr><td class="doccode">
+rect
+</td><td>
+The same as clientarea, that is, the (x,y) size of the window without its border. The difference is that rect is not read-only.
+</td></tr>
+</p><p><tr><td class="doccode">
+windowrect
+</td><td>
+The position and size of the whole window, in screen coordinates. (left,top,right,bottom)
+</td></tr>
+</p><p><tr><td class="doccode">
+onmove
+</td><td>
+Callback function. Called when the window is moved or resized. Takes one parameter: the window itself.
+</td></tr>
+</p><p><tr><td class="doccode">
+onclose
+</td><td>
+Callback function. Called when the window is closed. Takes one parameter: the window itself. This is not called if the window is only hidden.
+</td></tr>
+</p><p><tr><td class="doccode">
+close()
+</td><td>
+Closes the window.
+</td></tr>
+</p><p></table>
+</p>
+  </td></tr></table>
+  <br>
+
+<a name="attributestreeview"></a>
+  <table width="100%" border=0 cellspacing=0>
+    <tr class="headline">
+      <td>
+        <p class="item">&nbsp;Additionnal attributes of Tree view controls (Explorers)</p>
+      </td>
+      <td align=right>
+        <font size=-2>Armin Rigo&nbsp;-&nbsp;15 Feb 2001</font>
+      </td>
+      <td width="1%" align=right nowrap>
+        &nbsp;&nbsp;[&nbsp;<a href="#__top__">Top</a>&nbsp;]&nbsp;
+      </td>
+    </tr>
+  </table>
+  <table border=0 width="100%" cellspacing=10><tr><td>
+<p>Tree views are created by a panel’s newexplorer() method. They are screen controls that display a hierarchical view of Internal
+QuArK Objects. Any number of objects in a tree view can be selected (they appear in blue), but only one can have the focus (a
+rectangle of dots around it). Note that if the object with the focus is in a closed group, the group itself will be displayed
+with the rectangle of dots, but the focus stays on the correct object. Objects are not considered selected themselves if they
+are into a group that is already selected; in this case, they are displayed with a blue border instead of a blue
+background.
+</p><p><table border=1 cellspacing=0 cellpadding=4>
+</p><p><tr><td class="doccode">
+focus
+</td><td>
+This is the object that has the focus. (read-write)
+</td></tr>
+</p><p><tr><td class="doccode">
+focussel
+</td><td>
+This is the same as focus, but only if this object is selected. An object can have the focus without being selected. In this case, focussel is None. (read-only)
+</td></tr>
+</p><p><tr><td class="doccode">
+sellist
+</td><td>
+List of selected objects. (read-write)
+</td></tr>
+</p><p><tr><td class="doccode">
+uniquesel
+</td><td>
+The unique selected object, if exactly one is selected. Setting uniquesel to an object will unselect all the other objects. Setting uniquesel to None will unselect everything.
+</td></tr>
+</p><p><tr><td class="doccode">
+flags
+</td><td>
+Flags. See qeditor.EF_XXX
+</td></tr>
+</p><p><tr><td class="doccode">
+onselchange
+</td><td>
+Callback function. Called whenever the list of selected items changes. Single argument: the tree view object itself.
+</td></tr>
+</p><p><tr><td class="doccode">
+onrootchange
+</td><td>
+Callback function. Called as onrootchange(treeview, old, new) when a root (top-level) object changes, in response to direct actions or undo or redo. old is the old root, and new is the root that replaces it. We can have old==new if, for example, only the name changed.
+</td></tr>
+</p><p><tr><td class="doccode">
+onmenu
+</td><td>
+A menu (list of menu items) or a callback function. This is the pop-up menu to display when the user right-click on an object. If set to a callback function (which is recommended), it is called with the tree view as single argument, and should examine the tree view’s sellist to return a menu corresponding to the currently selected objects.
+</td></tr>
+</p><p><tr><td class="doccode">
+ondrop
+</td><td>
+Callback function. Called as ondrop(treeview, newlist, text) to drop the objects given in the list newlist into the tree view. text is the description of the action, as displayed in the Undo/Redo box. If the items cannot be dropped, the function should return 0 (which makes QuArK beep); otherwise, it should return 1.
+</td></tr>
+</p><p><tr><td class="doccode">
+oninsert
+</td><td>
+Callback function. Called when the user drops objects on the tree view with the mouse to prepare the new objects for the drop. Called with two arguments: the tree view and the list of new objects. The callback function can modify the list if it wishes. It can return 0 to cancel the operation.
+</td></tr>
+</p><p><tr><td class="doccode">
+clear()
+</td><td>
+Clears the tree view contents.
+</td></tr>
+</p><p><tr><td class="doccode">
+addroot(obj)
+</td><td>
+Adds a root to the tree view contents. Tree views may have multiple roots, like in the New Items toolbox.
+</td></tr>
+</p><p><tr><td class="doccode">
+selchanged()
+</td><td>
+Informs the tree view that some of its items where selected or unselected. This is only required if you change the selection state of the objects with their own attributes, e.g. selected or togglesel(). In response to selchanged(), the tree view will repaint itself and call onselchange.
+</td></tr>
+</p><p><tr><td class="doccode">
+expand(obj)
+expand(obj,0)
+</td><td>
+Expands (resp. collapses) the group object obj.
+</td></tr>
+</p><p></table>
+</p>
+  </td></tr></table>
+  <br>
+
+<a name="attributesdataform"></a>
+  <table width="100%" border=0 cellspacing=0>
+    <tr class="headline">
+      <td>
+        <p class="item">&nbsp;Additionnal attributes of Data form controls</p>
+      </td>
+      <td align=right>
+        <font size=-2>Armin Rigo&nbsp;-&nbsp;21 Dec 2008</font>
+      </td>
+      <td width="1%" align=right nowrap>
+        &nbsp;&nbsp;[&nbsp;<a href="#__top__">Top</a>&nbsp;]&nbsp;
+      </td>
+    </tr>
+  </table>
+  <table border=0 width="100%" cellspacing=10><tr><td>
+<p>Data Forms are created by a panel’s &nbsp;<tt>newdataform()</tt>&nbsp; method. They are screen controls that display a
+list of object parameters, like on the Specific/Args page, or like all pages of the Configuration dialog box.
+</p><p><table border=1 cellspacing=0 cellpadding=4>
+</p><p><tr><td class="doccode">
+setdata(objs)<br>
+setdata(objs, formobj)
+</td><td>
+Select the object(s) whose Specifics/Args are to be displayed in the data form. &nbsp;<tt>objs</tt>&nbsp; can be either a single “ objspec ” or a list of “ objspecs ”. An “ objspec ” is either a single object or a tuple of two objects: the actual object and another one with default values. If a Specific is not found in the object, the data form displays the one from its default value. The optional argument &nbsp;<tt>formobj</tt>&nbsp; gives a &nbsp;<tt>:form</tt>&nbsp; Internal object to use.
+</td></tr>
+</p><p><tr><td class="doccode">
+allowedit
+</td><td>
+Allow editing of the Specific themselves, or only the Args?
+</td></tr>
+</p><p><tr><td class="doccode">
+addremaining
+</td><td>
+If the object has more Specifics than given in the &nbsp;<tt>formobj</tt>&nbsp;, should they be also displayed?
+</td></tr>
+</p><p><tr><td class="doccode">
+actionchanging<br>
+actiondeleting<br>
+actionrenaming
+</td><td>
+Texts for the actions of editing or deleting Specifics/Args, or renaming the object, resp. Note: in QuArK 5.0.c2, these are not strings, but <b>numbers</b> for the dictionnary &nbsp;<tt>qdictionnary.Strings</tt>&nbsp;.
+</td></tr>
+</p><p><tr><td class="doccode">
+bluehint
+</td><td>
+Should hints be displayed on a blue background, and stay longer than normal hints? (for entities Specifics/Args only)
+</td></tr>
+</p><p><tr><td class="doccode">
+editnames
+</td><td>
+If this string is not empty, the user can edit the name of the object, which is usually not a Specific from QuArK’s point of view. &nbsp;<tt>editnames</tt>&nbsp; gives the text to display as if it where the Specific, e.g. &quot;&nbsp;<tt>classname</tt>&nbsp;&quot;.
+</td></tr>
+</p><p><tr><td class="doccode">
+flags
+</td><td>
+Flags. See &nbsp;<tt>qeditor.DF_XXX</tt>&nbsp;
+</td></tr>
+</p><p><tr><td class="doccode">
+form
+</td><td>
+The last value given to &nbsp;<tt>formobj</tt>&nbsp; in &nbsp;<tt>setdata</tt>&nbsp;. (read-only)
+</td></tr>
+</p><p><tr><td class="doccode">
+linkedobjects
+</td><td>
+List of the objects given in the last call to &nbsp;<tt>setdata</tt>&nbsp;. Does not include the objects giving the default values.
+</td></tr>
+</p><p><tr><td class="doccode">
+noheader
+</td><td>
+Do not display columns headers? (must be set before a call to &nbsp;<tt>setdata</tt>&nbsp;)
+</td></tr>
+</p><p><tr><td class="doccode">
+nospecifics
+</td><td>
+Do not enable the specifics add/delete menu-options.
+</td></tr>
+</p><p><tr><td class="doccode">
+sep
+</td><td>
+Separation position between the two columns. Either a percentage (between 0.0 and 1.0) or, if negative, a pixel count for the size of the left column. The user can always resize the columns unless no headers are displayed.
+</td></tr>
+</p><p><tr><td class="doccode">
+onchange
+</td><td>
+Callback function. Called when data is modified in the form. Single argument: the data form object itself.
+</td></tr>
+</p><p><tr><td class="doccode">
+bitspec(spec, bitmask)
+</td><td>
+Read the value of a single bit in the object’s Specifics, or in all the object’s Specifics if you gave several objects to &nbsp;<tt>setdata</tt>&nbsp;. &nbsp;<tt>spec</tt>&nbsp; is the Specific to read, and &nbsp;<tt>bitmask</tt>&nbsp; is the value of the bit(s) to test. Returns &nbsp;<tt>1</tt>&nbsp; if all the objects have at least one of the bits of &nbsp;<tt>bitmask</tt>&nbsp; set, &nbsp;<tt>0</tt>&nbsp; if none has any of these bits set, or &nbsp;<tt>None</tt>&nbsp; if some objects have one of these bits set and others don’t.
+</td></tr>
+</p><p><tr><td class="doccode">
+togglebitspec(spec, bitmask)<br>
+togglebitspec(spec, bitmask, clearzero)
+</td><td>
+Simulates a click on a check box that would correspond to the Specific &nbsp;<tt>spec</tt>&nbsp; with the bit value &nbsp;<tt>bitmask</tt>&nbsp;. If &nbsp;<tt>clearzero</tt>&nbsp; is &nbsp;<tt>True</tt>&nbsp; (which is the default), and if the resulting Arg value would be zero, the Specific is completely removed.
+</td></tr>
+</p><p><tr><td class="doccode">
+useraction(n)
+</td><td>
+Simulates a click on the &nbsp;<tt>n</tt>&nbsp;th item of the popup menu. The following values are currently valid: &nbsp;<tt>0</tt>&nbsp; to add a Specific, and &nbsp;<tt>1</tt>&nbsp; to delete the selected Specific.
+</td></tr>
+</p><p></table>
+</p><p>Note: internally, data forms have other routines to read and set values of various types of data, but only the bit-spec ones
+are exposed to Python code now because I didn’t need the other ones yet. Just ask if you do.
+</p>
+  </td></tr></table>
+  <br>
+
+<a name="attributesimagedisplayer"></a>
+  <table width="100%" border=0 cellspacing=0>
+    <tr class="headline">
+      <td>
+        <p class="item">&nbsp;Additionnal attributes of Image Displayer controls</p>
+      </td>
+      <td align=right>
+        <font size=-2>Armin Rigo&nbsp;-&nbsp;09 Jul 2012</font>
+      </td>
+      <td width="1%" align=right nowrap>
+        &nbsp;&nbsp;[&nbsp;<a href="#__top__">Top</a>&nbsp;]&nbsp;
+      </td>
+    </tr>
+  </table>
+  <table border=0 width="100%" cellspacing=10><tr><td>
+<p>Image Displayers are created by a panel’s newimagectrl() method. They are screen controls that display an image. Additionnal
+drawings can be painted over the image by Python code.
+</p><p><table border=1 cellspacing=0 cellpadding=4>
+</p><p><tr><td class="doccode">
+image
+</td><td>
+The image to display. It is an &quot;&nbsp;<tt>icon</tt>&nbsp;&quot; (although it might be of any size) as found in Image Lists.
+</td></tr>
+</p><p><tr><td class="doccode">
+color
+</td><td>
+The color to fill the control with. Used if there is no image or if the image is smaller than the control.
+</td></tr>
+</p><p><tr><td class="doccode">
+canvas()
+</td><td>
+Returns a Canvas object to draw a picture over the image or over the uniform background. See Canvas objects below.
+</td></tr>
+</p><p><tr><td class="doccode">
+ondraw
+</td><td>
+Callback function. Called with the Image displayer itself as single argument whenever the image need to be repainted. If needed, this function should call canvas() and draw in it.
+</td></tr>
+</p><p><tr><td class="doccode">
+onclick
+</td><td>
+Callback function. Called as onclick(imagedisplayer, x, y, flags) when a mouse button is clicked. x,y are the coordinates of the click. flags is a combination of qeditor.MB_XXX constants. If the callback returns 1, QuArK will continue to call onclick if the mouse is dragged over the image.
+</td></tr>
+</p><p></table>
+</p>
+  </td></tr></table>
+  <br>
+
+<a name="canvas"></a>
+  <table width="100%" border=0 cellspacing=0>
+    <tr class="headline">
+      <td>
+        <p class="item">&nbsp;Canvas objects</p>
+      </td>
+      <td align=right>
+        <font size=-2>Armin Rigo&nbsp;-&nbsp;15 Feb 2001</font>
+      </td>
+      <td width="1%" align=right nowrap>
+        &nbsp;&nbsp;[&nbsp;<a href="#__top__">Top</a>&nbsp;]&nbsp;
+      </td>
+    </tr>
+  </table>
+  <table border=0 width="100%" cellspacing=10><tr><td>
+<p>Canvas Objects let you draw dots and lines from Python code. You obtain a Canvas object by calling a screen control’s canvas()
+method. Currently, only Image Displayers and Map Views have a canvas() method. You cannot create off-screen bitmaps
+currently.
+</p><p>Note that the Canvas returned by such an object should be considered as temporary: only use it right after you called canvas().
+Don’t store it into something else than a local variable.
+</p><p><table border=1 cellspacing=0 cellpadding=4>
+</p><p><tr><td class="doccode">
+brushcolor<br>
+brushstyle
+</td><td>
+Color and style of the brush (to fill the background of drawings). See qeditor.BS_XXX for styles.
+</td></tr>
+</p><p><tr><td class="doccode">
+pencolor<br>
+penwidth<br>
+penstyle
+</td><td>
+Color, width, and style of the pen. See qeditor.PS_XXX for styles. The width is normally set to zero to mean “ as thin as possible ” (although this is generally the same as setting it to 1).
+</td></tr>
+</p><p><tr><td class="doccode">
+fontcolor<br>
+fontname<br>
+fontsize<br>
+fontbold<br>
+fontitalic<br>
+fontunderline<br>
+transparent
+</td><td>
+Properties of the font used by textout and textsize.
+</td></tr>
+</p><p><tr><td class="doccode">
+line(p1,p2)<br>
+line(x1,y1,x2,y2)
+</td><td>
+Draws a line between two points. The first form is preffered for map views if the two points are projections of 3D points. This lets QuArK clip the line if one point is before and the other point is behind the camera. In this situation, line(p1.x,p1.y,p2.x,p2.y) would be incorrect.
+</td></tr>
+</p><p><tr><td class="doccode">
+rectangle(x1,y1, x2,y2)
+</td><td>
+Draws a filled rectangle and its border. To draw an empty rectangle, set brushstyle to BS_CLEAR. To draw the interior only, set penstyle to PS_CLEAR.
+</td></tr>
+</p><p><tr><td class="doccode">
+ellipse(x1,y1, x2,y2)
+</td><td>
+Draws a filled ellipse and its border inside the rectangle (x1,y1,x2,y2). To draw an empty ellipse, set brushstyle to BS_CLEAR. To draw the interior only, set penstyle to PS_CLEAR. To draw a circle, set (x1,y1,x2,y2) to a square. (Note: this function will produce incorrect results if called with values of (x1,y1,x2,y2) too large (above 8192) on Windows 95).
+</td></tr>
+</p><p><tr><td class="doccode">
+polygon(listxy)<br>
+polygon(listpt,ccw)
+</td><td>
+Draws a filled polygon using the points in the list. The list can contain either tuples (x,y) or projected vector objects. The same remark as for line applies. If the list contains projected vectors, ccw (counterclockwise) must be True or False to give the orientation of the points in the list.
+</td></tr>
+</p><p><tr><td class="doccode">
+setpixel(x,y, color)
+</td><td>
+Gives the color color to the pixel x,y, and returns the previous color of the pixel. (Note: don’t draw complex images with this, it would be horribly slow!)
+</td></tr>
+</p><p><tr><td class="doccode">
+getpixel(x,y)
+</td><td>
+Reads the color of the pixel x,y. (Note: because of a bug in QuArK 5.0.c2, getpixel expects a third integer parameter, which is ignored. Set it to 0.)
+</td></tr>
+</p><p><tr><td class="doccode">
+draw(icon,x,y)
+</td><td>
+Draws the icon at the location x,y.
+</td></tr>
+</p><p><tr><td class="doccode">
+painttexture(tex, rect)<br>
+painttexture(tex, rect, gradient)
+</td><td>
+Fills the specified area with the texture object tex, which must have been loaded by a function like loadtexture. rect is the area to fill (left,top,right,bottom). gradient (default 1) specifies the light gradient direction: the image is brighter at left or right if gradient is positive or negative. There is no gradient if gradient is set to 0.
+</td></tr>
+</p><p><tr><td class="doccode">
+textout(x,y,text)
+</td><td>
+Writes a string of text.
+</td></tr>
+</p><p><tr><td class="doccode">
+textsize(text)
+</td><td>
+Returns the (width,height) of the text, in pixels.
+</td></tr>
+</p><p><tr><td class="doccode">
+reset()
+</td><td>
+Resets the default pen and brush color and styles. Returns the canvas itself.
+</td></tr>
+</p><p></table>
+</p><p>There are of course other drawing methods that could be implemented, e.g. polylines, arcs, and so on. Ask me if you need
+them.
+</p>
+  </td></tr></table>
+  <br>
+
+<a name="mapviewmethods"></a>
+  <table width="100%" border=0 cellspacing=0>
+    <tr class="headline">
+      <td>
+        <p class="item">&nbsp;Methods of Map View controls</p>
+      </td>
+      <td align=right>
+        <font size=-2>Armin Rigo&nbsp;-&nbsp;15 Feb 2001</font>
+      </td>
+      <td width="1%" align=right nowrap>
+        &nbsp;&nbsp;[&nbsp;<a href="#__top__">Top</a>&nbsp;]&nbsp;
+      </td>
+    </tr>
+  </table>
+  <table border=0 width="100%" cellspacing=10><tr><td>
+<p>Map Views are the most important type of screen control in QuArK. Each Map View can display 3D objects under various projection
+types. Objects can be displayed in wireframe, solid, or textured.
+</p><p><table border=1 cellspacing=0 cellpadding=4>
+</p><p><tr><td class="doccode">
+setprojmode(&quot;3D&quot;)<br>
+setprojmode(&quot;2D&quot;, matrix)<br>
+setprojmode(&quot;2D&quot;, matrix, range)
+</td><td>
+Sets the projection type. In 3D (perspective), display parameters like the field of view are controlled by the current setup (see the attribute setup below). In 2D (flat), you must give the matrix used for projection. In this mode, proj(vect) is the same as matrix*vect, but a little more efficient. There are functions to build standard projection matrices in the module qeditor.py. The matrix must have a positive determinant, or else you will get a quarkx.error with message Invalid floating point operation. If range is specified and is False, the scroll bar range and position is left unchanged (see setrange and screencenter).
+</td></tr>
+</p><p><tr><td class="doccode">
+proj(vect)<br>
+proj(x,y,z)
+</td><td>
+Projects a point in 3D space onto the map view surface using the current projection attributes. The result is a “ projected vector ”. See above for more informations about projected vectors. Important: you must not use the resulting vector’s x and y attributes to make drawings before you check that the point is really visible (i.e. in front of the camera) by reading the vector’s visible attribute.
+</td></tr>
+</p><p><tr><td class="doccode">
+space(vect)<br>
+space(x,y,z)
+</td><td>
+Reverse operation. Returns the 3D point that would be projected to the screen coordinates x,y,z.
+</td></tr>
+</p><p><tr><td class="doccode">
+vector(from)
+</td><td>
+Returns a vector based on the current projection mode: if from is a point in 3D space (as a vector object), this function returns a vector from this point in the direction of the camera. If from is a string, it can be one of:
+&quot;x&quot;: returns a vector in the direction of the screen x axis
+&quot;y&quot;: returns a vector in the direction of the screen y axis
+&quot;z&quot;: returns vector(quarkx.vect(0,0,0)), which is the screen z axis on 2D (non-perspective) views
+&quot;0&quot;: returns the null vector
+</td></tr>
+</p><p><tr><td class="doccode">
+setdepth(min,max)
+</td><td>
+Sets the minimum and maximum depth that are considered visible. Depending on the drawing mode, the parts of the map that are outside these limits may be grayed out or hidden. The values must be given as projected points’ z coordinates. In perspective mode, these values cannot be changed: the minimum depth is fixed to “ very near the camera ”, and the maximum depth corresponds to the “ far distance ”. setdepth calls invalidate() unless you specify the same values as the ones already set.
+</td></tr>
+</p><p><tr><td class="doccode">
+drawmap(obj)<br>
+drawmap(obj, flags)<br>
+drawmap(obj, flags, color)
+</td><td>
+Draws the object obj and all its sub-objects. How the objects are really drawn depends on the flags, listed in qeditor.DM_XXX. See qeditor.py and mapeditor.py for more information about drawing map parts.
+</td></tr>
+</p><p><tr><td class="doccode">
+solidimage()<br>
+solidimage(texsrc)
+</td><td>
+In solid and textured modes, the map parts drawn with drawmap are stored in a buffer and the image is only really computed and displayed when solidimage() is called. Call this after you have drawn the solid map parts but before you draw the wireframe ones. texsrc is an optional alternate place to look for textures (e.g. in the opened .BSP file).
+</td></tr>
+</p><p><tr><td class="doccode">
+canvas()
+</td><td>
+Returns a Canvas in which you can draw. This lets you add lines and pictures over the usual map display. Important: the map view may be configured for black-on-white or white-on-black display. In the first case, pencolor is initialized to black and brushcolor to white; in the second case, these initial colors are inversed. You should never directly set pencolor or brushcolor to black or white, but you should save and reuse their initial colors. If you don’t do this, you would possibly draw lines with the same color as the background. Note: solid and texured modes are always considered white-on-black.
+</td></tr>
+</p><p><tr><td class="doccode">
+clicktarget(obj, x, y)
+</td><td>
+Finds all objects that belong to obj and that are concerned by a mouse click at coordinates x,y. Only finds objects between the minimum and maximum depths in depth. Returns a list of tuples (projpt, obj, extra), where projpt is the projected point where the mouse clicked, obj is the target object, and extra, if not None, is a second target object (for clicks on polyhedrons, obj is the polyhedrons and extra is the exact face on which we clicked). The list is not sorted; using its sort method will sort it in the order from nearest to farthest, because tuples are first sorted according to their first item, and projected vectors compare according to their distance to the camera.
+</td></tr>
+</p><p><tr><td class="doccode">
+scrollto(x,y)
+</td><td>
+Sets the scroll bars position to (x,y). If x or y is None, the position of the corresponding scroll bar is not changed.
+</td></tr>
+</p><p><tr><td class="doccode">
+setrange(x,y)<br>
+setrange(x,y, center)
+</td><td>
+Sets the scroll bars range. center is the 3D point that should be at the center of the full visible range (default 0 0 0).
+</td></tr>
+</p><p><tr><td class="doccode">
+drawgrid(vx, vy, color)<br>
+drawgrid(vx, vy, color, flags_n)<br>
+drawgrid(vx, vy, color, flags_n, color2)<br>
+drawgrid(vx, vy, color, flags_n, color2, origin)
+</td><td>
+Draws a grid using dots of color color. One grid dots is put at each of the 3D positions i*vx+j*vy, where i and j range over the integers. Grids cannot be drawn on perspective views (ask me if you need this feature). flags can be a set of DG_XXX flags (see qeditor.py). To highlight every nth grid line, add n to flags and set the highlight color in color2. origin is the 3D point from which the grid display begins (by default 0 0 0).
+</td></tr>
+</p><p><tr><td class="doccode">
+scale()<br>
+scale(point)
+</td><td>
+Returns the current projection scaling factor. In 2D projection modes, this is always the scale value given to setprojmode. In 3D projection mode, the scaling factor is computed at the given point. If no point is given in 3D mode, or if the computation fails for another reason, scale returns 1.0.
+</td></tr>
+</p><p><tr><td class="doccode">
+full3DFX(1)<br>
+full3DFX(0)<br>
+full3DFX(-1)
+</td><td>
+When called with 1 as parameter, this Map View image is sent to the full- screen 3DFX display. If two monitors are connected on the computer, the full-screen 3DFX image can be displayed together with the normal 2D image; otherwise, as long as the user doesn't press Esc or click a mouse button, he cannot do anything else. full3DFX only works with a true 3DFX card, not with the Software emulation; use a maximized window instead. Note that some features of common Map Views do not apply in full-screen 3DFX. For example, the user cannot (yet?) use the mouse on 3DFX screens, and no wireframe lines can be rendered (yet?). In general, consider the full-screen 3DFX mode as for viewing only, not editing. This method returns 0 in case of error. With one monitor, it returns 1 but only after the user finished walking in the view. With two monitors, it immediately returns 2. In the latter case only it makes sense to call full3DFX with the other parameter values: 0 to turn off the display on the second monitor, or -1 to query the current full-screen status.
+</td></tr>
+</p><p></table>
+</p>
+  </td></tr></table>
+  <br>
+
+<a name="attributesmapview"></a>
+  <table width="100%" border=0 cellspacing=0>
+    <tr class="headline">
+      <td>
+        <p class="item">&nbsp;Additionnal attributes of Map View controls</p>
+      </td>
+      <td align=right>
+        <font size=-2>Armin Rigo&nbsp;-&nbsp;24 Feb 2008</font>
+      </td>
+      <td width="1%" align=right nowrap>
+        &nbsp;&nbsp;[&nbsp;<a href="#__top__">Top</a>&nbsp;]&nbsp;
+      </td>
+    </tr>
+  </table>
+  <table border=0 width="100%" cellspacing=10><tr><td>
+<p>Methods are described above. The following table describes the other attributes only.
+</p><p><table border=1 cellspacing=0 cellpadding=4>
+</p><p><tr><td class="doccode">
+color<br>
+darkcolor
+</td><td>
+The background color in wireframe mode. darkcolor is used as background for selected objects (in draw mode DM_BACKGROUND).
+</td></tr>
+</p><p><tr><td class="doccode">
+cursor<br>
+handlecursor
+</td><td>
+Mouse cursor shape. handlecursor is the shape when the mouse is over a handle, if the handle doesn’t have its own cursor shape. Handles are described below. See qeditor.CR_XXX for a list of cursor shapes.
+</td></tr>
+</p><p><tr><td class="doccode">
+depth
+</td><td>
+The (min,max) depth, as set by setdepth(min,max). Avoid to change this value directly; call setdepth instead.
+</td></tr>
+</p><p><tr><td class="doccode">
+flags
+</td><td>
+Map View flags. See qeditor.MV_XXX.
+</td></tr>
+</p><p><tr><td class="doccode">
+redlines
+</td><td>
+Red lines position. The flags corresponding to the red lines to show must be set first.
+</td></tr>
+</p><p><tr><td class="doccode">
+redlinesrect
+</td><td>
+The (left,top,right,bottom) rectangular area considered to be the visible part of the map view. Use this instead of clientarea, because it excludes the parts outside the red lines.
+</td></tr>
+</p><p><tr><td class="doccode">
+scrollbars
+</td><td>
+Scroll bars position and range. Returns ((hpos,hposend,hrange), (vpos,vposend,vrange)) where pos is the current position, posend is the same plus the width or the height of the control, and range is the maximal value that posend can take.
+</td></tr>
+</p><p><tr><td class="doccode">
+screencenter
+</td><td>
+3D point at the center of the screen. Can be modified on non-perspective views.
+</td></tr>
+</p><p><tr><td class="doccode">
+setup
+</td><td>
+An Internal Objects that describes the 3D perspective display parameters. Defaults to the setup page “ 3D view ”. To force the Map View to reload the parameters, write setup=setup. Set it to another value only if you want to have several 3D views that don’t share the same parameters.
+</td></tr>
+</p><p><tr><td class="doccode">
+viewmode
+</td><td>
+View mode: &quot;wire&quot;, &quot;solid&quot;, or &quot;tex&quot;. All values are valid in both flat and perspective projection modes. If the view doesn’t display a map at all (e.g. the shadowed texture panel of the Polyhedron page), use the mode &quot;wire&quot;. The background is painted with the color before drawmap is called; if you want to avoid this, set color to NOCOLOR. Special mode: &quot;opengl&quot; for OpenGL views. Tested OpenGL implementations probably don't support several opengl views at the same time, nor switching back to another non-OpenGL mode.
+</td></tr>
+</p><p><tr><td class="doccode">
+viewname
+</td><td>
+Key values: &quot;editors3Dview&quot;, &quot;new3Dwindow&quot;, &quot;full3Dview&quot; or &quot;opengl3Dview&quot;. All though not part of the actual quarkx source code, new keys have been added to all the required view layout python files for easier detection and control of these 3D views. Not required for 2D views, their key word &quot;type&quot; gives those view names already. Use of the new key can be coded by first qualifying for the 3D &quot;type&quot; views, then for their key &quot;value&quot; for example:
+</p><div class="doccode"><pre>
+  for view in editor.layout.views:
+      type = view.info[&quot;type&quot;]
+      if type != &quot;3D&quot;: continue
+      viewname = view.info[&quot;viewname&quot;]
+      if viewname == &quot;editors3Dview&quot;:
+          print &quot;got the Editors 3D view&quot;
+      if viewname == &quot;new3Dwindow&quot;:
+          print &quot;got the Floating 3D view&quot;
+      if viewname == &quot;full3Dview&quot;:
+          print &quot;GOT THE FULL 3D VIEW&quot;
+      if viewname == &quot;opengl3Dview&quot;:
+          print &quot;got the OpenGL view&quot;
+</pre></div>
+
+<p>Any new 3D views added can also use this method by assigning a new value to its view info for example:
+</p><div class="doccode"><pre>
+  from quarkpy.mapmgr import *
+
+  class New3DLayout(MapLayout):
+      def buildscreen(self, form):
+          self.bs_leftpanel(form)
+          self.View3D = form.mainpanel.newmapview()
+          self.views[:] = [self.View3D]
+          self.baseviews = self.views[:]
+          self.View3D.info = {&quot;type&quot;: &quot;3D&quot;, &quot;viewname&quot;: &quot;new3Dlayout&quot;}
+</pre></div>
+
+<p>See the various map layout files in the python folder for more examples.
+</td></tr>
+</p><p><tr><td class="doccode">
+boundingboxes
+</td><td>
+List of Internal objects from which QuArK can load bounding box sizes and model file paths. See mapeditor.py for an example.
+</td></tr>
+</p><p><tr><td class="doccode">
+handles
+</td><td>
+List of handles. See below.
+</td></tr>
+</p><p><tr><td class="doccode">
+ondraw
+</td><td>
+Callback function. Called when the control content must be drawn. It takes a single parameter: the Map view object itself. Call drawmap() and/or canvas() to draw in the Map view.
+</td></tr>
+</p><p><tr><td class="doccode">
+onmouse
+</td><td>
+Callback function. Called in answer to a mouse event, as onmouse(mapview, x, y, flags, handle), where x,y is the mouse position, handle is the handle it is on (if any), and flags describes the mouse operation. See qeditor.MB_XXX. Values 1 to 64 are flags that indicate which keys and mouse buttons were down when the event begun, and may be combined together. Values 256 and above describe the event, and only one may be set.
+</td></tr>
+</p><p><tr><td class="doccode">
+onkey
+</td><td>
+Callback function. Called when a key is pressed or released, as onkey(mapview, key, flags). flags are the same as above. key is a single character that describes the key. See qkeys.py for a list of possible values.
+</td></tr>
+</p><p><tr><td class="doccode">
+cameraposition
+</td><td>
+In 3D modes, the camera position, as a 3-tuple (position, horzangle, pitchangle), where position is the 3D point of the camera position, horzangle is the direction on the Compass the camera is looking to, and pitchangle is used to look up or down. Returns None if not in 3D mode. Angles are in radians. This variable is read-write, but should not be used for animations (ask me if you need this).
+</td></tr>
+</p><p><tr><td class="doccode">
+oncameramove
+</td><td>
+Callback function. Called when the camera moved, for any reason.
+</td></tr>
+</p><p><tr><td class="doccode">
+animation
+</td><td>
+Are we currently doing an animation? Change this attribute to start (1) or end (0) an animation sequence. The only type of animation allowed is repeatedly changing cameraposition.
+</td></tr>
+</p><p><tr><td class="doccode">
+background
+</td><td>
+Background image settings (center, scale, offset, multiple), where center is the 3D position of the center of the image, scale is the scale, offset to center the image, and multiple to fill the entire view with copies of the image. (sorry, the image won’t rotate when you rotate the view!)
+</td></tr>
+</p><p><tr><td class="doccode">
+backgroundimage
+</td><td>
+Background image filename, where filename is the name of any supported image file or a loaded QImage object, put inside a tuple.
+</td></tr>
+</p><p></table>
+</p><p>A useful feature of Map views is their ability to work with handles: the attribute handles can be set to a list of Python
+instances (like a menu bar or a list of buttons), where each instance must have an attribute pos corresponding to the 3D
+location of the handle, and an attribute cursor giving the cursor shape to use when the mouse cursor is over the handle. cursor
+can be a CR_XXX value or a callback function that will be called with the map view as single parameter and that should return a
+CR_XXX value. The value CR_DEFAULT is replaced by the value set in the map view’s handlecursor attribute.
+</p><p>Normally, the area around the handle center where you can click is 10 by 10 pixels large, that is, the distance between the
+mouse click and the handle center must be less than 5 pixels horizontally and vertically. You can give a custom horizontal and
+vertical size in the handle's size attribute, which defaults to the tuple (5,5).
+</p><p>You can set a string in the hint attribute. This string will be displayed in a small pop-up rectangle when the mouse is over
+the handle. To display hints over a blue background (for entity-specific information only), make the hint string begin with a
+question mark (&quot;?&quot;). QuArK does not draw the handles itself. The Python code is responsible for that. See maphandles.py.
+</p>
+  </td></tr></table>
+  <br>
+
+<a name="objectsmodeleditor"></a>
+  <table width="100%" border=0 cellspacing=0>
+    <tr class="headline">
+      <td>
+        <p class="item">&nbsp;Internal objects related to the Model Editor</p>
+      </td>
+      <td align=right>
+        <font size=-2>cdunde&nbsp;-&nbsp;01 Nov 2011</font>
+      </td>
+      <td width="1%" align=right nowrap>
+        &nbsp;&nbsp;[&nbsp;<a href="#__top__">Top</a>&nbsp;]&nbsp;
+      </td>
+    </tr>
+  </table>
+  <table border=0 width="100%" cellspacing=10><tr><td>
+<p>From version 5.3, there are a few new types of QuArK Internal Objects. When editing a Model, the generic object in the tree
+view is of type MdlObject, which inherits all attributes and methods from 3Dobject (see above). A &quot;component&quot; of the Model is
+an object of type Component. A &quot;frame&quot; of the Model is an object of type Frame. A &quot;skin&quot; is a standard Image object.
+</p><p>Here are the attributes and methods of the Component objects.
+</p><p><table border=1 cellspacing=0 cellpadding=4>
+</p><p><tr><td class="doccode">
+currentskin
+</td><td>
+The current skin used for textured display. Also see <a href="#quarkxtexturefunctions">Texture functions of the module quarkx</a>
+above for functions to change these skin textures such as <a href="glossary.html#p">Painting</a> them, as can now be done in the
+<a href="intro.modeleditor.toolpalettes.paintmodes.html">Model Editor</a>.
+</td></tr>
+</p><p><tr><td class="doccode">
+currentframe
+</td><td>
+The current frame.
+</td></tr>
+</p><p><tr><td class="doccode">
+mergevertices(framelist)
+</td><td>
+Reduces the component triangles and vertices by merging together the vertices that are at the same position in all frames.
+</td></tr>
+</p><p><tr><td class="doccode">
+filltris
+</td><td>
+This list specify how the triangles should be drawn. The list should be as long as the number of triangles in the Tris Specific; if shorter, it is assumed that missing values are all None. For each triangle, the corresponding item in the list can be None (no filling) or a tuple of two &quot;patterns&quot;, one for if the triangle is displayed from front, and one for if it is displayed from back. Each &quot;pattern&quot; can be None (no filling), an integer (a color), or a tuple of two integers (two colors to be combined in a small checkerboard pattern).
+</td></tr>
+</p><p><tr><td class="doccode">
+backtris
+</td><td>
+Triangles whose background must be filled (like in the map editor's polyhedron backgrounds: without masking any line, even from objects behind the triangle) (not implemented in 5.3)
+</td></tr>
+</p><p><tr><td class="doccode">
+info
+</td><td>
+Not used by QuArK. Reserved for Python code.
+</td></tr>
+</p><p><tr><td class="doccode">
+triangles
+</td><td>
+List of all the triangles (read-write attribute). Each triangle is a tuple of three tuples (vertexnumber, skin_s, skin_t).
+</td></tr>
+</p><p></table>
+</p><p>Additionally, the Component objects have a Tris Specific that lists the triangles of the component. Each triangle is given as
+three points of six bytes each: two for the vertex number, two for the first coordinate on the skin, and two for the second
+coordinate on the skin.
+</p><p>Here are the attributes and methods of the Frame objects.
+</p><p><table border=1 cellspacing=0 cellpadding=4>
+</p><p><tr><td class="doccode">
+index
+</td><td>
+The frame's position in a component.dictitems['Frames:fg'].subitems list, as shown in the tree-view.
+</td></tr>
+</p><p><tr><td class="doccode">
+info
+</td><td>
+Not used by QuArK. Reserved for Python code.
+</td></tr>
+</p><p><tr><td class="doccode">
+vertices
+</td><td>
+This attribute is a way to quickly read or set a Vertices Specific of a frame (see below). It returns a list of Vector objects or can be used to set one.
+</td></tr>
+</p><p></table>
+</p><p>Frame objects usually have a Vertices Specific that gives the 3D position of all vertices in a frame. This is a single large list of
+Vector objects that give the X, Y and Z coordinates of each vertices.
+</p><p>For additional information, please see the files mdl*.py.
+</p>
+  </td></tr></table>
+  <br>
+
+<br>
+
+<table width="100%" border=0 cellspacing=0>
+  <tr class="headline">
+    <td width="99%" align=center>
+      <p class="sm">
+        Copyright (c) 2009, GNU General Public License by The QuArK (Quake Army Knife) Community - <a target="_blank" href="http://quark.sourceforge.net/">http://quark.sourceforge.net/</a><br>
+      </p>
+    </td>
+    <td width="1%" align=right nowrap>
+      &nbsp;[&nbsp;<span class="navenable"><a href="src.bugs.destroy.html">Prev</a></span>&nbsp;-&nbsp;<a href="#__top__">Top</a>&nbsp;-&nbsp;<span class="navenable"><a href="src.math.html">Next</a></span>&nbsp;]&nbsp;
+    </td>
+  </tr>
+</table>
+</body>
+</html>

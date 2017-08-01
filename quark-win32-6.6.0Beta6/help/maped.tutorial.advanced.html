@@ -1,0 +1,416 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"  "http://www.w3.org/TR/html4/loose.dtd">
+<html lang="en">
+<head>
+  <title>Advanced stuff</title>
+  <meta name="Description" content="QuArK Information Database - Page: 2.1.4.&nbsp;Advanced stuff">
+  <meta name="Keywords" content="QuArK InfoBase Quake Army Knife QRK QKM Python PY Map Editor Hexen Heretic Half-Life Sin Kingpin Soldier-of-Fortune Star-Trek-Voyager Elite-Force">
+  <link rel=stylesheet href="standard.css" type="text/css">
+</head>
+
+<body>
+<a name="__top__"></a>
+<table width="100%" border=0 cellspacing=0>
+  <tr>
+    <td width=213>
+      <a target="_blank" href="http://quark.sourceforge.net/"><img src="quarkicon.png" width=213 height=90 border=0 alt="Go to QuArK Web Site"></a>
+    </td>
+    <td width="70%" align=center>
+      <div class="topheadline">Advanced stuff</div>
+      <div class="sm">Updated&nbsp;11 Jul 2001</div>
+    </td>
+    <td width="30%" valign=bottom nowrap>
+      Upper&nbsp;levels:<br>-&nbsp;<a href="index.html">QuArK&nbsp;Information&nbsp;Base</a><br>-&nbsp;<a href="maped.html">2.&nbsp;Map&nbsp;editing</a><br>-&nbsp;<a href="maped.tutorial.html">2.1.&nbsp;Tutorial&nbsp;-&nbsp;Creating&nbsp;a&nbsp;map</a><br>
+    </td>
+  </tr>
+</table>
+<table width="100%" border=0 cellspacing=0>
+  <tr class="headline">
+    <td width="99%">
+      <p class="headline">&nbsp;2.1.4.&nbsp;Advanced stuff</p>
+    </td>
+    <td width="1%" align=right nowrap>
+      &nbsp;[&nbsp;<span class="navenable"><a href="maped.tutorial.entities.html">Prev</a></span>&nbsp;-&nbsp;<span class="navenable"><a href="maped.tutorial.html">Up</a></span>&nbsp;-&nbsp;<span class="navenable"><a href="maped.duplicators.html">Next</a></span>&nbsp;]&nbsp;
+    </td>
+  </tr>
+</table>
+<table border=0 width="100%" cellspacing=10><tr><td><p>This is the fourth and final part, which guides you through the methods and
+functions of creating a map in QuArK's map-editor. You should have read
+<a href="maped.tutorial.starting.html">the first part</a>,
+<a href="maped.tutorial.polyhedrons.html">second part</a> and
+<a href="maped.tutorial.entities.html">third part</a> before going through this fourth part.
+</p><p>The advanced stuff is optional, but learning these can help you set up your
+maps faster than normal.
+</p>
+</td></tr></table>
+<br>
+
+<table width="100%" border=0 cellspacing=0>
+  <tr class="headline">
+    <td width="100%">
+      <p class="subheadline">&nbsp;Index</p>
+    </td>
+  </tr>
+</table>
+<ul class="index">
+  <li>- <a href="#wallhollowmaker">Wall maker and Hollow maker</a>&nbsp;<span class="added">(01 Mar 2001)</span>
+  <li>- <a href="#grouptechniques">Group techniques</a>&nbsp;<span class="added">(01 Mar 2001)</span>
+  <li>- <a href="#creatingholes">Creating holes (carving) using Diggers and Negative brushes</a>&nbsp;<span class="added">(01 Mar 2001)</span>
+  <li>- <a href="#duplicators">Creating copies using Duplicators, Copy-One and Mirrors</a>&nbsp;<span class="added">(11 Jul 2001)</span>
+  <li>- <a href="#facesharing">Face Sharing</a>&nbsp;<span class="added">(28 Feb 2001)</span>
+</ul>
+<br>
+
+
+<a name="wallhollowmaker"></a>
+  <table width="100%" border=0 cellspacing=0>
+    <tr class="headline">
+      <td>
+        <p class="item">&nbsp;Wall maker and Hollow maker</p>
+      </td>
+      <td align=right>
+        <font size=-2>Decker&nbsp;-&nbsp;01 Mar 2001</font>
+      </td>
+      <td width="1%" align=right nowrap>
+        &nbsp;&nbsp;[&nbsp;<a href="#__top__">Top</a>&nbsp;]&nbsp;
+      </td>
+    </tr>
+  </table>
+  <table border=0 width="100%" cellspacing=10><tr><td>
+<p><table border=0 cellpadding=0 cellspacing=0>
+<tr><td>
+</p><p><img width=181 height=166 align=right src="maped.tutorial.advanced.image30.png">
+If you don't want to waste time, making rooms by the brick-by-brick method
+(e.q. create a brush per wall/floor/ceiling), you should try out the two
+macro-objects; Wall Maker and Hollow Maker.
+</p><p>Both objects can be found in the 'Duplicators &amp; Misc.' folder.
+</p><p>Once created, a default brush is assigned to the object, but you can of cause
+put more brushes into the Wall Maker-/Hollow Maker-object, like any other
+brush-entity or group.
+</p><p></td></tr>
+<tr><td>
+</p><p><img width=237 height=237 align=right src="maped.tutorial.advanced.image31.png">
+Both the Wall maker and Hollow maker, consists of solid-cube(s) and
+negative-cube(s), but you only have to think about moving one.
+</p><p>Depending on which of the two objects you have created; Wall maker or Hollow
+maker, the size of the room they make, are whats matters:
+</p><p><ul>
+<li>A Hollow maker, will take the brush(es) which are assigned to it, and create
+a smaller room inside it.
+<li>The Wall maker, takes the size of the brush(es) for given as the room size,
+and then surrounds it with walls.
+</ul>
+</p><p></td></tr>
+<tr><td>
+</p><p><img width=181 height=145 align=right src="maped.tutorial.advanced.image32.png">
+The size of the walls are determined by the specific &nbsp;<tt>depth</tt>&nbsp;, which can
+be found in both objects. To increase the thickness of the walls, increase the
+value of depth.
+</p><p></td></tr>
+</table>
+</p>
+  </td></tr></table>
+  <br>
+
+<a name="grouptechniques"></a>
+  <table width="100%" border=0 cellspacing=0>
+    <tr class="headline">
+      <td>
+        <p class="item">&nbsp;Group techniques</p>
+      </td>
+      <td align=right>
+        <font size=-2>Decker&nbsp;-&nbsp;01 Mar 2001</font>
+      </td>
+      <td width="1%" align=right nowrap>
+        &nbsp;&nbsp;[&nbsp;<a href="#__top__">Top</a>&nbsp;]&nbsp;
+      </td>
+    </tr>
+  </table>
+  <table border=0 width="100%" cellspacing=10><tr><td>
+<p><table border=0 cellpadding=0 cellspacing=0>
+<tr><td>
+</p><p><img width=144 height=234 align=right src="maped.tutorial.advanced.image33.png">
+If you plan on using anyone of the below mentioned macro-objects; Digger,
+Negative brush, Duplicator, Copy-One or Mirror, you must use groups!
+</p><p>Since a macro-object apply its effects/actions to the group it is
+positioned in, and all of its sub-groups, it will be impossible to use
+the objects, if you don't use groups.
+</p><p>Another good point for using groups is, that this will allow you to move many
+brushes and entities, in just one movement. Just select the group of objects
+you want to move, and move them in the 2D-views.
+</p><p>At the moment, it is not possible in QuArK to lock brushes/entities in a
+group, so when you select a brush/entity in the 2D-view which belongs to the
+group, the entire group is selected instead. To do this, you have to first
+select the group in the tree-view, and then move it in the 2D-views, or use
+the <a href="maped.plugins.madsel.html#extend">'Extend Selection'</a> functionality.
+</p><p></td></tr>
+<tr><td>
+</p><p><img width=180 height=130 align=right src="maped.tutorial.advanced.image34.png">
+With groups, you can also hide their contents from the 2D-views, or just gray
+it out. To do this, select the group in the tree-view, right-click to get its
+context-menu up, and select between:
+</p><p><ul>
+<li>Group is visible
+<li>Group is grayed out
+<li>Group is hidden
+</ul>
+</p><p>Notice that the last option, will also automatically select &quot;Hide on textured
+views&quot; and &quot;Cannot select with the mouse&quot;. This way you won't accidently select
+parts of your map, that you can't currently see in the 2D-views.
+</p><p></td></tr>
+<tr><td>
+</p><p><img width=183 height=134 align=right src="maped.tutorial.advanced.image34b.png">
+You can also give a group a color to illustrate different things. Again in the
+context-menu you can choose the Group color, which will bring up
+a color-choice dialog.
+</p><p></td></tr>
+</table>
+</p>
+  </td></tr></table>
+  <br>
+
+<a name="creatingholes"></a>
+  <table width="100%" border=0 cellspacing=0>
+    <tr class="headline">
+      <td>
+        <p class="item">&nbsp;Creating holes (carving) using Diggers and Negative brushes</p>
+      </td>
+      <td align=right>
+        <font size=-2>Decker&nbsp;-&nbsp;01 Mar 2001</font>
+      </td>
+      <td width="1%" align=right nowrap>
+        &nbsp;&nbsp;[&nbsp;<a href="#__top__">Top</a>&nbsp;]&nbsp;
+      </td>
+    </tr>
+  </table>
+  <table border=0 width="100%" cellspacing=10><tr><td>
+<p><table border=0 cellpadding=0 cellspacing=0>
+<tr><td>
+</p><p><img width=150 height=149 align=right src="maped.tutorial.advanced.image35.png">
+If you think, that to create a hole in a brush, you have to brush-subtract
+(carve), then think again when using QuArK!
+</p><p>A very powerful feature in QuArK,
+is the ability to use diggers and negative polys, which first does the real
+brush-subtraction when you compile your map. This lets you experiment placing a
+hole if you're not quite sure about its position, without messing with
+brush-subtraction and more brushes than necessary.
+</p><p>A digger and negative poly will only create holes in brushes of the
+<a href="maped.tutorial.advanced.html#grouptechniques">same group</a>, or sub-groups of that group, that
+they exists in.
+</p><p></td></tr>
+<tr><td>
+</p><p><img width=135 height=122 align=right src="maped.tutorial.advanced.image36.png">
+There are no actual difference between a digger macro and a negative poly,
+other than in the tree-view you can see the Digger object. You can't see a
+negative poly, unless you rename it by selected it in the tree-view, and press
+the F2 key.
+</p><p>In the 2D-view, these cubes will be drawn with a different line-color
+(See also <a href="intro.configuration.map.html#colors">'Colors'</a>.)
+</p><p></td></tr>
+<tr><td>
+</p><p><img width=146 height=154 align=right src="maped.tutorial.advanced.image38.png">
+<img width=146 height=154 align=right src="maped.tutorial.advanced.image37.png">
+The texture of a face on a digger or negative poly, will be applied to the
+brush that is carved, but only if that brush hasn't already been carved
+or cut at that coplanar plane that the face of the digger/negative poly will
+carve/cut it at. This can get tricky at times, and depends on which
+digger/negative poly does the first carving/cut.
+</p><p>Example: In the image to the right, there are two negative polys both with
+different textures (RED, BLUE), and two normal brushes.
+</p><p>After the negative polys have done their job (during compile), it may look like
+this in the game:
+</p><p><ul>
+<li>The cut-lines <b>1</b>, <b>3</b> and <b>C</b> will get their texture from
+    the negative polys' faces.
+<li>The cut-line <b>A</b> will keep its texture, because it was already
+    <i>cut</i>&nbsp; beforehand.
+<li>The cut-lines <b>2</b> and <b>B</b> will get their textures from the
+    negative poly who <u>first</u> does the carving/cut. In this case, the face
+    <b>B12</b> became RED and face <b>B23</b> became BLUE, but face <b>2AB</b>
+    is still RED.
+</ul>
+</p><p></td></tr>
+</table>
+</p>
+  </td></tr></table>
+  <br>
+
+<a name="duplicators"></a>
+  <table width="100%" border=0 cellspacing=0>
+    <tr class="headline">
+      <td>
+        <p class="item">&nbsp;Creating copies using Duplicators, Copy-One and Mirrors</p>
+      </td>
+      <td align=right>
+        <font size=-2>Decker&nbsp;-&nbsp;11 Jul 2001</font>
+      </td>
+      <td width="1%" align=right nowrap>
+        &nbsp;&nbsp;[&nbsp;<a href="#__top__">Top</a>&nbsp;]&nbsp;
+      </td>
+    </tr>
+  </table>
+  <table border=0 width="100%" cellspacing=10><tr><td>
+<p><table border=0 cellpadding=0 cellspacing=0>
+<tr><td>
+</p><p><img width=187 height=172 align=right src="maped.tutorial.advanced.image40.png">
+Say you wanted to make a staircase, with 20+ stairsteps. The dull method is to
+create a brush which is the first step, and then copy-paste-move it so you'll
+end up with 20+ brushes. Now imagine that you made an error, or found a new
+texture that'll look better - you would have to start all over.
+</p><p>Not so with QuArK! With a duplicator macro-object, you can create a
+master-stairstep, and let the duplicator automatically do the copy-paste-moving
+for you. Every change you make to the master, will instantaneously be
+duplicated.
+</p><p>Again, to use this duplicator properly, you must
+<a href="maped.tutorial.advanced.html#grouptechniques">use groups</a>!
+</p><p><b>Note</b> that when duplicating, by default everything is duplicated, including
+anytargetname/target specifics any entities have. If you need to have different
+targetname/target in the copies, you should check whether the 
+incrementable specifics described in <a href="maped.duplicators.basic.html#increment">'Incrementing Specifics'</a>,
+or the <a href="maped.plugins.argreplacer.html">'Arg Replacer'</a> plugin,
+or perhaps some other  <a href="maped.plugins.html">plug-in</a> not available
+at the time of writing, is more suitable for your purposes.
+</p><p></td></tr>
+<tr><td>
+</p><p><img width=341 height=128 align=right src="maped.tutorial.advanced.image42.png">
+<br>There are two basic types of duplicator:
+</p><p><ul>
+<li>A basic one, which is usually used to create simple straight duplications.
+    E.q. staircases or a row of columns.
+<li>An enhanced ('linear') one, which can apply linear rotations and scaling among other
+    things. E.q. round staircases, enlarging or shrinking brushes.  This is
+    the basis for various further types.
+</ul>
+</p><p></td></tr>
+<tr><td>
+</p><p><img width=335 height=314 align=right src="maped.tutorial.advanced.image41.png">
+<br>
+In the image to the right, multiple things are shown:
+</p><p><ul>
+<li>You must put your master-objects within the same group as the
+    Duplicator macro-object. In this example, only one 'new cube'-brush is our
+    master, but any number of brushes and entities can be put in here.
+<li>Whenever the Duplicator is selected, the 2D-views will display a series of
+    Duplicator-copy Handles. These are used to control the spacing and
+    direction, between each copy. It can also be altered with the offset
+    specific.
+<li>The count specific of the Duplicator, controls how many copies the
+    duplicator must make.
+</ul>
+</p><p>The (New) Copy-One and Mirror macro-objects work similarly to the enhanced
+duplicator, but they are specialized to only make one copy.
+</p><p><ul>
+<li>Copy-One will create a copy of your master-objects, and allow you to place
+    the copy somewhere else. New Copy-One has additional features making it
+    more suitable for making multiple copies with irregular spacing.
+<li>Mirror &lt;an axis&gt; creates a copy of your master-objects, and mirror
+    them along the axis specified, at the origin of the Mirror macro-object in
+    the 2D-view.
+</ul>
+</p><p>It is possible to put a duplicator macro-object, into a sub-group of another
+duplicator, and so on. This way, you can, for instance, create multiple lines
+of a row of columns on many floors.  See <a href="maped.duplicators.html">'Advanced Duplicators'</a> for more
+details, and additional types of duplicator.
+</p><p></td></tr>
+</table>
+</p>
+  </td></tr></table>
+  <br>
+
+<a name="facesharing"></a>
+  <table width="100%" border=0 cellspacing=0>
+    <tr class="headline">
+      <td>
+        <p class="item">&nbsp;Face Sharing</p>
+      </td>
+      <td align=right>
+        <font size=-2><a href="mailto:quickdeath@planethalflife.com">QuickDeath</a>&nbsp;-&nbsp;28 Feb 2001</font>
+      </td>
+      <td width="1%" align=right nowrap>
+        &nbsp;&nbsp;[&nbsp;<a href="#__top__">Top</a>&nbsp;]&nbsp;
+      </td>
+    </tr>
+  </table>
+  <table border=0 width="100%" cellspacing=10><tr><td>
+<p>QuArK supports the advanced feature of &quot;sharing&quot; a face among several
+polyhedrons (NOTE: the term &quot;polyhedron&quot; and &quot;brush&quot; are interchangeable.  Many
+editors use the term &quot;brush&quot; while QuArK uses &quot;polyhedron&quot; or simply &quot;a poly&quot;).
+</p><p>Please note that face sharing requires the use of &quot;groups&quot;.  If you don't know
+how to use QuArK's group feature, you need to
+<a href="maped.tutorial.advanced.html#grouptechniques">review the basics</a>.  Before we get into face
+sharing, we also need to review some Quake-engine basics.
+</p><p><u>Defining a world...</u>
+</p><p>Quake-engine based games are comprised of polys.  To define a poly, you need to
+define a number of planes.  As we all remember from geometry, a plane is
+a flat, 2-dimensional object that has infinte length and width.
+</p><p>A poly in Quake is the intersection of a bunch of planes.  A simple cube is
+defined by the intersection of six planes.  Two planes define the top and
+bottom of the cube while four more planes define the four sides.  Imagine a
+house of cards.  A single &quot;room&quot; of this house would consist of one card face
+down on the table, four cards for each side and one card on top.  Now imagine
+these cards as planes.  The inside of this &quot;room&quot; (the place where all six of
+the planes intersect) creates a poly.
+</p><p>QuArK gives you individual access to the planes, or &quot;faces&quot;, that define a
+poly. As we all know, you place textures on these faces to build your level.
+What you can also do is &quot;share&quot; a face among multiple polys.  If two (or more)
+polys share the same face, you define the texture scaling and position once on
+that shared face and every poly using that face will have a smooth texture
+flow.
+</p><p><u>Putting Face Sharing to work</u>
+</p><p>Imagine 3 polys in a row (part of a room).  The middle one is the same height
+as the ones to the left and right, but it's bottom is raised up. It's an entry
+way into a hallway.  Here's the view if you're facing the 3 walls:
+</p><p><center><img src="maped.tutorial.advanced.front.png"></center>
+</p><p>Assume we use the same texture for the &quot;front&quot; of these polys (the side that is
+facing us), we'll have to position the texture on the second and third polys
+very carefully so it flows nicely across the entire wall.  Looking at the 3
+polys from above, we'd see:
+</p><p><center><img src="maped.tutorial.advanced.top1.png"></center>
+</p><p>All 3 of these polys share 2 planes.  If we look at the above view the &quot;front&quot;
+and &quot;back&quot; faces of all 3 polys run along the same plane:
+</p><p><center><img src="maped.tutorial.advanced.top2.png"></center>
+</p><p>To keep things simple, we'll just worry about the &quot;front&quot; plane.
+</p><p>Create a new group.  We'll call the group &quot;Wall1&quot; and move all 3 polys into the
+group.  Your treeview should look something like this:
+</p><p><center><img border=1 src="maped.tutorial.advanced.tree1.png"></center>
+</p><p>Now open up the first poly to show all of the faces and move the &quot;front&quot; face
+to the top of the group (determing the face to move is easiest by just
+selecting it in the editor).  You move the face by grabbing it with a
+right-click and dragging it to the top of the group (outside the poly).  We'll
+assume the face to move is the one QuArK calls &quot;south&quot;.  After moving the
+&quot;south&quot; face, your treeview should now look something like this:
+</p><p><center><img border=1 src="maped.tutorial.advanced.tree2.png"></center>
+</p><p>Now open up the face list of the second and third poly's and delete the front
+face of each of those -- this will <i>usually</i>&nbsp; be the same face (i.e.
+&quot;south&quot;) as the first one, but not always.  Select the face in the editor to be
+sure.
+</p><p>The &quot;south&quot; face is now the &quot;front&quot; face that all of the three polys share.
+Define your texture for that face and you're all set!  No problems with texture
+alignment because it's one face -- the texture is just pasted across the entire
+face!
+</p><p><center><img src="maped.tutorial.advanced.facesharing.png"></center>
+</p><p>This technique is also handy if you have a floor that is composed of multiple
+polys (because of the shape of the room -- non-convex).  Assuming all of these
+polys are at the same height, put all of them in a group and share the side
+facing &quot;up&quot;.  Now when you want change the floor texture, change it on the one
+floor face and the entire floor (across all of the polys) changes since they're
+all sharing that face (plane).
+</p>
+  </td></tr></table>
+  <br>
+
+<br>
+
+<table width="100%" border=0 cellspacing=0>
+  <tr class="headline">
+    <td width="99%" align=center>
+      <p class="sm">
+        Copyright (c) 2009, GNU General Public License by The QuArK (Quake Army Knife) Community - <a target="_blank" href="http://quark.sourceforge.net/">http://quark.sourceforge.net/</a><br>
+      </p>
+    </td>
+    <td width="1%" align=right nowrap>
+      &nbsp;[&nbsp;<span class="navenable"><a href="maped.tutorial.entities.html">Prev</a></span>&nbsp;-&nbsp;<a href="#__top__">Top</a>&nbsp;-&nbsp;<span class="navenable"><a href="maped.duplicators.html">Next</a></span>&nbsp;]&nbsp;
+    </td>
+  </tr>
+</table>
+</body>
+</html>

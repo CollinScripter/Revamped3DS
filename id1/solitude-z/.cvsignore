@@ -1,0 +1,25 @@
+*.~*
+*.aps
+*.bak
+*.bsc
+*.dep
+*.ncb
+*.o
+*.obj
+*.opt
+*.pdb
+*.plg
+*.res
+*.sbr
+*.sdb
+*.swp
+tags
+zqclient.mak
+zqds.mak
+zquake.mak
+Debug*
+Release*
+FarMenu.ini   // Tonik
+d.bat         // Tonik
+.*
+release

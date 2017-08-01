@@ -1,0 +1,50 @@
+TODO for 0.16:
+
+x do something to make zquake-gl (Win32) start up in 640x480 by default instead of 640x400!
+x proper directinput with wheel and 3rd button (or make in_dinput default to 0 again)
+- temporarily disable bot support and vwep support for the release
+x fix snd_restart in Linux
+x fix the splitscreen bug in X11
+- fuh's fixes for new cl_cam code (look up on zq board)
+
+Can do without these:
+- fix software gamma from config.cfg -> gl_gamma on gamedir change.
+- make cl_hightrack work?
+
+
+Windows Client
+--------------
+
+.
+
+Linux Client
+------------
+ 
+* Add strider's evdev input support
+
+* Fix up HWGamma, affects the whole screen for gamma and blends, need to
+  restore the gamma etc when you alt tab, lose focus, minimise etc.
+  
+* Speaking of alt-tab, work out how to make alt-tabbing work with GLX
+  client.
+ 
+* ALSA support maybe - oss emulation seems to work fine but native code is
+  always better.
+  
+* Consider SDL for input
+
+Windows/Linux Server
+--------------------
+
+* Allow rcon to save settings to a config? e.g. rcon writeconfig?
+
+* Maplist - return *.bsp from id1/maps and $gamedir/maps
+
+
+Tonik's (uncategorized)
+--------------
+
+- free loaded wad3s every now and then
+- don't Mod_ClearAll, use Mod_TouchModel like NetQuake
+- FTE-style non-transparent protocol extension negotiation
++ revert my fragmented backbuf stuff to QW's solid backbufs (the former give no advantage at all as I've realized)

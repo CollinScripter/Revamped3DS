@@ -1,0 +1,79 @@
+QQRKSRC1
+{
+  QuArKProtected = "1"
+  Description = "HL Textures - ARG! The Pirates Strikes Back"
+
+//
+// Arg! textures
+//
+  ARGtextures.qtx =
+  {
+    ToolBox = "Texture Browser..."
+    Root = "Arg! Textures.qtxfolder"
+    HTML = "intro.texturebrowser.html"
+
+    // Raw definition of WAD3 files
+    t_arg_arg:incl = { s = "arg" d = "arg" h = "C" }
+    t_arg_acz-arg:incl = { s = "arg" d = "acz-arg" h = "C" }
+
+    Arg! Textures.qtxfolder =
+    {
+      arg.txlist =
+      {
+        KANNON.wl = {t_arg_arg=!}
+        INTROGRASS.wl = {t_arg_arg=!}
+        PILLAR_GRVL.wl = {t_arg_arg=!}
+        {BRIDGE.wl = {t_arg_arg=!}
+        {stupidpirate.wl = {t_arg_arg=!}
+        {ropeladder.wl = {t_arg_arg=!}
+        betterope.wl = {t_arg_arg=!}
+        sailpatches.wl = {t_arg_arg=!}
+        boatpaint.wl = {t_arg_arg=!}
+        boatpaint2.wl = {t_arg_arg=!}
+        boatpaint3.wl = {t_arg_arg=!}
+        CaveRok.wl = {t_arg_arg=!}
+        wood_tiled.wl = {t_arg_arg=!}
+        wood_tiled2.wl = {t_arg_arg=!}
+        -0Cliff.wl = {t_arg_arg=!}
+        -1Cliff.wl = {t_arg_arg=!}
+        -2Cliff.wl = {t_arg_arg=!}
+        -3Cliff.wl = {t_arg_arg=!}
+        CliffGrass.wl = {t_arg_arg=!}
+        Cliff2Grass.wl = {t_arg_arg=!}
+        {nevrflag.wl = {t_arg_arg=!}
+        +0Fog.wl = {t_arg_arg=!}
+        +1Fog.wl = {t_arg_arg=!}
+        +2Fog.wl = {t_arg_arg=!}
+        Grave.wl = {t_arg_arg=!}
+        RBGrave.wl = {t_arg_arg=!}
+        CBGrave.wl = {t_arg_arg=!}
+        ZGrave.wl = {t_arg_arg=!}
+      }
+      acz-arg.txlist =
+      {
+        sign01.wl = {t_arg_acz-arg=!}
+        canvas01.wl = {t_arg_acz-arg=!}
+        clover01.wl = {t_arg_acz-arg=!}
+        flag01.wl = {t_arg_acz-arg=!}
+        flag02.wl = {t_arg_acz-arg=!}
+        grass01.wl = {t_arg_acz-arg=!}
+        grass02.wl = {t_arg_acz-arg=!}
+        grass03.wl = {t_arg_acz-arg=!}
+        grass04.wl = {t_arg_acz-arg=!}
+        ground01.wl = {t_arg_acz-arg=!}
+        ground02.wl = {t_arg_acz-arg=!}
+        misc01.wl = {t_arg_acz-arg=!}
+        picture01.wl = {t_arg_acz-arg=!}
+        rust01.wl = {t_arg_acz-arg=!}
+        sign02.wl = {t_arg_acz-arg=!}
+        wall01.wl = {t_arg_acz-arg=!}
+        wall02.wl = {t_arg_acz-arg=!}
+        wood01.wl = {t_arg_acz-arg=!}
+        wood02.wl = {t_arg_acz-arg=!}
+        map01.wl = {t_arg_acz-arg=!}
+        net01.wl = {t_arg_acz-arg=!}
+        map02.wl = {t_arg_acz-arg=!}
+      }
+    }
+  }
+}

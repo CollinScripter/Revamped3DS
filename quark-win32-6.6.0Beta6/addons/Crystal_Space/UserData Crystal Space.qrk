@@ -1,0 +1,117 @@
+QQRKSRC1
+// This file has been written by QuArK Version 5.10
+// It's the text version of file: UserData Crystal Space.qrk
+
+//$Header: /cvsroot/quark/runtime/addons/Crystal_Space/UserData\040Crystal\040Space.qrk,v 1.6 2008/03/25 06:43:13 cdunde Exp $
+// ----------- REVISION HISTORY ------------
+//$Log: UserData\040Crystal\040Space.qrk,v $
+//Revision 1.6  2008/03/25 06:43:13  cdunde
+//To standardize UserData files as much as possible based on their game engine type.
+//Moved entities out of them which were duplicated in their game Data files, should NEVER be allowed!
+//Changed all hard coded texturing to either auto or includes, also should NEVER be allowed.
+//
+//Revision 1.5  2005/10/15 01:00:27  cdunde
+//To reinstate headers and history
+//
+//Revision 1.2  2001/07/26 09:20:12  tiglari
+//Put bezier patch on panel
+//
+//Revision 1.1  2001/07/03 02:36:30  tiglari
+//CrystalSpace->Crystal Space
+//
+//Revision 1.2  2001/03/20 21:52:26  decker_dk
+//Added log-header
+//
+
+{
+  Description = "Custom configuration file for Crystal Space."
+  MapObjPanel.qrk =
+  {
+    cube: =
+    {
+      new cube:p =
+      {
+        east:f =
+        {
+          v = '64 0 0 64 128 0 64 0 128'
+          tex = "[auto]"
+        }
+        west:f =
+        {
+          v = '-64 0 0 -64 -128 0 -64 0 128'
+          tex = "[auto]"
+        }
+        north:f =
+        {
+          v = '0 64 0 -128 64 0 0 64 128'
+          tex = "[auto]"
+        }
+        south:f =
+        {
+          v = '0 -64 0 128 -64 0 0 -64 128'
+          tex = "[auto]"
+        }
+        up:f =
+        {
+          v = '0 0 64 128 0 64 0 128 64'
+          tex = "[auto]"
+        }
+        down:f =
+        {
+          v = '0 0 -64 128 0 -64 0 -128 -64'
+          tex = "[auto]"
+        }
+      }
+    }
+    light: =
+    {
+      light:e =
+      {
+        ;desc = "Invisible lightsource"
+        origin = "0 0 0"
+        _light = "255 255 255 300"
+        dynamic = "0"
+        halo = "0 0 0"
+        attenuation = "realistic"
+      }
+    }
+    bezier: =
+    {
+      bezier:b2 =
+      {
+        v = '0 0 0 0 0 64 0 0 0.50000 0 128 0 0 1 0 0 64 0 0 0.50000 64 64 0 0.50000
+          0.50000 128 64 0 1 0.50000 0 128 0 0 1 64 128 0 0.50000 1 128 128 0 1 1'
+        tex = "[auto]"
+      }
+    }
+  }
+  Menu.qrk =
+  {
+    item: =
+    {
+      Txt = "&GO ! (build+Walktest)"
+      Shortcut = "Ctrl+R"
+      Pause = "1"
+      RunGame = "1"
+      ExportMapFile = "1"
+      BuildPgm1 = "1"
+    }
+    item: =
+    {
+      Txt = "-"
+    }
+    item: =
+    {
+      Txt = "&Complete rebuild"
+      Pause = "1"
+      ExportMapFile = "1"
+      BuildPgm1 = "1"
+    }
+    item: =
+    {
+      Txt = "&Run Walktest"
+      Pause = "1"
+      RunGame = "1"
+    }
+  }
+}

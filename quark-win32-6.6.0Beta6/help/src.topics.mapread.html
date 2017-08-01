@@ -1,0 +1,104 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"  "http://www.w3.org/TR/html4/loose.dtd">
+<html lang="en">
+<head>
+  <title>Map reading</title>
+  <meta name="Description" content="QuArK Information Database - Page: 4.4.6.&nbsp;Map reading">
+  <meta name="Keywords" content="QuArK InfoBase Quake Army Knife QRK QKM Python PY Map Editor Hexen Heretic Half-Life Sin Kingpin Soldier-of-Fortune Star-Trek-Voyager Elite-Force">
+  <link rel=stylesheet href="standard.css" type="text/css">
+</head>
+
+<body>
+<a name="__top__"></a>
+<table width="100%" border=0 cellspacing=0>
+  <tr>
+    <td width=213>
+      <a target="_blank" href="http://quark.sourceforge.net/"><img src="quarkicon.png" width=213 height=90 border=0 alt="Go to QuArK Web Site"></a>
+    </td>
+    <td width="70%" align=center>
+      <div class="topheadline">Map reading</div>
+      <div class="sm">Updated&nbsp;31 Aug 2003</div>
+    </td>
+    <td width="30%" valign=bottom nowrap>
+      Upper&nbsp;levels:<br>-&nbsp;<a href="index.html">QuArK&nbsp;Information&nbsp;Base</a><br>-&nbsp;<a href="src.html">4.&nbsp;The&nbsp;Source&nbsp;Code</a><br>-&nbsp;<a href="src.topics.html">4.4.&nbsp;Specific&nbsp;Topics</a><br>
+    </td>
+  </tr>
+</table>
+<table width="100%" border=0 cellspacing=0>
+  <tr class="headline">
+    <td width="99%">
+      <p class="headline">&nbsp;4.4.6.&nbsp;Map reading</p>
+    </td>
+    <td width="1%" align=right nowrap>
+      &nbsp;[&nbsp;<span class="navenable"><a href="src.topics.mapsave.html">Prev</a></span>&nbsp;-&nbsp;<span class="navenable"><a href="src.topics.html">Up</a></span>&nbsp;-&nbsp;<span class="navenable"><a href="src.topics.pyversions.html">Next</a></span>&nbsp;]&nbsp;
+    </td>
+  </tr>
+</table>
+<table border=0 width="100%" cellspacing=10><tr><td><p>Reading of maps in the innumberable variants of the .map format is achieved by
+the ReadEntityList procedure in QkMap.pas.  Why EntityList? because that's what
+a map file is, first the worldspawn entity, then the others.  This procedure
+is driven by the sub-procedure ReadSymbol, which basically pulls a 'token'
+off the input string (SourceFile), and stores various kinds information
+about it for later access by the real parsing routines.  A slight complexity
+in the formulation of the procedure is that it is also used for reading
+entity lists in BSP's, so there is a certain amount of code involved only
+in that.
+</p><p>A slightly peculiar feature of ReadSymbol is that it takes as argument an
+member of the local type TSymbols, which is what the type of the previously
+token should have been.  This provides a certain amount of automatic syntax
+error detection.  ReadSymbol deposits significant info about the token it
+has just read in a number of places:
+<UL>
+<LI>S: a String variable containing the string form of the token
+<LI>SymbolType: a TSymbol value indicating the type of the just-read
+token.
+<LI>NumericValue: a Double variable containing the number designated
+by the token, if it has one.
+</UL>
+So what the parser does is basically loop around reading tokens, starting
+with ReadSymbol(sEOF) (a clever usage of this type, given that it can't have
+actually been encountered until a read attempt has been made), storing things
+building the map structure as it goes along.
+</p><p>Tning are made a bit muddy by the fact that there is a great range of variation
+in the map format, which I think falls into two major types:
+<UL>
+<LI>Variations caused by the capacity of the engine.  E.g. the Q1 engine can't
+make sense of the Content, Surface, Value fields
+<LI>Variations caused by the propoerties of the standard compile tools, such
+as that the new HL tools understand the Valve 220 map format but not
+Brush Primtives, while the reverse is true for the GtkRadiant tools for Q3A
+and RtCW.
+</UL>
+The overall strategy is to try to use the first kind of information, but not
+the second, to determine identity of the game, to the extent that this
+can be done.
+</p><p>This is attempted to be achieved by returning as Result a gamecode, the Result
+value is initially set to mjQuake (original Quake, 'mj' stands for French
+modejeu='gamemode', maybe someday it will be replaced by 'gm'), and reset
+as things are encountered, and finally fixed up at the end.  The latter step
+is somewhat messy; the idea is that if something inconsistent with the present
+game-mode is encountered, it switches to the presumedly most popular game
+consistent with what is seen, but this is getting rather messy and the whole
+thing needs to be rethought.
+</p><p>The innards of the map-reading procedure bristle with special-purpose code
+blocks for reading and interpreting the various kinds of texture positioning
+info, etc.  Some of this involves significant 3d math, there are commentaries
+and references to sources in the code, see also <a href="src.math.html">'Math Background'</a> and
+<a href="src.topics.face.html">'Face Formats'</a>in the infobase.
+</p>
+</td></tr></table>
+<br>
+
+<table width="100%" border=0 cellspacing=0>
+  <tr class="headline">
+    <td width="99%" align=center>
+      <p class="sm">
+        Copyright (c) 2009, GNU General Public License by The QuArK (Quake Army Knife) Community - <a target="_blank" href="http://quark.sourceforge.net/">http://quark.sourceforge.net/</a><br>
+      </p>
+    </td>
+    <td width="1%" align=right nowrap>
+      &nbsp;[&nbsp;<span class="navenable"><a href="src.topics.mapsave.html">Prev</a></span>&nbsp;-&nbsp;<a href="#__top__">Top</a>&nbsp;-&nbsp;<span class="navenable"><a href="src.topics.pyversions.html">Next</a></span>&nbsp;]&nbsp;
+    </td>
+  </tr>
+</table>
+</body>
+</html>

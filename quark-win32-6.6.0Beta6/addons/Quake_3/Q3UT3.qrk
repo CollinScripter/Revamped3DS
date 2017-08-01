@@ -1,0 +1,4397 @@
+QQRKSRC1
+// This file has been written by QuArK QuArK 6.4 alpha
+// It's the text version of file: Q3ut3.qrk
+
+{
+  Description = "Urban Terror additional data"
+  Toolbox Folders.qtx =
+  {
+    ToolBox = "Texture Browser..."
+    Root = "Q3UT3.qtxfolder"
+    HTML = "intro.texturebrowser.html"
+
+    Q3UT3.qtxfolder =
+    {
+      q3ut3.osfolder =
+      {
+        path = "q3ut3"
+      }
+    }
+    q3ut3 textures.qtxfolder =
+    {
+      q3ut3.osfolder =
+      {
+        path = "q3ut3"
+        build = "1"
+      }
+    }
+  }
+  Q3UrbanTerror directory infos.qctx =
+  {
+    Game = "Quake 3"
+    SourceDir = "q3ut3"
+    GameDir = "q3ut3"
+  }
+  Toolbox Folders.qtx =
+  {
+    ToolBox = "New map items..."
+    Root = "Urbanterror Thingys.qtxfolder"
+    Urbanterror Thingys.qtxfolder =
+    {
+      Team Shit.qtxfolder =
+      {
+        info_player_deathmatch:e =
+        {
+          origin = "0 0 0"
+          angle = "360"
+          ;desc = "Player spawing postion for all Q3A maps."
+        }
+        info_ut_spawn:e =
+        {
+          origin = "-144 0 -64"
+          angle = "360"
+          ;desc = "initial potential spawning position for Urban Terror"
+        }
+        team_CAH_capturepoint:e =
+        {
+          origin = "-144 0 -64"
+          ;desc = "zone that can be captured in the Capture and Hold gametype"
+        }
+        info_ut_bombsite:e =
+        {
+          origin = "0 0 0"
+          range = "128"
+        }
+      }
+      Prefabs.qtxfolder =
+      {
+        Lamp:g =
+        {
+          poly:p =
+          {
+            face:f =
+            {
+              v = '-8 -1016 -12 -8 -1016 116 -8 -888 -12'
+              tex = "urban_terror/ceiling1"
+              Contents = "1"
+              Flags = "0"
+              Value = "0"
+              tv = '0 0 -64 0 0 -64'
+            }
+            face:f =
+            {
+              v = '8 -1016 -12 8 -888 -12 8 -1016 116'
+              tex = "urban_terror/ceiling1"
+              Contents = "1"
+              Flags = "0"
+              Value = "0"
+              tv = '0 0 64 0 0 -64'
+            }
+            face:f =
+            {
+              v = '-1408 -9 -12 -1280 -9 -12 -1408 -9 116'
+              tex = "urban_terror/ceiling1"
+              Contents = "1"
+              Flags = "0"
+              Value = "0"
+              tv = '0 0 64 0 0 -64'
+            }
+            face:f =
+            {
+              v = '-1408 7 -12 -1408 7 116 -1280 7 -12'
+              tex = "urban_terror/ceiling1"
+              Contents = "1"
+              Flags = "0"
+              Value = "0"
+              tv = '0 0 -64 0 0 -64'
+            }
+            face:f =
+            {
+              v = '-1408 -1016 0 -1408 -888 0 -1280 -1016 0'
+              tex = "urban_terror/ceiling1"
+              Contents = "1"
+              Flags = "0"
+              Value = "0"
+              tv = '0 0 0 -64 64 0'
+            }
+            face:f =
+            {
+              v = '-1408 -1016 4 -1280 -1016 4 -1408 -888 4'
+              tex = "urban_terror/ceiling1"
+              Contents = "1"
+              Flags = "0"
+              Value = "0"
+              tv = '0 0 0 64 64 0'
+            }
+          }
+          poly:p =
+          {
+            face:f =
+            {
+              v = '-2 -1016 -12 -2 -1016 116 -2 -888 -12'
+              tex = "base_wall/chrome_metal"
+              Contents = "1"
+              Flags = "0"
+              Value = "0"
+              tv = '0 0 -64 0 0 -64'
+            }
+            face:f =
+            {
+              v = '2 -1016 -12 2 -888 -12 2 -1016 116'
+              tex = "base_wall/chrome_metal"
+              Contents = "1"
+              Flags = "0"
+              Value = "0"
+              tv = '0 0 64 0 0 -64'
+            }
+            face:f =
+            {
+              v = '-1408 -3 -12 -1280 -3 -12 -1408 -3 116'
+              tex = "base_wall/chrome_metal"
+              Contents = "1"
+              Flags = "0"
+              Value = "0"
+              tv = '0 0 64 0 0 -64'
+            }
+            face:f =
+            {
+              v = '-1408 1 -12 -1408 1 116 -1280 1 -12'
+              tex = "base_wall/chrome_metal"
+              Contents = "1"
+              Flags = "0"
+              Value = "0"
+              tv = '0 0 -64 0 0 -64'
+            }
+            face:f =
+            {
+              v = '-1408 -1016 56 -1408 -888 56 -1280 -1016 56'
+              tex = "base_wall/chrome_metal"
+              Contents = "1"
+              Flags = "0"
+              Value = "0"
+              tv = '0 0 0 -64 64 0'
+            }
+            face:f =
+            {
+              v = '-1408 -1016 154 -1280 -1016 154 -1408 -888 154'
+              tex = "base_wall/chrome_metal"
+              Contents = "1"
+              Flags = "0"
+              Value = "0"
+              tv = '0 0 0 64 64 0'
+            }
+          }
+          poly:p =
+          {
+            face:f =
+            {
+              v = '-3 -1016 -12 -3 -1016 116 -3 -888 -12'
+              tex = "urban_terror2/gold"
+              Contents = "1"
+              Flags = "0"
+              Value = "0"
+              tv = '0 0 -64 0 0 -64'
+            }
+            face:f =
+            {
+              v = '3 -1016 -12 3 -888 -12 3 -1016 116'
+              tex = "urban_terror2/gold"
+              Contents = "1"
+              Flags = "0"
+              Value = "0"
+              tv = '0 0 64 0 0 -64'
+            }
+            face:f =
+            {
+              v = '-1408 -4 -12 -1280 -4 -12 -1408 -4 116'
+              tex = "urban_terror2/gold"
+              Contents = "1"
+              Flags = "0"
+              Value = "0"
+              tv = '0 0 64 0 0 -64'
+            }
+            face:f =
+            {
+              v = '-1408 2 -12 -1408 2 116 -1280 2 -12'
+              tex = "urban_terror2/gold"
+              Contents = "1"
+              Flags = "0"
+              Value = "0"
+              tv = '0 0 -64 0 0 -64'
+            }
+            face:f =
+            {
+              v = '-1408 -1016 162 -1408 -888 162 -1280 -1016 162'
+              tex = "urban_terror2/gold"
+              Contents = "1"
+              Flags = "0"
+              Value = "0"
+              tv = '0 0 0 -64 64 0'
+            }
+            face:f =
+            {
+              v = '-1408 -1016 163 -1280 -1016 163 -1408 -888 163'
+              tex = "urban_terror2/gold"
+              Contents = "1"
+              Flags = "0"
+              Value = "0"
+              tv = '0 0 0 64 64 0'
+            }
+          }
+          poly:p =
+          {
+            face:f =
+            {
+              v = '-2 1 163 6 -3 163 2 -3 163'
+              tex = "base_wall/chrome_metal"
+              Contents = "1"
+              Flags = "0"
+              Value = "0"
+              tv = '7 -2 7 -66 71 -2'
+            }
+            face:f =
+            {
+              v = '-1 -2 171 3 0 171 1 0 171'
+              tex = "base_wall/chrome_metal"
+              Contents = "1"
+              Flags = "0"
+              Value = "0"
+              tv = '10 1 10 65 74 1'
+            }
+            face:f =
+            {
+              v = '2 -3 163 1 4.10070 171 1 0.12516 171'
+              tex = "base_wall/chrome_metal"
+              Contents = "1"
+              Flags = "0"
+              Value = "0"
+              tv = '11 47.39115 75 47.39115 11 -16.60885'
+            }
+            face:f =
+            {
+              v = '-2 1 163 -3 0 171 1 0 171'
+              tex = "base_wall/chrome_metal"
+              Contents = "1"
+              Flags = "0"
+              Value = "0"
+              tv = '-2 47.38223 -66 47.38223 -2 -16.61777'
+            }
+            face:f =
+            {
+              v = '-2 -3 163 5 -2 171 1 -2 171'
+              tex = "base_wall/chrome_metal"
+              Contents = "1"
+              Flags = "0"
+              Value = "0"
+              tv = '2 47.34907 66 47.34907 2 -16.65093'
+            }
+            face:f =
+            {
+              v = '-2 -3 163 -1 -3.85039 171 -1 0.12516 171'
+              tex = "base_wall/chrome_metal"
+              Contents = "1"
+              Flags = "0"
+              Value = "0"
+              tv = '-11 47.35072 -75 47.35072 -11 -16.64928'
+            }
+          }
+          poly:p =
+          {
+            face:f =
+            {
+              v = '-4 3 154 4 3 154 4 -5 154'
+              tex = "base_wall/chrome_metal"
+              Contents = "1"
+              Flags = "0"
+              Value = "0"
+              tv = '5 -4 5 -68 69 -4'
+            }
+            face:f =
+            {
+              v = '2 1 162 -2 -3 162 -2 -7 162'
+              tex = "base_wall/chrome_metal"
+              Contents = "1"
+              Flags = "0"
+              Value = "0"
+              tv = '7 -2 7 62 71 -2'
+            }
+            face:f =
+            {
+              v = '-4 3 154 -2 -11 162 -2 -3 162'
+              tex = "base_wall/chrome_metal"
+              Contents = "1"
+              Flags = "0"
+              Value = "0"
+              tv = '-5 39.21009 -69 39.21009 -5 -24.78991'
+            }
+            face:f =
+            {
+              v = '4 -5 154 5.99818 -3 162 -2.15271 -3 162'
+              tex = "base_wall/chrome_metal"
+              Contents = "1"
+              Flags = "0"
+              Value = "0"
+              tv = '-4 39.15532 60 39.15532 -4 -24.84468'
+            }
+            face:f =
+            {
+              v = '4 3 154 2 5 162 2 -3 162'
+              tex = "base_wall/chrome_metal"
+              Contents = "1"
+              Flags = "0"
+              Value = "0"
+              tv = '5 39.16851 69 39.16851 5 -24.83149'
+            }
+            face:f =
+            {
+              v = '4 3 154 -10.30359 1 162 -2.15271 1 162'
+              tex = "base_wall/chrome_metal"
+              Contents = "1"
+              Flags = "0"
+              Value = "0"
+              tv = '4 39.13949 -60 39.13949 4 -24.86051'
+            }
+          }
+          poly:p =
+          {
+            face:f =
+            {
+              v = '-6 -7 4 -6 5 4 6 5 4'
+              tex = "urban_terror/ceiling1"
+              Contents = "1"
+              Flags = "0"
+              Value = "0"
+              tv = '-49 -6 -49 -70 15 -6'
+            }
+            face:f =
+            {
+              v = '4 3 56 -4 3 56 -4 -5 56'
+              tex = "urban_terror/ceiling1"
+              Contents = "1"
+              Flags = "0"
+              Value = "0"
+              tv = '-9 -9 -9 55 55 -9'
+            }
+            face:f =
+            {
+              v = '-6 -7 4 16 -5 56 4 -5 56'
+              tex = "urban_terror/ceiling1"
+              Contents = "1"
+              Flags = "0"
+              Value = "0"
+              tv = '0 0 64 0 0 -64'
+            }
+            face:f =
+            {
+              v = '-6 5 4 -4 -16.80780 56 -4 -5 56'
+              tex = "urban_terror/ceiling1"
+              Contents = "1"
+              Flags = "0"
+              Value = "0"
+              tv = '12 0 -52 0 12 -64'
+            }
+            face:f =
+            {
+              v = '6 5 4 -16 3 56 -4 3 56'
+              tex = "urban_terror/ceiling1"
+              Contents = "1"
+              Flags = "0"
+              Value = "0"
+              tv = '12 0 -52 0 12 -64'
+            }
+            face:f =
+            {
+              v = '6 5 4 4 6.80780 56 4 -5 56'
+              tex = "urban_terror/ceiling1"
+              Contents = "1"
+              Flags = "0"
+              Value = "0"
+              tv = '-12 0 52 0 -12 -64'
+            }
+          }
+          poly:p =
+          {
+            face:f =
+            {
+              v = '-1408 -2 -12 -1280 -2 -12 -1408 -2 116'
+              tex = "base_wall/chrome_metal"
+              Contents = "1"
+              Flags = "0"
+              Value = "0"
+              tv = '0 0 64 0 0 -64'
+            }
+            face:f =
+            {
+              v = '-1408 0 -12 -1408 0 116 -1280 0 -12'
+              tex = "base_wall/chrome_metal"
+              Contents = "1"
+              Flags = "0"
+              Value = "0"
+              tv = '0 0 -64 0 0 -64'
+            }
+            face:f =
+            {
+              v = '15 0 144 13 -4 144 13 -2 144'
+              tex = "base_wall/chrome_metal"
+              Contents = "1"
+              Flags = "0"
+              Value = "0"
+              tv = '8 14.99994 8 -49.00005 72 14.99994'
+            }
+            face:f =
+            {
+              v = '13 1 144 7 -7 150 7 -3 150'
+              tex = "base_wall/chrome_metal"
+              Contents = "1"
+              Flags = "0"
+              Value = "0"
+              tv = '57 -18.06652 57 45.93348 -7 -18.06652'
+            }
+            face:f =
+            {
+              v = '15 0 144 8 0 152 8 -2 152'
+              tex = "base_wall/chrome_metal"
+              Contents = "1"
+              Flags = "0"
+              Value = "0"
+              tv = '8 -21.94436 8 42.05564 72 -21.94436'
+            }
+            face:f =
+            {
+              v = '8 1 152 7 1 150 7 -3 150'
+              tex = "base_wall/chrome_metal"
+              Contents = "1"
+              Flags = "0"
+              Value = "0"
+              tv = '57 40.12669 -7 40.12669 57 -23.87331'
+            }
+          }
+          poly:p =
+          {
+            face:f =
+            {
+              v = '-10 3 129 -10.02225 -5 129 -18 -5 129'
+              tex = "base_wall/chrome_metal"
+              Contents = "1"
+              Flags = "0"
+              Value = "0"
+              tv = '5 18 5 -46 69 18'
+            }
+            face:f =
+            {
+              v = '-8 5 131 -31.97897 -7 131 -20 -7 131'
+              tex = "base_wall/chrome_metal"
+              Contents = "1"
+              Flags = "0"
+              Value = "0"
+              tv = '3 -20 3 44 67 -20'
+            }
+            face:f =
+            {
+              v = '-1436 -1016 1547 -1436 -888 1547 -1308 -1016 1419'
+              tex = "base_wall/chrome_metal"
+              Contents = "1"
+              Flags = "0"
+              Value = "0"
+              tv = '0 0 0 64 -64 0'
+            }
+            face:f =
+            {
+              v = '-8 5 131 -18 3 129 -29.97897 3 129'
+              tex = "base_wall/chrome_metal"
+              Contents = "1"
+              Flags = "0"
+              Value = "0"
+              tv = '20 21.34378 -44 21.34378 20 -42.65622'
+            }
+            face:f =
+            {
+              v = '-10 -5 129 -12.02225 -7 131 -20 -7 131'
+              tex = "base_wall/chrome_metal"
+              Contents = "1"
+              Flags = "0"
+              Value = "0"
+              tv = '-18 18.28076 46 18.28076 -18 -45.71924'
+            }
+            face:f =
+            {
+              v = '-1436 -1016 -1296.10900 -1436 -888 -1296.10900 -1308 -1016 -1168.18700'
+              tex = "base_wall/chrome_metal"
+              Contents = "1"
+              Flags = "0"
+              Value = "0"
+              tv = '0 0 0 -64 64 0'
+            }
+          }
+          poly:p =
+          {
+            face:f =
+            {
+              v = '-1408 -2 -12 -1280 -2 -12 -1408 -2 116'
+              tex = "base_wall/chrome_metal"
+              Contents = "1"
+              Flags = "0"
+              Value = "0"
+              tv = '0 0 64 0 0 -64'
+            }
+            face:f =
+            {
+              v = '-1408 0 -12 -1408 0 116 -1280 0 -12'
+              tex = "base_wall/chrome_metal"
+              Contents = "1"
+              Flags = "0"
+              Value = "0"
+              tv = '0 0 -64 0 0 -64'
+            }
+            face:f =
+            {
+              v = '-15 0 144 -13 0 144 -13 -2 144'
+              tex = "base_wall/chrome_metal"
+              Contents = "1"
+              Flags = "0"
+              Value = "0"
+              tv = '-56 49 -56 -15 8 49'
+            }
+            face:f =
+            {
+              v = '-15 0 144 -8 -4 152 -8 -2 152'
+              tex = "base_wall/chrome_metal"
+              Contents = "1"
+              Flags = "0"
+              Value = "0"
+              tv = '56 -21.94337 56 -85.94337 -8 -21.94337'
+            }
+            face:f =
+            {
+              v = '-7 1 150 -8 1 152 -8 -3 152'
+              tex = "base_wall/chrome_metal"
+              Contents = "1"
+              Flags = "0"
+              Value = "0"
+              tv = '-57 38.01228 7 38.01228 -57 -25.98772'
+            }
+            face:f =
+            {
+              v = '-13 1 144 -7 1 150 -7 -3 150'
+              tex = "base_wall/chrome_metal"
+              Contents = "1"
+              Flags = "0"
+              Value = "0"
+              tv = '7 -17.85808 7 -81.85809 71 -17.85808'
+            }
+          }
+          poly:p =
+          {
+            face:f =
+            {
+              v = '-2 -1016 -12 -2 -888 -12 -2 -1016 116'
+              tex = "base_wall/chrome_metal"
+              Contents = "1"
+              Flags = "0"
+              Value = "0"
+              tv = '0 0 64 0 0 -64'
+            }
+            face:f =
+            {
+              v = '-1408 -2 -12 -1280 -2 -12 -1408 -2 116'
+              tex = "base_wall/chrome_metal"
+              Contents = "1"
+              Flags = "0"
+              Value = "0"
+              tv = '0 0 64 0 0 -64'
+            }
+            face:f =
+            {
+              v = '-1408 0 -12 -1408 0 116 -1280 0 -12'
+              tex = "base_wall/chrome_metal"
+              Contents = "1"
+              Flags = "0"
+              Value = "0"
+              tv = '0 0 -64 0 0 -64'
+            }
+            face:f =
+            {
+              v = '-7 1 150 -2 -3 150 -2 -7 150'
+              tex = "base_wall/chrome_metal"
+              Contents = "1"
+              Flags = "0"
+              Value = "0"
+              tv = '-953 1337 -953 1273 -889 1337'
+            }
+            face:f =
+            {
+              v = '-8 1 152 -2 -3 152 -2 1 152'
+              tex = "base_wall/chrome_metal"
+              Contents = "1"
+              Flags = "0"
+              Value = "0"
+              tv = '-953 -1336 -953 -1272 -889 -1336'
+            }
+            face:f =
+            {
+              v = '-8 1 152 -7 1 150 -7 -3 150'
+              tex = "base_wall/chrome_metal"
+              Contents = "1"
+              Flags = "0"
+              Value = "0"
+              tv = '57 40.24835 -7 40.24835 57 -23.75165'
+            }
+          }
+          poly:p =
+          {
+            face:f =
+            {
+              v = '7 1 150 8 1 152 8 -3 152'
+              tex = "base_wall/chrome_metal"
+              Contents = "1"
+              Flags = "0"
+              Value = "0"
+              tv = '-953 97.76393 -889 97.76393 -953 33.76393'
+            }
+            face:f =
+            {
+              v = '-1398 -2 -12 -1270 -2 -12 -1398 -2 116'
+              tex = "base_wall/chrome_metal"
+              Contents = "1"
+              Flags = "0"
+              Value = "0"
+              tv = '0 0 64 0 0 -64'
+            }
+            face:f =
+            {
+              v = '-1398 0 -12 -1398 0 116 -1270 0 -12'
+              tex = "base_wall/chrome_metal"
+              Contents = "1"
+              Flags = "0"
+              Value = "0"
+              tv = '0 0 -64 0 0 -64'
+            }
+            face:f =
+            {
+              v = '7 1 150 2 -7 150 2 -3 150'
+              tex = "base_wall/chrome_metal"
+              Contents = "1"
+              Flags = "0"
+              Value = "0"
+              tv = '-57 -3 -57 -67 7 -3'
+            }
+            face:f =
+            {
+              v = '2 1 152 8 -3 152 8 1 152'
+              tex = "base_wall/chrome_metal"
+              Contents = "1"
+              Flags = "0"
+              Value = "0"
+              tv = '-953 -1336 -953 -1272 -889 -1336'
+            }
+            face:f =
+            {
+              v = '2 1 150 2 -7 152 2 -3 152'
+              tex = "base_wall/chrome_metal"
+              Contents = "1"
+              Flags = "0"
+              Value = "0"
+              tv = '-7 38.24835 -71 38.24835 -7 -25.75165'
+            }
+          }
+          poly:p =
+          {
+            face:f =
+            {
+              v = '-9 -1016 -12 -9 -1016 116 -9 -888 -12'
+              tex = "base_wall/chrome_metal"
+              Contents = "1"
+              Flags = "0"
+              Value = "0"
+              tv = '0 0 -64 0 0 -64'
+            }
+            face:f =
+            {
+              v = '-8 -1016 -12 -8 -888 -12 -8 -1016 116'
+              tex = "base_wall/chrome_metal"
+              Contents = "1"
+              Flags = "0"
+              Value = "0"
+              tv = '0 0 64 0 0 -64'
+            }
+            face:f =
+            {
+              v = '-1408 -7 -12 -1280 -7 -12 -1408 -7 116'
+              tex = "base_wall/chrome_metal"
+              Contents = "1"
+              Flags = "0"
+              Value = "0"
+              tv = '0 0 64 0 0 -64'
+            }
+            face:f =
+            {
+              v = '-1408 -6 -12 -1408 -6 116 -1280 -6 -12'
+              tex = "base_wall/chrome_metal"
+              Contents = "1"
+              Flags = "0"
+              Value = "0"
+              tv = '0 0 -64 0 0 -64'
+            }
+            face:f =
+            {
+              v = '-1408 -1016 131 -1408 -888 131 -1280 -1016 131'
+              tex = "base_wall/chrome_metal"
+              Contents = "1"
+              Flags = "0"
+              Value = "0"
+              tv = '0 0 0 -64 64 0'
+            }
+            face:f =
+            {
+              v = '-1408 -1016 142 -1280 -1016 142 -1408 -888 142'
+              tex = "base_wall/chrome_metal"
+              Contents = "1"
+              Flags = "0"
+              Value = "0"
+              tv = '0 0 0 64 64 0'
+            }
+          }
+          poly:p =
+          {
+            face:f =
+            {
+              v = '-9 -1016 -12 -9 -1016 116 -9 -888 -12'
+              tex = "base_wall/chrome_metal"
+              Contents = "1"
+              Flags = "0"
+              Value = "0"
+              tv = '0 0 -64 0 0 -64'
+            }
+            face:f =
+            {
+              v = '-8 -1016 -12 -8 -888 -12 -8 -1016 116'
+              tex = "base_wall/chrome_metal"
+              Contents = "1"
+              Flags = "0"
+              Value = "0"
+              tv = '0 0 64 0 0 -64'
+            }
+            face:f =
+            {
+              v = '-1408 4 -12 -1280 4 -12 -1408 4 116'
+              tex = "base_wall/chrome_metal"
+              Contents = "1"
+              Flags = "0"
+              Value = "0"
+              tv = '0 0 64 0 0 -64'
+            }
+            face:f =
+            {
+              v = '-1408 5 -12 -1408 5 116 -1280 5 -12'
+              tex = "base_wall/chrome_metal"
+              Contents = "1"
+              Flags = "0"
+              Value = "0"
+              tv = '0 0 -64 0 0 -64'
+            }
+            face:f =
+            {
+              v = '-1408 -1016 131 -1408 -888 131 -1280 -1016 131'
+              tex = "base_wall/chrome_metal"
+              Contents = "1"
+              Flags = "0"
+              Value = "0"
+              tv = '0 0 0 -64 64 0'
+            }
+            face:f =
+            {
+              v = '-1408 -1016 142 -1280 -1016 142 -1408 -888 142'
+              tex = "base_wall/chrome_metal"
+              Contents = "1"
+              Flags = "0"
+              Value = "0"
+              tv = '0 0 0 64 64 0'
+            }
+          }
+          poly:p =
+          {
+            face:f =
+            {
+              v = '-20 -1016 -12 -20 -1016 116 -20 -888 -12'
+              tex = "base_wall/chrome_metal"
+              Contents = "1"
+              Flags = "0"
+              Value = "0"
+              tv = '0 0 -64 0 0 -64'
+            }
+            face:f =
+            {
+              v = '-19 -1016 -12 -19 -888 -12 -19 -1016 116'
+              tex = "base_wall/chrome_metal"
+              Contents = "1"
+              Flags = "0"
+              Value = "0"
+              tv = '0 0 64 0 0 -64'
+            }
+            face:f =
+            {
+              v = '-1408 4 -12 -1280 4 -12 -1408 4 116'
+              tex = "base_wall/chrome_metal"
+              Contents = "1"
+              Flags = "0"
+              Value = "0"
+              tv = '0 0 64 0 0 -64'
+            }
+            face:f =
+            {
+              v = '-1408 5 -12 -1408 5 116 -1280 5 -12'
+              tex = "base_wall/chrome_metal"
+              Contents = "1"
+              Flags = "0"
+              Value = "0"
+              tv = '0 0 -64 0 0 -64'
+            }
+            face:f =
+            {
+              v = '-1408 -1016 131 -1408 -888 131 -1280 -1016 131'
+              tex = "base_wall/chrome_metal"
+              Contents = "1"
+              Flags = "0"
+              Value = "0"
+              tv = '0 0 0 -64 64 0'
+            }
+            face:f =
+            {
+              v = '-1408 -1016 142 -1280 -1016 142 -1408 -888 142'
+              tex = "base_wall/chrome_metal"
+              Contents = "1"
+              Flags = "0"
+              Value = "0"
+              tv = '0 0 0 64 64 0'
+            }
+          }
+          poly:p =
+          {
+            face:f =
+            {
+              v = '-20 -1016 -12 -20 -1016 116 -20 -888 -12'
+              tex = "base_wall/chrome_metal"
+              Contents = "1"
+              Flags = "0"
+              Value = "0"
+              tv = '0 0 -64 0 0 -64'
+            }
+            face:f =
+            {
+              v = '-19 -1016 -12 -19 -888 -12 -19 -1016 116'
+              tex = "base_wall/chrome_metal"
+              Contents = "1"
+              Flags = "0"
+              Value = "0"
+              tv = '0 0 64 0 0 -64'
+            }
+            face:f =
+            {
+              v = '-1408 -7 -12 -1280 -7 -12 -1408 -7 116'
+              tex = "base_wall/chrome_metal"
+              Contents = "1"
+              Flags = "0"
+              Value = "0"
+              tv = '0 0 64 0 0 -64'
+            }
+            face:f =
+            {
+              v = '-1408 -6 -12 -1408 -6 116 -1280 -6 -12'
+              tex = "base_wall/chrome_metal"
+              Contents = "1"
+              Flags = "0"
+              Value = "0"
+              tv = '0 0 -64 0 0 -64'
+            }
+            face:f =
+            {
+              v = '-1408 -1016 131 -1408 -888 131 -1280 -1016 131'
+              tex = "base_wall/chrome_metal"
+              Contents = "1"
+              Flags = "0"
+              Value = "0"
+              tv = '0 0 0 -64 64 0'
+            }
+            face:f =
+            {
+              v = '-1408 -1016 142 -1280 -1016 142 -1408 -888 142'
+              tex = "base_wall/chrome_metal"
+              Contents = "1"
+              Flags = "0"
+              Value = "0"
+              tv = '0 0 0 64 64 0'
+            }
+          }
+          poly:p =
+          {
+            face:f =
+            {
+              v = '-20 -7 142 -8 5 142 4 5 142'
+              tex = "base_wall/chrome_metal"
+              Contents = "1"
+              Flags = "0"
+              Value = "0"
+              tv = '-49 44 -49 -20 15 44'
+            }
+            face:f =
+            {
+              v = '-10 -5 144 -18 3 144 -26 3 144'
+              tex = "base_wall/chrome_metal"
+              Contents = "1"
+              Flags = "0"
+              Value = "0"
+              tv = '13 -54 13 10 77 -54'
+            }
+            face:f =
+            {
+              v = '-8 5 142 -30 3 144 -18 3 144'
+              tex = "base_wall/chrome_metal"
+              Contents = "1"
+              Flags = "0"
+              Value = "0"
+              tv = '-8 4.24317 -72 4.24317 -8 68.24316'
+            }
+            face:f =
+            {
+              v = '-10 -5 144 -20 -7 142 -12 -7 142'
+              tex = "base_wall/chrome_metal"
+              Contents = "1"
+              Flags = "0"
+              Value = "0"
+              tv = '10 39.30175 74 39.30175 10 -24.69825'
+            }
+            face:f =
+            {
+              v = '-8 -7 142 -10 14.60350 144 -10 3 144'
+              tex = "base_wall/chrome_metal"
+              Contents = "1"
+              Flags = "0"
+              Value = "0"
+              tv = '15 36.96354 79 36.96354 15 -27.03646'
+            }
+            face:f =
+            {
+              v = '-20 -7 142 -18 -8.60350 144 -18 3 144'
+              tex = "base_wall/chrome_metal"
+              Contents = "1"
+              Flags = "0"
+              Value = "0"
+              tv = '-15 62.48798 -15 -1.51202 -79 62.48798'
+            }
+          }
+          poly:p =
+          {
+            face:f =
+            {
+              v = '10 3 129 18 3 129 18 -5 129'
+              tex = "base_wall/chrome_metal"
+              Contents = "1"
+              Flags = "0"
+              Value = "0"
+              tv = '5 10 5 -54 69 10'
+            }
+            face:f =
+            {
+              v = '20 -7 131 8 5 131 8 -7 131'
+              tex = "base_wall/chrome_metal"
+              Contents = "1"
+              Flags = "0"
+              Value = "0"
+              tv = '15 -20 15 44 79 -20'
+            }
+            face:f =
+            {
+              v = '8 -7 131 10 3 129 10 -9 129'
+              tex = "base_wall/chrome_metal"
+              Contents = "1"
+              Flags = "0"
+              Value = "0"
+              tv = '49 -11.31299 49 52.68701 -15 -11.31299'
+            }
+            face:f =
+            {
+              v = '20 5 131 10 3 129 -1.97897 3 129'
+              tex = "base_wall/chrome_metal"
+              Contents = "1"
+              Flags = "0"
+              Value = "0"
+              tv = '20 21.34378 -44 21.34378 20 -42.65622'
+            }
+            face:f =
+            {
+              v = '18 -5 129 15.97775 -7 131 8 -7 131'
+              tex = "base_wall/chrome_metal"
+              Contents = "1"
+              Flags = "0"
+              Value = "0"
+              tv = '-18 18.28076 46 18.28076 -18 -45.71924'
+            }
+            face:f =
+            {
+              v = '20 -7 131 18 3 129 18 15 129'
+              tex = "base_wall/chrome_metal"
+              Contents = "1"
+              Flags = "0"
+              Value = "0"
+              tv = '15 28.26153 15 -35.73847 79 28.26153'
+            }
+          }
+          poly:p =
+          {
+            face:f =
+            {
+              v = '19 -1016 -12 19 -1016 116 19 -888 -12'
+              tex = "base_wall/chrome_metal"
+              Contents = "1"
+              Flags = "0"
+              Value = "0"
+              tv = '0 0 -64 0 0 -64'
+            }
+            face:f =
+            {
+              v = '20 -1016 -12 20 -888 -12 20 -1016 116'
+              tex = "base_wall/chrome_metal"
+              Contents = "1"
+              Flags = "0"
+              Value = "0"
+              tv = '0 0 64 0 0 -64'
+            }
+            face:f =
+            {
+              v = '-1380 -7 -12 -1252 -7 -12 -1380 -7 116'
+              tex = "base_wall/chrome_metal"
+              Contents = "1"
+              Flags = "0"
+              Value = "0"
+              tv = '0 0 64 0 0 -64'
+            }
+            face:f =
+            {
+              v = '-1380 -6 -12 -1380 -6 116 -1252 -6 -12'
+              tex = "base_wall/chrome_metal"
+              Contents = "1"
+              Flags = "0"
+              Value = "0"
+              tv = '0 0 -64 0 0 -64'
+            }
+            face:f =
+            {
+              v = '-1380 -1016 131 -1380 -888 131 -1252 -1016 131'
+              tex = "base_wall/chrome_metal"
+              Contents = "1"
+              Flags = "0"
+              Value = "0"
+              tv = '0 0 0 -64 64 0'
+            }
+            face:f =
+            {
+              v = '-1380 -1016 142 -1252 -1016 142 -1380 -888 142'
+              tex = "base_wall/chrome_metal"
+              Contents = "1"
+              Flags = "0"
+              Value = "0"
+              tv = '0 0 0 64 64 0'
+            }
+          }
+          poly:p =
+          {
+            face:f =
+            {
+              v = '19 -1016 -12 19 -1016 116 19 -888 -12'
+              tex = "base_wall/chrome_metal"
+              Contents = "1"
+              Flags = "0"
+              Value = "0"
+              tv = '0 0 -64 0 0 -64'
+            }
+            face:f =
+            {
+              v = '20 -1016 -12 20 -888 -12 20 -1016 116'
+              tex = "base_wall/chrome_metal"
+              Contents = "1"
+              Flags = "0"
+              Value = "0"
+              tv = '0 0 64 0 0 -64'
+            }
+            face:f =
+            {
+              v = '-1380 4 -12 -1252 4 -12 -1380 4 116'
+              tex = "base_wall/chrome_metal"
+              Contents = "1"
+              Flags = "0"
+              Value = "0"
+              tv = '0 0 64 0 0 -64'
+            }
+            face:f =
+            {
+              v = '-1380 5 -12 -1380 5 116 -1252 5 -12'
+              tex = "base_wall/chrome_metal"
+              Contents = "1"
+              Flags = "0"
+              Value = "0"
+              tv = '0 0 -64 0 0 -64'
+            }
+            face:f =
+            {
+              v = '-1380 -1016 131 -1380 -888 131 -1252 -1016 131'
+              tex = "base_wall/chrome_metal"
+              Contents = "1"
+              Flags = "0"
+              Value = "0"
+              tv = '0 0 0 -64 64 0'
+            }
+            face:f =
+            {
+              v = '-1380 -1016 142 -1252 -1016 142 -1380 -888 142'
+              tex = "base_wall/chrome_metal"
+              Contents = "1"
+              Flags = "0"
+              Value = "0"
+              tv = '0 0 0 64 64 0'
+            }
+          }
+          poly:p =
+          {
+            face:f =
+            {
+              v = '8 -1016 -12 8 -1016 116 8 -888 -12'
+              tex = "base_wall/chrome_metal"
+              Contents = "1"
+              Flags = "0"
+              Value = "0"
+              tv = '0 0 -64 0 0 -64'
+            }
+            face:f =
+            {
+              v = '9 -1016 -12 9 -888 -12 9 -1016 116'
+              tex = "base_wall/chrome_metal"
+              Contents = "1"
+              Flags = "0"
+              Value = "0"
+              tv = '0 0 64 0 0 -64'
+            }
+            face:f =
+            {
+              v = '-1380 4 -12 -1252 4 -12 -1380 4 116'
+              tex = "base_wall/chrome_metal"
+              Contents = "1"
+              Flags = "0"
+              Value = "0"
+              tv = '0 0 64 0 0 -64'
+            }
+            face:f =
+            {
+              v = '-1380 5 -12 -1380 5 116 -1252 5 -12'
+              tex = "base_wall/chrome_metal"
+              Contents = "1"
+              Flags = "0"
+              Value = "0"
+              tv = '0 0 -64 0 0 -64'
+            }
+            face:f =
+            {
+              v = '-1380 -1016 131 -1380 -888 131 -1252 -1016 131'
+              tex = "base_wall/chrome_metal"
+              Contents = "1"
+              Flags = "0"
+              Value = "0"
+              tv = '0 0 0 -64 64 0'
+            }
+            face:f =
+            {
+              v = '-1380 -1016 142 -1252 -1016 142 -1380 -888 142'
+              tex = "base_wall/chrome_metal"
+              Contents = "1"
+              Flags = "0"
+              Value = "0"
+              tv = '0 0 0 64 64 0'
+            }
+          }
+          poly:p =
+          {
+            face:f =
+            {
+              v = '8 -1016 -12 8 -1016 116 8 -888 -12'
+              tex = "base_wall/chrome_metal"
+              Contents = "1"
+              Flags = "0"
+              Value = "0"
+              tv = '0 0 -64 0 0 -64'
+            }
+            face:f =
+            {
+              v = '9 -1016 -12 9 -888 -12 9 -1016 116'
+              tex = "base_wall/chrome_metal"
+              Contents = "1"
+              Flags = "0"
+              Value = "0"
+              tv = '0 0 64 0 0 -64'
+            }
+            face:f =
+            {
+              v = '-1380 -7 -12 -1252 -7 -12 -1380 -7 116'
+              tex = "base_wall/chrome_metal"
+              Contents = "1"
+              Flags = "0"
+              Value = "0"
+              tv = '0 0 64 0 0 -64'
+            }
+            face:f =
+            {
+              v = '-1380 -6 -12 -1380 -6 116 -1252 -6 -12'
+              tex = "base_wall/chrome_metal"
+              Contents = "1"
+              Flags = "0"
+              Value = "0"
+              tv = '0 0 -64 0 0 -64'
+            }
+            face:f =
+            {
+              v = '-1380 -1016 131 -1380 -888 131 -1252 -1016 131'
+              tex = "base_wall/chrome_metal"
+              Contents = "1"
+              Flags = "0"
+              Value = "0"
+              tv = '0 0 0 -64 64 0'
+            }
+            face:f =
+            {
+              v = '-1380 -1016 142 -1252 -1016 142 -1380 -888 142'
+              tex = "base_wall/chrome_metal"
+              Contents = "1"
+              Flags = "0"
+              Value = "0"
+              tv = '0 0 0 64 64 0'
+            }
+          }
+          group:g =
+          {
+            poly:p =
+            {
+              face:f =
+              {
+                v = '9 -1016.50000 -12 9 -1016.50000 116 9 -888.50000 -12'
+                tex = "common/nodraw"
+                Contents = "134217729"
+                Flags = "0"
+                Value = "0"
+                tv = '0 0 -64 0 0 -64'
+              }
+              face:f =
+              {
+                v = '19 -1016.50000 -12 19 -888.50000 -12 19 -1016.50000 116'
+                tex = "common/nodraw"
+                Contents = "134217729"
+                Flags = "0"
+                Value = "0"
+                tv = '0 0 64 0 0 -64'
+              }
+              face:f =
+              {
+                v = '-1380 -6.50000 -12 -1252 -6.50000 -12 -1380 -6.50000 116'
+                tex = "base_wall/glass01"
+                Contents = "134217729"
+                Flags = "0"
+                Value = "0"
+                tv = '1389 -143 1399 -143 1389 -154'
+              }
+              face:f =
+              {
+                v = '-1380 -6 -12 -1380 -6 116 -1252 -6 -12'
+                tex = "common/nodraw"
+                Contents = "134217729"
+                Flags = "0"
+                Value = "0"
+                tv = '0 0 -64 0 0 -64'
+              }
+              face:f =
+              {
+                v = '-1380 -1016.50000 131 -1380 -888.50000 131 -1252 -1016.50000
+                  131'
+                tex = "common/nodraw"
+                Contents = "134217729"
+                Flags = "0"
+                Value = "0"
+                tv = '0 0 0 -64 64 0'
+              }
+              face:f =
+              {
+                v = '-1380 -1016.50000 142 -1252 -1016.50000 142 -1380 -888.50000
+                  142'
+                tex = "common/nodraw"
+                Contents = "134217729"
+                Flags = "0"
+                Value = "0"
+                tv = '0 0 0 64 64 0'
+              }
+            }
+            poly:p =
+            {
+              face:f =
+              {
+                v = '19.00018 1014.75000 -12 19.00018 1014.75000 116 19.00014 886.75000
+                  -12'
+                tex = "common/nodraw"
+                Contents = "134217729"
+                Flags = "0"
+                Value = "0"
+                tv = '0 0 -63.99999 0 0 -64'
+              }
+              face:f =
+              {
+                v = '9.00011 1014.75000 -12 9.00011 886.75000 -12 9.00011 1014.75000
+                  116'
+                tex = "common/nodraw"
+                Contents = "134217729"
+                Flags = "0"
+                Value = "0"
+                tv = '0 0 64 0 0 -64'
+              }
+              face:f =
+              {
+                v = '1408 4.49972 -12 1280 4.49975 -12 1408 4.49972 116'
+                tex = "base_wall/glass01"
+                Contents = "134217729"
+                Flags = "0"
+                Value = "0"
+                tv = '1389 -143 1399 -143 1389 -154'
+              }
+              face:f =
+              {
+                v = '1408 4.00032 -12 1408 4.00032 116 1280 4.00029 -12'
+                tex = "common/nodraw"
+                Contents = "134217729"
+                Flags = "0"
+                Value = "0"
+                tv = '0.00011 0 -63.99990 0 0.00011 -64'
+              }
+              face:f =
+              {
+                v = '1408 1014.75000 131 1408 886.74990 131 1280 1014.75000 131'
+                tex = "common/nodraw"
+                Contents = "134217729"
+                Flags = "0"
+                Value = "0"
+                tv = '0 0 0 64 -64 0'
+              }
+              face:f =
+              {
+                v = '1408 1014.75000 142 1280 1014.75000 142 1408 886.74990 142'
+                tex = "common/nodraw"
+                Contents = "134217729"
+                Flags = "0"
+                Value = "0"
+                tv = '0 0 0 -64 -64 0'
+              }
+            }
+            poly:p =
+            {
+              face:f =
+              {
+                v = '-1001.75000 3.99978 -12 -1001.75000 3.99978 116 -873.74980
+                  3.99978 -12'
+                tex = "common/nodraw"
+                Contents = "134217729"
+                Flags = "0"
+                Value = "0"
+                tv = '0 0 -64 0 0 -64'
+              }
+              face:f =
+              {
+                v = '-1001.75000 -6.00029 -12 -873.74960 -6.00023 -12 -1001.75000
+                  -6.00029 116'
+                tex = "common/nodraw"
+                Contents = "134217729"
+                Flags = "0"
+                Value = "0"
+                tv = '-0.00005 0 63.99995 0 -0.00005 -64'
+              }
+              face:f =
+              {
+                v = '8.50118 1393 -12 8.50108 1265 -12 8.50118 1393 116'
+                tex = "base_wall/glass01"
+                Contents = "134217729"
+                Flags = "0"
+                Value = "0"
+                tv = '1389 -143 1399 -143 1389 -154'
+              }
+              face:f =
+              {
+                v = '8.99961 1393 -12 8.99961 1393 116 8.99964 1265 -12'
+                tex = "common/nodraw"
+                Contents = "134217729"
+                Flags = "0"
+                Value = "0"
+                tv = '0 0 -64.00002 0 0 -64'
+              }
+              face:f =
+              {
+                v = '-1001.75000 1393 131 -873.74960 1393 131 -1001.75000 1265
+                  131'
+                tex = "common/nodraw"
+                Contents = "134217729"
+                Flags = "0"
+                Value = "0"
+                tv = '0 0.00017 -64 0.00017 0 -63.99982'
+              }
+              face:f =
+              {
+                v = '-1001.75000 1393 142 -1001.75000 1265 142 -873.74960 1393
+                  142'
+                tex = "common/nodraw"
+                Contents = "134217729"
+                Flags = "0"
+                Value = "0"
+                tv = '0 -0.00017 -64 -0.00017 0 63.99982'
+              }
+            }
+            poly:p =
+            {
+              face:f =
+              {
+                v = '-19 -1016.50000 -12 -19 -1016.50000 116 -19 -888.50000 -12'
+                tex = "common/nodraw"
+                Contents = "134217729"
+                Flags = "0"
+                Value = "0"
+                tv = '0 0 -64 0 0 -64'
+              }
+              face:f =
+              {
+                v = '-9 -1016.50000 -12 -9 -888.50000 -12 -9 -1016.50000 116'
+                tex = "common/nodraw"
+                Contents = "134217729"
+                Flags = "0"
+                Value = "0"
+                tv = '0 0 64 0 0 -64'
+              }
+              face:f =
+              {
+                v = '-1408 -6.50000 -12 -1280 -6.50000 -12 -1408 -6.50000 116'
+                tex = "base_wall/glass01"
+                Contents = "134217729"
+                Flags = "0"
+                Value = "0"
+                tv = '1389 -143 1399 -143 1389 -154'
+              }
+              face:f =
+              {
+                v = '-1408 -6 -12 -1408 -6 116 -1280 -6 -12'
+                tex = "common/nodraw"
+                Contents = "134217729"
+                Flags = "0"
+                Value = "0"
+                tv = '0 0 -64 0 0 -64'
+              }
+              face:f =
+              {
+                v = '-1408 -1016.50000 131 -1408 -888.50000 131 -1280 -1016.50000
+                  131'
+                tex = "common/nodraw"
+                Contents = "134217729"
+                Flags = "0"
+                Value = "0"
+                tv = '0 0 0 -64 64 0'
+              }
+              face:f =
+              {
+                v = '-1408 -1016.50000 142 -1280 -1016.50000 142 -1408 -888.50000
+                  142'
+                tex = "common/nodraw"
+                Contents = "134217729"
+                Flags = "0"
+                Value = "0"
+                tv = '0 0 0 64 64 0'
+              }
+            }
+            poly:p =
+            {
+              face:f =
+              {
+                v = '-8.99982 1014.75000 -12 -8.99982 1014.75000 116 -8.99986 886.75000
+                  -12'
+                tex = "common/nodraw"
+                Contents = "134217729"
+                Flags = "0"
+                Value = "0"
+                tv = '0 0 -63.99999 0 0 -64'
+              }
+              face:f =
+              {
+                v = '-18.99989 1014.75000 -12 -18.99989 886.75000 -12 -18.99989
+                  1014.75000 116'
+                tex = "common/nodraw"
+                Contents = "134217729"
+                Flags = "0"
+                Value = "0"
+                tv = '0 0 64 0 0 -64'
+              }
+              face:f =
+              {
+                v = '1380 4.49972 -12 1252 4.49975 -12 1380 4.49972 116'
+                tex = "base_wall/glass01"
+                Contents = "134217729"
+                Flags = "0"
+                Value = "0"
+                tv = '1389 -143 1399 -143 1389 -154'
+              }
+              face:f =
+              {
+                v = '1380 4.00032 -12 1380 4.00032 116 1252 4.00029 -12'
+                tex = "common/nodraw"
+                Contents = "134217729"
+                Flags = "0"
+                Value = "0"
+                tv = '0.00011 0 -63.99990 0 0.00011 -64'
+              }
+              face:f =
+              {
+                v = '1380 1014.75000 131 1380 886.74990 131 1252 1014.75000 131'
+                tex = "common/nodraw"
+                Contents = "134217729"
+                Flags = "0"
+                Value = "0"
+                tv = '0 0 0 64 -64 0'
+              }
+              face:f =
+              {
+                v = '1380 1014.75000 142 1252 1014.75000 142 1380 886.74990 142'
+                tex = "common/nodraw"
+                Contents = "134217729"
+                Flags = "0"
+                Value = "0"
+                tv = '0 0 0 -64 -64 0'
+              }
+            }
+            poly:p =
+            {
+              face:f =
+              {
+                v = '-1029.75000 3.99978 -12 -1029.75000 3.99978 116 -901.74980
+                  3.99978 -12'
+                tex = "common/nodraw"
+                Contents = "134217729"
+                Flags = "0"
+                Value = "0"
+                tv = '-0.00007 0 -64.00007 0 -0.00007 -64'
+              }
+              face:f =
+              {
+                v = '-1029.75000 -6.00029 -12 -901.74960 -6.00023 -12 -1029.75000
+                  -6.00029 116'
+                tex = "common/nodraw"
+                Contents = "134217729"
+                Flags = "0"
+                Value = "0"
+                tv = '-0.00005 0 63.99995 0 -0.00005 -64'
+              }
+              face:f =
+              {
+                v = '-19.49882 1393 -12 -19.49892 1265 -12 -19.49882 1393 116'
+                tex = "base_wall/glass01"
+                Contents = "134217729"
+                Flags = "0"
+                Value = "0"
+                tv = '1389 -143 1399 -143 1389 -154'
+              }
+              face:f =
+              {
+                v = '-19.00039 1393 -12 -19.00039 1393 116 -19.00036 1265 -12'
+                tex = "common/nodraw"
+                Contents = "134217729"
+                Flags = "0"
+                Value = "0"
+                tv = '0 0 -64.00002 0 0 -64'
+              }
+              face:f =
+              {
+                v = '-1029.75000 1393 131 -901.74960 1393 131 -1029.75000 1265
+                  131'
+                tex = "common/nodraw"
+                Contents = "134217729"
+                Flags = "0"
+                Value = "0"
+                tv = '0 0.00017 -64 0.00017 0 -63.99982'
+              }
+              face:f =
+              {
+                v = '-1029.75000 1393 142 -1029.75000 1265 142 -901.74960 1393
+                  142'
+                tex = "common/nodraw"
+                Contents = "134217729"
+                Flags = "0"
+                Value = "0"
+                tv = '0 -0.00017 -64 -0.00017 0 63.99982'
+              }
+            }
+            poly:p =
+            {
+              face:f =
+              {
+                v = '1001.50000 -6.00021 -12 1001.50000 -6.00021 116 873.49980
+                  -6.00019 -12'
+                tex = "common/nodraw"
+                Contents = "134217729"
+                Flags = "0"
+                Value = "0"
+                tv = '0.00005 0 -63.99995 0 0.00005 -64'
+              }
+              face:f =
+              {
+                v = '1001.50000 3.99982 -12 873.49980 3.99980 -12 1001.50000 3.99982
+                  116'
+                tex = "common/nodraw"
+                Contents = "134217729"
+                Flags = "0"
+                Value = "0"
+                tv = '-0.00005 0 63.99995 0 -0.00005 -64'
+              }
+              face:f =
+              {
+                v = '-8.50027 -1395 -12 -8.50018 -1267 -12 -8.50027 -1395 116'
+                tex = "base_wall/glass01"
+                Contents = "134217729"
+                Flags = "0"
+                Value = "0"
+                tv = '1389 -143 1399 -143 1389 -154'
+              }
+              face:f =
+              {
+                v = '-9.00018 -1395 -12 -9.00018 -1395 116 -9.00022 -1267 -12'
+                tex = "common/nodraw"
+                Contents = "134217729"
+                Flags = "0"
+                Value = "0"
+                tv = '-0.00005 0 -64.00005 0 -0.00005 -64'
+              }
+              face:f =
+              {
+                v = '1001.50000 -1395 131 873.49980 -1395 131 1001.50000 -1267
+                  131'
+                tex = "common/nodraw"
+                Contents = "134217729"
+                Flags = "0"
+                Value = "0"
+                tv = '0.00005 -0.00005 64.00005 -0.00005 0.00005 63.99995'
+              }
+              face:f =
+              {
+                v = '1001.50000 -1395 142 1001.50000 -1267 142 873.49980 -1395
+                  142'
+                tex = "common/nodraw"
+                Contents = "134217729"
+                Flags = "0"
+                Value = "0"
+                tv = '0.00005 0.00005 64.00005 0.00005 0.00005 -63.99995'
+              }
+            }
+            poly:p =
+            {
+              face:f =
+              {
+                v = '1029.50000 -6.00021 -12 1029.50000 -6.00021 116 901.49980
+                  -6.00019 -12'
+                tex = "common/nodraw"
+                Contents = "134217729"
+                Flags = "0"
+                Value = "0"
+                tv = '0.00005 0 -63.99995 0 0.00005 -64'
+              }
+              face:f =
+              {
+                v = '1029.50000 3.99982 -12 901.49980 3.99980 -12 1029.50000 3.99982
+                  116'
+                tex = "common/nodraw"
+                Contents = "134217729"
+                Flags = "0"
+                Value = "0"
+                tv = '-0.00005 0 63.99995 0 -0.00005 -64'
+              }
+              face:f =
+              {
+                v = '19.49973 -1395 -12 19.49982 -1267 -12 19.49973 -1395 116'
+                tex = "base_wall/glass01"
+                Contents = "134217729"
+                Flags = "0"
+                Value = "0"
+                tv = '1389 -143 1399 -143 1389 -154'
+              }
+              face:f =
+              {
+                v = '18.99982 -1395 -12 18.99982 -1395 116 18.99978 -1267 -12'
+                tex = "common/nodraw"
+                Contents = "134217729"
+                Flags = "0"
+                Value = "0"
+                tv = '-0.00005 0 -64.00005 0 -0.00005 -64'
+              }
+              face:f =
+              {
+                v = '1029.50000 -1395 131 901.49980 -1395 131 1029.50000 -1267
+                  131'
+                tex = "common/nodraw"
+                Contents = "134217729"
+                Flags = "0"
+                Value = "0"
+                tv = '0.00005 -0.00005 64.00005 -0.00005 0.00005 63.99995'
+              }
+              face:f =
+              {
+                v = '1029.50000 -1395 142 1029.50000 -1267 142 901.49980 -1395
+                  142'
+                tex = "common/nodraw"
+                Contents = "134217729"
+                Flags = "0"
+                Value = "0"
+                tv = '0.00005 0.00005 64.00005 0.00005 0.00005 -63.99995'
+              }
+            }
+          }
+          poly:p =
+          {
+            face:f =
+            {
+              v = '8 -7 142 20 5 142 32 5 142'
+              tex = "base_wall/chrome_metal"
+              Contents = "1"
+              Flags = "0"
+              Value = "0"
+              tv = '-49 44 -49 -20 15 44'
+            }
+            face:f =
+            {
+              v = '18 -5 144 10 11 144 10 3 144'
+              tex = "base_wall/chrome_metal"
+              Contents = "1"
+              Flags = "0"
+              Value = "0"
+              tv = '13 -54 13 10 77 -54'
+            }
+            face:f =
+            {
+              v = '20 5 142 -2 3 144 10 3 144'
+              tex = "base_wall/chrome_metal"
+              Contents = "1"
+              Flags = "0"
+              Value = "0"
+              tv = '-8 4.24317 -72 4.24317 -8 68.24316'
+            }
+            face:f =
+            {
+              v = '18 -5 144 8 -7 142 16 -7 142'
+              tex = "base_wall/chrome_metal"
+              Contents = "1"
+              Flags = "0"
+              Value = "0"
+              tv = '10 39.30175 74 39.30175 10 -24.69825'
+            }
+            face:f =
+            {
+              v = '18 -5 144 20 5 142 20 13 142'
+              tex = "base_wall/chrome_metal"
+              Contents = "1"
+              Flags = "0"
+              Value = "0"
+              tv = '13 39.79197 77 39.79197 13 -24.20803'
+            }
+            face:f =
+            {
+              v = '8 -7 142 10 -8.60350 144 10 3 144'
+              tex = "base_wall/chrome_metal"
+              Contents = "1"
+              Flags = "0"
+              Value = "0"
+              tv = '-15 62.48798 -15 -1.51202 -79 62.48798'
+            }
+          }
+          light:e =
+          {
+            origin = "-14 -1 136"
+            light = "300"
+            _color = "1 0.5 0"
+          }
+          light:e =
+          {
+            origin = "14 -1 136"
+            light = "300"
+            _color = "1 0.5 0"
+          }
+        }
+      }
+      Mapobjects.qtxfolder =
+      {
+        Orange Trashcan:g =
+        {
+          misc_model:e =
+          {
+            origin = "-128 0 -91"
+            model = "/models/mapobjects/urbanterror/trashcan/trashcan2.md3"
+            angle = "90"
+          }
+          ClipBrushes:g =
+          {
+            clip:p =
+            {
+              side:f =
+              {
+                v = '-140 -82 -28 -140 -146 -28 -140 -82 36'
+                tex = "common/full_clip"
+              }
+              side:f =
+              {
+                v = '-80 46 -47 -16 46 -47 -80 110 -47'
+                tex = "common/full_clip"
+              }
+              side:f =
+              {
+                v = '-116 46 20 -116 110 20 -116 46 84'
+                tex = "common/full_clip"
+              }
+              side:f =
+              {
+                v = '-48 -82 -91 16 -82 -91 -48 -146 -91'
+                tex = "common/full_clip"
+              }
+              front:f =
+              {
+                v = '-80 -10 -28 -16 -10 -28 -80 -10 36'
+                tex = "common/full_clip"
+              }
+              back:f =
+              {
+                v = '-208 10 20 -272 10 20 -208 10 84'
+                tex = "common/full_clip"
+              }
+            }
+            clip:p =
+            {
+              side:f =
+              {
+                v = '-140 -82 -28 -140 -146 -28 -140 -82 36'
+                tex = "common/weapclip"
+              }
+              side:f =
+              {
+                v = '-80 46 -47 -16 46 -47 -80 110 -47'
+                tex = "common/weapclip"
+              }
+              side:f =
+              {
+                v = '-116 46 20 -116 110 20 -116 46 84'
+                tex = "common/weapclip"
+              }
+              side:f =
+              {
+                v = '-48 -82 -91 16 -82 -91 -48 -146 -91'
+                tex = "common/weapclip"
+              }
+              front:f =
+              {
+                v = '-80 -10 -28 -16 -10 -28 -80 -10 36'
+                tex = "common/weapclip"
+              }
+              back:f =
+              {
+                v = '-208 10 20 -272 10 20 -208 10 84'
+                tex = "common/weapclip"
+              }
+            }
+          }
+        }
+        Grey Trashcan:g =
+        {
+          misc_model:e =
+          {
+            origin = "0 0 -27"
+            model = "/models/mapobjects/urbanterror/trashcan/trashcan1.md3"
+            angle = "90"
+          }
+          ClipBrushes:g =
+          {
+            clip:p =
+            {
+              side:f =
+              {
+                v = '-12 -114 68 -12 -146 68 -12 -114 100'
+                tex = "common/full_clip"
+              }
+              side:f =
+              {
+                v = '80 78 17 112 78 17 80 110 17'
+                tex = "common/full_clip"
+              }
+              side:f =
+              {
+                v = '12 78 116 12 110 116 12 78 148'
+                tex = "common/full_clip"
+              }
+              side:f =
+              {
+                v = '112 -114 -27 144 -114 -27 112 -146 -27'
+                tex = "common/full_clip"
+              }
+              front:f =
+              {
+                v = '80 -10 68 112 -10 68 80 -10 100'
+                tex = "common/full_clip"
+              }
+              back:f =
+              {
+                v = '-112 10 116 -144 10 116 -112 10 148'
+                tex = "common/full_clip"
+              }
+            }
+            clip:p =
+            {
+              side:f =
+              {
+                v = '-12 -114 68 -12 -146 68 -12 -114 100'
+                tex = "common/weapclip"
+              }
+              side:f =
+              {
+                v = '80 78 17 112 78 17 80 110 17'
+                tex = "common/weapclip"
+              }
+              side:f =
+              {
+                v = '12 78 116 12 110 116 12 78 148'
+                tex = "common/weapclip"
+              }
+              side:f =
+              {
+                v = '112 -114 -27 144 -114 -27 112 -146 -27'
+                tex = "common/weapclip"
+              }
+              front:f =
+              {
+                v = '80 -10 68 112 -10 68 80 -10 100'
+                tex = "common/weapclip"
+              }
+              back:f =
+              {
+                v = '-112 10 116 -144 10 116 -112 10 148'
+                tex = "common/weapclip"
+              }
+            }
+          }
+        }
+        Forklift:g =
+        {
+          ClipBrushes:g =
+          {
+            new cube:p =
+            {
+              east:f =
+              {
+                v = '40 100 64 40 132 64 40 100 96'
+                tex = "common/full_clip"
+              }
+              west:f =
+              {
+                v = '-48 -100 64 -48 -132 64 -48 -100 96'
+                tex = "common/full_clip"
+              }
+              north:f =
+              {
+                v = '-104 28 64 -136 28 64 -104 28 96'
+                tex = "common/full_clip"
+              }
+              south:f =
+              {
+                v = '88 -16 64 120 -16 64 88 -16 96'
+                tex = "common/full_clip"
+              }
+              up:f =
+              {
+                v = '88 100 -68 120 100 -68 88 132 -68'
+                tex = "common/full_clip"
+              }
+              down:f =
+              {
+                v = '88 -92 -96 120 -92 -96 88 -124 -96'
+                tex = "common/full_clip"
+              }
+            }
+            new cube:p =
+            {
+              east:f =
+              {
+                v = '-32 100 110 -32 132 110 -32 100 142'
+                tex = "common/full_clip"
+              }
+              west:f =
+              {
+                v = '-48 -100 110 -48 -132 110 -48 -100 142'
+                tex = "common/full_clip"
+              }
+              north:f =
+              {
+                v = '-104 28 110 -136 28 110 -104 28 142'
+                tex = "common/full_clip"
+              }
+              south:f =
+              {
+                v = '88 -16 110 120 -16 110 88 -16 142'
+                tex = "common/full_clip"
+              }
+              up:f =
+              {
+                v = '88 100 0 120 100 0 88 132 0'
+                tex = "common/full_clip"
+              }
+              down:f =
+              {
+                v = '88 -92 -68 120 -92 -68 88 -124 -68'
+                tex = "common/full_clip"
+              }
+            }
+            new cube:p =
+            {
+              east:f =
+              {
+                v = '40 100 110 40 132 110 40 100 142'
+                tex = "common/full_clip"
+              }
+              west:f =
+              {
+                v = '32 -100 110 32 -132 110 32 -100 142'
+                tex = "common/full_clip"
+              }
+              north:f =
+              {
+                v = '-32 28 110 -64 28 110 -32 28 142'
+                tex = "common/full_clip"
+              }
+              south:f =
+              {
+                v = '160 -16 110 192 -16 110 160 -16 142'
+                tex = "common/full_clip"
+              }
+              up:f =
+              {
+                v = '160 100 0 192 100 0 160 132 0'
+                tex = "common/full_clip"
+              }
+              down:f =
+              {
+                v = '160 -92 -68 192 -92 -68 160 -124 -68'
+                tex = "common/full_clip"
+              }
+            }
+            new cube:p =
+            {
+              east:f =
+              {
+                v = '-36.24155 116 113.97750 -36.24155 148 113.97750 -47.47750
+                  116 143.94000'
+                tex = "common/full_clip"
+              }
+              west:f =
+              {
+                v = '-49.85952 -132 128.95870 -49.85952 -164 128.95870 -61.09547
+                  -132 158.92130'
+                tex = "common/full_clip"
+              }
+              north:f =
+              {
+                v = '-64 28 106 -96 28 106 -64 28 138'
+                tex = "common/full_clip"
+              }
+              south:f =
+              {
+                v = '128 -16 106 160 -16 106 128 -16 138'
+                tex = "common/full_clip"
+              }
+              up:f =
+              {
+                v = '128 100 -4 160 100 -4 128 132 -4'
+                tex = "common/full_clip"
+              }
+              down:f =
+              {
+                v = '175.75100 -140 -48 207.75100 -140 -48 175.75100 -172 -48'
+                tex = "common/full_clip"
+              }
+            }
+            new cube:p =
+            {
+              east:f =
+              {
+                v = '8 100 110 8 132 110 8 100 142'
+                tex = "common/full_clip"
+              }
+              west:f =
+              {
+                v = '-32 -100 110 -32 -132 110 -32 -100 142'
+                tex = "common/full_clip"
+              }
+              north:f =
+              {
+                v = '-88 28 110 -120 28 110 -88 28 142'
+                tex = "common/full_clip"
+              }
+              south:f =
+              {
+                v = '104 -16 110 136 -16 110 104 -16 142'
+                tex = "common/full_clip"
+              }
+              up:f =
+              {
+                v = '104 100 0 136 100 0 104 132 0'
+                tex = "common/full_clip"
+              }
+              down:f =
+              {
+                v = '104 -92 -4 136 -92 -4 104 -124 -4'
+                tex = "common/full_clip"
+              }
+            }
+            new cube:p =
+            {
+              east:f =
+              {
+                v = '-8 100 110 -8 132 110 -8 100 142'
+                tex = "common/full_clip"
+              }
+              west:f =
+              {
+                v = '-32 -100 110 -32 -132 110 -32 -100 142'
+                tex = "common/full_clip"
+              }
+              north:f =
+              {
+                v = '-88 28 110 -120 28 110 -88 28 142'
+                tex = "common/full_clip"
+              }
+              south:f =
+              {
+                v = '104 -16 110 136 -16 110 104 -16 142'
+                tex = "common/full_clip"
+              }
+              up:f =
+              {
+                v = '104 100 -48 136 100 -48 104 132 -48'
+                tex = "common/full_clip"
+              }
+              down:f =
+              {
+                v = '104 -92 -68 136 -92 -68 104 -124 -68'
+                tex = "common/full_clip"
+              }
+            }
+            new cube:p =
+            {
+              east:f =
+              {
+                v = '32 100 110 32 132 110 32 100 142'
+                tex = "common/full_clip"
+              }
+              west:f =
+              {
+                v = '14 -100 110 14 -132 110 14 -100 142'
+                tex = "common/full_clip"
+              }
+              north:f =
+              {
+                v = '-48 28 110 -80 28 110 -48 28 142'
+                tex = "common/full_clip"
+              }
+              south:f =
+              {
+                v = '144 -16 110 176 -16 110 144 -16 142'
+                tex = "common/full_clip"
+              }
+              up:f =
+              {
+                v = '144 100 -48 176 100 -48 144 132 -48'
+                tex = "common/full_clip"
+              }
+              down:f =
+              {
+                v = '144 -92 -68 176 -92 -68 144 -124 -68'
+                tex = "common/full_clip"
+              }
+            }
+            new cube:p =
+            {
+              east:f =
+              {
+                v = '44 94 82 44 126 82 44 94 114'
+                tex = "common/full_clip"
+              }
+              west:f =
+              {
+                v = '40 -106 82 40 -138 82 40 -106 114'
+                tex = "common/full_clip"
+              }
+              north:f =
+              {
+                v = '-22 22 82 -54 22 82 -22 22 114'
+                tex = "common/full_clip"
+              }
+              south:f =
+              {
+                v = '170 14 82 202 14 82 170 14 114'
+                tex = "common/full_clip"
+              }
+              up:f =
+              {
+                v = '170 94 -62 202 94 -62 170 126 -62'
+                tex = "common/full_clip"
+              }
+              down:f =
+              {
+                v = '170 -98 -96 202 -98 -96 170 -130 -96'
+                tex = "common/full_clip"
+              }
+            }
+            new cube:p =
+            {
+              east:f =
+              {
+                v = '44 70 82 44 102 82 44 70 114'
+                tex = "common/full_clip"
+              }
+              west:f =
+              {
+                v = '40 -130 82 40 -162 82 40 -130 114'
+                tex = "common/full_clip"
+              }
+              north:f =
+              {
+                v = '-22 -2 82 -54 -2 82 -22 -2 114'
+                tex = "common/full_clip"
+              }
+              south:f =
+              {
+                v = '170 -10 82 202 -10 82 170 -10 114'
+                tex = "common/full_clip"
+              }
+              up:f =
+              {
+                v = '170 70 -62 202 70 -62 170 102 -62'
+                tex = "common/full_clip"
+              }
+              down:f =
+              {
+                v = '170 -122 -96 202 -122 -96 170 -154 -96'
+                tex = "common/full_clip"
+              }
+            }
+            new cube:p =
+            {
+              east:f =
+              {
+                v = '-22.00002 110 144.36070 -22.00002 142 144.36070 -22.00002
+                  110 176.36070'
+                tex = "common/full_clip"
+              }
+              west:f =
+              {
+                v = '-32 -122 112 -32 -154 112 -32 -122 144'
+                tex = "common/full_clip"
+              }
+              north:f =
+              {
+                v = '-94 16 112 -126 16 112 -94 16 144'
+                tex = "common/full_clip"
+              }
+              south:f =
+              {
+                v = '98 -4 112 130 -4 112 98 -4 144'
+                tex = "common/full_clip"
+              }
+              up:f =
+              {
+                v = '114 94 -24 146 94 -24 114 126 -24'
+                tex = "common/full_clip"
+              }
+              down:f =
+              {
+                v = '114 -130 -48 146 -130 -48 114 -162 -48'
+                tex = "common/full_clip"
+              }
+            }
+            new cube:p =
+            {
+              east:f =
+              {
+                v = '-8.00002 110 128.36070 -8.00002 142 128.36070 -8.00002 110
+                  160.36070'
+                tex = "common/full_clip"
+              }
+              west:f =
+              {
+                v = '-22 -122 96 -22 -154 96 -22 -122 128'
+                tex = "common/full_clip"
+              }
+              north:f =
+              {
+                v = '-84 16 96 -116 16 96 -84 16 128'
+                tex = "common/full_clip"
+              }
+              south:f =
+              {
+                v = '108 -4 96 140 -4 96 108 -4 128'
+                tex = "common/full_clip"
+              }
+              up:f =
+              {
+                v = '124 94 -40 156 94 -40 124 126 -40'
+                tex = "common/full_clip"
+              }
+              down:f =
+              {
+                v = '124 -130 -48 156 -130 -48 124 -162 -48'
+                tex = "common/full_clip"
+              }
+            }
+            new cube:p =
+            {
+              east:f =
+              {
+                v = '-80.82626 102 52.82628 -80.82626 134 52.82628 -103.45370 102
+                  75.45370'
+                tex = "common/full_clip"
+              }
+              west:f =
+              {
+                v = '44 -130 82 44 -162 82 44 -130 114'
+                tex = "common/full_clip"
+              }
+              north:f =
+              {
+                v = '-18 -2 82 -50 -2 82 -18 -2 114'
+                tex = "common/full_clip"
+              }
+              south:f =
+              {
+                v = '174 -10 82 206 -10 82 174 -10 114'
+                tex = "common/full_clip"
+              }
+              up:f =
+              {
+                v = '189.40040 86 -105.21820 221.26900 86 -108.11530 189.40040
+                  118 -105.21820'
+                tex = "common/full_clip"
+              }
+              down:f =
+              {
+                v = '190 -138 -96 222 -138 -96 190 -170 -96'
+                tex = "common/full_clip"
+              }
+            }
+            new cube:p =
+            {
+              east:f =
+              {
+                v = '-80.82626 126 52.82628 -80.82626 158 52.82628 -103.45370 126
+                  75.45370'
+                tex = "common/full_clip"
+              }
+              west:f =
+              {
+                v = '44 -106 82 44 -138 82 44 -106 114'
+                tex = "common/full_clip"
+              }
+              north:f =
+              {
+                v = '-18 22 82 -50 22 82 -18 22 114'
+                tex = "common/full_clip"
+              }
+              south:f =
+              {
+                v = '174 14 82 206 14 82 174 14 114'
+                tex = "common/full_clip"
+              }
+              up:f =
+              {
+                v = '189.40040 110 -105.21820 221.26900 110 -108.11530 189.40040
+                  142 -105.21820'
+                tex = "common/full_clip"
+              }
+              down:f =
+              {
+                v = '190 -114 -96 222 -114 -96 190 -146 -96'
+                tex = "common/full_clip"
+              }
+            }
+          }
+          misc_model:e =
+          {
+            origin = "0 0 -96"
+            model = "\models\mapobjects\urbanterror\forklift\forklift.md3"
+          }
+        }
+        Swat Truck:g =
+        {
+          ClipBrushes:g =
+          {
+            poly:p =
+            {
+              face:f =
+              {
+                v = '-132 152 -24 -4 152 -24 -132 280 -24'
+                tex = "common/full_clip"
+                Contents = "1"
+                Flags = "0"
+                Value = "0"
+              }
+              face:f =
+              {
+                v = '-132 152 -46 -132 280 -46 -4 152 -46'
+                tex = "common/full_clip"
+                Contents = "1"
+                Flags = "0"
+                Value = "0"
+                m = "1"
+              }
+              face:f =
+              {
+                v = '-132 -23 -96 -132 -23 32 -4 -23 -96'
+                tex = "common/full_clip"
+                Contents = "1"
+                Flags = "0"
+                Value = "0"
+                m = "1"
+              }
+              face:f =
+              {
+                v = '-132 -24 -96 -4 -24 -96 -132 -24 32'
+                tex = "common/full_clip"
+                Contents = "1"
+                Flags = "0"
+                Value = "0"
+              }
+              face:f =
+              {
+                v = '87 152 -96 87 280 -96 87 152 32'
+                tex = "common/full_clip"
+                Contents = "1"
+                Flags = "0"
+                Value = "0"
+              }
+              face:f =
+              {
+                v = '68 152 -96 68 152 32 68 280 -96'
+                tex = "common/full_clip"
+                Contents = "1"
+                Flags = "0"
+                Value = "0"
+                m = "1"
+              }
+            }
+            poly:p =
+            {
+              face:f =
+              {
+                v = '-132 152 -24 -4 152 -24 -132 280 -24'
+                tex = "common/full_clip"
+                Contents = "1"
+                Flags = "0"
+                Value = "0"
+              }
+              face:f =
+              {
+                v = '-132 152 -46 -132 280 -46 -4 152 -46'
+                tex = "common/full_clip"
+                Contents = "1"
+                Flags = "0"
+                Value = "0"
+                m = "1"
+              }
+              face:f =
+              {
+                v = '-132 26 -96 -132 26 32 -4 26 -96'
+                tex = "common/full_clip"
+                Contents = "1"
+                Flags = "0"
+                Value = "0"
+                m = "1"
+              }
+              face:f =
+              {
+                v = '-132 25 -96 -4 25 -96 -132 25 32'
+                tex = "common/full_clip"
+                Contents = "1"
+                Flags = "0"
+                Value = "0"
+              }
+              face:f =
+              {
+                v = '87 152 -96 87 280 -96 87 152 32'
+                tex = "common/full_clip"
+                Contents = "1"
+                Flags = "0"
+                Value = "0"
+              }
+              face:f =
+              {
+                v = '68 152 -96 68 152 32 68 280 -96'
+                tex = "common/full_clip"
+                Contents = "1"
+                Flags = "0"
+                Value = "0"
+                m = "1"
+              }
+            }
+            poly:p =
+            {
+              face:f =
+              {
+                v = '-132 152 -79 -4 152 -79 -132 280 -79'
+                tex = "common/full_clip"
+                Contents = "1"
+                Flags = "0"
+                Value = "0"
+              }
+              face:f =
+              {
+                v = '-132 152 -96 -132 280 -96 -4 152 -96'
+                tex = "common/full_clip"
+                Contents = "1"
+                Flags = "0"
+                Value = "0"
+                m = "1"
+              }
+              face:f =
+              {
+                v = '-132 42 -96 -132 42 32 -4 42 -96'
+                tex = "common/full_clip"
+                Contents = "1"
+                Flags = "0"
+                Value = "0"
+                m = "1"
+              }
+              face:f =
+              {
+                v = '-132 -40 -96 -4 -40 -96 -132 -40 32'
+                tex = "common/full_clip"
+                Contents = "1"
+                Flags = "0"
+                Value = "0"
+              }
+              face:f =
+              {
+                v = '68 152 -96 68 280 -96 68 152 32'
+                tex = "common/full_clip"
+                Contents = "1"
+                Flags = "0"
+                Value = "0"
+              }
+              face:f =
+              {
+                v = '-112 152 -96 -112 152 32 -112 280 -96'
+                tex = "common/full_clip"
+                Contents = "1"
+                Flags = "0"
+                Value = "0"
+                m = "1"
+              }
+            }
+            poly:p =
+            {
+              face:f =
+              {
+                v = '-140.94440 152 -96 -69.83430 152 32 -140.94440 280 -96'
+                tex = "common/full_clip"
+                Contents = "1"
+                Flags = "0"
+                Value = "0"
+                m = "1"
+              }
+              face:f =
+              {
+                v = '114.54750 152 -96 114.54750 280 -96 43.44627 152 32'
+                tex = "common/full_clip"
+                Contents = "1"
+                Flags = "0"
+                Value = "0"
+              }
+              face:f =
+              {
+                v = '-132 152 -3 -4 152 -3 -132 280 -3'
+                tex = "common/full_clip"
+                Contents = "1"
+                Flags = "0"
+                Value = "0"
+              }
+              face:f =
+              {
+                v = '-132 152 -12 -132 280 -12 -4 152 -12'
+                tex = "common/full_clip"
+                Contents = "1"
+                Flags = "0"
+                Value = "0"
+                m = "1"
+              }
+              face:f =
+              {
+                v = '-132 42 -96 -132 42 32 -4 42 -96'
+                tex = "common/full_clip"
+                Contents = "1"
+                Flags = "0"
+                Value = "0"
+                m = "1"
+              }
+              face:f =
+              {
+                v = '-132 -40 -96 -4 -40 -96 -132 -40 32'
+                tex = "common/full_clip"
+                Contents = "1"
+                Flags = "0"
+                Value = "0"
+              }
+            }
+            poly:p =
+            {
+              face:f =
+              {
+                v = '-132 152 -74 -4 152 -74 -132 280 -74'
+                tex = "common/full_clip"
+                Contents = "1"
+                Flags = "0"
+                Value = "0"
+              }
+              face:f =
+              {
+                v = '-132 152 -96 -132 280 -96 -4 152 -96'
+                tex = "common/full_clip"
+                Contents = "1"
+                Flags = "0"
+                Value = "0"
+                m = "1"
+              }
+              face:f =
+              {
+                v = '-132 42 -96 -132 42 32 -4 42 -96'
+                tex = "common/full_clip"
+                Contents = "1"
+                Flags = "0"
+                Value = "0"
+                m = "1"
+              }
+              face:f =
+              {
+                v = '-132 -40 -96 -4 -40 -96 -132 -40 32'
+                tex = "common/full_clip"
+                Contents = "1"
+                Flags = "0"
+                Value = "0"
+              }
+              face:f =
+              {
+                v = '-112 152 -96 -112 280 -96 -112 152 32'
+                tex = "common/full_clip"
+                Contents = "1"
+                Flags = "0"
+                Value = "0"
+              }
+              face:f =
+              {
+                v = '-129 152 -96 -129 152 32 -129 280 -96'
+                tex = "common/full_clip"
+                Contents = "1"
+                Flags = "0"
+                Value = "0"
+                m = "1"
+              }
+            }
+            poly:p =
+            {
+              face:f =
+              {
+                v = '-132 152 -12 -4 152 -12 -132 280 -12'
+                tex = "common/full_clip"
+                Contents = "1"
+                Flags = "0"
+                Value = "0"
+              }
+              face:f =
+              {
+                v = '-132 152 -74 -132 280 -74 -4 152 -74'
+                tex = "common/full_clip"
+                Contents = "1"
+                Flags = "0"
+                Value = "0"
+                m = "1"
+              }
+              face:f =
+              {
+                v = '-132 42 -96 -132 42 32 -4 42 -96'
+                tex = "common/full_clip"
+                Contents = "1"
+                Flags = "0"
+                Value = "0"
+                m = "1"
+              }
+              face:f =
+              {
+                v = '-132 38 -96 -4 38 -96 -132 38 32'
+                tex = "common/full_clip"
+                Contents = "1"
+                Flags = "0"
+                Value = "0"
+              }
+              face:f =
+              {
+                v = '68 152 -96 68 280 -96 68 152 32'
+                tex = "common/full_clip"
+                Contents = "1"
+                Flags = "0"
+                Value = "0"
+              }
+              face:f =
+              {
+                v = '-94 152 -96 -94 152 32 -94 280 -96'
+                tex = "common/full_clip"
+                Contents = "1"
+                Flags = "0"
+                Value = "0"
+                m = "1"
+              }
+            }
+            poly:p =
+            {
+              face:f =
+              {
+                v = '-132 152 -12 -4 152 -12 -132 280 -12'
+                tex = "common/full_clip"
+                Contents = "1"
+                Flags = "0"
+                Value = "0"
+              }
+              face:f =
+              {
+                v = '-132 152 -74 -132 280 -74 -4 152 -74'
+                tex = "common/full_clip"
+                Contents = "1"
+                Flags = "0"
+                Value = "0"
+                m = "1"
+              }
+              face:f =
+              {
+                v = '-132 -36 -96 -132 -36 32 -4 -36 -96'
+                tex = "common/full_clip"
+                Contents = "1"
+                Flags = "0"
+                Value = "0"
+                m = "1"
+              }
+              face:f =
+              {
+                v = '-132 -40 -96 -4 -40 -96 -132 -40 32'
+                tex = "common/full_clip"
+                Contents = "1"
+                Flags = "0"
+                Value = "0"
+              }
+              face:f =
+              {
+                v = '68 152 -96 68 280 -96 68 152 32'
+                tex = "common/full_clip"
+                Contents = "1"
+                Flags = "0"
+                Value = "0"
+              }
+              face:f =
+              {
+                v = '-94 152 -96 -94 152 32 -94 280 -96'
+                tex = "common/full_clip"
+                Contents = "1"
+                Flags = "0"
+                Value = "0"
+                m = "1"
+              }
+            }
+            poly:p =
+            {
+              face:f =
+              {
+                v = '-132 152 -49.48029 -4 152 9.17814 -132 280 -49.48029'
+                tex = "common/full_clip"
+                Contents = "1"
+                Flags = "0"
+                Value = "0"
+              }
+              face:f =
+              {
+                v = '-132 152 -74 -132 280 -74 -4 152 -74'
+                tex = "common/full_clip"
+                Contents = "1"
+                Flags = "0"
+                Value = "0"
+                m = "1"
+              }
+              face:f =
+              {
+                v = '-132 42 -96 -132 42 32 -4 42 -96'
+                tex = "common/full_clip"
+                Contents = "1"
+                Flags = "0"
+                Value = "0"
+                m = "1"
+              }
+              face:f =
+              {
+                v = '-132 -40 -96 -4 -40 -96 -132 -40 32'
+                tex = "common/full_clip"
+                Contents = "1"
+                Flags = "0"
+                Value = "0"
+              }
+              face:f =
+              {
+                v = '-94 152 -96 -94 280 -96 -94 152 32'
+                tex = "common/full_clip"
+                Contents = "1"
+                Flags = "0"
+                Value = "0"
+              }
+              face:f =
+              {
+                v = '-124 152 -96 -124 152 32 -124 280 -96'
+                tex = "common/full_clip"
+                Contents = "1"
+                Flags = "0"
+                Value = "0"
+                m = "1"
+              }
+            }
+            poly:p =
+            {
+              face:f =
+              {
+                v = '-132 152 -8 -4 152 -8 -132 280 -8'
+                tex = "common/full_clip"
+                Contents = "1"
+                Flags = "0"
+                Value = "0"
+              }
+              face:f =
+              {
+                v = '-132 152 -29 -132 280 -29 -4 152 -29'
+                tex = "common/full_clip"
+                Contents = "1"
+                Flags = "0"
+                Value = "0"
+                m = "1"
+              }
+              face:f =
+              {
+                v = '-132 60 -96 -132 60 32 -4 60 -96'
+                tex = "common/full_clip"
+                Contents = "1"
+                Flags = "0"
+                Value = "0"
+                m = "1"
+              }
+              face:f =
+              {
+                v = '-132 42 -96 -4 42 -96 -132 42 32'
+                tex = "common/full_clip"
+                Contents = "1"
+                Flags = "0"
+                Value = "0"
+              }
+              face:f =
+              {
+                v = '-81 152 -96 -81 280 -96 -81 152 32'
+                tex = "common/full_clip"
+                Contents = "1"
+                Flags = "0"
+                Value = "0"
+              }
+              face:f =
+              {
+                v = '-85 152 -96 -85 152 32 -85 280 -96'
+                tex = "common/full_clip"
+                Contents = "1"
+                Flags = "0"
+                Value = "0"
+                m = "1"
+              }
+            }
+            poly:p =
+            {
+              face:f =
+              {
+                v = '-132 152 -8 -4 152 -8 -132 280 -8'
+                tex = "common/full_clip"
+                Contents = "1"
+                Flags = "0"
+                Value = "0"
+              }
+              face:f =
+              {
+                v = '-132 152 -29 -132 280 -29 -4 152 -29'
+                tex = "common/full_clip"
+                Contents = "1"
+                Flags = "0"
+                Value = "0"
+                m = "1"
+              }
+              face:f =
+              {
+                v = '-132 -40 -96 -132 -40 32 -4 -40 -96'
+                tex = "common/full_clip"
+                Contents = "1"
+                Flags = "0"
+                Value = "0"
+                m = "1"
+              }
+              face:f =
+              {
+                v = '-132 -58 -96 -4 -58 -96 -132 -58 32'
+                tex = "common/full_clip"
+                Contents = "1"
+                Flags = "0"
+                Value = "0"
+              }
+              face:f =
+              {
+                v = '-81 152 -96 -81 280 -96 -81 152 32'
+                tex = "common/full_clip"
+                Contents = "1"
+                Flags = "0"
+                Value = "0"
+              }
+              face:f =
+              {
+                v = '-85 152 -96 -85 152 32 -85 280 -96'
+                tex = "common/full_clip"
+                Contents = "1"
+                Flags = "0"
+                Value = "0"
+                m = "1"
+              }
+            }
+            poly:p =
+            {
+              face:f =
+              {
+                v = '-132 152 -51.00123 -132 280 -51.00123 -4 152 12.99004'
+                tex = "common/full_clip"
+                Contents = "1"
+                Flags = "0"
+                Value = "0"
+                m = "1"
+              }
+              face:f =
+              {
+                v = '-122.00010 152 -96 -79.33895 152 32 -122.00010 280 -96'
+                tex = "common/full_clip"
+                Contents = "1"
+                Flags = "0"
+                Value = "0"
+                m = "1"
+              }
+              face:f =
+              {
+                v = '-132 42 -96 -132 42 32 -4 42 -96'
+                tex = "common/full_clip"
+                Contents = "1"
+                Flags = "0"
+                Value = "0"
+                m = "1"
+              }
+              face:f =
+              {
+                v = '-132 -40 -96 -4 -40 -96 -132 -40 32'
+                tex = "common/full_clip"
+                Contents = "1"
+                Flags = "0"
+                Value = "0"
+              }
+              face:f =
+              {
+                v = '-94 152 -96 -94 280 -96 -94 152 32'
+                tex = "common/full_clip"
+                Contents = "1"
+                Flags = "0"
+                Value = "0"
+              }
+            }
+            poly:p =
+            {
+              face:f =
+              {
+                v = '-132 60.83864 -96 -132 18.19669 32 -4 60.83864 -96'
+                tex = "common/full_clip"
+                Contents = "1"
+                Flags = "0"
+                Value = "0"
+                m = "1"
+              }
+              face:f =
+              {
+                v = '-26.33471 152 -96 -26.33471 280 -96 -68.99588 152 32'
+                tex = "common/full_clip"
+                Contents = "1"
+                Flags = "0"
+                Value = "0"
+              }
+              face:f =
+              {
+                v = '-132 -68.00085 -96 -4 -68.00085 -96 -132 -14.66612 32'
+                tex = "common/full_clip"
+                Contents = "1"
+                Flags = "0"
+                Value = "0"
+              }
+              face:f =
+              {
+                v = '-110.87560 152 -96 -57.55286 152 32 -110.87560 280 -96'
+                tex = "common/full_clip"
+                Contents = "1"
+                Flags = "0"
+                Value = "0"
+                m = "1"
+              }
+              face:f =
+              {
+                v = '-132 152 9 -4 152 9 -132 280 9'
+                tex = "common/full_clip"
+                Contents = "1"
+                Flags = "0"
+                Value = "0"
+              }
+              face:f =
+              {
+                v = '-132 152 -3 -132 280 -3 -4 152 -3'
+                tex = "common/full_clip"
+                Contents = "1"
+                Flags = "0"
+                Value = "0"
+                m = "1"
+              }
+            }
+            poly:p =
+            {
+              face:f =
+              {
+                v = '-132 152 -79 -4 152 -79 -132 280 -79'
+                tex = "common/full_clip"
+                Contents = "1"
+                Flags = "0"
+                Value = "0"
+              }
+              face:f =
+              {
+                v = '-132 152 -96 -132 280 -96 -4 152 -96'
+                tex = "common/full_clip"
+                Contents = "1"
+                Flags = "0"
+                Value = "0"
+                m = "1"
+              }
+              face:f =
+              {
+                v = '-132 44 -96 -132 44 32 -4 44 -96'
+                tex = "common/full_clip"
+                Contents = "1"
+                Flags = "0"
+                Value = "0"
+                m = "1"
+              }
+              face:f =
+              {
+                v = '-132 -40 -96 -4 -40 -96 -132 -40 32'
+                tex = "common/full_clip"
+                Contents = "1"
+                Flags = "0"
+                Value = "0"
+              }
+              face:f =
+              {
+                v = '77 152 -96 77 280 -96 77 152 32'
+                tex = "common/full_clip"
+                Contents = "1"
+                Flags = "0"
+                Value = "0"
+              }
+              face:f =
+              {
+                v = '68 152 -96 68 152 32 68 280 -96'
+                tex = "common/full_clip"
+                Contents = "1"
+                Flags = "0"
+                Value = "0"
+                m = "1"
+              }
+            }
+            poly:p =
+            {
+              face:f =
+              {
+                v = '-132 152 -12 -4 152 -12 -132 280 -12'
+                tex = "common/full_clip"
+                Contents = "1"
+                Flags = "0"
+                Value = "0"
+              }
+              face:f =
+              {
+                v = '-132 152 -79 -132 280 -79 -4 152 -79'
+                tex = "common/full_clip"
+                Contents = "1"
+                Flags = "0"
+                Value = "0"
+                m = "1"
+              }
+              face:f =
+              {
+                v = '-132 -22 -96 -132 -22 32 -4 -22 -96'
+                tex = "common/full_clip"
+                Contents = "1"
+                Flags = "0"
+                Value = "0"
+                m = "1"
+              }
+              face:f =
+              {
+                v = '-132 -36 -96 -4 -36 -96 -132 -36 32'
+                tex = "common/full_clip"
+                Contents = "1"
+                Flags = "0"
+                Value = "0"
+              }
+              face:f =
+              {
+                v = '68 152 -96 68 280 -96 68 152 32'
+                tex = "common/full_clip"
+                Contents = "1"
+                Flags = "0"
+                Value = "0"
+              }
+              face:f =
+              {
+                v = '65 152 -96 65 152 32 65 280 -96'
+                tex = "common/full_clip"
+                Contents = "1"
+                Flags = "0"
+                Value = "0"
+                m = "1"
+              }
+            }
+            poly:p =
+            {
+              face:f =
+              {
+                v = '-132 152 -12 -4 152 -12 -132 280 -12'
+                tex = "common/full_clip"
+                Contents = "1"
+                Flags = "0"
+                Value = "0"
+              }
+              face:f =
+              {
+                v = '-132 152 -79 -132 280 -79 -4 152 -79'
+                tex = "common/full_clip"
+                Contents = "1"
+                Flags = "0"
+                Value = "0"
+                m = "1"
+              }
+              face:f =
+              {
+                v = '-132 38 -96 -132 38 32 -4 38 -96'
+                tex = "common/full_clip"
+                Contents = "1"
+                Flags = "0"
+                Value = "0"
+                m = "1"
+              }
+              face:f =
+              {
+                v = '-132 24 -96 -4 24 -96 -132 24 32'
+                tex = "common/full_clip"
+                Contents = "1"
+                Flags = "0"
+                Value = "0"
+              }
+              face:f =
+              {
+                v = '68 152 -96 68 280 -96 68 152 32'
+                tex = "common/full_clip"
+                Contents = "1"
+                Flags = "0"
+                Value = "0"
+              }
+              face:f =
+              {
+                v = '65 152 -96 65 152 32 65 280 -96'
+                tex = "common/full_clip"
+                Contents = "1"
+                Flags = "0"
+                Value = "0"
+                m = "1"
+              }
+            }
+            poly:p =
+            {
+              face:f =
+              {
+                v = '-132 152 -46 -4 152 -46 -132 280 -46'
+                tex = "common/full_clip"
+                Contents = "1"
+                Flags = "0"
+                Value = "0"
+              }
+              face:f =
+              {
+                v = '-132 152 -79 -132 280 -79 -4 152 -79'
+                tex = "common/full_clip"
+                Contents = "1"
+                Flags = "0"
+                Value = "0"
+                m = "1"
+              }
+              face:f =
+              {
+                v = '-132 27 -96 -132 27 32 -4 27 -96'
+                tex = "common/full_clip"
+                Contents = "1"
+                Flags = "0"
+                Value = "0"
+                m = "1"
+              }
+              face:f =
+              {
+                v = '-132 24 -96 -4 24 -96 -132 24 32'
+                tex = "common/full_clip"
+                Contents = "1"
+                Flags = "0"
+                Value = "0"
+              }
+              face:f =
+              {
+                v = '91 152 -96 91 280 -96 91 152 32'
+                tex = "common/full_clip"
+                Contents = "1"
+                Flags = "0"
+                Value = "0"
+              }
+              face:f =
+              {
+                v = '68 152 -96 68 152 32 68 280 -96'
+                tex = "common/full_clip"
+                Contents = "1"
+                Flags = "0"
+                Value = "0"
+                m = "1"
+              }
+            }
+            poly:p =
+            {
+              face:f =
+              {
+                v = '-132 152 -46 -4 152 -46 -132 280 -46'
+                tex = "common/full_clip"
+                Contents = "1"
+                Flags = "0"
+                Value = "0"
+              }
+              face:f =
+              {
+                v = '-132 152 -79 -132 280 -79 -4 152 -79'
+                tex = "common/full_clip"
+                Contents = "1"
+                Flags = "0"
+                Value = "0"
+                m = "1"
+              }
+              face:f =
+              {
+                v = '-132 -22 -96 -132 -22 32 -4 -22 -96'
+                tex = "common/full_clip"
+                Contents = "1"
+                Flags = "0"
+                Value = "0"
+                m = "1"
+              }
+              face:f =
+              {
+                v = '-132 -25 -96 -4 -25 -96 -132 -25 32'
+                tex = "common/full_clip"
+                Contents = "1"
+                Flags = "0"
+                Value = "0"
+              }
+              face:f =
+              {
+                v = '91 152 -96 91 280 -96 91 152 32'
+                tex = "common/full_clip"
+                Contents = "1"
+                Flags = "0"
+                Value = "0"
+              }
+              face:f =
+              {
+                v = '68 152 -96 68 152 32 68 280 -96'
+                tex = "common/full_clip"
+                Contents = "1"
+                Flags = "0"
+                Value = "0"
+                m = "1"
+              }
+            }
+            poly:p =
+            {
+              face:f =
+              {
+                v = '-132 152 -12 -4 152 -12 -132 280 -12'
+                tex = "common/full_clip"
+                Contents = "1"
+                Flags = "0"
+                Value = "0"
+              }
+              face:f =
+              {
+                v = '-132 152 -74 -132 280 -74 -4 152 -74'
+                tex = "common/full_clip"
+                Contents = "1"
+                Flags = "0"
+                Value = "0"
+                m = "1"
+              }
+              face:f =
+              {
+                v = '-132 38 -96 -132 38 32 -4 38 -96'
+                tex = "common/full_clip"
+                Contents = "1"
+                Flags = "0"
+                Value = "0"
+                m = "1"
+              }
+              face:f =
+              {
+                v = '-132 -36 -96 -4 -36 -96 -132 -36 32'
+                tex = "common/full_clip"
+                Contents = "1"
+                Flags = "0"
+                Value = "0"
+              }
+              face:f =
+              {
+                v = '-71 152 -96 -71 280 -96 -71 152 32'
+                tex = "common/full_clip"
+                Contents = "1"
+                Flags = "0"
+                Value = "0"
+              }
+              face:f =
+              {
+                v = '-94 152 -96 -94 152 32 -94 280 -96'
+                tex = "common/full_clip"
+                Contents = "1"
+                Flags = "0"
+                Value = "0"
+                m = "1"
+              }
+            }
+            poly:p =
+            {
+              face:f =
+              {
+                v = '-132 152 -11 -4 152 -11 -132 280 -11'
+                tex = "common/full_clip"
+                Contents = "1"
+                Flags = "0"
+                Value = "0"
+              }
+              face:f =
+              {
+                v = '-132 152 -24 -132 280 -24 -4 152 -24'
+                tex = "common/full_clip"
+                Contents = "1"
+                Flags = "0"
+                Value = "0"
+                m = "1"
+              }
+              face:f =
+              {
+                v = '-132 -22 -96 -132 -22 32 -4 -22 -96'
+                tex = "common/full_clip"
+                Contents = "1"
+                Flags = "0"
+                Value = "0"
+                m = "1"
+              }
+              face:f =
+              {
+                v = '-132 -25 -96 -4 -25 -96 -132 -25 32'
+                tex = "common/full_clip"
+                Contents = "1"
+                Flags = "0"
+                Value = "0"
+              }
+              face:f =
+              {
+                v = '92 152 -96 92 280 -96 92 152 32'
+                tex = "common/full_clip"
+                Contents = "1"
+                Flags = "0"
+                Value = "0"
+              }
+              face:f =
+              {
+                v = '69 152 -96 69 152 32 69 280 -96'
+                tex = "common/full_clip"
+                Contents = "1"
+                Flags = "0"
+                Value = "0"
+                m = "1"
+              }
+            }
+            poly:p =
+            {
+              face:f =
+              {
+                v = '-132 152 -11 -4 152 -11 -132 280 -11'
+                tex = "common/full_clip"
+                Contents = "1"
+                Flags = "0"
+                Value = "0"
+              }
+              face:f =
+              {
+                v = '-132 152 -24 -132 280 -24 -4 152 -24'
+                tex = "common/full_clip"
+                Contents = "1"
+                Flags = "0"
+                Value = "0"
+                m = "1"
+              }
+              face:f =
+              {
+                v = '-132 27 -96 -132 27 32 -4 27 -96'
+                tex = "common/full_clip"
+                Contents = "1"
+                Flags = "0"
+                Value = "0"
+                m = "1"
+              }
+              face:f =
+              {
+                v = '-132 24 -96 -4 24 -96 -132 24 32'
+                tex = "common/full_clip"
+                Contents = "1"
+                Flags = "0"
+                Value = "0"
+              }
+              face:f =
+              {
+                v = '92 152 -96 92 280 -96 92 152 32'
+                tex = "common/full_clip"
+                Contents = "1"
+                Flags = "0"
+                Value = "0"
+              }
+              face:f =
+              {
+                v = '69 152 -96 69 152 32 69 280 -96'
+                tex = "common/full_clip"
+                Contents = "1"
+                Flags = "0"
+                Value = "0"
+                m = "1"
+              }
+            }
+            poly:p =
+            {
+              face:f =
+              {
+                v = '-132 152 -24 -4 152 -24 -132 280 -24'
+                tex = "common/full_clip"
+                Contents = "1"
+                Flags = "0"
+                Value = "0"
+              }
+              face:f =
+              {
+                v = '-132 152 -46 -132 280 -46 -4 152 -46'
+                tex = "common/full_clip"
+                Contents = "1"
+                Flags = "0"
+                Value = "0"
+                m = "1"
+              }
+              face:f =
+              {
+                v = '-132 27 -96 -132 27 32 -4 27 -96'
+                tex = "common/full_clip"
+                Contents = "1"
+                Flags = "0"
+                Value = "0"
+                m = "1"
+              }
+              face:f =
+              {
+                v = '-132 24 -96 -4 24 -96 -132 24 32'
+                tex = "common/full_clip"
+                Contents = "1"
+                Flags = "0"
+                Value = "0"
+              }
+              face:f =
+              {
+                v = '92 152 -96 92 280 -96 92 152 32'
+                tex = "common/full_clip"
+                Contents = "1"
+                Flags = "0"
+                Value = "0"
+              }
+              face:f =
+              {
+                v = '87 152 -96 87 152 32 87 280 -96'
+                tex = "common/full_clip"
+                Contents = "1"
+                Flags = "0"
+                Value = "0"
+                m = "1"
+              }
+            }
+            poly:p =
+            {
+              face:f =
+              {
+                v = '-132 152 -24 -4 152 -24 -132 280 -24'
+                tex = "common/full_clip"
+                Contents = "1"
+                Flags = "0"
+                Value = "0"
+              }
+              face:f =
+              {
+                v = '-132 152 -46 -132 280 -46 -4 152 -46'
+                tex = "common/full_clip"
+                Contents = "1"
+                Flags = "0"
+                Value = "0"
+                m = "1"
+              }
+              face:f =
+              {
+                v = '-132 -22 -96 -132 -22 32 -4 -22 -96'
+                tex = "common/full_clip"
+                Contents = "1"
+                Flags = "0"
+                Value = "0"
+                m = "1"
+              }
+              face:f =
+              {
+                v = '-132 -25 -96 -4 -25 -96 -132 -25 32'
+                tex = "common/full_clip"
+                Contents = "1"
+                Flags = "0"
+                Value = "0"
+              }
+              face:f =
+              {
+                v = '92 152 -96 92 280 -96 92 152 32'
+                tex = "common/full_clip"
+                Contents = "1"
+                Flags = "0"
+                Value = "0"
+              }
+              face:f =
+              {
+                v = '87 152 -96 87 152 32 87 280 -96'
+                tex = "common/full_clip"
+                Contents = "1"
+                Flags = "0"
+                Value = "0"
+                m = "1"
+              }
+            }
+          }
+          misc_model:e =
+          {
+            origin = "-12 0 -96"
+            model = "\models\mapobjects\urbanterror\swattruck.md3"
+          }
+        }
+      }
+      func_group:b =
+      {
+        poly:p =
+        {
+          face:f =
+          {
+            v = '8 558.88890 33.50000 8 587.33330 97.50000 -56 558.88890 33.50000'
+            tex = "sfx/beam"
+            Contents = "134217728"
+            Flags = "8"
+            Value = "0"
+            m = "1"
+          }
+          face:f =
+          {
+            v = '46.88889 8 33.50000 46.88889 -56 33.50000 75.33334 8 97.50000'
+            tex = "sfx/beam"
+            Contents = "134217728"
+            Flags = "8"
+            Value = "0"
+          }
+          face:f =
+          {
+            v = '8 849.11110 33.50000 -56 849.11110 33.50000 8 820.66670 97.50000'
+            tex = "sfx/beam"
+            Contents = "134217728"
+            Flags = "8"
+            Value = "0"
+          }
+          face:f =
+          {
+            v = '401.11110 8 33.50000 372.66670 8 97.50000 401.11110 -56 33.50000'
+            tex = "sfx/beam"
+            Contents = "134217728"
+            Flags = "8"
+            Value = "0"
+            m = "1"
+          }
+          face:f =
+          {
+            v = '24 9 288 -40 9 288 24 -55 288'
+            tex = "common/nodraw"
+            Contents = "134217728"
+            Flags = "12"
+            Value = "0"
+          }
+          face:f =
+          {
+            v = '24 9 228 24 -55 228 -40 9 228'
+            tex = "common/nodraw"
+            Contents = "134217728"
+            Flags = "12"
+            Value = "0"
+            m = "1"
+          }
+        }
+      }
+      func_breakable:b =
+      {
+        health = "20"
+        type = "0"
+        new cube:p =
+        {
+          east:f =
+          {
+            v = '0 64 64 0 128 64 0 64 128'
+            tex = "common/caulk"
+          }
+          west:f =
+          {
+            v = '-64 -64 64 -64 -128 64 -64 -64 128'
+            tex = "common/caulk"
+          }
+          north:f =
+          {
+            v = '-64 0 64 -128 0 64 -64 0 128'
+            tex = "common/caulk"
+          }
+          south:f =
+          {
+            v = '64 -64 64 128 -64 64 64 -64 128'
+            tex = "common/caulk"
+          }
+          up:f =
+          {
+            v = '64 64 0 128 64 0 64 128 0'
+            tex = "common/caulk"
+          }
+          down:f =
+          {
+            v = '64 -64 -64 128 -64 -64 64 -128 -64'
+            tex = "common/caulk"
+          }
+        }
+      }
+      func_ut_train:b =
+      {
+        ;desc = "A train is a mover that moves between path_ut_stop target poi"
+         "nts."
+        ORIGIN:p =
+        {
+          east:f =
+          {
+            v = '8 0 0 8 64 0 8 0 64'
+            tex = "common/origin"
+          }
+          west:f =
+          {
+            v = '-8 0 0 -8 -64 0 -8 0 64'
+            tex = "common/origin"
+          }
+          north:f =
+          {
+            v = '0 8 0 -64 8 0 0 8 64'
+            tex = "common/origin"
+          }
+          south:f =
+          {
+            v = '0 -8 0 64 -8 0 0 -8 64'
+            tex = "common/origin"
+          }
+          up:f =
+          {
+            v = '0 0 24 64 0 24 0 64 24'
+            tex = "common/origin"
+          }
+          down:f =
+          {
+            v = '0 0 -24 64 0 -24 0 -64 -24'
+            tex = "common/origin"
+          }
+        }
+        poly:p =
+        {
+          east:f =
+          {
+            v = '32 -32 -32 32 96 -32 32 -32 96'
+            tex = "[auto]"
+          }
+          west:f =
+          {
+            v = '-32 -32 -32 -32 -32 96 -32 96 -32'
+            tex = "[auto]"
+            m = "1"
+          }
+          north:f =
+          {
+            v = '-32 32 -32 -32 32 96 96 32 -32'
+            tex = "[auto]"
+            m = "1"
+          }
+          south:f =
+          {
+            v = '-32 -32 -32 96 -32 -32 -32 -32 96'
+            tex = "[auto]"
+          }
+          up:f =
+          {
+            v = '-32 -32 32 96 -32 32 -32 96 32'
+            tex = "[auto]"
+          }
+          down:f =
+          {
+            v = '-32 -32 -32 -32 96 -32 96 -32 -32'
+            tex = "[auto]"
+            m = "1"
+          }
+        }
+      }
+      func_keyboard_interface:b =
+      {
+        new cube:p =
+        {
+          east:f =
+          {
+            v = '64 64 64 64 128 64 64 64 128'
+            tex = "common/caulk"
+          }
+          west:f =
+          {
+            v = '-64 -64 64 -64 -128 64 -64 -64 128'
+            tex = "common/caulk"
+          }
+          north:f =
+          {
+            v = '-64 64 64 -128 64 64 -64 64 128'
+            tex = "common/caulk"
+          }
+          south:f =
+          {
+            v = '64 -64 64 128 -64 64 64 -64 128'
+            tex = "common/caulk"
+          }
+          up:f =
+          {
+            v = '64 64 64 128 64 64 64 128 64'
+            tex = "common/caulk"
+          }
+          down:f =
+          {
+            v = '64 -64 -64 128 -64 -64 64 -128 -64'
+            tex = "common/caulk"
+          }
+        }
+      }
+      trigger_location:b =
+      {
+        message = "location"
+        Color = "1"
+        new cube:p =
+        {
+          east:f =
+          {
+            v = '-1408 64 320 -1408 128 320 -1408 64 384'
+            tex = "common/trigger"
+          }
+          west:f =
+          {
+            v = '-1536 -64 320 -1536 -128 320 -1536 -64 384'
+            tex = "common/trigger"
+          }
+          north:f =
+          {
+            v = '-1536 64 320 -1600 64 320 -1536 64 384'
+            tex = "common/trigger"
+          }
+          south:f =
+          {
+            v = '-1408 -64 320 -1344 -64 320 -1408 -64 384'
+            tex = "common/trigger"
+          }
+          up:f =
+          {
+            v = '-1408 64 320 -1344 64 320 -1408 128 320'
+            tex = "common/trigger"
+          }
+          down:f =
+          {
+            v = '-1408 -64 192 -1344 -64 192 -1408 -128 192'
+            tex = "common/trigger"
+          }
+        }
+      }
+      func_rotating_door:b =
+      {
+        speed = "-100"
+        dmg = "0"
+        origin = "-387 -789 154"
+        poly:p =
+        {
+          face:f =
+          {
+            v = '448 896 -1 512 896 -1 448 960 -1'
+            tex = "common/caulk"
+          }
+          face:f =
+          {
+            v = '448 896 -75 448 960 -75 512 896 -75'
+            tex = "common/caulk"
+            m = "1"
+          }
+          face:f =
+          {
+            v = '448 43 -128 448 43 -64 512 43 -128'
+            tex = "common/caulk"
+            m = "1"
+          }
+          face:f =
+          {
+            v = '448 -1 -128 512 -1 -128 448 -1 -64'
+            tex = "common/caulk"
+          }
+          face:f =
+          {
+            v = '-1 896 -128 -1 960 -128 -1 896 -64'
+            tex = "common/caulk"
+          }
+          face:f =
+          {
+            v = '-6 896 -128 -6 896 -64 -6 960 -128'
+            tex = "common/caulk"
+            m = "1"
+          }
+        }
+        poly:p =
+        {
+          face:f =
+          {
+            v = '448 896 -22 512 896 -22 448 960 -22'
+            tex = "common/origin"
+          }
+          face:f =
+          {
+            v = '448 896 -54 448 960 -54 512 896 -54'
+            tex = "common/origin"
+            m = "1"
+          }
+          face:f =
+          {
+            v = '448 59 -128 448 59 -64 512 59 -128'
+            tex = "common/origin"
+            m = "1"
+          }
+          face:f =
+          {
+            v = '448 27 -128 512 27 -128 448 27 -64'
+            tex = "common/origin"
+          }
+          face:f =
+          {
+            v = '13 896 -128 13 960 -128 13 896 -64'
+            tex = "common/origin"
+          }
+          face:f =
+          {
+            v = '-19 896 -128 -19 896 -64 -19 960 -128'
+            tex = "common/origin"
+            m = "1"
+          }
+        }
+      }
+      func_door:b =
+      {
+        ;desc = "Updated for Spawn Room Doors"
+        poly:p =
+        {
+          face:f =
+          {
+            v = '664 1119.50000 68 728 1119.50000 68 664 1183.50000 68'
+            tex = "common/caulk"
+            Contents = "1"
+            Flags = "0"
+            Value = "0"
+          }
+          face:f =
+          {
+            v = '664 1119.50000 -68 664 1183.50000 -68 728 1119.50000 -68'
+            tex = "common/caulk"
+            Contents = "1"
+            Flags = "0"
+            Value = "0"
+            m = "1"
+          }
+          face:f =
+          {
+            v = '664 8.50000 -12 664 8.50000 52 728 8.50000 -12'
+            tex = "common/caulk"
+            Contents = "1"
+            Flags = "0"
+            Value = "0"
+            m = "1"
+          }
+          face:f =
+          {
+            v = '664 -8.50000 -12 728 -8.50000 -12 664 -8.50000 52'
+            tex = "common/caulk"
+            Contents = "1"
+            Flags = "0"
+            Value = "0"
+          }
+          face:f =
+          {
+            v = '72 1119.50000 -12 72 1183.50000 -12 72 1119.50000 52'
+            tex = "common/caulk"
+            Contents = "1"
+            Flags = "0"
+            Value = "0"
+          }
+          face:f =
+          {
+            v = '-72 1119.50000 -12 -72 1119.50000 52 -72 1183.50000 -12'
+            tex = "common/caulk"
+            Contents = "1"
+            Flags = "0"
+            Value = "0"
+            m = "1"
+          }
+        }
+      }
+      trigger_multiple:b =
+      {
+        ;desc = "Updated for use on Spawn room doors"
+        poly:p =
+        {
+          face:f =
+          {
+            v = '-704 596 60 -640 596 60 -704 660 60'
+            tex = "common/trigger"
+            Contents = "1"
+            Flags = "0"
+            Value = "0"
+          }
+          face:f =
+          {
+            v = '-704 596 -60 -704 660 -60 -640 596 -60'
+            tex = "common/trigger"
+            Contents = "1"
+            Flags = "0"
+            Value = "0"
+            m = "1"
+          }
+          face:f =
+          {
+            v = '-704 20 -12 -704 20 52 -640 20 -12'
+            tex = "common/trigger"
+            Contents = "1"
+            Flags = "0"
+            Value = "0"
+            m = "1"
+          }
+          face:f =
+          {
+            v = '-704 -20 -12 -640 -20 -12 -704 -20 52'
+            tex = "common/trigger"
+            Contents = "1"
+            Flags = "0"
+            Value = "0"
+          }
+          face:f =
+          {
+            v = '64 596 -12 64 660 -12 64 596 52'
+            tex = "common/trigger"
+            Contents = "1"
+            Flags = "0"
+            Value = "0"
+          }
+          face:f =
+          {
+            v = '-64 596 -12 -64 596 52 -64 660 -12'
+            tex = "common/trigger"
+            Contents = "1"
+            Flags = "0"
+            Value = "0"
+            m = "1"
+          }
+        }
+      }
+      func_wall:b =
+      {
+        poly:p =
+        {
+          east:f =
+          {
+            v = '60 -64 -64 60 64 -64 60 -64 64'
+            tex = "common/caulk"
+            tv = '0 0 128 0 0 -128'
+          }
+          west:f =
+          {
+            v = '-68 -64 -64 -68 -64 64 -68 64 -64'
+            tex = "common/caulk"
+            tv = '0 0 -128 0 0 -128'
+          }
+          north:f =
+          {
+            v = '-68 64 -64 -68 64 64 60 64 -64'
+            tex = "common/caulk"
+            tv = '0 0 -128 0 0 -128'
+          }
+          south:f =
+          {
+            v = '-68 -64 -64 60 -64 -64 -68 -64 64'
+            tex = "common/caulk"
+            tv = '0 0 128 0 0 -128'
+          }
+          up:f =
+          {
+            v = '-68 -64 64 60 -64 64 -68 64 64'
+            tex = "common/caulk"
+            tv = '0 0 0 128 128 0'
+          }
+          down:f =
+          {
+            v = '-68 -64 -64 -68 64 -64 60 -64 -64'
+            tex = "common/caulk"
+            tv = '0 0 0 -128 128 0'
+          }
+        }
+      }
+      path_ut_stop:e =
+      {
+        origin = "0 0 0"
+        ;desc = "Train path stops"
+      }
+      ut_mrsentry:e =
+      {
+        origin = "0 0 0"
+        angle = "180"
+      }
+    }
+  }
+  Entity forms.qctx =
+  {
+    info_ut_spawn:form =
+    {
+      Help = "This is where a player spawns into the game at."
+      bbox = '-12 -12 -24 12 12 40'
+      mdl = "models/players/orion/info.md3"
+      md3_autolink = "1"
+      target: =
+      {
+        Txt = "&"
+        Hint = "this can point at a target_give entity for respawn freebies."
+      }
+      team: =
+      {
+        Txt = "&"
+        Hint = "What Team Spawn in this Position"
+      }
+      group: =
+      {
+        Txt = "&"
+        Hint = "Ya got to keep them seperated"
+      }
+      g_gametype: =
+      {
+        Txt = "&"
+        Hint = "0-8"
+      }
+    }
+    ut_mrsentry:form =
+    {
+      Help = "Mr. Sentry Guards spawn Rooms"
+      bbox = '-12 -12 -12 12 12 12'
+      mdl = "models/sinny/mrsentry.md3"
+      md3_autolink = "1"
+      angle: =
+      {
+        Txt = "&"
+        Hint = "Angle it witch it points"
+      }
+      team: =
+      {
+        Txt = "&"
+        Hint = "What Team Mr. Sentry Protects"
+      }
+      gametype: =
+      {
+        Txt = "&"
+        Hint = "0-8"
+      }
+    }
+    info_ut_bombsite:form =
+    {
+      Help = "Bomb Site"
+      range: =
+      {
+        Txt = "&"
+        Hint = "How Far away from the bombsite the player can plant"
+      }
+    }
+    func_breakable:form =
+    {
+      Help = "Breakable Stuff"
+      type: =
+      {
+        Txt = "&"
+        Hint = "0: glass 1: wood 2: ceramic 3: plastic 4: metal-normal 5: meta"
+         "l-explosives 6: metal-hk69 7: stone-explosives 8: stone-hk69 "
+      }
+      health: =
+      {
+        Txt = "&"
+        Hint = "health of object"
+      }
+      shards: =
+      {
+        Txt = "&"
+        Hint = "number of shards object should shatter into (0-255)"
+      }
+      bombable: =
+      {
+        Txt = "&"
+        Hint = "allows the entity to be destroyed by the bomb in bombmode. The"
+         " size of blast shown when the entity breaks is determined by this va"
+         "lue (Values : 1 none - 255 huge blast)"
+      }
+    }
+    func_wall:form =
+    {
+      Help = "Function Wall"
+      gametype: =
+      {
+        Txt = "&"
+        Hint = "gametypes to have the wall appear in, list types in this forma"
+         "t: 01234"
+      }
+    }
+    func_door:form =
+    {
+      Help = "This is a door."
+      angle: =
+      {
+        Txt = "&"
+        Hint = "Direction this brush moves.(-1 is up, -2 is down)"
+      }
+      targetname: =
+      {
+        Txt = "&"
+        Hint = "This is its target name for the target argument."
+      }
+      speed: =
+      {
+        Txt = "&"
+        Hint = "Speed at which door moves.(Default is 100)"
+      }
+      wait: =
+      {
+        Txt = "&"
+        Hint = "Wait time till it resets.(Default is 3, -1 returns immediately"
+         ")"
+      }
+      lip: =
+      {
+        Txt = "&"
+        Hint = "Remaining edge left.(Default is 8)"
+      }
+      dmg: =
+      {
+        Txt = "&"
+        Hint = "Damage it will inflict when it closes on a player.(Default is "
+         "4)"
+      }
+      only: =
+      {
+        Txt = "&"
+        Hint = "set to allow only one team to use this entity, used for CTF or"
+         " other respawn type modes to create spawn rooms. Values: blue or red"
+         " - Default: anyone"
+      }
+      trigger_only: =
+      {
+        Txt = "&"
+        Hint = "set to 1 if the door can only be opened by a switch or trigger"
+         " (ie: prevents a player from opening it manually)"
+      }
+      CloseWhenIdle: =
+      {
+        Txt = "&"
+        Hint = "Close the door if idle (Default 1)"
+      }
+      noise: =
+      {
+        Txt = "&"
+        Hint = "looping sound as door is moving."
+      }
+      pos1: =
+      {
+        Txt = "&"
+        Hint = "sound to play when door starts moving ('none' for nothing, def"
+         "aults to a creak)"
+      }
+      pos2: =
+      {
+        Txt = "&"
+        Hint = "sound to play when door stops moving ('none' for nothing, defa"
+         "ults to a creak)"
+      }
+      model2: =
+      {
+        Txt = "&"
+        Hint = "Path and name of a model to use for door."
+      }
+      model2: =
+      {
+        Txt = " "
+        Typ = "B"
+        Cap = "models..."
+        form = "t_models2_form:form"
+        hint = "Available .MD3 files"
+      }
+      origin: =
+      {
+        Txt = "&"
+        Hint = "Way to set the XYZ value of this entity."
+      }
+      notfree: =
+      {
+        Txt = "&"
+        Hint = "This item will not work in a Free for All or Tournament game.("
+         "Default value is 0)"
+      }
+      notteam: =
+      {
+        Txt = "&"
+        Hint = "This item will not work in a Teamplay or CTF game.(Default val"
+         "ue is 0)"
+      }
+      light: =
+      {
+        Txt = "&"
+        Hint = "constantLight radius of .md3 model included with entity. Has n"
+         "o effect on the entity's brushes (default 0)."
+      }
+      color: =
+      {
+        Txt = "&"
+        Hint = "constantLight color of .md3 model included with entity. Has no"
+         " effect on the entity's brushes (default 1 1 1)."
+      }
+      notsingle: =
+      {
+        Txt = "&"
+        Hint = "If set to 1, will not spawn in single player (bot play) mode."
+      }
+      notbot: =
+      {
+        Txt = "&"
+        Hint = "If set to 1, bots will ignore this."
+      }
+      spawnflags: =
+      {
+        Txt = "&"
+        Typ = "X1"
+        Cap = "START_OPEN"
+        Hint = "This door will start open."
+      }
+      spawnflags: =
+      {
+        Txt = "&"
+        Typ = "X2"
+        Cap = "CRUSHER"
+        Hint = "This will crush the player."
+      }
+    }
+    trigger_multiple:form =
+    {
+      Help = "This can be triggered multiple times."
+      target: =
+      {
+        Txt = "&"
+        Hint = "Entities with same targetname will trigger with this."
+      }
+      targetname: =
+      {
+        Txt = "&"
+        Hint = "This is its target name for the target argument."
+      }
+      random: =
+      {
+        Txt = "&"
+        Hint = "random time variance in seconds added or subtracted from wait "
+         "delay (default 0)"
+      }
+      wait: =
+      {
+        Txt = "&"
+        Hint = "Wait time till it resets."
+      }
+      only: =
+      {
+        Txt = "&"
+        Hint = "Only Team that will trigger it"
+      }
+      notsingle: =
+      {
+        Txt = "&"
+        Hint = "This item will not spawn in a single player game."
+      }
+      notbot: =
+      {
+        Txt = "&"
+        Hint = "Bots will not trigger this"
+      }
+      notfree: =
+      {
+        Txt = "&"
+        Hint = "This item will not work in a Free for All or Tournament game.("
+         "Default value is 0)"
+      }
+      notteam: =
+      {
+        Txt = "&"
+        Hint = "This item will not work in a Teamplay or CTF game.(Default val"
+         "ue is 0)"
+      }
+    }
+  }
+}

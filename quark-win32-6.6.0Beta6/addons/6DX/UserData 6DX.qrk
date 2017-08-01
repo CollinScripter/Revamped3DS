@@ -1,0 +1,116 @@
+QQRKSRC1
+// This file has been written by QuArK QuArK 6.3snap061801
+// It's the text version of file: UserData 6DX.qrk
+
+{
+  Description = "Custom configuration file for 6DX."
+  MapObjPanel.qrk =
+  {
+    cube: =
+    {
+      new cube:p =
+      {
+        east:f =
+        {
+          v = '64 0 0 64 128 0 64 0 128'
+          tex = "[auto]"
+        }
+        west:f =
+        {
+          v = '-64 0 0 -64 -128 0 -64 0 128'
+          tex = "[auto]"
+        }
+        north:f =
+        {
+          v = '0 64 0 -128 64 0 0 64 128'
+          tex = "[auto]"
+        }
+        south:f =
+        {
+          v = '0 -64 0 128 -64 0 0 -64 128'
+          tex = "[auto]"
+        }
+        up:f =
+        {
+          v = '0 0 64 128 0 64 0 128 64'
+          tex = "[auto]"
+        }
+        down:f =
+        {
+          v = '0 0 -64 128 0 -64 0 -128 -64'
+          tex = "[auto]"
+        }
+      }
+    }
+    light: =
+    {
+      light:e =
+      {
+        origin = "0 0 0"
+        light = "300"
+        _color = "1 1 1"
+      }
+    }
+    bezier: =
+    {
+      bezier:b2 =
+      {
+        v = '0 0 0 0 0 64 0 0 0.50000 0 128 0 0 1 0 0 64 0 0 0.50000 64 64 0 0.50000
+          0.50000 128 64 0 1 0.50000 0 128 0 0 1 64 128 0 0.50000 1 128 128 0 1 1'
+        tex = "[auto]"
+      }
+    }
+    Stair Maker: =
+    {
+      Stair Maker:d =
+      {
+        macro = "dup stair"
+        steps = "8"
+        sameheight = "0"
+        new cube:p =
+        {
+          front:f =
+          {
+            v = '-44 128 -80 -172 128 -80 -44 0 -80'
+            tex = "[auto]"
+          }
+          back:f =
+          {
+            v = '-44 128 -96 -172 128 -96 -44 256 -96'
+            tex = "[auto]"
+          }
+          up:f =
+          {
+            v = '-44 64 -100 84.00002 64 -100 -44 64 28'
+            tex = "[auto]"
+          }
+          down:f =
+          {
+            v = '-43.99998 192 -100 -172 192 -100 -43.99998 192 28'
+            tex = "[auto]"
+          }
+          right:f =
+          {
+            v = '-108 128 -100 -108 0.00005 -100 -108 128 28'
+            tex = "[auto]"
+          }
+          left:f =
+          {
+            v = '20 128 -100 20 256 -100 20 128 28'
+            tex = "[auto]"
+          }
+        }
+      }
+    }
+  }
+  Menu.qrk =
+  {
+    item: =
+    {
+
+      Txt = "Export 6DX Map"
+      Shortcut = "Ctrl+E"
+      ExportMapFile = "1"
+    }
+  }
+}

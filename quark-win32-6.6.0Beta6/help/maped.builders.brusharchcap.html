@@ -1,0 +1,278 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"  "http://www.w3.org/TR/html4/loose.dtd">
+<html lang="en">
+<head>
+  <title>Caps and Arches (Brushes)</title>
+  <meta name="Description" content="QuArK Information Database - Page: 2.4.3.&nbsp;Caps and Arches (Brushes)">
+  <meta name="Keywords" content="QuArK InfoBase Quake Army Knife QRK QKM Python PY Map Editor Hexen Heretic Half-Life Sin Kingpin Soldier-of-Fortune Star-Trek-Voyager Elite-Force">
+  <link rel=stylesheet href="standard.css" type="text/css">
+</head>
+
+<body>
+<a name="__top__"></a>
+<table width="100%" border=0 cellspacing=0>
+  <tr>
+    <td width=213>
+      <a target="_blank" href="http://quark.sourceforge.net/"><img src="quarkicon.png" width=213 height=90 border=0 alt="Go to QuArK Web Site"></a>
+    </td>
+    <td width="70%" align=center>
+      <div class="topheadline">Caps and Arches (Brushes)</div>
+      <div class="sm">Updated&nbsp;02 Mar 2001</div>
+    </td>
+    <td width="30%" valign=bottom nowrap>
+      Upper&nbsp;levels:<br>-&nbsp;<a href="index.html">QuArK&nbsp;Information&nbsp;Base</a><br>-&nbsp;<a href="maped.html">2.&nbsp;Map&nbsp;editing</a><br>-&nbsp;<a href="maped.builders.html">2.4.&nbsp;Shape&nbsp;Builders</a><br>
+    </td>
+  </tr>
+</table>
+<table width="100%" border=0 cellspacing=0>
+  <tr class="headline">
+    <td width="99%">
+      <p class="headline">&nbsp;2.4.3.&nbsp;Caps and Arches (Brushes)</p>
+    </td>
+    <td width="1%" align=right nowrap>
+      &nbsp;[&nbsp;<span class="navenable"><a href="maped.builders.archcap.html">Prev</a></span>&nbsp;-&nbsp;<span class="navenable"><a href="maped.builders.html">Up</a></span>&nbsp;-&nbsp;<span class="navenable"><a href="maped.builders.bevel.html">Next</a></span>&nbsp;]&nbsp;
+    </td>
+  </tr>
+</table>
+<table border=0 width="100%" cellspacing=10><tr><td><p>Brush-based `Caps' and arches are made by the same
+shape-builder, and
+arches are probably its most important function, so
+that's what gets discussed most here.
+</p>
+</td></tr></table>
+<br>
+
+<table width="100%" border=0 cellspacing=0>
+  <tr class="headline">
+    <td width="100%">
+      <p class="subheadline">&nbsp;Index</p>
+    </td>
+  </tr>
+</table>
+<ul class="index">
+  <li>- <a href="#makearch">Making an arch</a>&nbsp;<span class="added">(02 Mar 2001)</span>
+  <li>- <a href="#texturing">Texturing the arch</a>&nbsp;<span class="added">(02 Mar 2001)</span>
+  <li>- <a href="#specifics">Specifics</a>&nbsp;<span class="added">(02 Mar 2001)</span>
+</ul>
+<br>
+
+
+<a name="makearch"></a>
+  <table width="100%" border=0 cellspacing=0>
+    <tr class="headline">
+      <td>
+        <p class="item">&nbsp;Making an arch</p>
+      </td>
+      <td align=right>
+        <font size=-2>tiglari&nbsp;-&nbsp;02 Mar 2001</font>
+      </td>
+      <td width="1%" align=right nowrap>
+        &nbsp;&nbsp;[&nbsp;<a href="#__top__">Top</a>&nbsp;]&nbsp;
+      </td>
+    </tr>
+  </table>
+  <table border=0 width="100%" cellspacing=10><tr><td>
+<p><table border=0 cellpadding=0>
+<tr><td valign=top>
+</p><p><img border=0 align=right src="maped.builders.brusharchcap.arch1.png">
+The brush-arch is a collection of brushes designed to fill
+in a boxy hole to make it look like an archway.  So a
+good way to start would be to make a wall with a hole in it,
+perhaps by first making a wall-brush, then a subtractor
+brush, then subtracting.  The result might look like this,
+where the bottom of the subtractor has then been raised
+up a bit in preparation for the next step:
+</p><p></td></tr>
+<tr><td valign=top>
+</p><p><img border=0 align=right src="maped.builders.brusharchcap.arch2.png">
+Now to make the arch-shaped filler, facing the brush that's been
+left in the archway, <span class="act">'RMB -&gt; Brush Curves -&gt; Arch'</span>:
+</p><p></td></tr>
+<tr><td valign=top>
+</p><p><img border=0 align=right src="maped.builders.brusharchcap.arch3.png">
+Some additional brushes forming arch-shape (tinted blue
+in some views, such as the one to the right) will appear
+inside the brush, and if the brush itself
+isn't selected, it will be invisible.
+</p><p>What's happened is that the original brush has been put
+inside a duplicator (you should check this  by fossicking
+around in the <a href="intro.mapeditor.dataforms.html#treeview">tree-view</a>),
+which makes it invisible unless selected.
+By default, four brushes are produced, and there is a gap
+in the middle, but this and various other aspects of what
+is produced can be changed by changing the
+<a href="intro.mapeditor.dataforms.html#specsargsview">specifics</a> of the
+duplicator.
+</p><p></td></tr>
+<tr><td valign=top>
+</p><p><img border=0 align=right src="maped.builders.brusharchcap.arch4.png">
+Now the most important aspect of this way of making an
+arch is that it can be changed dynamically, after it's
+made.  To see this, click inside its area until the arch
+itself disappears, and its `guide brush' appears instead
+because it's selected:
+</p><p></td></tr>
+<tr><td valign=top>
+</p><p><img border=0 align=right src="maped.builders.brusharchcap.arch5.png">
+We can now drag this brush around, and the arch will move,
+and more importantly,  we can reproportion the arch by
+dragging the individual faces.  Especially, we can change
+it's shape inside the hole by dragging the bottom up
+and down:
+</p><p>Since these are ordinary faces, which provide data to the duplicator
+code the makes the arch patches, we can do all the ordinary face
+stuff to them, such as tag/glue.
+</p><p></td></tr>
+</table>
+</p><p>So there's the shape; the next problem is to control
+the textures.
+</p>
+  </td></tr></table>
+  <br>
+
+<a name="texturing"></a>
+  <table width="100%" border=0 cellspacing=0>
+    <tr class="headline">
+      <td>
+        <p class="item">&nbsp;Texturing the arch</p>
+      </td>
+      <td align=right>
+        <font size=-2>tiglari&nbsp;-&nbsp;02 Mar 2001</font>
+      </td>
+      <td width="1%" align=right nowrap>
+        &nbsp;&nbsp;[&nbsp;<a href="#__top__">Top</a>&nbsp;]&nbsp;
+      </td>
+    </tr>
+  </table>
+  <table border=0 width="100%" cellspacing=10><tr><td>
+<p><img border=0 align=right src="maped.builders.brusharchcap.arch6.png">
+Arches get the textures for their front and back faces
+off the front and back faces of their guide brush.  So all
+we have to is to tag some face of the wall (assuming the other
+wall bits are properly aligned), then select the front face
+of the arch's guide brush, and then <span class="act">'RMB -&gt; Project Texture from Tagged'</span>.
+and ditto for the back wall.  The results should look more or
+less as to the right (the red line is the part of the outline
+of the wall-face that the texture was projected from).
+</p><p>If your arch's front or back textures are misaligned, you should fix them now;
+if they're not, mess them up and then fix them.
+</p><p>The inside of the arch is unfortunately not so straightforward.  It
+would be nice if there was some way to wrap the texture on the front
+or back onto the inside curve, but there isn't, at least without using
+specially pre-prepared and proportioned textures.  So we basically
+are stuck with a misalignment here, which can be ameliorated
+by using some fairly bland, unpatterned texture on the inside
+faces.
+</p><p><table border=0 cellpadding=0>
+<tr><td valign=top>
+</p><p><img border=0 align=right src="maped.builders.brusharchcap.arch7.png">
+But what we can do is get the textures aligned around the inside
+of the archway.  The inside faces get
+their texture off the top face of the guide-brush.  So basically
+what we want to do is wrap that texture onto the two walls.
+But somehow everything has to get aligned.  What happens is
+that texture is compressed and positioned in such a way that
+if the same texture is projected to the top face of the hole
+and wrapped down the wall, everything lines up.  So first
+put a bland texture on the top face of the guide-brush.
+This will produce something like what's to the right, not
+very good because of the different texture appearing at
+the very top and sides:
+</p><p></td></tr>
+<tr><td valign=top>
+</p><p><img border=0 align=right src="maped.builders.brusharchcap.arch8.png">
+So Next, tag the top face of  guide brush, then the bottom
+face of the brush that's at the top of the whole, and
+<span class="act">'RMB -&gt; Texture -&gt; Project from tagged'</span>.  Then the quickest way to wrap
+down the sides is to select the sides of the whole, and
+<span class="act">'RMB -&gt; Texture -&gt; Wrapping -&gt; Wrap from tagged mirror'</span>.  The result
+ought to look like this:
+</p><p></td></tr>
+</table>
+</p><p>In the game, the joins may be unpleasantly visible, due to light
+effects, but if there is an arghrad-like editing tool, this can
+be fixed by putting the same lightvalue (or equivalent property)
+onto the top face of the guide brush and the other faces forming
+the opening.  The top-brush's lightvalue (&amp; all other specifics)
+will be copied onto the inner faces of the generated brushes.
+</p><p>If you put an appropriately patterned texture around the inside
+of the arch, and look closely, you'll see
+that the texture scale is compressed somewhat on the curved portion;
+that's because its being positioned and scaled on the curve so
+that it will join up smoothly with what's on the walls, but
+the distance around the flat wall face is longer than on the
+smooth curve-face.  This is because of a bit of tricky coding
+in the duplicator, whereby the texture scale is compressed
+just enough so that the distance in texture-space around
+the curve equals the distance, w.r.t the top-face scale, around
+the three faces defining the arch.
+</p>
+  </td></tr></table>
+  <br>
+
+<a name="specifics"></a>
+  <table width="100%" border=0 cellspacing=0>
+    <tr class="headline">
+      <td>
+        <p class="item">&nbsp;Specifics</p>
+      </td>
+      <td align=right>
+        <font size=-2>tiglari&nbsp;-&nbsp;02 Mar 2001</font>
+      </td>
+      <td width="1%" align=right nowrap>
+        &nbsp;&nbsp;[&nbsp;<a href="#__top__">Top</a>&nbsp;]&nbsp;
+      </td>
+    </tr>
+  </table>
+  <table border=0 width="100%" cellspacing=10><tr><td>
+<p><img border=0 align=right src="maped.builders.brusharchcap.specifics.png">
+The RMB menu currently at least offers only two basic
+shapes (arch/cap, bevel) in two orientations each, but
+the 'duplicators' that implement these shapes have a
+considerable number of specifics that implement variations.
+You can see what these
+<a href="intro.mapeditor.dataforms.html#specsargsview">specifics</a> do by making
+an arch and experimenting.
+</p><p>If you uncheck the 'inverse' specific for example,
+the arch will turn into a 'cap'.  In general, inverse shapes are concave,
+non-inverse their convex counterparts.
+</p><p>Another important specific is 'subdiv'; it's value is a number,
+2 upon creation, that determines the number of segments each
+arch-half or bevel is divided into.  2 seems to be the minimum
+to provide a half-decent appearance; more will of course
+imply more polys.  Also there's 'inner'.  There are two ways
+of approximating an arc with straight edges, the edges can
+lie inside or outside the curve of the arc.  Outside is
+the default, checking 'inner' switches to the inner method.
+</p><p>Another useful one is 'lower'.  This flips the arch upside-down,
+so that the curved surface is a U that you can walk over.
+Lower arches take their texture from their bottom ('down')
+rather than their top ('up') faces.
+</p><p>Also there's 'onside' for caps and arches, and 'standup' for
+bevels.  Note that these change the face that the texture comes
+off, so for an 'onside' cap/arch, it will be the back face,
+for a 'standup' bevel, the top.
+</p><p>All of these shapes are good candidates for being 'detail'
+in games that support this; since the faces of the brushes
+are all ultimately copies of faces in the guide brush,
+specifics such as 'detail' (along with lightvalue, etc.)
+will be copied from the appropriate face of the guide-brush.
+</p>
+  </td></tr></table>
+  <br>
+
+<br>
+
+<table width="100%" border=0 cellspacing=0>
+  <tr class="headline">
+    <td width="99%" align=center>
+      <p class="sm">
+        Copyright (c) 2009, GNU General Public License by The QuArK (Quake Army Knife) Community - <a target="_blank" href="http://quark.sourceforge.net/">http://quark.sourceforge.net/</a><br>
+      </p>
+    </td>
+    <td width="1%" align=right nowrap>
+      &nbsp;[&nbsp;<span class="navenable"><a href="maped.builders.archcap.html">Prev</a></span>&nbsp;-&nbsp;<a href="#__top__">Top</a>&nbsp;-&nbsp;<span class="navenable"><a href="maped.builders.bevel.html">Next</a></span>&nbsp;]&nbsp;
+    </td>
+  </tr>
+</table>
+</body>
+</html>

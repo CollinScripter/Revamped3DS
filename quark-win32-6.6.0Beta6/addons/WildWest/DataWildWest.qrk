@@ -1,0 +1,920 @@
+QQRKSRC1
+// WildWest definition file for Quark
+
+//$Header: /cvsroot/quark/runtime/addons/WildWest/DataWildWest.qrk,v 1.7 2008/05/14 20:38:12 cdunde Exp $
+// ----------- REVISION HISTORY ------------
+//$Log: DataWildWest.qrk,v $
+//Revision 1.7  2008/05/14 20:38:12  cdunde
+//Fixed basic lighting in all games and a few other small typo errors.
+//
+//Revision 1.6  2008/03/28 19:14:22  cdunde
+//Cleaned up, fixed if needed and brought into sync with all QuArK addons.
+//
+//Revision 1.5  2008/02/27 00:21:34  danielpharos
+//Fix the contextual help files not being found anymore
+//
+//Revision 1.4  2007/12/26 06:01:46  cdunde
+//Setup of a full beizer library with over 30 prefab beizer to work with for games that can use beziers.
+//
+//
+
+{
+  QuArKProtected = "1"
+  Description = "Base WildWest data"
+
+  WildWest setup.qctx =
+  {
+    Game = "WildWest"
+    HTML = "index.html"
+    Palette = $0000000F0F0F1F1F1F2F2F2F3F3F3F4B4B4B5B5B5B6B6B6B7B7B7B8B8B8B9B9B
+     $9BABABABBBBBBBCBCBCBDBDBDBEBEBEB634B235B431F533F1F4F3B1B47371B3F2F173B2B
+     $173327132F23132B1F13271B0F23170F1B130B170F0B130F070F0B075F5F6F5B5B675B53
+     $5F574F5B534B534F474B473F433F3B3B3B3737332F2F2F2B2B2727272323231B1B1B1717
+     $171313138F77537B6343735B3B674F2FCF974BA77B3B8B672F6F5327EB9F27CB8B23AF77
+     $1F93631B774F175B3B0F3F270B231707A73B2B9F2F23972B1B8B27137F1F0F73170B6717
+     $075713004B0F00430F003B0F00330B002B0B00230B001B07001307007B5F4B7357436B53
+     $3F674F3B5F4737574333533F2F4B372B4333273F2F2337271B2F2317271B131F170F170F
+     $0B0F0B076F3B175F3717532F17432B17372313271B0F1B130B0F0B07B35B4FBF7B6FCB9B
+     $93D7BBB7CBD7DFB3C7D39FB7C387A7B77397A75B879B47778B2F677F17536F134B670F43
+     $5B0B3F5307374B072F3F072733001F2B00171F000F1300070B0000008B5757834F4F7B47
+     $477343436B3B3B6333335B2F2F572B2B4B23233F1F1F331B1B2B13131F0F0F130B0B0B07
+     $07000000979F7B8F9773878B6B7F8363777B5F7373576B6B4F6363475B5B434F4F3B4343
+     $3337372B2F2F2323231B1717130F0F0B9F4B3F9343378B3B2F7F3727772F236B2B1B6323
+     $17571F134F1B0F43170B37130B2B0F071F0B071707000B0000000000777BCF6F73C3676B
+     $B76363A75B5B9B53578F4B4F7F4747733F3F673737572F2F4B27273F231F2F1B1723130F
+     $170B07079BAB7B8F9F6F8797637B8B5773834B6777435F6F3B5767334B5B273F4F1B3743
+     $132F3B0B232F071B23001317000B0F0000FF0023E70F3FD31B53BB275FA72F5F8F335F7B
+     $33FFFFFFFFFFD3FFFFA7FFFF7FFFFF53FFFF27FFEB1FFFD717FFBF0FFFAB07FF9300EF7F
+     $00E36B00D35700C74700B73B00AB2B009B1F008F17007F0F007307005F00004700002F00
+     $001B0000EF00003737FFFF00000000FF2B2B231B1B1713130FEB977FC373539F57337B3F
+     $1BEBD3C7C7AB9BA78B77876B579F5B53
+    ShaderFiles: =
+    {
+      scripts/shaderlist.txt =
+      {
+        Data =
+            "// Created by QuArK"$0D0A
+            "// All shaders are extracted to a single file called 'quark.shader'"$0D0A
+            "quark"$0D0A
+      }
+      scripts/shaderlist.txt =
+      {    // 2nd case: if there is no shader in the map
+        Data =
+            "// Created by QuArK"$0D0A
+            "// No shader in this map"$0D0A
+      }
+    }
+    TextureFlags:form =   // a form for setting flags on polyhedron faces
+    {
+      Style = "5"
+      Reset: =
+      {
+        Cap = "Reset to default"
+        Typ = "B"
+        Hint = "Reset all flags to the texture's default"
+        Delete: =
+        {
+          Flags = ""      // this button deletes these Specifics
+          Contents = ""
+          Value = ""
+        }
+      }
+      Contents: =
+      {
+        Cap = "detail"
+        Typ = "X134217728"
+        Hint = "for small, detail brushes that compiler can ignore"
+      }
+    }
+  }
+  NewFiles.qtx =
+  {
+    ToolBox = "New files..."
+    Root = "WildWest file types.qtxfolder"
+    WildWest file types.qtxfolder =
+    {
+      Pk3.pk3 = { }
+    }
+  }
+  NewMap:incl =
+  {
+    Game = "WildWest"
+    Root = "worldspawn:b"
+    worldspawn:b =
+    {
+      wildwest = "1"
+      spawnflags = "8"
+      Delete this to start fresh:g =
+      {
+        light:e =
+        {
+          origin = "-984.2 104 460"
+          light = "600"
+          _color = "1 1 1"
+        }
+        light:e =
+        {
+          origin = "32.8 -4 398"
+          light = "600"
+          _color = "1 1 1"
+        }
+        light:e =
+        {
+          origin = "907.8 60 344"
+          light = "600"
+          _color = "1 1 1"
+        }
+        Cabin:g =
+        {
+          East wall:p =
+          {
+            west:f =
+            {
+              v = '240 196 32 240 100 32 240 196 128'
+              tex = "ww_town/wood/kb_wood03"
+              tv = '0 0 96 0 0 -96'
+            }
+            east:f =
+            {
+              v = '256 -188 32 256 -60 32 256 -188 160'
+              tex = "ww_town/buildings/kb_building02side"
+              tv = '0 0 128 0 0 -128'
+            }
+            south:f =
+            {
+              v = '240 -188 32 272 -188 32 240 -188 160'
+              tex = "ww_town/buildings/kb_building02side"
+              tv = '0 0 32 0 0 -128'
+            }
+            north:f =
+            {
+              v = '256 196 32 224 196 32 256 196 160'
+              tex = "ww_town/buildings/kb_building02side"
+              tv = '0 0 32 0 0 -128'
+            }
+            down:f =
+            {
+              v = '240 196 32 272 196 32 240 68 32'
+              tex = "common/caulk"
+              tv = '0 0 0 -32 -128 0'
+            }
+            up:f =
+            {
+              v = '240 -188 224 272 -188 224 240 -60 224'
+              tex = "common/caulk"
+              tv = '0 0 0 32 128 0'
+            }
+          }
+          West wall:p =
+          {
+            west:f =
+            {
+              v = '-256 196 32 -256 68 32 -256 196 160'
+              tex = "ww_town/buildings/kb_building02side"
+              tv = '0 0 128 0 0 -128'
+            }
+            east:f =
+            {
+              v = '-240 -188 32 -240 -92 32 -240 -188 128'
+              tex = "ww_town/wood/kb_wood03"
+              tv = '0 0 96 0 0 -96'
+            }
+            south:f =
+            {
+              v = '-256 -188 32 -224 -188 32 -256 -188 160'
+              tex = "ww_town/buildings/kb_building02side"
+              tv = '0 0 32 0 0 -128'
+            }
+            north:f =
+            {
+              v = '-240 196 32 -272 196 32 -240 196 160'
+              tex = "ww_town/buildings/kb_building02side"
+              tv = '0 0 32 0 0 -128'
+            }
+            down:f =
+            {
+              v = '-256 196 32 -224 196 32 -256 68 32'
+              tex = "common/caulk"
+              tv = '0 0 0 -32 -128 0'
+            }
+            up:f =
+            {
+              v = '-256 -188 224 -224 -188 224 -256 -60 224'
+              tex = "common/caulk"
+              tv = '0 0 0 32 128 0'
+            }
+          }
+          North wall:p =
+          {
+            west:f =
+            {
+              v = '-239.88520 196 32 -239.88520 164 32 -239.88520 196 160'
+              tex = "common/caulk"
+              tv = '0 0 32 0 0 -128'
+            }
+            east:f =
+            {
+              v = '240.05580 180 32 240.05580 212 32 240.05580 180 160'
+              tex = "common/caulk"
+              tv = '0 0 32 0 0 -128'
+            }
+            south:f =
+            {
+              v = '-256 180 32 -128 180 32 -256 180 128'
+              tex = "ww_town/wood/kb_wood03"
+              tv = '0 0 128 0 0 -96'
+            }
+            north:f =
+            {
+              v = '256 196 32 128 196 32 256 196 160'
+              tex = "ww_town/buildings/kb_building02side"
+              tv = '0 0 128 0 0 -128'
+            }
+            down:f =
+            {
+              v = '-256 196 32 -128 196 32 -256 164 32'
+              tex = "common/caulk"
+              tv = '0 0 0 -128 -32 0'
+            }
+            up:f =
+            {
+              v = '-256 180 224 -128 180 224 -256 212 224'
+              tex = "common/caulk"
+              tv = '0 0 0 128 32 0'
+            }
+          }
+          South wall:p =
+          {
+            west:f =
+            {
+              v = '-240.05580 -172 32 -240.05580 -204 32 -240.05580 -172 160'
+              tex = "common/caulk"
+              tv = '0 0 32 0 0 -128'
+            }
+            east:f =
+            {
+              v = '240.05580 -188 32 240.05580 -156 32 240.05580 -188 160'
+              tex = "common/caulk"
+              tv = '0 0 32 0 0 -128'
+            }
+            south:f =
+            {
+              v = '-256 -188 32 -128 -188 32 -256 -188 160'
+              tex = "ww_town/buildings/kb_building02side"
+              tv = '0 0 128 0 0 -128'
+            }
+            north:f =
+            {
+              v = '256 -169.53130 32 128 -169.53130 32 256 -169.53130 128'
+              tex = "ww_town/wood/kb_wood03"
+              tv = '0 0 128 0 0 -96'
+            }
+            down:f =
+            {
+              v = '-256 -172 32 -128 -172 32 -256 -204 32'
+              tex = "common/caulk"
+              tv = '0 0 0 -128 -32 0'
+            }
+            up:f =
+            {
+              v = '-256 -188 224 -128 -188 224 -256 -156 224'
+              tex = "common/caulk"
+              tv = '0 0 0 128 32 0'
+            }
+          }
+          Sky:p =
+          {
+            west:f =
+            {
+              v = '-256 4 400 -256 -124 400 -256 4 528'
+              tex = "ww_town/wood/kb_wood011"
+              tv = '0 0 128 0 0 -128'
+            }
+            east:f =
+            {
+              v = '256 4 400 256 132 400 256 4 528'
+              tex = "ww_town/wood/kb_wood011"
+              tv = '0 0 128 0 0 -128'
+            }
+            south:f =
+            {
+              v = '432 -188 400 560 -188 400 432 -188 528'
+              tex = "ww_town/wood/kb_wood011"
+              tv = '0 0 128 0 0 -128'
+            }
+            north:f =
+            {
+              v = '432 196 400 304 196 400 432 196 528'
+              tex = "ww_town/wood/kb_wood011"
+              tv = '0 0 128 0 0 -128'
+            }
+            down:f =
+            {
+              v = '432 4 224 560 4 224 432 -124 224'
+              tex = "ww_town/wood/kb_wood011"
+              tv = '192 448 192.22790 384.00040 128.00040 447.77210'
+            }
+            up:f =
+            {
+              v = '432 4 240 560 4 240 432 132 240'
+              tex = "ww_town/wood/kb_wood011"
+              tv = '0 0 0 128 128 0'
+            }
+          }
+          Doorway:p =
+          {
+            neg = "1"
+            east:f =
+            {
+              v = '-240 4 96 -240 132 96 -240 4 224'
+              tex = "ww_town/wood/kb_wood03"
+              tv = '64 -64 128 -64 64 -128'
+            }
+            west:f =
+            {
+              v = '-256 4 96 -256 -124 96 -256 4 224'
+              tex = "ww_town/wood/kb_wood03"
+              tv = '64 -64 128 -64 64 -128'
+            }
+            north:f =
+            {
+              v = '-240 68 96 -368 68 96 -240 68 224'
+              tex = "ww_town/wood/kb_wood03"
+              tv = '64 -64 128 -64 64 -128'
+            }
+            south:f =
+            {
+              v = '-240 -60 96 -112 -60 96 -240 -60 224'
+              tex = "ww_town/wood/kb_wood03"
+              tv = '64 -64 128 -64 64 -128'
+            }
+            up:f =
+            {
+              v = '-240 4 160 -112 4 160 -240 132 160'
+              tex = "ww_town/wood/kb_wood03"
+              tv = '64 64 64 128 128 64'
+            }
+            down:f =
+            {
+              v = '-240 4 32 -112 4 32 -240 -124 32'
+              tex = "ww_town/wood/kb_wood03"
+              tv = '-64 -64 -64 -128 -128 -64'
+            }
+          }
+          info_player_deathmatch:e =
+          {
+            origin = "144 4 64"
+            angle = "0"
+          }
+          light:e =
+          {
+            origin = "-144 4 128"
+            light = "300"
+            _color = "1 1 1"
+          }
+          light:e =
+          {
+            origin = "144 4 128"
+            light = "300"
+            _color = "1 1 1"
+          }
+          info_player_start:e =
+          {
+            origin = "-144 4 64"
+            angle = "360"
+          }
+        }
+        Boundary Walls:g =
+        {
+          North Wall:p =
+          {
+            down:f =
+            {
+              v = '-8 8 32 120 8 32 -8 -120 32'
+              tex = "common/caulk"
+              tv = '-64 -64 -64 -128 -128 -64'
+            }
+            north:f =
+            {
+              v = '-8 504 88 -136 504 88 -8 504 216'
+              tex = "common/caulk"
+              tv = '64 -64 128 -64 64 -128'
+            }
+            west:f =
+            {
+              v = '-1560 8 88 -1560 -120 88 -1560 8 216'
+              tex = "common/caulk"
+              tv = '64 -64 128 -64 64 -128'
+            }
+            east:f =
+            {
+              v = '1144 8 88 1144 136 88 1144 8 216'
+              tex = "common/caulk"
+              tv = '64 -64 128 -64 64 -128'
+            }
+            up:f =
+            {
+              v = '-8 8 496 120 8 496 -8 136 496'
+              tex = "common/caulk"
+              tv = '64 64 64 128 128 64'
+            }
+            South:f =
+            {
+              v = '-8 496 88 -8 496 216 -136 496 88'
+              tex = "wildwest_villa/villa_skybox_ft"
+              tv = '-1552 56 -876 56 -1552 -60'
+            }
+          }
+          South Wall:p =
+          {
+            up:f =
+            {
+              v = '-8 8 496 120 8 496 -8 136 496'
+              tex = "common/caulk"
+              tv = '64 64 64 128 128 64'
+            }
+            east:f =
+            {
+              v = '1144 8 88 1144 136 88 1144 8 216'
+              tex = "common/caulk"
+              tv = '64 -64 128 -64 64 -128'
+            }
+            west:f =
+            {
+              v = '-1560 8 88 -1560 -120 88 -1560 8 216'
+              tex = "common/caulk"
+              tv = '64 -64 128 -64 64 -128'
+            }
+            south:f =
+            {
+              v = '-8 -336 88 120 -336 88 -8 -336 216'
+              tex = "common/caulk"
+              tv = '64 -64 128 -64 64 -128'
+            }
+            down:f =
+            {
+              v = '-8 8 32 120 8 32 -8 -120 32'
+              tex = "common/caulk"
+              tv = '-64 -64 -64 -128 -128 -64'
+            }
+            North:f =
+            {
+              v = '-8 -328 88 -8 -328 216 120 -328 88'
+              tex = "wildwest_villa/villa_skybox_bk"
+              tv = '1552 56 876 56 1552 -60'
+            }
+          }
+          East Wall:p =
+          {
+            south:f =
+            {
+              v = '-8 -328 88 120 -328 88 -8 -328 216'
+              tex = "common/caulk"
+              tv = '64 -64 128 -64 64 -128'
+            }
+            down:f =
+            {
+              v = '-8 8 32 120 8 32 -8 -120 32'
+              tex = "common/caulk"
+              tv = '-64 -64 -64 -128 -128 -64'
+            }
+            east:f =
+            {
+              v = '1144 8 88 1144 136 88 1144 8 216'
+              tex = "common/caulk"
+              tv = '64 -64 128 -64 64 -128'
+            }
+            up:f =
+            {
+              v = '-8 8 496 120 8 496 -8 136 496'
+              tex = "common/caulk"
+              tv = '64 64 64 128 128 64'
+            }
+            north:f =
+            {
+              v = '-8 496 88 -136 496 88 -8 496 216'
+              tex = "common/caulk"
+              tv = '64 -64 128 -64 64 -128'
+            }
+            West:f =
+            {
+              v = '1136 8 88 1136 8 216 1136 136 88'
+              tex = "wildwest_villa/villa_skybox_rt"
+              tv = '336 56 130 56 336 -60'
+            }
+          }
+          West Wall:p =
+          {
+            north:f =
+            {
+              v = '-8 496 88 -136 496 88 -8 496 216'
+              tex = "common/caulk"
+              tv = '64 -64 128 -64 64 -128'
+            }
+            up:f =
+            {
+              v = '-8 8 496 120 8 496 -8 136 496'
+              tex = "common/caulk"
+              tv = '64 64 64 128 128 64'
+            }
+            west:f =
+            {
+              v = '-1560 8 88 -1560 -120 88 -1560 8 216'
+              tex = "common/caulk"
+              tv = '64 -64 128 -64 64 -128'
+            }
+            down:f =
+            {
+              v = '-8 8 32 120 8 32 -8 -120 32'
+              tex = "common/caulk"
+              tv = '-64 -64 -64 -128 -128 -64'
+            }
+            south:f =
+            {
+              v = '-8 -328 88 120 -328 88 -8 -328 216'
+              tex = "common/caulk"
+              tv = '64 -64 128 -64 64 -128'
+            }
+            East:f =
+            {
+              v = '-1552 8 88 -1552 8 216 -1552 -120 88'
+              tex = "wildwest_villa/villa_skybox_lf"
+              tv = '-336 56 -130 56 -336 -60'
+            }
+          }
+          Floor:p =
+          {
+            east:f =
+            {
+              v = '1144 8 88 1144 136 88 1144 8 216'
+              tex = "common/caulk"
+              tv = '64 -64 128 -64 64 -128'
+            }
+            west:f =
+            {
+              v = '-1560 8 88 -1560 -120 88 -1560 8 216'
+              tex = "common/caulk"
+              tv = '64 -64 128 -64 64 -128'
+            }
+            north:f =
+            {
+              v = '-8 504 88 -136 504 88 -8 504 216'
+              tex = "common/caulk"
+              tv = '64 -64 128 -64 64 -128'
+            }
+            south:f =
+            {
+              v = '-8 -336 88 120 -336 88 -8 -336 216'
+              tex = "common/caulk"
+              tv = '64 -64 128 -64 64 -128'
+            }
+            down:f =
+            {
+              v = '-8 8 24 120 8 24 -8 -120 24'
+              tex = "common/caulk"
+              tv = '-64 -64 -64 -128 -128 -64'
+            }
+            Up:f =
+            {
+              v = '-8 8 32 -8 -120 32 120 8 32'
+              tex = "wildwest_villa/villa_skybox_dn"
+              tv = '496 -1552 496 -1416.80000 391 -1552'
+            }
+          }
+          Sky:p =
+          {
+            east:f =
+            {
+              v = '1144 8 552 1144 136 552 1144 8 680'
+              tex = "common/caulk"
+              tv = '64 -64 128 -64 64 -128'
+            }
+            west:f =
+            {
+              v = '-1560 8 552 -1560 -120 552 -1560 8 680'
+              tex = "common/caulk"
+              tv = '64 -64 128 -64 64 -128'
+            }
+            north:f =
+            {
+              v = '-8 504 552 -136 504 552 -8 504 680'
+              tex = "common/caulk"
+              tv = '64 -64 128 -64 64 -128'
+            }
+            south:f =
+            {
+              v = '-8 -336 552 120 -336 552 -8 -336 680'
+              tex = "common/caulk"
+              tv = '64 -64 128 -64 64 -128'
+            }
+            down:f =
+            {
+              v = '-8 8 488 120 8 488 -8 -120 488'
+              tex = "wildwest_villa/villa_skybox_up"
+              tv = '496 1552 496 876 286 1552'
+            }
+            Up:f =
+            {
+              v = '-8 8 496 -8 -120 496 120 8 496'
+              tex = "common/caulk"
+              tv = '496 -1552 496 -1416.80000 391 -1552'
+            }
+          }
+        }
+        Clipped Boulder:p =
+        {
+          face:f =
+          {
+            v = '-8340.48400 3676.86700 25.56329 -8340.48400 3740.86700 25.56329
+              -8276.48400 3676.86700 25.56329'
+            tex = "common/clipweap"
+            Contents = "0"
+            Flags = "5"
+            Value = "0"
+            tv = '0.00009 -0.00078 0.00009 -64.00079 64.00008 -0.00078'
+          }
+          face:f =
+          {
+            v = '-8340.48400 1734.35000 -198.43670 -8276.48400 1720.67400 -198.43670
+              -8340.48400 1733.46900 -134.43670'
+            tex = "common/clipweap"
+            Contents = "0"
+            Flags = "5"
+            Value = "0"
+            tv = '0.00075 0 65.44547 0 0.18468 -64.00579'
+          }
+          face:f =
+          {
+            v = '-8340.48400 -1742.25200 -198.43670 -8340.48400 -1755.34600 -134.43670
+              -8276.48400 -1724.86100 -198.43670'
+            tex = "common/clipweap"
+            Contents = "0"
+            Flags = "5"
+            Value = "0"
+            tv = '-0.00078 -0.00002 -66.32173 -0.00002 3.43272 -65.23532'
+          }
+          face:f =
+          {
+            v = '-8340.48400 7379.21500 -198.43670 -8340.48400 7363.34800 -134.43670
+              -8276.48400 7318.92500 -198.43670'
+            tex = "common/clipweap"
+            Contents = "0"
+            Flags = "5"
+            Value = "0"
+            tv = '-0.00068 0.00008 -87.92615 0.00008 -10.88106 -65.03378'
+          }
+          face:f =
+          {
+            v = '1047.83900 3676.86700 -198.43670 1079.00600 3740.86700 -198.43670
+              1015.63200 3676.86700 -134.43670'
+            tex = "common/clipweap"
+            Contents = "0"
+            Flags = "5"
+            Value = "0"
+            tv = '0.00011 0 71.18565 0 -14.10102 -70.24565'
+          }
+          face:f =
+          {
+            v = '1125.89600 3676.86700 -198.43670 1179.83300 3676.86700 -134.43670
+              1167.45300 3740.86700 -198.43670'
+            tex = "common/clipweap"
+            Contents = "0"
+            Flags = "5"
+            Value = "0"
+            tv = '-0.00011 0 -76.30840 0 -29.37333 -78.37322'
+          }
+          face:f =
+          {
+            v = '-972.64140 3676.86700 -198.43670 -959.16770 3676.86700 -134.43670
+              -972.64140 3740.86700 -198.43670'
+            tex = "common/clipweap"
+            Contents = "0"
+            Flags = "5"
+            Value = "0"
+            tv = '-0.00009 0 -64.00008 0 -0.00009 -65.40292'
+          }
+          face:f =
+          {
+            v = '-8340.48400 3676.86700 -4336.40400 -8276.48400 3676.86700 -4299.73300
+              -8340.48400 3740.86700 -4339.67400'
+            tex = "common/clipweap"
+            Contents = "0"
+            Flags = "5"
+            Value = "0"
+            tv = '-0.00016 -0.00082 -5.68454 -73.54330 -63.74723 6.55701'
+          }
+          face:f =
+          {
+            v = '-1097.13400 3676.86700 -198.43670 -1105.93700 3740.86700 -198.43670
+              -1139.24700 3676.86700 -134.43670'
+            tex = "common/clipweap"
+            Contents = "0"
+            Flags = "5"
+            Value = "0"
+            tv = '0.00007 0.00010 64.60268 0.00004 5.73865 -76.39753'
+          }
+          face:f =
+          {
+            v = '1681.35900 3676.86700 -198.43670 1724.68200 3740.86700 -198.43670
+              1657.53600 3676.86700 -134.43670'
+            tex = "common/clipweap"
+            Contents = "0"
+            Flags = "5"
+            Value = "0"
+            tv = '0.00011 0 77.28467 0 -13.35444 -66.97166'
+          }
+          face:f =
+          {
+            v = '-8340.48400 3676.86700 -220.26060 -8276.48400 3676.86700 -188.11720
+              -8340.48400 3740.86700 -158.32510'
+            tex = "common/clipweap"
+            Contents = "0"
+            Flags = "5"
+            Value = "0"
+            tv = '0.00065 -0.00029 56.80619 -43.61596 -29.48037 -84.04121'
+          }
+          face:f =
+          {
+            v = '-8340.48400 2970.03100 -198.43670 -8276.48400 2945.35400 -198.43670
+              -8340.48400 2980.27900 -134.43670'
+            tex = "common/clipweap"
+            Contents = "0"
+            Flags = "5"
+            Value = "0"
+            tv = '0.00063 -0.00008 68.59320 -0.00009 -3.68608 -64.71040'
+          }
+          face:f =
+          {
+            v = '-8340.48400 -2911.69600 -198.43670 -8340.48400 -2941.83900 -134.43670
+              -8276.48400 -2883.69600 -198.43670'
+            tex = "common/clipweap"
+            Contents = "0"
+            Flags = "5"
+            Value = "0"
+            tv = '-0.00085 0 -69.85785 0 12.08105 -69.70389'
+          }
+          face:f =
+          {
+            v = '-3414.99600 3676.86700 -198.43670 -3465.72800 3740.86700 -198.43670
+              -3448.12500 3676.86700 -134.43670'
+            tex = "common/clipweap"
+            Contents = "0"
+            Flags = "5"
+            Value = "0"
+            tv = '0.00019 -0.00004 81.66859 -0.00004 20.57967 -69.06528'
+          }
+        }
+        User Beziiers for landscaping:b2 =
+        {
+          tex = "wildwest_villa/villa_skybox_dn"
+          v = '744 -88 32 0 0 752 -320 32 0.50000 0 1136 -320 32 1 0 368 -32 32 0
+            0.50000 912 416 192 0.50000 0.50000 1136 0 416 1 0.50000 560 320 32 0
+            1 784 480 32 0.50000 1 1136 480 32 1 1'
+        }
+        Textured Boulder:p =
+        {
+          face:f =
+          {
+            v = '-8532.48400 3460.86700 25.56329 -8532.48400 3524.86700 25.56329
+              -8468.48400 3460.86700 25.56329'
+            tex = "ww_BattleCreek/ma_pebbles01"
+            Contents = "0"
+            Flags = "5"
+            Value = "0"
+            tv = '0.00009 -0.00072 0.00009 -64.00072 64.00008 -0.00072'
+          }
+          face:f =
+          {
+            v = '-8532.48400 1518.35000 -198.43670 -8468.48400 1504.67400 -198.43670
+              -8532.48400 1517.46900 -134.43670'
+            tex = "ww_BattleCreek/ma_pebbles01"
+            Contents = "0"
+            Flags = "5"
+            Value = "0"
+            tv = '0.00069 0 65.44540 0 0.18463 -64.00579'
+          }
+          face:f =
+          {
+            v = '-8532.48400 -1958.25200 -198.43670 -8532.48400 -1971.34600 -134.43670
+              -8468.48400 -1940.86100 -198.43670'
+            tex = "ww_BattleCreek/ma_pebbles01"
+            Contents = "0"
+            Flags = "5"
+            Value = "0"
+            tv = '-0.00072 -0.00002 -66.32167 -0.00002 3.43277 -65.23532'
+          }
+          face:f =
+          {
+            v = '-8532.48400 7163.21500 -198.43670 -8532.48400 7147.34800 -134.43670
+              -8468.48400 7102.92500 -198.43670'
+            tex = "ww_BattleCreek/ma_pebbles01"
+            Contents = "0"
+            Flags = "5"
+            Value = "0"
+            tv = '-0.00063 0.00007 -87.92610 0.00007 -10.88101 -65.03378'
+          }
+          face:f =
+          {
+            v = '855.83860 3460.86700 -198.43670 887.00560 3524.86700 -198.43670
+              823.63150 3460.86700 -134.43670'
+            tex = "ww_BattleCreek/ma_pebbles01"
+            Contents = "0"
+            Flags = "5"
+            Value = "0"
+            tv = '0.00011 0 71.18565 0 -14.10102 -70.24565'
+          }
+          face:f =
+          {
+            v = '933.89620 3460.86700 -198.43670 987.83270 3460.86700 -134.43670
+              975.45280 3524.86700 -198.43670'
+            tex = "ww_BattleCreek/ma_pebbles01"
+            Contents = "0"
+            Flags = "5"
+            Value = "0"
+            tv = '-0.00011 0 -76.30840 0 -29.37334 -78.37322'
+          }
+          face:f =
+          {
+            v = '-1164.64100 3460.86700 -198.43670 -1151.16800 3460.86700 -134.43670
+              -1164.64100 3524.86700 -198.43670'
+            tex = "ww_BattleCreek/ma_pebbles01"
+            Contents = "0"
+            Flags = "5"
+            Value = "0"
+            tv = '-0.00009 0 -64.00008 0 -0.00009 -65.40291'
+          }
+          face:f =
+          {
+            v = '-8532.48400 3460.86700 -4336.40400 -8468.48400 3460.86700 -4299.73300
+              -8532.48400 3524.86700 -4339.67400'
+            tex = "ww_BattleCreek/ma_pebbles01"
+            Contents = "0"
+            Flags = "5"
+            Value = "0"
+            tv = '-0.00016 -0.00077 -5.68454 -73.54324 -63.74722 6.55706'
+          }
+          face:f =
+          {
+            v = '-1289.13400 3460.86700 -198.43670 -1297.93700 3524.86700 -198.43670
+              -1331.24700 3460.86700 -134.43670'
+            tex = "ww_BattleCreek/ma_pebbles01"
+            Contents = "0"
+            Flags = "5"
+            Value = "0"
+            tv = '0.00008 0.00007 64.60268 0 5.73866 -76.39756'
+          }
+          face:f =
+          {
+            v = '1489.35900 3460.86700 -198.43670 1532.68200 3524.86700 -198.43670
+              1465.53600 3460.86700 -134.43670'
+            tex = "ww_BattleCreek/ma_pebbles01"
+            Contents = "0"
+            Flags = "5"
+            Value = "0"
+            tv = '0.00007 -0.00002 77.28464 -0.00002 -13.35447 -66.97168'
+          }
+          face:f =
+          {
+            v = '-8532.48400 3460.86700 -220.26060 -8468.48400 3460.86700 -188.11720
+              -8532.48400 3524.86700 -158.32510'
+            tex = "ww_BattleCreek/ma_pebbles01"
+            Contents = "0"
+            Flags = "5"
+            Value = "0"
+            tv = '0.00060 -0.00028 56.80614 -43.61595 -29.48042 -84.04120'
+          }
+          face:f =
+          {
+            v = '-8532.48400 2754.03100 -198.43670 -8468.48400 2729.35400 -198.43670
+              -8532.48400 2764.27900 -134.43670'
+            tex = "ww_BattleCreek/ma_pebbles01"
+            Contents = "0"
+            Flags = "5"
+            Value = "0"
+            tv = '0.00058 -0.00008 68.59315 -0.00009 -3.68613 -64.71040'
+          }
+          face:f =
+          {
+            v = '-8532.48400 -3127.69600 -198.43670 -8532.48400 -3157.83900 -134.43670
+              -8468.48400 -3099.69600 -198.43670'
+            tex = "ww_BattleCreek/ma_pebbles01"
+            Contents = "0"
+            Flags = "5"
+            Value = "0"
+            tv = '-0.00080 0 -69.85780 0 12.08111 -69.70388'
+          }
+          face:f =
+          {
+            v = '-3606.99600 3460.86700 -198.43670 -3657.72800 3524.86700 -198.43670
+              -3640.12500 3460.86700 -134.43670'
+            tex = "ww_BattleCreek/ma_pebbles01"
+            Contents = "0"
+            Flags = "5"
+            Value = "0"
+            tv = '0.00023 -0.00005 81.66863 -0.00005 20.57971 -69.06531'
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,369 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"  "http://www.w3.org/TR/html4/loose.dtd">
+<html lang="en">
+<head>
+  <title>QuArK's Model Structure</title>
+  <meta name="Description" content="QuArK Information Database - Page: 1.6.2.&nbsp;QuArK's Model Structure">
+  <meta name="Keywords" content="QuArK InfoBase Quake Army Knife QRK QKM Python PY Map Editor Hexen Heretic Half-Life Sin Kingpin Soldier-of-Fortune Star-Trek-Voyager Elite-Force">
+  <link rel=stylesheet href="standard.css" type="text/css">
+</head>
+
+<body>
+<a name="__top__"></a>
+<table width="100%" border=0 cellspacing=0>
+  <tr>
+    <td width=213>
+      <a target="_blank" href="http://quark.sourceforge.net/"><img src="quarkicon.png" width=213 height=90 border=0 alt="Go to QuArK Web Site"></a>
+    </td>
+    <td width="70%" align=center>
+      <div class="topheadline">QuArK's Model Structure</div>
+      <div class="sm">Updated&nbsp;27 Jul 2009</div>
+    </td>
+    <td width="30%" valign=bottom nowrap>
+      Upper&nbsp;levels:<br>-&nbsp;<a href="index.html">QuArK&nbsp;Information&nbsp;Base</a><br>-&nbsp;<a href="intro.html">1.&nbsp;Introduction&nbsp;to&nbsp;QuArK</a><br>-&nbsp;<a href="intro.modeleditor.html">1.6.&nbsp;Model-editor&nbsp;in&nbsp;QuArK</a><br>
+    </td>
+  </tr>
+</table>
+<table width="100%" border=0 cellspacing=0>
+  <tr class="headline">
+    <td width="99%">
+      <p class="headline">&nbsp;1.6.2.&nbsp;QuArK's Model Structure</p>
+    </td>
+    <td width="1%" align=right nowrap>
+      &nbsp;[&nbsp;<span class="navenable"><a href="intro.modeleditor.overview.html">Prev</a></span>&nbsp;-&nbsp;<span class="navenable"><a href="intro.modeleditor.html">Up</a></span>&nbsp;-&nbsp;<span class="navenable"><a href="intro.modeleditor.importexport.html">Next</a></span>&nbsp;]&nbsp;
+    </td>
+  </tr>
+</table>
+<table border=0 width="100%" cellspacing=10><tr><td><p>This section covers more of the technical part, in detail, of QuArK's Model Structure for programming
+purposes and is very important to understand if you plan to do any code writing for the Model Editor.
+Occasionally references will be made to the Model Editor's Python code located in the quarkpy and
+plugins folders as well as areas in the <a href="src.quarkx.html">'QuarkX'</a> section of these Infobase docs.
+</p>
+</td></tr></table>
+<br>
+
+<table width="100%" border=0 cellspacing=0>
+  <tr class="headline">
+    <td width="100%">
+      <p class="subheadline">&nbsp;Index</p>
+    </td>
+  </tr>
+</table>
+<ul class="index">
+  <li>- <a href="#components">Components of a Model</a>&nbsp;<span class="added">(27 Jul 2009)</span>
+  <li>- <a href="#mesh">The Model's Mesh(s)</a>&nbsp;<span class="added">(26 Apr 2007)</span>
+  <li>- <a href="#skinmesh">The Skin-view Mesh(s)</a>&nbsp;<span class="added">(27 Jul 2009)</span>
+</ul>
+<br>
+
+
+<a name="components"></a>
+  <table width="100%" border=0 cellspacing=0>
+    <tr class="headline">
+      <td>
+        <p class="item">&nbsp;Components of a Model</p>
+      </td>
+      <td align=right>
+        <font size=-2>cdunde&nbsp;-&nbsp;27 Jul 2009</font>
+      </td>
+      <td width="1%" align=right nowrap>
+        &nbsp;&nbsp;[&nbsp;<a href="#__top__">Top</a>&nbsp;]&nbsp;
+      </td>
+    </tr>
+  </table>
+  <table border=0 width="100%" cellspacing=10><tr><td>
+<p>A model is a single <b>QuArK Internal Object</b> that can consist of a single or multiple <a href="glossary.html#c">components</a>.
+The elements that make up a model are stored as &quot;<a href="glossary.html#k">key</a><b>:</b><a href="glossary.html#v">value</a>&quot; pairs of the QuArK Internal Object,
+where there is a <a href="glossary.html#k">key</a> name and a <a href="glossary.html#v">value</a> that goes along with that <a href="glossary.html#k">key</a> name.
+</p><p>Also, each of the &quot;key names&quot; CAN BE given a specific <a href="glossary.html#t">type</a> to distinguish what kind of element it is.<br>
+So an example of a <a href="glossary.html#k">key</a>, its <a href="glossary.html#t">type</a> and its related <a href="glossary.html#v">value</a> would look like this:
+<div class="doccode"><pre>{'Skins:sg': &lt;QuArK Internal object at 0x01390F78&gt;}</pre></div>
+</p><p>The <a href="glossary.html#k">key</a> name is Skins, its <a href="glossary.html#t">type</a> sg (skin group) and its <a href="glossary.html#v">value</a> is another QuArK Internal Object (the skin texture image).
+This method of using &quot;<a href="glossary.html#k">key</a><b>:</b><a href="glossary.html#v">value</a>&quot; pairs runs all the way through as a model's <a href="glossary.html#c">component(s)</a> elements are broken down.
+</p><p>A list of the different &quot;type&quot;s of &quot;key&quot;s is shown in the code example below, <a href="glossary.html#d">displayed in blue</a>.<br>
+This code is located in the <a href="glossary.html#q">quarkpy\mdlmgr.py</a> file's <a href="glossary.html#d">def selchange(self)<b>:</b></a> section
+of the <a href="glossary.html#c">class ModelLayout(BaseLayout)<b>:</b></a> class<br>
+This code structures these items in the same way they are displayed in the QuArK Model Editor Tree-view:
+</p><p><img border=0 align=right src="intro.modeleditor.model.components1.png">
+</p><p><a href="glossary.html#f">fs = self.explorer.uniquesel</a><br>(what is selected at the moment.)<br>
+<a href="glossary.html#i">if fs is not None:</a><br>(to test that something IS selected.)<br>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="glossary.html#f">fs.type == ':mg':</a><br>(<b>misc. group</b> [contains the <b>:bound and :tag</b> items shown further below within it])<br>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="glossary.html#f">fs.type == ':tag':</a><br>(<b>tag group</b> [contains the individual <b>:tagframe</b> items shown further below within it if they exist])<br>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="glossary.html#f">fs.type == ':bg':</a><br>(<b>bone group</b> [contains the bones, if they exist])<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="glossary.html#f">fs.type == ':bone':</a><br>&nbsp;&nbsp;&nbsp;(<b>bones</b> [if they exist])<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="glossary.html#s">self.selectcgroup(fs)</a><br>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="glossary.html#f">fs.type == ':mc':</a><br>(<b>model component</b> [contains the <b>element groups</b> shown within it])<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="glossary.html#s">self.selectcomponent(fs)</a><br>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="glossary.html#f">fs.type == ':sg':</a><br>(<b>skin group</b> [contains skins shown within it])<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="glossary.html#s">self.selectcgroup(fs)</a><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="glossary.html#f">fs.type == '.pcx':</a><br>&nbsp;&nbsp;&nbsp;(<b>skin</b> [texture file])<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="glossary.html#s">self.selectskin(fs)</a><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="glossary.html#f">fs.type == '.tga':</a><br>&nbsp;&nbsp;&nbsp;(<b>skin</b> [texture file])<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="glossary.html#s">self.selectskin(fs)</a><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="glossary.html#f">fs.type == '.dds':</a><br>&nbsp;&nbsp;&nbsp;(<b>skin</b> [texture file])<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="glossary.html#s">self.selectskin(fs)</a><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="glossary.html#f">fs.type == '.png':</a><br>&nbsp;&nbsp;&nbsp;(<b>skin</b> [texture file])<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="glossary.html#s">self.selectskin(fs)</a><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="glossary.html#f">fs.type == '.jpg':</a><br>&nbsp;&nbsp;&nbsp;(<b>skin</b> [texture file])<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="glossary.html#s">self.selectskin(fs)</a><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="glossary.html#f">fs.type == '.bmp':</a><br>&nbsp;&nbsp;&nbsp;(<b>skin</b> [texture file])<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="glossary.html#s">self.selectskin(fs)</a><br>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="glossary.html#e">elif fs.type == ':fg':</a><br>(<b>frame group</b> [contains the individual frames shown within it])<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="glossary.html#s">self.selectcgroup(fs)</a><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="glossary.html#f">fs.type == ':mf':</a><br>&nbsp;&nbsp;&nbsp;(<b>model frames</b> [for animation])<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="glossary.html#s">self.selectframe(fs)</a><br>
+</p><p>the rest of this models <a href="glossary.html#t">types</a>, not being displayed in the tree-view are:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="glossary.html#f">fs.type == ':sdo':</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(system data object, not really used at this time)<br>
+</p><p>The key name can be any arbitrary name, even the short path and name of the model skin file itself, as shown below:
+<div class="doccode"><pre>{'models/characters/autopsy_d.tga': &lt;QuArK Internal object at 0x01390F78&gt;}</pre></div>
+</p><p>The <b>QuArK Internal object</b>, in the above example, is the actual autopsy_d.tga <b>skin</b> texture image file
+that is stored in memory and can be called upon to display in one of the editor's views by using its <a href="glossary.html#k">key</a> name
+OR by giving the program functiion the related <b>QuArK Internal object</b> by using its <a href="glossary.html#k">key</a> name.
+That all depends on what a particular program function needs, just the path and name or the actual image file, to perform its task.
+</p>
+  </td></tr></table>
+  <br>
+
+<a name="mesh"></a>
+  <table width="100%" border=0 cellspacing=0>
+    <tr class="headline">
+      <td>
+        <p class="item">&nbsp;The Model's Mesh(s)</p>
+      </td>
+      <td align=right>
+        <font size=-2>cdunde&nbsp;-&nbsp;26 Apr 2007</font>
+      </td>
+      <td width="1%" align=right nowrap>
+        &nbsp;&nbsp;[&nbsp;<a href="#__top__">Top</a>&nbsp;]&nbsp;
+      </td>
+    </tr>
+  </table>
+  <table border=0 width="100%" cellspacing=10><tr><td>
+<p>A model is constructed from a mesh, which is a list of triangles grouped together to create its shape.
+The model can be a single mesh or it can consist of a number of meshes. In QuArK we call these meshes <a href="glossary.html#c">components</a>.
+And therefore, each <a href="glossary.html#c">component</a> of a model has its own group of triangles which are known as a components
+<a href="src.quarkx.html#objectsmodeleditor">Tris Specific</a> as stated in the
+<a href="src.quarkx.html#objectsmodeleditor">Quarkx Model Editor section</a> of these Infobase docs.
+<a href="glossary.html#t">Tris</a> is an abbreviation for triangles.
+</p><p>Even though you can think of a component's Tris as a very complex poly, like those used in the QuArK Map Editor,
+and each triangle as a face of that poly, these triangles are handled differently in the Model Editor.
+However, like a poly face, each triangle has three <a href="glossary.html#v">vertexes</a> arranged in a specific order which tells which side of that triangle face is facing outwards.
+</p><p>Instead of a set of 3 <a href="glossary.html#t">tuples</a> of 3 values each (x, y and z) that give the 3 points of a triangle,
+the triangle of a component gives these values for its 3 <a href="glossary.html#t">tuples</a>:<br>
+</p><p>&nbsp;&nbsp;<i>1st item:</i>&nbsp; The triangle’s <a href="glossary.html#v">vertexnumber</a>, also known as its <a href="glossary.html#i">index number</a>, which can be used to call a specific triangle.<br>
+&nbsp;&nbsp;<i>2nd item:</i>&nbsp; The <a href="glossary.html#s">skin_s</a> value for the horizontal position location of the models triangle on its skin texture image.<br>
+&nbsp;&nbsp;<i>3rd item:</i>&nbsp; The <a href="glossary.html#s">skin_t</a> value for the vertical position location of the models triangle on its skin texture image.
+</p><p>This can be misleading if you do not understand the differences between the 3 <a href="glossary.html#t">tuples</a> of a
+standard poly triangle and the triangle of a models component mesh or Tris. This is also discribed in the
+<a href="src.quarkx.html#objectsmodeleditor">Quarkx Model Editor section</a> of these Infobase docs.
+</p><p>The actual 3 point positions of a components triangle are given by calling the triangle's <a href="glossary.html#v">vertexnumber</a>
+to retrieve its <a href="glossary.html#v">vertices</a> list which is a set of 3 <a href="glossary.html#t">tuples</a> of 3 values each (x, y and z)
+that give the 3 points for that triangle. Again, this is briefly covered in the
+<a href="src.quarkx.html#objectsmodeleditor">Quarkx Model Editor section</a> of these Infobase docs.
+</p><p>I realize all of this can be confusing, so let me give you an example using some actual code that is
+located in two related sections of the <a href="glossary.html#q">quarkpy\mdlhandles.py</a> file that create and draw the handle for each vertex.
+</p>
+<p>In this first section of code we start off by setting up a list that will be used to store all of the handles (line 1), as they are created and drawn.<br>
+Next we can see how the <a href="glossary.html#c">component.triangles</a> is called to retrieve its Tris list and their <a href="glossary.html#t">tuple</a> values (line 2).<br>
+Now we can call for the <a href="glossary.html#v">vertices</a> of each triangle, in a loop function, by its index <a href="glossary.html#v">vertexnumber</a> (lines 3 and 4).<br>
+Once we get one vertices of a triangle, we then go into another loop to retrieve each of the 3 vertex point values (x, y and z)<br>
+for one of the 3 points of that triangel (lines 5 and 6).<br>
+We then do two things as one, pass the data to the second section of code, which is covered further down,<br>
+and <a href="glossary.html#a">append</a> (add) the returned handle to our <a href="glossary.html#h">h</a> handle list (line 7). Which in this case is for the Skin-view handles.
+</p><p><a href="glossary.html#(">(line 1) &nbsp;&nbsp;&nbsp;h = [ ]</a><br>
+<a href="glossary.html#(">(line 2) &nbsp;&nbsp;&nbsp;tris = component.triangles</a><br>
+<a href="glossary.html#(">(line 3) &nbsp;&nbsp;&nbsp;for i in range(len(tris)):</a><br>
+<a href="glossary.html#(">(line 4) &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;tri = tris[i]</a><br>
+<a href="glossary.html#(">(line 5) &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;for j in range(len(tri)):</a><br>
+<a href="glossary.html#(">(line 6) &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;vtx = tri[j]</a><br>
+<a href="glossary.html#(">(line 7) &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;h.append(SkinHandle(quarkx.vect(vtx[1]-int(texWidth*.5), vtx[2]-int(texHeight*.5), 0), i, j, component, texWidth, texHeight, tri))</a>
+</p><p>A print statement you can use to print it to the QuArK console is this:
+<div class="doccode"><pre>print &quot;SkinHandle &quot;,quarkx.vect(vtx[1], vtx[2], 0), i, j</pre></div>
+placed just under the code line above. The console will display  3 vertexes for each face like this:
+</p><p>SkinHandle &nbsp;&nbsp;40 46 0 74 0<br>
+SkinHandle &nbsp;&nbsp;59 48 0 74 1<br>
+SkinHandle &nbsp;&nbsp;55 34 0 74 2<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;|<br>
+&nbsp;&nbsp;2D pix. pos.&nbsp;&nbsp;x&nbsp;&nbsp;&nbsp;&nbsp;y&nbsp;&nbsp;z&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;|<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;|<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;face index number&nbsp;&nbsp;&nbsp;|<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;vertex order in a clockwise direction
+</p><p>One final thing you might want to notice is the very last item, or argument, that we pass to the <a href="glossary.html#c">class SkinHandle</a> code section is <a href="glossary.html#t">the list of triangle vertices</a> or <a href="glossary.html#t">tri</a> itself.<br>
+This we will use in that code to do one other function, that of drawing the <a href="glossary.html#m">movement</a> lines of a vertex handle, as a guide, while it is being dragged to change the position of the vertex and skin appearance on the model.
+</p><p>Now for the <a href="glossary.html#c">class SkinHandle</a> part of the code, located above this code, in the same <a href="glossary.html#q">quarkpy\mdlhandles.py</a> file, but I won't go through all of it here, for simplicity.
+</p><p>The <a href="glossary.html#c">class SkinHandle</a> section consist of two main parts, the <a href="glossary.html#d">def draw</a> and the <a href="glossary.html#d">def drag</a> sections, the first of the two being simpler and more direct to the point I am making to the code. So we will take
+a look at the <a href="glossary.html#d">def draw</a> section in part. One basic point about classes here is that we do not pass all of the above <a href="glossary.html#a">arguments</a> directly to the <a href="glossary.html#d">def drag</a> section itself, but to the class that it lies within.
+From the base class we can then pass it on to the actual <a href="glossary.html#d">def draw</a> section by attaching the word <a href="glossary.html#s">self</a>, meaning the class itself, and because the <a href="glossary.html#d">def draw</a> is within that class we can then use <a href="glossary.html#s">self.triangle</a>
+and use that arguments data in the draw section. Note how we also changed the arguments variable name from just <a href="glossary.html#t">tri</a> to <a href="glossary.html#t">triangle</a> to make it more clear in the code as to what that item really represents (or actually contains).
+</p><p>Now , in the <a href="glossary.html#d">def draw</a> section of code, we will just look at a few lines intermittently to see how it uses this particular argument.
+</p><p>First we obtain it from the base class arguments that it receives and redefine it with a new name (line 1).<br>
+Next, because it already is <a href="glossary.html#t">the list of triangle vertices</a> that we need, we simply use a loop to go through that list, one vertex at a time, and get the data for each vertex of the triangle that we need to draw the vertex dragging guide lines (line 2).<br>
+</p><p>This next part is a little bit tricky to understand, so bear with me.<br>
+In the <a href="glossary.html#d">def draw</a> section, it receives an argument <a href="glossary.html#s">self</a> also, which in the <a href="glossary.html#d">def draw</a> case, <b>IS</b> the vertex handle that we are dragging, and also position 0 of the triangle.<br>
+It is also located in <a href="glossary.html#t">the list of triangle vertices</a> along with the triangles two other vertex positions, 1 and 2. Items like this start with a count of 0 instead of 1 when it comes to programming. So the two other vertexes represent the <a href="glossary.html#s">stationary</a>
+vertexes of the triangle that are <b>NOT</b> being dragged, but are needed to draw the lines from the one that is being dragged, and to give us our guide line fixed positions for drawing in a lime green color so they are easily seen in the Skin-view as shown in the screen shot.
+</p><p>So with that out of the way, we pull those stationary vertexes out of the list, which is a <a href="glossary.html#t">tuple</a> of 3 vertexes (pos 0, 1 and 2), and define each vertex as a <a href="glossary.html#v">vector</a> called <a href="glossary.html#f">fixedvertex</a> (line 10), skipping the first one (lines 3-6) because that is our <a href="glossary.html#s">self</a> drag handle.
+Which we already have and will be drawing our guide lines from.
+</p><p>Something else you might have noticed here is that we <b>do not</b> use position 0 and 1 (x and y) here as you might think, but positions 1 and 2 (y and z) instead.<br>
+<a href="glossary.html#v">vertex[1]...vertex[2]</a><br>
+Don't ask me why, it's just the way the <a href="glossary.html#q">quarkx.vect</a> function works.
+</p><p>Once we have defined our <a href="glossary.html#v">vector</a> it also becomes a <a href="glossary.html#t">tuple</a>, so now we need to pull out that vertex's positions for X , Y and Z (line 11).<br>
+Because these positions are actually pixels on a flat 2D screen (your monitor), with 0,0 being at the upper left hand corner of the Skin-view, the value for Z is not needed.<br>
+So we just ignore that one and use the X and Y positions for the fixed end of a line and the X and Y positions of our vertex handle for the other end( line 12).
+</p><p>Remember, this is done for each line that is drawn as the handle vertex and its triangle are passed to the <a href="glossary.html#c">class  SkinHandle</a> from the first section of code.
+Looking at the actual and complete code in the file will fill in the gaps and help answer any questions of other items shown below.
+</p><p><a href="glossary.html#(">(line 1) &nbsp;&nbsp;&nbsp;triangle = self.triangle</a>
+</p><p>(skipping a few lines of code)
+</p><p><a href="glossary.html#(">(line 2) &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;for vertex in triangle:</a><br>
+<a href="glossary.html#(">(line 3) &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if self.ver_index == 0:</a><br>
+<a href="glossary.html#(">(line 4) &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if  count != 0: break</a><br>
+<a href="glossary.html#(">(line 5) &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;count = count + 1</a><br>
+<a href="glossary.html#(">(line 6) &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;pass</a><br>
+<a href="glossary.html#(">(line 7) &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;else:</a><br>
+<a href="glossary.html#(">(line 8) &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if  count > 2: break</a><br>
+<a href="glossary.html#(">(line 9) &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;count = count + 1</a><br>
+<a href="glossary.html#(">(line 10)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;fixedvertex = quarkx.vect(vertex[1]-int(texWidth*.5), vertex[2]-int(texHeight*.5), 0)</a><br>
+<a href="glossary.html#(">(line 11)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;fixedX, fixedY,fixedZ = view.proj(fixedvertex).tuple</a><br>
+<a href="glossary.html#(">(line 12)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;cv.line(int(pv2[0]), int(pv2[1]), int(fixedX), int(fixedY))</a><br>
+</p><p>And in the screen shot below you can see these vertex handles for the component <a href="glossary.html#d">deadeye</a> Tris as they
+are displayed in both the Model Editors views and its <a href="intro.modeleditor.skinview.html">'Skin-view page'</a>. Just remember though, the handles in the
+Model Editor views, which move the components mesh for the models shape, are NOT the same handles that are shown on the <a href="intro.modeleditor.skinview.html">'Skin-view page'</a>,
+which move the <a href="glossary.html#u">unwrapped</a> components mesh for skinning purposes. So one handle type will NOT effect the other.
+But both are created and drawn in the same way, they just wind up in different <a href="glossary.html#h">handle lists</a>.
+</p><p><table width=100% cellspacing=0>
+<tr><td valign=top align=middle>
+<img border=0 align=middle src="intro.modeleditor.model.mesh1.png">
+</td></tr>
+</table>
+</p>
+  </td></tr></table>
+  <br>
+
+<a name="skinmesh"></a>
+  <table width="100%" border=0 cellspacing=0>
+    <tr class="headline">
+      <td>
+        <p class="item">&nbsp;The Skin-view Mesh(s)</p>
+      </td>
+      <td align=right>
+        <font size=-2>cdunde&nbsp;-&nbsp;27 Jul 2009</font>
+      </td>
+      <td width="1%" align=right nowrap>
+        &nbsp;&nbsp;[&nbsp;<a href="#__top__">Top</a>&nbsp;]&nbsp;
+      </td>
+    </tr>
+  </table>
+  <table border=0 width="100%" cellspacing=10><tr><td>
+<p>A model is constructed from a mesh, which is a list of triangles grouped together to create its shape.
+The model can be a single mesh or it can consist of a number of meshes. In QuArK we call these meshes <a href="glossary.html#c">components</a>.
+And therefore, each <a href="glossary.html#c">component</a> of a model has its own group of triangles which are known as a components
+<a href="src.quarkx.html#objectsmodeleditor">Tris Specific</a> as stated in the
+<a href="src.quarkx.html#objectsmodeleditor">Quarkx Model Editor section</a> of these Infobase docs.
+<a href="glossary.html#t">Tris</a> is an abbreviation for triangles.
+</p><p>The <a href="intro.modeleditor.skinview.html">Skin-view page</a> will display an <a href="glossary.html#u">unwrapped</a>, or flat
+version, of each of the model's components when it or any of its sub-items have been selected in the tree-view.
+</p><p>The <a href="intro.modeleditor.skinview.html">Skin-view page</a> works a bit defiantly then the editor's views do,
+based on the fact that it has no actual triangles. Only what is known as <a href="glossary.html#v">view.handles</a>, view being the view
+displayed on the <a href="intro.modeleditor.skinview.html">Skin-view page</a> itself. Another big difference,
+at this time, is that unlike all of the other <a href="glossary.html#v">views</a> of the editor which are in a <a href="glossary.html#l">list</a> of its 
+<a href="glossary.html#e">editor.layout.view</a>, the <a href="intro.modeleditor.skinview.html">Skin-view page</a> view is never actually added
+(appended) to that list, on a permanent bases, making it pretty much isolated from the rest of the views of the editor.
+Because of this I needed to create a <a href="glossary.html#g">global</a> in the <a href="glossary.html#q">quarkpy\mdlhandles.py</a> file called <a href="glossary.html#s">SkinView1</a>
+that can be used, when needed, to call that view when the <a href="intro.modeleditor.skinview.html">Skin-view page</a> is open.
+It does seem to be added periodically when the mouse cursor is actually somewhere within the
+<a href="intro.modeleditor.skinview.html">Skin-view page</a> view.
+</p><p>As briefly described in the <a href="src.quarkx.html#objectsmodeleditorl">Internal objects related to the Model Editor</a>
+of the <a href="src.quarkx.html">'QuarkX'</a> section of these Infobase docs, the <a href="intro.modeleditor.skinview.html">Skin-view page</a>
+view uses a model's <a href="glossary.html#c">Component, Frame object's vertices</a>, also known as its views <b>view.handles</b>. There is a lot
+being said in that last part, so let me break it down for you in more layman's terms as to what it all means exactly.
+</p><p>&nbsp;&nbsp;<i><a href="glossary.html#c">Component</a> :</g></i>&nbsp; Each model can be made up of one or more <a href="glossary.html#c">Components</a>, or parts,
+each containing sub-items, as described in the <a href="intro.modeleditor.model.html#components">Components of a Model</a>
+section above, one of which is the <b>frame group</b> that contains that particular components <a href="glossary.html#a">animation frames</a>
+that gives that component its movement sequences.
+</p><p>&nbsp;&nbsp;<i><a href="glossary.html#f">Frame object's vertices</a> :</g></i>&nbsp; Each <b>frame</b> has attached to it a list of vertexes or points in
+3D space that make up that components <a href="glossary.html#f">Frame</a>, or mesh of triangles for its shape. These vertexes are the
+<a href="glossary.html#f">Frame object's vertices</a> which are also the <a href="intro.modeleditor.skinview.html">Skin-view page</a> <b>view.handles</b>.
+Below is a very small sample of a Skin-view <b>view.handles</b> list.<br>
+</p><div class="doccode"><pre>
+[&lt;quarkpy.mdlhandles.SkinHandle instance at 0x0101AA08&gt;,&lt;quarkpy.mdlhandles.SkinHandle instance at 0x0101AA58&gt;]
+</pre></div>
+
+<p>Each item in this list, as you can see, is an <a href="glossary.html#i">instance</a> of a <a href="glossary.html#q">quarkpy.mdlhandles.SkinHandle</a> and if you look
+at that <a href="glossary.html#c">Class SkinHandle</a> in the quarkpy\mdlhandles.py folder\file you will see that each <a href="glossary.html#i">instance</a> has these
+items, or <a href="glossary.html#s">Specifics</a> that make up that <a href="glossary.html#s">SkinHandle</a>, or <a href="glossary.html#f">Frame object's vertices</a> point.
+</p><div class="doccode"><pre>
+def __init__(self, pos, tri_index, ver_index, comp, texWidth, texHeight, triangle):
+</pre></div>
+
+
+<p><a href="glossary.html#&">&nbsp;&nbsp;&nbsp;self</a> &nbsp;-----------&nbsp;being the handle or <a href="glossary.html#q">quarkpy.mdlhandles.SkinHandle instance</a> itself.<br>
+<a href="glossary.html#&">&nbsp;&nbsp;&nbsp;pos</a> &nbsp;-----------&nbsp;that handle's 3D position in space when it was created or changed.<br>
+<a href="glossary.html#&">&nbsp;&nbsp;&nbsp;tri_index</a> &nbsp;----&nbsp;the triangle number of the component that view.handle belongs to.<br>
+<a href="glossary.html#&">&nbsp;&nbsp;&nbsp;ver_index</a> &nbsp;--&nbsp;the vertex position of that triangle in sequential order, 0, 1 or 2.<br>
+<a href="glossary.html#&">&nbsp;&nbsp;&nbsp;comp</a> &nbsp;--------&nbsp;the model component that triangle and view.handle is a part of.<br>
+<a href="glossary.html#&">&nbsp;&nbsp;&nbsp;texWidth</a> &nbsp;----&nbsp;the computed width of the texture <a href="glossary.html#s">skin</a> image that component uses.<br>
+<a href="glossary.html#&">&nbsp;&nbsp;&nbsp;texHeight</a> &nbsp;---&nbsp;the computed height of the texture <a href="glossary.html#s">skin</a> image that component uses.<br>
+<a href="glossary.html#&">&nbsp;&nbsp;&nbsp;triangle</a> &nbsp;------&nbsp;the triangle itself that view.handle is a part of.<br>
+</p><p>The data any one of these items contain can be used by simply adding its <a href="glossary.html#s">Specific</a> name to the view.handle like this:
+<div class="doccode"><pre>vtxpoint = view.handle.pos</pre></div>
+These view.handle positions are then used to draw the handles onto the Skin-view's view and the lines that make up that
+components <a href="glossary.html#s">Skin mesh</a>, but there are still no triangles per-say. These <a href="glossary.html#s">Specifics</a> data can also be used to pass
+the needed items data from the <a href="intro.modeleditor.skinview.html">Skin-view page</a> to the editor's views and visa-versa
+as seen in the <a href="glossary.html#q">quarkpy\mdlutils.py</a> file for the <a href="glossary.html#p">PassSkinSel2Editor</a> and <a href="glossary.html#p">PassEditorSel2Skin</a> functions which
+are located there, you might want to review those as additional detailed information for those functions use, explanation and data format
+are also located there for each function along with a simpler <a href="glossary.html#f">formula</a> for the <a href="glossary.html#p">PassEditorSel2Skin</a> function that can
+expedite its application time for obtaining data that it needs.
+</p><p>There are two other functions, as well as several more useful ones, in the <a href="glossary.html#q">quarkpy\mdlutils.py</a> file that you should also be aware of called:
+</p><p><a href="glossary.html#u">Update_Editor_Views</a>:&nbsp; Updates the Editors views once something has changed in the Skin-view, such as 
+synchronized or added 'skin mesh' vertex selections. It can also be used to just update all of the Editor's views only.
+</p><p><a href="glossary.html#m">MakeEditorFaceObject</a>:&nbsp; Creates a QuArK Internal Face Object from 3 selected vertexes in the ModelVertexSelList.
+This one is unique to the <b>Model Editor</b> in that it uses the same structure as a <b>Map Editor</b> QuArK Internal Face Object,
+Which should allow the calling of various Map Editor files and functions in the Python code files to use in the Model Editor once
+the returned items from those functions are converted back into usable data in the Model Editor required format.
+</p><p>Both of the above functions have various <a href="glossary.html#o">option</a> settings that can be applied for more specific uses and those option
+settings and descriptions are in each of their related function description section.
+</p><p>One last item to cover are the various <a href="glossary.html#s">selection lists</a> that I have setup for the Model Editor. Each one being specific for their needs and uses.
+</p><p><a href="glossary.html#m">ModelVertexSelList</a>:&nbsp; Used for individual and multi selected Model Editor component mesh vertexes.
+</p><p><a href="glossary.html#s">SkinVertexSelList</a>:&nbsp; Used for individual and multi selected Skin-view skin mesh vertexes.
+</p><p><a href="glossary.html#m">ModelFaceSelList</a>:&nbsp; Used for individual and multi selected Model Editor component mesh triangles (faces).
+</p><p><a href="glossary.html#s">SkinFaceSelList</a>:&nbsp; Used for <a href="glossary.html#p">passing and retaining</a> individual and multi selected Model Editor component mesh triangles (faces) to the Skin-view page at this time.
+</p><p>Complete detailed descriptions of each one of these <a href="glossary.html#s">selection lists</a> are given near the top of the <a href="glossary.html#q">quarkpy\mdleditor.py</a> file along with their related list item formats
+as to what data they require and carry as well as to what their purpose are. It would be a good idea to review that information as more will be added during future development of this editor.
+</p><p><b>One vital point about the <a href="glossary.html#s">SkinVertexSelList</a> list is that it <a href="glossary.html#m">must</a> be <a href="glossary.html#c">changeable</a>, or <a href="glossary.html#m">mutable</a> in Python terms,
+and the added data within it, or the list will become ineffective and objects will not be able to be updated when moved to work with QuArK.
+They will simply <a href="glossary.html#d">DISAPEAR</a> !</b>
+</p><p>To make this list <a href="glossary.html#m">mutable</a> it must use <a href="glossary.html#s">square brackets</a> to define it and any items that are added to that list as well, like this:
+</p><div class="doccode"><pre>
+SkinVertexSelList = []
+SkinVertexSelList = SkinVertexSelList + [pos, self, tri_index, ver_index]
+</pre></div>
+
+<p>In addition to the above <a href="glossary.html#s">selection lists</a> there are other lists used by the Model Editor, two of which are:
+</p><p><a href="glossary.html#v">view.handles</a>:&nbsp; Covered in detail above earlier.
+</p><p><a href="glossary.html#c">comp.filltris</a>:&nbsp; <a href="glossary.html#c">comp</a> being the currently selected model component or <a href="glossary.html#e">editor.Root.currentcomponent</a>
+and the actual list <a href="glossary.html#f">filltris</a> which is a list of item settings to draw a component's triangle filled with a specified
+color and which is also described in the <a href="src.quarkx.html#objectsmodeleditorl">Internal objects related to the Model Editor</a>
+of the <a href="src.quarkx.html">'QuarkX'</a> section of these Infobase docs. Also doing a word search using <a href="glossary.html#c">comp.filltris</a> will divulge
+its usage in the Python <a href="glossary.html#q">quarkpy\mdleditor.py</a> file.
+</p><p>I realize there is a lot more relating to the editor but this very vital basic works information should help to get acquainted
+with the <b>QuArK Model Editor</b> inter actions much easer.
+</p>
+  </td></tr></table>
+  <br>
+
+<br>
+
+<table width="100%" border=0 cellspacing=0>
+  <tr class="headline">
+    <td width="99%" align=center>
+      <p class="sm">
+        Copyright (c) 2009, GNU General Public License by The QuArK (Quake Army Knife) Community - <a target="_blank" href="http://quark.sourceforge.net/">http://quark.sourceforge.net/</a><br>
+      </p>
+    </td>
+    <td width="1%" align=right nowrap>
+      &nbsp;[&nbsp;<span class="navenable"><a href="intro.modeleditor.overview.html">Prev</a></span>&nbsp;-&nbsp;<a href="#__top__">Top</a>&nbsp;-&nbsp;<span class="navenable"><a href="intro.modeleditor.importexport.html">Next</a></span>&nbsp;]&nbsp;
+    </td>
+  </tr>
+</table>
+</body>
+</html>

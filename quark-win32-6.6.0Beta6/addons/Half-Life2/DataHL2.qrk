@@ -1,0 +1,475 @@
+QQRKSRC1
+// Half-Life2 definition file for Quark
+
+//$Header: /cvsroot/quark/runtime/addons/Half-Life2/DataHL2.qrk,v 1.15 2010/02/21 13:17:52 danielpharos Exp $
+// ----------- REVISION HISTORY ------------
+//$Log: DataHL2.qrk,v $
+//Revision 1.15  2010/02/21 13:17:52  danielpharos
+//Corrected New Files toolbox with correct files.
+//
+//Revision 1.14  2008/05/14 20:38:09  cdunde
+//Fixed basic lighting in all games and a few other small typo errors.
+//
+//Revision 1.13  2008/03/28 19:06:17  cdunde
+//Cleaned up, fixed if needed and brought into sync with all QuArK addons.
+//
+//Revision 1.12  2008/02/27 00:25:49 danielpharos
+//Fix the contextual help files not being found anymore
+//
+//Revision 1.11  2007/08/16 12:43:19 danielpharos
+//Change the name of HL2 back for backwards compatibility reasons.
+//
+//Revision 1.10  2007/08/15 22:35:42 danielpharos
+//Change the name of HL2 back for backwards compatibility reasons.
+//
+//Revision 1.9  2007/08/14 16:33:31 danielpharos
+//To add model viewin in 3D views and selection window features
+//
+//Revision 1.8  2007/03/18 22:24:27 danielpharos
+//Replaced tabs with spaces
+//
+//Revision 1.7  2006/03/15 08:47:41 cdunde
+//Reinstated bounding box for H-L2 info_player_start
+//and added prefabs-hl2.qrk to Defaults.qrk Addons list.
+//
+//Revision 1.6  2005/07/09 14:35:28 cbxpm
+//added ladder specific poly (cs-source only)
+//modified HL2 default room
+//
+//Revision 1.5  2005/07/09 00:00:31 cbxpm
+//added custom polys for use with specific brush entities
+//
+//Revision 1.4  2005/02/06 21:11:35 alexander
+//able to set lightmapscale value on a face for hl2
+//
+//Revision 1.3  2004/12/29 16:52:08 alexander
+//dev textures for default room
+//
+//Revision 1.2  2004/12/19 09:54:37 alexander
+//default map changed
+//
+//Revision 1.1  2004/12/03 10:18:46 alexander
+//new preliminary hl2 definition files
+//
+
+{
+  QuArKProtected = "1"
+  Description = "Base Half-Life2 data"
+  Default forms.qctx =
+  {
+    Default:f:form =
+    {
+      notexsubform=!
+      lightmapscale:  = {Txt="&" Typ="E"  Hint="no clue"}
+    }
+  }
+  Half-Life2 setup.qctx =
+  {
+    Game = "Half-Life2"
+    HTML = "index.html"
+  }
+  NewFiles.qtx =
+  {
+    ToolBox = "New files..."
+    Root = "Half-Life2 file types.qtxfolder"
+    Half-Life2 file types.qtxfolder =
+    {
+      Vmf.vmf = { }
+    //  Vmt.vmt = { }
+      Vtf.vtf = { }
+      Gcf.gcf = { }
+    }
+  }
+  walltex:incl =
+  {
+    tex = "Dev/dev_measurewall01a"
+  }
+  floortex:incl =
+  {
+    tex = "Dev/dev_measuregeneric01b"
+  }
+  ceiltex:incl =
+  {
+    tex = "Tools/toolsskybox"
+  }
+  caulktex:incl =
+  {
+    tex = ""
+  }
+  NewMap:incl =
+  {
+    Game = "Half-Life2"
+    Root = "worldspawn:b"
+    worldspawn:b =
+    {
+      maxpropscreenwidth = "-1"
+      skyname = "sky_wasteland02"
+      newunit = "0"
+      gametitle = "0"
+      startdark = "0"
+      message = ""
+      chaptertitle = ""
+      border walls:g =
+      {
+        East wall:p =
+        {
+          west:f =
+          {
+            v = '384 0 0 384 -32 0 384 0 32'
+            walltex = !
+            tv = '0 0 32 0 0 -32'
+          }
+          east:f =
+          {
+            v = '400 0 0 400 32 0 400 0 32'
+            walltex = !
+            tv = '0 0 32 0 0 -32'
+          }
+          south:f =
+          {
+            v = '384 -256 0 416 -256 0 384 -256 32'
+            walltex = !
+            tv = '0 0 32 0 0 -32'
+          }
+          north:f =
+          {
+            v = '384 256 0 352 256 0 384 256 32'
+            walltex = !
+            tv = '0 0 32 0 0 -32'
+          }
+          down:f =
+          {
+            v = '384 0 -128 416 0 -128 384 -32 -128'
+            walltex = !
+            tv = '0 0 0 -32 -32 0'
+          }
+          up:f =
+          {
+            v = '384 0 128 416 0 128 384 32 128'
+            walltex = !
+            tv = '0 0 0 32 32 0'
+          }
+        }
+        West wall:p =
+        {
+          west:f =
+          {
+            v = '-400 0 0 -400 -32 0 -400 0 32'
+            walltex = !
+            tv = '0 0 32 0 0 -32'
+          }
+          east:f =
+          {
+            v = '-384 0 0 -384 32 0 -384 0 32'
+            walltex = !
+            tv = '0 0 32 0 0 -32'
+          }
+          south:f =
+          {
+            v = '-448 -256 0 -416 -256 0 -448 -256 32'
+            walltex = !
+            tv = '0 0 32 0 0 -32'
+          }
+          north:f =
+          {
+            v = '-448 256 0 -480 256 0 -448 256 32'
+            walltex = !
+            tv = '0 0 32 0 0 -32'
+          }
+          down:f =
+          {
+            v = '-448 0 -128 -416 0 -128 -448 -32 -128'
+            walltex = !
+            tv = '0 0 0 -32 -32 0'
+          }
+          up:f =
+          {
+            v = '-448 0 128 -416 0 128 -448 32 128'
+            walltex = !
+            tv = '0 0 0 32 32 0'
+          }
+        }
+        North wall:p =
+        {
+          west:f =
+          {
+            v = '-384 256 0 -384 224 0 -384 256 32'
+            walltex = !
+            tv = '0 0 32 0 0 -32'
+          }
+          east:f =
+          {
+            v = '384 256 0 384 288 0 384 256 32'
+            walltex = !
+            tv = '0 0 32 0 0 -32'
+          }
+          south:f =
+          {
+            v = '-384 256 0 -352 256 0 -384 256 32'
+            walltex = !
+            tv = '0 0 32 0 0 -32'
+          }
+          north:f =
+          {
+            v = '-384 272 0 -416 272 0 -384 272 32'
+            walltex = !
+            tv = '0 0 32 0 0 -32'
+          }
+          down:f =
+          {
+            v = '-384 256 -128 -352 256 -128 -384 224 -128'
+            walltex = !
+            tv = '0 0 0 -32 -32 0'
+          }
+          up:f =
+          {
+            v = '-384 256 128 -352 256 128 -384 288 128'
+            walltex = !
+            tv = '0 0 0 32 32 0'
+          }
+        }
+        South wall:p =
+        {
+          west:f =
+          {
+            v = '-384 -320 0 -384 -352 0 -384 -320 32'
+            walltex = !
+            tv = '0 0 32 0 0 -32'
+          }
+          east:f =
+          {
+            v = '384 -320 0 384 -288 0 384 -320 32'
+            walltex = !
+            tv = '0 0 32 0 0 -32'
+          }
+          south:f =
+          {
+            v = '-384 -272 0 -352 -272 0 -384 -272 32'
+            walltex = !
+            tv = '0 0 32 0 0 -32'
+          }
+          north:f =
+          {
+            v = '-384 -256 0 -416 -256 0 -384 -256 32'
+            walltex = !
+            tv = '0 0 32 0 0 -32'
+          }
+          down:f =
+          {
+            v = '-384 -320 -128 -352 -320 -128 -384 -352 -128'
+            walltex = !
+            tv = '0 0 0 -32 -32 0'
+          }
+          up:f =
+          {
+            v = '-384 -320 128 -352 -320 128 -384 -288 128'
+            walltex = !
+            tv = '0 0 0 32 32 0'
+          }
+        }
+        Sky:p =
+        {
+          west:f =
+          {
+            v = '-384 -256 256 -384 -288 256 -384 -256 288'
+            ceiltex = !
+            tv = '0 0 32 0 0 -32'
+          }
+          east:f =
+          {
+            v = '384 -256 256 384 -224 256 384 -256 288'
+            ceiltex = !
+            tv = '0 0 32 0 0 -32'
+          }
+          south:f =
+          {
+            v = '-384 -256 256 -352 -256 256 -384 -256 288'
+            ceiltex = !
+            tv = '0 0 32 0 0 -32'
+          }
+          north:f =
+          {
+            v = '-384 256 256 -416 256 256 -384 256 288'
+            ceiltex = !
+            tv = '0 0 32 0 0 -32'
+          }
+          down:f =
+          {
+            v = '-384 -256 128 -352 -256 128 -384 -288 128'
+            ceiltex = !
+            tv = '0 0 0 -32 -32 0'
+          }
+          up:f =
+          {
+            v = '-384 -256 144 -352 -256 144 -384 -224 144'
+            ceiltex = !
+            tv = '0 0 0 32 32 0'
+          }
+        }
+        Floor:p =
+        {
+          west:f =
+          {
+            v = '-384 -256 -64 -384 -288 -64 -384 -256 -32'
+            floortex = !
+            tv = '0 0 32 0 0 -32'
+          }
+          east:f =
+          {
+            v = '384 -256 -64 384 -224 -64 384 -256 -32'
+            floortex = !
+            tv = '0 0 32 0 0 -32'
+          }
+          south:f =
+          {
+            v = '-384 -256 -64 -352 -256 -64 -384 -256 -32'
+            floortex = !
+            tv = '0 0 32 0 0 -32'
+          }
+          north:f =
+          {
+            v = '-384 256 -64 -416 256 -64 -384 256 -32'
+            floortex = !
+            tv = '0 0 32 0 0 -32'
+          }
+          down:f =
+          {
+            v = '-384 -256 -144 -352 -256 -144 -384 -288 -144'
+            floortex = !
+            tv = '0 0 0 -32 -32 0'
+          }
+          up:f =
+          {
+            v = '-384 -256 -128 -352 -256 -128 -384 -224 -128'
+            floortex = !
+            tv = '0 0 0 32 32 0'
+          }
+        }
+      }
+      info_player_start:e =
+      {
+        origin = "0 -192 -104"
+        angles = "0 90 0"
+      }
+      light:e =
+      {
+        style = "Normal"
+        _light = "255 255 255 300"
+        origin = "0 0 0"
+      }
+    }
+  }
+  Entity Forms.fctx =
+  {
+    info_player_start:form =
+    {
+      bbox = '-16 -16 -24 16 16 32'
+      spawnflags: =
+      {
+        txt = "&"
+        typ = "X1"
+        cap = "Master (Has priority if multiple info_player_starts exist)"
+      }
+    }
+  }
+// custom polys for use with specific brush entities
+
+  trigger_tex:incl= {tex = "tools/toolstrigger"}
+  origin_tex:incl= {tex = "tools/toolsorigin"}
+  portal_tex:incl= {tex = "tools/toolsareaportal"}
+  nodraw_tex:incl= {tex = "tools/toolsnodraw"}
+  occluder_tex:incl= {tex = "tools/toolsoccluder"}
+  ladder_tex:incl= {tex = "tools/toolsinvisibleladder"}
+  detail_tex:incl= {tex = "Dev/dev_measuregeneric01"}
+
+  t_triggerpoly:incl =
+  {
+    poly:p =
+    {
+      east:f   = {v= '64 0 0 64 128 0 64 0 128'   trigger_tex=!}
+      west:f   = {v='-64 0 0 -64 0 128 -64 128 0' trigger_tex=! m="1"}
+      north:f  = {v= '0 64 0 0 64 128 128 64 0'   trigger_tex=! m="1"}
+      south:f  = {v='0 -64 0 128 -64 0 0 -64 128' trigger_tex=!}
+      up:f     = {v= '0 0 64 128 0 64 0 128 64'   trigger_tex=!}
+      down:f   = {v='0 0 -64 0 128 -64 128 0 -64' trigger_tex=! m="1"}
+    }
+  }
+
+  t_originpoly:incl =
+  {
+    poly:p =
+    {
+      east:f   = {v= '64 0 0 64 128 0 64 0 128'   origin_tex=!}
+      west:f   = {v='-64 0 0 -64 0 128 -64 128 0' origin_tex=! m="1"}
+      north:f  = {v= '0 64 0 0 64 128 128 64 0'   origin_tex=! m="1"}
+      south:f  = {v='0 -64 0 128 -64 0 0 -64 128' origin_tex=!}
+      up:f     = {v= '0 0 64 128 0 64 0 128 64'   origin_tex=!}
+      down:f   = {v='0 0 -64 0 128 -64 128 0 -64' origin_tex=! m="1"}
+    }
+  }
+
+  t_portalpoly:incl =
+  {
+    poly:p =
+    {
+      east:f   = {v= '64 0 0 64 128 0 64 0 128'   portal_tex=!}
+      west:f   = {v='-64 0 0 -64 0 128 -64 128 0' portal_tex=! m="1"}
+      north:f  = {v= '0 64 0 0 64 128 128 64 0'   portal_tex=! m="1"}
+      south:f  = {v='0 -64 0 128 -64 0 0 -64 128' portal_tex=!}
+      up:f     = {v= '0 0 64 128 0 64 0 128 64'   portal_tex=!}
+      down:f   = {v='0 0 -64 0 128 -64 128 0 -64' portal_tex=! m="1"}
+    }
+  }
+
+  t_nodrawpoly:incl =
+  {
+    poly:p =
+    {
+      east:f   = {v= '64 0 0 64 128 0 64 0 128'   nodraw_tex=!}
+      west:f   = {v='-64 0 0 -64 0 128 -64 128 0' nodraw_tex=! m="1"}
+      north:f  = {v= '0 64 0 0 64 128 128 64 0'   nodraw_tex=! m="1"}
+      south:f  = {v='0 -64 0 128 -64 0 0 -64 128' nodraw_tex=!}
+      up:f     = {v= '0 0 64 128 0 64 0 128 64'   nodraw_tex=!}
+      down:f   = {v='0 0 -64 0 128 -64 128 0 -64' nodraw_tex=! m="1"}
+    }
+  }
+
+  t_occluderpoly:incl =
+  {
+    poly:p =
+    {
+      east:f   = {v= '64 0 0 64 128 0 64 0 128'   occluder_tex=!}
+      west:f   = {v='-64 0 0 -64 0 128 -64 128 0' occluder_tex=! m="1"}
+      north:f  = {v= '0 64 0 0 64 128 128 64 0'   occluder_tex=! m="1"}
+      south:f  = {v='0 -64 0 128 -64 0 0 -64 128' occluder_tex=!}
+      up:f     = {v= '0 0 64 128 0 64 0 128 64'   occluder_tex=!}
+      down:f   = {v='0 0 -64 0 128 -64 128 0 -64' occluder_tex=! m="1"}
+    }
+  }
+
+  t_ladderpoly:incl =
+  {
+    poly:p =
+    {
+      east:f   = {v= '64 0 0 64 128 0 64 0 128'   ladder_tex=!}
+      west:f   = {v='-64 0 0 -64 0 128 -64 128 0' ladder_tex=! m="1"}
+      north:f  = {v= '0 64 0 0 64 128 128 64 0'   ladder_tex=! m="1"}
+      south:f  = {v='0 -64 0 128 -64 0 0 -64 128' ladder_tex=!}
+      up:f     = {v= '0 0 64 128 0 64 0 128 64'   ladder_tex=!}
+      down:f   = {v='0 0 -64 0 128 -64 128 0 -64' ladder_tex=! m="1"}
+    }
+  }
+
+  t_detailpoly:incl =
+  {
+    poly:p =
+    {
+      east:f   = {v= '64 0 0 64 128 0 64 0 128'   detail_tex=!}
+      west:f   = {v='-64 0 0 -64 0 128 -64 128 0' detail_tex=! m="1"}
+      north:f  = {v= '0 64 0 0 64 128 128 64 0'   detail_tex=! m="1"}
+      south:f  = {v='0 -64 0 128 -64 0 0 -64 128' detail_tex=!}
+      up:f     = {v= '0 0 64 128 0 64 0 128 64'   detail_tex=!}
+      down:f   = {v='0 0 -64 0 128 -64 128 0 -64' detail_tex=! m="1"}
+    }
+  }
+}

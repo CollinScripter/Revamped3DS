@@ -1,0 +1,230 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"  "http://www.w3.org/TR/html4/loose.dtd">
+<html lang="en">
+<head>
+  <title>Torque</title>
+  <meta name="Description" content="QuArK Information Database - Page: 1.3.2.1.7.&nbsp;Torque">
+  <meta name="Keywords" content="QuArK InfoBase Quake Army Knife QRK QKM Python PY Map Editor Hexen Heretic Half-Life Sin Kingpin Soldier-of-Fortune Star-Trek-Voyager Elite-Force">
+  <link rel=stylesheet href="standard.css" type="text/css">
+</head>
+
+<body>
+<a name="__top__"></a>
+<table width="100%" border=0 cellspacing=0>
+  <tr>
+    <td width=213>
+      <a target="_blank" href="http://quark.sourceforge.net/"><img src="quarkicon.png" width=213 height=90 border=0 alt="Go to QuArK Web Site"></a>
+    </td>
+    <td width="70%" align=center>
+      <div class="topheadline">Torque</div>
+      <div class="sm">Updated&nbsp;08 Oct 2008</div>
+    </td>
+    <td width="30%" valign=bottom nowrap>
+      Upper&nbsp;levels:<br>-&nbsp;<a href="index.html">QuArK&nbsp;Information&nbsp;Base</a><br>-&nbsp;<a href="intro.html">1.&nbsp;Introduction&nbsp;to&nbsp;QuArK</a><br>-&nbsp;<a href="intro.configuration.html">1.3.&nbsp;Configuration&nbsp;of&nbsp;QuArK</a><br>-&nbsp;<a href="intro.configuration.games.html">1.3.2.&nbsp;Games</a><br>-&nbsp;<a href="intro.configuration.games.specificgames.html">1.3.2.1.&nbsp;Specific&nbsp;games</a><br>
+    </td>
+  </tr>
+</table>
+<table width="100%" border=0 cellspacing=0>
+  <tr class="headline">
+    <td width="99%">
+      <p class="headline">&nbsp;1.3.2.1.7.&nbsp;Torque</p>
+    </td>
+    <td width="1%" align=right nowrap>
+      &nbsp;[&nbsp;<span class="navenable"><a href="intro.configuration.games.specificgames.stvef.html">Prev</a></span>&nbsp;-&nbsp;<span class="navenable"><a href="intro.configuration.games.specificgames.html">Up</a></span>&nbsp;-&nbsp;<span class="navenable"><a href="intro.configuration.games.specificgames.ufo.html">Next</a></span>&nbsp;]&nbsp;
+    </td>
+  </tr>
+</table>
+<table border=0 width="100%" cellspacing=10><tr><td>
+
+
+</td></tr></table>
+<br>
+
+<table width="100%" border=0 cellspacing=0>
+  <tr class="headline">
+    <td width="100%">
+      <p class="subheadline">&nbsp;Index</p>
+    </td>
+  </tr>
+</table>
+<ul class="index">
+  <li>- <a href="#config">Configuration</a>&nbsp;<span class="added">(08 Oct 2008)</span>
+  <li>- <a href="#texture">Custom Textures</a>&nbsp;<span class="added">(11 Mar 2008)</span>
+  <li>- <a href="#misc">Misc. Info.</a>&nbsp;<span class="added">(06 Aug 2007)</span>
+</ul>
+<br>
+
+
+<a name="config"></a>
+  <table width="100%" border=0 cellspacing=0>
+    <tr class="headline">
+      <td>
+        <p class="item">&nbsp;Configuration</p>
+      </td>
+      <td align=right>
+        <font size=-2>cdunde&nbsp;-&nbsp;08 Oct 2008</font>
+      </td>
+      <td width="1%" align=right nowrap>
+        &nbsp;&nbsp;[&nbsp;<a href="#__top__">Top</a>&nbsp;]&nbsp;
+      </td>
+    </tr>
+  </table>
+  <table border=0 width="100%" cellspacing=10><tr><td>
+<p>In this short tutorial I will be showing you how to quickly setup Quark to compile maps
+for the Torque game engine. To create maps for Torque you must download a version of its <a href="glossary.html#b">build tool</a>, the <a href="http://quark.planetquake.gamespy.com/download_tools.php3">map2dif_DEBUG.exe</a> file. There are a number of different versions available on the Internet, but I recommend using the <a href="http://quark.planetquake.gamespy.com/download_tools.php3">0.900r-beta version</a>.
+</p><p><table border=0 cellspacing=0>
+<tr><td valign=top align=left>
+To keep things organized it is best to create a new folder in your Torque directory called &quot;QuArK files&quot; and place the file there. As you acquire other versions to try out you can place them in this same folder location as long as you change the file name to something that will not match any that are already there, to keep from over writing them. The name does not matter, the file will still work. Adding the version number or particular project name you use it with is the best way to help identify which one you want to use. You can change which one you want to use at any time.
+</p><p><b>Part 1 – Setting up QuArK to work with Torque</b>
+</p><p>In this section we will quickly go over how to setup Quark to work with Torque.
+To start with load up Quark, you should be greeted with the 'Quark Explorer' panel.
+The Quark Explorer allows you to define which game environment you wish to work in,
+as well as doing many other things.
+</p><p>First we need to select the game we want to map for. We do this by simply going
+to the 'Games' button located on the top right of the Explorer panel, once pressed it
+will present you with a drop list of all the currently available games, select
+Torque as shown in the screen shot to the right.
+</p><p>Next we need to setup Quark to work with the Torque compiler, to do so go back to the
+'Games' button and press the 'Configuration' button at the bottom of the list. 
+</p><p>Once selected a new window will be opened called 'Configuration', making sure you have
+Torque selected on the left navigation panel, (under the Games Tab) as we now need
+to fill out some of the necessary game settings on the right of the Configuration panel which is shown in the next image just below.
+</td>
+<td>
+<img valign=top align=right src="intro.configuration.games.specificgames.torque.torque_config1.png">
+</td></tr>
+</table>
+</p><p><table border=0 cellspacing=0>
+<tr><td valign=top align=left>
+As you can see in the image to the right, most of the settings have already been set with a default entry.
+</p><p><i><u>Torque converter</u></i>&nbsp;: This is a single drop down item. But you can type in any file name for other versions.
+</p><p><i><u>Directory of Torque files</u></i>&nbsp;: If this does not match your location, use the <b>...</b> button to select your Torque folder.
+</p><p><i><u>Installed Add-ons</u></i>&nbsp;: Use this button to register (add) your custom addon <i>.qrk</i>&nbsp; files, which is covered more in the <a href="intro.configuration.games.specificgames.torque.html#texture">Custom Textures</a> section below.
+</p><p><i><u>Paths and files to create</u></i>&nbsp;: This is where QuArK will create a tmpQuArK folder, in your main Torque folder, to place your textures, map and dif files.
+</p><p><i><u>Default texture (terrain texture)</u></i>&nbsp;: These have no settings because Torque is an engine only so you need to create your own and select them here.
+Or you can download a package we have created. See <a href="intro.configuration.games.specificgames.torque.html#texture">Custom Textures</a> below.
+</p><p><i><u>Game Light saturation</u></i>&nbsp;: Currently only for the OpenGL viewer. Larger values make darker scenes.
+</p><p><i><u>No. of Decimal Places for Brushes</u></i>&nbsp;: Fewer errors are encountered with the map2dif converter when this is set to 8 or above.
+</p><p><i><u>Run these build-programs...</u></i>&nbsp;: Leave checked. This shows the building of the dif file in QuArK's console.
+</p><p><i><u>Default directory of build-programs</u></i>&nbsp;: and
+<i><u>Run these build-programs...</u></i>&nbsp;: These can remain blank because the map2dif path is specified in the settings below.
+</p><p><i><u>Output Map Format</u></i>&nbsp;: This MUST be set to &quot;Valve 220&quot; or the dif file will not be created. Only the map file will.
+</p><p><i><u>1st thru 6th and 9th program</u></i>&nbsp;: Only the &quot;...program-executable (path optional)&quot; lines need to be change using the <b>...</b> button. Navigate to where you have put the map2dif file you wish to use and select it. Once the 1st program is set then the rest will open to that same folder.
+</p><p>After you have finished setting Quark to work with the Torque compiler, simply hit the 'Apply' button, and then press the 'OK' button to<br>
+close the Configuration panel. This will put you back in the Quark Explorer.
+</td>
+<td>
+<img valign=top align=right src="intro.configuration.games.specificgames.torque.torque_config2.png">
+</td></tr>
+</table>
+</p><p><b>Part 2 – Compiling</b>
+</p><p>When you are ready to compile your map and make the dif file, simply select the &quot;Torque&quot; main menu item and then one of the build functions from its sub-menu. Using either the &quot;Export220Map/Build High Detail DIF&quot; or the &quot; &quot;...Low Detail DIF&quot; will cause QuArK to create the tmpQuArK folder in your main Torque directory. QuArK will also create two sub-folders as well, the maps and textures folders within the tmpQuArK folder. The maps folder will contain the map and dif files and the textures folder will contain all of the textures that are currently used in your map. Usually the textures and the dif file need to be placed in the same folder when you go to load the dif file into Torque for placement in its editor.
+</p><p><table border=0 cellspacing=0 align=middle>
+<tr><td valign=top align=middle>
+<img border=1 valign=top align=middle src="intro.configuration.games.specificgames.torque.torque_config3.png">
+</td></tr>
+</p><p><tr><td><br>
+However, at this point you can not compile your map or see it in QuArK's Textured 3D view, without causing an error, until you select some textures for QuArK's Texture Browser to use or create a custom .qrk addon file and register it by using the Add-ons... button shown above in the <a href="intro.configuration.games.specificgames.torque.html#config">Configuration</a> section.
+</p><p>At which time you should also select your &quot;Default texture&quot; and &quot;Default terrain texture&quot; items as well.
+</p><p>How to go about selecting textures and/or creating a custom .qrk addon texture file is covered in the <a href="intro.configuration.games.specificgames.torque.html#texture">Custom Textures</a> section below.
+</td></tr>
+</table>
+</p>
+  </td></tr></table>
+  <br>
+
+<a name="texture"></a>
+  <table width="100%" border=0 cellspacing=0>
+    <tr class="headline">
+      <td>
+        <p class="item">&nbsp;Custom Textures</p>
+      </td>
+      <td align=right>
+        <font size=-2>cdunde&nbsp;-&nbsp;11 Mar 2008</font>
+      </td>
+      <td width="1%" align=right nowrap>
+        &nbsp;&nbsp;[&nbsp;<a href="#__top__">Top</a>&nbsp;]&nbsp;
+      </td>
+    </tr>
+  </table>
+  <table border=0 width="100%" cellspacing=10><tr><td>
+<p><table border=0 cellspacing=0 align=middle>
+<tr><td valign=top align=left>
+Because Torque is not a full game, but is only a game engine, it does not have a group of supplied textures. 
+You can make up your own textures as .jpg files and create links or your own custom textures .qrk
+file to use then make a link to those textures or their folder by using
+<a href="intro.texturebrowser.tutorials.html#texturelinks">QuArK's Texture Browser linking system</a>
+or registering your .qrk file in QuArK using the <i>Installed Add-ons</i>&nbsp; button covered above in the
+<a href="intro.configuration.games.specificgames.torque.html#config">Configuration</a> section.
+</p><p>Another way, which I recommend, is to download a &quot;base set&quot; of textures we have made up for Torque in a
+<a href="http://quark.planetquake.gamespy.com/download_gamepaks.php3">Torque_textures.zip</a>
+file and placed on the Official QuArK site in a new section for &quot;game_support&quot;.
+</p><p>Just unzip that file to your main QuArK folder. Then you need to go into the
+<a href="intro.configuration.games.specificgames.torque.html#config">Torque Game Config</a> section covered above
+and click on the &quot;Addons&quot; button for the Addons Window, click the &quot;Add&quot; button there. That will show a list of them, click on the
+TorqueTextures.qrk file (that the zip file placed there) and click &quot;OK&quot;. that registers it with QuArK and you're good to go.
+Just close all your windows and you will see the default room fully textured. If not then just close QuArK completely and restart it.
+</p><p>In either case this needs to be done before you can view any objects in the QuArK 3D Textured view or compile a map. Otherwise you will just receive error messages.
+</td></tr></table>
+</p><p><tr><td valign=top align=middle>
+<img valign=top align=middle src="intro.configuration.games.specificgames.torque.torque_texture1.png">
+</td></tr></table>
+</p><p><table border=0 cellspacing=0 align=middle>
+<tr><td valign=top align=left>
+Once you have accomplished this last step you can then select the 3D Textured view, as shown in the screen shot above, by holding your mouse cursor over the 3D view, clicking your <a href="glossary.html#r">RMB</a> and selecting the Textured item on the popup menu. QuArK creates a default building structure when you start a &quot;New Map&quot; from its Explorer's Games menu. But you may need to replace its default textures with ones that you now have in the Texture Browser to be able to see it in the 3D Textured view.
+</p><p>You can also now compile your map by selecting one of the functions from the main Torque menu as covered in Part 2 of the <a href="intro.configuration.games.specificgames.torque.html#config">Configuration</a> section above.
+</p><p>Just a few more needed points about textures for Torque.
+</p><p>1) Most of the time they need to be of equal height and width and of a power of 2 (i.e. 16x16, 32x32, 64x128, 128x128, 128x256, 512x512, etc.). If not, then you will only see your map structures as white objects in the Torque Editor when you apply lighting to display the items.
+</p><p>2) It is necessary that the .dif and its textures are placed in the same location, or folder, in order to display the object with its texture. So, as covered above, these files are located in their respective map and textures folders of the tmpQuArK folder in your Torque directory and need to be moved to the proper location for their use in the Torque Editor. See your Torque documentation for that exact handling.
+</td></tr></table></p>
+  </td></tr></table>
+  <br>
+
+<a name="misc"></a>
+  <table width="100%" border=0 cellspacing=0>
+    <tr class="headline">
+      <td>
+        <p class="item">&nbsp;Misc. Info.</p>
+      </td>
+      <td align=right>
+        <font size=-2>cdunde&nbsp;-&nbsp;06 Aug 2007</font>
+      </td>
+      <td width="1%" align=right nowrap>
+        &nbsp;&nbsp;[&nbsp;<a href="#__top__">Top</a>&nbsp;]&nbsp;
+      </td>
+    </tr>
+  </table>
+  <table border=0 width="100%" cellspacing=10><tr><td>
+<p><table border=0 cellspacing=0>
+<tr><td valign=top align=left>
+<b>Command-line arguments</b>
+</td></tr>
+</table>
+</p><p><table border=0 cellspacing=0 align=middle>
+<tr><td valign=top align=left>
+If you used the DOS Command Prompt to run the map2dif_DEBUG.exe file you would see the settings that are used in the<br>&quot;...fixed command-line arguments&quot;<br>for each program setting above in the <a href="intro.configuration.games.specificgames.torque.html#config">Configuration</a> section.
+</p><p>There is really nothing you need to change, but it is a good way to learn how these effect what steps QuArK is being instucted to perform.
+</p><p>You will also notice that it displays the Program version and Built date so that you know exactly what version you are currently running.
+</td><td valign=top>
+<img border=1 valign=top align=right src="intro.configuration.games.specificgames.torque.torque_misc1.png">
+</td></tr>
+</table>
+</p>
+  </td></tr></table>
+  <br>
+
+<br>
+
+<table width="100%" border=0 cellspacing=0>
+  <tr class="headline">
+    <td width="99%" align=center>
+      <p class="sm">
+        Copyright (c) 2009, GNU General Public License by The QuArK (Quake Army Knife) Community - <a target="_blank" href="http://quark.sourceforge.net/">http://quark.sourceforge.net/</a><br>
+      </p>
+    </td>
+    <td width="1%" align=right nowrap>
+      &nbsp;[&nbsp;<span class="navenable"><a href="intro.configuration.games.specificgames.stvef.html">Prev</a></span>&nbsp;-&nbsp;<a href="#__top__">Top</a>&nbsp;-&nbsp;<span class="navenable"><a href="intro.configuration.games.specificgames.ufo.html">Next</a></span>&nbsp;]&nbsp;
+    </td>
+  </tr>
+</table>
+</body>
+</html>

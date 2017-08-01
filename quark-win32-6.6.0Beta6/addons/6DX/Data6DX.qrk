@@ -1,0 +1,101 @@
+QQRKSRC1
+// This file is intended for Quark for 6DX Release 3
+// Written by Jacob Marner 2001-6-3
+
+{
+  QuArKProtected = "1"
+  Description = "Base 6DX data"
+
+  6DX setup.qctx =
+  {
+    Game = "6DX"
+    SFSkills = '256 512 1024 2048 4096'
+    HTML = "index.html"
+    TexFlagsTransparent = '16 0.66670 32 0.33330'
+    TextureFlags:form =
+    {
+      Style = "5"
+      Reset: =
+      {
+        Cap = "Reset to default"
+        Typ = "B"
+        Hint = "Reset all flags to the texture's default"
+        Delete: =
+        {
+          Flags = ""
+          Contents = ""
+          Value = ""
+        }
+      }
+      Sep: =
+      {
+        Typ = "S"
+      }
+      Flags: =
+      {
+        Txt = "Face"
+        Cap = "LIGHT"
+        Typ = "X1"
+        Hint = "The associated value field contains the amount of light emitted from this face."
+      }
+      Flags: =
+      {
+        Cap = "LIGHTMAP"
+        Typ = "X8"
+        Hint = "Apply lighting to this face. If you set the worldspawn spawnflags ALLLIGHTMAPS or NOLIGHTMAPS this flag will have no effect."
+      }
+      Flags: =
+      {
+        Cap = "TRANS66"
+        Typ = "X32"
+        Hint = "Make this face 2/3s transparent if TGA or DDS file. Is drawn using color as alpha (white is transparent) is PCX or BMP. Good for water."
+      }
+      Flags: =
+      {
+        Cap = "NODRAW"
+        Typ = "X128"
+        Hint = "Don't draw this face. We simply skip it. Be warned; if you let the player look inside a brush this way then we will look out the other faces too, since due to speed inner sides are not drawn. This flag is best for making fully invisible brushes that still can block players or for speeding up rendering by hiding brush faces that cannot be shown anyway, such as the bottom face of floor brushes for floor the camera cannot get under. Also; if you are having problems with z-fighting (i.e. shimmering flickering on surfaces) then setting this flag for one of them will prevent this."
+      }
+      Flags: =
+      {
+        Cap = "PORTAL"
+        Typ = "X512"
+        Hint = "Mark this portal as a portal to another sector."
+      }
+      Sep: =
+      {
+        Typ = "S"
+      }
+      Value: =
+      {
+        Txt = "Value"
+        Typ = "E"
+        Hint = "If LIGHT is set then this is the light intensity."
+      }
+    }
+  }
+  NewMap:incl =
+  {
+    Game = "6DX"
+    Root = "worldspawn:b"
+    worldspawn:b =
+    {
+      spawnflags = "2"
+      ;mapversion = "6DX"
+    //
+    // no default room for 6DX
+    //
+      info_player_start:e =
+      {
+        origin = "-144 0 -72"
+        angle = "360"
+      }
+      light:e =
+      {
+        origin = "0 0 0"
+        light = "300"
+        _color = "1 1 1"
+      }
+    }
+  }
+}

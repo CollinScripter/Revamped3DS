@@ -1,0 +1,149 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"  "http://www.w3.org/TR/html4/loose.dtd">
+<html lang="en">
+<head>
+  <title>Map-editor in QuArK</title>
+  <meta name="Description" content="QuArK Information Database - Page: 1.5.&nbsp;Map-editor in QuArK">
+  <meta name="Keywords" content="QuArK InfoBase Quake Army Knife QRK QKM Python PY Map Editor Hexen Heretic Half-Life Sin Kingpin Soldier-of-Fortune Star-Trek-Voyager Elite-Force">
+  <link rel=stylesheet href="standard.css" type="text/css">
+</head>
+
+<body>
+<a name="__top__"></a>
+<table width="100%" border=0 cellspacing=0>
+  <tr>
+    <td width=213>
+      <a target="_blank" href="http://quark.sourceforge.net/"><img src="quarkicon.png" width=213 height=90 border=0 alt="Go to QuArK Web Site"></a>
+    </td>
+    <td width="70%" align=center>
+      <div class="topheadline">Map-editor in QuArK</div>
+      <div class="sm">Updated&nbsp;12 May 2010</div>
+    </td>
+    <td width="30%" valign=bottom nowrap>
+      Upper&nbsp;levels:<br>-&nbsp;<a href="index.html">QuArK&nbsp;Information&nbsp;Base</a><br>-&nbsp;<a href="intro.html">1.&nbsp;Introduction&nbsp;to&nbsp;QuArK</a><br>
+    </td>
+  </tr>
+</table>
+<table width="100%" border=0 cellspacing=0>
+  <tr class="headline">
+    <td width="99%">
+      <p class="headline">&nbsp;1.5.&nbsp;Map-editor in QuArK</p>
+    </td>
+    <td width="1%" align=right nowrap>
+      &nbsp;[&nbsp;<span class="navenable"><a href="intro.commandline.html">Prev</a></span>&nbsp;-&nbsp;<span class="navenable"><a href="intro.html">Up</a></span>&nbsp;-&nbsp;<span class="navenable"><a href="intro.mapeditor.overview.html">Next</a></span>&nbsp;]&nbsp;
+    </td>
+  </tr>
+</table>
+<table border=0 width="100%" cellspacing=10><tr><td><p>The map editor is the main part of QuArK. A map is a 3D world in which you can
+play; the map editor let's you build your own 3D worlds, and you can use the
+<a href="glossary.html#f">FPS-game</a> to play in the worlds you built.
+</p><p>Basically, a map is made out of mathematical <a href="glossary.html#p">polyhedrons</a> in 3D space.
+Each of these polyhedron will be shown in the FPS-game as a wall, floor,
+ceiling, furniture, or just anything with a fixed 3D shape. Monsters, weapons,
+and other <a href="glossary.html#e">entities</a> are not made out of polyhedrons, and you cannot use
+the map editor to build their shape.
+</p>
+</td></tr></table>
+<br>
+
+<table width="100%" border=0 cellspacing=0>
+  <tr class="headline">
+    <td width="100%">
+      <p class="headline">&nbsp;Sections</p>
+    </td>
+  </tr>
+</table>
+<ul class="section">
+  <li><b>1.5.1.&nbsp;&nbsp;<a href="intro.mapeditor.overview.html">Overview</a></b>&nbsp;<span class="added">(25 Jun 2006)</span></li>
+  <ul class="index">
+    <li>- <a href="intro.mapeditor.overview.html#overview">Overview</a>&nbsp;<span class="added">(28 Feb 2001)</span></li>
+    <li>- <a href="intro.mapeditor.overview.html#hintbox">Hintbox</a>&nbsp;<span class="added">(16 Mar 2003)</span></li>
+  </ul>
+  <li><b>1.5.2.&nbsp;&nbsp;<a href="intro.mapeditor.menu.html">Menubar</a></b>&nbsp;<span class="added">(12 May 2010)</span></li>
+  <table border=0><tr><td width="50%" valign=top>
+  <ul class="index">
+    <li>- <a href="intro.mapeditor.menu.html#filemenu">File menu</a>&nbsp;<span class="added">(28 Feb 2001)</span></li>
+    <li>- <a href="intro.mapeditor.menu.html#layoutmenu">Layout menu</a>&nbsp;<span class="added">(28 Feb 2001)</span></li>
+    <li>- <a href="intro.mapeditor.menu.html#editmenu">Edit menu</a>&nbsp;<span class="added">(20 Mar 2003)</span></li>
+    <li>- <a href="intro.mapeditor.menu.html#toolboxesmenu">Toolboxes menu</a>&nbsp;<span class="added">(28 Feb 2001)</span></li>
+    <li>- <a href="intro.mapeditor.menu.html#searchmenu">Search menu</a>&nbsp;<span class="added">(12 Sep 2008)</span></li>
+    <li>- <a href="intro.mapeditor.menu.html#commandsmenu">Commands menu</a>&nbsp;<span class="added">(18 Dec 2007)</span></li>
+  </ul>
+  </td><td width="50%" valign=top>
+  <ul class="index">
+    <li>- <a href="intro.mapeditor.menu.html#addonsmenu">Addons menu</a>&nbsp;<span class="added">(12 May 2010)</span></li>
+    <li>- <a href="intro.mapeditor.menu.html#selectionmenu">Selection menu</a>&nbsp;<span class="added">(05 Jan 2004)</span></li>
+    <li>- <a href="intro.mapeditor.menu.html#gamemenu">Game menu</a>&nbsp;<span class="added">(06 Aug 2008)</span></li>
+    <li>- <a href="intro.mapeditor.menu.html#toolbarsmenu">Toolbars menu</a>&nbsp;<span class="added">(27 Mar 2003)</span></li>
+    <li>- <a href="intro.mapeditor.menu.html#optionsmenu">Options menu</a>&nbsp;<span class="added">(21 Dec 2007)</span></li>
+    <li>- <a href="intro.mapeditor.menu.html#helpmenu">Help menu</a>&nbsp;<span class="added">(28 Feb 2001)</span></li>
+  </ul>
+  </td></tr></table>
+  <li><b>1.5.3.&nbsp;&nbsp;<a href="intro.mapeditor.rmb_menus.html">Right Mouse Button menus</a></b>&nbsp;<span class="added">(05 Dec 2007)</span></li>
+  <ul class="subsection">
+    <li>1.5.3.1.&nbsp;<a href="intro.mapeditor.rmb_menus.noselectionmenu.html">No Selection RMB menu</a>&nbsp;<span class="added">(05 Dec 2007)</span></li>
+  </ul>
+  <li><b>1.5.4.&nbsp;&nbsp;<a href="intro.mapeditor.toolpalettes.html">Tool-palettes</a></b>&nbsp;<span class="added">(12 Feb 2006)</span></li>
+  <ul class="subsection">
+    <li>1.5.4.1.&nbsp;<a href="intro.mapeditor.toolpalettes.display.html">Display tool-palette</a>&nbsp;<span class="added">(28 Feb 2001)</span></li>
+    <li>1.5.4.2.&nbsp;<a href="intro.mapeditor.toolpalettes.mousemodes.html">Mouse modes tool-palette</a>&nbsp;<span class="added">(28 Feb 2001)</span></li>
+    <li>1.5.4.3.&nbsp;<a href="intro.mapeditor.toolpalettes.movement.html">Movement tool-palette</a>&nbsp;<span class="added">(25 Dec 2002)</span></li>
+    <li>1.5.4.4.&nbsp;<a href="intro.mapeditor.toolpalettes.objectmodes.html">Object modes tool-palette</a>&nbsp;<span class="added">(12 Feb 2006)</span></li>
+  </ul>
+  <li><b>1.5.5.&nbsp;&nbsp;<a href="intro.mapeditor.userdata.html">Userdata panel</a></b>&nbsp;<span class="added">(28 Feb 2001)</span></li>
+  <ul class="index">
+    <li>- <a href="intro.mapeditor.userdata.html#qtxfolder">Normal folders</a>&nbsp;<span class="added">(28 Feb 2001)</span></li>
+    <li>- <a href="intro.mapeditor.userdata.html#txlist">Texture folders</a>&nbsp;<span class="added">(28 Feb 2001)</span></li>
+    <li>- <a href="intro.mapeditor.userdata.html#objects">Other objects</a>&nbsp;<span class="added">(28 Feb 2001)</span></li>
+    <li>- <a href="intro.mapeditor.userdata.html#texture">Single texture</a>&nbsp;<span class="added">(28 Feb 2001)</span></li>
+  </ul>
+  <li><b>1.5.6.&nbsp;&nbsp;<a href="intro.mapeditor.misctools.html">Misc tools</a></b>&nbsp;<span class="added">(20 Dec 2007)</span></li>
+  <ul class="index">
+    <li>- <a href="intro.mapeditor.misctools.html#newmapitem">New map item</a>&nbsp;<span class="added">(28 Feb 2001)</span></li>
+    <li>- <a href="intro.mapeditor.misctools.html#trashcan">Trashcan</a>&nbsp;<span class="added">(28 Feb 2001)</span></li>
+    <li>- <a href="intro.mapeditor.misctools.html#undoredo">Undo/Redo</a>&nbsp;<span class="added">(28 Feb 2001)</span></li>
+    <li>- <a href="intro.mapeditor.misctools.html#newgroup">New group</a>&nbsp;<span class="added">(24 Mar 2003)</span></li>
+    <li>- <a href="intro.mapeditor.misctools.html#templates">Templates</a>&nbsp;<span class="added">(20 Dec 2007)</span></li>
+  </ul>
+  <li><b>1.5.7.&nbsp;&nbsp;<a href="intro.mapeditor.compass.html">Compass and Zoom</a></b>&nbsp;<span class="added">(28 Feb 2001)</span></li>
+  <ul class="index">
+    <li>- <a href="intro.mapeditor.compass.html#xaxis">Compass X-view-axis rotation</a>&nbsp;<span class="added">(28 Feb 2001)</span></li>
+    <li>- <a href="intro.mapeditor.compass.html#yaxis">Compass Y-axis rotation</a>&nbsp;<span class="added">(28 Feb 2001)</span></li>
+    <li>- <a href="intro.mapeditor.compass.html#zoom">Zoom</a>&nbsp;<span class="added">(28 Feb 2001)</span></li>
+  </ul>
+  <li><b>1.5.8.&nbsp;&nbsp;<a href="intro.mapeditor.dataforms.html">Data-displays</a></b>&nbsp;<span class="added">(05 Apr 2003)</span></li>
+  <ul class="index">
+    <li>- <a href="intro.mapeditor.dataforms.html#treeview">Tree-view (hierarchy-view)</a>&nbsp;<span class="added">(05 Apr 2003)</span></li>
+    <li>- <a href="intro.mapeditor.dataforms.html#specsargsview">Specifics/Args-view</a>&nbsp;<span class="added">(28 Feb 2001)</span></li>
+    <li>- <a href="intro.mapeditor.dataforms.html#polyhedronview">Polyhedron-view</a>&nbsp;<span class="added">(28 Feb 2001)</span></li>
+    <li>- <a href="intro.mapeditor.dataforms.html#faceview">Face-view</a>&nbsp;<span class="added">(28 Feb 2001)</span></li>
+    <li>- <a href="intro.mapeditor.dataforms.html#3dview">3D-view</a>&nbsp;<span class="added">(28 Feb 2001)</span></li>
+  </ul>
+  <li><b>1.5.9.&nbsp;&nbsp;<a href="intro.mapeditor.maplayout.html">Map layout</a></b>&nbsp;<span class="added">(28 Feb 2001)</span></li>
+  <ul class="index">
+    <li>- <a href="intro.mapeditor.maplayout.html#classic">Classic layout</a>&nbsp;<span class="added">(28 Feb 2001)</span></li>
+    <li>- <a href="intro.mapeditor.maplayout.html#3views">3 views layout</a>&nbsp;<span class="added">(28 Feb 2001)</span></li>
+    <li>- <a href="intro.mapeditor.maplayout.html#4views_a">4 views layout - type A</a>&nbsp;<span class="added">(28 Feb 2001)</span></li>
+    <li>- <a href="intro.mapeditor.maplayout.html#4views_b">4 views layout - type B</a>&nbsp;<span class="added">(28 Feb 2001)</span></li>
+  </ul>
+  <li><b>1.5.10.&nbsp;&nbsp;<a href="intro.mapeditor.floating3dview.html">Floating 3D windows</a></b>&nbsp;<span class="added">(14 Aug 2005)</span></li>
+  <ul class="index">
+    <li>- <a href="intro.mapeditor.floating3dview.html#editor">3D Edit Window</a>&nbsp;<span class="added">(28 Feb 2001)</span></li>
+    <li>- <a href="intro.mapeditor.floating3dview.html#camera">Camera Position</a>&nbsp;<span class="added">(14 Aug 2005)</span></li>
+  </ul>
+</ul>
+<br>
+
+<table width="100%" border=0 cellspacing=0>
+  <tr class="headline">
+    <td width="99%" align=center>
+      <p class="sm">
+        Copyright (c) 2009, GNU General Public License by The QuArK (Quake Army Knife) Community - <a target="_blank" href="http://quark.sourceforge.net/">http://quark.sourceforge.net/</a><br>
+      </p>
+    </td>
+    <td width="1%" align=right nowrap>
+      &nbsp;[&nbsp;<span class="navenable"><a href="intro.commandline.html">Prev</a></span>&nbsp;-&nbsp;<a href="#__top__">Top</a>&nbsp;-&nbsp;<span class="navenable"><a href="intro.mapeditor.overview.html">Next</a></span>&nbsp;]&nbsp;
+    </td>
+  </tr>
+</table>
+</body>
+</html>

@@ -1,0 +1,320 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"  "http://www.w3.org/TR/html4/loose.dtd">
+<html lang="en">
+<head>
+  <title>Structure of the program</title>
+  <meta name="Description" content="QuArK Information Database - Page: 4.3.&nbsp;Structure of the program">
+  <meta name="Keywords" content="QuArK InfoBase Quake Army Knife QRK QKM Python PY Map Editor Hexen Heretic Half-Life Sin Kingpin Soldier-of-Fortune Star-Trek-Voyager Elite-Force">
+  <link rel=stylesheet href="standard.css" type="text/css">
+</head>
+
+<body>
+<a name="__top__"></a>
+<table width="100%" border=0 cellspacing=0>
+  <tr>
+    <td width=213>
+      <a target="_blank" href="http://quark.sourceforge.net/"><img src="quarkicon.png" width=213 height=90 border=0 alt="Go to QuArK Web Site"></a>
+    </td>
+    <td width="70%" align=center>
+      <div class="topheadline">Structure of the program</div>
+      <div class="sm">Updated&nbsp;28 Apr 2009</div>
+    </td>
+    <td width="30%" valign=bottom nowrap>
+      Upper&nbsp;levels:<br>-&nbsp;<a href="index.html">QuArK&nbsp;Information&nbsp;Base</a><br>-&nbsp;<a href="src.html">4.&nbsp;The&nbsp;Source&nbsp;Code</a><br>
+    </td>
+  </tr>
+</table>
+<table width="100%" border=0 cellspacing=0>
+  <tr class="headline">
+    <td width="99%">
+      <p class="headline">&nbsp;4.3.&nbsp;Structure of the program</p>
+    </td>
+    <td width="1%" align=right nowrap>
+      &nbsp;[&nbsp;<span class="navenable"><a href="src.intro.html">Prev</a></span>&nbsp;-&nbsp;<span class="navenable"><a href="src.html">Up</a></span>&nbsp;-&nbsp;<span class="navenable"><a href="src.topics.html">Next</a></span>&nbsp;]&nbsp;
+    </td>
+  </tr>
+</table>
+<table border=0 width="100%" cellspacing=10><tr><td>
+</td></tr></table>
+<br>
+
+<table width="100%" border=0 cellspacing=0>
+  <tr class="headline">
+    <td width="100%">
+      <p class="subheadline">&nbsp;Index</p>
+    </td>
+  </tr>
+</table>
+<ul class="index">
+  <li>- <a href="#objects">QObjects</a>&nbsp;<span class="added">(15 May 2007)</span>
+  <li>- <a href="#fileobjects">QFileObjects</a>&nbsp;<span class="added">(15 Feb 2001)</span>
+  <li>- <a href="#textureformat">Texture format</a>&nbsp;<span class="added">(24 Feb 2008)</span>
+  <li>- <a href="#loading">Loading files</a>&nbsp;<span class="added">(23 Feb 2001)</span>
+  <li>- <a href="#saving">Saving files</a>&nbsp;<span class="added">(23 Feb 2001)</span>
+  <li>- <a href="#display">Displaying files</a>&nbsp;<span class="added">(28 Apr 2009)</span>
+</ul>
+<br>
+
+
+<a name="objects"></a>
+  <table width="100%" border=0 cellspacing=0>
+    <tr class="headline">
+      <td>
+        <p class="item">&nbsp;QObjects</p>
+      </td>
+      <td align=right>
+        <font size=-2>Armin Rigo&nbsp;-&nbsp;15 May 2007</font>
+      </td>
+      <td width="1%" align=right nowrap>
+        &nbsp;&nbsp;[&nbsp;<a href="#__top__">Top</a>&nbsp;]&nbsp;
+      </td>
+    </tr>
+  </table>
+  <table border=0 width="100%" cellspacing=10><tr><td>
+<p>The most central part of QuArK is its internal objects on which everything else is based. These objects are represented by all
+the classes that directly or indirectly inherit from QObject, defined in qobjects.pas. Here are the main rules about QObjects.
+</p><p>Although the class QObject has got a few fields, these fields should be regarded as used by QuArK's internal management only.
+All important data must be stored using a combination of the two main features of QObjects : their Specific/Args and their
+subobjects (called subelements in the code).
+</p><p>Specific/Args are similar to the ones of Quake entities : it is a list of pairs of strings. The first string, the Specific, is
+an arbitrary name for a setting; the corresponding second string gives the value of this setting.
+</p><p>Objects also each have a list of subobjects. This lets objects be organized in a hierarchy.
+</p><p>The basic principles are that the Specific/Args and the subobjects contain all the information, and that this object hierarchy
+is central for all operations :
+</p><p><ul>
+<li>to load a file, we actually convert it into an object or a hierarchy of objects;
+<li>to save a file, we convert the objects back to the destination file format;
+<li>we can only display and work with objects, never directly with files.
+</ul>
+</p>
+  </td></tr></table>
+  <br>
+
+<a name="fileobjects"></a>
+  <table width="100%" border=0 cellspacing=0>
+    <tr class="headline">
+      <td>
+        <p class="item">&nbsp;QFileObjects</p>
+      </td>
+      <td align=right>
+        <font size=-2>Armin Rigo&nbsp;-&nbsp;15 Feb 2001</font>
+      </td>
+      <td width="1%" align=right nowrap>
+        &nbsp;&nbsp;[&nbsp;<a href="#__top__">Top</a>&nbsp;]&nbsp;
+      </td>
+    </tr>
+  </table>
+  <table border=0 width="100%" cellspacing=10><tr><td>
+<p>QFileObject is an abstract class that inherits from QObject. The general rule is that classes that inherit from QFileObject can
+be saved to or loaded from disk files, whereas classes that inherit from QObject only are internal objects whose purpose is
+only to be used as subobjects of other objects.
+</p><p>For example, here is how a map file is internally organized. The &quot;.map&quot; file type itself is managed by a class called QMapFile
+that inherits from QFileObject, whereas inside the map, the hierarchy of polyhedrons, groups, entities, etc. is represented by
+a hierarchy of objects that inherit from QObject, because there is no point in saving these objects as single files.
+Graphically :
+</p><div class="doccode"><pre>
+Map object
+ +-- worldspawn
+      +-- polyhedron
+      +-- polyhedron 2
+      +-- group
+           +-- entity
+           +-- etc
+</pre></div>
+
+<p>The links in this diagram mean &quot;is a sub-object&quot;.
+</p>
+  </td></tr></table>
+  <br>
+
+<a name="textureformat"></a>
+  <table width="100%" border=0 cellspacing=0>
+    <tr class="headline">
+      <td>
+        <p class="item">&nbsp;Texture format</p>
+      </td>
+      <td align=right>
+        <font size=-2>DanielPharos&nbsp;-&nbsp;24 Feb 2008</font>
+      </td>
+      <td width="1%" align=right nowrap>
+        &nbsp;&nbsp;[&nbsp;<a href="#__top__">Top</a>&nbsp;]&nbsp;
+      </td>
+    </tr>
+  </table>
+  <table border=0 width="100%" cellspacing=10><tr><td>
+<p>Image data, or textures, are stored in specifics of objects,
+or Pixel Set Descriptors (PSD) QuArK's internal image format.
+</p><p>There are three specifics:
+</p><p><a href="glossary.html#i">Image#</a>  (Where # is a number)<br>
+<a href="glossary.html#p">Pal</a><br>
+<a href="glossary.html#a">Alpha</a><br>
+</p><p>Usually, there's only one image per texture, so there is only an <a href="glossary.html#i">Image1</a>.
+If the texture doesn't contain any alpha-color data, <a href="glossary.html#a">Alpha</a> doesn't exist.
+If the picture isn't a paletted image, like a pcx file, <a href="glossary.html#p">Pal</a> doesn't exist.
+</p><p>There are two different formats that QuArK uses internally,
+and every loaded image is converted to those formats on load:
+<ul>
+<li>24-bit non-paletted, and
+<li>8-bit paletted with a 24-bit palette.
+</ul>
+</p><p>The Image-specific is stored in a way Windows can understand directly.
+The details of it might seem a bit weird, but this is the way Windows works
+(this gave Windows extra speed back in the old 486-days).
+All the data in the Image-specific must be aligned on a 32-bit boundary per scanline.
+What does this mean?
+</p><p>A scanline is simply a row of pixels as displayed on the screen.
+These are <a href="glossary.html#p">picture-width</a> pixels in a single row.
+However, the amount of bytes used per row must be a multiple of 4 (32 bits = 4 bytes of 8 bits each).
+So there is a <a href="glossary.html#p">padding</a> amount of <a href="glossary.html#e">empty</a>, unused, erroneous bytes at the end of each row.
+You can set them to any value, since they won't be displayed, but making them zero's is probably nicest.
+How to calculate the amount of padding bytes, you ask?<br>
+The amount of bits used in a single row of pixels is:
+<a href="glossary.html#p">picture-width</a> x <a href="glossary.html#b">bits per pixel</a>.
+</p><p>The reason for the 8 bits each is because RGB images have a <a href="glossary.html#d">Decimal</a> numbering for each Red, Green,
+Blue channel, or color component, that ranges from 0 to 255, or 256 digits, where pure white would be
+255, 255, 255. Alpha would also be an additional component which we are skipping over for right now.
+</p><p>But the point is, you can see how cumbersome that would be to store, as well as take more bits in memory.
+So to overcome this they use what is known as the <a href="glossary.html#h">Hex</a> or <a href="glossary.html#h">Hexadecimal</a> numbering system instead.
+This system has a total of 16 digits, 0 through 9 plus A, B, C, D, E AND F. Each pixel is an RGBA,
+Red, Green, Blue and Alpha (which may not be used) component. Each of those components gets 2 bits for their <a href="glossary.html#h">Hex</a>
+number looking something like this, FFFFFF, which again is pure white, with Alpha being overlooked for now.
+If an image does have an Alpha component then its <a href="glossary.html#h">Hex</a> number would look like this FFFFFFFF,<br>
+<a href="glossary.html#numbers">2 bits per component x 4 RGBA components = 8 bits each per pixel</a>.<br>
+Pretty slick how that all works, isn't it?
+A good example is to look at this <a href="colorconverter/rgb.htm">Color Converter</a>.
+</p><p>Bits per pixel is usually a number like 1, 2, 4, 8, 16, 24 or 32.
+This now gives the amount of bits per line. We need to round this up to the closest multiple of 32 bits.
+The simplest way is by adding an additional 31, then dividing by 32 and rounding down the result.
+This will give the amount of bytes per scanline.
+</p><p>To find the amount of padding bytes, simply subtract the amount of bytes used in a single row of pixels:<br>
+<a href="glossary.html#p">padding</a> = <a href="glossary.html#p">picture-width</a> x <a href="glossary.html#b">bits per pixel</a> - <a href="glossary.html#a">amount-of-bits-per-scanline</a>
+</p><p>But be careful: the scanlines are stored upside-down.
+This means that the first bytes you read in, are actually the first pixels of the LAST line to display!<br>
+(The picture is stored vertically mirrored, or flipped!)
+Just do a simple <a href="glossary.html#p">picture-height</a> - <a href="glossary.html#l">line-I-want</a> to get the correct number of the scanline.
+Since you know the amount of bytes per scanline (nicely aligned, so no half-byte locations here!),
+you can find the start of the scanline by a simple multiplication.
+</p><p>Since QuArK uses only 8 bits or 24 bits internally, there are only two possibilities.
+Check for the existance of the <a href="glossary.html#p">Pal</a>-specific: if it's there, you're looking at an 8-bit texture,
+if not, then it must be a 24-bit texture.
+</p><p>If <a href="glossary.html#p">Pal</a> does exists, then this is a list of 256, 24 bit colors, stored in a 32-bit format:
+RGB (Red, Green, Blue, no Alpha here). So each color is 4 bytes in size.
+Color 0 is the first color in the list, etc.
+</p><p><a href="glossary.html#a">Alpha</a> contains any Alpha data there might be.
+This is just a list of alpha-color values, no padding involved.
+</p>
+  </td></tr></table>
+  <br>
+
+<a name="loading"></a>
+  <table width="100%" border=0 cellspacing=0>
+    <tr class="headline">
+      <td>
+        <p class="item">&nbsp;Loading files</p>
+      </td>
+      <td align=right>
+        <font size=-2>Armin Rigo&nbsp;-&nbsp;23 Feb 2001</font>
+      </td>
+      <td width="1%" align=right nowrap>
+        &nbsp;&nbsp;[&nbsp;<a href="#__top__">Top</a>&nbsp;]&nbsp;
+      </td>
+    </tr>
+  </table>
+  <table border=0 width="100%" cellspacing=10><tr><td>
+<p>Here are comments that will help you in writing support for a new file type.
+</p><p>QuArK has got a complex file management structure, but you need not be aware of it as long as you use the &quot;official&quot; way of
+loading and saving files. Doing so will let QuArK handle things such as loading or saving directly inside a .pak file, and
+load-on-demand.
+</p><p>To support a new file type, a class inherits from QFileObject and overrides some key methods. The first one is TypeInfo, which
+should return the file extension. QuArK recognize files based on their extension only, and then invokes the correct class'
+&nbsp;<tt>LoadFile</tt>&nbsp; method. This method must process the file it receive in a parameter and turn *all* information it contains
+into Specific/Args and subobjects.
+</p><p>For example, the method &nbsp;<tt>LoadFile</tt>&nbsp; of QMapFile parses the map file and creates the whole hierarchy of groups,
+polyhedrons and entities.
+</p><p>Some file types are suitable for load-on-demand, which is implemented through subobjects whose class also has a
+&nbsp;<tt>LoadFile</tt>&nbsp; method.
+For example, when loading a .PAK file, it is of course not completely loaded into memory : the directory of the file is
+processed, and folders and subfolders are created accordingly. The files inside the folders are also created but this time
+through the method &nbsp;<tt>LoadedItem</tt>&nbsp;, which may be called from a &nbsp;<tt>LoadFile</tt>&nbsp; method only. It creates a subobject which
+is marked as &quot;not loaded yet&quot;; this subobject's own &nbsp;<tt>LoadFile</tt>&nbsp; method will be called when necessary to actually load the
+(sub-)file.
+</p><p>In summary, the method &nbsp;<tt>LoadFile</tt>&nbsp; must :
+</p><p><ul>
+<li>load every information contained in the file and store it all as Specific/Args and subobjects, with one exception : calls
+    to &nbsp;<tt>LoadedItem</tt>&nbsp;, which does not immediately load the data;
+<li>don't do anything else (no direct disk access, no display, etc.), with one exception : calls to LoadSibling, to access
+    files besides the one currently loading (typically, Quake 2's models and sprites refer to .pcx files for the model skin and
+    sprite images).
+</ul>
+</p>
+  </td></tr></table>
+  <br>
+
+<a name="saving"></a>
+  <table width="100%" border=0 cellspacing=0>
+    <tr class="headline">
+      <td>
+        <p class="item">&nbsp;Saving files</p>
+      </td>
+      <td align=right>
+        <font size=-2>Armin Rigo&nbsp;-&nbsp;23 Feb 2001</font>
+      </td>
+      <td width="1%" align=right nowrap>
+        &nbsp;&nbsp;[&nbsp;<a href="#__top__">Top</a>&nbsp;]&nbsp;
+      </td>
+    </tr>
+  </table>
+  <table border=0 width="100%" cellspacing=10><tr><td>
+<p>Saving files is the exact inverse of loading them. The method &nbsp;<tt>SaveFile</tt>&nbsp; must turn the Specific/Args and the subobjects
+structure back into a file.
+</p><p>If the &nbsp;<tt>LoadFile</tt>&nbsp; method used LoadSibling, &nbsp;<tt>SaveFile</tt>&nbsp; calls Info.WriteSibling (see QkMdl.pas).
+</p>
+  </td></tr></table>
+  <br>
+
+<a name="display"></a>
+  <table width="100%" border=0 cellspacing=0>
+    <tr class="headline">
+      <td>
+        <p class="item">&nbsp;Displaying files</p>
+      </td>
+      <td align=right>
+        <font size=-2>Armin Rigo&nbsp;-&nbsp;28 Apr 2009</font>
+      </td>
+      <td width="1%" align=right nowrap>
+        &nbsp;&nbsp;[&nbsp;<a href="#__top__">Top</a>&nbsp;]&nbsp;
+      </td>
+    </tr>
+  </table>
+  <table border=0 width="100%" cellspacing=10><tr><td>
+<p>Files are never displayed directly in QuArK : only internal objects can be. This means that the display code must only rely on the Specific/Args and eventually on the subobjects hierarchy to display the content of a file.
+</p><p>The general rule about display is that subobjects are visible in a tree hierarchy and the user can edit them freely (add subobjects, rename or delete some, move them around, and so on).
+</p><p>For simple objects (typically, the ones with no subobject), the display form gives users access to all parameters of the object. For example, an image object is displayed in a form whose bottom gives parameters such as the size and the color depth of the image.
+</p><p>Semi-complex objects, paradoxally, have simpler display forms : their information is stored as subobjects and the user can edit them without any particular form. For example, a sprite object is basically just a list of images, so that it is represented as an object with images as subobjects. Editing them for the user is quite easy : all he has to do is rename, move, add, delete images. A particular sprite form is needed only for the stuff that cannot be edited this way, e.g. how long each image is to stay in the sprite animation sequence.
+</p><p>Really-complex objects (e.g. maps or models) require more sophisticated display code, which only gives a preview of the object when users click on it in the QuArK Explorer and invokes a complex editor when needed.
+</p><p>Note that for the subobjects of an object to be displayed in tree views, you need to override the &nbsp;<tt>IsExplorerItem</tt>&nbsp; method. This method controls whether each subobject is displayed or not, or whether it is allowed to be dropped there by the user or not. In general it should be implemented as follows :
+</p><div class="doccode"><pre>
+function xxx.IsExplorerItem(Q: QObject) : TIsExplorerItem;
+begin
+ Result:=ieResult[(Q is someclass) or (Q is someotherclass) or...];
+end;
+</pre></div>
+
+  </td></tr></table>
+  <br>
+
+<br>
+
+<table width="100%" border=0 cellspacing=0>
+  <tr class="headline">
+    <td width="99%" align=center>
+      <p class="sm">
+        Copyright (c) 2009, GNU General Public License by The QuArK (Quake Army Knife) Community - <a target="_blank" href="http://quark.sourceforge.net/">http://quark.sourceforge.net/</a><br>
+      </p>
+    </td>
+    <td width="1%" align=right nowrap>
+      &nbsp;[&nbsp;<span class="navenable"><a href="src.intro.html">Prev</a></span>&nbsp;-&nbsp;<a href="#__top__">Top</a>&nbsp;-&nbsp;<span class="navenable"><a href="src.topics.html">Next</a></span>&nbsp;]&nbsp;
+    </td>
+  </tr>
+</table>
+</body>
+</html>

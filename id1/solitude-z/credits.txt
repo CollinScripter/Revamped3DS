@@ -1,0 +1,14 @@
+CREDITS
+
+id Software and QuakeWorld team -- QuakeWorld 2.40 source code
+QuakeForge team - lots of advice and code pieces
+Brian Koropoff - server list
+Forest 'LordHavoc' Hale - MSG_WriteAngle fix, .lit support, Half-Life bsp support, QuakeC extensions
+Dabb - nVidia alt-tabbing fix
+Andrew Tridgell - mdfour.c
+Victor 'Vic' Luchits - mtex fb rendering for alias models, fullbrights on .pcx
+    player skins and more...
+Matthias 'Massa' Mohr - keymaps
+A 'Fuh' Nourai - extra teamplay stuff, nickname completion
+Dominic 'oldman' Evans - linux and mac ports, qc stuff
+Anton 'Tonik' Gavrilov - everything else

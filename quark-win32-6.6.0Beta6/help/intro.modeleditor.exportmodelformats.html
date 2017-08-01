@@ -1,0 +1,389 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"  "http://www.w3.org/TR/html4/loose.dtd">
+<html lang="en">
+<head>
+  <title>Exporting Model Formats</title>
+  <meta name="Description" content="QuArK Information Database - Page: 1.6.13.&nbsp;Exporting Model Formats">
+  <meta name="Keywords" content="QuArK InfoBase Quake Army Knife QRK QKM Python PY Map Editor Hexen Heretic Half-Life Sin Kingpin Soldier-of-Fortune Star-Trek-Voyager Elite-Force">
+  <link rel=stylesheet href="standard.css" type="text/css">
+</head>
+
+<body>
+<a name="__top__"></a>
+<table width="100%" border=0 cellspacing=0>
+  <tr>
+    <td width=213>
+      <a target="_blank" href="http://quark.sourceforge.net/"><img src="quarkicon.png" width=213 height=90 border=0 alt="Go to QuArK Web Site"></a>
+    </td>
+    <td width="70%" align=center>
+      <div class="topheadline">Exporting Model Formats</div>
+      <div class="sm">Updated&nbsp;28 Jan 2011</div>
+    </td>
+    <td width="30%" valign=bottom nowrap>
+      Upper&nbsp;levels:<br>-&nbsp;<a href="index.html">QuArK&nbsp;Information&nbsp;Base</a><br>-&nbsp;<a href="intro.html">1.&nbsp;Introduction&nbsp;to&nbsp;QuArK</a><br>-&nbsp;<a href="intro.modeleditor.html">1.6.&nbsp;Model-editor&nbsp;in&nbsp;QuArK</a><br>
+    </td>
+  </tr>
+</table>
+<table width="100%" border=0 cellspacing=0>
+  <tr class="headline">
+    <td width="99%">
+      <p class="headline">&nbsp;1.6.13.&nbsp;Exporting Model Formats</p>
+    </td>
+    <td width="1%" align=right nowrap>
+      &nbsp;[&nbsp;<span class="navenable"><a href="intro.modeleditor.vertexcolorandweights.html">Prev</a></span>&nbsp;-&nbsp;<span class="navenable"><a href="intro.modeleditor.html">Up</a></span>&nbsp;-&nbsp;<span class="navenable"><a href="intro.texturebrowser.html">Next</a></span>&nbsp;]&nbsp;
+    </td>
+  </tr>
+</table>
+<table border=0 width="100%" cellspacing=10><tr><td><p>This is a special section that covers the Model Editor's model formats
+that can be exported, how they need to be setup, what needs to be included 
+and the steps to do so.
+</p><p>Various ones use different methods such as
+<a href="intro.modeleditor.editelements.html#tags">tags</a> (or attachments),
+<a href="intro.modeleditor.editelements.html#bones">bones</a>,
+<a href="intro.modeleditor.vertexcolorandweights.html#vertexweights">Vertex Weights</a> and
+<a href="intro.modeleditor.vertexcolorandweights.html#vertexcoloring">UV Vertex Colors</a>
+for static (non-animated) and animated models. Even though QuArK supports these
+methods the actual exporter for another type of format will not include them if
+that particular format does not use them. Models that do not have them will
+need to be edited so they do if the exporter format requires them.
+</p><p>In addition, some model formats have their own
+<a href="intro.modeleditor.dataforms.html#specsargsview">Specifics/Args</a>
+page to assist in setting these methods and if one does not exist
+then a defaults page is provided.
+</p><p>This way QuArK not only edits models, it will actually allow the conversion
+of one model format into another making them usable in different games.
+In addition, some games use the same format as others and those have been noted
+by their abbreviated initials. A few are identified as follows:<br>
+<a href="intro.configuration.games.specificgames.html">EF2 </a>&nbsp;: Elite Force 2<br>
+<a href="intro.configuration.games.specificgames.html">FAKK2 </a>&nbsp;: Heavy Metal FAKK2 (Federation Assigned Ketogenic Killzone to the 2nd level)<br>
+<a href="intro.configuration.games.specificgames.rtcw.html">RTCW </a>&nbsp;: Return to Castle Wolfenstein<br>
+<a href="intro.configuration.games.specificgames.rtcw-et.html">RTCW-ET </a>&nbsp;: Wolfenstein - Enemy Territory<br>
+<a href="intro.configuration.games.specificgames.html">SoF2 </a>&nbsp;: Solder of Fortune 2<br>
+<a href="intro.configuration.games.specificgames.stvef.html">STVEF </a>&nbsp;: Star Trek Voyager Elite Force
+</p><p>As new formats are added, details relating to them specifically can be added
+here to assist those that will be using them for exportation to their original
+format or to an entirely different format.</p>
+</td></tr></table>
+<br>
+
+<table width="100%" border=0 cellspacing=0>
+  <tr class="headline">
+    <td width="100%">
+      <p class="subheadline">&nbsp;Index</p>
+    </td>
+  </tr>
+</table>
+<ul class="index">
+  <li>- <a href="#ase">.ase format</a>&nbsp;<span class="added">(27 Jan 2011)</span>
+  <li>- <a href="#lwo">.lwo format</a>&nbsp;<span class="added">(27 Jan 2011)</span>
+  <li>- <a href="#mdl">.mdl format</a>&nbsp;<span class="added">(27 Jan 2011)</span>
+  <li>- <a href="#md2">.md2 format</a>&nbsp;<span class="added">(27 Jan 2011)</span>
+  <li>- <a href="#md3">.md3 format</a>&nbsp;<span class="added">(28 Jan 2011)</span>
+  <li>- <a href="#md5mesh">.md5mesh format</a>&nbsp;<span class="added">(28 Jan 2011)</span>
+  <li>- <a href="#md5anim">.md5anim format</a>&nbsp;<span class="added">(28 Jan 2011)</span>
+  <li>- <a href="#ska">.ska format</a>&nbsp;<span class="added">(28 Jan 2011)</span>
+  <li>- <a href="#skb">.skb format</a>&nbsp;<span class="added">(28 Jan 2011)</span>
+  <li>- <a href="#tan">.tan format</a>&nbsp;<span class="added">(27 Jan 2011)</span>
+</ul>
+<br>
+
+
+<a name="ase"></a>
+  <table width="100%" border=0 cellspacing=0>
+    <tr class="headline">
+      <td>
+        <p class="item">&nbsp;.ase format</p>
+      </td>
+      <td align=right>
+        <font size=-2>cdunde&nbsp;-&nbsp;27 Jan 2011</font>
+      </td>
+      <td width="1%" align=right nowrap>
+        &nbsp;&nbsp;[&nbsp;<a href="#__top__">Top</a>&nbsp;]&nbsp;
+      </td>
+    </tr>
+  </table>
+  <table border=0 width="100%" cellspacing=10><tr><td>
+<p><i>Original game </i>&nbsp;: NEXUIZ
+</p><p><i>Other games </i>&nbsp;: Prey
+</p><p>Used in NEXUIZ for static (single frame) single and multiple components.<br>
+Used in Prey for static (single frame) single component.
+</p><p><b><u>uses</u></b><br>
+<a href="intro.modeleditor.editelements.html#tags">tags </a>&nbsp;: no<br>
+<a href="intro.modeleditor.editelements.html#bones">bones </a>&nbsp;: no<br>
+<a href="intro.modeleditor.vertexcolorandweights.html#vertexweights">weights </a>&nbsp;: no<br>
+<a href="intro.modeleditor.vertexcolorandweights.html#vertexcoloring">uv colors </a>&nbsp;: <a style="color:#FF0000"><b>yes</b></a><br>
+<a href="intro.modeleditor.dataforms.html#specsargsview">Specifics page </a>&nbsp;: <a style="color:#FF0000"><b>yes</b></a>
+</p>
+  </td></tr></table>
+  <br>
+
+<a name="lwo"></a>
+  <table width="100%" border=0 cellspacing=0>
+    <tr class="headline">
+      <td>
+        <p class="item">&nbsp;.lwo format</p>
+      </td>
+      <td align=right>
+        <font size=-2>cdunde&nbsp;-&nbsp;27 Jan 2011</font>
+      </td>
+      <td width="1%" align=right nowrap>
+        &nbsp;&nbsp;[&nbsp;<a href="#__top__">Top</a>&nbsp;]&nbsp;
+      </td>
+    </tr>
+  </table>
+  <table border=0 width="100%" cellspacing=10><tr><td>
+<p><i>Original game </i>&nbsp;: Doom3
+</p><p><i>Other games </i>&nbsp;: Prey
+</p><p>Used in Doom3 for static (single frame) single and multiple components.<br>
+Used in Prey for static (single frame) single and multiple components.
+</p><p><b><u>uses</u></b><br>
+<a href="intro.modeleditor.editelements.html#tags">tags </a>&nbsp;: no<br>
+<a href="intro.modeleditor.editelements.html#bones">bones </a>&nbsp;: no<br>
+<a href="intro.modeleditor.vertexcolorandweights.html#vertexweights">weights </a>&nbsp;: no<br>
+<a href="intro.modeleditor.vertexcolorandweights.html#vertexcoloring">uv colors </a>&nbsp;: <a style="color:#FF0000"><b>yes</b></a><br>
+<a href="intro.modeleditor.dataforms.html#specsargsview">Specifics page </a>&nbsp;: <a style="color:#FF0000"><b>yes</b></a>
+</p>
+  </td></tr></table>
+  <br>
+
+<a name="mdl"></a>
+  <table width="100%" border=0 cellspacing=0>
+    <tr class="headline">
+      <td>
+        <p class="item">&nbsp;.mdl format</p>
+      </td>
+      <td align=right>
+        <font size=-2>cdunde&nbsp;-&nbsp;27 Jan 2011</font>
+      </td>
+      <td width="1%" align=right nowrap>
+        &nbsp;&nbsp;[&nbsp;<a href="#__top__">Top</a>&nbsp;]&nbsp;
+      </td>
+    </tr>
+  </table>
+  <table border=0 width="100%" cellspacing=10><tr><td>
+<p><i>Original game </i>&nbsp;: Quake 1
+</p><p><i>Other games </i>&nbsp;: Unknown (not Half-Life 1 or 2)
+</p><p>Used in Quake 1 for both static (single frame) single component and simple animated (multiple frames) single component.
+</p><p><b><u>uses</u></b><br>
+<a href="intro.modeleditor.editelements.html#tags">tags </a>&nbsp;: no<br>
+<a href="intro.modeleditor.editelements.html#bones">bones </a>&nbsp;: no<br>
+<a href="intro.modeleditor.vertexcolorandweights.html#vertexweights">weights </a>&nbsp;: no<br>
+<a href="intro.modeleditor.vertexcolorandweights.html#vertexcoloring">uv colors </a>&nbsp;: no<br>
+<a href="intro.modeleditor.dataforms.html#specsargsview">Specifics page </a>&nbsp;: no<br>
+</p>
+  </td></tr></table>
+  <br>
+
+<a name="md2"></a>
+  <table width="100%" border=0 cellspacing=0>
+    <tr class="headline">
+      <td>
+        <p class="item">&nbsp;.md2 format</p>
+      </td>
+      <td align=right>
+        <font size=-2>cdunde&nbsp;-&nbsp;27 Jan 2011</font>
+      </td>
+      <td width="1%" align=right nowrap>
+        &nbsp;&nbsp;[&nbsp;<a href="#__top__">Top</a>&nbsp;]&nbsp;
+      </td>
+    </tr>
+  </table>
+  <table border=0 width="100%" cellspacing=10><tr><td>
+<p><i>Original game </i>&nbsp;: Quake 2
+</p><p><i>Other games </i>&nbsp;: Unknown
+</p><p>Used in Quake 2 for both static (single frame) single component and simple animated (multiple frames) single component.
+</p><p><b><u>uses</u></b><br>
+<a href="intro.modeleditor.editelements.html#tags">tags </a>&nbsp;: no<br>
+<a href="intro.modeleditor.editelements.html#bones">bones </a>&nbsp;: no<br>
+<a href="intro.modeleditor.vertexcolorandweights.html#vertexweights">weights </a>&nbsp;: no<br>
+<a href="intro.modeleditor.vertexcolorandweights.html#vertexcoloring">uv colors </a>&nbsp;: no<br>
+<a href="intro.modeleditor.dataforms.html#specsargsview">Specifics page </a>&nbsp;: no<br>
+</p>
+  </td></tr></table>
+  <br>
+
+<a name="md3"></a>
+  <table width="100%" border=0 cellspacing=0>
+    <tr class="headline">
+      <td>
+        <p class="item">&nbsp;.md3 format</p>
+      </td>
+      <td align=right>
+        <font size=-2>cdunde&nbsp;-&nbsp;28 Jan 2011</font>
+      </td>
+      <td width="1%" align=right nowrap>
+        &nbsp;&nbsp;[&nbsp;<a href="#__top__">Top</a>&nbsp;]&nbsp;
+      </td>
+    </tr>
+  </table>
+  <table border=0 width="100%" cellspacing=10><tr><td>
+<p><i>Original game </i>&nbsp;: Quake 3
+</p><p><i>Other games </i>&nbsp;: Quake 4, RTCW, RTCW-ET, SoF2, STVEF, Warsow
+</p><p>Used in Quake 3, SoF2 for both static (single frame) and simple animated (multiple frames) single component multiple md3 files.<br>
+Used in Quake 4, RTCW, RTCW-ET, STVEF, Warsow for static (single frame) single and multiple components.
+</p><p><b><u>uses</u></b><br>
+<a href="intro.modeleditor.editelements.html#tags">tags </a>&nbsp;: <a style="color:#FF0000"><b>yes</b></a> (Quake 3, SoF2 only)<br>
+<a href="intro.modeleditor.editelements.html#bones">bones </a>&nbsp;: no<br>
+<a href="intro.modeleditor.vertexcolorandweights.html#vertexweights">weights </a>&nbsp;: no<br>
+<a href="intro.modeleditor.vertexcolorandweights.html#vertexcoloring">uv colors </a>&nbsp;: no<br>
+<a href="intro.modeleditor.dataforms.html#specsargsview">Specifics page </a>&nbsp;: <a style="color:#FF0000"><b>yes</b></a>
+</p>
+  </td></tr></table>
+  <br>
+
+<a name="md5mesh"></a>
+  <table width="100%" border=0 cellspacing=0>
+    <tr class="headline">
+      <td>
+        <p class="item">&nbsp;.md5mesh format</p>
+      </td>
+      <td align=right>
+        <font size=-2>cdunde&nbsp;-&nbsp;28 Jan 2011</font>
+      </td>
+      <td width="1%" align=right nowrap>
+        &nbsp;&nbsp;[&nbsp;<a href="#__top__">Top</a>&nbsp;]&nbsp;
+      </td>
+    </tr>
+  </table>
+  <table border=0 width="100%" cellspacing=10><tr><td>
+<p><i>Original game </i>&nbsp;: Doom 3
+</p><p><i>Other games </i>&nbsp;: Prey, Quake 4
+</p><p>Used in Doom 3, Prey, Quake 4 for static (single baseframe for md5anim model) single and multiple components.
+</p><p><b><u>uses</u></b><br>
+<a href="intro.modeleditor.editelements.html#tags">tags </a>&nbsp;: no<br>
+<a href="intro.modeleditor.editelements.html#bones">bones </a>&nbsp;: <a style="color:#FF0000"><b>yes</b></a><br>
+<a href="intro.modeleditor.vertexcolorandweights.html#vertexweights">weights </a>&nbsp;: <a style="color:#FF0000"><b>yes</b></a><br>
+<a href="intro.modeleditor.vertexcolorandweights.html#vertexcoloring">uv colors </a>&nbsp;: <a style="color:#FF0000"><b>yes</b></a><br>
+<a href="intro.modeleditor.dataforms.html#specsargsview">Specifics page </a>&nbsp;: <a style="color:#FF0000"><b>yes</b></a>
+</p>
+  </td></tr></table>
+  <br>
+
+<a name="md5anim"></a>
+  <table width="100%" border=0 cellspacing=0>
+    <tr class="headline">
+      <td>
+        <p class="item">&nbsp;.md5anim format</p>
+      </td>
+      <td align=right>
+        <font size=-2>cdunde&nbsp;-&nbsp;28 Jan 2011</font>
+      </td>
+      <td width="1%" align=right nowrap>
+        &nbsp;&nbsp;[&nbsp;<a href="#__top__">Top</a>&nbsp;]&nbsp;
+      </td>
+    </tr>
+  </table>
+  <table border=0 width="100%" cellspacing=10><tr><td>
+<p><i>Original game </i>&nbsp;: Doom 3
+</p><p><i>Other games </i>&nbsp;: Prey, Quake 4
+</p><p>Used in Doom 3, Prey, Quake 4 for animation of md5mesh model single and multiple components.
+</p><p><b><u>uses</u></b><br>
+<a href="intro.modeleditor.editelements.html#tags">tags </a>&nbsp;: no<br>
+<a href="intro.modeleditor.editelements.html#bones">bones </a>&nbsp;: <a style="color:#FF0000"><b>yes</b></a><br>
+<a href="intro.modeleditor.vertexcolorandweights.html#vertexweights">weights </a>&nbsp;: <a style="color:#FF0000"><b>yes</b></a><br>
+<a href="intro.modeleditor.vertexcolorandweights.html#vertexcoloring">uv colors </a>&nbsp;: no<br>
+<a href="intro.modeleditor.dataforms.html#specsargsview">Specifics page </a>&nbsp;: <a style="color:#FF0000"><b>yes</b></a>
+</p>
+  </td></tr></table>
+  <br>
+
+<a name="ska"></a>
+  <table width="100%" border=0 cellspacing=0>
+    <tr class="headline">
+      <td>
+        <p class="item">&nbsp;.ska format</p>
+      </td>
+      <td align=right>
+        <font size=-2>cdunde&nbsp;-&nbsp;28 Jan 2011</font>
+      </td>
+      <td width="1%" align=right nowrap>
+        &nbsp;&nbsp;[&nbsp;<a href="#__top__">Top</a>&nbsp;]&nbsp;
+      </td>
+    </tr>
+  </table>
+  <table border=0 width="100%" cellspacing=10><tr><td>
+<p><i>Original game </i>&nbsp;: Alice
+</p><p><i>Other games </i>&nbsp;: EF2, FAKK2
+</p><p>Used in Alice, EF2, FAKK2 for animation of skb model single and multiple components.
+</p><p><b><u>uses</u></b><br>
+<a href="intro.modeleditor.editelements.html#tags">tags </a>&nbsp;: no<br>
+<a href="intro.modeleditor.editelements.html#bones">bones </a>&nbsp;: <a style="color:#FF0000"><b>yes</b></a><br>
+<a href="intro.modeleditor.vertexcolorandweights.html#vertexweights">weights </a>&nbsp;: <a style="color:#FF0000"><b>yes</b></a><br>
+<a href="intro.modeleditor.vertexcolorandweights.html#vertexcoloring">uv colors </a>&nbsp;: no<br>
+<a href="intro.modeleditor.dataforms.html#specsargsview">Specifics page </a>&nbsp;: no
+</p>
+  </td></tr></table>
+  <br>
+
+<a name="skb"></a>
+  <table width="100%" border=0 cellspacing=0>
+    <tr class="headline">
+      <td>
+        <p class="item">&nbsp;.skb format</p>
+      </td>
+      <td align=right>
+        <font size=-2>cdunde&nbsp;-&nbsp;28 Jan 2011</font>
+      </td>
+      <td width="1%" align=right nowrap>
+        &nbsp;&nbsp;[&nbsp;<a href="#__top__">Top</a>&nbsp;]&nbsp;
+      </td>
+    </tr>
+  </table>
+  <table border=0 width="100%" cellspacing=10><tr><td>
+<p><i>Original game </i>&nbsp;: Alice
+</p><p><i>Other games </i>&nbsp;: EF2, FAKK2
+</p><p>Used in Alice, EF2, FAKK2 for static (single baseframe for ska animation model) single and multiple components.
+</p><p><b><u>uses</u></b><br>
+<a href="intro.modeleditor.editelements.html#tags">tags </a>&nbsp;: no<br>
+<a href="intro.modeleditor.editelements.html#bones">bones </a>&nbsp;: <a style="color:#FF0000"><b>yes</b></a><br>
+<a href="intro.modeleditor.vertexcolorandweights.html#vertexweights">weights </a>&nbsp;: <a style="color:#FF0000"><b>yes</b></a><br>
+<a href="intro.modeleditor.vertexcolorandweights.html#vertexcoloring">uv colors </a>&nbsp;: no<br>
+<a href="intro.modeleditor.dataforms.html#specsargsview">Specifics page </a>&nbsp;: no
+</p>
+  </td></tr></table>
+  <br>
+
+<a name="tan"></a>
+  <table width="100%" border=0 cellspacing=0>
+    <tr class="headline">
+      <td>
+        <p class="item">&nbsp;.tan format</p>
+      </td>
+      <td align=right>
+        <font size=-2>cdunde&nbsp;-&nbsp;27 Jan 2011</font>
+      </td>
+      <td width="1%" align=right nowrap>
+        &nbsp;&nbsp;[&nbsp;<a href="#__top__">Top</a>&nbsp;]&nbsp;
+      </td>
+    </tr>
+  </table>
+  <table border=0 width="100%" cellspacing=10><tr><td>
+<p><i>Original game </i>&nbsp;: Alice
+</p><p><i>Other games </i>&nbsp;: EF2, FAKK2
+</p><p>Used in Alice for both static (single frame) multiple components and simple animated (multiple frames) single component models.<br>
+Used in EF2 for static (single frame) single and multiple components.<br>
+Used in FAKK2 for both static (single frame) single component and simple animated (multiple frames) single component.
+</p><p><b><u>uses</u></b><br>
+<a href="intro.modeleditor.editelements.html#tags">tags </a>&nbsp;: no<br>
+<a href="intro.modeleditor.editelements.html#bones">bones </a>&nbsp;: no<br>
+<a href="intro.modeleditor.vertexcolorandweights.html#vertexweights">weights </a>&nbsp;: no<br>
+<a href="intro.modeleditor.vertexcolorandweights.html#vertexcoloring">uv colors </a>&nbsp;: no<br>
+<a href="intro.modeleditor.dataforms.html#specsargsview">Specifics page </a>&nbsp;: no</p>
+  </td></tr></table>
+  <br>
+
+<br>
+
+<table width="100%" border=0 cellspacing=0>
+  <tr class="headline">
+    <td width="99%" align=center>
+      <p class="sm">
+        Copyright (c) 2009, GNU General Public License by The QuArK (Quake Army Knife) Community - <a target="_blank" href="http://quark.sourceforge.net/">http://quark.sourceforge.net/</a><br>
+      </p>
+    </td>
+    <td width="1%" align=right nowrap>
+      &nbsp;[&nbsp;<span class="navenable"><a href="intro.modeleditor.vertexcolorandweights.html">Prev</a></span>&nbsp;-&nbsp;<a href="#__top__">Top</a>&nbsp;-&nbsp;<span class="navenable"><a href="intro.texturebrowser.html">Next</a></span>&nbsp;]&nbsp;
+    </td>
+  </tr>
+</table>
+</body>
+</html>

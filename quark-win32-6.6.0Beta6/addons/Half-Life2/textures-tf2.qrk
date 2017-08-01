@@ -1,0 +1,1438 @@
+QQRKSRC1
+{
+  QuArKProtected = "1"
+  Description = "TF2 Textures from team fortress 2 materials.gcf (february/12/2008)"
+
+  TF2 directory infos.qctx =
+  {
+    Game = "Half-Life2"
+    SourceDir = "tf"
+    GameDir = "tf"
+  }
+
+//
+// Materials for TF2
+//
+
+    TF2 Textures.qtx =
+    {
+      ToolBox = "Texture Browser..."
+      Root = "TF2 Textures.qtxfolder"
+      HTML = "intro.texturebrowser.html"
+
+      t_tf2:incl = { v="tf" PakFile="team fortress 2 materials.gcf" }
+
+      TF2 Textures.qtxfolder =
+      {
+        ambulance.txlist =
+        {
+            ambulance/amb_blu.wl = { t_tf2=! }
+            ambulance/amb_red.wl = { t_tf2=! }
+        }
+
+        backpack.txlist =
+        {
+            backpack/flaregun_large.wl = { t_tf2=! }
+            backpack/flaregun_small.wl = { t_tf2=! }
+        }
+
+        Brick.txlist =
+        {
+            Brick/brickwall001.wl = { t_tf2=! }
+            Brick/brickwall001b.wl = { t_tf2=! }
+            Brick/brickwall001c.wl = { t_tf2=! }
+            Brick/brickwall001d.wl = { t_tf2=! }
+            Brick/brickwall002.wl = { t_tf2=! }
+            Brick/brickwall002b.wl = { t_tf2=! }
+            Brick/brickwall002c.wl = { t_tf2=! }
+            Brick/brickwall003.wl = { t_tf2=! }
+            Brick/brickwall004.wl = { t_tf2=! }
+            Brick/brickwall004c.wl = { t_tf2=! }
+            Brick/brickwall004d.wl = { t_tf2=! }
+            Brick/brickwall004e.wl = { t_tf2=! }
+            Brick/cobblewall001.wl = { t_tf2=! }
+            Brick/cobblewall001_snow.wl = { t_tf2=! }
+            Brick/wall028.wl = { t_tf2=! }
+            Brick/wall029.wl = { t_tf2=! }
+        }
+
+        Building_Template.txlist =
+        {
+            Building_Template/Building_Trainstation_Truss_Template001a.wl = { t_tf2=! }
+            Building_Template/Building_Trainstation_Truss_Template001g.wl = { t_tf2=! }
+        }
+
+        cable.txlist =
+        {
+            cable/white.wl = { t_tf2=! }
+        }
+
+        coalmines.txlist =
+        {
+            coalmines/beach_dry.wl = { t_tf2=! }
+            coalmines/beach_wet.wl = { t_tf2=! }
+        }
+
+        Concrete.txlist =
+        {
+            Concrete/ceiling_01.wl = { t_tf2=! }
+            Concrete/computerwall_blue_stained.wl = { t_tf2=! }
+            Concrete/computerwall_red_stained.wl = { t_tf2=! }
+            Concrete/computerwall001.wl = { t_tf2=! }
+            Concrete/computerwall002.wl = { t_tf2=! }
+            Concrete/computerwall003.wl = { t_tf2=! }
+            Concrete/computerwall003a.wl = { t_tf2=! }
+            Concrete/computerwall003b.wl = { t_tf2=! }
+            Concrete/computerwall003c.wl = { t_tf2=! }
+            Concrete/computerwall003d.wl = { t_tf2=! }
+            Concrete/computerwall003e.wl = { t_tf2=! }
+            Concrete/computerwall004.wl = { t_tf2=! }
+            Concrete/computerwall005.wl = { t_tf2=! }
+            Concrete/computerwall005a.wl = { t_tf2=! }
+            Concrete/computerwall005b.wl = { t_tf2=! }
+            Concrete/computerwall005c.wl = { t_tf2=! }
+            Concrete/computerwall005d.wl = { t_tf2=! }
+            Concrete/computerwall005e.wl = { t_tf2=! }
+            Concrete/computerwall006.wl = { t_tf2=! }
+            Concrete/computerwall006b.wl = { t_tf2=! }
+            Concrete/computerwall007.wl = { t_tf2=! }
+            Concrete/computerwall008.wl = { t_tf2=! }
+            Concrete/computerwall009.wl = { t_tf2=! }
+            Concrete/computerwall010.wl = { t_tf2=! }
+            Concrete/computerwall011.wl = { t_tf2=! }
+            Concrete/concretefloor002.wl = { t_tf2=! }
+            Concrete/concretefloor002b.wl = { t_tf2=! }
+            Concrete/concretefloor003.wl = { t_tf2=! }
+            Concrete/concretefloor004.wl = { t_tf2=! }
+            Concrete/concretefloor005.wl = { t_tf2=! }
+            Concrete/concretefloor006.wl = { t_tf2=! }
+            Concrete/concretefloor007.wl = { t_tf2=! }
+            Concrete/concretefloor007b.wl = { t_tf2=! }
+            Concrete/concretefloor008.wl = { t_tf2=! }
+            Concrete/concretefloor008_reflect.wl = { t_tf2=! }
+            Concrete/concretefloor009.wl = { t_tf2=! }
+            Concrete/concretefloor010.wl = { t_tf2=! }
+            Concrete/concretewall001a.wl = { t_tf2=! }
+            Concrete/concretewall001b.wl = { t_tf2=! }
+            Concrete/concretewall001c.wl = { t_tf2=! }
+            Concrete/concretewall001d.wl = { t_tf2=! }
+            Concrete/concretewall001e.wl = { t_tf2=! }
+            Concrete/concretewall002.wl = { t_tf2=! }
+            Concrete/concretewall002b.wl = { t_tf2=! }
+            Concrete/concretewall002c.wl = { t_tf2=! }
+            Concrete/concretewall002d.wl = { t_tf2=! }
+            Concrete/concretewall002e.wl = { t_tf2=! }
+            Concrete/concretewall003.wl = { t_tf2=! }
+            Concrete/concretewall003b.wl = { t_tf2=! }
+            Concrete/concretewall003c.wl = { t_tf2=! }
+            Concrete/concretewall004.wl = { t_tf2=! }
+            Concrete/concretewall004b.wl = { t_tf2=! }
+            Concrete/concretewall004c.wl = { t_tf2=! }
+            Concrete/concretewall005.wl = { t_tf2=! }
+            Concrete/concretewall006.wl = { t_tf2=! }
+            Concrete/concretewall007.wl = { t_tf2=! }
+            Concrete/concretewall008.wl = { t_tf2=! }
+            Concrete/concretewall008b.wl = { t_tf2=! }
+            Concrete/concretewall008c.wl = { t_tf2=! }
+            Concrete/concretewall009.wl = { t_tf2=! }
+            Concrete/concretewall010.wl = { t_tf2=! }
+            Concrete/concretewall011.wl = { t_tf2=! }
+            Concrete/concretewall011a.wl = { t_tf2=! }
+            Concrete/concretewall012.wl = { t_tf2=! }
+            Concrete/concretewall012a.wl = { t_tf2=! }
+            Concrete/concretewall012b.wl = { t_tf2=! }
+            Concrete/concretewall013.wl = { t_tf2=! }
+            Concrete/concretewall013a.wl = { t_tf2=! }
+            Concrete/concretewall013b.wl = { t_tf2=! }
+            Concrete/concretewall014.wl = { t_tf2=! }
+            Concrete/concretewall014a.wl = { t_tf2=! }
+            Concrete/concretewall014b.wl = { t_tf2=! }
+            Concrete/concretewall014c.wl = { t_tf2=! }
+            Concrete/concretewall015.wl = { t_tf2=! }
+            Concrete/concretewall015a.wl = { t_tf2=! }
+            Concrete/concrete_track001.wl = { t_tf2=! }
+            Concrete/concrete_track002.wl = { t_tf2=! }
+            Concrete/floor_carpet001.wl = { t_tf2=! }
+            Concrete/floor_carpet002.wl = { t_tf2=! }
+            Concrete/floor_carpet002a.wl = { t_tf2=! }
+            Concrete/stripe_blue.wl = { t_tf2=! }
+            Concrete/wall010.wl = { t_tf2=! }
+            Concrete/wall011.wl = { t_tf2=! }
+            Concrete/wall011b.wl = { t_tf2=! }
+            Concrete/wall022.wl = { t_tf2=! }
+            Concrete/wall024.wl = { t_tf2=! }
+            Concrete/wall025.wl = { t_tf2=! }
+        }
+
+        console.txlist =
+        {
+            console/background01.wl = { t_tf2=! }
+            console/background02.wl = { t_tf2=! }
+            console/replay_loading.wl = { t_tf2=! }
+            console/replay_loading_widescreen.wl = { t_tf2=! }
+            console/rewind_background.wl = { t_tf2=! }
+            console/rewind_background_widescreen.wl = { t_tf2=! }
+            console/title_blue.wl = { t_tf2=! }
+            console/title_blue_widescreen.wl = { t_tf2=! }
+            console/title_red.wl = { t_tf2=! }
+            console/title_red_widescreen.wl = { t_tf2=! }
+            console/title_team.wl = { t_tf2=! }
+            console/title_team_widescreen.wl = { t_tf2=! }
+            console/title_team_halloween.wl = { t_tf2=! }
+            console/title_team_halloween_widescreen.wl = { t_tf2=! }
+            console/title_war.wl = { t_tf2=! }
+            console/title_war_widescreen.wl = { t_tf2=! }
+        }
+
+        customdev.txlist =
+        {
+            customdev/dev_measuregeneric01blu.wl = { t_tf2=! }
+            customdev/dev_measuregeneric01red.wl = { t_tf2=! }
+            customdev/dev_measurewall01blu.wl = { t_tf2=! }
+            customdev/dev_measurewall01red.wl = { t_tf2=! }
+        }
+
+        Decals.txlist =
+        {
+            Decals/dirtshot1.wl = { t_tf2=! }
+            Decals/dirtshot2.wl = { t_tf2=! }
+            Decals/dirtshot3.wl = { t_tf2=! }
+            Decals/dirtshot4.wl = { t_tf2=! }
+            Decals/scorch1.wl = { t_tf2=! }
+            Decals/scorch1model.wl = { t_tf2=! }
+            Decals/scorch1_subrect.wl = { t_tf2=! }
+            Decals/scorch2_subrect.wl = { t_tf2=! }
+            Decals/scorchfade.wl = { t_tf2=! }
+            Decals/scorchfademodel.wl = { t_tf2=! }
+        }
+
+        detail.txlist =
+        {
+            detail/detailsprites.wl = { t_tf2=! }
+            detail/detailsprites_2fort.wl = { t_tf2=! }
+            detail/detailsprites_dustbowl.wl = { t_tf2=! }
+            detail/detailsprites_granary.wl = { t_tf2=! }
+            detail/detailsprites_harvest.wl = { t_tf2=! }
+            detail/detailsprites_sawmill.wl = { t_tf2=! }
+            detail/detailsprites_trainyard.wl = { t_tf2=! }
+        }
+
+        Editor.txlist =
+        {
+            Editor/Air_node.wl = { t_tf2=! }
+            Editor/Air_node_hint.wl = { t_tf2=! }
+            Editor/aiscripted_schedule.wl = { t_tf2=! }
+            Editor/ai_goal_follow.wl = { t_tf2=! }
+            Editor/ai_goal_lead.wl = { t_tf2=! }
+            Editor/ai_goal_police.wl = { t_tf2=! }
+            Editor/ai_goal_standoff.wl = { t_tf2=! }
+            Editor/ai_relationship.wl = { t_tf2=! }
+            Editor/ai_sound.wl = { t_tf2=! }
+            Editor/ambient_generic.wl = { t_tf2=! }
+            Editor/assault_point.wl = { t_tf2=! }
+            Editor/assault_rally.wl = { t_tf2=! }
+            Editor/Axis_helper.wl = { t_tf2=! }
+            Editor/BaseAlphaEnvMapMaskIcon.wl = { t_tf2=! }
+            Editor/bullseye.wl = { t_tf2=! }
+            Editor/choreo_scene.wl = { t_tf2=! }
+            Editor/Climb_node.wl = { t_tf2=! }
+            Editor/cordon.wl = { t_tf2=! }
+            Editor/env_cubemap.wl = { t_tf2=! }
+            Editor/env_explosion.wl = { t_tf2=! }
+            Editor/env_fade.wl = { t_tf2=! }
+            Editor/env_fire.wl = { t_tf2=! }
+            Editor/env_firesource.wl = { t_tf2=! }
+            Editor/env_microphone.wl = { t_tf2=! }
+            Editor/env_particles.wl = { t_tf2=! }
+            Editor/env_physexplosion.wl = { t_tf2=! }
+            Editor/env_shake.wl = { t_tf2=! }
+            Editor/env_shooter.wl = { t_tf2=! }
+            Editor/env_soundscape.wl = { t_tf2=! }
+            Editor/env_spark.wl = { t_tf2=! }
+            Editor/env_wind.wl = { t_tf2=! }
+            Editor/ErrorIcon.wl = { t_tf2=! }
+            Editor/filter_class.wl = { t_tf2=! }
+            Editor/filter_multiple.wl = { t_tf2=! }
+            Editor/filter_name.wl = { t_tf2=! }
+            Editor/flat.wl = { t_tf2=! }
+            Editor/flatdecal.wl = { t_tf2=! }
+            Editor/fog_controller.wl = { t_tf2=! }
+            Editor/game_end.wl = { t_tf2=! }
+            Editor/game_text.wl = { t_tf2=! }
+            Editor/gibshooter.wl = { t_tf2=! }
+            Editor/GizmoAxis.wl = { t_tf2=! }
+            Editor/GizmoRotateHandle.wl = { t_tf2=! }
+            Editor/GizmoScaleHandle.wl = { t_tf2=! }
+            Editor/GizmoTranslateHandle.wl = { t_tf2=! }
+            Editor/gray.wl = { t_tf2=! }
+            Editor/Ground_node.wl = { t_tf2=! }
+            Editor/Ground_node_hint.wl = { t_tf2=! }
+            Editor/info_landmark.wl = { t_tf2=! }
+            Editor/info_lighting.wl = { t_tf2=! }
+            Editor/info_target.wl = { t_tf2=! }
+            Editor/light.wl = { t_tf2=! }
+            Editor/lightmapgrid.wl = { t_tf2=! }
+            Editor/lightmapgriddecal.wl = { t_tf2=! }
+            Editor/light_env.wl = { t_tf2=! }
+            Editor/logic_auto.wl = { t_tf2=! }
+            Editor/logic_branch.wl = { t_tf2=! }
+            Editor/logic_case.wl = { t_tf2=! }
+            Editor/logic_compare.wl = { t_tf2=! }
+            Editor/logic_multicompare.wl = { t_tf2=! }
+            Editor/logic_relay.wl = { t_tf2=! }
+            Editor/logic_timer.wl = { t_tf2=! }
+            Editor/math_counter.wl = { t_tf2=! }
+            Editor/multisource.wl = { t_tf2=! }
+            Editor/multi_manager.wl = { t_tf2=! }
+            Editor/Node_hint.wl = { t_tf2=! }
+            Editor/npc_maker.wl = { t_tf2=! }
+            Editor/obsolete.wl = { t_tf2=! }
+            Editor/OpaqueIcon.wl = { t_tf2=! }
+            Editor/orange.wl = { t_tf2=! }
+            Editor/phys_ballsocket.wl = { t_tf2=! }
+            Editor/scripted_sentence.wl = { t_tf2=! }
+            Editor/selectionOverlay.wl = { t_tf2=! }
+            Editor/SelfIllumIcon.wl = { t_tf2=! }
+            Editor/shadow_control.wl = { t_tf2=! }
+            Editor/tanktrain_ai.wl = { t_tf2=! }
+            Editor/tanktrain_aitarget.wl = { t_tf2=! }
+            Editor/translucentflat.wl = { t_tf2=! }
+            Editor/translucentflatdecal.wl = { t_tf2=! }
+            Editor/TranslucentIcon.wl = { t_tf2=! }
+            Editor/TranslucentLightmap.wl = { t_tf2=! }
+            Editor/trigger_relay.wl = { t_tf2=! }
+            Editor/vertexcolor.wl = { t_tf2=! }
+            Editor/waterlodcontrol.wl = { t_tf2=! }
+            Editor/wireframe.wl = { t_tf2=! }
+        }
+
+        Effects.txlist =
+        {
+            Effects/achieved.wl = { t_tf2=! }
+            Effects/balloon001.wl = { t_tf2=! }
+            Effects/blooddrop001.wl = { t_tf2=! }
+            Effects/brightglow_y.wl = { t_tf2=! }
+            Effects/brightglow_y_nomodel.wl = { t_tf2=! }
+            Effects/cig_smoke.wl = { t_tf2=! }
+            Effects/circle.wl = { t_tf2=! }
+            Effects/circle1.wl = { t_tf2=! }
+            Effects/circle2.wl = { t_tf2=! }
+            Effects/conc_warp.wl = { t_tf2=! }
+            Effects/crit.wl = { t_tf2=! }
+            Effects/disguise_icon.wl = { t_tf2=! }
+            Effects/electric1.wl = { t_tf2=! }
+            Effects/emp_arc1.wl = { t_tf2=! }
+            Effects/emp_ball1.wl = { t_tf2=! }
+            Effects/flamepuff.wl = { t_tf2=! }
+            Effects/healsign.wl = { t_tf2=! }
+            Effects/horizontalglow.wl = { t_tf2=! }
+            Effects/horizontalglow2.wl = { t_tf2=! }
+            Effects/imcookin.wl = { t_tf2=! }
+            Effects/invuln_overlay_blue.wl = { t_tf2=! }
+            Effects/invuln_overlay_blue_dx80.wl = { t_tf2=! }
+            Effects/invuln_overlay_red.wl = { t_tf2=! }
+            Effects/invuln_overlay_red_dx80.wl = { t_tf2=! }
+            Effects/largesmoke.wl = { t_tf2=! }
+            Effects/medicbeam_curl.wl = { t_tf2=! }
+            Effects/mini_casing.wl = { t_tf2=! }
+            Effects/nailgrenadejet.wl = { t_tf2=! }
+            Effects/particle_dominated.wl = { t_tf2=! }
+            Effects/particle_nemesis.wl = { t_tf2=! }
+            Effects/particle_nemesis_blue.wl = { t_tf2=! }
+            Effects/particle_nemesis_burst.wl = { t_tf2=! }
+            Effects/particle_nemesis_red.wl = { t_tf2=! }
+            Effects/rocketrailsmoke.wl = { t_tf2=! }
+            Effects/sc_brightglow_y_nomodel.wl = { t_tf2=! }
+            Effects/sc_electric1.wl = { t_tf2=! }
+            Effects/sc_softglow.wl = { t_tf2=! }
+            Effects/sc_softglow_translucent.wl = { t_tf2=! }
+            Effects/singleflame.wl = { t_tf2=! }
+            Effects/skull001.wl = { t_tf2=! }
+            Effects/sleepy001.wl = { t_tf2=! }
+            Effects/sniperdot.wl = { t_tf2=! }
+            Effects/sniperdot_blue.wl = { t_tf2=! }
+            Effects/sniperdot_red.wl = { t_tf2=! }
+            Effects/softglow.wl = { t_tf2=! }
+            Effects/softglow_translucent.wl = { t_tf2=! }
+            Effects/speech_mediccall.wl = { t_tf2=! }
+            Effects/speech_mediccall_attention.wl = { t_tf2=! }
+            Effects/speech_mediccall_hud.wl = { t_tf2=! }
+            Effects/speech_typing.wl = { t_tf2=! }
+            Effects/speech_voice.wl = { t_tf2=! }
+            Effects/speech_voice_blue.wl = { t_tf2=! }
+            Effects/speech_voice_red.wl = { t_tf2=! }
+            Effects/splash_cluster.wl = { t_tf2=! }
+            Effects/splash_droplet.wl = { t_tf2=! }
+            Effects/splash_ring1.wl = { t_tf2=! }
+            Effects/splash_warpring1.wl = { t_tf2=! }
+            Effects/star001.wl = { t_tf2=! }
+            Effects/starflash01.wl = { t_tf2=! }
+            Effects/tp_crescent.wl = { t_tf2=! }
+            Effects/tp_effect1.wl = { t_tf2=! }
+            Effects/tp_floorglow.wl = { t_tf2=! }
+            Effects/tp_spark.wl = { t_tf2=! }
+            Effects/tp_sparkle.wl = { t_tf2=! }
+            Effects/tracer1.wl = { t_tf2=! }
+            Effects/waterdrop001.wl = { t_tf2=! }
+            Effects/water_warp.wl = { t_tf2=! }
+            Effects/water_warp_2fort.wl = { t_tf2=! }
+            Effects/water_warp_well.wl = { t_tf2=! }
+            Effects/wispy_smoke.wl = { t_tf2=! }
+        }
+
+        glass.txlist =
+        {
+            glass/fishtankglasswindow001a.wl = { t_tf2=! }
+            glass/glasswindow001a.wl = { t_tf2=! }
+            glass/glasswindow001b.wl = { t_tf2=! }
+            glass/glasswindow002a.wl = { t_tf2=! }
+            glass/glasswindow002b.wl = { t_tf2=! }
+            glass/glasswindow002c.wl = { t_tf2=! }
+            glass/glasswindow003a.wl = { t_tf2=! }
+            glass/glasswindow004a.wl = { t_tf2=! }
+            glass/glasswindow005a.wl = { t_tf2=! }
+            glass/glasswindow006a.wl = { t_tf2=! }
+            glass/glasswindow006b.wl = { t_tf2=! }
+        }
+
+        HUD.txlist =
+        {
+            HUD/ammo_blue_bg.wl = { t_tf2=! }
+            HUD/ammo_blue_bg_lodef.wl = { t_tf2=! }
+            HUD/ammo_red_bg.wl = { t_tf2=! }
+            HUD/ammo_red_bg_lodef.wl = { t_tf2=! }
+            HUD/character_blue_bg.wl = { t_tf2=! }
+            HUD/character_blue_bg_lodef.wl = { t_tf2=! }
+            HUD/character_red_bg.wl = { t_tf2=! }
+            HUD/character_red_bg_lodef.wl = { t_tf2=! }
+            HUD/charge_blue_bg.wl = { t_tf2=! }
+            HUD/charge_red_bg.wl = { t_tf2=! }
+            HUD/class_demoblue.wl = { t_tf2=! }
+            HUD/class_demoblue_cloak.wl = { t_tf2=! }
+            HUD/class_demoblue_halfcloak.wl = { t_tf2=! }
+            HUD/class_demored.wl = { t_tf2=! }
+            HUD/class_demored_cloak.wl = { t_tf2=! }
+            HUD/class_demored_halfcloak.wl = { t_tf2=! }
+            HUD/class_engiblue.wl = { t_tf2=! }
+            HUD/class_engiblue_cloak.wl = { t_tf2=! }
+            HUD/class_engiblue_halfcloak.wl = { t_tf2=! }
+            HUD/class_engired.wl = { t_tf2=! }
+            HUD/class_engired_cloak.wl = { t_tf2=! }
+            HUD/class_engired_halfcloak.wl = { t_tf2=! }
+            HUD/class_heavyblue.wl = { t_tf2=! }
+            HUD/class_heavyblue_cloak.wl = { t_tf2=! }
+            HUD/class_heavyblue_halfcloak.wl = { t_tf2=! }
+            HUD/class_heavyred.wl = { t_tf2=! }
+            HUD/class_heavyred_cloak.wl = { t_tf2=! }
+            HUD/class_heavyred_halfcloak.wl = { t_tf2=! }
+            HUD/class_medicblue.wl = { t_tf2=! }
+            HUD/class_medicblue_cloak.wl = { t_tf2=! }
+            HUD/class_medicblue_halfcloak.wl = { t_tf2=! }
+            HUD/class_medicred.wl = { t_tf2=! }
+            HUD/class_medicred_cloak.wl = { t_tf2=! }
+            HUD/class_medicred_halfcloak.wl = { t_tf2=! }
+            HUD/class_pyroblue.wl = { t_tf2=! }
+            HUD/class_pyroblue_cloak.wl = { t_tf2=! }
+            HUD/class_pyroblue_halfcloak.wl = { t_tf2=! }
+            HUD/class_pyrored.wl = { t_tf2=! }
+            HUD/class_pyrored_cloak.wl = { t_tf2=! }
+            HUD/class_pyrored_halfcloak.wl = { t_tf2=! }
+            HUD/class_scoutblue.wl = { t_tf2=! }
+            HUD/class_scoutblue_cloak.wl = { t_tf2=! }
+            HUD/class_scoutblue_halfcloak.wl = { t_tf2=! }
+            HUD/class_scoutred.wl = { t_tf2=! }
+            HUD/class_scoutred_cloak.wl = { t_tf2=! }
+            HUD/class_scoutred_halfcloak.wl = { t_tf2=! }
+            HUD/class_sniperblue.wl = { t_tf2=! }
+            HUD/class_sniperblue_cloak.wl = { t_tf2=! }
+            HUD/class_sniperblue_halfcloak.wl = { t_tf2=! }
+            HUD/class_sniperred.wl = { t_tf2=! }
+            HUD/class_sniperred_cloak.wl = { t_tf2=! }
+            HUD/class_sniperred_halfcloak.wl = { t_tf2=! }
+            HUD/class_soldierblue.wl = { t_tf2=! }
+            HUD/class_soldierblue_cloak.wl = { t_tf2=! }
+            HUD/class_soldierblue_halfcloak.wl = { t_tf2=! }
+            HUD/class_soldierred.wl = { t_tf2=! }
+            HUD/class_soldierred_cloak.wl = { t_tf2=! }
+            HUD/class_soldierred_halfcloak.wl = { t_tf2=! }
+            HUD/class_spyblue.wl = { t_tf2=! }
+            HUD/class_spyblue_cloak.wl = { t_tf2=! }
+            HUD/class_spyblue_halfcloak.wl = { t_tf2=! }
+            HUD/class_spyred.wl = { t_tf2=! }
+            HUD/class_spyred_cloak.wl = { t_tf2=! }
+            HUD/class_spyred_halfcloak.wl = { t_tf2=! }
+            HUD/class_spy_outline.wl = { t_tf2=! }
+            HUD/death_panel_black_bg.wl = { t_tf2=! }
+            HUD/death_panel_blue_bg.wl = { t_tf2=! }
+            HUD/death_panel_mask.wl = { t_tf2=! }
+            HUD/death_panel_red_bg.wl = { t_tf2=! }
+            HUD/dneg_images.wl = { t_tf2=! }
+            HUD/d_images.wl = { t_tf2=! }
+            HUD/eng_build_bg.wl = { t_tf2=! }
+            HUD/eng_build_bg_mask.wl = { t_tf2=! }
+            HUD/eng_build_dispenser_blueprint.wl = { t_tf2=! }
+            HUD/eng_build_item.wl = { t_tf2=! }
+            HUD/eng_build_item_active.wl = { t_tf2=! }
+            HUD/eng_build_item_mask.wl = { t_tf2=! }
+            HUD/eng_build_item_outline.wl = { t_tf2=! }
+            HUD/eng_build_sentry_blueprint.wl = { t_tf2=! }
+            HUD/eng_build_tele_entrance_blueprint.wl = { t_tf2=! }
+            HUD/eng_build_tele_exit_blueprint.wl = { t_tf2=! }
+            HUD/eng_sel_item_active.wl = { t_tf2=! }
+            HUD/eng_status_alert_ico_wrench.wl = { t_tf2=! }
+            HUD/eng_status_area_sentry_alrt.wl = { t_tf2=! }
+            HUD/eng_status_area_sentry_alrt_mask.wl = { t_tf2=! }
+            HUD/eng_status_area_sentry_blue.wl = { t_tf2=! }
+            HUD/eng_status_area_sentry_disabled.wl = { t_tf2=! }
+            HUD/eng_status_area_sentry_red.wl = { t_tf2=! }
+            HUD/eng_status_area_tele_alert_mask.wl = { t_tf2=! }
+            HUD/eng_status_area_tele_alrt.wl = { t_tf2=! }
+            HUD/eng_status_area_tele_blue.wl = { t_tf2=! }
+            HUD/eng_status_area_tele_disabled.wl = { t_tf2=! }
+            HUD/eng_status_area_tele_red.wl = { t_tf2=! }
+            HUD/eng_status_kills_icon.wl = { t_tf2=! }
+            HUD/freezecam_black_bg.wl = { t_tf2=! }
+            HUD/freezecam_blue_bg.wl = { t_tf2=! }
+            HUD/freezecam_blue_bg_lodef.wl = { t_tf2=! }
+            HUD/freezecam_callout_arrow.wl = { t_tf2=! }
+            HUD/freezecam_panel_mask.wl = { t_tf2=! }
+            HUD/freezecam_red_bg.wl = { t_tf2=! }
+            HUD/freezecam_red_bg_lodef.wl = { t_tf2=! }
+            HUD/health_bg.wl = { t_tf2=! }
+            HUD/health_color.wl = { t_tf2=! }
+            HUD/health_dead.wl = { t_tf2=! }
+            HUD/health_over_bg.wl = { t_tf2=! }
+            HUD/hud_icon_attack.wl = { t_tf2=! }
+            HUD/hud_icon_capture.wl = { t_tf2=! }
+            HUD/hud_icon_defend.wl = { t_tf2=! }
+            HUD/hud_obj_status_dispenser.wl = { t_tf2=! }
+            HUD/hud_obj_status_sapper.wl = { t_tf2=! }
+            HUD/hud_obj_status_sentry_1.wl = { t_tf2=! }
+            HUD/hud_obj_status_sentry_2.wl = { t_tf2=! }
+            HUD/hud_obj_status_sentry_3.wl = { t_tf2=! }
+            HUD/hud_obj_status_tele_entrance.wl = { t_tf2=! }
+            HUD/hud_obj_status_tele_exit.wl = { t_tf2=! }
+            HUD/ico_build.wl = { t_tf2=! }
+            HUD/ico_camera.wl = { t_tf2=! }
+            HUD/ico_demolish.wl = { t_tf2=! }
+            HUD/ico_fire.wl = { t_tf2=! }
+            HUD/ico_health_cluster.wl = { t_tf2=! }
+            HUD/ico_key_0.wl = { t_tf2=! }
+            HUD/ico_key_blank.wl = { t_tf2=! }
+            HUD/ico_key_minus.wl = { t_tf2=! }
+            HUD/ico_metal.wl = { t_tf2=! }
+            HUD/ico_metal_mask.wl = { t_tf2=! }
+            HUD/ico_stickybomb.wl = { t_tf2=! }
+            HUD/ico_stickybomb_blue.wl = { t_tf2=! }
+            HUD/ico_stickybomb_blue_faded.wl = { t_tf2=! }
+            HUD/ico_stickybomb_red.wl = { t_tf2=! }
+            HUD/ico_stickybomb_red_faded.wl = { t_tf2=! }
+            HUD/ico_teambalance.wl = { t_tf2=! }
+            HUD/ico_teamswitch.wl = { t_tf2=! }
+            HUD/ico_teleporterMissing.wl = { t_tf2=! }
+            HUD/ico_time_10.wl = { t_tf2=! }
+            HUD/ico_time_30.wl = { t_tf2=! }
+            HUD/ico_time_60.wl = { t_tf2=! }
+            HUD/leaderboard_dead.wl = { t_tf2=! }
+            HUD/leaderboard_dominated.wl = { t_tf2=! }
+            HUD/leaderboard_nemesis.wl = { t_tf2=! }
+            HUD/leaderboard_nemesis_freezecam.wl = { t_tf2=! }
+            HUD/medic_arrow.wl = { t_tf2=! }
+            HUD/medic_charge_blue_bg.wl = { t_tf2=! }
+            HUD/medic_charge_red_bg.wl = { t_tf2=! }
+            HUD/misc_ammo_area_blue.wl = { t_tf2=! }
+            HUD/misc_ammo_area_blue_lodef.wl = { t_tf2=! }
+            HUD/misc_ammo_area_red.wl = { t_tf2=! }
+            HUD/misc_ammo_area_red_lodef.wl = { t_tf2=! }
+            HUD/notification_black.wl = { t_tf2=! }
+            HUD/objectives_flagpanel_bg_left.wl = { t_tf2=! }
+            HUD/objectives_flagpanel_bg_outline.wl = { t_tf2=! }
+            HUD/objectives_flagpanel_bg_playingto.wl = { t_tf2=! }
+            HUD/objectives_flagpanel_bg_playingto_hidef.wl = { t_tf2=! }
+            HUD/objectives_flagpanel_bg_right.wl = { t_tf2=! }
+            HUD/objectives_flagpanel_briefcase.wl = { t_tf2=! }
+            HUD/objectives_flagpanel_carried_blue.wl = { t_tf2=! }
+            HUD/objectives_flagpanel_carried_outline.wl = { t_tf2=! }
+            HUD/objectives_flagpanel_carried_red.wl = { t_tf2=! }
+            HUD/objectives_flagpanel_compass_blue.wl = { t_tf2=! }
+            HUD/objectives_flagpanel_compass_blue_noArrow.wl = { t_tf2=! }
+            HUD/objectives_flagpanel_compass_grey.wl = { t_tf2=! }
+            HUD/objectives_flagpanel_compass_red.wl = { t_tf2=! }
+            HUD/objectives_flagpanel_compass_red_noArrow.wl = { t_tf2=! }
+            HUD/objectives_flagpanel_ico_flag_dropped.wl = { t_tf2=! }
+            HUD/objectives_flagpanel_ico_flag_home.wl = { t_tf2=! }
+            HUD/objectives_flagpanel_ico_flag_moving.wl = { t_tf2=! }
+            HUD/objectives_timepanel_blue_bg.wl = { t_tf2=! }
+            HUD/objectives_timepanel_progressbar.wl = { t_tf2=! }
+            HUD/objectives_timepanel_red_bg.wl = { t_tf2=! }
+            HUD/objectives_timepanel_suddendeath.wl = { t_tf2=! }
+            HUD/scope_sniper_ll.wl = { t_tf2=! }
+            HUD/scope_sniper_ll_dx80.wl = { t_tf2=! }
+            HUD/scope_sniper_lr.wl = { t_tf2=! }
+            HUD/scope_sniper_lr_dx80.wl = { t_tf2=! }
+            HUD/scope_sniper_ul.wl = { t_tf2=! }
+            HUD/scope_sniper_ul_dx80.wl = { t_tf2=! }
+            HUD/scope_sniper_ur.wl = { t_tf2=! }
+            HUD/scope_sniper_ur_dx80.wl = { t_tf2=! }
+            HUD/score_panel_black_bg.wl = { t_tf2=! }
+            HUD/score_panel_black_bg_lodef.wl = { t_tf2=! }
+            HUD/score_panel_black_bg_secondary.wl = { t_tf2=! }
+            HUD/score_panel_blue_bg.wl = { t_tf2=! }
+            HUD/score_panel_blue_bg_lodef.wl = { t_tf2=! }
+            HUD/score_panel_red_bg.wl = { t_tf2=! }
+            HUD/score_panel_red_bg_lodef.wl = { t_tf2=! }
+            HUD/sniperscope_numbers.wl = { t_tf2=! }
+            HUD/weapon_bucket_select_blue.wl = { t_tf2=! }
+            HUD/weapon_bucket_select_red.wl = { t_tf2=! }
+            HUD/weapon_selection_blue.wl = { t_tf2=! }
+            HUD/weapon_selection_red.wl = { t_tf2=! }
+            HUD/weapon_selection_unselected.wl = { t_tf2=! }
+            HUD/winpanel_black_bg_main.wl = { t_tf2=! }
+            HUD/winpanel_blue_bg_main.wl = { t_tf2=! }
+            HUD/winpanel_blue_bg_team.wl = { t_tf2=! }
+            HUD/winpanel_blue_bg_team_lodef.wl = { t_tf2=! }
+            HUD/winpanel_red_bg_main.wl = { t_tf2=! }
+            HUD/winpanel_red_bg_team.wl = { t_tf2=! }
+            HUD/winpanel_red_bg_team_lodef.wl = { t_tf2=! }
+        }
+
+        lights.txlist =
+        {
+            lights/blue001.wl = { t_tf2=! }
+            lights/blue002.wl = { t_tf2=! }
+            lights/blue003.wl = { t_tf2=! }
+            lights/blue004.wl = { t_tf2=! }
+            lights/white001.wl = { t_tf2=! }
+            lights/white001_nochop.wl = { t_tf2=! }
+            lights/white002.wl = { t_tf2=! }
+            lights/white002_nochop.wl = { t_tf2=! }
+            lights/white003.wl = { t_tf2=! }
+            lights/white003_nochop.wl = { t_tf2=! }
+            lights/white007.wl = { t_tf2=! }
+            lights/white_fill.wl = { t_tf2=! }
+        }
+
+        logo.txlist =
+        {
+            logo/TF2_Logo.wl = { t_tf2=! }
+        }
+
+        Metal.txlist =
+        {
+            Metal/Chicken_Wire001.wl = { t_tf2=! }
+            Metal/floorplate01.wl = { t_tf2=! }
+            Metal/Ibeam001.wl = { t_tf2=! }
+            Metal/Ibeam001b.wl = { t_tf2=! }
+            Metal/Ibeam002.wl = { t_tf2=! }
+            Metal/Ibeam003.wl = { t_tf2=! }
+            Metal/Ibeam003b.wl = { t_tf2=! }
+            Metal/Imetal001.wl = { t_tf2=! }
+            Metal/Imetal001b.wl = { t_tf2=! }
+            Metal/Imetal002.wl = { t_tf2=! }
+            Metal/Imetal003.wl = { t_tf2=! }
+            Metal/Imetal004.wl = { t_tf2=! }
+            Metal/Imetal005.wl = { t_tf2=! }
+            Metal/metalchrome001.wl = { t_tf2=! }
+            Metal/metalchrome002.wl = { t_tf2=! }
+            Metal/metaldoor001.wl = { t_tf2=! }
+            Metal/metalgrate011a.wl = { t_tf2=! }
+            Metal/metalgrate011b.wl = { t_tf2=! }
+            Metal/metalgrate013a2.wl = { t_tf2=! }
+            Metal/metalpanel01.wl = { t_tf2=! }
+            Metal/metalpanel02.wl = { t_tf2=! }
+            Metal/metalrail003a.wl = { t_tf2=! }
+            Metal/metaltrim01.wl = { t_tf2=! }
+            Metal/metalwall001.wl = { t_tf2=! }
+            Metal/officedoor001.wl = { t_tf2=! }
+            Metal/officedoor001b.wl = { t_tf2=! }
+            Metal/officedoor002.wl = { t_tf2=! }
+            Metal/steeldoor001.wl = { t_tf2=! }
+            Metal/vent001.wl = { t_tf2=! }
+            Metal/wall011.wl = { t_tf2=! }
+            Metal/wall011a.wl = { t_tf2=! }
+            Metal/wall011b.wl = { t_tf2=! }
+            Metal/wall011c.wl = { t_tf2=! }
+            Metal/wall011d.wl = { t_tf2=! }
+            Metal/wall011e.wl = { t_tf2=! }
+            Metal/wall011f.wl = { t_tf2=! }
+            Metal/wall012.wl = { t_tf2=! }
+            Metal/wall013.wl = { t_tf2=! }
+            Metal/wall014.wl = { t_tf2=! }
+            Metal/wall014a.wl = { t_tf2=! }
+            Metal/wall014b.wl = { t_tf2=! }
+            Metal/wall014c.wl = { t_tf2=! }
+            Metal/wall014d.wl = { t_tf2=! }
+            Metal/wall015.wl = { t_tf2=! }
+            Metal/wall015e.wl = { t_tf2=! }
+            Metal/wall015f.wl = { t_tf2=! }
+            Metal/wall015g.wl = { t_tf2=! }
+            Metal/wall015h.wl = { t_tf2=! }
+            Metal/wall015i.wl = { t_tf2=! }
+            Metal/wall016.wl = { t_tf2=! }
+            Metal/wall016a.wl = { t_tf2=! }
+            Metal/wall016b.wl = { t_tf2=! }
+            Metal/wall016c.wl = { t_tf2=! }
+            Metal/wall016d.wl = { t_tf2=! }
+            Metal/wall017.wl = { t_tf2=! }
+            Metal/wall019.wl = { t_tf2=! }
+            Metal/wall019a.wl = { t_tf2=! }
+            Metal/wall019b.wl = { t_tf2=! }
+            Metal/wall019c.wl = { t_tf2=! }
+            Metal/wall019d.wl = { t_tf2=! }
+            Metal/wall019e.wl = { t_tf2=! }
+            Metal/wall021.wl = { t_tf2=! }
+            Metal/wall025.wl = { t_tf2=! }
+            Metal/wall026.wl = { t_tf2=! }
+            Metal/wall027.wl = { t_tf2=! }
+            Metal/wall028.wl = { t_tf2=! }
+            Metal/wall029.wl = { t_tf2=! }
+            Metal/wall029a.wl = { t_tf2=! }
+            Metal/wall029b.wl = { t_tf2=! }
+            Metal/wall030.wl = { t_tf2=! }
+        }
+
+        Nature.txlist =
+        {
+            Nature/blendgrassground001.wl = { t_tf2=! }
+            Nature/blendgrassground002.wl = { t_tf2=! }
+            Nature/blendgrass_canyon.wl = { t_tf2=! }
+            Nature/blendgrass_canyon02.wl = { t_tf2=! }
+            Nature/blendgroundtoalpha001.wl = { t_tf2=! }
+            Nature/blendgroundtoconcrete001.wl = { t_tf2=! }
+            Nature/blendgroundtoconcrete002.wl = { t_tf2=! }
+            Nature/blendgroundtograss001.wl = { t_tf2=! }
+            Nature/blendgroundtograss001b.wl = { t_tf2=! }
+            Nature/blendgroundtograss002.wl = { t_tf2=! }
+            Nature/blendgroundtograss003.wl = { t_tf2=! }
+            Nature/blendgroundtograss003_nodetail.wl = { t_tf2=! }
+            Nature/blendgroundtograss004.wl = { t_tf2=! }
+            Nature/blendgroundtogravel001.wl = { t_tf2=! }
+            Nature/blendgroundtogravel002.wl = { t_tf2=! }
+            Nature/blendgroundtogravel003.wl = { t_tf2=! }
+            Nature/blendgroundtogravel004.wl = { t_tf2=! }
+            Nature/blendground_canyon.wl = { t_tf2=! }
+            Nature/blendrockground001.wl = { t_tf2=! }
+            Nature/blendrockground002.wl = { t_tf2=! }
+            Nature/blendrockground003.wl = { t_tf2=! }
+            Nature/blendrockground004.wl = { t_tf2=! }
+            Nature/blendrockground005.wl = { t_tf2=! }
+            Nature/blendrockground006.wl = { t_tf2=! }
+            Nature/blendrockgroundwall001.wl = { t_tf2=! }
+            Nature/blendrockgroundwall002.wl = { t_tf2=! }
+            Nature/blendrockgroundwall003.wl = { t_tf2=! }
+            Nature/blendrockgroundwall004.wl = { t_tf2=! }
+            Nature/Cliff_terrain03.wl = { t_tf2=! }
+            Nature/dirtground001.wl = { t_tf2=! }
+            Nature/dirtground001b.wl = { t_tf2=! }
+            Nature/dirtground002.wl = { t_tf2=! }
+            Nature/dirtground003.wl = { t_tf2=! }
+            Nature/dirtground004.wl = { t_tf2=! }
+            Nature/dirtground005.wl = { t_tf2=! }
+            Nature/dirtground006.wl = { t_tf2=! }
+            Nature/dirtground007.wl = { t_tf2=! }
+            Nature/dirtground_canyon.wl = { t_tf2=! }
+            Nature/dirtground_canyon2.wl = { t_tf2=! }
+            Nature/dirtground_canyon4.wl = { t_tf2=! }
+            Nature/dirtroad001a.wl = { t_tf2=! }
+            Nature/dirtroad001b.wl = { t_tf2=! }
+            Nature/dirtroad001d.wl = { t_tf2=! }
+            Nature/dirtroad003.wl = { t_tf2=! }
+            Nature/dirtroad004.wl = { t_tf2=! }
+            Nature/dirtroad005.wl = { t_tf2=! }
+            Nature/dirtroad006.wl = { t_tf2=! }
+            Nature/dirtroad007.wl = { t_tf2=! }
+            Nature/grass_01.wl = { t_tf2=! }
+            Nature/grass_02.wl = { t_tf2=! }
+            Nature/grass_03.wl = { t_tf2=! }
+            Nature/gravelground001.wl = { t_tf2=! }
+            Nature/ground03alpha.wl = { t_tf2=! }
+            Nature/ground_01.wl = { t_tf2=! }
+            Nature/ground_02.wl = { t_tf2=! }
+            Nature/ground_03.wl = { t_tf2=! }
+            Nature/ground_04.wl = { t_tf2=! }
+            Nature/ground_05.wl = { t_tf2=! }
+            Nature/Quarry_trans.wl = { t_tf2=! }
+            Nature/Quarry_trans02.wl = { t_tf2=! }
+            Nature/Quarry_trans_normal.wl = { t_tf2=! }
+            Nature/rockground001.wl = { t_tf2=! }
+            Nature/rockground002.wl = { t_tf2=! }
+            Nature/rockground003.wl = { t_tf2=! }
+            Nature/rockground004.wl = { t_tf2=! }
+            Nature/rockground006.wl = { t_tf2=! }
+            Nature/rockground007.wl = { t_tf2=! }
+            Nature/rockwall001.wl = { t_tf2=! }
+            Nature/rockwall002.wl = { t_tf2=! }
+            Nature/rockwall003.wl = { t_tf2=! }
+            Nature/rockwall004.wl = { t_tf2=! }
+            Nature/rockwall005.wl = { t_tf2=! }
+            Nature/rockwall006.wl = { t_tf2=! }
+            Nature/rockwall007.wl = { t_tf2=! }
+            Nature/rockwall008.wl = { t_tf2=! }
+        }
+
+        overlays.txlist =
+        {
+            overlays/concrete_track_overlay001.wl = { t_tf2=! }
+            overlays/concrete_track_overlay002.wl = { t_tf2=! }
+            overlays/corner001a.wl = { t_tf2=! }
+            overlays/corner001b.wl = { t_tf2=! }
+            overlays/corner001c.wl = { t_tf2=! }
+            overlays/corner001d.wl = { t_tf2=! }
+            overlays/dirt01.wl = { t_tf2=! }
+            overlays/dirtroad001.wl = { t_tf2=! }
+            overlays/dirtroad001_sm.wl = { t_tf2=! }
+            overlays/dirtroad004.wl = { t_tf2=! }
+            overlays/dirtroad005.wl = { t_tf2=! }
+            overlays/distillery_red_logo001.wl = { t_tf2=! }
+            overlays/drain001.wl = { t_tf2=! }
+            overlays/floor_stain001.wl = { t_tf2=! }
+            overlays/floor_stain002.wl = { t_tf2=! }
+            overlays/floor_stain003.wl = { t_tf2=! }
+            overlays/foliagedirt01.wl = { t_tf2=! }
+            overlays/foliagedirt02.wl = { t_tf2=! }
+            overlays/foliagedirt03.wl = { t_tf2=! }
+            overlays/grassborder01.wl = { t_tf2=! }
+            overlays/Lilly_01a.wl = { t_tf2=! }
+            overlays/logo_blue.wl = { t_tf2=! }
+            overlays/logo_blue_white.wl = { t_tf2=! }
+            overlays/logo_red.wl = { t_tf2=! }
+            overlays/logo_red_white.wl = { t_tf2=! }
+            overlays/metalhatch01.wl = { t_tf2=! }
+            overlays/metalhatch02.wl = { t_tf2=! }
+            overlays/no_entry.wl = { t_tf2=! }
+            overlays/outlet01.wl = { t_tf2=! }
+            overlays/outlet02.wl = { t_tf2=! }
+            overlays/patch001.wl = { t_tf2=! }
+            overlays/patch002.wl = { t_tf2=! }
+            overlays/patch003.wl = { t_tf2=! }
+            overlays/patch004.wl = { t_tf2=! }
+            overlays/patch005.wl = { t_tf2=! }
+            overlays/patch006.wl = { t_tf2=! }
+            overlays/patch007.wl = { t_tf2=! }
+            overlays/patch008.wl = { t_tf2=! }
+            overlays/rubber_trim001.wl = { t_tf2=! }
+            overlays/snow_footsteps.wl = { t_tf2=! }
+            overlays/snow_horizontalwood.wl = { t_tf2=! }
+            overlays/snow_patch.wl = { t_tf2=! }
+            overlays/Stain001.wl = { t_tf2=! }
+            overlays/Stain002.wl = { t_tf2=! }
+            overlays/Stain003.wl = { t_tf2=! }
+            overlays/Stain004.wl = { t_tf2=! }
+            overlays/Stain005.wl = { t_tf2=! }
+            overlays/Stain006.wl = { t_tf2=! }
+            overlays/Stain007.wl = { t_tf2=! }
+            overlays/Stain008.wl = { t_tf2=! }
+            overlays/Stain009.wl = { t_tf2=! }
+            overlays/Stain010.wl = { t_tf2=! }
+            overlays/Stain011.wl = { t_tf2=! }
+            overlays/Stain012.wl = { t_tf2=! }
+            overlays/Stain013.wl = { t_tf2=! }
+            overlays/Stain014.wl = { t_tf2=! }
+            overlays/Stain015.wl = { t_tf2=! }
+            overlays/Stain016.wl = { t_tf2=! }
+            overlays/vent_overlay001.wl = { t_tf2=! }
+        }
+
+        overviews.txlist =
+        {
+            overviews/blueteam.wl = { t_tf2=! }
+            overviews/caparrows.wl = { t_tf2=! }
+            overviews/redteam.wl = { t_tf2=! }
+            overviews/tc_hydro.wl = { t_tf2=! }
+        }
+
+        particle.txlist =
+        {
+            particle/Particle_Glow_01_Additive.wl = { t_tf2=! }
+            particle/Particle_Glow_03.wl = { t_tf2=! }
+            particle/particle_rockettrail1.wl = { t_tf2=! }
+            particle/particle_rockettrail2.wl = { t_tf2=! }
+        }
+
+        props.txlist =
+        {
+            props/clock01.wl = { t_tf2=! }
+            props/cobweb001.wl = { t_tf2=! }
+            props/cobweb002.wl = { t_tf2=! }
+            props/cobweb003.wl = { t_tf2=! }
+            props/cobweb004.wl = { t_tf2=! }
+            props/computer_panel_001b.wl = { t_tf2=! }
+            props/computer_panel_002b.wl = { t_tf2=! }
+            props/computer_panel_003b.wl = { t_tf2=! }
+            props/computer_panel_004b.wl = { t_tf2=! }
+            props/computer_panel_005b.wl = { t_tf2=! }
+            props/computer_panel_006b.wl = { t_tf2=! }
+            props/fishtankcard.wl = { t_tf2=! }
+            props/gameplay_sign01a.wl = { t_tf2=! }
+            props/hay_01.wl = { t_tf2=! }
+            props/map_1.wl = { t_tf2=! }
+            props/map_2.wl = { t_tf2=! }
+            props/metaldoor01_192.wl = { t_tf2=! }
+            props/metaldoor01_192_noentry.wl = { t_tf2=! }
+            props/metaldoor01_96.wl = { t_tf2=! }
+            props/metaldoor01_96_noentry.wl = { t_tf2=! }
+            props/metalduct001a.wl = { t_tf2=! }
+            props/monitor_world_blue.wl = { t_tf2=! }
+            props/monitor_world_red.wl = { t_tf2=! }
+            props/mousehole001.wl = { t_tf2=! }
+            props/plasticwall001a.wl = { t_tf2=! }
+            props/plasticwall002a.wl = { t_tf2=! }
+            props/plasticwall003a.wl = { t_tf2=! }
+            props/plasticwall003b.wl = { t_tf2=! }
+            props/screen001a.wl = { t_tf2=! }
+            props/screen001b.wl = { t_tf2=! }
+            props/screen001c.wl = { t_tf2=! }
+            props/screen002a.wl = { t_tf2=! }
+            props/screen002b.wl = { t_tf2=! }
+            props/screen002c.wl = { t_tf2=! }
+        }
+
+        signs.txlist =
+        {
+            signs/arrow_dn_blue.wl = { t_tf2=! }
+            signs/arrow_dn_red.wl = { t_tf2=! }
+            signs/arrow_lt_blue.wl = { t_tf2=! }
+            signs/arrow_lt_red.wl = { t_tf2=! }
+            signs/arrow_red_lt.wl = { t_tf2=! }
+            signs/arrow_red_rt.wl = { t_tf2=! }
+            signs/arrow_red_rt_lt.wl = { t_tf2=! }
+            signs/arrow_rt_blue.wl = { t_tf2=! }
+            signs/arrow_rt_red.wl = { t_tf2=! }
+            signs/arrow_up_blue.wl = { t_tf2=! }
+            signs/arrow_up_red.wl = { t_tf2=! }
+            signs/battlements_blue.wl = { t_tf2=! }
+            signs/battlements_red.wl = { t_tf2=! }
+            signs/billboard001.wl = { t_tf2=! }
+            signs/capture_blue.wl = { t_tf2=! }
+            signs/capture_red.wl = { t_tf2=! }
+            signs/capture_zone.wl = { t_tf2=! }
+            signs/elevator_red.wl = { t_tf2=! }
+            signs/factory_label01.wl = { t_tf2=! }
+            signs/factory_label02.wl = { t_tf2=! }
+            signs/flagroom_blue.wl = { t_tf2=! }
+            signs/flagroom_red.wl = { t_tf2=! }
+            signs/flag_blue.wl = { t_tf2=! }
+            signs/flag_red.wl = { t_tf2=! }
+            signs/hazard_blue001.wl = { t_tf2=! }
+            signs/hazard_red001.wl = { t_tf2=! }
+            signs/hazard_yellow001.wl = { t_tf2=! }
+            signs/hazard_yellow001_decal.wl = { t_tf2=! }
+            signs/hazard_yellow001_edge.wl = { t_tf2=! }
+            signs/hazard_yellow001_strip.wl = { t_tf2=! }
+            signs/lowerlevel_blue.wl = { t_tf2=! }
+            signs/lowerlevel_red.wl = { t_tf2=! }
+            signs/number01.wl = { t_tf2=! }
+            signs/number01b.wl = { t_tf2=! }
+            signs/number02.wl = { t_tf2=! }
+            signs/number_00.wl = { t_tf2=! }
+            signs/number_01.wl = { t_tf2=! }
+            signs/number_02.wl = { t_tf2=! }
+            signs/number_03.wl = { t_tf2=! }
+            signs/number_04.wl = { t_tf2=! }
+            signs/number_05.wl = { t_tf2=! }
+            signs/number_06.wl = { t_tf2=! }
+            signs/number_07.wl = { t_tf2=! }
+            signs/number_08.wl = { t_tf2=! }
+            signs/number_09.wl = { t_tf2=! }
+            signs/resupply_blue.wl = { t_tf2=! }
+            signs/resupply_red.wl = { t_tf2=! }
+            signs/sign001.wl = { t_tf2=! }
+            signs/sign0010.wl = { t_tf2=! }
+            signs/sign002.wl = { t_tf2=! }
+            signs/sign003.wl = { t_tf2=! }
+            signs/sign004.wl = { t_tf2=! }
+            signs/sign005.wl = { t_tf2=! }
+            signs/sign006.wl = { t_tf2=! }
+            signs/sign007.wl = { t_tf2=! }
+            signs/sign008.wl = { t_tf2=! }
+            signs/sign009.wl = { t_tf2=! }
+            signs/sign011.wl = { t_tf2=! }
+            signs/sign012.wl = { t_tf2=! }
+            signs/sign013.wl = { t_tf2=! }
+            signs/sign014.wl = { t_tf2=! }
+            signs/sign015.wl = { t_tf2=! }
+            signs/sign016.wl = { t_tf2=! }
+            signs/sign017.wl = { t_tf2=! }
+            signs/sign018.wl = { t_tf2=! }
+            signs/sign019.wl = { t_tf2=! }
+            signs/sign020.wl = { t_tf2=! }
+            signs/sign021.wl = { t_tf2=! }
+            signs/sign022.wl = { t_tf2=! }
+            signs/sign023.wl = { t_tf2=! }
+            signs/sign024.wl = { t_tf2=! }
+            signs/sign028.wl = { t_tf2=! }
+            signs/sign029.wl = { t_tf2=! }
+            signs/sign030.wl = { t_tf2=! }
+            signs/sign031.wl = { t_tf2=! }
+            signs/sign032.wl = { t_tf2=! }
+            signs/sign033.wl = { t_tf2=! }
+            signs/sign034.wl = { t_tf2=! }
+            signs/sign035.wl = { t_tf2=! }
+            signs/sign036.wl = { t_tf2=! }
+            signs/sign037.wl = { t_tf2=! }
+            signs/sign038.wl = { t_tf2=! }
+            signs/sign039.wl = { t_tf2=! }
+            signs/sign040.wl = { t_tf2=! }
+            signs/sign041.wl = { t_tf2=! }
+            signs/sign042.wl = { t_tf2=! }
+            signs/sign043.wl = { t_tf2=! }
+            signs/sign044.wl = { t_tf2=! }
+            signs/sign045.wl = { t_tf2=! }
+            signs/sign052.wl = { t_tf2=! }
+            signs/sign053.wl = { t_tf2=! }
+            signs/sign054.wl = { t_tf2=! }
+            signs/sign055.wl = { t_tf2=! }
+            signs/sign056.wl = { t_tf2=! }
+            signs/sign057.wl = { t_tf2=! }
+            signs/sign058.wl = { t_tf2=! }
+            signs/sign059.wl = { t_tf2=! }
+            signs/sign060.wl = { t_tf2=! }
+            signs/sign061.wl = { t_tf2=! }
+            signs/sign062.wl = { t_tf2=! }
+            signs/sign063.wl = { t_tf2=! }
+            signs/sign064.wl = { t_tf2=! }
+            signs/sign065.wl = { t_tf2=! }
+            signs/sign066.wl = { t_tf2=! }
+            signs/sign067.wl = { t_tf2=! }
+            signs/sign068.wl = { t_tf2=! }
+            signs/sign069.wl = { t_tf2=! }
+            signs/sign070.wl = { t_tf2=! }
+            signs/sign071.wl = { t_tf2=! }
+            signs/sign072.wl = { t_tf2=! }
+            signs/sign073.wl = { t_tf2=! }
+            signs/sign074.wl = { t_tf2=! }
+            signs/sign075.wl = { t_tf2=! }
+            signs/sign076.wl = { t_tf2=! }
+            signs/sign077.wl = { t_tf2=! }
+            signs/sign078.wl = { t_tf2=! }
+            signs/sign079.wl = { t_tf2=! }
+            signs/sign080.wl = { t_tf2=! }
+            signs/sign081.wl = { t_tf2=! }
+            signs/sign082.wl = { t_tf2=! }
+            signs/sign083.wl = { t_tf2=! }
+            signs/sign084.wl = { t_tf2=! }
+            signs/sign085.wl = { t_tf2=! }
+            signs/sign086.wl = { t_tf2=! }
+            signs/sign087.wl = { t_tf2=! }
+            signs/sign088.wl = { t_tf2=! }
+            signs/sign089.wl = { t_tf2=! }
+            signs/sign090.wl = { t_tf2=! }
+            signs/sign091.wl = { t_tf2=! }
+            signs/sign092.wl = { t_tf2=! }
+            signs/sign093.wl = { t_tf2=! }
+            signs/sign094.wl = { t_tf2=! }
+            signs/sign095.wl = { t_tf2=! }
+            signs/sign096.wl = { t_tf2=! }
+            signs/sign097.wl = { t_tf2=! }
+            signs/sign098.wl = { t_tf2=! }
+            signs/sign099.wl = { t_tf2=! }
+            signs/sign100.wl = { t_tf2=! }
+            signs/sign101.wl = { t_tf2=! }
+            signs/sign102.wl = { t_tf2=! }
+            signs/sign103.wl = { t_tf2=! }
+            signs/sign104.wl = { t_tf2=! }
+            signs/sign105.wl = { t_tf2=! }
+            signs/sign106.wl = { t_tf2=! }
+            signs/sign107.wl = { t_tf2=! }
+            signs/sign108.wl = { t_tf2=! }
+            signs/sign109.wl = { t_tf2=! }
+            signs/sign110.wl = { t_tf2=! }
+            signs/sign111.wl = { t_tf2=! }
+            signs/sign112.wl = { t_tf2=! }
+            signs/sign113.wl = { t_tf2=! }
+            signs/sign115.wl = { t_tf2=! }
+            signs/sign116.wl = { t_tf2=! }
+            signs/sign117.wl = { t_tf2=! }
+            signs/sign118.wl = { t_tf2=! }
+            signs/sign119.wl = { t_tf2=! }
+            signs/sign120.wl = { t_tf2=! }
+            signs/signwall_001.wl = { t_tf2=! }
+            signs/signwall_002.wl = { t_tf2=! }
+            signs/signwall_blue001.wl = { t_tf2=! }
+            signs/sign_blue_corn.wl = { t_tf2=! }
+            signs/stairs_red.wl = { t_tf2=! }
+            signs/target_practice_sheet.wl = { t_tf2=! }
+            signs/team_blue.wl = { t_tf2=! }
+            signs/team_red.wl = { t_tf2=! }
+            signs/upperlevel_blue.wl = { t_tf2=! }
+            signs/upperlevel_red.wl = { t_tf2=! }
+            signs/world_map001.wl = { t_tf2=! }
+            signs/world_map001a.wl = { t_tf2=! }
+            signs/world_map002.wl = { t_tf2=! }
+            signs/world_map002a.wl = { t_tf2=! }
+        }
+
+        Skybox.txlist =
+        {
+            Skybox/card001.wl = { t_tf2=! }
+            Skybox/card002.wl = { t_tf2=! }
+            Skybox/Cloud001a.wl = { t_tf2=! }
+            Skybox/Cloud001b.wl = { t_tf2=! }
+            Skybox/Cloud001c.wl = { t_tf2=! }
+            Skybox/Cloud001d.wl = { t_tf2=! }
+            Skybox/Cloud_dustbowl_001a.wl = { t_tf2=! }
+            Skybox/Cloud_dustbowl_001b.wl = { t_tf2=! }
+            Skybox/Cloud_dustbowl_001c.wl = { t_tf2=! }
+            Skybox/Cloud_dustbowl_001d.wl = { t_tf2=! }
+            Skybox/Farm001.wl = { t_tf2=! }
+            Skybox/Farm002.wl = { t_tf2=! }
+            Skybox/farm_fields001.wl = { t_tf2=! }
+            Skybox/foliage_card01.wl = { t_tf2=! }
+            Skybox/silo001.wl = { t_tf2=! }
+            Skybox/sky_dustbowl_01bk.wl = { t_tf2=! }
+            Skybox/sky_dustbowl_01dn.wl = { t_tf2=! }
+            Skybox/sky_dustbowl_01ft.wl = { t_tf2=! }
+            Skybox/sky_dustbowl_01lf.wl = { t_tf2=! }
+            Skybox/sky_dustbowl_01rt.wl = { t_tf2=! }
+            Skybox/sky_dustbowl_01up.wl = { t_tf2=! }
+            Skybox/sky_dustbowl_01_hdrbk.wl = { t_tf2=! }
+            Skybox/sky_dustbowl_01_hdrdn.wl = { t_tf2=! }
+            Skybox/sky_dustbowl_01_hdrft.wl = { t_tf2=! }
+            Skybox/sky_dustbowl_01_hdrlf.wl = { t_tf2=! }
+            Skybox/sky_dustbowl_01_hdrrt.wl = { t_tf2=! }
+            Skybox/sky_dustbowl_01_hdrup.wl = { t_tf2=! }
+            Skybox/sky_granary_01bk.wl = { t_tf2=! }
+            Skybox/sky_granary_01dn.wl = { t_tf2=! }
+            Skybox/sky_granary_01ft.wl = { t_tf2=! }
+            Skybox/sky_granary_01lf.wl = { t_tf2=! }
+            Skybox/sky_granary_01rt.wl = { t_tf2=! }
+            Skybox/sky_granary_01up.wl = { t_tf2=! }
+            Skybox/sky_granary_01_hdrbk.wl = { t_tf2=! }
+            Skybox/sky_granary_01_hdrdn.wl = { t_tf2=! }
+            Skybox/sky_granary_01_hdrft.wl = { t_tf2=! }
+            Skybox/sky_granary_01_hdrlf.wl = { t_tf2=! }
+            Skybox/sky_granary_01_hdrrt.wl = { t_tf2=! }
+            Skybox/sky_granary_01_hdrup.wl = { t_tf2=! }
+            Skybox/sky_gravel_01bk.wl = { t_tf2=! }
+            Skybox/sky_gravel_01dn.wl = { t_tf2=! }
+            Skybox/sky_gravel_01ft.wl = { t_tf2=! }
+            Skybox/sky_gravel_01lf.wl = { t_tf2=! }
+            Skybox/sky_gravel_01rt.wl = { t_tf2=! }
+            Skybox/sky_gravel_01up.wl = { t_tf2=! }
+            Skybox/sky_gravel_01_hdrbk.wl = { t_tf2=! }
+            Skybox/sky_gravel_01_hdrdn.wl = { t_tf2=! }
+            Skybox/sky_gravel_01_hdrft.wl = { t_tf2=! }
+            Skybox/sky_gravel_01_hdrlf.wl = { t_tf2=! }
+            Skybox/sky_gravel_01_hdrrt.wl = { t_tf2=! }
+            Skybox/sky_gravel_01_hdrup.wl = { t_tf2=! }
+            Skybox/sky_hydro_01bk.wl = { t_tf2=! }
+            Skybox/sky_hydro_01dn.wl = { t_tf2=! }
+            Skybox/sky_hydro_01ft.wl = { t_tf2=! }
+            Skybox/sky_hydro_01lf.wl = { t_tf2=! }
+            Skybox/sky_hydro_01rt.wl = { t_tf2=! }
+            Skybox/sky_hydro_01up.wl = { t_tf2=! }
+            Skybox/sky_hydro_01_hdrbk.wl = { t_tf2=! }
+            Skybox/sky_hydro_01_hdrdn.wl = { t_tf2=! }
+            Skybox/sky_hydro_01_hdrft.wl = { t_tf2=! }
+            Skybox/sky_hydro_01_hdrlf.wl = { t_tf2=! }
+            Skybox/sky_hydro_01_hdrrt.wl = { t_tf2=! }
+            Skybox/sky_hydro_01_hdrup.wl = { t_tf2=! }
+            Skybox/sky_tf2_04bk.wl = { t_tf2=! }
+            Skybox/sky_tf2_04dn.wl = { t_tf2=! }
+            Skybox/sky_tf2_04ft.wl = { t_tf2=! }
+            Skybox/sky_tf2_04lf.wl = { t_tf2=! }
+            Skybox/sky_tf2_04rt.wl = { t_tf2=! }
+            Skybox/sky_tf2_04up.wl = { t_tf2=! }
+            Skybox/sky_tf2_04_hdrbk.wl = { t_tf2=! }
+            Skybox/sky_tf2_04_hdrdn.wl = { t_tf2=! }
+            Skybox/sky_tf2_04_hdrft.wl = { t_tf2=! }
+            Skybox/sky_tf2_04_hdrlf.wl = { t_tf2=! }
+            Skybox/sky_tf2_04_hdrrt.wl = { t_tf2=! }
+            Skybox/sky_tf2_04_hdrup.wl = { t_tf2=! }
+            Skybox/sky_well_01bk.wl = { t_tf2=! }
+            Skybox/sky_well_01dn.wl = { t_tf2=! }
+            Skybox/sky_well_01ft.wl = { t_tf2=! }
+            Skybox/sky_well_01lf.wl = { t_tf2=! }
+            Skybox/sky_well_01rt.wl = { t_tf2=! }
+            Skybox/sky_well_01up.wl = { t_tf2=! }
+            Skybox/sky_well_01_hdrbk.wl = { t_tf2=! }
+            Skybox/sky_well_01_hdrdn.wl = { t_tf2=! }
+            Skybox/sky_well_01_hdrft.wl = { t_tf2=! }
+            Skybox/sky_well_01_hdrlf.wl = { t_tf2=! }
+            Skybox/sky_well_01_hdrrt.wl = { t_tf2=! }
+            Skybox/sky_well_01_hdrup.wl = { t_tf2=! }
+            Skybox/watertower001a.wl = { t_tf2=! }
+            Skybox/windmill001.wl = { t_tf2=! }
+        }
+
+        sprites.txlist =
+        {
+            sprites/640hud1.wl = { t_tf2=! }
+            sprites/arrow.wl = { t_tf2=! }
+            sprites/bucket_bat_blue.wl = { t_tf2=! }
+            sprites/bucket_bat_red.wl = { t_tf2=! }
+            sprites/bucket_bonesaw.wl = { t_tf2=! }
+            sprites/bucket_bottle_blue.wl = { t_tf2=! }
+            sprites/bucket_bottle_red.wl = { t_tf2=! }
+            sprites/bucket_fireaxe.wl = { t_tf2=! }
+            sprites/bucket_fists_blue.wl = { t_tf2=! }
+            sprites/bucket_fists_red.wl = { t_tf2=! }
+            sprites/bucket_flamethrower_blue.wl = { t_tf2=! }
+            sprites/bucket_flamethrower_red.wl = { t_tf2=! }
+            sprites/bucket_grenlaunch.wl = { t_tf2=! }
+            sprites/bucket_knife.wl = { t_tf2=! }
+            sprites/bucket_machete.wl = { t_tf2=! }
+            sprites/bucket_medigun_blue.wl = { t_tf2=! }
+            sprites/bucket_medigun_red.wl = { t_tf2=! }
+            sprites/bucket_minigun.wl = { t_tf2=! }
+            sprites/bucket_nailgun.wl = { t_tf2=! }
+            sprites/bucket_pda.wl = { t_tf2=! }
+            sprites/bucket_pda_build.wl = { t_tf2=! }
+            sprites/bucket_pda_destroy.wl = { t_tf2=! }
+            sprites/bucket_pipelaunch.wl = { t_tf2=! }
+            sprites/bucket_pistol.wl = { t_tf2=! }
+            sprites/bucket_revolver.wl = { t_tf2=! }
+            sprites/bucket_rl.wl = { t_tf2=! }
+            sprites/bucket_sapper.wl = { t_tf2=! }
+            sprites/bucket_scatgun.wl = { t_tf2=! }
+            sprites/bucket_shotgun.wl = { t_tf2=! }
+            sprites/bucket_shovel.wl = { t_tf2=! }
+            sprites/bucket_smg.wl = { t_tf2=! }
+            sprites/bucket_sniper.wl = { t_tf2=! }
+            sprites/bucket_syrgun_blue.wl = { t_tf2=! }
+            sprites/bucket_syrgun_red.wl = { t_tf2=! }
+            sprites/bucket_tranq.wl = { t_tf2=! }
+            sprites/bucket_wrench.wl = { t_tf2=! }
+            sprites/crosshairs.wl = { t_tf2=! }
+            sprites/glow02.wl = { t_tf2=! }
+            sprites/healbeam.wl = { t_tf2=! }
+            sprites/healbeam_blue.wl = { t_tf2=! }
+            sprites/healbeam_red.wl = { t_tf2=! }
+            sprites/light_glow03.wl = { t_tf2=! }
+            sprites/redglow1.wl = { t_tf2=! }
+        }
+
+        test.txlist =
+        {
+            test/ceiling_01_t1.wl = { t_tf2=! }
+            test/ceiling_01_t2.wl = { t_tf2=! }
+            test/color001.wl = { t_tf2=! }
+            test/color002.wl = { t_tf2=! }
+            test/color003.wl = { t_tf2=! }
+            test/color004.wl = { t_tf2=! }
+            test/color005.wl = { t_tf2=! }
+            test/color006.wl = { t_tf2=! }
+            test/color007.wl = { t_tf2=! }
+            test/color008.wl = { t_tf2=! }
+            test/color009.wl = { t_tf2=! }
+            test/color010.wl = { t_tf2=! }
+            test/color011.wl = { t_tf2=! }
+            test/color012.wl = { t_tf2=! }
+            test/color013.wl = { t_tf2=! }
+            test/color_blue.wl = { t_tf2=! }
+            test/color_green.wl = { t_tf2=! }
+            test/color_red.wl = { t_tf2=! }
+            test/grain_elevator_01_t1.wl = { t_tf2=! }
+            test/grain_elevator_01_t2.wl = { t_tf2=! }
+            test/grain_elevator_02_t1.wl = { t_tf2=! }
+            test/grain_elevator_02_t2.wl = { t_tf2=! }
+            test/grain_elevator_t1.wl = { t_tf2=! }
+            test/grain_elevator_t2.wl = { t_tf2=! }
+            test/Invisible.wl = { t_tf2=! }
+            test/rooftop_01_t1.wl = { t_tf2=! }
+            test/rooftop_01_t2.wl = { t_tf2=! }
+            test/rooftop_02_t1.wl = { t_tf2=! }
+            test/rooftop_02_t2.wl = { t_tf2=! }
+        }
+
+        Tile.txlist =
+        {
+            Tile/floor_tileblue01.wl = { t_tf2=! }
+            Tile/floor_tile_001a.wl = { t_tf2=! }
+            Tile/floor_tile_001a_reflect.wl = { t_tf2=! }
+            Tile/floor_tile_002a.wl = { t_tf2=! }
+            Tile/floor_tile_003a.wl = { t_tf2=! }
+            Tile/floor_tile_004a.wl = { t_tf2=! }
+            Tile/floor_tile_004areflect.wl = { t_tf2=! }
+            Tile/floor_tile_004b.wl = { t_tf2=! }
+            Tile/floor_tile_004breflect.wl = { t_tf2=! }
+            Tile/floor_tile_004c.wl = { t_tf2=! }
+            Tile/floor_tile_004creflect.wl = { t_tf2=! }
+            Tile/floor_tile_005a.wl = { t_tf2=! }
+            Tile/floor_tile_005b.wl = { t_tf2=! }
+            Tile/floor_tile_005c.wl = { t_tf2=! }
+            Tile/floor_tile_006a.wl = { t_tf2=! }
+            Tile/floor_tile_006a_reflect.wl = { t_tf2=! }
+            Tile/floor_tile_007a.wl = { t_tf2=! }
+            Tile/floor_tile_reflect.wl = { t_tf2=! }
+            Tile/tile_ceiling_001a.wl = { t_tf2=! }
+        }
+
+        Tools.txlist =
+        {
+            Tools/toolsareaportal.wl = { t_tf2=! }
+            Tools/toolsblack.wl = { t_tf2=! }
+            Tools/toolsblockbullets.wl = { t_tf2=! }
+            Tools/toolsblocklight.wl = { t_tf2=! }
+            Tools/toolsblock_LOS.wl = { t_tf2=! }
+            Tools/toolsclip.wl = { t_tf2=! }
+            Tools/toolscontrolclip.wl = { t_tf2=! }
+            Tools/toolsfog.wl = { t_tf2=! }
+            Tools/toolshint.wl = { t_tf2=! }
+            Tools/toolsinvisible.wl = { t_tf2=! }
+            Tools/toolsinvisibleladder.wl = { t_tf2=! }
+            Tools/toolsnodraw.wl = { t_tf2=! }
+            Tools/toolsnpcclip.wl = { t_tf2=! }
+            Tools/toolsoccluder.wl = { t_tf2=! }
+            Tools/toolsorigin.wl = { t_tf2=! }
+            Tools/toolsplayerclip.wl = { t_tf2=! }
+            Tools/toolsskip.wl = { t_tf2=! }
+            Tools/toolsskybox.wl = { t_tf2=! }
+            Tools/toolsskyfog.wl = { t_tf2=! }
+            Tools/toolstrigger.wl = { t_tf2=! }
+        }
+
+        vgui.txlist =
+        {
+            vgui/capture_icon.wl = { t_tf2=! }
+            vgui/chalkboard_scroll_box.wl = { t_tf2=! }
+            vgui/chalkboard_scroll_down.wl = { t_tf2=! }
+            vgui/chalkboard_scroll_line.wl = { t_tf2=! }
+            vgui/chalkboard_scroll_up.wl = { t_tf2=! }
+            vgui/class_sel_sm_demo_blu.wl = { t_tf2=! }
+            vgui/class_sel_sm_demo_inactive.wl = { t_tf2=! }
+            vgui/class_sel_sm_demo_red.wl = { t_tf2=! }
+            vgui/class_sel_sm_engineer_blu.wl = { t_tf2=! }
+            vgui/class_sel_sm_engineer_inactive.wl = { t_tf2=! }
+            vgui/class_sel_sm_engineer_red.wl = { t_tf2=! }
+            vgui/class_sel_sm_heavy_blu.wl = { t_tf2=! }
+            vgui/class_sel_sm_heavy_inactive.wl = { t_tf2=! }
+            vgui/class_sel_sm_heavy_red.wl = { t_tf2=! }
+            vgui/class_sel_sm_medic_blu.wl = { t_tf2=! }
+            vgui/class_sel_sm_medic_inactive.wl = { t_tf2=! }
+            vgui/class_sel_sm_medic_red.wl = { t_tf2=! }
+            vgui/class_sel_sm_pyro_blu.wl = { t_tf2=! }
+            vgui/class_sel_sm_pyro_inactive.wl = { t_tf2=! }
+            vgui/class_sel_sm_pyro_red.wl = { t_tf2=! }
+            vgui/class_sel_sm_random.wl = { t_tf2=! }
+            vgui/class_sel_sm_random_blu.wl = { t_tf2=! }
+            vgui/class_sel_sm_random_inactive.wl = { t_tf2=! }
+            vgui/class_sel_sm_random_red.wl = { t_tf2=! }
+            vgui/class_sel_sm_scout_blu.wl = { t_tf2=! }
+            vgui/class_sel_sm_scout_inactive.wl = { t_tf2=! }
+            vgui/class_sel_sm_scout_red.wl = { t_tf2=! }
+            vgui/class_sel_sm_sniper_blu.wl = { t_tf2=! }
+            vgui/class_sel_sm_sniper_inactive.wl = { t_tf2=! }
+            vgui/class_sel_sm_sniper_red.wl = { t_tf2=! }
+            vgui/class_sel_sm_soldier_blu.wl = { t_tf2=! }
+            vgui/class_sel_sm_soldier_inactive.wl = { t_tf2=! }
+            vgui/class_sel_sm_soldier_red.wl = { t_tf2=! }
+            vgui/class_sel_sm_spy_blu.wl = { t_tf2=! }
+            vgui/class_sel_sm_spy_inactive.wl = { t_tf2=! }
+            vgui/class_sel_sm_spy_red.wl = { t_tf2=! }
+            vgui/corner_3px_1.wl = { t_tf2=! }
+            vgui/corner_3px_2.wl = { t_tf2=! }
+            vgui/corner_3px_3.wl = { t_tf2=! }
+            vgui/corner_3px_4.wl = { t_tf2=! }
+            vgui/corner_6px_1.wl = { t_tf2=! }
+            vgui/corner_6px_2.wl = { t_tf2=! }
+            vgui/corner_6px_3.wl = { t_tf2=! }
+            vgui/corner_6px_4.wl = { t_tf2=! }
+            vgui/damageindicator.wl = { t_tf2=! }
+            vgui/dispenser_meter_arrow.wl = { t_tf2=! }
+            vgui/dispenser_meter_bg_blue.wl = { t_tf2=! }
+            vgui/dispenser_meter_bg_red.wl = { t_tf2=! }
+            vgui/flagtime_empty.wl = { t_tf2=! }
+            vgui/flagtime_full.wl = { t_tf2=! }
+            vgui/ico_friends.wl = { t_tf2=! }
+            vgui/ico_waiting1.wl = { t_tf2=! }
+            vgui/ico_waiting2.wl = { t_tf2=! }
+            vgui/ico_waiting3.wl = { t_tf2=! }
+            vgui/ico_waiting4.wl = { t_tf2=! }
+            vgui/menu_header.wl = { t_tf2=! }
+            vgui/progress_bar.wl = { t_tf2=! }
+            vgui/progress_bar_blu.wl = { t_tf2=! }
+            vgui/progress_bar_noCap.wl = { t_tf2=! }
+            vgui/progress_bar_pointer.wl = { t_tf2=! }
+            vgui/progress_bar_pointer_left.wl = { t_tf2=! }
+            vgui/progress_bar_pointer_right.wl = { t_tf2=! }
+            vgui/progress_bar_red.wl = { t_tf2=! }
+        }
+
+        water.txlist =
+        {
+            water/water_2fort.wl = { t_tf2=! }
+            water/water_2fort_beneath.wl = { t_tf2=! }
+            water/water_2fort_beneath_dx80.wl = { t_tf2=! }
+            water/water_2fort_dx80.wl = { t_tf2=! }
+            water/water_2fort_expensive.wl = { t_tf2=! }
+            water/water_2fort_skybox.wl = { t_tf2=! }
+            water/water_2fort_skybox_dx80.wl = { t_tf2=! }
+            water/water_hydro_cheap.wl = { t_tf2=! }
+            water/water_hydro_cheap_dx80.wl = { t_tf2=! }
+            water/water_well.wl = { t_tf2=! }
+            water/water_well_beneath.wl = { t_tf2=! }
+            water/water_well_beneath_dx80.wl = { t_tf2=! }
+            water/water_well_dx80.wl = { t_tf2=! }
+        }
+
+        Wood.txlist =
+        {
+            Wood/fake_wood001.wl = { t_tf2=! }
+            Wood/grain_elevator_facade.wl = { t_tf2=! }
+            Wood/grain_elevator_facade_01.wl = { t_tf2=! }
+            Wood/grain_elevator_facade_02.wl = { t_tf2=! }
+            Wood/grain_elevator_facade_03.wl = { t_tf2=! }
+            Wood/grain_elevator_facade_04.wl = { t_tf2=! }
+            Wood/grain_elevator_facade_05.wl = { t_tf2=! }
+            Wood/grain_elevator_facade_06.wl = { t_tf2=! }
+            Wood/grain_elevator_facade_07.wl = { t_tf2=! }
+            Wood/grain_elevator_facade_08.wl = { t_tf2=! }
+            Wood/grain_elevator_facade_09.wl = { t_tf2=! }
+            Wood/grain_elevator_facade_10.wl = { t_tf2=! }
+            Wood/grain_elevator_facade_11.wl = { t_tf2=! }
+            Wood/grain_elevator_facade_12.wl = { t_tf2=! }
+            Wood/grain_elevator_facade_13.wl = { t_tf2=! }
+            Wood/grain_elevator_facade_14a.wl = { t_tf2=! }
+            Wood/grain_elevator_facade_14b.wl = { t_tf2=! }
+            Wood/grain_elevator_facade_14c.wl = { t_tf2=! }
+            Wood/grain_elevator_silo_01.wl = { t_tf2=! }
+            Wood/grain_elevator_silo_02.wl = { t_tf2=! }
+            Wood/grain_elevator_silo_03.wl = { t_tf2=! }
+            Wood/grain_elevator_silo_03b.wl = { t_tf2=! }
+            Wood/grain_elevator_silo_04.wl = { t_tf2=! }
+            Wood/grain_elevator_silo_05.wl = { t_tf2=! }
+            Wood/grain_elevator_silo_06.wl = { t_tf2=! }
+            Wood/grain_elevator_silo_07.wl = { t_tf2=! }
+            Wood/grain_elevator_silo_08.wl = { t_tf2=! }
+            Wood/grain_elevator_silo_09.wl = { t_tf2=! }
+            Wood/grain_elevator_silo_10a.wl = { t_tf2=! }
+            Wood/grain_elevator_silo_10b.wl = { t_tf2=! }
+            Wood/grain_elevator_silo_10c.wl = { t_tf2=! }
+            Wood/grain_elevator_silo_10d.wl = { t_tf2=! }
+            Wood/RedWood_badlands_01.wl = { t_tf2=! }
+            Wood/wall001.wl = { t_tf2=! }
+            Wood/wall003.wl = { t_tf2=! }
+            Wood/wall004.wl = { t_tf2=! }
+            Wood/wall005.wl = { t_tf2=! }
+            Wood/wall007.wl = { t_tf2=! }
+            Wood/wall008.wl = { t_tf2=! }
+            Wood/wall009.wl = { t_tf2=! }
+            Wood/wall015.wl = { t_tf2=! }
+            Wood/wall015a.wl = { t_tf2=! }
+            Wood/wall015b.wl = { t_tf2=! }
+            Wood/wall019.wl = { t_tf2=! }
+            Wood/wall020.wl = { t_tf2=! }
+            Wood/wall020b.wl = { t_tf2=! }
+            Wood/wall023.wl = { t_tf2=! }
+            Wood/wood_beam01.wl = { t_tf2=! }
+            Wood/wood_beam02.wl = { t_tf2=! }
+            Wood/wood_beam03.wl = { t_tf2=! }
+            Wood/wood_bridge001.wl = { t_tf2=! }
+            Wood/wood_bridge002.wl = { t_tf2=! }
+            Wood/wood_floor001.wl = { t_tf2=! }
+            Wood/wood_wall001.wl = { t_tf2=! }
+            Wood/wood_wall002.wl = { t_tf2=! }
+            Wood/wood_wall002b.wl = { t_tf2=! }
+            Wood/wood_wall003.wl = { t_tf2=! }
+            Wood/wood_wall004.wl = { t_tf2=! }
+            Wood/wood_wall005a.wl = { t_tf2=! }
+            Wood/wood_wall005b.wl = { t_tf2=! }
+            Wood/wood_wall005c.wl = { t_tf2=! }
+            Wood/wood_wall005d.wl = { t_tf2=! }
+            Wood/wood_wall006.wl = { t_tf2=! }
+        }
+
+      }
+    }
+}

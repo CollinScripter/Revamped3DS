@@ -1,0 +1,57 @@
+QQRKSRC1
+{
+  QuArKProtected = "1"
+  Description = "HL Textures - Sabaneta 2050"
+
+//
+// Sabaneta 2050
+//
+  SBTextures.qtx =
+  {
+    ToolBox = "Texture Browser..."
+    Root = "Sabaneta 2050 Textures.qtxfolder"
+    HTML = "intro.texturebrowser.html"
+
+    // Raw definition of WAD3 files
+    t_sb_decals:incl = { s = "sabaneta" d = "decals" h = "C" }
+    t_sb_general:incl = { s = "sabaneta" d = "general" h = "C" }
+    t_sb_misc:incl = { s = "sabaneta" d = "misc" h = "C" }
+
+    Sabaneta 2050 Textures.qtxfolder =
+    {
+      decals.txlist =
+      {
+        sb_pdv_decal.wl = {t_sb_decals=!}
+      }
+      general.txlist =
+      {
+        scroll_arenisca.wl = {t_sb_general=!}
+        scroll_rails.wl = {t_sb_general=!}
+        scroll_roc.wl = {t_sb_general=!}
+        scroll_tunnel.wl = {t_sb_general=!}
+        sb_convict_door.wl = {t_sb_general=!}
+        sb_logo_tex.wl = {t_sb_general=!}
+        cont_azul_back.wl = {t_sb_general=!}
+        cont_azul_lado2.wl = {t_sb_general=!}
+        pared_azul_viej.wl = {t_sb_general=!}
+        pared_roja_viej.wl = {t_sb_general=!}
+        par_azul_ext1.wl = {t_sb_general=!}
+        sb_tabla.wl = {t_sb_general=!}
+        sb_asfalto.wl = {t_sb_general=!}
+        sb_p_lad_1.wl = {t_sb_general=!}
+        sb_pi_roc_1.wl = {t_sb_general=!}
+        cont_petroleum.wl = {t_sb_general=!}
+        sb_old_wood.wl = {t_sb_general=!}
+        !petroleo.wl = {t_sb_general=!}
+        sb_tanque1.wl = {t_sb_general=!}
+        sb_tanque2.wl = {t_sb_general=!}
+      }
+      misc.txlist =
+      {
+        sb_crane_usg.wl = {t_sb_misc=!}
+        Foto01.wl = {t_sb_misc=!}
+        Foto11.wl = {t_sb_misc=!}
+      }
+    }
+  }
+}

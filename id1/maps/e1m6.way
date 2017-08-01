@@ -1,0 +1,164 @@
+// The Dark Zone by Tim Willits - maps/dm6.way
+// Ways by Raymond
+saved1 760;saved2 -1080;saved3 278.0
+scratch1 2;scratch2 8;scratch3 53;scratch4 0
+saved4 1;wait
+saved1 780.3;saved2 -876.7
+scratch1 1;scratch2 3;scratch3 0
+saved4 2;wait
+saved1 994.1;saved2 -851.7
+scratch1 2;scratch2 4
+saved4 2;wait
+saved1 1205.4;saved2 -850.1
+scratch1 3;scratch2 5
+saved4 2;wait
+saved1 1277.2;saved2 -1068.8
+scratch1 4;scratch2 6;scratch4 10
+saved4 2;wait
+saved1 1280.1;saved2 -1257.9
+scratch1 5;scratch2 7;scratch4 0
+saved4 2;wait
+saved1 1080.9;saved2 -1340.8
+scratch1 6;scratch2 8
+saved4 2;wait
+saved1 867.3;saved2 -1342.1;saved3 278.0
+scratch1 7;scratch2 1
+saved4 2;wait
+saved1 921.5;saved2 -1480.0;saved3 278.0
+scratch2 0
+saved4 2;wait
+saved1 1466.9;saved2 -1063.8;saved3 246.7
+scratch1 11;scratch2 5
+saved4 2;wait
+saved1 1795.3;saved2 -1090.3;saved3 190.0
+scratch1 10;scratch2 12
+saved4 2;wait
+saved1 1800.5;saved2 -908.1
+scratch1 11;scratch2 13
+saved4 2;wait
+saved1 1808.0;saved2 -698.9
+scratch1 12;scratch2 14
+saved4 2;wait
+saved1 1778.3;saved2 -426.6
+scratch1 13;scratch2 18;scratch3 15
+saved4 2;wait
+saved1 1883.4;saved2 -400.2
+scratch1 14;scratch2 16;scratch3 0
+saved4 2;wait
+saved1 1903.4;saved2 -144.0
+scratch1 15;scratch2 17
+saved4 2;wait
+saved1 1616.0
+scratch1 16;scratch2 18
+saved4 2;wait
+saved2 -300.0
+scratch1 17;scratch2 19;scratch3 14
+saved4 2;wait
+saved1 1284.1;saved2 -339.3
+scratch1 18;scratch2 21;scratch3 0
+saved4 2;wait
+saved1 104.0;saved2 -1491.7;saved3  62.0
+scratch1 45;scratch2 0
+saved4 2;wait
+saved1 1293.0;saved2 -554.7;saved3 190.0
+scratch1 19;scratch2 22
+saved4 2;wait
+saved1 1670.4;saved2 -535.4;saved3  62.0
+scratch1 23;scratch2 34;scratch3 21
+saved4 2;wait
+saved1 1589.6;saved2 -357.3;saved3  62.0
+scratch1 22;scratch2 24;scratch3 0
+saved4 2;wait
+saved1 1383.5;saved2 -402.5
+scratch1 23;scratch2 25
+saved4 2;wait
+saved1 987.9;saved2 -406.9;saved3  62.0
+scratch1 24;scratch2 26
+saved4 2;wait
+saved1 992.6;saved2 -738.4
+scratch1 25;scratch2 27
+saved4 2;wait
+saved1 1018.5;saved2 -911.1;saved3  -2.0
+scratch1 28;scratch2 35;scratch3 26
+saved4 2;wait
+saved1 863.3;saved2 -1071.5;saved3 -22.0
+scratch1 29;scratch2 36;scratch3 42;scratch4 27
+saved4 2;wait
+saved1 881.0;saved2 -1093.5;saved3 -258.0
+scratch1 30;scratch2 0;scratch3 0;scratch4 0
+saved4 2;wait
+saved1 690.0;saved2 -1078.3
+scratch1 29;scratch2 31
+saved4 2;wait
+saved1 482.4;saved2 -1076.1;saved3 -250.0
+scratch1 30;scratch2 35
+saved4 10;wait
+saved1 1379.5;saved2 -1096;saved3  14.0
+scratch1 35;scratch2 33
+saved4 2;wait
+saved1 1739.2;saved2 -1055.3;saved3  62.0
+scratch1 32;scratch2 34
+saved4 2;wait
+saved1 1762.1;saved2 -795.3
+scratch1 33;scratch2 22
+saved4 2;wait
+saved1 1158.1;saved2 -1096;saved3 -18.0
+scratch1 32;scratch2 36;scratch3 27;scratch4 39
+saved4 34;wait
+saved1 1041.6;saved2 -1286.9;saved3  -2.0
+scratch1 35;scratch2 37;scratch3 28;scratch4 0
+saved4 2;wait
+saved1 1051.7;saved2 -1676.9;saved3  62.0
+scratch1 36;scratch2 38;scratch3 0
+saved4 2;wait
+saved1 690.5;saved2 -1634.7
+scratch1 37;scratch2 39
+saved4 2;wait
+saved1 463.0;saved2 -1655.4
+scratch1 38;scratch2 43;scratch3 44
+saved4 10;wait
+saved1 200;saved2 -1126.9;saved3 134.0
+scratch1 43;scratch2 41;scratch3 0
+saved4 18;wait
+saved1 420.4;saved2 -1095.8;saved3 150.0
+scratch1 40;scratch2 42
+saved4 2;wait
+saved1 681.9;saved2 -1101.5;saved3  90.2
+scratch1 28;scratch2 41
+saved4 2;wait
+saved1 200;saved2 -939.7;saved3 158.0
+scratch1 40;scratch2 39
+saved4 10;wait
+saved1 260.1;saved2 -1637.8;saved3  62.0
+scratch1 39;scratch2 45
+saved4 2;wait
+saved1  70.5;saved2 -1603.2
+scratch1 44;scratch2 46
+saved4 2;wait
+saved1  18.3;saved2 -1803.2
+scratch1 45;scratch2 47
+saved4 2;wait
+saved1  46.5;saved2 -1993.5;saved3 110.0
+scratch1 46;scratch2 48
+saved4 2;wait
+saved1 249.7;saved2 -2028.1;saved3 142.0
+scratch1 47;scratch2 49
+saved4 2;wait
+saved1 446.0;saved2 -1999.7;saved3 190.0
+scratch1 48;scratch2 50
+saved4 2;wait
+saved1 460.8;saved2 -1780.0;saved3 222.0
+scratch1 49;scratch2 51
+saved4 2;wait
+saved1 450.4;saved2 -1576.2;saved3 278.0
+scratch1 50;scratch2 52
+saved4 2;wait
+saved1 446.6;saved2 -1364.6
+scratch1 51;scratch2 53
+saved4 2;wait
+saved1 440.7;saved2 -1084.1
+scratch1 52;scratch2 1
+saved4 2;wait
+saved4 3
+// end waypoint dump
+

@@ -1,0 +1,869 @@
+QQRKSRC1
+{
+  Description = "Actor definitions for Sylphis"
+  SylphisEntities.qtx =
+  {
+    ToolBox = "New map items..."
+    Root = "Sylphis Entities.qtxfolder"
+    Sylphis Entities.qtxfolder =
+    {
+camera:e = 
+{
+  ;desc = "A general use camera"
+  angles = ""
+  fov = "90.0"
+  target = ""
+  name = ""
+  origin = "0.000000 0.000000 0.000000"
+}
+
+controler_path:e = 
+{
+  ;desc = "Controls other actors to follow a path"
+  pathnodes = ""
+  pathtype = "0"
+  lookatpathnodes = ""
+  lookatpathtype = "0"
+  speed = "1.0"
+  name = ""
+  origin = "0.000000 0.000000 0.000000"
+}
+
+follow_camera:e = 
+{
+  ;desc = "A third person camera that can follow the target actor arround"
+  angles = ""
+  fov = "90.0"
+  target = ""
+  name = ""
+  origin = "0.000000 0.000000 0.000000"
+}
+
+func_door:b = 
+{
+  ;incl = "brush64"
+  ;desc = "A simple sliding door"
+  speed = "100.0"
+  wait = "4.0"
+  movesize = "32.0"
+  movedir = "0.000000 1.000000 0.000000"
+  initstate = "0"
+  reststate = "0"
+  model = ""
+  anim = ""
+  rigidbody = "0"
+  density = "1e-005"
+  damping = "0.01"
+  shader = ""
+  name = ""
+  origin = "0.000000 0.000000 0.000000"
+}
+
+info_null:e = 
+{
+  ;desc = "An actor just to contain spatial information"
+  name = ""
+  origin = "0.000000 0.000000 0.000000"
+}
+
+info_player_start:e = 
+{
+  ;desc = "A player"
+  name = ""
+  origin = "0.000000 0.000000 0.000000"
+}
+
+joint_ball:e = 
+{
+  ;desc = "A ball<->socket joint"
+  body1 = ""
+  body2 = ""
+  name = ""
+  origin = "0.000000 0.000000 0.000000"
+}
+
+joint_hinge:e = 
+{
+  ;desc = "A hinge joint"
+  axis = "0 0 1"
+  lo_stop = "-90.0"
+  hi_stop = "90.0"
+  stop_softness = "0.0001"
+  body1 = ""
+  body2 = ""
+  name = ""
+  origin = "0.000000 0.000000 0.000000"
+}
+
+joint_slider:e = 
+{
+  ;desc = "Base class of all actors"
+  axis = "0 0 1"
+  lo_stop = "-10.0"
+  hi_stop = "10.0"
+  stop_softness = ""
+  body1 = ""
+  body2 = ""
+  name = ""
+  origin = "0.000000 0.000000 0.000000"
+}
+
+joint_universal:e = 
+{
+  ;desc = "A universal joint"
+  axis1 = "0 1 0"
+  axis2 = "1 0 0"
+  body1 = ""
+  body2 = ""
+  name = ""
+  origin = "0.000000 0.000000 0.000000"
+}
+
+light:e = 
+{
+  ;desc = "A light"
+  radius = "300.0"
+  light_center = "0.000000 0.000000 0.000000"
+  color = "1.000000 1.000000 1.000000"
+  intensity = "1.0"
+  type = "0"
+  freq = "1.0"
+  phase = "0.0"
+  specular = "1"
+  shadows = "1"
+  attenuation = ""
+  filter = "nofilter"
+  name = ""
+  origin = "0.000000 0.000000 0.000000"
+}
+
+misc_model:e = 
+{
+  ;desc = "A skeletal model"
+  model = ""
+  anim = ""
+  rigidbody = "0"
+  density = "1e-005"
+  damping = "0.01"
+  shader = ""
+  name = ""
+  origin = "0.000000 0.000000 0.000000"
+}
+
+misc_skel_model:e = 
+{
+  ;desc = "A skeletal model"
+  model = ""
+  anim = "idle"
+  skin = ""
+  name = ""
+  origin = "0.000000 0.000000 0.000000"
+}
+
+portal:b = 
+{
+  ;incl = "brush64"
+  ;desc = "A visibility portal"
+  name = ""
+  origin = "0.000000 0.000000 0.000000"
+}
+
+speaker:e = 
+{
+  ;desc = "A sound speaker"
+  sound = ""
+  loop = "1"
+  play = "1"
+  name = ""
+  origin = "0.000000 0.000000 0.000000"
+}
+
+trigger_relay:e = 
+{
+  ;desc = "A trigger that repeats a fire"
+  delay = "0.0"
+  once = "0"
+  name = ""
+  origin = "0.000000 0.000000 0.000000"
+}
+
+trigger_startup:e = 
+{
+  ;desc = "A trigger that fires at worlds startup"
+  delay = "0.0"
+  once = "0"
+  name = ""
+  origin = "0.000000 0.000000 0.000000"
+}
+
+worldspawn:e = 
+{
+  ;desc = "The world actor"
+  ambient_color = "0 0 0"
+  sound_track = ""
+  name = ""
+  origin = "0.000000 0.000000 0.000000"
+}
+
+
+    }
+  }
+Entity forms.qctx =
+{
+camera:form = 
+{
+  Help = "A general use camera"
+  angles: =
+  {
+    Txt = "&"
+    Hint = "The orientation of the camera"
+  }
+  fov: =
+  {
+    Txt = "&"
+    Hint = "The field of view"
+  }
+  target: =
+  {
+    Txt = "&"
+    Hint = "The target entity to auto track"
+  }
+  name: =
+  {
+    Txt = "&"
+    Hint = "The name of the actor"
+  }
+  origin: =
+  {
+    Txt = "&"
+    Hint = "The actors origin"
+  }
+}
+
+controler_path:form = 
+{
+  Help = "Controls other actors to follow a path"
+  pathnodes: =
+  {
+    Txt = "&"
+    Hint = "The series of actors making the path"
+  }
+  pathtype: =
+  {
+    Txt = "&"
+    Hint = "The type of interpolation to use"
+    Typ = "C"
+    items = "LINEAR"$0D"SPLINE"
+    values = "0"$0D"1"
+  }
+  lookatpathnodes: =
+  {
+    Txt = "&"
+    Hint = "The series of actors making the path"
+  }
+  lookatpathtype: =
+  {
+    Txt = "&"
+    Hint = "The type of interpolation to use"
+    Typ = "C"
+    items = "LINEAR"$0D"SPLINE"
+    values = "0"$0D"1"
+  }
+  speed: =
+  {
+    Txt = "&"
+    Hint = "The speed to travel the path"
+  }
+  name: =
+  {
+    Txt = "&"
+    Hint = "The name of the actor"
+  }
+  origin: =
+  {
+    Txt = "&"
+    Hint = "The actors origin"
+  }
+}
+
+follow_camera:form = 
+{
+  Help = "A third person camera that can follow the target actor arround"
+  angles: =
+  {
+    Txt = "&"
+    Hint = "The orientation of the camera"
+  }
+  fov: =
+  {
+    Txt = "&"
+    Hint = "The field of view"
+  }
+  target: =
+  {
+    Txt = "&"
+    Hint = "The target entity to auto track"
+  }
+  name: =
+  {
+    Txt = "&"
+    Hint = "The name of the actor"
+  }
+  origin: =
+  {
+    Txt = "&"
+    Hint = "The actors origin"
+  }
+}
+
+func_door:form = 
+{
+  Help = "A simple sliding door"
+  speed: =
+  {
+    Txt = "&"
+    Hint = "The movement speed of the door"
+  }
+  wait: =
+  {
+    Txt = "&"
+    Hint = "The time to wait before returning to rest state"
+  }
+  movesize: =
+  {
+    Txt = "&"
+    Hint = "Units that the door moves"
+  }
+  movedir: =
+  {
+    Txt = "&"
+    Hint = "Direction the door moves"
+  }
+  initstate: =
+  {
+    Txt = "&"
+    Hint = "Initial state"
+    Typ = "C"
+    items = "CLOSE"$0D"OPEN"
+    values = "0"$0D"1"
+  }
+  reststate: =
+  {
+    Txt = "&"
+    Hint = "Rest state"
+    Typ = "C"
+    items = "CLOSE"$0D"OPEN"
+    values = "0"$0D"1"
+  }
+  model: =
+  {
+    Txt = "&"
+    Hint = "The filename that contains the model"
+  }
+  anim: =
+  {
+    Txt = "&"
+    Hint = "The animation to run on the model. e.g. idle"
+  }
+  rigidbody: =
+  {
+    Txt = "&"
+    Hint = "This is the rigidbody shape that the engine will try to fit to"
+    Typ = "C"
+    items = "NONE"$0D"BOX"$0D"SPHERE"
+    values = "0"$0D"1"$0D"2"
+  }
+  density: =
+  {
+    Txt = "&"
+    Hint = "The density of the rigid body"
+  }
+  damping: =
+  {
+    Txt = "&"
+    Hint = "Air friction"
+  }
+  shader: =
+  {
+    Txt = "&"
+    Hint = "The skin to apply on the model"
+  }
+  name: =
+  {
+    Txt = "&"
+    Hint = "The name of the actor"
+  }
+  origin: =
+  {
+    Txt = "&"
+    Hint = "The actors origin"
+  }
+}
+
+info_null:form = 
+{
+  Help = "An actor just to contain spatial information"
+  name: =
+  {
+    Txt = "&"
+    Hint = "The name of the actor"
+  }
+  origin: =
+  {
+    Txt = "&"
+    Hint = "The actors origin"
+  }
+}
+
+info_player_start:form = 
+{
+  Help = "A player"
+  bbox = '-20 -20 -90 20 20 5'
+  name: =
+  {
+    Txt = "&"
+    Hint = "The name of the actor"
+  }
+  origin: =
+  {
+    Txt = "&"
+    Hint = "The actors origin"
+  }
+}
+
+joint_ball:form = 
+{
+  Help = "A ball<->socket joint"
+  body1: =
+  {
+    Txt = "&"
+    Hint = "The one of the bodies to connect"
+  }
+  body2: =
+  {
+    Txt = "&"
+    Hint = "The other of the bodies to connect"
+  }
+  name: =
+  {
+    Txt = "&"
+    Hint = "The name of the actor"
+  }
+  origin: =
+  {
+    Txt = "&"
+    Hint = "The actors origin"
+  }
+}
+
+joint_hinge:form = 
+{
+  Help = "A hinge joint"
+  axis: =
+  {
+    Txt = "&"
+    Hint = "The axis"
+  }
+  lo_stop: =
+  {
+    Txt = "&"
+    Hint = "The low stop angle"
+  }
+  hi_stop: =
+  {
+    Txt = "&"
+    Hint = "The high stop angle"
+  }
+  stop_softness: =
+  {
+    Txt = "&"
+    Hint = "How soft will the limits be"
+  }
+  body1: =
+  {
+    Txt = "&"
+    Hint = "The one of the bodies to connect"
+  }
+  body2: =
+  {
+    Txt = "&"
+    Hint = "The other of the bodies to connect"
+  }
+  name: =
+  {
+    Txt = "&"
+    Hint = "The name of the actor"
+  }
+  origin: =
+  {
+    Txt = "&"
+    Hint = "The actors origin"
+  }
+}
+
+joint_slider:form = 
+{
+  Help = "Base class of all actors"
+  axis: =
+  {
+    Txt = "&"
+    Hint = "The axis"
+  }
+  lo_stop: =
+  {
+    Txt = "&"
+    Hint = "The low stop angle"
+  }
+  hi_stop: =
+  {
+    Txt = "&"
+    Hint = "The high stop angle"
+  }
+  stop_softness: =
+  {
+    Txt = "&"
+    Hint = "How soft will the limits be"
+  }
+  body1: =
+  {
+    Txt = "&"
+    Hint = "The one of the bodies to connect"
+  }
+  body2: =
+  {
+    Txt = "&"
+    Hint = "The other of the bodies to connect"
+  }
+  name: =
+  {
+    Txt = "&"
+    Hint = "The name of the actor"
+  }
+  origin: =
+  {
+    Txt = "&"
+    Hint = "The actors origin"
+  }
+}
+
+joint_universal:form = 
+{
+  Help = "A universal joint"
+  axis1: =
+  {
+    Txt = "&"
+    Hint = "The first axis"
+  }
+  axis2: =
+  {
+    Txt = "&"
+    Hint = "The second axis"
+  }
+  body1: =
+  {
+    Txt = "&"
+    Hint = "The one of the bodies to connect"
+  }
+  body2: =
+  {
+    Txt = "&"
+    Hint = "The other of the bodies to connect"
+  }
+  name: =
+  {
+    Txt = "&"
+    Hint = "The name of the actor"
+  }
+  origin: =
+  {
+    Txt = "&"
+    Hint = "The actors origin"
+  }
+}
+
+light:form = 
+{
+  Help = "A light"
+  radius: =
+  {
+    Txt = "&"
+    Hint = "The radius of the light"
+  }
+  light_center: =
+  {
+    Txt = "&"
+    Hint = "The light emition point in the lights volume"
+  }
+  color: =
+  {
+    Txt = "&"
+    Hint = "light color (not the intensity, only the color)"
+    Typ = "L"
+  }
+  intensity: =
+  {
+    Txt = "&"
+    Hint = "The lights intensity"
+  }
+  type: =
+  {
+    Txt = "&"
+    Hint = "The periodic effect to use"
+    Typ = "C"
+    items = "NORMAL"$0D"Strobo"$0D"Flickering"$0D"Pulsating"
+    values = "0"$0D"8"$0D"4"$0D"16"
+  }
+  freq: =
+  {
+    Txt = "&"
+    Hint = "The frequency (Hz) of the periodic effect the light might has"
+  }
+  phase: =
+  {
+    Txt = "&"
+    Hint = "The phase [0, 1.0] of the periodic effect the light might has"
+  }
+  specular: =
+  {
+    Txt = "&"
+    Hint = "Will the light create specular highlights on objects?"
+    Typ = "X1"
+  }
+  shadows: =
+  {
+    Txt = "&"
+    Hint = "Will create shadows?"
+    Typ = "X1"
+  }
+  attenuation: =
+  {
+    Txt = "&"
+    Hint = "The attenuation of the light"
+  }
+  filter: =
+  {
+    Txt = "&"
+    Hint = "The color filter to apply on the light"
+  }
+  name: =
+  {
+    Txt = "&"
+    Hint = "The name of the actor"
+  }
+  origin: =
+  {
+    Txt = "&"
+    Hint = "The actors origin"
+  }
+}
+
+misc_model:form = 
+{
+  Help = "A skeletal model"
+  mdl = "[model]"
+  model: =
+  {
+    Txt = "&"
+    Hint = "The filename that contains the model"
+  }
+  anim: =
+  {
+    Txt = "&"
+    Hint = "The animation to run on the model. e.g. idle"
+  }
+  rigidbody: =
+  {
+    Txt = "&"
+    Hint = "This is the rigidbody shape that the engine will try to fit to"
+    Typ = "C"
+    items = "NONE"$0D"BOX"$0D"SPHERE"
+    values = "0"$0D"1"$0D"2"
+  }
+  density: =
+  {
+    Txt = "&"
+    Hint = "The density of the rigid body"
+  }
+  damping: =
+  {
+    Txt = "&"
+    Hint = "Air friction"
+  }
+  shader: =
+  {
+    Txt = "&"
+    Hint = "The skin to apply on the model"
+  }
+  name: =
+  {
+    Txt = "&"
+    Hint = "The name of the actor"
+  }
+  origin: =
+  {
+    Txt = "&"
+    Hint = "The actors origin"
+  }
+}
+
+misc_skel_model:form = 
+{
+  Help = "A skeletal model"
+  model: =
+  {
+    Txt = "&"
+    Hint = "The filename that contains the model"
+  }
+  anim: =
+  {
+    Txt = "&"
+    Hint = "The animation to run on the model. e.g. idle"
+  }
+  skin: =
+  {
+    Txt = "&"
+    Hint = "The skin to apply on the model. (Not implemented yet)"
+  }
+  name: =
+  {
+    Txt = "&"
+    Hint = "The name of the actor"
+  }
+  origin: =
+  {
+    Txt = "&"
+    Hint = "The actors origin"
+  }
+}
+
+portal:form = 
+{
+  Help = "A visibility portal"
+  name: =
+  {
+    Txt = "&"
+    Hint = "The name of the actor"
+  }
+  origin: =
+  {
+    Txt = "&"
+    Hint = "The actors origin"
+  }
+}
+
+speaker:form = 
+{
+  Help = "A sound speaker"
+  sound: =
+  {
+    Txt = "&"
+    Hint = "The sound file to play"
+  }
+  loop: =
+  {
+    Txt = "&"
+    Hint = "Will the sound loop?"
+    Typ = "C"
+    items = "NO"$0D"YES"
+    values = "0"$0D"1"
+  }
+  play: =
+  {
+    Txt = "&"
+    Hint = "Start playing on startup"
+    Typ = "C"
+    items = "NO"$0D"YES"
+    values = "0"$0D"1"
+  }
+  name: =
+  {
+    Txt = "&"
+    Hint = "The name of the actor"
+  }
+  origin: =
+  {
+    Txt = "&"
+    Hint = "The actors origin"
+  }
+}
+
+trigger_relay:form = 
+{
+  Help = "A trigger that repeats a fire"
+  delay: =
+  {
+    Txt = "&"
+    Hint = "The delay taken before triggering"
+  }
+  once: =
+  {
+    Txt = "&"
+    Hint = "Will it trigger once and then die?"
+    Typ = "X1"
+  }
+  name: =
+  {
+    Txt = "&"
+    Hint = "The name of the actor"
+  }
+  origin: =
+  {
+    Txt = "&"
+    Hint = "The actors origin"
+  }
+}
+
+trigger_startup:form = 
+{
+  Help = "A trigger that fires at worlds startup"
+  delay: =
+  {
+    Txt = "&"
+    Hint = "The delay taken before triggering"
+  }
+  once: =
+  {
+    Txt = "&"
+    Hint = "Will it trigger once and then die?"
+    Typ = "X1"
+  }
+  name: =
+  {
+    Txt = "&"
+    Hint = "The name of the actor"
+  }
+  origin: =
+  {
+    Txt = "&"
+    Hint = "The actors origin"
+  }
+}
+
+worldspawn:form = 
+{
+  Help = "The world actor"
+  ambient_color: =
+  {
+    Txt = "&"
+    Hint = "The ambient color"
+  }
+  sound_track: =
+  {
+    Txt = "&"
+    Hint = "The default audio file to play in this world"
+  }
+  name: =
+  {
+    Txt = "&"
+    Hint = "The name of the actor"
+  }
+  origin: =
+  {
+    Txt = "&"
+    Hint = "The actors origin"
+  }
+}
+
+}
+
+}

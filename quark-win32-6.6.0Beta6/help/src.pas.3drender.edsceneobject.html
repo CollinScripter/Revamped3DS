@@ -1,0 +1,124 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"  "http://www.w3.org/TR/html4/loose.dtd">
+<html lang="en">
+<head>
+  <title>EdSceneObject.PAS</title>
+  <meta name="Description" content="QuArK Information Database - Page: 4.5.10.1.&nbsp;EdSceneObject.PAS">
+  <meta name="Keywords" content="QuArK InfoBase Quake Army Knife QRK QKM Python PY Map Editor Hexen Heretic Half-Life Sin Kingpin Soldier-of-Fortune Star-Trek-Voyager Elite-Force">
+  <link rel=stylesheet href="standard.css" type="text/css">
+</head>
+
+<body>
+<a name="__top__"></a>
+<table width="100%" border=0 cellspacing=0>
+  <tr>
+    <td width=213>
+      <a target="_blank" href="http://quark.sourceforge.net/"><img src="quarkicon.png" width=213 height=90 border=0 alt="Go to QuArK Web Site"></a>
+    </td>
+    <td width="70%" align=center>
+      <div class="topheadline">EdSceneObject.PAS</div>
+      <div class="sm">Updated&nbsp;25 Jul 2009</div>
+    </td>
+    <td width="30%" valign=bottom nowrap>
+      Upper&nbsp;levels:<br>-&nbsp;<a href="index.html">QuArK&nbsp;Information&nbsp;Base</a><br>-&nbsp;<a href="src.html">4.&nbsp;The&nbsp;Source&nbsp;Code</a><br>-&nbsp;<a href="src.pas.html">4.5.&nbsp;File-by-file&nbsp;descriptions</a><br>-&nbsp;<a href="src.pas.3drender.html">4.5.10.&nbsp;The&nbsp;3D-Render&nbsp;classes</a><br>
+    </td>
+  </tr>
+</table>
+<table width="100%" border=0 cellspacing=0>
+  <tr class="headline">
+    <td width="99%">
+      <p class="headline">&nbsp;4.5.10.1.&nbsp;EdSceneObject.PAS</p>
+    </td>
+    <td width="1%" align=right nowrap>
+      &nbsp;[&nbsp;<span class="navenable"><a href="src.pas.3drender.html">Prev</a></span>&nbsp;-&nbsp;<span class="navenable"><a href="src.pas.3drender.html">Up</a></span>&nbsp;-&nbsp;<span class="navenable"><a href="src.pas.3drender.fullscreenwnd.html">Next</a></span>&nbsp;]&nbsp;
+    </td>
+  </tr>
+</table>
+<table border=0 width="100%" cellspacing=10><tr><td><p>The abstract base-class for a 3D-Render window-class, and the texture-manager object which
+stores used textures for the 3D-view.
+</p>
+</td></tr></table>
+<br>
+
+<table width="100%" border=0 cellspacing=0>
+  <tr class="headline">
+    <td width="100%">
+      <p class="subheadline">&nbsp;Index</p>
+    </td>
+  </tr>
+</table>
+<ul class="index">
+  <li>- <a href="#tsceneobject">The 'TSceneObject' class</a>&nbsp;<span class="added">(25 Jul 2009)</span>
+</ul>
+<br>
+
+
+<a name="tsceneobject"></a>
+  <table width="100%" border=0 cellspacing=0>
+    <tr class="headline">
+      <td>
+        <p class="item">&nbsp;The 'TSceneObject' class</p>
+      </td>
+      <td align=right>
+        <font size=-2>Decker, DanielPharos&nbsp;-&nbsp;25 Jul 2009</font>
+      </td>
+      <td width="1%" align=right nowrap>
+        &nbsp;&nbsp;[&nbsp;<a href="#__top__">Top</a>&nbsp;]&nbsp;
+      </td>
+    </tr>
+  </table>
+  <table border=0 width="100%" cellspacing=10><tr><td>
+<p>Let me see, if I can explain what this class is all about. Mind you, I have not
+understanded it completly, so parts of this look-through explanation may be
+wrong. It's also very incomplete, but when you're working with the code, most
+of it will explain itself.
+</p><p>The idea of &nbsp;<tt>TSceneObject</tt>&nbsp; is to encapsulate the complex data structures
+and 3D-render API calls, in a general class interface for QuArK to use. This
+makes it much easier to add additional renderers later, because the generic
+interface with QuArK will be the same. It does not contain any code for a
+specific 3D-render, so one has to inherit from it and create a specialized
+class.
+</p><p>The main function calls into this abstract class are the following:
+</p><p><div class="doccode"><pre>procedure Init( ... ); virtual; abstract;</pre></div>
+</p><p>This function must initialize the window, setup default data-structures and
+options, and ready the 3D-render API calls by for instance load a DLL. It also
+applies the settings from the Configuration, and saved the camera position.
+</p><p>It is not defined in the TSceneObject class, as can be seen on the
+&nbsp;<tt>abstract</tt>&nbsp; keyword. So all classes that inherit from TSceneObject, must
+define the contents of this function themselves.
+</p><p><div class="doccode"><pre>procedure BuildScene( ... );</pre></div>
+</p><p><i>info missing...</i>&nbsp;
+</p><p><div class="doccode"><pre>procedure Render3DView; virtual; abstract;</pre></div>
+</p><p>This procedure has to render the image data. It's also possible it has to
+output the actual image to the screen, I'm not sure.
+</p><p><div class="doccode"><pre>procedure AddPolyFace( ... );</pre></div>
+</p><p><i>info missing...</i>&nbsp;
+</p><p><div class="doccode"><pre>procedure AddModel( ... );</pre></div>
+</p><p><i>info missing...</i>&nbsp;
+</p><p><div class="doccode"><pre>procedure AddBezier( ... );</pre></div>
+</p><p><i>info missing...</i>&nbsp;
+</p><p><div class="doccode"><pre>procedure AddLight( ... ); virtual;</pre></div>
+</p><p><i>info missing...</i>&nbsp;
+</p><p><div class="doccode"><pre>function StartBuildScene( ... ) : TBuildMode; virtual; abstract;</pre></div>
+</p><p><i>info missing...</i>&nbsp;
+</p><p><div class="doccode"><pre>procedure EndBuildScene; virtual;</pre></div>
+</p><p><i>info missing...</i>&nbsp;
+</p>
+  </td></tr></table>
+  <br>
+
+<br>
+
+<table width="100%" border=0 cellspacing=0>
+  <tr class="headline">
+    <td width="99%" align=center>
+      <p class="sm">
+        Copyright (c) 2009, GNU General Public License by The QuArK (Quake Army Knife) Community - <a target="_blank" href="http://quark.sourceforge.net/">http://quark.sourceforge.net/</a><br>
+      </p>
+    </td>
+    <td width="1%" align=right nowrap>
+      &nbsp;[&nbsp;<span class="navenable"><a href="src.pas.3drender.html">Prev</a></span>&nbsp;-&nbsp;<a href="#__top__">Top</a>&nbsp;-&nbsp;<span class="navenable"><a href="src.pas.3drender.fullscreenwnd.html">Next</a></span>&nbsp;]&nbsp;
+    </td>
+  </tr>
+</table>
+</body>
+</html>

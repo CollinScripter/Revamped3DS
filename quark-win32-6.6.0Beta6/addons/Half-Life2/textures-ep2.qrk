@@ -1,0 +1,899 @@
+QQRKSRC1
+{
+  QuArKProtected = "1"
+  Description = "HL2 Episode 2 from episode two materials.gcf (august/14/2011)"
+
+  HL2EP2 directory infos.qctx =
+  {
+    Game = "Half-Life2"
+    SourceDir = "ep2"
+    GameDir = "ep2"
+  }
+
+//
+// Materials for Half Life 2 Episode 2
+//
+
+  HL2EP2Textures.qtx =
+  {
+    ToolBox = "Texture Browser..."
+    Root = "HL2 Episode 2 Textures.qtxfolder"
+    HTML = "intro.texturebrowser.html"
+
+    t_ep2:incl =      {  v="ep2" PakFile="episode two materials.gcf"}
+
+    HL2 Episode 2 Textures.qtxfolder =
+    {
+        cable.txlist =
+        {
+            cable\cable_metalwinch01.wl = { t_ep2=! }
+            cable\hose_black1.wl = { t_ep2=! }
+            cable\hose_orange1.wl = { t_ep2=! }
+        }
+
+        Concrete.txlist =
+        {
+            Concrete\blendbunk_conc01.wl = { t_ep2=! }
+            Concrete\blendconcdirt004a.wl = { t_ep2=! }
+            Concrete\blendroad_broken01.wl = { t_ep2=! }
+            Concrete\bridge_concrete_world.wl = { t_ep2=! }
+            Concrete\bunker_stair01.wl = { t_ep2=! }
+            Concrete\concreteceiling_bunker01a.wl = { t_ep2=! }
+            Concrete\concretefloor038b.wl = { t_ep2=! }
+            Concrete\concretefloor038c.wl = { t_ep2=! }
+            Concrete\concretefloor_bunker01a.wl = { t_ep2=! }
+            Concrete\concretefloor_bunker02a.wl = { t_ep2=! }
+            Concrete\concretefloor_bunker02b.wl = { t_ep2=! }
+            Concrete\concretefloor_bunker02_normal.wl = { t_ep2=! }
+            Concrete\concretefloor_silo01a.wl = { t_ep2=! }
+            Concrete\concretewall_bunker01a.wl = { t_ep2=! }
+            Concrete\concretewall_bunker01b.wl = { t_ep2=! }
+            Concrete\concretewall_bunker01c.wl = { t_ep2=! }
+            Concrete\concretewall_bunker02a.wl = { t_ep2=! }
+            Concrete\concretewall_bunker02b.wl = { t_ep2=! }
+            Concrete\concretewall_bunker02c.wl = { t_ep2=! }
+            Concrete\concretewall_bunker03a.wl = { t_ep2=! }
+            Concrete\concretewall_bunker03b.wl = { t_ep2=! }
+            Concrete\concretewall_bunker03c.wl = { t_ep2=! }
+            Concrete\concretewall_bunker04a.wl = { t_ep2=! }
+            Concrete\concretewall_bunker04b.wl = { t_ep2=! }
+            Concrete\concretewall_bunker04c.wl = { t_ep2=! }
+            Concrete\concretewall_bunker04d.wl = { t_ep2=! }
+            Concrete\concretewall_bunker05a.wl = { t_ep2=! }
+            Concrete\concretewall_bunker05b.wl = { t_ep2=! }
+            Concrete\concretewall_bunker06a.wl = { t_ep2=! }
+            Concrete\concretewall_bunker06b.wl = { t_ep2=! }
+            Concrete\concretewall_bunker06c.wl = { t_ep2=! }
+            Concrete\concretewall_bunker06d.wl = { t_ep2=! }
+            Concrete\concretewall_bunker07a.wl = { t_ep2=! }
+            Concrete\concretewall_bunker07b.wl = { t_ep2=! }
+            Concrete\concretewall_bunker07c.wl = { t_ep2=! }
+            Concrete\concretewall_bunker07d.wl = { t_ep2=! }
+            Concrete\concretewall_inn01a.wl = { t_ep2=! }
+            Concrete\concretewall_inn01b.wl = { t_ep2=! }
+            Concrete\concretewall_mine_001a.wl = { t_ep2=! }
+            Concrete\concretewall_mine_001b.wl = { t_ep2=! }
+            Concrete\concretewall_mine_001c.wl = { t_ep2=! }
+            Concrete\concretewall_mine_002a.wl = { t_ep2=! }
+            Concrete\concretewall_mine_002c.wl = { t_ep2=! }
+            Concrete\concretewall_mine_003a.wl = { t_ep2=! }
+            Concrete\concretewall_silo01a.wl = { t_ep2=! }
+            Concrete\concretewall_silo01b.wl = { t_ep2=! }
+            Concrete\concrete_modular_floor001d.wl = { t_ep2=! }
+            Concrete\concrete_modular_wall001e.wl = { t_ep2=! }
+            Concrete\concrete_modular_wall001_gradient07.wl = { t_ep2=! }
+            Concrete\concrete_modular_wall001_gradient08.wl = { t_ep2=! }
+            Concrete\concrete_modular_wall001_gradient09.wl = { t_ep2=! }
+            Concrete\concrete_modular_wall001_gradient10.wl = { t_ep2=! }
+            Concrete\concrete_modular_wall001_gradient11.wl = { t_ep2=! }
+            Concrete\concrete_modular_wall001_gradient12.wl = { t_ep2=! }
+            Concrete\concrete_modular_wall001_gradient13.wl = { t_ep2=! }
+            Concrete\ep2_concretewall01a.wl = { t_ep2=! }
+            Concrete\ep2_concretewall01b.wl = { t_ep2=! }
+            Concrete\ep2_concretewall01c.wl = { t_ep2=! }
+            Concrete\ep2_concretewall01d.wl = { t_ep2=! }
+            Concrete\ep2_concretewall01e.wl = { t_ep2=! }
+            Concrete\forest_road01.wl = { t_ep2=! }
+            Concrete\forest_road01a.wl = { t_ep2=! }
+            Concrete\indust_concretewall01a.wl = { t_ep2=! }
+            Concrete\indust_concretewall01b.wl = { t_ep2=! }
+            Concrete\indust_concretewall01c.wl = { t_ep2=! }
+            Concrete\indust_concretewall01d.wl = { t_ep2=! }
+        }
+
+        console.txlist =
+        {
+            console\ep2_background01.wl = { t_ep2=! }
+            console\ep2_background01_widescreen.wl = { t_ep2=! }
+            console\ep2_background02.wl = { t_ep2=! }
+            console\ep2_background02a.wl = { t_ep2=! }
+            console\ep2_background02a_widescreen.wl = { t_ep2=! }
+            console\ep2_background02_widescreen.wl = { t_ep2=! }
+            console\ep2_background03.wl = { t_ep2=! }
+            console\ep2_background03_widescreen.wl = { t_ep2=! }
+        }
+
+        cubemaps.txlist =
+        {
+            cubemaps\cubemap_cave01.hdr.wl = { t_ep2=! }
+            cubemaps\cubemap_cave01.wl = { t_ep2=! }
+        }
+
+        decals.txlist =
+        {
+            decals\bunker_decal01.wl = { t_ep2=! }
+            decals\bunker_decal02.wl = { t_ep2=! }
+            decals\bunker_decal03.wl = { t_ep2=! }
+            decals\bunker_decal04.wl = { t_ep2=! }
+            decals\bunker_decal05.wl = { t_ep2=! }
+            decals\bunker_decal06.wl = { t_ep2=! }
+            decals\bunker_decal07.wl = { t_ep2=! }
+            decals\bunker_decal08.wl = { t_ep2=! }
+        }
+
+        demo.txlist =
+        {
+            demo\sign_demo_adaptivedensity.wl = { t_ep2=! }
+            demo\sign_demo_aitestlab.wl = { t_ep2=! }
+            demo\sign_demo_chowtime.wl = { t_ep2=! }
+            demo\sign_demo_collisiondetection.wl = { t_ep2=! }
+            demo\sign_demo_environmentalinteraction.wl = { t_ep2=! }
+            demo\sign_demo_particlebenchmark.wl = { t_ep2=! }
+            demo\sign_demo_physicsintegration.wl = { t_ep2=! }
+            demo\sign_demo_precisioncoordination.wl = { t_ep2=! }
+        }
+
+        detail.txlist =
+        {
+            detail\detailsprites.wl = { t_ep2=! }
+            detail\powermeter01.wl = { t_ep2=! }
+        }
+
+        Dev.txlist =
+        {
+            Dev\dev_energyflow.wl = { t_ep2=! }
+        }
+
+        effects.txlist =
+        {
+            effects\advisorMonitorDisplay.wl = { t_ep2=! }
+            effects\advisor_fx_001.wl = { t_ep2=! }
+            effects\advisor_fx_002.wl = { t_ep2=! }
+            effects\advisor_fx_003.wl = { t_ep2=! }
+            effects\advisor_shield.wl = { t_ep2=! }
+            effects\binary_noise_B_01.wl = { t_ep2=! }
+            effects\binary_noise_G_01.wl = { t_ep2=! }
+            effects\binary_noise_R_01.wl = { t_ep2=! }
+            effects\borealis_camera_screen.wl = { t_ep2=! }
+            effects\borealis_filmslide_001.wl = { t_ep2=! }
+            effects\borealis_image_001.wl = { t_ep2=! }
+            effects\borealis_plans_01.wl = { t_ep2=! }
+            effects\borealis_plans_02.wl = { t_ep2=! }
+            effects\borealis_plans_03.wl = { t_ep2=! }
+            effects\borealis_schematic_001.wl = { t_ep2=! }
+            effects\citadel_destroyed_card2_01a.wl = { t_ep2=! }
+            effects\citadel_destroyed_card2_01b.wl = { t_ep2=! }
+            effects\citadel_destroyed_card_01.wl = { t_ep2=! }
+            effects\citadel_destroyed_card_02.wl = { t_ep2=! }
+            effects\citadel_destroyed_card_02a.wl = { t_ep2=! }
+            effects\citadel_destroyed_card_02b.wl = { t_ep2=! }
+            effects\citadel_destroyed_card_02c.wl = { t_ep2=! }
+            effects\citadel_destroyed_card_03.wl = { t_ep2=! }
+            effects\citadel_destroyed_card_03a.wl = { t_ep2=! }
+            effects\citadel_destroyed_card_03a_small.wl = { t_ep2=! }
+            effects\citadel_destroyed_card_03b.wl = { t_ep2=! }
+            effects\citadel_destroyed_card_04.wl = { t_ep2=! }
+            effects\citadel_destroyed_card_05.wl = { t_ep2=! }
+            effects\citadel_destroyed_card_06.wl = { t_ep2=! }
+            effects\citadel_destroyed_card_07.wl = { t_ep2=! }
+            effects\citadel_sky_card_01.wl = { t_ep2=! }
+            effects\display_silodoors.wl = { t_ep2=! }
+            effects\fake_fog01b.wl = { t_ep2=! }
+            effects\fake_fog01b_hdr.wl = { t_ep2=! }
+            effects\fake_fog04.wl = { t_ep2=! }
+            effects\fake_smoke01.wl = { t_ep2=! }
+            effects\fire_glow.wl = { t_ep2=! }
+            effects\flatgray_01.wl = { t_ep2=! }
+            effects\flat_normal.wl = { t_ep2=! }
+            effects\gman_silouette_01.wl = { t_ep2=! }
+            effects\huntermuzzle.wl = { t_ep2=! }
+            effects\hunterphysblast.wl = { t_ep2=! }
+            effects\hunterphysblast_normal.wl = { t_ep2=! }
+            effects\huntertracer.wl = { t_ep2=! }
+            effects\magmonitor_idle.wl = { t_ep2=! }
+            effects\magmonitor_talk.wl = { t_ep2=! }
+            effects\minescreen_static01_.wl = { t_ep2=! }
+            effects\monitorscreen_scanline1a.wl = { t_ep2=! }
+            effects\screen_monitor_blank.wl = { t_ep2=! }
+            effects\silodisplay_doors.wl = { t_ep2=! }
+            effects\silodisplay_forestcams_001.wl = { t_ep2=! }
+            effects\silodisplay_forestcams_002.wl = { t_ep2=! }
+            effects\skyline_01a.wl = { t_ep2=! }
+            effects\splashwake_new1.wl = { t_ep2=! }
+            effects\tvscreen_noise001c.wl = { t_ep2=! }
+            effects\tvscreen_noise003a.wl = { t_ep2=! }
+            effects\water_warp01.wl = { t_ep2=! }
+            effects\water_warp01_dx8.wl = { t_ep2=! }
+            effects\whiteforest_screen.wl = { t_ep2=! }
+        }
+
+        Engine.txlist =
+        {
+            Engine\eye-cornea.wl = { t_ep2=! }
+            Engine\eye-extra.wl = { t_ep2=! }
+            Engine\eye-iris-blue.wl = { t_ep2=! }
+            Engine\eye-iris-brown.wl = { t_ep2=! }
+            Engine\eye-iris-green.wl = { t_ep2=! }
+            Engine\eye-reflection-cubemap-.wl = { t_ep2=! }
+            Engine\noise-blur-256x256.wl = { t_ep2=! }
+        }
+
+        glass.txlist =
+        {
+            glass\combinepodglass001a.wl = { t_ep2=! }
+            glass\ep2_window01.wl = { t_ep2=! }
+            glass\glasswindow_refract.wl = { t_ep2=! }
+            glass\glasswindow_refract01.wl = { t_ep2=! }
+            glass\glass_normal.wl = { t_ep2=! }
+        }
+
+        lights.txlist =
+        {
+            lights\blue001.wl = { t_ep2=! }
+            lights\blue002.wl = { t_ep2=! }
+            lights\lightpanel_01.wl = { t_ep2=! }
+            lights\lightpanel_01_noglow.wl = { t_ep2=! }
+            lights\lightpanel_02.wl = { t_ep2=! }
+            lights\lightpanel_02_noglow.wl = { t_ep2=! }
+        }
+
+        maps.txlist =
+        {
+        }
+
+        metal.txlist =
+        {
+            metal\bunker_metaldoor01.wl = { t_ep2=! }
+            metal\bunker_metaltruss01.wl = { t_ep2=! }
+            metal\bunker_metalwall01a.wl = { t_ep2=! }
+            metal\bunker_metalwall01b.wl = { t_ep2=! }
+            metal\bunker_metalwall01_normal.wl = { t_ep2=! }
+            metal\bunker_metalwall02a.wl = { t_ep2=! }
+            metal\bunker_metalwall03a.wl = { t_ep2=! }
+            metal\forest_metal01a.wl = { t_ep2=! }
+            metal\forest_metal01b.wl = { t_ep2=! }
+            metal\forest_metal01c.wl = { t_ep2=! }
+            metal\forest_metal01d.wl = { t_ep2=! }
+            metal\forest_metal01e.wl = { t_ep2=! }
+            metal\forest_metal01f.wl = { t_ep2=! }
+            metal\forest_metal01g.wl = { t_ep2=! }
+            metal\forest_metal01h.wl = { t_ep2=! }
+            metal\forest_metal06a_bump-ssbump.wl = { t_ep2=! }
+            metal\forest_metal_02a.wl = { t_ep2=! }
+            metal\forest_metal_02a_height-ssbump.wl = { t_ep2=! }
+            metal\forest_metal_02b.wl = { t_ep2=! }
+            metal\forest_metal_02c.wl = { t_ep2=! }
+            metal\forest_metal_03a.wl = { t_ep2=! }
+            metal\forest_metal_03a_height-ssbump.wl = { t_ep2=! }
+            metal\forest_metal_03b.wl = { t_ep2=! }
+            metal\forest_metal_03c.wl = { t_ep2=! }
+            metal\forest_metal_04a.wl = { t_ep2=! }
+            metal\forest_metal_04a_height-ssbump.wl = { t_ep2=! }
+            metal\forest_metal_04b.wl = { t_ep2=! }
+            metal\forest_metal_04c.wl = { t_ep2=! }
+            metal\forest_metal_05a.wl = { t_ep2=! }
+            metal\forest_metal_05b.wl = { t_ep2=! }
+            metal\forest_metal_05c.wl = { t_ep2=! }
+            metal\forest_metal_06a.wl = { t_ep2=! }
+            metal\forest_metal_06b.wl = { t_ep2=! }
+            metal\forest_metal_07.wl = { t_ep2=! }
+            metal\forest_sign01.wl = { t_ep2=! }
+            metal\forest_sign_decal02.wl = { t_ep2=! }
+            metal\metalbeam001a.wl = { t_ep2=! }
+            metal\metaldoor045a.wl = { t_ep2=! }
+            metal\metaldoor_white01.wl = { t_ep2=! }
+            metal\metalfence004a.wl = { t_ep2=! }
+            metal\metalfence007a.wl = { t_ep2=! }
+            metal\metalfloor003a.wl = { t_ep2=! }
+            metal\metalgate001a.wl = { t_ep2=! }
+            metal\metalgrate013a.wl = { t_ep2=! }
+            metal\metalgrate013a2.wl = { t_ep2=! }
+            metal\metalgrate013a3.wl = { t_ep2=! }
+            metal\metalgrate014a.wl = { t_ep2=! }
+            metal\metalgrate_silo01a.wl = { t_ep2=! }
+            metal\metalgrate_silo01b.wl = { t_ep2=! }
+            metal\metalpipe003a.wl = { t_ep2=! }
+            metal\metalpipe003a_normal.wl = { t_ep2=! }
+            metal\metalpipe_vent001b.wl = { t_ep2=! }
+            metal\metalpipe_vent001c.wl = { t_ep2=! }
+            metal\metaltruss017c.wl = { t_ep2=! }
+            metal\metaltruss029a.wl = { t_ep2=! }
+            metal\metalwall018f.wl = { t_ep2=! }
+            metal\metalwall021f.wl = { t_ep2=! }
+            metal\metalwall089b.wl = { t_ep2=! }
+            metal\metalwall_bm_01a.wl = { t_ep2=! }
+            metal\metalwall_bts_002aa.wl = { t_ep2=! }
+            metal\metalwall_bts_002aaa.wl = { t_ep2=! }
+            metal\metalwall_silo01a.wl = { t_ep2=! }
+            metal\metalwall_silo01b.wl = { t_ep2=! }
+            metal\metal_emergencystripe01a.wl = { t_ep2=! }
+            metal\metal_liftbase01.wl = { t_ep2=! }
+            metal\metal_liftbase01_normal.wl = { t_ep2=! }
+            metal\silo_metal_01a.wl = { t_ep2=! }
+            metal\silo_metal_02a.wl = { t_ep2=! }
+            metal\silo_metal_02b.wl = { t_ep2=! }
+            metal\silo_metal_02c.wl = { t_ep2=! }
+        }
+
+        models.txlist =
+        {
+        }
+
+        nature.txlist =
+        {
+            nature\1west.wl = { t_ep2=! }
+            nature\1west_2.wl = { t_ep2=! }
+            nature\1west_3.wl = { t_ep2=! }
+            nature\2north.wl = { t_ep2=! }
+            nature\3east.wl = { t_ep2=! }
+            nature\antlion_crust01a.wl = { t_ep2=! }
+            nature\antlion_web01a.wl = { t_ep2=! }
+            nature\antlion_web01a_dx8.wl = { t_ep2=! }
+            nature\antlion_web01a_normal.wl = { t_ep2=! }
+            nature\antlion_web01a_ssbump.wl = { t_ep2=! }
+            nature\arctic_card_01.wl = { t_ep2=! }
+            nature\blendashdirt01.wl = { t_ep2=! }
+            nature\blendcliffsand01a.wl = { t_ep2=! }
+            nature\blendcliffsand01a_tooltexture.wl = { t_ep2=! }
+            nature\blenddirtdirt001b.wl = { t_ep2=! }
+            nature\blenddirtdirt001c.wl = { t_ep2=! }
+            nature\blenddirtgravel01.wl = { t_ep2=! }
+            nature\blenddirtmud01.wl = { t_ep2=! }
+            nature\blenddirtmud02.wl = { t_ep2=! }
+            nature\blenddirtmud02a.wl = { t_ep2=! }
+            nature\blenddirtmud03.wl = { t_ep2=! }
+            nature\blenddirtrock_mine01a.wl = { t_ep2=! }
+            nature\blenddirtrock_mine01b.wl = { t_ep2=! }
+            nature\blendgrassdirt01.wl = { t_ep2=! }
+            nature\blendgrassdirt01_noprop.wl = { t_ep2=! }
+            nature\blendgrassdirt02.wl = { t_ep2=! }
+            nature\blendgrassdirt02_noprop.wl = { t_ep2=! }
+            nature\blendgrassdirt03.wl = { t_ep2=! }
+            nature\blendgrassgravel002b.wl = { t_ep2=! }
+            nature\blendgrassgravel003a.wl = { t_ep2=! }
+            nature\blendgrassgravel01.wl = { t_ep2=! }
+            nature\blendgrassmud01.wl = { t_ep2=! }
+            nature\blendgrasspave01.wl = { t_ep2=! }
+            nature\blendgrasspave02.wl = { t_ep2=! }
+            nature\blendgravelconc01.wl = { t_ep2=! }
+            nature\blendgraveldirt01.wl = { t_ep2=! }
+            nature\blendgravelgravel01.wl = { t_ep2=! }
+            nature\blendgravelgravel02.wl = { t_ep2=! }
+            nature\blendgravelgravel02b.wl = { t_ep2=! }
+            nature\blendgravelmud01.wl = { t_ep2=! }
+            nature\blendgravelmud02.wl = { t_ep2=! }
+            nature\blendpavedirt01.wl = { t_ep2=! }
+            nature\blendpavedirt01_nodetail.wl = { t_ep2=! }
+            nature\blendrockblack01a.wl = { t_ep2=! }
+            nature\blendrockblack02a.wl = { t_ep2=! }
+            nature\blendrockblack02a_dx8.wl = { t_ep2=! }
+            nature\blendrockconcrete01a.wl = { t_ep2=! }
+            nature\blendrockdirt_tunnel02a.wl = { t_ep2=! }
+            nature\blendrockdirt_tunnel03a.wl = { t_ep2=! }
+            nature\blendrockdirt_tunnel03a_dx8.wl = { t_ep2=! }
+            nature\blendrockmud01a.wl = { t_ep2=! }
+            nature\blendrockrock007b.wl = { t_ep2=! }
+            nature\blendrockrock007c.wl = { t_ep2=! }
+            nature\blendrockrock07b_tooltexture.wl = { t_ep2=! }
+            nature\blendrocksand08b.wl = { t_ep2=! }
+            nature\blendrocksand08b_tooltexture.wl = { t_ep2=! }
+            nature\blendrocksand08c.wl = { t_ep2=! }
+            nature\blendrocksand08c_detail.wl = { t_ep2=! }
+            nature\blendrockslime01a.wl = { t_ep2=! }
+            nature\blendrockslime02a.wl = { t_ep2=! }
+            nature\blendrockslime02a_dx8.wl = { t_ep2=! }
+            nature\blendsandrock005a.wl = { t_ep2=! }
+            nature\blendslimeslime01a.wl = { t_ep2=! }
+            nature\blendslimeslime02a.wl = { t_ep2=! }
+            nature\blendslimetexture01.wl = { t_ep2=! }
+            nature\blendtexture01.wl = { t_ep2=! }
+            nature\blue_light01.wl = { t_ep2=! }
+            nature\blue_sky01.wl = { t_ep2=! }
+            nature\blue_sky02.wl = { t_ep2=! }
+            nature\cave_strands_01.wl = { t_ep2=! }
+            nature\Cliff01a-ssbump.wl = { t_ep2=! }
+            nature\Cliff01a.wl = { t_ep2=! }
+            nature\Cliff02a-ssbump.wl = { t_ep2=! }
+            nature\Cliff02a.wl = { t_ep2=! }
+            nature\cliff03a.wl = { t_ep2=! }
+            nature\cliff03b.wl = { t_ep2=! }
+            nature\cliff04a.wl = { t_ep2=! }
+            nature\cliff04b.wl = { t_ep2=! }
+            nature\Clifftrees_cardboard01a.wl = { t_ep2=! }
+            nature\clifftrees_cardboard01a.wl = { t_ep2=! }
+            nature\Clifftrees_cardboard02a.wl = { t_ep2=! }
+            nature\clifftrees_cardboard02a.wl = { t_ep2=! }
+            nature\Clifftrees_cardboard03a.wl = { t_ep2=! }
+            nature\clifftrees_cardboard03a.wl = { t_ep2=! }
+            nature\clifftrees_cardboard05a.wl = { t_ep2=! }
+            nature\cliff_path01a.wl = { t_ep2=! }
+            nature\dirtfloor004a.wl = { t_ep2=! }
+            nature\dirtfloor012a_normal.wl = { t_ep2=! }
+            nature\dirtfloor012a_ssbump.wl = { t_ep2=! }
+            nature\dirtfloor_mine001a.wl = { t_ep2=! }
+            nature\dirtfloor_mine001b.wl = { t_ep2=! }
+            nature\dirtfloor_mine001b_normal.wl = { t_ep2=! }
+            nature\dirtroad001a.wl = { t_ep2=! }
+            nature\dirtroad001b.wl = { t_ep2=! }
+            nature\flat_height-ssbump.wl = { t_ep2=! }
+            nature\flat_normal.wl = { t_ep2=! }
+            nature\forest_clouds001a.wl = { t_ep2=! }
+            nature\forest_dirt_01.wl = { t_ep2=! }
+            nature\forest_dirt_02.wl = { t_ep2=! }
+            nature\forest_dirt_03.wl = { t_ep2=! }
+            nature\forest_dirt_04.wl = { t_ep2=! }
+            nature\forest_fog01.wl = { t_ep2=! }
+            nature\forest_grass_01.wl = { t_ep2=! }
+            nature\forest_gravel_01.wl = { t_ep2=! }
+            nature\forest_mud_01.wl = { t_ep2=! }
+            nature\forest_rock_01.wl = { t_ep2=! }
+            nature\forest_treeline_01.wl = { t_ep2=! }
+            nature\forest_web01.wl = { t_ep2=! }
+            nature\forest_web02.wl = { t_ep2=! }
+            nature\forest_web03.wl = { t_ep2=! }
+            nature\groundplane_01a.wl = { t_ep2=! }
+            nature\groundplane_01c.wl = { t_ep2=! }
+            nature\midground_element_1.wl = { t_ep2=! }
+            nature\midground_element_2.wl = { t_ep2=! }
+            nature\midground_element_3.wl = { t_ep2=! }
+            nature\mountain001.wl = { t_ep2=! }
+            nature\mountain001b.wl = { t_ep2=! }
+            nature\mountainrange_6amid_pan_01.wl = { t_ep2=! }
+            nature\mountainrange_6amid_pan_02.wl = { t_ep2=! }
+            nature\mountainrange_7mid_pan_01.wl = { t_ep2=! }
+            nature\mountainrange_7mid_pan_02.wl = { t_ep2=! }
+            nature\mountainrange_9mid_pan_01.wl = { t_ep2=! }
+            nature\mountainrange_far_00a.wl = { t_ep2=! }
+            nature\mountainrange_far_00a_dark.wl = { t_ep2=! }
+            nature\mountainrange_far_00b.wl = { t_ep2=! }
+            nature\mountainrange_far_00b_dark.wl = { t_ep2=! }
+            nature\mountainrange_far_00c.wl = { t_ep2=! }
+            nature\mountainrange_far_00c_dark.wl = { t_ep2=! }
+            nature\mountainrange_far_00d.wl = { t_ep2=! }
+            nature\mountainrange_far_00d_dark.wl = { t_ep2=! }
+            nature\mountainrange_far_01a.wl = { t_ep2=! }
+            nature\mountainrange_far_01b.wl = { t_ep2=! }
+            nature\mountainrange_far_01bb.wl = { t_ep2=! }
+            nature\mountainrange_far_01c.wl = { t_ep2=! }
+            nature\mountainrange_far_01d.wl = { t_ep2=! }
+            nature\mountainrange_far_02a.wl = { t_ep2=! }
+            nature\mountainrange_far_02b.wl = { t_ep2=! }
+            nature\mountainrange_far_02c.wl = { t_ep2=! }
+            nature\mountainrange_far_02d.wl = { t_ep2=! }
+            nature\mountainrange_far_03a.wl = { t_ep2=! }
+            nature\mountainrange_far_03b.wl = { t_ep2=! }
+            nature\mountainrange_far_03c.wl = { t_ep2=! }
+            nature\mountainrange_far_03d.wl = { t_ep2=! }
+            nature\mountainrange_far_04a.wl = { t_ep2=! }
+            nature\mountainrange_far_04b.wl = { t_ep2=! }
+            nature\mountainrange_far_04c.wl = { t_ep2=! }
+            nature\mountainrange_far_04d.wl = { t_ep2=! }
+            nature\mountainrange_mid_01a.wl = { t_ep2=! }
+            nature\mountainrange_mid_01b.wl = { t_ep2=! }
+            nature\mountainrange_mid_01c.wl = { t_ep2=! }
+            nature\mountainrange_mid_01d.wl = { t_ep2=! }
+            nature\mountainrange_mid_pan_01.wl = { t_ep2=! }
+            nature\mountainrange_mid_pan_01b.wl = { t_ep2=! }
+            nature\mountainrange_mid_pan_01c.wl = { t_ep2=! }
+            nature\mountainscape.wl = { t_ep2=! }
+            nature\mountains_skybox01.wl = { t_ep2=! }
+            nature\mountains_skybox01a.wl = { t_ep2=! }
+            nature\mountains_skybox02.wl = { t_ep2=! }
+            nature\mudfloor06a.wl = { t_ep2=! }
+            nature\new vista flat.wl = { t_ep2=! }
+            nature\pave_blendtexture01.wl = { t_ep2=! }
+            nature\rockblendtexture001a.wl = { t_ep2=! }
+            nature\rockfloor002a.wl = { t_ep2=! }
+            nature\rockfloor002c.wl = { t_ep2=! }
+            nature\rockwall007a.wl = { t_ep2=! }
+            nature\rockwall021b.wl = { t_ep2=! }
+            nature\rockwall021b_height.wl = { t_ep2=! }
+            nature\rockwall021b_normal.wl = { t_ep2=! }
+            nature\rockwall021c.wl = { t_ep2=! }
+            nature\rockwall021c_height.wl = { t_ep2=! }
+            nature\rockwall021c_normal.wl = { t_ep2=! }
+            nature\rockwall021d.wl = { t_ep2=! }
+            nature\rockwall021d_height.wl = { t_ep2=! }
+            nature\rockwall021d_normal.wl = { t_ep2=! }
+            nature\rockwall021e.wl = { t_ep2=! }
+            nature\rockwall021e_normal.wl = { t_ep2=! }
+            nature\rockwall021_detail.wl = { t_ep2=! }
+            nature\rockwall_antlion01a.wl = { t_ep2=! }
+            nature\rockwall_antlion01a_normal.wl = { t_ep2=! }
+            nature\rockwall_antlion01a_ssbump.wl = { t_ep2=! }
+            nature\rockwall_antlion02a.wl = { t_ep2=! }
+            nature\rockwall_antlion03a.wl = { t_ep2=! }
+            nature\rockwall_antlion04a.wl = { t_ep2=! }
+            nature\rockwall_cave01a.wl = { t_ep2=! }
+            nature\rockwall_cave02a.wl = { t_ep2=! }
+            nature\rockwall_cave02a_dx8.wl = { t_ep2=! }
+            nature\rockwall_cave03a.wl = { t_ep2=! }
+            nature\rockwall_cave_02a_height-ssbump.wl = { t_ep2=! }
+            nature\rockwall_cave_03a_height-ssbump.wl = { t_ep2=! }
+            nature\rockwall_cave_03a_height.wl = { t_ep2=! }
+            nature\sandfloor008c.wl = { t_ep2=! }
+            nature\sandfloor008c_height.wl = { t_ep2=! }
+            nature\sandfloor008c_normal.wl = { t_ep2=! }
+            nature\sandfloor009c.wl = { t_ep2=! }
+            nature\scenic_1_alpha.wl = { t_ep2=! }
+            nature\scenic_2_alpha.wl = { t_ep2=! }
+            nature\scenic_3_alpha.wl = { t_ep2=! }
+            nature\scenic_4_alpha.wl = { t_ep2=! }
+            nature\scenic_5_alpha.wl = { t_ep2=! }
+            nature\scenic_6_alpha.wl = { t_ep2=! }
+            nature\smallcliff.wl = { t_ep2=! }
+            nature\smoke_element_01.wl = { t_ep2=! }
+            nature\snowy_treeline001.wl = { t_ep2=! }
+            nature\toxicslime002a.wl = { t_ep2=! }
+            nature\trees_skybox01.wl = { t_ep2=! }
+            nature\vista_card_12.wl = { t_ep2=! }
+            nature\water_frame01_dudv.wl = { t_ep2=! }
+            nature\water_frame01_normal.wl = { t_ep2=! }
+            nature\water_riverbed01.wl = { t_ep2=! }
+            nature\water_riverbed01_beneath.wl = { t_ep2=! }
+            nature\water_riverbed01_beneath_dx8.wl = { t_ep2=! }
+            nature\water_riverbed01_dx8.wl = { t_ep2=! }
+            nature\water_riverbed02.wl = { t_ep2=! }
+            nature\water_riverbed02_beneath.wl = { t_ep2=! }
+            nature\water_riverbed02_beneath_dx8.wl = { t_ep2=! }
+            nature\water_riverbed02_dx8.wl = { t_ep2=! }
+            nature\water_riverbed03.wl = { t_ep2=! }
+            nature\water_riverbed04.wl = { t_ep2=! }
+            nature\water_riverbed04_dx8.wl = { t_ep2=! }
+            nature\water_silo_01.wl = { t_ep2=! }
+            nature\water_silo_01_beneath.wl = { t_ep2=! }
+            nature\water_tunnels01.wl = { t_ep2=! }
+            nature\water_tunnels01_beneath.wl = { t_ep2=! }
+            nature\water_tunnels01_beneath_dx8.wl = { t_ep2=! }
+            nature\water_tunnels01_cheap.wl = { t_ep2=! }
+            nature\water_tunnels01_dx8.wl = { t_ep2=! }
+            nature\webblendtexture.wl = { t_ep2=! }
+        }
+
+        overlays.txlist =
+        {
+            overlays\antlion_bloodstain_002.wl = { t_ep2=! }
+            overlays\bloodpool1.wl = { t_ep2=! }
+            overlays\bloodpool2.wl = { t_ep2=! }
+            overlays\bloodpool3.wl = { t_ep2=! }
+            overlays\bloodpool4.wl = { t_ep2=! }
+            overlays\bootprint_01.wl = { t_ep2=! }
+            overlays\bootprint_02.wl = { t_ep2=! }
+            overlays\concreteartifacts01b.wl = { t_ep2=! }
+            overlays\ep2_graffiti01.wl = { t_ep2=! }
+            overlays\ep2_graffiti02.wl = { t_ep2=! }
+            overlays\ep2_graffiti03.wl = { t_ep2=! }
+            overlays\ep2_vent01.wl = { t_ep2=! }
+            overlays\it_poster013.wl = { t_ep2=! }
+            overlays\it_poster014.wl = { t_ep2=! }
+            overlays\leaves_ground03.wl = { t_ep2=! }
+            overlays\overlay_DWhiteForest.wl = { t_ep2=! }
+            overlays\overlay_signbreakglass001a.wl = { t_ep2=! }
+            overlays\paintswatch01a.wl = { t_ep2=! }
+            overlays\paintswatch01b.wl = { t_ep2=! }
+            overlays\paintswatch01c.wl = { t_ep2=! }
+            overlays\paintswatch02a.wl = { t_ep2=! }
+            overlays\paintswatch02b.wl = { t_ep2=! }
+            overlays\paintswatch02c.wl = { t_ep2=! }
+            overlays\rationpapers01.wl = { t_ep2=! }
+            overlays\rationpapers03.wl = { t_ep2=! }
+            overlays\rationpapers04.wl = { t_ep2=! }
+            overlays\reedmat001.wl = { t_ep2=! }
+            overlays\road_dirt_01a.wl = { t_ep2=! }
+            overlays\road_dirt_01b.wl = { t_ep2=! }
+            overlays\roundwindowdecal01.wl = { t_ep2=! }
+            overlays\roundwindowdecal02.wl = { t_ep2=! }
+            overlays\sign_bunker_cluster01.wl = { t_ep2=! }
+            overlays\sign_cossacktransport_02.wl = { t_ep2=! }
+            overlays\sign_generic_cluster01.wl = { t_ep2=! }
+            overlays\sign_generic_cluster02.wl = { t_ep2=! }
+            overlays\sign_generic_cluster03.wl = { t_ep2=! }
+            overlays\sign_ironorecorp_03.wl = { t_ep2=! }
+            overlays\sign_northernlogging_01.wl = { t_ep2=! }
+            overlays\sign_shipping_01.wl = { t_ep2=! }
+            overlays\sign_shipping_03.wl = { t_ep2=! }
+            overlays\sign_silo01.wl = { t_ep2=! }
+            overlays\sign_silo02.wl = { t_ep2=! }
+            overlays\sign_silo03.wl = { t_ep2=! }
+            overlays\sign_silo04.wl = { t_ep2=! }
+            overlays\sign_silo_cluster01.wl = { t_ep2=! }
+            overlays\sign_silo_drm_01.wl = { t_ep2=! }
+            overlays\sign_silo_one.wl = { t_ep2=! }
+            overlays\sign_silo_temp01.wl = { t_ep2=! }
+            overlays\sign_silo_temp02.wl = { t_ep2=! }
+            overlays\sign_silo_temp03.wl = { t_ep2=! }
+            overlays\sign_silo_two.wl = { t_ep2=! }
+            overlays\sign_subarctictransport_01.wl = { t_ep2=! }
+            overlays\sign_subarctictransport_03.wl = { t_ep2=! }
+            overlays\sign_victorymine_01.wl = { t_ep2=! }
+            overlays\sign_victorymine_02.wl = { t_ep2=! }
+            overlays\sign_victorymine_03.wl = { t_ep2=! }
+            overlays\sign_victorymine_04.wl = { t_ep2=! }
+            overlays\sign_whiteforest_inn_01.wl = { t_ep2=! }
+            overlays\stain_concrete005.wl = { t_ep2=! }
+            overlays\stain_concrete006.wl = { t_ep2=! }
+            overlays\stain_concrete007.wl = { t_ep2=! }
+            overlays\stain_concrete008.wl = { t_ep2=! }
+            overlays\stain_concrete009.wl = { t_ep2=! }
+            overlays\stain_concrete010.wl = { t_ep2=! }
+            overlays\stain_concrete011.wl = { t_ep2=! }
+            overlays\stain_concrete012.wl = { t_ep2=! }
+            overlays\whiteForestLogo.wl = { t_ep2=! }
+            overlays\youarehere_overlay.wl = { t_ep2=! }
+        }
+
+        particle.txlist =
+        {
+            particle\animglow02.wl = { t_ep2=! }
+            particle\beam_smoke_01.wl = { t_ep2=! }
+            particle\beam_smoke_02.wl = { t_ep2=! }
+            particle\bendibeam_nofog.wl = { t_ep2=! }
+            particle\fireGradient.wl = { t_ep2=! }
+            particle\glow_haze_nofog.wl = { t_ep2=! }
+            particle\particle_cloud2.wl = { t_ep2=! }
+            particle\particle_electrical_arc.wl = { t_ep2=! }
+            particle\particle_vortring1.wl = { t_ep2=! }
+            particle\smokestack_nofog.wl = { t_ep2=! }
+            particle\smoke_black_smokestack000.wl = { t_ep2=! }
+            particle\smoke_black_smokestack001.wl = { t_ep2=! }
+            particle\smoke_black_smokestack_all.wl = { t_ep2=! }
+        }
+
+        plaster.txlist =
+        {
+            plaster\cellarwall01b.wl = { t_ep2=! }
+            plaster\plasterwall008.wl = { t_ep2=! }
+            plaster\plasterwall008a.wl = { t_ep2=! }
+            plaster\plasterwall008b.wl = { t_ep2=! }
+            plaster\plasterwall009.wl = { t_ep2=! }
+            plaster\plasterwall009a.wl = { t_ep2=! }
+            plaster\plasterwall009b.wl = { t_ep2=! }
+            plaster\plasterwall011.wl = { t_ep2=! }
+            plaster\plasterwall011a.wl = { t_ep2=! }
+            plaster\plasterwall011b.wl = { t_ep2=! }
+            plaster\plasterwall014.wl = { t_ep2=! }
+            plaster\plasterwall014a.wl = { t_ep2=! }
+            plaster\plasterwall014b.wl = { t_ep2=! }
+            plaster\plasterwall052a.wl = { t_ep2=! }
+            plaster\plasterwall052b.wl = { t_ep2=! }
+            plaster\plasterwall052c.wl = { t_ep2=! }
+            plaster\plasterwall053a.wl = { t_ep2=! }
+            plaster\plasterwall11b.wl = { t_ep2=! }
+        }
+
+        Props.txlist =
+        {
+            Props\borealis_01.wl = { t_ep2=! }
+            Props\borealis_02.wl = { t_ep2=! }
+            Props\camera_vignettecorner_1.wl = { t_ep2=! }
+            Props\outland_basemap.wl = { t_ep2=! }
+            Props\sign_sawmill_01.wl = { t_ep2=! }
+            Props\sign_trainsation_1a.wl = { t_ep2=! }
+            Props\wall_map_01.wl = { t_ep2=! }
+        }
+
+        rendering_regression_test.txlist =
+        {
+            rendering_regression_test\volumetricfog.wl = { t_ep2=! }
+            rendering_regression_test\volumetricfog_bottom.wl = { t_ep2=! }
+        }
+
+        scripted.txlist =
+        {
+            scripted\intro_screenspaceeffect.wl = { t_ep2=! }
+        }
+
+        skybox.txlist =
+        {
+            skybox\demosky_guy_1.wl = { t_ep2=! }
+            skybox\sky_ep02_01bk.wl = { t_ep2=! }
+            skybox\sky_ep02_01dn.wl = { t_ep2=! }
+            skybox\sky_ep02_01ft.wl = { t_ep2=! }
+            skybox\sky_ep02_01lf.wl = { t_ep2=! }
+            skybox\sky_ep02_01rt.wl = { t_ep2=! }
+            skybox\sky_ep02_01up.wl = { t_ep2=! }
+            skybox\sky_ep02_01_hdrbk.wl = { t_ep2=! }
+            skybox\sky_ep02_01_hdrdn.wl = { t_ep2=! }
+            skybox\sky_ep02_01_hdrft.wl = { t_ep2=! }
+            skybox\sky_ep02_01_hdrlf.wl = { t_ep2=! }
+            skybox\sky_ep02_01_hdrrt.wl = { t_ep2=! }
+            skybox\sky_ep02_01_hdrup.wl = { t_ep2=! }
+            skybox\sky_ep02_02bk.wl = { t_ep2=! }
+            skybox\sky_ep02_02dn.wl = { t_ep2=! }
+            skybox\sky_ep02_02ft.wl = { t_ep2=! }
+            skybox\sky_ep02_02lf.wl = { t_ep2=! }
+            skybox\sky_ep02_02rt.wl = { t_ep2=! }
+            skybox\sky_ep02_02up.wl = { t_ep2=! }
+            skybox\sky_ep02_02_hdrbk.wl = { t_ep2=! }
+            skybox\sky_ep02_02_hdrdn.wl = { t_ep2=! }
+            skybox\sky_ep02_02_hdrft.wl = { t_ep2=! }
+            skybox\sky_ep02_02_hdrlf.wl = { t_ep2=! }
+            skybox\sky_ep02_02_hdrrt.wl = { t_ep2=! }
+            skybox\sky_ep02_02_hdrup.wl = { t_ep2=! }
+            skybox\sky_ep02_03bk.wl = { t_ep2=! }
+            skybox\sky_ep02_03dn.wl = { t_ep2=! }
+            skybox\sky_ep02_03ft.wl = { t_ep2=! }
+            skybox\sky_ep02_03lf.wl = { t_ep2=! }
+            skybox\sky_ep02_03rt.wl = { t_ep2=! }
+            skybox\sky_ep02_03up.wl = { t_ep2=! }
+            skybox\sky_ep02_03_hdrbk.wl = { t_ep2=! }
+            skybox\sky_ep02_03_hdrdn.wl = { t_ep2=! }
+            skybox\sky_ep02_03_hdrft.wl = { t_ep2=! }
+            skybox\sky_ep02_03_hdrlf.wl = { t_ep2=! }
+            skybox\sky_ep02_03_hdrrt.wl = { t_ep2=! }
+            skybox\sky_ep02_03_hdrup.wl = { t_ep2=! }
+            skybox\sky_ep02_04bk.wl = { t_ep2=! }
+            skybox\sky_ep02_04dn.wl = { t_ep2=! }
+            skybox\sky_ep02_04ft.wl = { t_ep2=! }
+            skybox\sky_ep02_04lf.wl = { t_ep2=! }
+            skybox\sky_ep02_04rt.wl = { t_ep2=! }
+            skybox\sky_ep02_04up.wl = { t_ep2=! }
+            skybox\sky_ep02_04_hdrbk.wl = { t_ep2=! }
+            skybox\sky_ep02_04_hdrdn.wl = { t_ep2=! }
+            skybox\sky_ep02_04_hdrft.wl = { t_ep2=! }
+            skybox\sky_ep02_04_hdrlf.wl = { t_ep2=! }
+            skybox\sky_ep02_04_hdrrt.wl = { t_ep2=! }
+            skybox\sky_ep02_04_hdrup.wl = { t_ep2=! }
+            skybox\sky_ep02_05bk.wl = { t_ep2=! }
+            skybox\sky_ep02_05dn.wl = { t_ep2=! }
+            skybox\sky_ep02_05ft.wl = { t_ep2=! }
+            skybox\sky_ep02_05lf.wl = { t_ep2=! }
+            skybox\sky_ep02_05rt.wl = { t_ep2=! }
+            skybox\sky_ep02_05up.wl = { t_ep2=! }
+            skybox\sky_ep02_05up_fake.wl = { t_ep2=! }
+            skybox\sky_ep02_05_hdrbk.wl = { t_ep2=! }
+            skybox\sky_ep02_05_hdrdn.wl = { t_ep2=! }
+            skybox\sky_ep02_05_hdrft.wl = { t_ep2=! }
+            skybox\sky_ep02_05_hdrlf.wl = { t_ep2=! }
+            skybox\sky_ep02_05_hdrrt.wl = { t_ep2=! }
+            skybox\sky_ep02_05_hdrup.wl = { t_ep2=! }
+            skybox\sky_ep02_06bk.wl = { t_ep2=! }
+            skybox\sky_ep02_06dn.wl = { t_ep2=! }
+            skybox\sky_ep02_06ft.wl = { t_ep2=! }
+            skybox\sky_ep02_06lf.wl = { t_ep2=! }
+            skybox\sky_ep02_06rt.wl = { t_ep2=! }
+            skybox\sky_ep02_06up.wl = { t_ep2=! }
+            skybox\sky_ep02_06_hdrbk.wl = { t_ep2=! }
+            skybox\sky_ep02_06_hdrdn.wl = { t_ep2=! }
+            skybox\sky_ep02_06_hdrft.wl = { t_ep2=! }
+            skybox\sky_ep02_06_hdrlf.wl = { t_ep2=! }
+            skybox\sky_ep02_06_hdrrt.wl = { t_ep2=! }
+            skybox\sky_ep02_06_hdrup.wl = { t_ep2=! }
+            skybox\sky_ep02_07bk.wl = { t_ep2=! }
+            skybox\sky_ep02_07dn.wl = { t_ep2=! }
+            skybox\sky_ep02_07ft.wl = { t_ep2=! }
+            skybox\sky_ep02_07lf.wl = { t_ep2=! }
+            skybox\sky_ep02_07rt.wl = { t_ep2=! }
+            skybox\sky_ep02_07up.wl = { t_ep2=! }
+            skybox\sky_ep02_cavesbk.wl = { t_ep2=! }
+            skybox\sky_ep02_cavesdn.wl = { t_ep2=! }
+            skybox\sky_ep02_cavesft.wl = { t_ep2=! }
+            skybox\sky_ep02_caveslf.wl = { t_ep2=! }
+            skybox\sky_ep02_cavesrt.wl = { t_ep2=! }
+            skybox\sky_ep02_cavesup.wl = { t_ep2=! }
+            skybox\sky_ep02_caves_hdrbk.wl = { t_ep2=! }
+            skybox\sky_ep02_caves_hdrdn.wl = { t_ep2=! }
+            skybox\sky_ep02_caves_hdrft.wl = { t_ep2=! }
+            skybox\sky_ep02_caves_hdrlf.wl = { t_ep2=! }
+            skybox\sky_ep02_caves_hdrrt.wl = { t_ep2=! }
+            skybox\sky_ep02_caves_hdrup.wl = { t_ep2=! }
+        }
+
+        space.txlist =
+        {
+            space\starfield_01.wl = { t_ep2=! }
+        }
+
+        sprites.txlist =
+        {
+            sprites\grubflare1.wl = { t_ep2=! }
+        }
+
+        stone.txlist =
+        {
+            stone\blendplast_stone01.wl = { t_ep2=! }
+            stone\cobble08a.wl = { t_ep2=! }
+            stone\cobble08a_normal.wl = { t_ep2=! }
+            stone\cobble08b.wl = { t_ep2=! }
+            stone\cobble08b_normal.wl = { t_ep2=! }
+            stone\stonefloor_inn01.wl = { t_ep2=! }
+            stone\stonewall010.wl = { t_ep2=! }
+            stone\stonewall010a.wl = { t_ep2=! }
+            stone\stonewall010b.wl = { t_ep2=! }
+            stone\stonewall013.wl = { t_ep2=! }
+            stone\stonewall017.wl = { t_ep2=! }
+            stone\stonewall_inn01a.wl = { t_ep2=! }
+            stone\stonewall_inn01b.wl = { t_ep2=! }
+            stone\stonewall_inn01d.wl = { t_ep2=! }
+            stone\stonewall_inn01e.wl = { t_ep2=! }
+            stone\stonewall_inn03a.wl = { t_ep2=! }
+            stone\stone_blendtexture01.wl = { t_ep2=! }
+        }
+
+        tile.txlist =
+        {
+            tile\tilefloor_bm_01a.wl = { t_ep2=! }
+            tile\tilefloor_bm_02a.wl = { t_ep2=! }
+        }
+
+        Tools.txlist =
+        {
+            Tools\toolswhite.wl = { t_ep2=! }
+        }
+
+        vehicle.txlist =
+        {
+            vehicle\metaltrain001e.wl = { t_ep2=! }
+            vehicle\metaltraindam001a.wl = { t_ep2=! }
+            vehicle\metaltraindam001a_normal.wl = { t_ep2=! }
+            vehicle\metaltraindam001b.wl = { t_ep2=! }
+            vehicle\metaltraindam001b_normal.wl = { t_ep2=! }
+            vehicle\metaltraindam001c.wl = { t_ep2=! }
+            vehicle\metaltraindam001c_normal.wl = { t_ep2=! }
+            vehicle\metaltraindam001d.wl = { t_ep2=! }
+            vehicle\metaltraindam001d_normal.wl = { t_ep2=! }
+            vehicle\metaltrainglass002a.wl = { t_ep2=! }
+        }
+
+        vgui.txlist =
+        {
+        }
+
+        wood.txlist =
+        {
+            wood\ep2_sign_supplies.wl = { t_ep2=! }
+            wood\ep2_woodfloor01.wl = { t_ep2=! }
+            wood\ep2_woodfloor02.wl = { t_ep2=! }
+            wood\ep2_woodsign01.wl = { t_ep2=! }
+            wood\ep2_woodwall01.wl = { t_ep2=! }
+            wood\shingles001.wl = { t_ep2=! }
+            wood\shingles001a.wl = { t_ep2=! }
+            wood\shingles003.wl = { t_ep2=! }
+            wood\shingles003a.wl = { t_ep2=! }
+            wood\shingles004.wl = { t_ep2=! }
+            wood\shingles004a.wl = { t_ep2=! }
+            wood\shingles005.wl = { t_ep2=! }
+            wood\shingles005a.wl = { t_ep2=! }
+            wood\shingles006.wl = { t_ep2=! }
+            wood\shingles006a.wl = { t_ep2=! }
+            wood\woodbeam002b.wl = { t_ep2=! }
+            wood\woodceiling003a.wl = { t_ep2=! }
+            wood\wooddoor010a.wl = { t_ep2=! }
+            wood\woodfence001.wl = { t_ep2=! }
+            wood\woodfloor002.wl = { t_ep2=! }
+            wood\woodlogcap_001a.wl = { t_ep2=! }
+            wood\woodshingles002a.wl = { t_ep2=! }
+            wood\woodstair002a.wl = { t_ep2=! }
+            wood\woodtrack001a_decal.wl = { t_ep2=! }
+            wood\woodwall035a.wl = { t_ep2=! }
+            wood\woodwall047a.wl = { t_ep2=! }
+            wood\woodwall047b.wl = { t_ep2=! }
+            wood\woodwall047c.wl = { t_ep2=! }
+            wood\woodwall047d.wl = { t_ep2=! }
+            wood\woodwall047e.wl = { t_ep2=! }
+            wood\woodwall047f.wl = { t_ep2=! }
+            wood\woodwall048a.wl = { t_ep2=! }
+            wood\woodwall048b.wl = { t_ep2=! }
+            wood\woodwall048c.wl = { t_ep2=! }
+            wood\woodwall048d.wl = { t_ep2=! }
+            wood\woodwall048_floor.wl = { t_ep2=! }
+            wood\woodwall048_floor_normal.wl = { t_ep2=! }
+            wood\woodwall048_roof.wl = { t_ep2=! }
+            wood\woodwall048_roof_normal.wl = { t_ep2=! }
+            wood\woodwall049.wl = { t_ep2=! }
+            wood\woodwall050a.wl = { t_ep2=! }
+            wood\woodwall_mine001a.wl = { t_ep2=! }
+        }
+    }
+  }
+}

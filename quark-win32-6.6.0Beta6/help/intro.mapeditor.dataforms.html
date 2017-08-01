@@ -1,0 +1,379 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"  "http://www.w3.org/TR/html4/loose.dtd">
+<html lang="en">
+<head>
+  <title>Data-displays</title>
+  <meta name="Description" content="QuArK Information Database - Page: 1.5.8.&nbsp;Data-displays">
+  <meta name="Keywords" content="QuArK InfoBase Quake Army Knife QRK QKM Python PY Map Editor Hexen Heretic Half-Life Sin Kingpin Soldier-of-Fortune Star-Trek-Voyager Elite-Force">
+  <link rel=stylesheet href="standard.css" type="text/css">
+</head>
+
+<body>
+<a name="__top__"></a>
+<table width="100%" border=0 cellspacing=0>
+  <tr>
+    <td width=213>
+      <a target="_blank" href="http://quark.sourceforge.net/"><img src="quarkicon.png" width=213 height=90 border=0 alt="Go to QuArK Web Site"></a>
+    </td>
+    <td width="70%" align=center>
+      <div class="topheadline">Data-displays</div>
+      <div class="sm">Updated&nbsp;05 Apr 2003</div>
+    </td>
+    <td width="30%" valign=bottom nowrap>
+      Upper&nbsp;levels:<br>-&nbsp;<a href="index.html">QuArK&nbsp;Information&nbsp;Base</a><br>-&nbsp;<a href="intro.html">1.&nbsp;Introduction&nbsp;to&nbsp;QuArK</a><br>-&nbsp;<a href="intro.mapeditor.html">1.5.&nbsp;Map-editor&nbsp;in&nbsp;QuArK</a><br>
+    </td>
+  </tr>
+</table>
+<table width="100%" border=0 cellspacing=0>
+  <tr class="headline">
+    <td width="99%">
+      <p class="headline">&nbsp;1.5.8.&nbsp;Data-displays</p>
+    </td>
+    <td width="1%" align=right nowrap>
+      &nbsp;[&nbsp;<span class="navenable"><a href="intro.mapeditor.compass.html">Prev</a></span>&nbsp;-&nbsp;<span class="navenable"><a href="intro.mapeditor.html">Up</a></span>&nbsp;-&nbsp;<span class="navenable"><a href="intro.mapeditor.maplayout.html">Next</a></span>&nbsp;]&nbsp;
+    </td>
+  </tr>
+</table>
+<table border=0 width="100%" cellspacing=10><tr><td>
+</td></tr></table>
+<br>
+
+<table width="100%" border=0 cellspacing=0>
+  <tr class="headline">
+    <td width="100%">
+      <p class="subheadline">&nbsp;Index</p>
+    </td>
+  </tr>
+</table>
+<ul class="index">
+  <li>- <a href="#treeview">Tree-view (hierarchy-view)</a>&nbsp;<span class="added">(05 Apr 2003)</span>
+  <li>- <a href="#specsargsview">Specifics/Args-view</a>&nbsp;<span class="added">(28 Feb 2001)</span>
+  <li>- <a href="#polyhedronview">Polyhedron-view</a>&nbsp;<span class="added">(28 Feb 2001)</span>
+  <li>- <a href="#faceview">Face-view</a>&nbsp;<span class="added">(28 Feb 2001)</span>
+  <li>- <a href="#3dview">3D-view</a>&nbsp;<span class="added">(28 Feb 2001)</span>
+</ul>
+<br>
+
+
+<a name="treeview"></a>
+  <table width="100%" border=0 cellspacing=0>
+    <tr class="headline">
+      <td>
+        <p class="item">&nbsp;Tree-view (hierarchy-view)</p>
+      </td>
+      <td align=right>
+        <font size=-2>Decker&nbsp;-&nbsp;05 Apr 2003</font>
+      </td>
+      <td width="1%" align=right nowrap>
+        &nbsp;&nbsp;[&nbsp;<a href="#__top__">Top</a>&nbsp;]&nbsp;
+      </td>
+    </tr>
+  </table>
+  <table border=0 width="100%" cellspacing=10><tr><td>
+<p><img border=0 align=right src="intro.mapeditor.dataforms.treeview.png">
+This view actually contains your level! In here, you can arrange and group
+objects; polyhedrons and entities, and plugin-functions like the duplicator.
+You can see all entities you've put into your level, and what polyhedrons
+belong to what entities.
+</p><p>You can right-mouse-click on every tree-view object, to get a context-menu,
+from where you can select different actions.
+</p><p>Some of the more powerfull functions are:
+<ul>
+<li>Group objects together, and call the group: 'My Front Room', 'Monster Trap', 'Furniture' etc.
+<li>Hide an entire group from the map-views, so it does not clutter your view.
+<li>Change textures on all the selected polyhedrons (or faces).
+<li>Cut, Copy, Paste and Move.
+<li>Change colors on groups, to illustrate different things.
+</ul>
+</p><p>If you wish to enlarge or reduce the Tree-view height, there is a hidden 'drag line' at the very top of the Tree-view, just below the compass. When your curser changes to two bars, with arrows above and below them, you can then hold the left mouse button down and drag the Tree-view to the height you desire.
+</p>
+  </td></tr></table>
+  <br>
+
+<a name="specsargsview"></a>
+  <table width="100%" border=0 cellspacing=0>
+    <tr class="headline">
+      <td>
+        <p class="item">&nbsp;Specifics/Args-view</p>
+      </td>
+      <td align=right>
+        <font size=-2>Decker&nbsp;-&nbsp;28 Feb 2001</font>
+      </td>
+      <td width="1%" align=right nowrap>
+        &nbsp;&nbsp;[&nbsp;<a href="#__top__">Top</a>&nbsp;]&nbsp;
+      </td>
+    </tr>
+  </table>
+  <table border=0 width="100%" cellspacing=10><tr><td>
+<p><img border=0 align=right src="intro.mapeditor.dataforms.specsargsview.png">
+Most entities (Monster, Weapon, Door) have a set of parameters to set, so they
+act in a certain way. These parameters are called <i>specifics</i>&nbsp; in QuArK.
+Each specific can have an argument (arg) attached to it.
+</p><p>If you do not know what permitted values an arg can have, keep your
+mouse-cursor steady and a blue 'flyover' help-box will appear, if there is any
+help to that specific/arg pair.
+</p><p>Sometimes there may be an dropdown-listbox which contain valid args, or most
+used args. Some specifics are only possible to turn on/off, these looks like
+checkboxes. There might even be pushbuttons which opens another window, with
+more specific/arg settings.
+</p><p>The above icons from left to right:
+</p><p><table border=1 cellspacing=0 cellpadding=2>
+<tr>
+  <td valign=top align=center>
+    <i>SF emhd</i>&nbsp;
+  </td>
+  <td>
+    Short for 'SpawnFlags, selected Easy Medium Hard Deathmatch'. Click on this
+    icon to change this entity's spawnflag parameters.
+  </td>
+</tr>
+<tr>
+  <td valign=top align=center>
+    <i><b>+</b></i>&nbsp;
+  </td>
+  <td>
+    Icon to add a new specific/arg pair to this entity. You must rename the
+    specific's name, to something that the selected entity can understand in
+    the FPS-game.
+  </td>
+</tr>
+<tr>
+  <td valign=top align=center>
+    <i><b>-</b></i>&nbsp;
+  </td>
+  <td>
+    Icon to remove the selected specific/arg pair from this entity. Some
+    specifics you can't remove, and others will, by pressing the - icon, clear
+    the arg of the specific.
+  </td>
+</tr>
+<tr>
+  <td valign=top align=center>
+    <i>HelpBook</i>&nbsp;
+  </td>
+  <td>
+    Keep your mouse-cursor steady on this icon to get a blue 'flyover'
+    help-box, which will contain specific description/help for the selected
+    entity, and not just a single specific/arg pair. Press the icon to start
+    your web-browser, and it will take you to a page which contain more
+    information about this entity, if there is such a page.
+  </td>
+</tr>
+</table>
+</p>
+  </td></tr></table>
+  <br>
+
+<a name="polyhedronview"></a>
+  <table width="100%" border=0 cellspacing=0>
+    <tr class="headline">
+      <td>
+        <p class="item">&nbsp;Polyhedron-view</p>
+      </td>
+      <td align=right>
+        <font size=-2>Decker&nbsp;-&nbsp;28 Feb 2001</font>
+      </td>
+      <td width="1%" align=right nowrap>
+        &nbsp;&nbsp;[&nbsp;<a href="#__top__">Top</a>&nbsp;]&nbsp;
+      </td>
+    </tr>
+  </table>
+  <table border=0 width="100%" cellspacing=10><tr><td>
+<p><img border=0 align=right src="intro.mapeditor.dataforms.polyhedronview.png">
+When you have selected a polyhedron, you can see some information and change
+settings for it, in this view.
+</p><p><i>Faces</i>&nbsp; shows how many faces (sides) this polyhedron consists of.
+</p><p><i>Center</i>&nbsp; is the X,Y,Z coordinate in the level, where this polyhedron
+exist. You should not change this manually, unless you don't want to move the
+poly in the map-views.
+</p><p><i>Texture</i>&nbsp; shows the currently applied texture to this polyhedron, as well
+as a list of used textures in the level, so you quickly (?) can change to
+another, without opening the texture-browser.
+</p><p><i>Owned by</i>&nbsp; displays the name of the group or entity, in which this
+polyhedron exist.
+</p><p>The icons above the texture from left to right:
+</p><p><table border=1 cellspacing=0 cellpadding=2>
+<tr>
+  <td valign=top align=center>
+    <i>Texture</i>&nbsp;
+  </td>
+  <td>
+    This icon will open the Texture browser so you can select a different
+    texture for the selected polyhedron.
+  </td>
+</tr>
+<tr>
+  <td valign=top align=center>
+    <i>Negative</i>&nbsp;
+  </td>
+  <td>
+    When this icon are pressed, the selected polyhedron will become a
+    <a href="glossary.html#n">negative poly</a>; it will dig holes into other polys, without actually
+    doing a <a href="glossary.html#b">brush-subtraction</a>.
+  </td>
+</tr>
+<tr>
+  <td valign=top align=center>
+    <i>Face-flags</i>&nbsp;
+  </td>
+  <td>
+    <img border=0 align=right src="intro.mapeditor.dataforms.faceflags.png">
+    Some FPS-games have special face-flags to control different behaviour, like
+    transparensy, water, warping, etc. When you click this icon, a new window
+    will appear, in where you can set the flags for all faces of the selected
+    polyhedron.
+  </td>
+</tr>
+</table>
+</p>
+  </td></tr></table>
+  <br>
+
+<a name="faceview"></a>
+  <table width="100%" border=0 cellspacing=0>
+    <tr class="headline">
+      <td>
+        <p class="item">&nbsp;Face-view</p>
+      </td>
+      <td align=right>
+        <font size=-2>Decker&nbsp;-&nbsp;28 Feb 2001</font>
+      </td>
+      <td width="1%" align=right nowrap>
+        &nbsp;&nbsp;[&nbsp;<a href="#__top__">Top</a>&nbsp;]&nbsp;
+      </td>
+    </tr>
+  </table>
+  <table border=0 width="100%" cellspacing=10><tr><td>
+<p><img border=0 align=right src="intro.mapeditor.dataforms.faceview.png">
+<i>Used by</i>&nbsp;, is either &quot;parent only&quot; to show that the face is a normal face
+of its &quot;parent&quot; polyhedron in the tree view, or it is &quot;xx polyhedron(s)&quot; to
+show that the face is shared (moved outside a polyhedron). It counts how many
+polyhedrons use this face.
+</p><p><i>Texture</i>&nbsp; shows the currently applied texture to this face, as well as a
+list of used textures in the level, so you quickly (?) can change to another,
+without opening the texture-browser.
+</p><p><i>Tex. origin</i>&nbsp; is both the X,Y,Z coordinate of the <u>face</u> in the
+level, and texture-position on the face. You should not change this manually,
+because you might change the size of your polyhedron. Use the
+intersection-point of the two blue lines instead.
+</p><p><i>Tex. scale</i>&nbsp; shows the X,Y scale of the texture on the face. You can also
+change the scale by dragging in the two blue lines. Some times you might want
+to mirror a texture, due to some text in it. You should then type in a negative
+X-scale, or just put a minus sign in front of the current scale-value.
+</p><p><i>Tex. angles</i>&nbsp; is the angles of the texture on the face. You should only
+use the blue dot and lines to change this value.
+</p><p>The icons above the texture from left to right:
+</p><p><table border=1 cellspacing=0 cellpadding=2>
+<tr>
+  <td valign=top align=center>
+    <i>Arrows</i>&nbsp;
+  </td>
+  <td>
+    Change to previous/next face, of the polyhedron in where this face exists.
+  </td>
+</tr>
+<tr>
+  <td valign=top align=center>
+    <i>Zoom</i>&nbsp;
+  </td>
+  <td>
+    Zoom the texture-display. (You can also use the middle-mouse button to zoom
+    in/out with.)
+  </td>
+</tr>
+<tr>
+  <td valign=top align=center>
+    <i>Texture</i>&nbsp;
+  </td>
+  <td>
+    This icon will open the Texture browser so you can select a different
+    texture for the selected face.
+  </td>
+</tr>
+<tr>
+  <td valign=top align=center>
+    <i>Reset texture scale</i>&nbsp;
+  </td>
+  <td>
+    Pressing this icon, will reset the angle, scale and position of the texture
+    on the face. Use this when you want to start over scaling/positioning the
+    texture.
+  </td>
+</tr>
+<tr>
+  <td valign=top align=center>
+    <i>Fit face</i>&nbsp;
+  </td>
+  <td>
+    Pressing this icon, will scale and position the texture so it fits the
+    entire face without texture-repetitions.
+  </td>
+</tr>
+<tr>
+  <td valign=top align=center>
+    <i>Minimum fit face</i>&nbsp;
+  </td>
+  <td>
+    Pressing this icon, will scale and position the texture so it fits the
+    entire face, but keep the scale as close to 1:1 as possible. This will
+    cause repetitions of the texture, if the face-area is larger than the
+    texture.
+  </td>
+</tr>
+<tr>
+  <td valign=top align=center>
+    <i>Face-flags</i>&nbsp;
+  </td>
+  <td>
+    Some FPS-games have special face-flags to control different behaviour, like
+    transparensy, water, warping, etc. When you click this icon, a new window
+    will appear, in where you can set the flags of the selected face.
+  </td>
+</tr>
+</table>
+</p><p>In the texture-view below the icons, there is a little blue dot and two blue
+lines. The blue dot are used to rotate the texture on the face. The lines are
+used to drag the scale of the texture in X and Y directions. The lines can even
+rotate independently so the texture gets distorted. The intersection-point of
+the two lines are used to position the texture on the face.
+</p>
+  </td></tr></table>
+  <br>
+
+<a name="3dview"></a>
+  <table width="100%" border=0 cellspacing=0>
+    <tr class="headline">
+      <td>
+        <p class="item">&nbsp;3D-view</p>
+      </td>
+      <td align=right>
+        <font size=-2>Decker&nbsp;-&nbsp;28 Feb 2001</font>
+      </td>
+      <td width="1%" align=right nowrap>
+        &nbsp;&nbsp;[&nbsp;<a href="#__top__">Top</a>&nbsp;]&nbsp;
+      </td>
+    </tr>
+  </table>
+  <table border=0 width="100%" cellspacing=10><tr><td>
+<p><img border=0 align=right src="intro.mapeditor.dataforms.3dview.png">
+A quick way to see the selected objects in 3D with textures and their
+texture-alignments.
+</p>
+  </td></tr></table>
+  <br>
+
+<br>
+
+<table width="100%" border=0 cellspacing=0>
+  <tr class="headline">
+    <td width="99%" align=center>
+      <p class="sm">
+        Copyright (c) 2009, GNU General Public License by The QuArK (Quake Army Knife) Community - <a target="_blank" href="http://quark.sourceforge.net/">http://quark.sourceforge.net/</a><br>
+      </p>
+    </td>
+    <td width="1%" align=right nowrap>
+      &nbsp;[&nbsp;<span class="navenable"><a href="intro.mapeditor.compass.html">Prev</a></span>&nbsp;-&nbsp;<a href="#__top__">Top</a>&nbsp;-&nbsp;<span class="navenable"><a href="intro.mapeditor.maplayout.html">Next</a></span>&nbsp;]&nbsp;
+    </td>
+  </tr>
+</table>
+</body>
+</html>

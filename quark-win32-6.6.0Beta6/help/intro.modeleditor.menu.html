@@ -1,0 +1,557 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"  "http://www.w3.org/TR/html4/loose.dtd">
+<html lang="en">
+<head>
+  <title>Menubar</title>
+  <meta name="Description" content="QuArK Information Database - Page: 1.6.4.&nbsp;Menubar">
+  <meta name="Keywords" content="QuArK InfoBase Quake Army Knife QRK QKM Python PY Map Editor Hexen Heretic Half-Life Sin Kingpin Soldier-of-Fortune Star-Trek-Voyager Elite-Force">
+  <link rel=stylesheet href="standard.css" type="text/css">
+</head>
+
+<body>
+<a name="__top__"></a>
+<table width="100%" border=0 cellspacing=0>
+  <tr>
+    <td width=213>
+      <a target="_blank" href="http://quark.sourceforge.net/"><img src="quarkicon.png" width=213 height=90 border=0 alt="Go to QuArK Web Site"></a>
+    </td>
+    <td width="70%" align=center>
+      <div class="topheadline">Menubar</div>
+      <div class="sm">Updated&nbsp;30 May 2011</div>
+    </td>
+    <td width="30%" valign=bottom nowrap>
+      Upper&nbsp;levels:<br>-&nbsp;<a href="index.html">QuArK&nbsp;Information&nbsp;Base</a><br>-&nbsp;<a href="intro.html">1.&nbsp;Introduction&nbsp;to&nbsp;QuArK</a><br>-&nbsp;<a href="intro.modeleditor.html">1.6.&nbsp;Model-editor&nbsp;in&nbsp;QuArK</a><br>
+    </td>
+  </tr>
+</table>
+<table width="100%" border=0 cellspacing=0>
+  <tr class="headline">
+    <td width="99%">
+      <p class="headline">&nbsp;1.6.4.&nbsp;Menubar</p>
+    </td>
+    <td width="1%" align=right nowrap>
+      &nbsp;[&nbsp;<span class="navenable"><a href="intro.modeleditor.importexport.html">Prev</a></span>&nbsp;-&nbsp;<span class="navenable"><a href="intro.modeleditor.html">Up</a></span>&nbsp;-&nbsp;<span class="navenable"><a href="intro.modeleditor.rmbmenus.html">Next</a></span>&nbsp;]&nbsp;
+    </td>
+  </tr>
+</table>
+<table border=0 width="100%" cellspacing=10><tr><td><p><img src="intro.modeleditor.menu.menu.png">
+</p><p>New commands are constantly being added to the all menus. If there is
+no F1 help for some command, or you can not understand
+what it says, post to the <a href=http://games.groups.yahoo.com/group/quark/>QuArK
+messageboard</a> for help (and a heads-up to the docco writers).
+</p><p>Most of the commands on the menus also have hot keys (accelerators), which
+you can customize from Configuration at the bottom of the
+<a href="intro.modeleditor.menu.html#optionsmenu">'Options menu'</a>.</p>
+</td></tr></table>
+<br>
+
+<table width="100%" border=0 cellspacing=0>
+  <tr class="headline">
+    <td width="100%">
+      <p class="subheadline">&nbsp;Index</p>
+    </td>
+  </tr>
+</table>
+<ul class="index">
+  <li>- <a href="#filemenu">File menu</a>&nbsp;<span class="added">(27 Jul 2008)</span>
+  <li>- <a href="#layoutmenu">Layout menu</a>&nbsp;<span class="added">(26 Apr 2007)</span>
+  <li>- <a href="#editmenu">Edit menu</a>&nbsp;<span class="added">(28 May 2011)</span>
+  <li>- <a href="#toolboxesmenu">Toolboxes menu</a>&nbsp;<span class="added">(26 Apr 2007)</span>
+  <li>- <a href="#searchmenu">Search menu</a>&nbsp;<span class="added">(27 Mar 2011)</span>
+  <li>- <a href="#commandsmenu">Commands menu</a>&nbsp;<span class="added">(28 May 2011)</span>
+  <li>- <a href="#toolbarsmenu">Toolbars menu</a>&nbsp;<span class="added">(28 May 2011)</span>
+  <li>- <a href="#optionsmenu">Options menu</a>&nbsp;<span class="added">(30 May 2011)</span>
+  <li>- <a href="#helpmenu">Help menu</a>&nbsp;<span class="added">(28 May 2011)</span>
+</ul>
+<br>
+
+
+<a name="filemenu"></a>
+  <table width="100%" border=0 cellspacing=0>
+    <tr class="headline">
+      <td>
+        <p class="item">&nbsp;File menu</p>
+      </td>
+      <td align=right>
+        <font size=-2>cdunde&nbsp;-&nbsp;27 Jul 2008</font>
+      </td>
+      <td width="1%" align=right nowrap>
+        &nbsp;&nbsp;[&nbsp;<a href="#__top__">Top</a>&nbsp;]&nbsp;
+      </td>
+    </tr>
+  </table>
+  <table border=0 width="100%" cellspacing=10><tr><td>
+<p><img border=0 align=right src="intro.modeleditor.menu.file.png">
+<i>Open</i>&nbsp; works just as in the QuArK-Explorer. You can open any supported model file with
+this to work on.
+</p><p><i>Model Importers</i>&nbsp; Shows the Python importer plugins that are available.
+They will import that type of model once the editor is open.
+</p><p><i>Model Exporters</i>&nbsp; Shows the Python exporters plugins that are available.
+They will export that type of model once the editor is open.
+</p><p><i>Save</i>&nbsp; will save your current model to the same location and file type it was opened as.
+</p><p><i>Save in QuArK Explorer</i>&nbsp;. Use this if you want to add this model to your
+current project. This way, you can have multiple revisions of a model, in
+a single project. Just remember to give them a sensible name, so you can
+distinguish them. The model editor will automatically close itself when you use this menuitem.
+</p><p><i>Save as file</i>&nbsp;. If you want to export this model as a different supported model format type,
+select this menu item. A <a href="glossary.html#q">QuArK .qkl model work file</a> can be created using this function.
+Even though, at the present time, QuArK can only save <a href="glossary.html#q">Quake 1 .mdl</a> and <a href="glossary.html#q">Quake 2 .md2</a>
+files, it can save <a href="glossary.html#q">Quake 3 .md3</a> files as a <a href="glossary.html#q">QuArK .qkl model work file</a>.
+This format preserves all settings and <a href="glossary.html#c">Components</a> of the model making it much easer
+when you start a new session of the <a href="glossary.html#q">QuArK Model Editor</a>. to resume your work.
+</p><p><i>Save all</i>&nbsp; will save all opened files. This includes the current project
+and modified <a href="glossary.html#a">add-on</a> data files.
+</p><p><i>Close</i>&nbsp; will close the model editor.
+</p>
+  </td></tr></table>
+  <br>
+
+<a name="layoutmenu"></a>
+  <table width="100%" border=0 cellspacing=0>
+    <tr class="headline">
+      <td>
+        <p class="item">&nbsp;Layout menu</p>
+      </td>
+      <td align=right>
+        <font size=-2>cdunde&nbsp;-&nbsp;26 Apr 2007</font>
+      </td>
+      <td width="1%" align=right nowrap>
+        &nbsp;&nbsp;[&nbsp;<a href="#__top__">Top</a>&nbsp;]&nbsp;
+      </td>
+    </tr>
+  </table>
+  <table border=0 width="100%" cellspacing=10><tr><td>
+<p><img border=0 align=right src="intro.modeleditor.menu.layout.png">
+<i>Wireframe</i>&nbsp; will change all model-views to show the model as
+wireframe-graphics. This is the fastest drawing-method of the model-views.
+</p><p><i>Solid</i>&nbsp; will change all model-views to show the model as a solid object.
+This means that you won't be able to 'see-through' the model once it's in
+view.
+</p><p><i>Textured</i>&nbsp; will change all model-views to show the model with it's
+applied textures and alignment.
+</p><p><i>3D view</i>&nbsp; will create a new free-floating 3D edit window.
+You can actually edit the model in the 3D view
+and manipulate its 'mesh' (frame shape). This view, and all the others,
+can use the OpenGL standard 3D graphic library. 
+<span class="sm">(Silicon Graphics' OpenGL drivers for Windows:
+<a href="http://www.berkelium.com/OpenGL/sgi-opengl.html">http://www.berkelium.com/OpenGL/sgi-opengl.html</a>.)</span>
+</p><p><i>Show whole level</i>&nbsp; will in wireframe-mode, draw all lines the model
+consists of, even those that can't be seen simultaneously in all model-views.
+</p><p><i>Gray out of view</i>&nbsp; will in wireframe-mode, draw grey lines of those parts
+of the model, which can't be seen within the model-views.
+</p><p><i>Hide out of view</i>&nbsp; will in wireframe-mode, only draw lines for those parts
+of the model, which is within the model-views.
+</p><p><i>Panel at right</i>&nbsp;. Check this menu-item, if you want the compass, dataform
+and that area, moved to the right of the model-views.
+</p><p><i>Layouts</i>&nbsp;. These menu-item are used to change between the different
+model-layouts.
+</p>
+  </td></tr></table>
+  <br>
+
+<a name="editmenu"></a>
+  <table width="100%" border=0 cellspacing=0>
+    <tr class="headline">
+      <td>
+        <p class="item">&nbsp;Edit menu</p>
+      </td>
+      <td align=right>
+        <font size=-2>cdunde&nbsp;-&nbsp;28 May 2011</font>
+      </td>
+      <td width="1%" align=right nowrap>
+        &nbsp;&nbsp;[&nbsp;<a href="#__top__">Top</a>&nbsp;]&nbsp;
+      </td>
+    </tr>
+  </table>
+  <table border=0 width="100%" cellspacing=10><tr><td>
+<p><img border=0 align=right src="intro.modeleditor.menu.edit.png">
+<i>Undo [something]</i>&nbsp;. This menuitem will be active, if you can undo a
+previous action. The <i>something</i>&nbsp;, will be the action it will undo.
+</p><p><i>Undo/Redo</i>&nbsp; will open up the Undo/Redo window, where you can undo or redo
+more actions with one mouse-click.
+</p><p><i>Duplicate</i>&nbsp;. A copy <u>and</u> paste action, but without putting the
+selection in the clipboard.
+</p><p><i>Cut</i>&nbsp;. You know; remove the selection and put it into the clipboard.
+</p><p><i>Copy</i>&nbsp;. Just as easy; copy the selection into the clipboard.
+</p><p><i>Paste</i>&nbsp;. Take whatever is in the clipboard, and if it is something QuArK
+can use, it will paste it to where you point.
+</p><p><i>Delete</i>&nbsp;. Deletes the selection. Notice that it won't put anything in the
+clipboard.
+</p>
+  </td></tr></table>
+  <br>
+
+<a name="toolboxesmenu"></a>
+  <table width="100%" border=0 cellspacing=0>
+    <tr class="headline">
+      <td>
+        <p class="item">&nbsp;Toolboxes menu</p>
+      </td>
+      <td align=right>
+        <font size=-2>cdunde&nbsp;-&nbsp;26 Apr 2007</font>
+      </td>
+      <td width="1%" align=right nowrap>
+        &nbsp;&nbsp;[&nbsp;<a href="#__top__">Top</a>&nbsp;]&nbsp;
+      </td>
+    </tr>
+  </table>
+  <table border=0 width="100%" cellspacing=10><tr><td>
+<p><img border=0 align=right src="intro.modeleditor.menu.toolboxes.png">
+This menu works just like the one in QuArK Explorer.
+</p>
+  </td></tr></table>
+  <br>
+
+<a name="searchmenu"></a>
+  <table width="100%" border=0 cellspacing=0>
+    <tr class="headline">
+      <td>
+        <p class="item">&nbsp;Search menu</p>
+      </td>
+      <td align=right>
+        <font size=-2>Decker&nbsp;-&nbsp;27 Mar 2011</font>
+      </td>
+      <td width="1%" align=right nowrap>
+        &nbsp;&nbsp;[&nbsp;<a href="#__top__">Top</a>&nbsp;]&nbsp;
+      </td>
+    </tr>
+  </table>
+  <table border=0 width="100%" cellspacing=10><tr><td>
+<p><img border=0 align=right src="intro.modeleditor.menu.search.png">
+<i>Find Vertices</i>&nbsp;. This function selects the vertices entered for the component currently selected
+or selected from the drop down box. Place a comma between each vertex entered to find more then one.
+</p><p><i>Find Faces</i>&nbsp;. This function selects the faces entered for the component currently selected
+or selected from the drop down box. Place a comma between each face entered to find more then one.
+</p><p><i>Find Skin Vertices</i>&nbsp;. This function selects the Skin-view vertexes entered for the component currently
+selected or selected from the drop down box. Place a comma between each face entered to find more then one.
+</p><p><i>Find Skin Faces</i>&nbsp;. This function selects the Skin-view face vertexes for the faces entered of the component
+currently selected or selected from the drop down box. Place a comma between each face entered to find more then one.
+</p><p><i>Find Objects</i>&nbsp; This function will search for objects by their 'type'
+(the type of model object it represents, a bone, skin, frame...).
+</p><p><i>Find Camera Positions</i>&nbsp; This finds all the camera positions.
+</p><p><i>Editor next shot</i>&nbsp;. This selects and sets the next camera shot for the Editor's 3D view in the group.
+Cycling - Depress (default) 'F3' to switch to the next view.
+</p><p><i>Editor prev shot</i>&nbsp;. Selects and sets the previous camera shot for the Editor's 3D view in the group.
+Cycling - Depress (default) 'F4' to switch to the previous.
+</p><p><i>Editor 3D shot</i>&nbsp;. This creates a camera shot of the current editor's 3D view in either standard or 'True 3D' mode.
+Depressing the Hotkey (default) 'F5' will do the same thing.
+</p><p><i>Full 3D shot</i>&nbsp;. This creates a camera shot of the current Full 3D view in either standard or 'True 3D' mode.
+Depressing the Hotkey (default) 'F6' will do the same thing.
+</p><p><i>Full 3D next shot</i>&nbsp;. This selects and sets the next camera shot for the floating 3D Window in the group.
+Cycling - Depress (default) 'F7' to switch to the next view.
+</p><p><i>Full 3D prev shot</i>&nbsp;. Selects and sets the previous camera shot for the floating 3D Window in the group.
+Cycling - Depress (default) 'F8' to switch to the previous.
+</p>
+  </td></tr></table>
+  <br>
+
+<a name="commandsmenu"></a>
+  <table width="100%" border=0 cellspacing=0>
+    <tr class="headline">
+      <td>
+        <p class="item">&nbsp;Commands menu</p>
+      </td>
+      <td align=right>
+        <font size=-2>cdunde&nbsp;-&nbsp;28 May 2011</font>
+      </td>
+      <td width="1%" align=right nowrap>
+        &nbsp;&nbsp;[&nbsp;<a href="#__top__">Top</a>&nbsp;]&nbsp;
+      </td>
+    </tr>
+  </table>
+  <table border=0 width="100%" cellspacing=10><tr><td>
+<p><img border=0 align=right src="intro.modeleditor.menu.commands.png">
+</p><p><i>Duplicate Current Frame </i>&nbsp;: This copies a single frame that is currently selected and
+adds that copy to that model component's animation frames list.
+For multiple frame copies use the 'Duplicate' function on the 'Edit' menu.
+</p><p><i>Match Frame Count </i>&nbsp;: This will duplicate the number of frames in the selected components
+with the one that has the most frames in it. It will not copy the frames, only how many there are.
+</p><p><i>Check Components </i>&nbsp;: This checks components for any errors in them that might exist.
+</p><p><i>Auto Assemble </i>&nbsp;: Some models are made up of seperate model files for example .md3 files.
+This function attempts to auto-load those related models model files and attach them using what is known
+as tags to match them up correctly.
+</p><p><i>X Y Z Axis locks </i>&nbsp;: All three of these items work in the same manor but are independent from one another.
+They restrict any <a href="glossary.html#v">vertex</a> movement in their related direction for all views and are interactive with their
+corrisponding buttons on the
+<a href="intro.modeleditor.toolpalettes.viewselection.html">View Selection tool-palette</a>.
+</p><p>All of these commands are dupelicated as a sub-menu of the
+<a href="intro.modeleditor.rmbmenus.html#viewsrmbmenus">Editor Views RMB menus</a>.
+</p>
+  </td></tr></table>
+  <br>
+
+<a name="toolbarsmenu"></a>
+  <table width="100%" border=0 cellspacing=0>
+    <tr class="headline">
+      <td>
+        <p class="item">&nbsp;Toolbars menu</p>
+      </td>
+      <td align=right>
+        <font size=-2>cdunde&nbsp;-&nbsp;28 May 2011</font>
+      </td>
+      <td width="1%" align=right nowrap>
+        &nbsp;&nbsp;[&nbsp;<a href="#__top__">Top</a>&nbsp;]&nbsp;
+      </td>
+    </tr>
+  </table>
+  <table border=0 width="100%" cellspacing=10><tr><td>
+<p><img border=0 align=right src="intro.modeleditor.menu.toolbars.png">
+</p><p><i>Editing Tools</i>&nbsp;. Wether or not the Editing Tools toolbar should be visible.
+</p><p><i>Display</i>&nbsp;. Wether or not the Display toolbar should be visible.
+</p><p><i>Movement Tool Palette</i>&nbsp;. Whether or not the Movement toolbar should be
+visible.
+</p><p><i>Animation</i>&nbsp;. Wether or not the Animation toolbar should be visible.
+</p><p><i>Paint modes</i>&nbsp;. Wether or not the Paint modes toolbar should be visible.
+</p><p><i>View Selection Modes</i>&nbsp;. Whether or not the View Selection Modes toolbar should be
+visible.
+</p><p><i>Object modes</i>&nbsp;. Wether or not the Object modes toolbar should be visible.</p>
+  </td></tr></table>
+  <br>
+
+<a name="optionsmenu"></a>
+  <table width="100%" border=0 cellspacing=0>
+    <tr class="headline">
+      <td>
+        <p class="item">&nbsp;Options menu</p>
+      </td>
+      <td align=right>
+        <font size=-2>cdunde&nbsp;-&nbsp;30 May 2011</font>
+      </td>
+      <td width="1%" align=right nowrap>
+        &nbsp;&nbsp;[&nbsp;<a href="#__top__">Top</a>&nbsp;]&nbsp;
+      </td>
+    </tr>
+  </table>
+  <table border=0 width="100%" cellspacing=10><tr><td>
+<p><map name="optionsmenuMap0">
+<area href="#gridscale" shape="rect" coords="2, 22, 264, 39">
+<area href="#rulerguide" shape="rect" coords="2, 48, 264, 66">
+<area href="#rotation" shape="rect" coords="2, 74, 264, 91">
+<area href="#boneoptions" shape="rect" coords="2, 211, 264, 226">
+<area href="#editorfaceselectionoptions" shape="rect" coords="2, 229, 264, 243">
+<area href="#editorvertexselectionoptions" shape="rect" coords="2, 246, 264, 259">
+<area href="#skinviewoptions" shape="rect" coords="2, 262, 264, 277">
+<area href="#autoframerenaming" shape="rect" coords="2, 280, 264, 297">
+<area href="#pasteobjectsatscreencenter" shape="rect" coords="2, 305, 264, 322">
+<area href="#enlargeverticesticks" shape="rect" coords="2, 324, 264, 339">
+<area href="#rebuild3dviews" shape="rect" coords="2, 341, 264, 356">
+<area href="#axisxyzletters" shape="rect" coords="2, 358, 264, 374">
+<area href="#listofplugins" shape="rect" coords="2, 382, 264, 398">
+<area href="#configuration" shape="rect" coords="2, 400, 264, 418">
+<area href="#logconsole" shape="rect" coords="2, 426, 264, 442">
+<area href="#clearconsolelog" shape="rect" coords="2, 444, 264, 458">
+</map>
+</p><p><img border=0 align=right usemap="#optionsmenuMap0" src="intro.modeleditor.menu.options.png">
+<i><b>Grid scale in 2D views </b></i>&nbsp;: See detailed <a href="#gridscale">sub-menu</a> and discription below.
+</p><p><i><b>Ruler guide in 2D views</b> </i>&nbsp;: See detailed <a href="#rulerguide">sub-menu</a> and discription below.
+</p><p><i><b>3D Rotation Options</b> </i>&nbsp;: See detailed <a href="#rotation">sub-menu</a> and discription below.
+</p><p><i><b><a href="#optionsmenu">Draw handles while rotating</a></b> </i>&nbsp;: This allows the models vertex handles (if active) to be drawn during
+rotation, but this will slow down the redrawing process and can make rotation seem jerky.
+</p><p><i><b><a href="#optionsmenu">Editor True 3D mode</a></b> </i>&nbsp;: This causes the Model Editor's 3D view to operate the same as
+the Map Editor when maneuvering and also allows passing through a component. This is very useful when working on scenes
+to see ' into ' the model and work on other components within it.
+</p><p><i><b><a href="#optionsmenu">Full3D True 3D mode</a></b> </i>&nbsp;: This causes the FIRST Full 3D view opened only, to operate the same as
+the Map Editor when maneuvering and also allows passing through a component. This is very useful when working on scenes
+to see ' into ' the model and work on other components within it. All other floating Full 3D views will operate as usual.
+If the first is closed and the next uses this option the last camera position of the first one will still be in effect.
+</p><p><i><b><a href="#optionsmenu">Model Axis in views</a></b> </i>&nbsp;: This displays the models axis on which it was built in all views,
+showing its X, Y and Z direction. The size of its letter indicators and line thickness can be increased or
+decreased by using the '<a href="glossary.html#s">Set Line Thickness</a>' function, a little further down. Their individual colors can
+be changedin the <a href="intro.modeleditor.toolpalettes.viewselection.html#coloroptions">Colors Options</a> settings.
+</p><p><i><b><a href="#optionsmenu">Draw back faces</a></b> </i>&nbsp;: This allows the back face checkerboard pattern to be drawn in all view modes when the
+<a href="glossary.html#'">'Views Options', 'Mesh in Frames'</a> of the <a href="intro.modeleditor.toolpalettes.viewselection.html#viewoptions">Views Options</a>
+is checked for that view. Using the option in this manner will help to distinguish which direction the faces are facing for proper construction.
+</p><p><i><b><a href="#optionsmenu">Set Line Thickness</a></b> </i>&nbsp;: This lets you set the thickness of certain lines that are drawn on the Editor's views,
+such as the outlining of selected model mesh faces and the models axis lines.
+</p><p><i><b>Bone Options</b> </i>&nbsp;: See detailed <a href="#boneoptions">sub-menu</a> and discription below.
+</p><p><i><b>Editor Face Selection Options</b> </i>&nbsp;: See detailed <a href="#editorfaceselectionoptions">sub-menu</a> and discription below.
+</p><p><i><b>Editor Vertex Selection Options</b> </i>&nbsp;: See detailed <a href="#editorvertexselectionoptions">sub-menu</a> and discription below.
+</p><p><i><b>Skin-view Options</b> </i>&nbsp;: See detailed <a href="#skinviewoptions">sub-menu</a> and discription below.
+</p><p><a name="autoframerenaming"></a>
+<i><b><a href="#optionsmenu">Auto Frame Renaming</a></b> </i>&nbsp;: Some models consist of more then one component.
+If so, their frame names should always match. When checked, if a frame of one component is renamed,
+this will cause the same frame of all the other related components to be renamed also automatically.
+</p><p><a name="pasteobjectsatscreencenter"></a>
+<i><b><a href="#optionsmenu">Paste objects at screen center</a></b> </i>&nbsp;: Check this if you
+want objects that you paste into the editor's views to appear in the center of the current editor's view.
+Uncheck it, and it will paste it at the exact position as the original.
+</p><p><a name="enlargeverticesticks"></a>
+<i><b><a href="#optionsmenu">Enlarge Vertices Ticks</a></b> </i>&nbsp;: This makes the model's ticks 1 size larger for easer viewing.
+</p><p><a name="rebuild3dviews"></a>
+<i><b><a href="#optionsmenu">Rebuild 3D views</a></b> </i>&nbsp;: This rebuilds the 3D views (actually all views) in the Model Editor
+in case of a lockup. You may have to do this a few times to clear the views up. The easiest way is to just push the HotKey 'Tab' until the views unlock and clear up.
+</p><p><a name="axisxyzletters"></a>
+<i><b><a href="#optionsmenu">Axis XYZ letter indicator in view windows</a></b> </i>&nbsp;: This display s the X Y or Z indicator letter
+per view to associate the rotation menu buttons. These are for reference only and are not selectable
+with the mouse.
+</p><p><a name="listofplugins"></a>
+<i><b><a href="#optionsmenu">List of Plug-ins</a></b> </i>&nbsp;: Opens a window which shows what plug-ins QuArK has loaded.
+</p><p><a name="configuration"></a>
+<i><b><a href="#optionsmenu">Configuration</a></b> </i>&nbsp;: Takes you to the <a href="intro.configuration.html">'Configuration of QuArK'</a>.
+</p><p><a name="logconsole"></a>
+<i><b><a href="#optionsmenu">Log Console</a></b> </i>&nbsp;: When active this will write everything that is printed
+to the console to a text file called 'Console.txt' which is located in QuArK's main folder.
+</p><p><a name="clearconsolelog"></a>
+<i><b><a href="#optionsmenu">Clear Console Log</a></b> </i>&nbsp;: When clicked this will clear everything that is
+printed to the text file called 'Console.txt' which is located in QuArK's main folder.
+</p><p><table border=0 cellspacing=0>
+</p><p><tr><td valign=top>
+<a name="gridscale"></a>
+<b><u><a href="#optionsmenu">Grid scale in 2D views</a></u></b> - sub-menu :
+</p><p><img border=0 align=right src="intro.modeleditor.menu.gridscale.png">
+These functions allow you to display a scale and tick mark guides
+of the current grid setting in any one, combination, or all of the 2D views of the Editor, as
+shown in the top sub-menu. You can also center any one or combination of the scales for
+each view. If ' All 2D views '  or ' all scales centered '  is checked, it will deactivate this
+menu's individual items.
+</p><p><tr><td valign=top>
+<a name="rulerguide"></a>
+<b><u><a href="#optionsmenu">Ruler guide in 2D views</a></u></b> - sub-menu :
+</p><p><img border=0 align=right src="intro.modeleditor.menu.rulerguide.png">
+ These functions allow you to display a line with the unit distance
+of total selected items in any one, combination, or all of the 2D views of the Editor. Much like
+the&nbsp;'Grid scale in 2D views'&nbsp; function above, this feature also has its own list of selections,
+as shown in the far right sub-menu. If one of these sub-menu items is active, checked, then when ever a single
+<a href="glossary.html#f">face</a>, <a href="glossary.html#o">object</a> or <a href="glossary.html#c">component</a> is selected a&nbsp;'Ruler'&nbsp; will be displayed above and/or
+beside them from the starting point to the end point of the selected items along with&nbsp;'0'&nbsp; at the
+starting point and the total amount of their distance at the end point.
+</p><p><tr><td valign=top>
+<a name="rotation"></a>
+<b><u><a href="#optionsmenu">3D Rotation Options</a></u></b> - sub-menu :
+</p><p><img border=0 align=right src="intro.modeleditor.menu.rotation.png">
+<u><i>Original 3Dview rotation </i>&nbsp;</u>&nbsp;: This is the way QuArK's model rotation has worked in the past.
+As long as the model drag is started flat (z at 0) it rotates and tilts during rotation fine.
+But if it does a hiccup during the drag with the model tilted that is when it starts to drift
+off center and possibly out of the view eventually. The model can be placed anywhere in the view and
+rotated from that location.
+</p><p><u><i>Lock to center of 3Dview </i>&nbsp;</u>&nbsp;: This method 'locks' the center of the grid to the center of the 3D view
+and rotates from the 0,0,0, point of the grid, its center. If the grid is off to another location of
+the view it will 'snap' back to the views center. The cursor location does not matter for dragging,
+the grid will remain in the views center. This makes the rotation very consistent.
+You can rotate and zoom in for close detail work on the model. But if you start another rotation
+it will jump back to the grids center and probably throw your up close position off.
+</p><p><u><i>Lock to center of model </i>&nbsp;</u>&nbsp;: This function 'locks' the center of the model to the center of the view.
+It functions just like the 'Lock to center of 3Dview' method above
+based on the center of the model. However, because not all models are created at the center of their grid
+the method above could cause it to be near the edge of the view or completely out of view.
+This option compensates for that and will put the model in the proper center location of the view.
+The same situation will exist for up close detail work if a new rotation is started.
+</p><p><u><i>Rotate at start position </i>&nbsp;</u>&nbsp;: This function is designed to give far more rotation consistency based on
+where the cursor is at the time it is clicked to start a rotation at some place on the model.
+It will then re-center that position to the center of the view to start rotating from.
+Unlike the 'Original 3Dview rotation' method, this would allow close up detail rotation without
+the model jumping back to some other location as in all of the above cases.
+</p><p><tr><td valign=top>
+<a name="boneoptions"></a>
+<b><u><a href="#optionsmenu">Bone Options</a></u></b> - sub-menu :
+</p><p><img border=0 align=right src="intro.modeleditor.menu.boneoptions.png">
+<u><i>Match Bone Lines Color </i>&nbsp;</u>&nbsp;: This funciton is also located on the
+<a href="intro.modeleditor.rmbmenus.html#editorboneoptions">Editor Views RMB menus</a>, please click on the menu link for this functions full description.
+</p><p><u><i>Draw Bone Handles Only </i>&nbsp;</u>&nbsp;: This funciton is also located on the
+<a href="intro.modeleditor.rmbmenus.html#editorboneoptions">Editor Views RMB menus</a>, please click on the menu link for this functions full description.
+</p><p><u><i>Only Draw Drag Bones </i>&nbsp;</u>&nbsp;: This funciton is also located on the
+<a href="intro.modeleditor.rmbmenus.html#editorboneoptions">Editor Views RMB menus</a>, please click on the menu link for this functions full description.
+</p><p><u><i>Make All Draglines </i>&nbsp;</u>&nbsp;: This funciton is also located on the
+<a href="intro.modeleditor.rmbmenus.html#editorboneoptions">Editor Views RMB menus</a>, please click on the menu link for this functions full description.
+</p>
+<p><tr><td valign=top>
+<a name="editorfaceselectionoptions"></a>
+<b><u><a href="#optionsmenu">Editor Face Selection Options</a></u></b> - sub-menu :
+</p><p><img border=0 align=right src="intro.modeleditor.menu.faceselection.png">
+<u><i>Sync Skin-view with Editor views </i>&nbsp;</u>&nbsp;: This funciton is also located on the
+<a href="intro.modeleditor.rmbmenus.html#editorfaceoptions">Editor Views RMB menus</a>, please click on the menu link for this functions full description.
+</p><p><u><i>Show selection in Skin-view </i>&nbsp;</u>&nbsp;: This funciton is also located on the
+<a href="intro.modeleditor.rmbmenus.html#editorfaceoptions">Editor Views RMB menus</a>, please click on the menu link for this functions full description.
+</p><p><u><i>Pass selection to Skin-view </i>&nbsp;</u>&nbsp;: This funciton is also located on the
+<a href="intro.modeleditor.rmbmenus.html#editorfaceoptions">Editor Views RMB menus</a>, please click on the menu link for this functions full description.
+</p><p><u><i>No face drag lines </i>&nbsp;</u>&nbsp;: This funciton is also located on the
+<a href="intro.modeleditor.rmbmenus.html#editorfaceoptions">Editor Views RMB menus</a>, please click on the menu link for this functions full description.
+</p><p><u><i>No face outlines </i>&nbsp;</u>&nbsp;: This funciton is also located on the
+<a href="intro.modeleditor.rmbmenus.html#editorfaceoptions">Editor Views RMB menus</a>, please click on the menu link for this functions full description.
+</p><p><u><i>No face outlines while moving in 2D views </i>&nbsp;</u>&nbsp;: This funciton is also located on the
+<a href="intro.modeleditor.rmbmenus.html#editorfaceoptions">Editor Views RMB menus</a>, please click on the menu link for this functions full description.
+</p><p><u><i>No selection fill </i>&nbsp;</u>&nbsp;: This funciton is also located on the
+<a href="intro.modeleditor.rmbmenus.html#editorfaceoptions">Editor Views RMB menus</a>, please click on the menu link for this functions full description.
+</p><p><u><i>Front faces only </i>&nbsp;</u>&nbsp;: This funciton is also located on the
+<a href="intro.modeleditor.rmbmenus.html#editorfaceoptions">Editor Views RMB menus</a>, please click on the menu link for this functions full description.
+</p><p><u><i>Back faces only </i>&nbsp;</u>&nbsp;: This funciton is also located on the
+<a href="intro.modeleditor.rmbmenus.html#editorfaceoptions">Editor Views RMB menus</a>, please click on the menu link for this functions full description.
+</p><p><tr><td valign=top>
+<a name="editorvertexselectionoptions"></a>
+<b><u><a href="#optionsmenu">Editor Vertex Selection Options</a></u></b> - sub-menu :
+</p><p><img border=0 align=right src="intro.modeleditor.menu.vertexselection.png">
+<u><i>Sync Skin-view with Editor views </i>&nbsp;</u>&nbsp;: This funciton is also located on the
+<a href="intro.modeleditor.rmbmenus.html#editorvertexoptions">Editor Views RMB menus</a>, please click on the menu link for this functions full description.
+</p><p><u><i>Pass selection to Skin-view </i>&nbsp;</u>&nbsp;: This funciton is also located on the
+<a href="intro.modeleditor.rmbmenus.html#editorvertexoptions">Editor Views RMB menus</a>, please click on the menu link for this functions full description.
+</p><p><u><i>No vertex drag lines </i>&nbsp;</u>&nbsp;: This funciton is also located on the
+<a href="intro.modeleditor.rmbmenus.html#editorvertexoptions">Editor Views RMB menus</a>, please click on the menu link for this functions full description.
+</p>
+
+<p><tr><td valign=top>
+<a name="skinviewoptions"></a>
+<b><u><a href="#optionsmenu">Skin-view Options</a></u></b> - sub-menu :
+</p><p><img border=0 align=right src="intro.modeleditor.menu.skinviewoptions.png">
+<u><i>Sync Editor views with Skin-view </i>&nbsp;</u>&nbsp;: This funciton is also located on the
+<a href="intro.modeleditor.skinview.html#funcsnmenus">Skin-view RMB menu</a>, please click on the menu link for this functions full description.
+</p><p><u><i>Pass selection to Editor views </i>&nbsp;</u>&nbsp;: This funciton is also located on the
+<a href="intro.modeleditor.skinview.html#funcsnmenus">Skin-view RMB menu</a>, please click on the menu link for this functions full description.
+</p><p><u><i>Clear Selected Faces </i>&nbsp;</u>&nbsp;: This function will clear all faces in the <a href="intro.modeleditor.skinview.html">Skin-view</a>
+that have been drawn as <a href="glossary.html#s">Selected</a> or <a href="glossary.html#s">Show</a> but any related selected vertexes will remain that way for editing
+purposes. The <a href="intro.modeleditor.skinview.html">Skin-view</a> selected face, show face and selected vertex colors
+can be changed in the <a href="intro.modeleditor.toolpalettes.viewselection.html#coloroptions">Colors Options</a> settings.
+</p><p><a name="skinviewoptionsdrawticks"></a>
+<u><i><a href="#skinviewoptions">Draw Ticks During Drag </a></i>&nbsp;</u>&nbsp;: These functions give various methods for drawing the Models Skin Mesh Vertex Ticks while doing a drag.<br>
+The 1st &nbsp;<a href="glossary.html#<"><u>Rectangle drag-method 1</u> &nbsp;</a>: This function will draw the Skin-view mesh vertex 'Ticks' during a rectangle drag with<br>
+a minimum amount of flickering, but is a slower drawing method.<br>
+The 2nd <a href="glossary.html#<"><u>Rectangle drag-method 2</u> &nbsp;</a>: This function will draw the Skin-view mesh vertex 'Ticks', using the fastest method,<br>
+during a rectangle drag, but will cause the greatest amount of flickering.
+</p><p></td></tr>
+</table></p>
+  </td></tr></table>
+  <br>
+
+<a name="helpmenu"></a>
+  <table width="100%" border=0 cellspacing=0>
+    <tr class="headline">
+      <td>
+        <p class="item">&nbsp;Help menu</p>
+      </td>
+      <td align=right>
+        <font size=-2>cdunde&nbsp;-&nbsp;28 May 2011</font>
+      </td>
+      <td width="1%" align=right nowrap>
+        &nbsp;&nbsp;[&nbsp;<a href="#__top__">Top</a>&nbsp;]&nbsp;
+      </td>
+    </tr>
+  </table>
+  <table border=0 width="100%" cellspacing=10><tr><td>
+<p><img border=0 align=right src="intro.modeleditor.menu.help.png">
+<i>Contextual help</i>&nbsp;. Opens your web-browser.
+</p><p><i>Help contents</i>&nbsp;. Opens your web-browser.
+</p><p><i>QurK's Layout</i>&nbsp;. Opens your web-browser to the basic editor layout page of these docs.
+</p><p><i>FAQ</i>&nbsp;. Opens your web-browser to the FAQ page of these docs.
+</p><p><i>QuArK's web site</i>&nbsp;. Opens your web-browser to the on-line Official QuArK web site.
+</p><p><i>QuArK's Forums site</i>&nbsp;. Opens your web-browser to the on-line QuArK Forums site.
+</p><p><i>Check for updates</i>&nbsp;. Checks on-line for QuArK program updates.
+</p><p><i>View console</i>&nbsp;. Shows a Python-console. Usefull when debugging plug-ins.
+</p><p><i>About</i>&nbsp;. Shows the about box.
+</p>
+  </td></tr></table>
+  <br>
+
+<br>
+
+<table width="100%" border=0 cellspacing=0>
+  <tr class="headline">
+    <td width="99%" align=center>
+      <p class="sm">
+        Copyright (c) 2009, GNU General Public License by The QuArK (Quake Army Knife) Community - <a target="_blank" href="http://quark.sourceforge.net/">http://quark.sourceforge.net/</a><br>
+      </p>
+    </td>
+    <td width="1%" align=right nowrap>
+      &nbsp;[&nbsp;<span class="navenable"><a href="intro.modeleditor.importexport.html">Prev</a></span>&nbsp;-&nbsp;<a href="#__top__">Top</a>&nbsp;-&nbsp;<span class="navenable"><a href="intro.modeleditor.rmbmenus.html">Next</a></span>&nbsp;]&nbsp;
+    </td>
+  </tr>
+</table>
+</body>
+</html>

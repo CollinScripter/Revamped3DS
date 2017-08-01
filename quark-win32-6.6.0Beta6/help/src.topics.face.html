@@ -1,0 +1,431 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"  "http://www.w3.org/TR/html4/loose.dtd">
+<html lang="en">
+<head>
+  <title>Face Formats</title>
+  <meta name="Description" content="QuArK Information Database - Page: 4.4.1.&nbsp;Face Formats">
+  <meta name="Keywords" content="QuArK InfoBase Quake Army Knife QRK QKM Python PY Map Editor Hexen Heretic Half-Life Sin Kingpin Soldier-of-Fortune Star-Trek-Voyager Elite-Force">
+  <link rel=stylesheet href="standard.css" type="text/css">
+</head>
+
+<body>
+<a name="__top__"></a>
+<table width="100%" border=0 cellspacing=0>
+  <tr>
+    <td width=213>
+      <a target="_blank" href="http://quark.sourceforge.net/"><img src="quarkicon.png" width=213 height=90 border=0 alt="Go to QuArK Web Site"></a>
+    </td>
+    <td width="70%" align=center>
+      <div class="topheadline">Face Formats</div>
+      <div class="sm">Updated&nbsp;28 Jun 2008</div>
+    </td>
+    <td width="30%" valign=bottom nowrap>
+      Upper&nbsp;levels:<br>-&nbsp;<a href="index.html">QuArK&nbsp;Information&nbsp;Base</a><br>-&nbsp;<a href="src.html">4.&nbsp;The&nbsp;Source&nbsp;Code</a><br>-&nbsp;<a href="src.topics.html">4.4.&nbsp;Specific&nbsp;Topics</a><br>
+    </td>
+  </tr>
+</table>
+<table width="100%" border=0 cellspacing=0>
+  <tr class="headline">
+    <td width="99%">
+      <p class="headline">&nbsp;4.4.1.&nbsp;Face Formats</p>
+    </td>
+    <td width="1%" align=right nowrap>
+      &nbsp;[&nbsp;<span class="navenable"><a href="src.topics.html">Prev</a></span>&nbsp;-&nbsp;<span class="navenable"><a href="src.topics.html">Up</a></span>&nbsp;-&nbsp;<span class="navenable"><a href="src.topics.beziers.html">Next</a></span>&nbsp;]&nbsp;
+    </td>
+  </tr>
+</table>
+<table border=0 width="100%" cellspacing=10><tr><td><p>Here are described various aspects of face formats, which are of relevance
+to the code in QkMapPoly.pas and QkMap.pas.  Especially the relationship
+between QuArK's original internal representation (Quark etp) and the
+'Classic Quake' map format(s), and the new internal/.qrk/.qkm representation.
+</p>
+</td></tr></table>
+<br>
+
+<table width="100%" border=0 cellspacing=0>
+  <tr class="headline">
+    <td width="100%">
+      <p class="subheadline">&nbsp;Index</p>
+    </td>
+  </tr>
+</table>
+<ul class="index">
+  <li>- <a href="#bsp">In the BSP</a>&nbsp;<span class="added">(28 Jun 2008)</span>
+  <li>- <a href="#classic">Classic Quake</a>&nbsp;<span class="added">(28 Jun 2008)</span>
+  <li>- <a href="#etp">Enhanced Texture Positioning</a>&nbsp;<span class="added">(27 Apr 2002)</span>
+  <li>- <a href="#tv6">TV6</a>&nbsp;<span class="added">(11 May 2002)</span>
+  <li>- <a href="#bp">Brush Primitives</a>&nbsp;<span class="added">(08 Jan 2007)</span>
+  <li>- <a href="#valve220">Valve Mapversion 220</a>&nbsp;<span class="added">(21 Dec 2002)</span>
+</ul>
+<br>
+
+
+<a name="bsp"></a>
+  <table width="100%" border=0 cellspacing=0>
+    <tr class="headline">
+      <td>
+        <p class="item">&nbsp;In the BSP</p>
+      </td>
+      <td align=right>
+        <font size=-2>tiglari&nbsp;-&nbsp;28 Jun 2008</font>
+      </td>
+      <td width="1%" align=right nowrap>
+        &nbsp;&nbsp;[&nbsp;<a href="#__top__">Top</a>&nbsp;]&nbsp;
+      </td>
+    </tr>
+  </table>
+  <table border=0 width="100%" cellspacing=10><tr><td>
+<p>This is of course the fundamental one.  For Q1/2 it's two 4-vectors, uaxis,uoffset;
+vaxis, voffset, with this formula for computing the texture-coordinates
+for a point in the map space (only points on the face being relevant,
+of course):
+<div class="doccode"><pre>
+   u = x * u_axis.x + y * u_axis.y + z * u_axis.z + u_offset
+   v = x * v_axis.x + y * v_axis.y + z * v_axis.z + v_offset
+</pre></div>
+(from
+<a href="http://www.flipcode.com/tutorials/tut_q2levels.shtml">
+Max McGuire's Quake2 BSP file format tutorial</a> on www.flipcode.com)
+</p><p>With Q3 otoh, the texture-coordinates of each vertex of the face are
+given, as a five-vector, along with the spatial coordinates (5-space
+math, for L.M.Bujold fans!).  See
+<a href="http://graphics.stanford.edu/~kekoa/q3/"> 
+Kekoa Proudfoot Unofficial Quake3 Map Specs</a>.  This representation
+is rather redundant for brush-faces, but extends gracefully to patches.
+</p><p>In QkBsphulls.pas there is code for converting both the Q1/2 and Q3 .bsp
+representations to QuArK's.  A call of <strong>SolveForThreePoints</strong>
+does the job for Q3; Q1/2 are handled by some equation-solving code
+directly above that.
+</p>
+
+
+
+  </td></tr></table>
+  <br>
+
+<a name="classic"></a>
+  <table width="100%" border=0 cellspacing=0>
+    <tr class="headline">
+      <td>
+        <p class="item">&nbsp;Classic Quake</p>
+      </td>
+      <td align=right>
+        <font size=-2>tiglari&nbsp;-&nbsp;28 Jun 2008</font>
+      </td>
+      <td width="1%" align=right nowrap>
+        &nbsp;&nbsp;[&nbsp;<a href="#__top__">Top</a>&nbsp;]&nbsp;
+      </td>
+    </tr>
+  </table>
+  <table border=0 width="100%" cellspacing=10><tr><td>
+<p>The 'Classic Quake' face format is three parenthesized 3-vectors to
+specify three points defining the plane, then the texture name,
+and then five numbers being texture shift (2) rotation (1) and scale (2).
+E.g.
+<div class="doccode"><pre>
+  ( 432 0 96 ) ( 432 128 96 ) ( 560 0 96 ) bricka2_2 -432 0 0 1 1 
+</pre></div>
+This is Quake; other games elaborate on this by putting various things
+after the five numbers, such as in Q2/3 the three fields (Content, Flags,
+Value) etc. (you can get an idea of the variations by studying the
+SaveAsMapTextTFace procedure in QkQuakeMap).
+The way the five numbers work is that one imagines the texture as being
+plastered onto whatever of the three axis-planes is closest to parallel
+to the face, and then as being projected on the face, after being shifted,
+rotated and scaled as specified by the numbers.
+</p><p>This scheme has its advantages and disadvantages, which we will not go into
+here, but another question is why use nine numbers to specify a plane when four
+can actually do it? (three to specify a direction that the plane is
+perpendicular to, a fourth to specify the distance from the origin that you go
+in that direction to get to the plane).  The answer I think is that by
+using nine numbers you can specify a lot of different planes using only
+integers, whereas a four-number scheme would involve one in the tricky
+world of floating point and roundoff errors.
+</p><p>Anyway, this texture positioning scheme has difficulties with certain kinds
+of configurations, such as unpredictable results for faces making 45 degree
+angles to the axes, amd also makes it difficult to cause textures to move
+with faces when objects are shifted (since the textures are basically
+connected with axis planes, and projected onto the faces). </p>
+  </td></tr></table>
+  <br>
+
+<a name="etp"></a>
+  <table width="100%" border=0 cellspacing=0>
+    <tr class="headline">
+      <td>
+        <p class="item">&nbsp;Enhanced Texture Positioning</p>
+      </td>
+      <td align=right>
+        <font size=-2>tiglari&nbsp;-&nbsp;27 Apr 2002</font>
+      </td>
+      <td width="1%" align=right nowrap>
+        &nbsp;&nbsp;[&nbsp;<a href="#__top__">Top</a>&nbsp;]&nbsp;
+      </td>
+    </tr>
+  </table>
+  <table border=0 width="100%" cellspacing=10><tr><td>
+<p>So Armin came
+up with a different idea, which was to use the three points to specify the
+texture scale as well as the face plane.  The basic idea is that the first point
+is the origin of the texture (lower left corner), the second point the lower
+right corner (end of texture x/s axis), and the third point the upper left
+(end of y/t axis).  So when you move the ends of the texture L around in the
+face page, you're actually manipulating the threepoints.  But there are
+three twists in this, and then a problem.
+</p><p>Twist 1: due to the screwy way in which graphics are represented, sometimes
+the sign of the third threepoint has to be flipped to get the right result
+(Armin told me that even he had to check this empirically).
+</p><p>Twist 2: to prevent the size of the texture itself from influencing the
+distance between the threepoints, their location is normalized as if the
+size of the texture was 128x128.  This is what is retrieved by the
+TFace.GetThreePoints method, which is accessed in Python via
+threepoints(0) and setthreepoints(tp,0).  To get the actual locations
+of the texture upper-left and lower right-corners, use
+TFace.Get/SetThreePointsUserTex, which correct for the texture scale
+(EchelleTexture), and also for one more thing:
+</p><p>Twist 3: Three numbers do indeed specify a plane, but for efficient computations
+in working with brushes we want to do a bit more, which is to code what side
+of the plane is going to be inside the brush and what outside of it.  Happily
+there is a nice math operation which does this, the cross-product
+(<a href="src.math.vectors.html#cross">'The Cross Product'</a>).  If <B>u</b> and <b>v</b> are vectors, then
+<b>u x v</b> (which can be computed by a rather complicated procedure that's
+invoked in QuArK Python by the '^' operation on vectors)
+is a vector that is perpendicular to both <b>u</b> and <b>v</b>, and so
+naturally adapted to point to the outside of the plane containing in which
+<b>u</b> and <b>v</b> lie.  So the basic idea is that if p1, p2 and p3
+are the threepoints of the face, then <b>(p2-p1) x (p3-p1)</b> points to the
+outside of the face's poly.  This vector is called a 'normal', and when
+build tools complain about bad normals, they have failed to compute a satisfactory
+value for this cross-product, for some reason or other.
+</p><p>So now what if we want to mirror-flip a texture so that the lower right
+corner of the texture is to the left rather than the right of the origin
+in the map (the L is a L-mirror-image not an all).  The result of this
+is that the normal will point in the wrong direction, so the final twist is
+the 'mirror bit', the face attribute 'm' that sometimes appears with the
+value of '1'.  There's a useful math fact about cross products that:
+<div class="doccode"><pre>
+u x v = - (v x u)
+</pre></div>
+That is if we take the inputs to the cross product in the opposite order,
+we get a normal pointing in the opposite direction.  So, when the mirror
+bit is 1, then the texture scale is gotten by swapping p3 and p2 of the
+actual threepoints.  This is what is done by the TFace.Get/SetThreePointsT
+methods called by Get/SetThreePointsUserTex.
+</p><p>So for the full QuArK 'enhanced texture positioning' scheme, the
+face threepoints are used plus this additional information about
+the mirror-bit, which is coded in QuArK maps as TX1 or TX2 right
+after the games comment-delimiter, so the standard Quark etp version
+of the face we started with is:
+<div class="doccode"><pre>
+  ( 432 0 96 ) ( 432 128 96 ) ( 560 0 96 ) bricka2_2 -432 0 0 1 1 //TX1
+</pre></div>
+So that's how it works.
+</p><p>The problem is this: by coding the texture-scale information into the
+threepoints, we are cast out of the Garden of Integers created for us by
+John Carmack, into the floating point wilderness.  This is reflected in
+the phenomenon whereby vertexes sometimes drift off the grid by a tiny
+amount and can't be put back on.  I'm not convinced that this really causes
+terrible things to happen, but mappers hate it so it must be fixed,
+requiring a different representation of texture scale info.
+</p>
+  </td></tr></table>
+  <br>
+
+<a name="tv6"></a>
+  <table width="100%" border=0 cellspacing=0>
+    <tr class="headline">
+      <td>
+        <p class="item">&nbsp;TV6</p>
+      </td>
+      <td align=right>
+        <font size=-2>tiglari&nbsp;-&nbsp;11 May 2002</font>
+      </td>
+      <td width="1%" align=right nowrap>
+        &nbsp;&nbsp;[&nbsp;<a href="#__top__">Top</a>&nbsp;]&nbsp;
+      </td>
+    </tr>
+  </table>
+  <table border=0 width="100%" cellspacing=10><tr><td>
+<p>There are lots of possibilities, but the particular one I went with
+is what I call 'QuArK tv6', since it's based on using six numbers as
+the value of a 'tv' specific (texture vector) to specify the three
+texture points in a coordinate system for the face plane (only six
+rather than nine number needed because the plane is 2-dimensional).
+One reason for doing this is that it's relatively easy to convert from
+the six number representation to the nine number representation that's
+expected by other parts of QuArK.  So if you look more closely
+at TFace.GetThreePointsT, you'll see that if the tv specific is found,
+then the 2-number point specifications in the face coordinate system
+are transformed intto 3-number specifications in the map coordinate
+system, whereas if no tv specific is found then the threepoints and
+mirror bit are used (old representation).  TFace.GetThreePointsUserTex
+(which is what Python .threepoints(2) calls) then just uses whatever
+GetThreePointsT provides without caring where it comes from.
+GetThreePointsUserTex also has an option to either keep the origin of the
+texture coordinates roughly in the middle of the face, or not do this.
+</p><p>So much for reading; setting the texture is done by SetThreePointsUserTex,
+which handles the scaling.  this calls SetThreePointsEx, which checks
+whether the texture threeoints actually manage to define a plane (taking
+a cross-product, see below), returning true if they do and false if
+they don't (I don't think we need this check anymore, but am leaving it in
+for now, and then calls SetThreePointsT which now sets the tv spec,
+coincidentally erasing the 'm' specific if this is present, since
+we don't need it any more.  Unless of course we're writing the Quark etp
+format, in which case TFace.SimulateEnhTex generates old-style
+threepoint-and-mirror bit information.
+</p><p>So one leftover question is how is the face coordinate system generated?
+Basically by the same scheme as used in the brush-primitives representation
+in GtkRadiant, implemented in the function GetAxisBase,
+which basically amounts to finding a horizontal vector that lies in the
+face, then taking the perpendicular to that that lies in the face.
+In QuArK Python, the function quarkpy.qeditor.bestaxes does something
+very similar, but the reason for using the GtkRadiant function here
+is to be able to write the 'brush primitives' format consistently with
+what the GtkRadiant tools expect.  To make a coordinate system we need
+an origin as well as the axis vectors (see <a href="src.math.vectors.html">'Vectors'</a>
+for more on the philosophy of vectors); for this we use the first of the
+threepoints.
+</p><p>So the new texture scheme is extremely incremental, in the sense that
+a face is left in the old representation until its texture is dragged,
+and then it changes to the new.  One reason for this is that that even
+if there's some mistake it can't happen that somebody's total map will
+be trashed, there can only be problems with the faces actually worked on.
+The downside is a certain amount of cruft, perhaps someday this could be
+eliminated.
+</p><p>A final point is that there is are methods TFace.SetThreePointsEnhEx and
+TFace.RevertToEnhTex, callable from Python by enhrevert, just in case.
+</p><p>The last thing that had to be done to make the new scheme work properly was
+in the TFace.Deplacement method. which applies linear transformations to
+faces, where the code setting the mirror bit is removed, since it is no
+longer necessary.  The first version of the new scheme had a problem in
+that I didn't check for the InverseOrientation property (the linear mapping
+mirror-flips things), so that the brushes all got turned inside out).</p>
+  </td></tr></table>
+  <br>
+
+<a name="bp"></a>
+  <table width="100%" border=0 cellspacing=0>
+    <tr class="headline">
+      <td>
+        <p class="item">&nbsp;Brush Primitives</p>
+      </td>
+      <td align=right>
+        <font size=-2>tiglari&nbsp;-&nbsp;08 Jan 2007</font>
+      </td>
+      <td width="1%" align=right nowrap>
+        &nbsp;&nbsp;[&nbsp;<a href="#__top__">Top</a>&nbsp;]&nbsp;
+      </td>
+    </tr>
+  </table>
+  <table border=0 width="100%" cellspacing=10><tr><td>
+<p>'Brush primitives' is the new brush format used by GtkRadiant.
+Other than some extra braces and a 'Brushdef' in the text of the format,
+its main new feature (for now at any rate) is an improved method of
+expressing the texture-mapping over the 5 'shift scale rotate'
+numbers that come after the texture name in the old
+representation.
+</p><p>In BP format, you get something that looks like this coming
+after the threeponts info, and before the texture name:
+<div class="doccode"><pre>
+( ( 0.007813 0 0 ) ( 0 0.007813 0 ) )
+</pre></div>
+What these are is the top two rows of the 'homogeneous matrix'
+mapping the plane of the face, under a special coordinate system
+we will get to in a moment, into the texture plane (so it's sort
+of the reverse of how QuArK etp and tv6 work, since these most directly
+represent the mapping from the texture plane onto the face).
+Erm, what's a homogeneous matrix you might ask.
+</p><p>It is 3x3 matrix whose bottom row is (0 0 1).  If you multiply
+a homogeneous matrix by a column vector whose z coordinate is
+1, 
+you'll see that the equations are exactly those for a
+linear mapping followed by a translation: the first two numbers
+of the top two rows give a 2x2 matrix describing the linear
+transformation, and the last number give a column vector to
+be added (to the a column 2-vector) to give the translation.
+So what about this coordinate system?
+</p><p>It is one whose axis directions are gotten by rotating the
+Y and Z coordinates of map space so that they lie in the
+plane.  These direction vectors are computed by function
+GetAxisBase in QkMapPoly.pas.  It's essential that q3map
+and the editor compute them in the same way; hopefully the
+GtkRadiant/Q3map developers won't change it without telling us.
+Then of course for a coordinate system you need an origin,
+this is gotten by scaling the face's normal vector by its
+Dist (-ance from the origin).
+</p><p>So what goes on in GetPXPY is that the (texture-scaled,
+etc.) threepoints are converted to the Axis Base coordinate
+system, and then these equations are solved for the
+coefficients aij making up the matrix (I used Maple V
+to get the solution):
+<div class="doccode"><pre>
+ a11*p0x+a12*p0y+a13 =  0
+ a21*p0x+a22*p0y+a23 =  0
+
+ a11*p1x+a12*p1y+a13 =  1
+ a21*p1x+a22*p1y+a23 =  0
+
+ a11*p2x+a12*p2y+a13 =  0
+ a21*p2x+a22*p2y+a23 = -1
+</pre></div>
+</p><p>The conversions from Brush Primitives to QuArK (once etp, now tv6) are
+made in the procedure ReadQ3BrushDef in QkMap.pas.</p>
+  </td></tr></table>
+  <br>
+
+<a name="valve220"></a>
+  <table width="100%" border=0 cellspacing=0>
+    <tr class="headline">
+      <td>
+        <p class="item">&nbsp;Valve Mapversion 220</p>
+      </td>
+      <td align=right>
+        <font size=-2>tiglari&nbsp;-&nbsp;21 Dec 2002</font>
+      </td>
+      <td width="1%" align=right nowrap>
+        &nbsp;&nbsp;[&nbsp;<a href="#__top__">Top</a>&nbsp;]&nbsp;
+      </td>
+    </tr>
+  </table>
+  <table border=0 width="100%" cellspacing=10><tr><td>
+<p>The Valve Mapversion 220 map format used by WorldCraft 3.3
+uses texture-scale representation that is quite close to that
+used by the Q1/2 bsp.  After the texture name come 2
+square-bracketted 4-tuples, then 0, and then 2 more numbers.
+The first three members of the 4-tuples are basically the u
+and v axes, except that they're normalized to have length 1,
+while the last member is the offset.  Then the following 0
+is empty cruft (originally indicated rotation), while the
+last two numbers as uscale and vscale, but you divide the
+u and v axes by them rather than multiply to get the .bsp
+structure (so it's opposite to what a sensible person would
+expect).  I.e.
+<div class="doccode"><pre>
+ WC3.3: [u.x     u.y     u.z     u.o] [v.x v.y v.z v.o] 0 u.s v.s
+
+ BSP:   [u.x/u.s u.y/u.s u.z/u.s u.o] [v.x/v.s, ...    ]
+</pre></div>
+Reading is done by WC33Params in QkMap.pas (a sub-procedure
+of ReadEntityList), Writing by Valve220MapParams in QkMapPoly.pas.
+The writing code draws very heavily on Zoner's.
+</p>
+
+
+  </td></tr></table>
+  <br>
+
+<br>
+
+<table width="100%" border=0 cellspacing=0>
+  <tr class="headline">
+    <td width="99%" align=center>
+      <p class="sm">
+        Copyright (c) 2009, GNU General Public License by The QuArK (Quake Army Knife) Community - <a target="_blank" href="http://quark.sourceforge.net/">http://quark.sourceforge.net/</a><br>
+      </p>
+    </td>
+    <td width="1%" align=right nowrap>
+      &nbsp;[&nbsp;<span class="navenable"><a href="src.topics.html">Prev</a></span>&nbsp;-&nbsp;<a href="#__top__">Top</a>&nbsp;-&nbsp;<span class="navenable"><a href="src.topics.beziers.html">Next</a></span>&nbsp;]&nbsp;
+    </td>
+  </tr>
+</table>
+</body>
+</html>

@@ -1,0 +1,33 @@
+QQRKSRC1
+// Warsow textures file for Quark
+
+//$Header: /cvsroot/quark/runtime/addons/Warsow/WarsowTextures.qrk,v 1.2 2008/09/14 12:55:07 danielpharos Exp $
+// ----------- REVISION HISTORY ------------
+//$Log: WarsowTextures.qrk,v $
+//Revision 1.2  2008/09/14 12:55:07  danielpharos
+//Changes to Help system: All forms now have a customizable help-link. Also, added an fallback option to the online infobase docs.
+//
+//Revision 1.1  2008/04/23 20:51:46  cdunde
+//Setup for Warsow with .md3 model support.
+//
+//
+
+{
+  QuArKProtected = "1"
+  Description = "Warsow Textures"
+
+  Textures.qtx =
+  {
+    Toolbox = "Texture Browser..."
+    Root = "Warsow Textures.qtxfolder"
+    HTML = "intro.texturebrowser.html"
+
+    Warsow Textures.qtxfolder =
+    {
+      Dynamically Found.osfolder =
+      {
+        path = "basewsw"
+      }
+    }
+  }
+}

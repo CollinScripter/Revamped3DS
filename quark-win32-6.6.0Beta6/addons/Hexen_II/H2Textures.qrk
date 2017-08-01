@@ -1,0 +1,3095 @@
+QQRKSRC1
+// Hexen II textures file for Quark
+
+//$Header: /cvsroot/quark/runtime/addons/Hexen_II/H2Textures.qrk,v 1.2 2008/09/14 12:55:22 danielpharos Exp $
+// ----------- REVISION HISTORY ------------
+//$Log: H2Textures.qrk,v $
+//Revision 1.2  2008/09/14 12:55:22  danielpharos
+//Changes to Help system: All forms now have a customizable help-link. Also, added an fallback option to the online infobase docs.
+//
+//Revision 1.1  2008/03/28 19:08:14  cdunde
+//Cleaned up, fixed if needed and brought into sync with all QuArK addons.
+//
+//
+
+{
+  QuArKProtected = "1"
+  Description = "Hexen II Textures"
+
+  Textures.qtx =
+  {
+    ToolBox = "Texture Browser..."
+    Root = "Raven Software Textures.qtxfolder"
+    HTML = "intro.texturebrowser.html"
+
+    Raven Software Textures.qtxfolder =
+    {
+      Missing.wad =
+      {
+        rtex094.wl =
+        {
+          s = "data1"
+          b = "egypt4"
+        }
+        rtex111.wl =
+        {
+          s = "data1"
+          b = "egypt5"
+        }
+        rtex124.wl =
+        {
+          s = "data1"
+          b = "egypt4"
+        }
+        rtex131.wl =
+        {
+          s = "data1"
+          b = "egypt4"
+        }
+        rtex133.wl =
+        {
+          s = "data1"
+          b = "egypt7"
+        }
+        rtex279.wl =
+        {
+          s = "data1"
+          b = "egypt2"
+        }
+        rtex390.wl =
+        {
+          s = "data1"
+          b = "egypt4"
+        }
+        rtex415e.wl =
+        {
+          s = "data1"
+          b = "egypt6"
+          n = "rtex415"
+        }
+      }
+      Bas-relief.wad =
+      {
+        rtex013.wl =
+        {
+          s = "data1"
+          b = "demo1"
+        }
+        rtex014.wl =
+        {
+          s = "data1"
+          b = "demo1"
+        }
+        rtex062.wl =
+        {
+          s = "data1"
+          b = "demo1"
+        }
+        rtex063.wl =
+        {
+          s = "data1"
+          b = "demo1"
+        }
+        rtex081.wl =
+        {
+          s = "data1"
+          b = "demo1"
+        }
+        rtex091.wl =
+        {
+          s = "data1"
+          b = "demo3"
+        }
+        rtex252.wl =
+        {
+          s = "data1"
+          b = "romeric1"
+        }
+        rtex459.wl =
+        {
+          s = "data1"
+          b = "romeric1"
+        }
+        rtex496.wl =
+        {
+          s = "data1"
+          b = "romeric2"
+        }
+        rtex474.wl =
+        {
+          s = "data1"
+          b = "romeric3"
+        }
+        rtex424r.wl =
+        {
+          s = "data1"
+          b = "romeric2"
+          n = "rtex424"
+        }
+        rtex442.wl =
+        {
+          s = "data1"
+          b = "ravdm1"
+        }
+        rtex313.wl =
+        {
+          s = "data1"
+          b = "romeric1"
+        }
+        rtex261.wl =
+        {
+          s = "data1"
+          b = "meso3"
+        }
+        rtex262.wl =
+        {
+          s = "data1"
+          b = "meso3"
+        }
+        rtex263.wl =
+        {
+          s = "data1"
+          b = "meso3"
+        }
+        rtex264.wl =
+        {
+          s = "data1"
+          b = "meso3"
+        }
+        rtex295.wl =
+        {
+          s = "data1"
+          b = "meso1"
+        }
+        rtex296.wl =
+        {
+          s = "data1"
+          b = "meso1"
+        }
+        rtex307.wl =
+        {
+          s = "data1"
+          b = "romeric4"
+        }
+        rtex308.wl =
+        {
+          s = "data1"
+          b = "romeric3"
+        }
+        rtex311.wl =
+        {
+          s = "data1"
+          b = "romeric7"
+        }
+        rtex312.wl =
+        {
+          s = "data1"
+          b = "romeric1"
+        }
+        rtex414r.wl =
+        {
+          s = "data1"
+          b = "romeric1"
+          n = "rtex414"
+        }
+        rtex417.wl =
+        {
+          s = "data1"
+          b = "romeric1"
+        }
+        rtex475.wl =
+        {
+          s = "data1"
+          b = "romeric3"
+        }
+        rtex476.wl =
+        {
+          s = "data1"
+          b = "ravdm1"
+        }
+      }
+      Blue stones.wad =
+      {
+        rtex003.wl =
+        {
+          s = "data1"
+          b = "demo1"
+        }
+        rtex004.wl =
+        {
+          s = "data1"
+          b = "demo1"
+        }
+        rtex005.wl =
+        {
+          s = "data1"
+          b = "demo1"
+        }
+        rtex006.wl =
+        {
+          s = "data1"
+          b = "cath"
+        }
+        rtex052.wl =
+        {
+          s = "data1"
+          b = "demo2"
+        }
+        rtex213.wl =
+        {
+          s = "data1"
+          b = "castle4"
+        }
+        rtex214.wl =
+        {
+          s = "data1"
+          b = "castle4"
+        }
+        rtex215.wl =
+        {
+          s = "data1"
+          b = "demo1"
+        }
+        rtex216.wl =
+        {
+          s = "data1"
+          b = "castle4"
+        }
+        rtex217.wl =
+        {
+          s = "data1"
+          b = "castle4"
+        }
+        rtex218.wl =
+        {
+          s = "data1"
+          b = "castle4"
+        }
+        rtex220.wl =
+        {
+          s = "data1"
+          b = "tower"
+        }
+        rtex221.wl =
+        {
+          s = "data1"
+          b = "castle4"
+        }
+        rtex223.wl =
+        {
+          s = "data1"
+          b = "demo1"
+        }
+        rtex224.wl =
+        {
+          s = "data1"
+          b = "castle4"
+        }
+        rtex225.wl =
+        {
+          s = "data1"
+          b = "demo1"
+        }
+        rtex226.wl =
+        {
+          s = "data1"
+          b = "demo2"
+        }
+        rtex227.wl =
+        {
+          s = "data1"
+          b = "castle4"
+        }
+        rtex228.wl =
+        {
+          s = "data1"
+          b = "castle4"
+        }
+        rtex229.wl =
+        {
+          s = "data1"
+          b = "castle4"
+        }
+        rtex222.wl =
+        {
+          s = "data1"
+          b = "castle4"
+        }
+        rtex376.wl =
+        {
+          s = "data1"
+          b = "demo1"
+        }
+        rtex342m.wl =
+        {
+          s = "data1"
+          b = "castle5"
+          n = "rtex342"
+        }
+        rtex343m.wl =
+        {
+          s = "data1"
+          b = "demo2"
+          n = "rtex343"
+        }
+        rtex053.wl =
+        {
+          s = "data1"
+          b = "demo1"
+        }
+        rtex068.wl =
+        {
+          s = "data1"
+          b = "demo1"
+        }
+        rtex001.wl =
+        {
+          s = "data1"
+          b = "demo1"
+        }
+        rtex009.wl =
+        {
+          s = "data1"
+          b = "demo2"
+        }
+        rtex067.wl =
+        {
+          s = "data1"
+          b = "demo2"
+        }
+        rtex446.wl =
+        {
+          s = "data1"
+          b = "romeric1"
+        }
+        rtex447.wl =
+        {
+          s = "data1"
+          b = "romeric2"
+        }
+        rtex137.wl =
+        {
+          s = "data1"
+          b = "demo1"
+        }
+        rtex065.wl =
+        {
+          s = "data1"
+          b = "demo1"
+        }
+        rtex416r.wl =
+        {
+          s = "data1"
+          b = "ravdm1"
+          n = "rtex416"
+        }
+        rtex401.wl =
+        {
+          s = "data1"
+          b = "ravdm1"
+        }
+        rtex339.wl =
+        {
+          s = "data1"
+          b = "demo1"
+        }
+        rtex340m.wl =
+        {
+          s = "data1"
+          b = "demo3"
+          n = "rtex340"
+        }
+        rtex341m.wl =
+        {
+          s = "data1"
+          b = "demo2"
+          n = "rtex341"
+        }
+        rtex379m.wl =
+        {
+          s = "data1"
+          b = "demo2"
+          n = "rtex379"
+        }
+        mtex481.wl =
+        {
+          s = "data1"
+          b = "meso1"
+        }
+        mtex482.wl =
+        {
+          s = "data1"
+          b = "meso1"
+        }
+        rtex508.wl =
+        {
+          s = "data1"
+          b = "romeric1"
+        }
+      }
+      Brown stones.wad =
+      {
+        rtex002.wl =
+        {
+          s = "data1"
+          b = "meso5"
+        }
+        rtex265.wl =
+        {
+          s = "data1"
+          b = "meso3"
+        }
+        rtex272.wl =
+        {
+          s = "data1"
+          b = "meso3"
+        }
+        rtex328.wl =
+        {
+          s = "data1"
+          b = "meso1"
+        }
+        rtex329.wl =
+        {
+          s = "data1"
+          b = "meso1"
+        }
+        rtex330.wl =
+        {
+          s = "data1"
+          b = "meso2"
+        }
+        rtex331.wl =
+        {
+          s = "data1"
+          b = "meso1"
+        }
+        rtex337.wl =
+        {
+          s = "data1"
+          b = "egypt1"
+        }
+        rtex338.wl =
+        {
+          s = "data1"
+          b = "egypt1"
+        }
+        rtex340e.wl =
+        {
+          s = "data1"
+          b = "egypt1"
+          n = "rtex340"
+        }
+        rtex399.wl =
+        {
+          s = "data1"
+          b = "egypt1"
+        }
+        rtex400.wl =
+        {
+          s = "data1"
+          b = "egypt1"
+        }
+        rtex412e.wl =
+        {
+          s = "data1"
+          b = "egypt1"
+          n = "rtex412"
+        }
+        rtex413e.wl =
+        {
+          s = "data1"
+          b = "egypt1"
+          n = "rtex413"
+        }
+        mtex486.wl =
+        {
+          s = "data1"
+          b = "meso2"
+        }
+        rtex274.wl =
+        {
+          s = "data1"
+          b = "meso2"
+        }
+        rtex275.wl =
+        {
+          s = "data1"
+          b = "meso1"
+        }
+        rtex285.wl =
+        {
+          s = "data1"
+          b = "meso6"
+        }
+        rtex040.wl =
+        {
+          s = "data1"
+          b = "demo1"
+        }
+        rtex058.wl =
+        {
+          s = "data1"
+          b = "demo2"
+        }
+        rtex165.wl =
+        {
+          s = "data1"
+          b = "demo2"
+        }
+        rtex023.wl =
+        {
+          s = "data1"
+          b = "meso2"
+        }
+        rtex045.wl =
+        {
+          s = "data1"
+          b = "meso2"
+        }
+        rtex050.wl =
+        {
+          s = "data1"
+          b = "meso2"
+        }
+        rtex060.wl =
+        {
+          s = "data1"
+          b = "meso5"
+        }
+        rtex070.wl =
+        {
+          s = "data1"
+          b = "meso3"
+        }
+        rtex277.wl =
+        {
+          s = "data1"
+          b = "meso2"
+        }
+        rtex021.wl =
+        {
+          s = "data1"
+          b = "demo1"
+        }
+        mtex436.wl =
+        {
+          s = "data1"
+          b = "meso1"
+        }
+        rtex360m.wl =
+        {
+          s = "data1"
+          b = "demo2"
+          n = "rtex360"
+        }
+        rtex414m.wl =
+        {
+          s = "data1"
+          b = "demo2"
+          n = "rtex414"
+        }
+        rtex278.wl =
+        {
+          s = "data1"
+          b = "meso2"
+        }
+        rtex022.wl =
+        {
+          s = "data1"
+          b = "demo1"
+        }
+        rtex020.wl =
+        {
+          s = "data1"
+          b = "demo1"
+        }
+        rtex039.wl =
+        {
+          s = "data1"
+          b = "demo1"
+        }
+        rtex164.wl =
+        {
+          s = "data1"
+          b = "demo2"
+        }
+        rtex413r.wl =
+        {
+          s = "data1"
+          b = "romeric1"
+          n = "rtex413"
+        }
+        rtex253.wl =
+        {
+          s = "data1"
+          b = "ravdm1"
+        }
+        rtex254.wl =
+        {
+          s = "data1"
+          b = "romeric1"
+        }
+        rtex256.wl =
+        {
+          s = "data1"
+          b = "ravdm1"
+        }
+        rtex497.wl =
+        {
+          s = "data1"
+          b = "romeric2"
+        }
+        rtex259.wl =
+        {
+          s = "data1"
+          b = "romeric1"
+        }
+        rtex019.wl =
+        {
+          s = "data1"
+          b = "demo3"
+        }
+        rtex034.wl =
+        {
+          s = "data1"
+          b = "demo1"
+        }
+        rtex427m.wl =
+        {
+          s = "data1"
+          b = "demo3"
+          n = "rtex427"
+        }
+        rtex422r.wl =
+        {
+          s = "data1"
+          b = "ravdm1"
+          n = "rtex422"
+        }
+        rtex440.wl =
+        {
+          s = "data1"
+          b = "romeric7"
+        }
+        rtex335.wl =
+        {
+          s = "data1"
+          b = "castle5"
+        }
+        rtex336.wl =
+        {
+          s = "data1"
+          b = "demo3"
+        }
+        mtex497.wl =
+        {
+          s = "data1"
+          b = "meso1"
+        }
+        rtex425m.wl =
+        {
+          s = "data1"
+          b = "demo3"
+          n = "rtex425"
+        }
+      }
+      Buttons.wad =
+      {
+        +0pyr.wl =
+        {
+          s = "data1"
+          b = "demo1"
+        }
+        +apyr.wl =
+        {
+          s = "data1"
+          b = "demo1"
+        }
+        +0sun.wl =
+        {
+          s = "data1"
+          b = "meso2"
+        }
+        +asun.wl =
+        {
+          s = "data1"
+          b = "meso2"
+        }
+        +0eye.wl =
+        {
+          s = "data1"
+          b = "egypt1"
+        }
+        +aeye.wl =
+        {
+          s = "data1"
+          b = "egypt1"
+        }
+        +0pen.wl =
+        {
+          s = "data1"
+          b = "egypt2"
+        }
+        +apen.wl =
+        {
+          s = "data1"
+          b = "egypt2"
+        }
+        +0air.wl =
+        {
+          s = "data1"
+          b = "romeric4"
+        }
+        +aair.wl =
+        {
+          s = "data1"
+          b = "romeric4"
+        }
+        +0fire.wl =
+        {
+          s = "data1"
+          b = "romeric4"
+        }
+        +afire.wl =
+        {
+          s = "data1"
+          b = "romeric4"
+        }
+        +0steam.wl =
+        {
+          s = "data1"
+          b = "romeric4"
+        }
+        +asteam.wl =
+        {
+          s = "data1"
+          b = "romeric4"
+        }
+        +0tria.wl =
+        {
+          s = "data1"
+          b = "romeric1"
+        }
+        +atria.wl =
+        {
+          s = "data1"
+          b = "romeric1"
+        }
+        +0wat.wl =
+        {
+          s = "data1"
+          b = "romeric4"
+        }
+        +awat.wl =
+        {
+          s = "data1"
+          b = "romeric4"
+        }
+        +0rune1.wl =
+        {
+          s = "data1"
+          b = "demo1"
+        }
+        +1rune1.wl =
+        {
+          s = "data1"
+          b = "demo1"
+        }
+        +2rune1.wl =
+        {
+          s = "data1"
+          b = "demo1"
+        }
+        +3rune1.wl =
+        {
+          s = "data1"
+          b = "demo1"
+        }
+        +4rune1.wl =
+        {
+          s = "data1"
+          b = "demo1"
+        }
+        +0rune2.wl =
+        {
+          s = "data1"
+          b = "demo1"
+        }
+        +1rune2.wl =
+        {
+          s = "data1"
+          b = "demo1"
+        }
+        +2rune2.wl =
+        {
+          s = "data1"
+          b = "demo1"
+        }
+        +3rune2.wl =
+        {
+          s = "data1"
+          b = "demo1"
+        }
+        +4rune2.wl =
+        {
+          s = "data1"
+          b = "demo1"
+        }
+        +0tri.wl =
+        {
+          s = "data1"
+          b = "romeric1"
+        }
+        +1tri.wl =
+        {
+          s = "data1"
+          b = "romeric1"
+        }
+        +2tri.wl =
+        {
+          s = "data1"
+          b = "romeric1"
+        }
+        +3tri.wl =
+        {
+          s = "data1"
+          b = "romeric1"
+        }
+        +4tri.wl =
+        {
+          s = "data1"
+          b = "romeric1"
+        }
+      }
+      Clean stones.wad =
+      {
+        rtex028.wl =
+        {
+          s = "data1"
+          b = "demo1"
+        }
+        rtex029.wl =
+        {
+          s = "data1"
+          b = "demo1"
+        }
+        rtex173.wl =
+        {
+          s = "data1"
+          b = "demo2"
+        }
+        mtex435.wl =
+        {
+          s = "data1"
+          b = "meso3"
+        }
+        rtex036.wl =
+        {
+          s = "data1"
+          b = "meso6"
+        }
+        rtex044.wl =
+        {
+          s = "data1"
+          b = "meso2"
+        }
+        rtex076.wl =
+        {
+          s = "data1"
+          b = "meso1"
+        }
+        rtex273.wl =
+        {
+          s = "data1"
+          b = "meso3"
+        }
+        rtex332.wl =
+        {
+          s = "data1"
+          b = "meso1"
+        }
+        rtex059.wl =
+        {
+          s = "data1"
+          b = "egypt1"
+        }
+        rtex368e.wl =
+        {
+          s = "data1"
+          b = "egypt1"
+          n = "rtex368"
+        }
+        rtex384e.wl =
+        {
+          s = "data1"
+          b = "egypt1"
+          n = "rtex384"
+        }
+        rtex385.wl =
+        {
+          s = "data1"
+          b = "egypt1"
+        }
+        rtex031.wl =
+        {
+          s = "data1"
+          b = "romeric4"
+        }
+        rtex433.wl =
+        {
+          s = "data1"
+          b = "ravdm1"
+        }
+        rtex441.wl =
+        {
+          s = "data1"
+          b = "romeric1"
+        }
+        rtex077.wl =
+        {
+          s = "data1"
+          b = "meso1"
+        }
+        rtex282.wl =
+        {
+          s = "data1"
+          b = "egypt1"
+        }
+        rtex415m.wl =
+        {
+          s = "data1"
+          b = "demo1"
+          n = "rtex415"
+        }
+        rtex439.wl =
+        {
+          s = "data1"
+          b = "ravdm1"
+        }
+        rtex501.wl =
+        {
+          s = "data1"
+          b = "romeric1"
+        }
+      }
+      Columns.wad =
+      {
+        rtex365m.wl =
+        {
+          s = "data1"
+          b = "cath"
+          n = "rtex365"
+        }
+        rtex047.wl =
+        {
+          s = "data1"
+          b = "cath"
+        }
+        rtex486.wl =
+        {
+          s = "data1"
+          b = "romeric4"
+        }
+        rtex255.wl =
+        {
+          s = "data1"
+          b = "ravdm1"
+        }
+        rtex135.wl =
+        {
+          s = "data1"
+          b = "tower"
+        }
+        trimtex.wl =
+        {
+          s = "data1"
+          b = "demo1"
+        }
+        rtex166.wl =
+        {
+          s = "data1"
+          b = "village1"
+        }
+        rtex231.wl =
+        {
+          s = "data1"
+          b = "castle5"
+        }
+        rtex015.wl =
+        {
+          s = "data1"
+          b = "cath"
+        }
+      }
+      Cornices.wad =
+      {
+        rtex201.wl =
+        {
+          s = "data1"
+          b = "village2"
+        }
+        rtex419r.wl =
+        {
+          s = "data1"
+          b = "romeric1"
+          n = "rtex419"
+        }
+        rtex425r.wl =
+        {
+          s = "data1"
+          b = "romeric1"
+          n = "rtex425"
+        }
+        rtex427r.wl =
+        {
+          s = "data1"
+          b = "ravdm1"
+          n = "rtex427"
+        }
+        rtex428.wl =
+        {
+          s = "data1"
+          b = "ravdm1"
+        }
+        rtex435.wl =
+        {
+          s = "data1"
+          b = "romeric1"
+        }
+        rtex436.wl =
+        {
+          s = "data1"
+          b = "romeric1"
+        }
+        rtex444.wl =
+        {
+          s = "data1"
+          b = "romeric2"
+        }
+        rtex455.wl =
+        {
+          s = "data1"
+          b = "romeric1"
+        }
+        rtex270.wl =
+        {
+          s = "data1"
+          b = "meso1"
+        }
+        rtex309.wl =
+        {
+          s = "data1"
+          b = "romeric1"
+        }
+        rtex310.wl =
+        {
+          s = "data1"
+          b = "ravdm1"
+        }
+        rtex418r.wl =
+        {
+          s = "data1"
+          b = "ravdm1"
+          n = "rtex418"
+        }
+        rtex426r.wl =
+        {
+          s = "data1"
+          b = "romeric1"
+          n = "rtex426"
+        }
+        celt2.wl =
+        {
+          s = "data1"
+          b = "demo1"
+        }
+        rtex412r.wl =
+        {
+          s = "data1"
+          b = "romeric1"
+          n = "rtex412"
+        }
+        rtex257.wl =
+        {
+          s = "data1"
+          b = "ravdm1"
+        }
+        rtex258.wl =
+        {
+          s = "data1"
+          b = "ravdm1"
+        }
+      }
+      Curtains.wad =
+      {
+        rtex082.wl =
+        {
+          s = "data1"
+          b = "tower"
+        }
+        rtex146.wl =
+        {
+          s = "data1"
+          b = "demo2"
+        }
+        rtex147.wl =
+        {
+          s = "data1"
+          b = "demo2"
+        }
+        rtex151.wl =
+        {
+          s = "data1"
+          b = "village1"
+        }
+        rtex152.wl =
+        {
+          s = "data1"
+          b = "tower"
+        }
+        rtex154.wl =
+        {
+          s = "data1"
+          b = "tower"
+        }
+        rtex158.wl =
+        {
+          s = "data1"
+          b = "demo2"
+        }
+        rtex357m.wl =
+        {
+          s = "data1"
+          b = "demo2"
+          n = "rtex357"
+        }
+        rtex358m.wl =
+        {
+          s = "data1"
+          b = "demo2"
+          n = "rtex358"
+        }
+        rtex464.wl =
+        {
+          s = "data1"
+          b = "romeric3"
+        }
+        rtex481.wl =
+        {
+          s = "data1"
+          b = "romeric4"
+        }
+        rtex090.wl =
+        {
+          s = "data1"
+          b = "demo1"
+        }
+        rtex088.wl =
+        {
+          s = "data1"
+          b = "village1"
+        }
+        rtex089.wl =
+        {
+          s = "data1"
+          b = "demo2"
+        }
+        rtex482.wl =
+        {
+          s = "data1"
+          b = "romeric4"
+        }
+        rtex483.wl =
+        {
+          s = "data1"
+          b = "romeric4"
+        }
+        rtex484.wl =
+        {
+          s = "data1"
+          b = "romeric4"
+        }
+      }
+      Decorate.wad =
+      {
+        celtbrown.wl =
+        {
+          s = "data1"
+          b = "demo2"
+        }
+        rtex156.wl =
+        {
+          s = "data1"
+          b = "tower"
+        }
+        rtex160.wl =
+        {
+          s = "data1"
+          b = "demo1"
+        }
+        rtex161.wl =
+        {
+          s = "data1"
+          b = "tower"
+        }
+        rtex251.wl =
+        {
+          s = "data1"
+          b = "demo1"
+        }
+        rtex351m.wl =
+        {
+          s = "data1"
+          b = "demo3"
+          n = "rtex351"
+        }
+        rtex352m.wl =
+        {
+          s = "data1"
+          b = "cath"
+          n = "rtex352"
+        }
+        rtex353m.wl =
+        {
+          s = "data1"
+          b = "cath"
+          n = "rtex353"
+        }
+        rtex354m.wl =
+        {
+          s = "data1"
+          b = "cath"
+          n = "rtex354"
+        }
+        rtex355.wl =
+        {
+          s = "data1"
+          b = "demo1"
+        }
+        rtex356m.wl =
+        {
+          s = "data1"
+          b = "castle5"
+          n = "rtex356"
+        }
+        rtex359m.wl =
+        {
+          s = "data1"
+          b = "demo2"
+          n = "rtex359"
+        }
+        rtex361m.wl =
+        {
+          s = "data1"
+          b = "village2"
+          n = "rtex361"
+        }
+        rtex362m.wl =
+        {
+          s = "data1"
+          b = "demo1"
+          n = "rtex362"
+        }
+        rtex368m.wl =
+        {
+          s = "data1"
+          b = "demo3"
+          n = "rtex368"
+        }
+        rtex394m.wl =
+        {
+          s = "data1"
+          b = "demo1"
+          n = "rtex394"
+        }
+        rtex395m.wl =
+        {
+          s = "data1"
+          b = "demo1"
+          n = "rtex395"
+        }
+        rtex420m.wl =
+        {
+          s = "data1"
+          b = "demo2"
+          n = "rtex420"
+        }
+        rtex426m.wl =
+        {
+          s = "data1"
+          b = "demo1"
+          n = "rtex426"
+        }
+        rtex431.wl =
+        {
+          s = "data1"
+          b = "cath"
+        }
+        rtex432.wl =
+        {
+          s = "data1"
+          b = "demo1"
+        }
+        thronetex1.wl =
+        {
+          s = "data1"
+          b = "village2"
+        }
+        mtex402.wl =
+        {
+          s = "data1"
+          b = "meso1"
+        }
+        mtex405.wl =
+        {
+          s = "data1"
+          b = "meso1"
+        }
+        mtex411.wl =
+        {
+          s = "data1"
+          b = "meso4"
+        }
+        mtex425.wl =
+        {
+          s = "data1"
+          b = "meso1"
+        }
+        mtex456.wl =
+        {
+          s = "data1"
+          b = "meso2"
+        }
+        mtex458.wl =
+        {
+          s = "data1"
+          b = "meso1"
+        }
+        mtex504.wl =
+        {
+          s = "data1"
+          b = "meso1"
+        }
+        mtex510.wl =
+        {
+          s = "data1"
+          b = "meso2"
+        }
+        rtex287.wl =
+        {
+          s = "data1"
+          b = "meso9"
+        }
+        rtex297.wl =
+        {
+          s = "data1"
+          b = "meso1"
+        }
+        rtex301.wl =
+        {
+          s = "data1"
+          b = "meso2"
+        }
+        rtex326.wl =
+        {
+          s = "data1"
+          b = "meso1"
+        }
+        rtex333.wl =
+        {
+          s = "data1"
+          b = "meso1"
+        }
+        rtex334.wl =
+        {
+          s = "data1"
+          b = "meso3"
+        }
+        mtex424.wl =
+        {
+          s = "data1"
+          b = "meso6"
+        }
+        rtex370.wl =
+        {
+          s = "data1"
+          b = "egypt1"
+        }
+        rtex423.wl =
+        {
+          s = "data1"
+          b = "egypt1"
+        }
+        rtex305.wl =
+        {
+          s = "data1"
+          b = "romeric3"
+        }
+        rtex403.wl =
+        {
+          s = "data1"
+          b = "romeric1"
+        }
+        rtex404.wl =
+        {
+          s = "data1"
+          b = "ravdm1"
+        }
+        rtex405.wl =
+        {
+          s = "data1"
+          b = "romeric1"
+        }
+        rtex407.wl =
+        {
+          s = "data1"
+          b = "romeric2"
+        }
+        rtex408.wl =
+        {
+          s = "data1"
+          b = "romeric4"
+        }
+        rtex409.wl =
+        {
+          s = "data1"
+          b = "romeric1"
+        }
+        rtex410r.wl =
+        {
+          s = "data1"
+          b = "romeric6"
+          n = "rtex410"
+        }
+        rtex454.wl =
+        {
+          s = "data1"
+          b = "ravdm1"
+        }
+        rtex458.wl =
+        {
+          s = "data1"
+          b = "romeric1"
+        }
+        rtex470.wl =
+        {
+          s = "data1"
+          b = "romeric1"
+        }
+        rtex495.wl =
+        {
+          s = "data1"
+          b = "romeric5"
+        }
+        rtex498.wl =
+        {
+          s = "data1"
+          b = "romeric2"
+        }
+        rtex499.wl =
+        {
+          s = "data1"
+          b = "ravdm1"
+        }
+        rtex511.wl =
+        {
+          s = "data1"
+          b = "ravdm1"
+        }
+        rtex512.wl =
+        {
+          s = "data1"
+          b = "romeric5"
+        }
+        rtex513.wl =
+        {
+          s = "data1"
+          b = "romeric5"
+        }
+        rtex514.wl =
+        {
+          s = "data1"
+          b = "romeric1"
+        }
+        eviltex.wl =
+        {
+          s = "data1"
+          b = "demo1"
+        }
+        rtex456.wl =
+        {
+          s = "data1"
+          b = "romeric1"
+        }
+      }
+      Doors.wad =
+      {
+        rtex162.wl =
+        {
+          s = "data1"
+          b = "tower"
+        }
+        rtex509.wl =
+        {
+          s = "data1"
+          b = "ravdm1"
+        }
+        rtex092.wl =
+        {
+          s = "data1"
+          b = "demo2"
+        }
+        rtex250.wl =
+        {
+          s = "data1"
+          b = "castle4"
+        }
+        rtex457.wl =
+        {
+          s = "data1"
+          b = "romeric6"
+        }
+        rtex502.wl =
+        {
+          s = "data1"
+          b = "ravdm1"
+        }
+        rtex509.wl =
+        {
+          s = "data1"
+          b = "ravdm1"
+        }
+        rtex460.wl =
+        {
+          s = "data1"
+          b = "romeric1"
+        }
+        rosearch.wl =
+        {
+          s = "data1"
+          b = "demo1"
+        }
+        rtex461.wl =
+        {
+          s = "data1"
+          b = "romeric4"
+        }
+        rtex462.wl =
+        {
+          s = "data1"
+          b = "romeric4"
+        }
+        rtex367m.wl =
+        {
+          s = "data1"
+          b = "demo1"
+          n = "rtex367"
+        }
+      }
+      Environment.wad =
+      {
+        *lowlight.wl =
+        {
+          s = "data1"
+          b = "demo1"
+        }
+        *rtex078.wl =
+        {
+          s = "data1"
+          b = "demo1"
+        }
+        *rtex346.wl =
+        {
+          s = "data1"
+          b = "demo1"
+        }
+        *rtex386.wl =
+        {
+          s = "data1"
+          b = "egypt1"
+        }
+        *rtex345.wl =
+        {
+          s = "data1"
+          b = "village2"
+        }
+        *rtex396.wl =
+        {
+          s = "data1"
+          b = "egypt2"
+        }
+        *rtex153.wl =
+        {
+          s = "data1"
+          b = "castle4"
+        }
+        *skulls.wl =
+        {
+          s = "data1"
+          b = "castle5"
+        }
+        *skullwarp.wl =
+        {
+          s = "data1"
+          b = "egypt1"
+        }
+        *lava001.wl =
+        {
+          s = "data1"
+          b = "meso2"
+        }
+        *lava000.wl =
+        {
+          s = "data1"
+          b = "ravdm1"
+        }
+        sky000.wl =
+        {
+          s = "data1"
+          b = "ravdm1"
+        }
+        sky000e.wl =
+        {
+          s = "data1"
+          b = "egypt1"
+          n = "sky000"
+        }
+        sky000t.wl =
+        {
+          s = "data1"
+          b = "tower"
+          n = "sky000"
+        }
+        sky001.wl =
+        {
+          s = "data1"
+          b = "demo1"
+        }
+        sky001m.wl =
+        {
+          s = "data1"
+          b = "meso1"
+          n = "sky001"
+        }
+        rtex386.wl =
+        {
+          s = "data1"
+          b = "tower"
+        }
+        rtex387m.wl =
+        {
+          s = "data1"
+          b = "village5"
+          n = "rtex387"
+        }
+        mtex484.wl =
+        {
+          s = "data1"
+          b = "meso5"
+        }
+        mtex485.wl =
+        {
+          s = "data1"
+          b = "meso5"
+        }
+        rtex510.wl =
+        {
+          s = "data1"
+          b = "romeric1"
+        }
+      }
+      Egypt.wad =
+      {
+        rtex280.wl =
+        {
+          s = "data1"
+          b = "egypt7"
+        }
+        rtex281.wl =
+        {
+          s = "data1"
+          b = "egypt7"
+        }
+        rtex314.wl =
+        {
+          s = "data1"
+          b = "egypt7"
+        }
+        rtex316.wl =
+        {
+          s = "data1"
+          b = "egypt7"
+        }
+        rtex317.wl =
+        {
+          s = "data1"
+          b = "egypt7"
+        }
+        rtex318.wl =
+        {
+          s = "data1"
+          b = "egypt7"
+        }
+        rtex319.wl =
+        {
+          s = "data1"
+          b = "egypt7"
+        }
+        rtex320.wl =
+        {
+          s = "data1"
+          b = "egypt7"
+        }
+        rtex321.wl =
+        {
+          s = "data1"
+          b = "egypt1"
+        }
+        rtex322.wl =
+        {
+          s = "data1"
+          b = "egypt1"
+        }
+        rtex323.wl =
+        {
+          s = "data1"
+          b = "egypt1"
+        }
+        rtex324.wl =
+        {
+          s = "data1"
+          b = "egypt1"
+        }
+        rtex341e.wl =
+        {
+          s = "data1"
+          b = "egypt2"
+          n = "rtex341"
+        }
+        rtex342e.wl =
+        {
+          s = "data1"
+          b = "egypt6"
+          n = "rtex342"
+        }
+        rtex343e.wl =
+        {
+          s = "data1"
+          b = "egypt1"
+          n = "rtex343"
+        }
+        rtex344.wl =
+        {
+          s = "data1"
+          b = "egypt1"
+        }
+        rtex345.wl =
+        {
+          s = "data1"
+          b = "egypt1"
+        }
+        rtex347.wl =
+        {
+          s = "data1"
+          b = "egypt1"
+        }
+        rtex349e.wl =
+        {
+          s = "data1"
+          b = "egypt2"
+          n = "rtex349"
+        }
+        rtex350.wl =
+        {
+          s = "data1"
+          b = "egypt2"
+        }
+        rtex351e.wl =
+        {
+          s = "data1"
+          b = "rider2c"
+          n = "rtex351"
+        }
+        rtex352e.wl =
+        {
+          s = "data1"
+          b = "egypt1"
+          n = "rtex352"
+        }
+        rtex354e.wl =
+        {
+          s = "data1"
+          b = "egypt1"
+          n = "rtex354"
+        }
+        rtex356e.wl =
+        {
+          s = "data1"
+          b = "egypt1"
+          n = "rtex356"
+        }
+        rtex353e.wl =
+        {
+          s = "data1"
+          b = "egypt1"
+          n = "rtex353"
+        }
+        rtex357e.wl =
+        {
+          s = "data1"
+          b = "egypt2"
+          n = "rtex357"
+        }
+        rtex359e.wl =
+        {
+          s = "data1"
+          b = "egypt2"
+          n = "rtex359"
+        }
+        rtex360e.wl =
+        {
+          s = "data1"
+          b = "egypt2"
+          n = "rtex360"
+        }
+        rtex361e.wl =
+        {
+          s = "data1"
+          b = "egypt1"
+          n = "rtex361"
+        }
+        rtex362e.wl =
+        {
+          s = "data1"
+          b = "egypt1"
+          n = "rtex362"
+        }
+        rtex363e.wl =
+        {
+          s = "data1"
+          b = "egypt1"
+          n = "rtex363"
+        }
+        rtex364.wl =
+        {
+          s = "data1"
+          b = "egypt2"
+        }
+        rtex365e.wl =
+        {
+          s = "data1"
+          b = "egypt1"
+          n = "rtex365"
+        }
+        rtex366e.wl =
+        {
+          s = "data1"
+          b = "egypt1"
+          n = "rtex366"
+        }
+        rtex367e.wl =
+        {
+          s = "data1"
+          b = "egypt2"
+          n = "rtex367"
+        }
+        rtex369.wl =
+        {
+          s = "data1"
+          b = "egypt1"
+        }
+        rtex377.wl =
+        {
+          s = "data1"
+          b = "egypt2"
+        }
+        rtex378.wl =
+        {
+          s = "data1"
+          b = "egypt1"
+        }
+        rtex379e.wl =
+        {
+          s = "data1"
+          b = "egypt3"
+          n = "rtex379"
+        }
+        rtex380e.wl =
+        {
+          s = "data1"
+          b = "egypt3"
+          n = "rtex380"
+        }
+        rtex381.wl =
+        {
+          s = "data1"
+          b = "egypt1"
+        }
+        rtex382.wl =
+        {
+          s = "data1"
+          b = "egypt1"
+        }
+        rtex387e.wl =
+        {
+          s = "data1"
+          b = "egypt4"
+          n = "rtex387"
+        }
+        rtex392.wl =
+        {
+          s = "data1"
+          b = "egypt1"
+        }
+        rtex393.wl =
+        {
+          s = "data1"
+          b = "egypt1"
+        }
+        rtex394e.wl =
+        {
+          s = "data1"
+          b = "egypt1"
+          n = "rtex394"
+        }
+        rtex395e.wl =
+        {
+          s = "data1"
+          b = "egypt2"
+          n = "rtex395"
+        }
+        rtex411e.wl =
+        {
+          s = "data1"
+          b = "egypt1"
+          n = "rtex411"
+        }
+        rtex414e.wl =
+        {
+          s = "data1"
+          b = "egypt1"
+          n = "rtex414"
+        }
+        rtex418e.wl =
+        {
+          s = "data1"
+          b = "egypt1"
+          n = "rtex418"
+        }
+        rtex419e.wl =
+        {
+          s = "data1"
+          b = "egypt1"
+          n = "rtex419"
+        }
+        rtex420e.wl =
+        {
+          s = "data1"
+          b = "egypt5"
+          n = "rtex420"
+        }
+        rtex421e.wl =
+        {
+          s = "data1"
+          b = "egypt7"
+          n = "rtex421"
+        }
+        rtex422e.wl =
+        {
+          s = "data1"
+          b = "egypt5"
+          n = "rtex422"
+        }
+        rtex383e.wl =
+        {
+          s = "data1"
+          b = "egypt1"
+          n = "rtex383"
+        }
+      }
+      Extra.wad =
+      {
+        clip.wl =
+        {
+          s = "data1"
+          b = "demo1"
+        }
+        origin.wl =
+        {
+          s = "data1"
+          b = "demo1"
+        }
+        rtex114.wl =
+        {
+          s = "data1"
+          b = "demo1"
+        }
+        rtex199.wl =
+        {
+          s = "data1"
+          b = "castle5"
+        }
+        rtex412m.wl =
+        {
+          s = "data1"
+          b = "demo1"
+          n = "rtex412"
+        }
+        rtex391e.wl =
+        {
+          s = "data1"
+          b = "egypt5"
+          n = "rtex391"
+        }
+        rtex465.wl =
+        {
+          s = "data1"
+          b = "romeric1"
+        }
+      }
+      Floor.wad =
+      {
+        rtex010.wl =
+        {
+          s = "data1"
+          b = "demo3"
+        }
+        rtex074.wl =
+        {
+          s = "data1"
+          b = "castle5"
+        }
+        rtex348.wl =
+        {
+          s = "data1"
+          b = "demo1"
+        }
+        rtex349m.wl =
+        {
+          s = "data1"
+          b = "cath"
+          n = "rtex349"
+        }
+        rtex479.wl =
+        {
+          s = "data1"
+          b = "romeric2"
+        }
+        rtex480.wl =
+        {
+          s = "data1"
+          b = "romeric3"
+        }
+        rtex306.wl =
+        {
+          s = "data1"
+          b = "ravdm1"
+        }
+        rtex421r.wl =
+        {
+          s = "data1"
+          b = "ravdm1"
+          n = "rtex421"
+        }
+        mtex450.wl =
+        {
+          s = "data1"
+          b = "meso1"
+        }
+        rtex267.wl =
+        {
+          s = "data1"
+          b = "meso2"
+        }
+        mtex449.wl =
+        {
+          s = "data1"
+          b = "meso1"
+        }
+        rtex266.wl =
+        {
+          s = "data1"
+          b = "meso3"
+        }
+        rtex437.wl =
+        {
+          s = "data1"
+          b = "romeric1"
+        }
+        rtex448.wl =
+        {
+          s = "data1"
+          b = "romeric1"
+        }
+        rtex449.wl =
+        {
+          s = "data1"
+          b = "ravdm1"
+        }
+        rtex451.wl =
+        {
+          s = "data1"
+          b = "romeric1"
+        }
+        rtex452.wl =
+        {
+          s = "data1"
+          b = "romeric1"
+        }
+        rtex380m.wl =
+        {
+          s = "data1"
+          b = "demo2"
+          n = "rtex380"
+        }
+        rtex383m.wl =
+        {
+          s = "data1"
+          b = "demo2"
+          n = "rtex383"
+        }
+        rtex384m.wl =
+        {
+          s = "data1"
+          b = "demo2"
+          n = "rtex384"
+        }
+        rtex416m.wl =
+        {
+          s = "data1"
+          b = "demo1"
+          n = "rtex416"
+        }
+        rtex421m.wl =
+        {
+          s = "data1"
+          b = "demo1"
+          n = "rtex421"
+        }
+        rtex429.wl =
+        {
+          s = "data1"
+          b = "demo1"
+        }
+        rtex430.wl =
+        {
+          s = "data1"
+          b = "demo1"
+        }
+      }
+      Grass.wad =
+      {
+        rtex080.wl =
+        {
+          s = "data1"
+          b = "cath"
+        }
+        rtex388.wl =
+        {
+          s = "data1"
+          b = "demo1"
+        }
+        rtex389.wl =
+        {
+          s = "data1"
+          b = "demo1"
+        }
+        rtex410m.wl =
+        {
+          s = "data1"
+          b = "tower"
+          n = "rtex410"
+        }
+        rtex411m.wl =
+        {
+          s = "data1"
+          b = "demo1"
+          n = "rtex411"
+        }
+        mtex407.wl =
+        {
+          s = "data1"
+          b = "meso1"
+        }
+        mtex408.wl =
+        {
+          s = "data1"
+          b = "meso1"
+        }
+        rtex097.wl =
+        {
+          s = "data1"
+          b = "meso4"
+        }
+        rtex100.wl =
+        {
+          s = "data1"
+          b = "meso3"
+        }
+        rtex233.wl =
+        {
+          s = "data1"
+          b = "meso2"
+        }
+        rtex468.wl =
+        {
+          s = "data1"
+          b = "romeric1"
+        }
+        rtex469.wl =
+        {
+          s = "data1"
+          b = "romeric1"
+        }
+        rtex473.wl =
+        {
+          s = "data1"
+          b = "romeric1"
+        }
+        rtex500.wl =
+        {
+          s = "data1"
+          b = "romeric2"
+        }
+      }
+      Indian.wad =
+      {
+        mtex437.wl =
+        {
+          s = "data1"
+          b = "meso2"
+        }
+        mtex438.wl =
+        {
+          s = "data1"
+          b = "meso1"
+        }
+        mtex439.wl =
+        {
+          s = "data1"
+          b = "meso3"
+        }
+        mtex441.wl =
+        {
+          s = "data1"
+          b = "meso1"
+        }
+        mtex443.wl =
+        {
+          s = "data1"
+          b = "meso4"
+        }
+        mtex444.wl =
+        {
+          s = "data1"
+          b = "meso1"
+        }
+        mtex446.wl =
+        {
+          s = "data1"
+          b = "meso2"
+        }
+        mtex447.wl =
+        {
+          s = "data1"
+          b = "meso3"
+        }
+        mtex448.wl =
+        {
+          s = "data1"
+          b = "meso1"
+        }
+        mtex451.wl =
+        {
+          s = "data1"
+          b = "meso3"
+        }
+        mtex452.wl =
+        {
+          s = "data1"
+          b = "meso3"
+        }
+        mtex453.wl =
+        {
+          s = "data1"
+          b = "meso3"
+        }
+        mtex454.wl =
+        {
+          s = "data1"
+          b = "meso1"
+        }
+        mtex455.wl =
+        {
+          s = "data1"
+          b = "meso3"
+        }
+        mtex457.wl =
+        {
+          s = "data1"
+          b = "meso2"
+        }
+        mtex472.wl =
+        {
+          s = "data1"
+          b = "meso2"
+        }
+        mtex474.wl =
+        {
+          s = "data1"
+          b = "meso4"
+        }
+        mtex475.wl =
+        {
+          s = "data1"
+          b = "meso6"
+        }
+        mtex476.wl =
+        {
+          s = "data1"
+          b = "meso4"
+        }
+        mtex478.wl =
+        {
+          s = "data1"
+          b = "meso6"
+        }
+        mtex483.wl =
+        {
+          s = "data1"
+          b = "meso2"
+        }
+        mtex495.wl =
+        {
+          s = "data1"
+          b = "meso1"
+        }
+        mtex496.wl =
+        {
+          s = "data1"
+          b = "meso1"
+        }
+      }
+      Marble.wad =
+      {
+        marble.wl =
+        {
+          s = "data1"
+          b = "castle4"
+        }
+        marbleseam.wl =
+        {
+          s = "data1"
+          b = "eidolon"
+        }
+        rtex032.wl =
+        {
+          s = "data1"
+          b = "romeric1"
+        }
+        rtex033.wl =
+        {
+          s = "data1"
+          b = "ravdm1"
+        }
+        rtex406.wl =
+        {
+          s = "data1"
+          b = "romeric1"
+        }
+        rtex466.wl =
+        {
+          s = "data1"
+          b = "romeric1"
+        }
+        rtex030.wl =
+        {
+          s = "data1"
+          b = "demo1"
+        }
+        rtex038.wl =
+        {
+          s = "data1"
+          b = "demo1"
+        }
+        rtex358e.wl =
+        {
+          s = "data1"
+          b = "egypt1"
+          n = "rtex358"
+        }
+      }
+      Metal.wad =
+      {
+        rtex011.wl =
+        {
+          s = "data1"
+          b = "demo1"
+        }
+        rtex012.wl =
+        {
+          s = "data1"
+          b = "demo1"
+        }
+        rtex054.wl =
+        {
+          s = "data1"
+          b = "demo1"
+        }
+        rtex072.wl =
+        {
+          s = "data1"
+          b = "demo1"
+        }
+        rtex073.wl =
+        {
+          s = "data1"
+          b = "demo1"
+        }
+        rtex075.wl =
+        {
+          s = "data1"
+          b = "demo1"
+        }
+        rtex095.wl =
+        {
+          s = "data1"
+          b = "demo1"
+        }
+        rtex096.wl =
+        {
+          s = "data1"
+          b = "castle5"
+        }
+        rtex099.wl =
+        {
+          s = "data1"
+          b = "demo1"
+        }
+        rtex102.wl =
+        {
+          s = "data1"
+          b = "demo1"
+        }
+        rtex103.wl =
+        {
+          s = "data1"
+          b = "demo1"
+        }
+        rtex104.wl =
+        {
+          s = "data1"
+          b = "demo1"
+        }
+        rtex119.wl =
+        {
+          s = "data1"
+          b = "demo1"
+        }
+        rtex120.wl =
+        {
+          s = "data1"
+          b = "demo2"
+        }
+        rtex121.wl =
+        {
+          s = "data1"
+          b = "demo1"
+        }
+        rtex145.wl =
+        {
+          s = "data1"
+          b = "demo3"
+        }
+        rtex105.wl =
+        {
+          s = "data1"
+          b = "demo2"
+        }
+        rtex110.wl =
+        {
+          s = "data1"
+          b = "castle4"
+        }
+        rtex085.wl =
+        {
+          s = "data1"
+          b = "demo2"
+        }
+      }
+      Rocks.wad =
+      {
+        rtex413m.wl =
+        {
+          s = "data1"
+          b = "demo1"
+          n = "rtex413"
+        }
+        rtex128.wl =
+        {
+          s = "data1"
+          b = "egypt4"
+        }
+        biessman.wl =
+        {
+          s = "data1"
+          b = "meso2"
+        }
+        rtex298.wl =
+        {
+          s = "data1"
+          b = "meso1"
+        }
+        rtex066.wl =
+        {
+          s = "data1"
+          b = "egypt5"
+        }
+        rtex129.wl =
+        {
+          s = "data1"
+          b = "egypt1"
+        }
+        rtex008.wl =
+        {
+          s = "data1"
+          b = "demo2"
+        }
+        rtex148.wl =
+        {
+          s = "data1"
+          b = "demo1"
+        }
+        rtex163.wl =
+        {
+          s = "data1"
+          b = "demo2"
+        }
+        rtex208.wl =
+        {
+          s = "data1"
+          b = "village2"
+        }
+        rtex241.wl =
+        {
+          s = "data1"
+          b = "demo1"
+        }
+        mtex501.wl =
+        {
+          s = "data1"
+          b = "meso2"
+        }
+        mtex502.wl =
+        {
+          s = "data1"
+          b = "meso1"
+        }
+        rtex292.wl =
+        {
+          s = "data1"
+          b = "meso4"
+        }
+        rtex127.wl =
+        {
+          s = "data1"
+          b = "ravdm1"
+        }
+        rtex123.wl =
+        {
+          s = "data1"
+          b = "demo1"
+        }
+        rtex125.wl =
+        {
+          s = "data1"
+          b = "castle4"
+        }
+        rtex126.wl =
+        {
+          s = "data1"
+          b = "ravdm1"
+        }
+        rtex130.wl =
+        {
+          s = "data1"
+          b = "ravdm1"
+        }
+        rtex122.wl =
+        {
+          s = "data1"
+          b = "egypt6"
+        }
+      }
+      Tools.wad =
+      {
+        rtex200.wl =
+        {
+          s = "data1"
+          b = "demo2"
+        }
+        rtex234.wl =
+        {
+          s = "data1"
+          b = "village1"
+        }
+        rtex240.wl =
+        {
+          s = "data1"
+          b = "village1"
+        }
+        rtex242.wl =
+        {
+          s = "data1"
+          b = "demo2"
+        }
+        rtex243.wl =
+        {
+          s = "data1"
+          b = "village1"
+        }
+        rtex245.wl =
+        {
+          s = "data1"
+          b = "village1"
+        }
+        rtex248.wl =
+        {
+          s = "data1"
+          b = "demo2"
+        }
+        rtex211.wl =
+        {
+          s = "data1"
+          b = "village1"
+        }
+        rtex363m.wl =
+        {
+          s = "data1"
+          b = "cath"
+          n = "rtex363"
+        }
+        rtex366m.wl =
+        {
+          s = "data1"
+          b = "cath"
+          n = "rtex366"
+        }
+        rtex249.wl =
+        {
+          s = "data1"
+          b = "demo2"
+        }
+        rtex212.wl =
+        {
+          s = "data1"
+          b = "village2"
+        }
+        mtex434.wl =
+        {
+          s = "data1"
+          b = "meso3"
+        }
+        rtex419m.wl =
+        {
+          s = "data1"
+          b = "village2"
+          n = "rtex419"
+        }
+        rtex424m.wl =
+        {
+          s = "data1"
+          b = "demo3"
+          n = "rtex424"
+        }
+        rtex422m.wl =
+        {
+          s = "data1"
+          b = "village1"
+          n = "rtex422"
+        }
+        rtex086.wl =
+        {
+          s = "data1"
+          b = "demo2"
+        }
+        rtex087.wl =
+        {
+          s = "data1"
+          b = "demo2"
+        }
+        rtex106.wl =
+        {
+          s = "data1"
+          b = "demo1"
+        }
+        rtex107.wl =
+        {
+          s = "data1"
+          b = "demo1"
+        }
+        rtex108.wl =
+        {
+          s = "data1"
+          b = "demo1"
+        }
+        rtex109.wl =
+        {
+          s = "data1"
+          b = "tower"
+        }
+        rtex176.wl =
+        {
+          s = "data1"
+          b = "village1"
+        }
+        rtex177.wl =
+        {
+          s = "data1"
+          b = "village1"
+        }
+        rtex178.wl =
+        {
+          s = "data1"
+          b = "village1"
+        }
+        rtex179.wl =
+        {
+          s = "data1"
+          b = "village2"
+        }
+        rtex180.wl =
+        {
+          s = "data1"
+          b = "village1"
+        }
+        rtex182.wl =
+        {
+          s = "data1"
+          b = "village1"
+        }
+        rtex183.wl =
+        {
+          s = "data1"
+          b = "village1"
+        }
+        rtex184.wl =
+        {
+          s = "data1"
+          b = "village1"
+        }
+        rtex185.wl =
+        {
+          s = "data1"
+          b = "village1"
+        }
+        rtex186.wl =
+        {
+          s = "data1"
+          b = "castle4"
+        }
+        rtex187.wl =
+        {
+          s = "data1"
+          b = "village2"
+        }
+        rtex188.wl =
+        {
+          s = "data1"
+          b = "castle4"
+        }
+        rtex189.wl =
+        {
+          s = "data1"
+          b = "village2"
+        }
+        rtex190.wl =
+        {
+          s = "data1"
+          b = "village2"
+        }
+        rtex191.wl =
+        {
+          s = "data1"
+          b = "castle4"
+        }
+        rtex192.wl =
+        {
+          s = "data1"
+          b = "village2"
+        }
+        rtex193.wl =
+        {
+          s = "data1"
+          b = "demo2"
+        }
+        rtex194.wl =
+        {
+          s = "data1"
+          b = "village1"
+        }
+        rtex196.wl =
+        {
+          s = "data1"
+          b = "village1"
+        }
+        rtex197.wl =
+        {
+          s = "data1"
+          b = "village1"
+        }
+        rtex198.wl =
+        {
+          s = "data1"
+          b = "village1"
+        }
+        rtex204.wl =
+        {
+          s = "data1"
+          b = "demo1"
+        }
+        rtex205.wl =
+        {
+          s = "data1"
+          b = "tower"
+        }
+        rtex206.wl =
+        {
+          s = "data1"
+          b = "tower"
+        }
+        rtex207.wl =
+        {
+          s = "data1"
+          b = "demo1"
+        }
+      }
+      Windows.wad =
+      {
+        rtex083.wl =
+        {
+          s = "data1"
+          b = "demo1"
+        }
+        rtex467.wl =
+        {
+          s = "data1"
+          b = "romeric1"
+        }
+        rtex018.wl =
+        {
+          s = "data1"
+          b = "demo1"
+        }
+      }
+      Weird stones.wad =
+      {
+        mtex466.wl =
+        {
+          s = "data1"
+          b = "meso3"
+        }
+        mtex467.wl =
+        {
+          s = "data1"
+          b = "meso9"
+        }
+        mtex468.wl =
+        {
+          s = "data1"
+          b = "meso3"
+        }
+        mtex469.wl =
+        {
+          s = "data1"
+          b = "meso6"
+        }
+        mtex470.wl =
+        {
+          s = "data1"
+          b = "meso1"
+        }
+        mtex471.wl =
+        {
+          s = "data1"
+          b = "meso1"
+        }
+        mtex487.wl =
+        {
+          s = "data1"
+          b = "meso2"
+        }
+        mtex488.wl =
+        {
+          s = "data1"
+          b = "meso1"
+        }
+        mtex489.wl =
+        {
+          s = "data1"
+          b = "meso1"
+        }
+        rtex276.wl =
+        {
+          s = "data1"
+          b = "meso1"
+        }
+        mtex460.wl =
+        {
+          s = "data1"
+          b = "meso2"
+        }
+        mtex461.wl =
+        {
+          s = "data1"
+          b = "meso3"
+        }
+        mtex462.wl =
+        {
+          s = "data1"
+          b = "meso2"
+        }
+        mtex463.wl =
+        {
+          s = "data1"
+          b = "meso2"
+        }
+        mtex464.wl =
+        {
+          s = "data1"
+          b = "meso5"
+        }
+        mtex465.wl =
+        {
+          s = "data1"
+          b = "meso1"
+        }
+        mtex491.wl =
+        {
+          s = "data1"
+          b = "meso3"
+        }
+        mtex409.wl =
+        {
+          s = "data1"
+          b = "meso8"
+        }
+        rtex286.wl =
+        {
+          s = "data1"
+          b = "meso2"
+        }
+      }
+      Wood.wad =
+      {
+        rtex041.wl =
+        {
+          s = "data1"
+          b = "demo2"
+        }
+        rtex042.wl =
+        {
+          s = "data1"
+          b = "cath"
+        }
+        rtex043.wl =
+        {
+          s = "data1"
+          b = "demo1"
+        }
+        rtex112.wl =
+        {
+          s = "data1"
+          b = "cath"
+        }
+        rtex113.wl =
+        {
+          s = "data1"
+          b = "demo1"
+        }
+        rtex116.wl =
+        {
+          s = "data1"
+          b = "demo2"
+        }
+        rtex117.wl =
+        {
+          s = "data1"
+          b = "demo3"
+        }
+        rtex118.wl =
+        {
+          s = "data1"
+          b = "demo3"
+        }
+        rtex235.wl =
+        {
+          s = "data1"
+          b = "castle4"
+        }
+        rtex236.wl =
+        {
+          s = "data1"
+          b = "cath"
+        }
+        rtex237.wl =
+        {
+          s = "data1"
+          b = "castle4"
+        }
+        rtex238.wl =
+        {
+          s = "data1"
+          b = "castle4"
+        }
+        rtex239.wl =
+        {
+          s = "data1"
+          b = "castle4"
+        }
+        rtex174.wl =
+        {
+          s = "data1"
+          b = "village1"
+        }
+        rtex175.wl =
+        {
+          s = "data1"
+          b = "demo2"
+        }
+        rtex230.wl =
+        {
+          s = "data1"
+          b = "castle4"
+        }
+        rtex246.wl =
+        {
+          s = "data1"
+          b = "village3"
+        }
+        rtex485.wl =
+        {
+          s = "data1"
+          b = "romeric4"
+        }
+        rtex150.wl =
+        {
+          s = "data1"
+          b = "village2"
+        }
+        rtex149.wl =
+        {
+          s = "data1"
+          b = "village2"
+        }
+        rtex391m.wl =
+        {
+          s = "data1"
+          b = "village2"
+          n = "rtex391"
+        }
+      }
+    }
+  }
+}

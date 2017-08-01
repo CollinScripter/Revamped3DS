@@ -1,0 +1,3546 @@
+QQRKSRC1
+// KM_quake2 Entities file for Quark
+// For more info see http://www.markshan.com/knightmare/
+
+//$Header: /cvsroot/quark/runtime/addons/Quake_2/KM_quake2Entities.qrk,v 1.1 2012/04/15 18:55:31 cdunde Exp $
+// ----------- REVISION HISTORY ------------
+//$Log: KM_quake2Entities.qrk,v $
+//Revision 1.1  2012/04/15 18:55:31  cdunde
+//Added mission pak support for Quake2 Knightmare.
+//
+//
+
+{
+  QuArKProtected = "1"
+  Description = "KM_quake2 Entities"
+
+  Toolbox Folders.qtx =
+  {
+    Toolbox = "New map items..."
+    Root = "KM_quake2 Entities.qtxfolder"
+    KM_quake2 Entities.qtxfolder =
+    {
+      ;desc = "Created from KM_quake2Entities.def"
+      ammo_* entities.qtxfolder =
+      {
+        ammo_bullets:e =
+        {
+          angle = "360"
+          origin = "0 0 0"
+        }
+        ammo_cells:e =
+        {
+          angle = "360"
+          origin = "0 0 0"
+        }
+        ammo_grenades:e =
+        {
+          angle = "360"
+          origin = "0 0 0"
+        }
+        ammo_rockets:e =
+        {
+          angle = "360"
+          origin = "0 0 0"
+        }
+        ammo_shells:e =
+        {
+          angle = "360"
+          origin = "0 0 0"
+        }
+        ammo_slugs:e =
+        {
+          angle = "360"
+          origin = "0 0 0"
+        }
+      }
+      func_* entities.qtxfolder =
+      {
+        func_areaportal:b =
+        {
+          angle = "360"
+          ;incl = "defpoly"
+        }
+        func_button:b =
+        {
+          angle = "360"
+          ;incl = "defpoly"
+        }
+        func_clock:e =
+        {
+          angle = "360"
+          origin = "0 0 0"
+        }
+        func_conveyor:b =
+        {
+          angle = "360"
+          ;incl = "defpoly"
+        }
+        func_door:b =
+        {
+          angle = "360"
+          ;incl = "defpoly"
+        }
+        func_door_rotating:b =
+        {
+          angle = "360"
+          ;incl = "defpoly"
+        }
+        func_door_secret:b =
+        {
+          angle = "360"
+          ;incl = "defpoly"
+        }
+        func_explosive:b =
+        {
+          angle = "360"
+          ;incl = "defpoly"
+        }
+        func_group:b =
+        {
+          angle = "360"
+          ;incl = "defpoly"
+        }
+        func_killbox:b =
+        {
+          angle = "360"
+          ;incl = "defpoly"
+        }
+        func_object:b =
+        {
+          angle = "360"
+          ;incl = "defpoly"
+        }
+        func_plat:b =
+        {
+          angle = "360"
+          ;incl = "defpoly"
+        }
+        func_rotating:b =
+        {
+          angle = "360"
+          ;incl = "defpoly"
+        }
+        func_timer:e =
+        {
+          angle = "360"
+          origin = "0 0 0"
+        }
+        func_train:b =
+        {
+          angle = "360"
+          ;incl = "defpoly"
+        }
+        func_wall:b =
+        {
+          angle = "360"
+          ;incl = "defpoly"
+        }
+        func_water:b =
+        {
+          angle = "360"
+          ;incl = "defpoly"
+        }
+      }
+      info_* entities.qtxfolder =
+      {
+        info_notnull:e =
+        {
+          angle = "360"
+          origin = "0 0 0"
+        }
+        info_null:e =
+        {
+          angle = "360"
+          origin = "0 0 0"
+        }
+        info_player_coop:e =
+        {
+          angle = "360"
+          origin = "0 0 0"
+        }
+        info_player_deathmatch:e =
+        {
+          angle = "360"
+          origin = "0 0 0"
+        }
+        info_player_intermission:e =
+        {
+          angle = "360"
+          origin = "0 0 0"
+        }
+        info_player_start:e =
+        {
+          angle = "360"
+          origin = "0 0 0"
+        }
+        info_player_team1:e =
+        {
+          angle = "360"
+          origin = "0 0 0"
+        }
+        info_player_team2:e =
+        {
+          angle = "360"
+          origin = "0 0 0"
+        }
+      }
+      item_* entities.qtxfolder =
+      {
+        item_adrenaline:e =
+        {
+          angle = "360"
+          origin = "0 0 0"
+        }
+        item_ancient_head:e =
+        {
+          angle = "360"
+          origin = "0 0 0"
+        }
+        item_armor_body:e =
+        {
+          angle = "360"
+          origin = "0 0 0"
+        }
+        item_armor_combat:e =
+        {
+          angle = "360"
+          origin = "0 0 0"
+        }
+        item_armor_jacket:e =
+        {
+          angle = "360"
+          origin = "0 0 0"
+        }
+        item_armor_shard:e =
+        {
+          angle = "360"
+          origin = "0 0 0"
+        }
+        item_bandolier:e =
+        {
+          angle = "360"
+          origin = "0 0 0"
+        }
+        item_breather:e =
+        {
+          angle = "360"
+          origin = "0 0 0"
+        }
+        item_enviro:e =
+        {
+          angle = "360"
+          origin = "0 0 0"
+        }
+        item_flag_team1:e =
+        {
+          angle = "360"
+          origin = "0 0 0"
+        }
+        item_flag_team2:e =
+        {
+          angle = "360"
+          origin = "0 0 0"
+        }
+        item_health:e =
+        {
+          angle = "360"
+          origin = "0 0 0"
+        }
+        item_health_large:e =
+        {
+          angle = "360"
+          origin = "0 0 0"
+        }
+        item_health_mega:e =
+        {
+          angle = "360"
+          origin = "0 0 0"
+        }
+        item_health_small:e =
+        {
+          angle = "360"
+          origin = "0 0 0"
+        }
+        item_invulnerability:e =
+        {
+          angle = "360"
+          origin = "0 0 0"
+        }
+        item_pack:e =
+        {
+          angle = "360"
+          origin = "0 0 0"
+        }
+        item_power_screen:e =
+        {
+          angle = "360"
+          origin = "0 0 0"
+        }
+        item_power_shield:e =
+        {
+          angle = "360"
+          origin = "0 0 0"
+        }
+        item_quad:e =
+        {
+          angle = "360"
+          origin = "0 0 0"
+        }
+        item_silencer:e =
+        {
+          angle = "360"
+          origin = "0 0 0"
+        }
+      }
+      key_* entities.qtxfolder =
+      {
+        key_airstrike_target:e =
+        {
+          angle = "360"
+          origin = "0 0 0"
+        }
+        key_blue_key:e =
+        {
+          angle = "360"
+          origin = "0 0 0"
+        }
+        key_commander_head:e =
+        {
+          angle = "360"
+          origin = "0 0 0"
+        }
+        key_data_cd:e =
+        {
+          angle = "360"
+          origin = "0 0 0"
+        }
+        key_data_spinner:e =
+        {
+          angle = "360"
+          origin = "0 0 0"
+        }
+        key_pass:e =
+        {
+          angle = "360"
+          origin = "0 0 0"
+        }
+        key_power_cube:e =
+        {
+          angle = "360"
+          origin = "0 0 0"
+        }
+        key_pyramid:e =
+        {
+          angle = "360"
+          origin = "0 0 0"
+        }
+        key_red_key:e =
+        {
+          angle = "360"
+          origin = "0 0 0"
+        }
+      }
+      light_* entities.qtxfolder =
+      {
+        light_mine1:e =
+        {
+          angle = "360"
+          origin = "0 0 0"
+        }
+        light_mine2:e =
+        {
+          angle = "360"
+          origin = "0 0 0"
+        }
+      }
+      misc_* entities.qtxfolder =
+      {
+        misc_actor:e =
+        {
+          angle = "360"
+          origin = "0 0 0"
+        }
+        misc_banner:e =
+        {
+          angle = "360"
+          origin = "0 0 0"
+        }
+        misc_bigviper:e =
+        {
+          angle = "360"
+          origin = "0 0 0"
+        }
+        misc_blackhole:e =
+        {
+          angle = "360"
+          origin = "0 0 0"
+        }
+        misc_ctf_banner:e =
+        {
+          angle = "360"
+          origin = "0 0 0"
+        }
+        misc_ctf_small_banner:e =
+        {
+          angle = "360"
+          origin = "0 0 0"
+        }
+        misc_deadsoldier:e =
+        {
+          angle = "360"
+          origin = "0 0 0"
+        }
+        misc_easterchick:e =
+        {
+          angle = "360"
+          origin = "0 0 0"
+        }
+        misc_easterchick2:e =
+        {
+          angle = "360"
+          origin = "0 0 0"
+        }
+        misc_eastertank:e =
+        {
+          angle = "360"
+          origin = "0 0 0"
+        }
+        misc_explobox:e =
+        {
+          angle = "360"
+          origin = "0 0 0"
+        }
+        misc_gib_arm:e =
+        {
+          angle = "360"
+          origin = "0 0 0"
+        }
+        misc_gib_head:e =
+        {
+          angle = "360"
+          origin = "0 0 0"
+        }
+        misc_gib_leg:e =
+        {
+          angle = "360"
+          origin = "0 0 0"
+        }
+        misc_insane:e =
+        {
+          angle = "360"
+          origin = "0 0 0"
+        }
+        misc_satellite_dish:e =
+        {
+          angle = "360"
+          origin = "0 0 0"
+        }
+        misc_strogg_ship:e =
+        {
+          angle = "360"
+          origin = "0 0 0"
+        }
+        misc_teleporter:e =
+        {
+          angle = "360"
+          origin = "0 0 0"
+        }
+        misc_teleporter_dest:e =
+        {
+          angle = "360"
+          origin = "0 0 0"
+        }
+        misc_viper:e =
+        {
+          angle = "360"
+          origin = "0 0 0"
+        }
+        misc_viper_bomb:e =
+        {
+          angle = "360"
+          origin = "0 0 0"
+        }
+      }
+      monster_* entities.qtxfolder =
+      {
+        monster_berserk:e =
+        {
+          angle = "360"
+          origin = "0 0 0"
+        }
+        monster_boss2:e =
+        {
+          angle = "360"
+          origin = "0 0 0"
+        }
+        monster_boss3_stand:e =
+        {
+          angle = "360"
+          origin = "0 0 0"
+        }
+        monster_brain:e =
+        {
+          angle = "360"
+          origin = "0 0 0"
+        }
+        monster_chick:e =
+        {
+          angle = "360"
+          origin = "0 0 0"
+        }
+        monster_commander_body:e =
+        {
+          angle = "360"
+          origin = "0 0 0"
+        }
+        monster_flipper:e =
+        {
+          angle = "360"
+          origin = "0 0 0"
+        }
+        monster_floater:e =
+        {
+          angle = "360"
+          origin = "0 0 0"
+        }
+        monster_flyer:e =
+        {
+          angle = "360"
+          origin = "0 0 0"
+        }
+        monster_gladiator:e =
+        {
+          angle = "360"
+          origin = "0 0 0"
+        }
+        monster_gunner:e =
+        {
+          angle = "360"
+          origin = "0 0 0"
+        }
+        monster_hover:e =
+        {
+          angle = "360"
+          origin = "0 0 0"
+        }
+        monster_infantry:e =
+        {
+          angle = "360"
+          origin = "0 0 0"
+        }
+        monster_jorg:e =
+        {
+          angle = "360"
+          origin = "0 0 0"
+        }
+        monster_makron:e =
+        {
+          angle = "360"
+          origin = "0 0 0"
+        }
+        monster_medic:e =
+        {
+          angle = "360"
+          origin = "0 0 0"
+        }
+        monster_mutant:e =
+        {
+          angle = "360"
+          origin = "0 0 0"
+        }
+        monster_parasite:e =
+        {
+          angle = "360"
+          origin = "0 0 0"
+        }
+        monster_soldier:e =
+        {
+          angle = "360"
+          origin = "0 0 0"
+        }
+        monster_soldier_light:e =
+        {
+          angle = "360"
+          origin = "0 0 0"
+        }
+        monster_soldier_ss:e =
+        {
+          angle = "360"
+          origin = "0 0 0"
+        }
+        monster_supertank:e =
+        {
+          angle = "360"
+          origin = "0 0 0"
+        }
+        monster_tank:e =
+        {
+          angle = "360"
+          origin = "0 0 0"
+        }
+        monster_tank_commander:e =
+        {
+          angle = "360"
+          origin = "0 0 0"
+        }
+      }
+      other entities.qtxfolder =
+      {
+        light:e =
+        {
+          angle = "360"
+          origin = "0 0 0"
+        }
+        viewthing:e =
+        {
+          angle = "360"
+          origin = "0 0 0"
+        }
+        worldspawn:b =
+        {
+        }
+      }
+      path_* entities.qtxfolder =
+      {
+        path_corner:e =
+        {
+          angle = "360"
+          origin = "0 0 0"
+        }
+      }
+      point_* entities.qtxfolder =
+      {
+        point_combat:e =
+        {
+          angle = "360"
+          origin = "0 0 0"
+        }
+      }
+      target_* entities.qtxfolder =
+      {
+        target_actor:e =
+        {
+          angle = "360"
+          origin = "0 0 0"
+        }
+        target_blaster:e =
+        {
+          angle = "360"
+          origin = "0 0 0"
+        }
+        target_changelevel:e =
+        {
+          angle = "360"
+          origin = "0 0 0"
+        }
+        target_character:b =
+        {
+          angle = "360"
+          ;incl = "defpoly"
+        }
+        target_crosslevel_target:e =
+        {
+          angle = "360"
+          origin = "0 0 0"
+        }
+        target_crosslevel_trigger:e =
+        {
+          angle = "360"
+          origin = "0 0 0"
+        }
+        target_earthquake:e =
+        {
+          angle = "360"
+          origin = "0 0 0"
+        }
+        target_explosion:e =
+        {
+          angle = "360"
+          origin = "0 0 0"
+        }
+        target_goal:e =
+        {
+          angle = "360"
+          origin = "0 0 0"
+        }
+        target_help:e =
+        {
+          angle = "360"
+          origin = "0 0 0"
+        }
+        target_laser:e =
+        {
+          angle = "360"
+          origin = "0 0 0"
+        }
+        target_lightramp:e =
+        {
+          angle = "360"
+          origin = "0 0 0"
+        }
+        target_secret:e =
+        {
+          angle = "360"
+          origin = "0 0 0"
+        }
+        target_spawner:e =
+        {
+          angle = "360"
+          origin = "0 0 0"
+        }
+        target_speaker:e =
+        {
+          angle = "360"
+          origin = "0 0 0"
+        }
+        target_splash:e =
+        {
+          angle = "360"
+          origin = "0 0 0"
+        }
+        target_string:e =
+        {
+          angle = "360"
+          origin = "0 0 0"
+        }
+        target_temp_entity:e =
+        {
+          angle = "360"
+          origin = "0 0 0"
+        }
+      }
+      trigger_* entities.qtxfolder =
+      {
+        trigger_always:e =
+        {
+          angle = "360"
+          origin = "0 0 0"
+        }
+        trigger_counter:b =
+        {
+          angle = "360"
+          ;incl = "defpoly"
+        }
+        trigger_elevator:e =
+        {
+          angle = "360"
+          origin = "0 0 0"
+        }
+        trigger_gravity:b =
+        {
+          angle = "360"
+          ;incl = "defpoly"
+        }
+        trigger_hurt:b =
+        {
+          angle = "360"
+          ;incl = "defpoly"
+        }
+        trigger_key:e =
+        {
+          angle = "360"
+          origin = "0 0 0"
+        }
+        trigger_monsterjump:b =
+        {
+          angle = "360"
+          ;incl = "defpoly"
+        }
+        trigger_multiple:b =
+        {
+          angle = "360"
+          ;incl = "defpoly"
+        }
+        trigger_once:b =
+        {
+          angle = "360"
+          ;incl = "defpoly"
+        }
+        trigger_push:b =
+        {
+          angle = "360"
+          ;incl = "defpoly"
+        }
+        trigger_relay:e =
+        {
+          angle = "360"
+          origin = "0 0 0"
+        }
+      }
+      turret_* entities.qtxfolder =
+      {
+        turret_base:b =
+        {
+          angle = "360"
+          ;incl = "defpoly"
+        }
+        turret_breach:b =
+        {
+          angle = "360"
+          ;incl = "defpoly"
+        }
+        turret_driver:e =
+        {
+          angle = "360"
+          origin = "0 0 0"
+        }
+      }
+      weapon_* entities.qtxfolder =
+      {
+        weapon_bfg:e =
+        {
+          angle = "360"
+          origin = "0 0 0"
+        }
+        weapon_chaingun:e =
+        {
+          angle = "360"
+          origin = "0 0 0"
+        }
+        weapon_grenadelauncher:e =
+        {
+          angle = "360"
+          origin = "0 0 0"
+        }
+        weapon_hyperblaster:e =
+        {
+          angle = "360"
+          origin = "0 0 0"
+        }
+        weapon_machinegun:e =
+        {
+          angle = "360"
+          origin = "0 0 0"
+        }
+        weapon_railgun:e =
+        {
+          angle = "360"
+          origin = "0 0 0"
+        }
+        weapon_rocketlauncher:e =
+        {
+          angle = "360"
+          origin = "0 0 0"
+        }
+        weapon_shotgun:e =
+        {
+          angle = "360"
+          origin = "0 0 0"
+        }
+        weapon_supershotgun:e =
+        {
+          angle = "360"
+          origin = "0 0 0"
+        }
+      }
+    }
+  }
+  Entity Forms.fctx =
+  {
+    // Definition of includes
+
+    t_commonspecifics:incl =
+    {
+      target: =
+      {
+        txt = "&"
+        hint = "Name of the entity that this one targets."
+      }
+      targetname: =
+      {
+        txt = "&"
+        hint = "Name of this entity, used as a target by another entity."
+            $0D"Click the 'Help Book' above for more possible detail."
+      }
+    }
+
+    t_modelbrowser:incl =
+    {
+      hint = "Use this to select any .wal file you want."$0D
+            "You must extract the folder with the .wal files"$0D
+            "from the .pak file and put it in your 'Quake2' folder."
+            $0D"Click the 'Help Book' above for more possible detail."
+      Typ = "EP"
+      BasePath = "$Game\Quake2"
+      CutPath = "$Game\?\"
+      DefExt = "wal"
+      DirSep = "/"
+    }
+
+    t_soundbrowser:incl =
+    {
+      hint = "Use this to select any .wal file you want."$0D
+            "You must extract the folder with the .wal files"$0D
+            "from the .pak file and put it in your 'Quake2' folder."
+            $0D"Click the 'Help Book' above for more possible detail."
+      Typ = "EP"
+      BasePath = "$Game\Quake2"
+      CutPath = "$Game\?\"
+      DefExt = "wal"
+      DirSep = "/"
+    }
+
+    t_musicbrowser:incl =
+    {
+      hint = "Use this to select any .wal file you want."$0D
+            "You must extract the folder with the .wal files"$0D
+            "from the .pak file and put it in your 'Quake2' folder."
+            $0D"Click the 'Help Book' above for more possible detail."
+      Typ = "EP"
+      BasePath = "$Game\Quake2"
+      CutPath = "$Game\?\"
+      DefExt = "wal"
+      DirSep = "/"
+    }
+
+    func_plat:form =
+    {
+      help = "speed default 150"$0D"Plats are always drawn in the extended pos"
+       "ition, so they will light correctly."$0D"If the plat is the target of "
+       "another trigger or button, it will start out disabled in the extended "
+       "position until it is trigger, when it will lower and become a normal p"
+       "lat."$0D22"speed"$22" overrides default 200."$0D22"accel"$22" override"
+       "s default 500"$0D22"lip"$22" overrides default 8 pixel lip"$0D"If the "
+       "'height' key is set, that will determine the amount the plat moves, in"
+       "stead of being implicitly determoveinfoned by the model's height."$0D"S"
+       "et 'sounds' to one of the following:"$0D"1) base fast"$0D"2) chain slo"
+       "w"
+      spawnflags: =
+      {
+        txt = "&"
+        typ = "X1"
+        cap = "PLAT_LOW_TRIGGER"
+      }
+      t_commonspecifics = !
+      speed: =
+      {
+        txt = "&"
+        hint = "overrides default 200."
+      }
+      accel: =
+      {
+        txt = "&"
+        hint = "overrides default 500"
+      }
+      lip: =
+      {
+        txt = "&"
+        hint = "overrides default 8 pixel lip"
+      }
+    }
+    func_rotating:form =
+    {
+      help = "You need to have an origin brush as part of this entity. The cen"
+       "ter of that brush will be"$0D"the point around which it is rotated. It"
+       " will rotate around the Z axis by default. You can"$0D"check either th"
+       "e X_AXIS or Y_AXIS box to change that."$0D22"speed"$22" determines how"
+       " fast it moves; default value is 100."$0D22"dmg"$22" damage to inflict"
+       " when blocked (2 default)"$0D"REVERSE will cause the it to rotate in t"
+       "he opposite direction."$0D"STOP mean it will stop moving instead of pu"
+       "shing entities"
+      spawnflags: =
+      {
+        txt = "&"
+        typ = "X1"
+        cap = "START_ON"
+      }
+      spawnflags: =
+      {
+        txt = "&"
+        typ = "X2"
+        cap = "REVERSE"
+      }
+      spawnflags: =
+      {
+        txt = "&"
+        typ = "X4"
+        cap = "X_AXIS"
+      }
+      spawnflags: =
+      {
+        txt = "&"
+        typ = "X8"
+        cap = "Y_AXIS"
+      }
+      spawnflags: =
+      {
+        txt = "&"
+        typ = "X16"
+        cap = "TOUCH_PAIN"
+      }
+      spawnflags: =
+      {
+        txt = "&"
+        typ = "X32"
+        cap = "STOP"
+      }
+      spawnflags: =
+      {
+        txt = "&"
+        typ = "X64"
+        cap = "ANIMATED"
+      }
+      spawnflags: =
+      {
+        txt = "&"
+        typ = "X128"
+        cap = "ANIMATED_FAST"
+      }
+      t_commonspecifics = !
+      speed: =
+      {
+        txt = "&"
+        hint = "determines how fast it moves; default value is 100."
+      }
+      dmg: =
+      {
+        txt = "&"
+        hint = "damage to inflict when blocked (2 default)"
+      }
+    }
+    func_button:form =
+    {
+      help = "When a button is touched, it moves some distance in the directio"
+       "n of it's angle, triggers all of it's targets, waits some time, then r"
+       "eturns to it's original position where it can be triggered again."$0D22
+       "angle"$22" determines the opening direction"$0D22"target"$22" all enti"
+       "ties with a matching targetname will be used"$0D22"speed"$22" override"
+       " the default 40 speed"$0D22"wait"$22" override the default 1 second wa"
+       "it (-1 = never return)"$0D22"lip"$22" override the default 4 pixel lip"
+       " remaining at end of move"$0D22"health"$22" if set, the button must be"
+       " killed instead of touched"$0D22"sounds"$220D"1) silent"$0D"2) steam m"
+       "etal"$0D"3) wooden clunk"$0D"4) metallic click"$0D"5) in-out"
+      t_commonspecifics = !
+      angle: =
+      {
+        txt = "&"
+        hint = "determines the opening direction"
+      }
+      speed: =
+      {
+        txt = "&"
+        hint = "override the default 40 speed"
+      }
+      wait: =
+      {
+        txt = "&"
+        hint = "override the default 1 second wait (-1 = never return)"
+      }
+      lip: =
+      {
+        txt = "&"
+        hint = "override the default 4 pixel lip remaining at end of move"
+      }
+      health: =
+      {
+        txt = "&"
+        hint = "if set, the button must be killed instead of touched"
+      }
+      sounds: =
+      {
+        t_soundbrowser = !
+        txt = "&"
+        hint = ""
+            $0D"1) silent"
+            $0D"2) steam metal"
+            $0D"3) wooden clunk"
+            $0D"4) metallic click"
+            $0D"5) in-out"
+      }
+    }
+    func_door:form =
+    {
+      help = "TOGGLE  wait in both the start and end states for a trigger even"
+       "t."$0D"START_OPEN the door to moves to its destination when spawned, a"
+       "nd operate in reverse. It is used to temporarily or permanently close "
+       "off an area when triggered (not useful for touch or takedamage doors)."
+       $0D"NOMONSTER monsters will not trigger this door"$0D22"message"$22" is"
+       " printed when the door is touched if it is a trigger door and it hasn'"
+       "t been fired yet"$0D22"angle"$22" determines the opening direction"$0D
+       $22"targetname"$22" if set, no touch field will be spawned and a remote"
+       " button or trigger field activates the door."$0D22"health"$22" if set,"
+       " door must be shot open"$0D22"speed"$22" movement speed (100 default)"$0D
+       $22"wait"$22" wait before returning (3 default, -1 = never return)"$0D22
+       "lip"$22" lip remaining at end of move (8 default)"$0D22"dmg"$22" damag"
+       "e to inflict when blocked (2 default)"$0D22"sounds"$220D"1) silent"$0D
+       "2) light"$0D"3) medium"$0D"4) heavy"
+      spawnflags: =
+      {
+        txt = "&"
+        typ = "X1"
+        cap = "START_OPEN"
+      }
+      spawnflags: =
+      {
+        txt = "&"
+        typ = "X4"
+        cap = "CRUSHER"
+      }
+      spawnflags: =
+      {
+        txt = "&"
+        typ = "X8"
+        cap = "NOMONSTER"
+      }
+      spawnflags: =
+      {
+        txt = "&"
+        typ = "X16"
+        cap = "ANIMATED"
+      }
+      spawnflags: =
+      {
+        txt = "&"
+        typ = "X32"
+        cap = "TOGGLE"
+      }
+      spawnflags: =
+      {
+        txt = "&"
+        typ = "X64"
+        cap = "ANIMATED_FAST"
+      }
+      t_commonspecifics = !
+      message: =
+      {
+        txt = "&"
+        hint = "is printed when the door is touched if it is a trigger door and it hasn't been fired yet"
+      }
+      angle: =
+      {
+        txt = "&"
+        hint = "determines the opening direction"
+      }
+      health: =
+      {
+        txt = "&"
+        hint = "if set, door must be shot open"
+      }
+      speed: =
+      {
+        txt = "&"
+        hint = "movement speed (100 default)"
+      }
+      wait: =
+      {
+        txt = "&"
+        hint = "wait before returning (3 default, -1 = never return)"
+      }
+      lip: =
+      {
+        txt = "&"
+        hint = "lip remaining at end of move (8 default)"
+      }
+      dmg: =
+      {
+        txt = "&"
+        hint = "damage to inflict when blocked (2 default)"
+      }
+      sounds: =
+      {
+        t_soundbrowser = !
+        txt = "&"
+        hint = ""
+            $0D"1) silent"
+            $0D"2) light"
+            $0D"3) medium"
+            $0D"4) heavy"
+      }
+    }
+    func_door_rotating:form =
+    {
+      help = "TOGGLE causes the door to wait in both the start and end states "
+       "for a trigger event."$0D"START_OPEN the door to moves to its destinati"
+       "on when spawned, and operate in reverse. It is used to temporarily or "
+       "permanently close off an area when triggered (not useful for touch or "
+       "takedamage doors)."$0D"NOMONSTER monsters will not trigger this door"$0D
+       "You need to have an origin brush as part of this entity. The center of"
+       " that brush will be"$0D"the point around which it is rotated. It will "
+       "rotate around the Z axis by default. You can"$0D"check either the X_AX"
+       "IS or Y_AXIS box to change that."$0D22"distance"$22" is how many degre"
+       "es the door will be rotated."$0D22"speed"$22" determines how fast the "
+       "door moves; default value is 100."$0D"REVERSE will cause the door to r"
+       "otate in the opposite direction."$0D22"message"$22" is printed when th"
+       "e door is touched if it is a trigger door and it hasn't been fired yet"
+       $0D22"angle"$22" determines the opening direction"$0D22"targetname"$22" "
+       "if set, no touch field will be spawned and a remote button or trigger "
+       "field activates the door."$0D22"health"$22" if set, door must be shot "
+       "open"$0D22"speed"$22" movement speed (100 default)"$0D22"wait"$22" wai"
+       "t before returning (3 default, -1 = never return)"$0D22"dmg"$22" damag"
+       "e to inflict when blocked (2 default)"$0D22"sounds"$220D"1) silent"$0D
+       "2) light"$0D"3) medium"$0D"4) heavy"
+      spawnflags: =
+      {
+        txt = "&"
+        typ = "X1"
+        cap = "START_OPEN"
+      }
+      spawnflags: =
+      {
+        txt = "&"
+        typ = "X2"
+        cap = "REVERSE"
+      }
+      spawnflags: =
+      {
+        txt = "&"
+        typ = "X4"
+        cap = "CRUSHER"
+      }
+      spawnflags: =
+      {
+        txt = "&"
+        typ = "X8"
+        cap = "NOMONSTER"
+      }
+      spawnflags: =
+      {
+        txt = "&"
+        typ = "X16"
+        cap = "ANIMATED"
+      }
+      spawnflags: =
+      {
+        txt = "&"
+        typ = "X32"
+        cap = "TOGGLE"
+      }
+      spawnflags: =
+      {
+        txt = "&"
+        typ = "X64"
+        cap = "X_AXIS"
+      }
+      spawnflags: =
+      {
+        txt = "&"
+        typ = "X128"
+        cap = "Y_AXIS"
+      }
+      t_commonspecifics = !
+      distance: =
+      {
+        txt = "&"
+        hint = "is how many degrees the door will be rotated."
+      }
+      speed: =
+      {
+        txt = "&"
+        hint = "determines how fast the door moves; default value is 100."
+      }
+      message: =
+      {
+        txt = "&"
+        hint = "is printed when the door is touched if it is a trigger door and it hasn't been fired yet"
+      }
+      angle: =
+      {
+        txt = "&"
+        hint = "determines the opening direction"
+      }
+      health: =
+      {
+        txt = "&"
+        hint = "if set, door must be shot open"
+      }
+      speed: =
+      {
+        txt = "&"
+        hint = "movement speed (100 default)"
+      }
+      wait: =
+      {
+        txt = "&"
+        hint = "wait before returning (3 default, -1 = never return)"
+      }
+      dmg: =
+      {
+        txt = "&"
+        hint = "damage to inflict when blocked (2 default)"
+      }
+      sounds: =
+      {
+        t_soundbrowser = !
+        txt = "&"
+        hint = ""
+            $0D"1) silent"
+            $0D"2) light"
+            $0D"3) medium"
+            $0D"4) heavy"
+      }
+    }
+    func_water:form =
+    {
+      help = "func_water is a moveable water brush. It must be targeted to ope"
+       "rate. Use a non-water texture at your own risk."$0D"START_OPEN causes "
+       "the water to move to its destination when spawned and operate in rever"
+       "se."$0D22"angle"$22" determines the opening direction (up or down only"
+       ")"$0D22"speed"$22" movement speed (25 default)"$0D22"wait"$22" wait be"
+       "fore returning (-1 default, -1 = TOGGLE)"$0D22"lip"$22" lip remaining "
+       "at end of move (0 default)"$0D22"sounds"$22" (yes, these need to be ch"
+       "anged)"$0D"0) no sound"$0D"1) water"$0D"2) lava"
+      spawnflags: =
+      {
+        txt = "&"
+        typ = "X1"
+        cap = "START_OPEN"
+      }
+      t_commonspecifics = !
+      angle: =
+      {
+        txt = "&"
+        hint = "determines the opening direction (up or down only)"
+      }
+      speed: =
+      {
+        txt = "&"
+        hint = "movement speed (25 default)"
+      }
+      wait: =
+      {
+        txt = "&"
+        hint = "wait before returning (-1 default, -1 = TOGGLE)"
+      }
+      lip: =
+      {
+        txt = "&"
+        hint = "lip remaining at end of move (0 default)"
+      }
+      sounds: =
+      {
+        t_soundbrowser = !
+        txt = "&"
+        hint = "(yes, these need to be changed)"
+            $0D"0) no sound"
+            $0D"1) water"
+            $0D"2) lava"
+      }
+    }
+    func_train:form =
+    {
+      help = "Trains are moving platforms that players can ride."$0D"The targe"
+       "ts origin specifies the min point of the train at each corner."$0D"The"
+       " train spawns at the first target it is pointing at."$0D"If the train "
+       "is the target of a button or trigger, it will not begin moving until a"
+       "ctivated."$0D"speed default 100"$0D"dmg  default 2"$0D"noise looping s"
+       "ound to play when the train is in motion"
+      spawnflags: =
+      {
+        txt = "&"
+        typ = "X1"
+        cap = "START_ON"
+      }
+      spawnflags: =
+      {
+        txt = "&"
+        typ = "X2"
+        cap = "TOGGLE"
+      }
+      spawnflags: =
+      {
+        txt = "&"
+        typ = "X4"
+        cap = "BLOCK_STOPS"
+      }
+      t_commonspecifics = !
+    }
+    trigger_elevator:form =
+    {
+      bbox = '-8 -8 -8 8 8 8'
+      t_commonspecifics = !
+    }
+    func_timer:form =
+    {
+      help = $22"wait"$22" base time between triggering all targets, default i"
+       "s 1"$0D22"random"$22" wait variance, default is 0"$0D"so, the basic ti"
+       "me between firing is a random time between"$0D"(wait - random) and (wa"
+       "it + random)"$0D22"delay"$22" delay before first firing when turned on"
+       ", default is 0"$0D22"pausetime"$22" additional delay used only the ver"
+       "y first time"$0D"and only if spawned with START_ON"$0D"These can used "
+       "but not touched."
+      bbox = '-8 -8 -8 8 8 8'
+      spawnflags: =
+      {
+        txt = "&"
+        typ = "X1"
+        cap = "START_ON"
+      }
+      t_commonspecifics = !
+      wait: =
+      {
+        txt = "&"
+        hint = "base time between triggering all targets, default is 1"
+      }
+      random: =
+      {
+        txt = "&"
+        hint = "wait variance, default is 0"
+      }
+      delay: =
+      {
+        txt = "&"
+        hint = "delay before first firing when turned on, default is 0"
+      }
+      pausetime: =
+      {
+        txt = "&"
+        hint = "additional delay used only the very first time"
+            $0D"and only if spawned with START_ON"
+      }
+    }
+    func_conveyor:form =
+    {
+      help = "Conveyors are stationary brushes that move what's on them."$0D"T"
+       "he brush should be have a surface with at least one current content en"
+       "abled."$0D"speed default 100"
+      spawnflags: =
+      {
+        txt = "&"
+        typ = "X1"
+        cap = "START_ON"
+      }
+      spawnflags: =
+      {
+        txt = "&"
+        typ = "X2"
+        cap = "TOGGLE"
+      }
+      t_commonspecifics = !
+    }
+    func_door_secret:form =
+    {
+      help = "A secret door. Slide back and then to the side."$0D"open_once  d"
+       "oors never closes"$0D"1st_left  1st move is left of arrow"$0D"1st_down"
+       "  1st move is down from arrow"$0D"always_shoot door is shootebale even"
+       " if targeted"$0D22"angle"$22" determines the direction"$0D22"dmg"$22" "
+       "damage to inflic when blocked (default 2)"$0D22"wait"$22" how long to "
+       "hold in the open position (default 5, -1 means hold)"
+      spawnflags: =
+      {
+        txt = "&"
+        typ = "X1"
+        cap = "always_shoot"
+      }
+      spawnflags: =
+      {
+        txt = "&"
+        typ = "X2"
+        cap = "1"
+      }
+      spawnflags: =
+      {
+        txt = "&"
+        typ = "X4"
+        cap = "st_left"
+      }
+      spawnflags: =
+      {
+        txt = "&"
+        typ = "X8"
+        cap = "1"
+      }
+      spawnflags: =
+      {
+        txt = "&"
+        typ = "X16"
+        cap = "st_down"
+      }
+      t_commonspecifics = !
+      angle: =
+      {
+        txt = "&"
+        hint = "determines the direction"
+      }
+      dmg: =
+      {
+        txt = "&"
+        hint = "damage to inflic when blocked (default 2)"
+      }
+      wait: =
+      {
+        txt = "&"
+        hint = "how long to hold in the open position (default 5, -1 means hold)"
+      }
+    }
+    func_killbox:form =
+    {
+      help = "Kills everything inside when fired, irrespective of protection."
+      t_commonspecifics = !
+    }
+    item_armor_body:form =
+    {
+      help = "model='models/items/armor/body/'"
+      bbox = '-16 -16 -16 16 16 16'
+      t_commonspecifics = !
+    }
+    item_armor_combat:form =
+    {
+      help = "model='models/items/armor/combat/'"
+      bbox = '-16 -16 -16 16 16 16'
+      t_commonspecifics = !
+    }
+    item_armor_jacket:form =
+    {
+      help = "model='models/items/armor/jacket/'"
+      bbox = '-16 -16 -16 16 16 16'
+      t_commonspecifics = !
+    }
+    item_armor_shard:form =
+    {
+      help = "model='models/items/armor/shard/'"
+      bbox = '-16 -16 -16 16 16 16'
+      t_commonspecifics = !
+    }
+    item_power_screen:form =
+    {
+      help = "model='models/items/armor/screen/'"
+      bbox = '-16 -16 -16 16 16 16'
+      t_commonspecifics = !
+    }
+    item_power_shield:form =
+    {
+      help = "model='models/items/armor/shield/'"
+      bbox = '-16 -16 -16 16 16 16'
+      t_commonspecifics = !
+    }
+    weapon_shotgun:form =
+    {
+      help = "model='models/weapons/g_shotg/'"
+      bbox = '-16 -16 -16 16 16 16'
+      t_commonspecifics = !
+    }
+    weapon_supershotgun:form =
+    {
+      help = "model='models/weapons/g_shotg2/'"
+      bbox = '-16 -16 -16 16 16 16'
+      t_commonspecifics = !
+    }
+    weapon_machinegun:form =
+    {
+      help = "model='models/weapons/g_machn/'"
+      bbox = '-16 -16 -16 16 16 16'
+      t_commonspecifics = !
+    }
+    weapon_chaingun:form =
+    {
+      help = "model='models/weapons/g_chain/'"
+      bbox = '-16 -16 -16 16 16 16'
+      t_commonspecifics = !
+    }
+    weapon_grenadelauncher:form =
+    {
+      help = "model='models/weapons/g_launch/'"
+      bbox = '-16 -16 -16 16 16 16'
+      t_commonspecifics = !
+    }
+    weapon_rocketlauncher:form =
+    {
+      help = "model='models/weapons/g_rocket/'"
+      bbox = '-16 -16 -16 16 16 16'
+      t_commonspecifics = !
+    }
+    weapon_hyperblaster:form =
+    {
+      help = "model='models/weapons/g_blast/'"
+      bbox = '-16 -16 -16 16 16 16'
+      t_commonspecifics = !
+    }
+    weapon_railgun:form =
+    {
+      help = "model='models/weapons/g_rail/'"
+      bbox = '-16 -16 -16 16 16 16'
+      t_commonspecifics = !
+    }
+    weapon_bfg:form =
+    {
+      help = "model='models/weapons/g_bfg/'"
+      bbox = '-16 -16 -16 16 16 16'
+      t_commonspecifics = !
+    }
+    ammo_shells:form =
+    {
+      help = "model='models/items/ammo/shells/medium/'"
+      bbox = '-16 -16 -16 16 16 16'
+      t_commonspecifics = !
+    }
+    ammo_bullets:form =
+    {
+      help = "model='models/items/ammo/bullets/medium/'"
+      bbox = '-16 -16 -16 16 16 16'
+      t_commonspecifics = !
+    }
+    ammo_cells:form =
+    {
+      help = "model='models/items/ammo/cells/medium/'"
+      bbox = '-16 -16 -16 16 16 16'
+      t_commonspecifics = !
+    }
+    ammo_grenades:form =
+    {
+      help = "model='models/items/ammo/grenades/medium/'"
+      bbox = '-16 -16 -16 16 16 16'
+      t_commonspecifics = !
+    }
+    ammo_rockets:form =
+    {
+      help = "model='models/items/ammo/rockets/medium/'"
+      bbox = '-16 -16 -16 16 16 16'
+      t_commonspecifics = !
+    }
+    ammo_slugs:form =
+    {
+      help = "model='models/items/ammo/slugs/medium/'"
+      bbox = '-16 -16 -16 16 16 16'
+      t_commonspecifics = !
+    }
+    item_quad:form =
+    {
+      help = "model='models/items/quaddama/'"
+      bbox = '-16 -16 -16 16 16 16'
+      t_commonspecifics = !
+    }
+    item_invulnerability:form =
+    {
+      help = "model='models/items/invulner/'"
+      bbox = '-16 -16 -16 16 16 16'
+      t_commonspecifics = !
+    }
+    item_silencer:form =
+    {
+      help = "model='models/items/silencer/'"
+      bbox = '-16 -16 -16 16 16 16'
+      t_commonspecifics = !
+    }
+    item_breather:form =
+    {
+      help = "model='models/items/breather/'"
+      bbox = '-16 -16 -16 16 16 16'
+      t_commonspecifics = !
+    }
+    item_enviro:form =
+    {
+      help = "model='models/items/enviro/'"
+      bbox = '-16 -16 -16 16 16 16'
+      t_commonspecifics = !
+    }
+    item_ancient_head:form =
+    {
+      help = "Special item that gives +2 to maximum health"
+      bbox = '-16 -16 -16 16 16 16'
+      t_commonspecifics = !
+    }
+    item_adrenaline:form =
+    {
+      help = "gives +1 to maximum health"$0D"model='models/items/adrenal/'"
+      bbox = '-16 -16 -16 16 16 16'
+      t_commonspecifics = !
+    }
+    item_bandolier:form =
+    {
+      help = "model='models/items/band/'"
+      bbox = '-16 -16 -16 16 16 16'
+      t_commonspecifics = !
+    }
+    item_pack:form =
+    {
+      help = "model='models/items/pack/'"
+      bbox = '-16 -16 -16 16 16 16'
+      t_commonspecifics = !
+    }
+    key_data_cd:form =
+    {
+      help = "key for computer centers"$0D"model='models/items/keys/data_cd/'"
+      bbox = '-16 -16 -16 16 16 16'
+      t_commonspecifics = !
+    }
+    key_power_cube:form =
+    {
+      help = "warehouse circuits"$0D"model='models/items/keys/power/'"
+      bbox = '-16 -16 -16 16 16 16'
+      spawnflags: =
+      {
+        txt = "&"
+        typ = "X1"
+        cap = "TRIGGER_SPAWN"
+      }
+      spawnflags: =
+      {
+        txt = "&"
+        typ = "X2"
+        cap = "NO_TOUCH"
+      }
+      t_commonspecifics = !
+    }
+    key_pyramid:form =
+    {
+      help = "key for the entrance of jail3"$0D"model='models/items/keys/pyram"
+       "id/'"
+      bbox = '-16 -16 -16 16 16 16'
+      t_commonspecifics = !
+    }
+    key_data_spinner:form =
+    {
+      help = "key for the city computer"$0D"model='models/items/keys/spinner/'"
+      bbox = '-16 -16 -16 16 16 16'
+      t_commonspecifics = !
+    }
+    key_pass:form =
+    {
+      help = "security pass for the security level"$0D"model='models/items/key"
+       "s/pass/'"
+      bbox = '-16 -16 -16 16 16 16'
+      t_commonspecifics = !
+    }
+    key_blue_key:form =
+    {
+      help = "normal door key - blue"$0D"model='models/items/keys/key/'"
+      bbox = '-16 -16 -16 16 16 16'
+      t_commonspecifics = !
+    }
+    key_red_key:form =
+    {
+      help = "normal door key - red"$0D"model='models/items/keys/red_key/'"
+      bbox = '-16 -16 -16 16 16 16'
+      t_commonspecifics = !
+    }
+    key_commander_head:form =
+    {
+      help = "tank commander's head"$0D"model='models/items/c_head/'"
+      bbox = '-16 -16 -16 16 16 16'
+      t_commonspecifics = !
+    }
+    key_airstrike_target:form =
+    {
+      help = "tank commander's head"$0D"model='models/items/c_head/'"
+      bbox = '-16 -16 -16 16 16 16'
+      t_commonspecifics = !
+    }
+    item_health:form =
+    {
+      help = "model='models/items/healing/medium/'"
+      bbox = '-16 -16 -16 16 16 16'
+      t_commonspecifics = !
+    }
+    item_health_small:form =
+    {
+      help = "model='models/items/healing/stimpack/'"
+      bbox = '-16 -16 -16 16 16 16'
+      t_commonspecifics = !
+    }
+    item_health_large:form =
+    {
+      help = "model='models/items/healing/large/'"
+      bbox = '-16 -16 -16 16 16 16'
+      t_commonspecifics = !
+    }
+    item_health_mega:form =
+    {
+      help = "model='models/items/mega_h/"
+      bbox = '-16 -16 -16 16 16 16'
+      t_commonspecifics = !
+    }
+    func_group:form =
+    {
+      help = "Used to group brushes together just for editor convenience."
+      t_commonspecifics = !
+    }
+    func_areaportal:form =
+    {
+      help = "This is a non-visible object that divides the world into"$0D"are"
+       "as that are seperated when this portal is not activated."$0D"Usually e"
+       "nclosed in the middle of a door."
+      t_commonspecifics = !
+    }
+    path_corner:form =
+    {
+      help = "Target: next path corner"$0D"Pathtarget: gets used when an entit"
+       "y that has"$0D"this path_corner targeted touches it"
+      bbox = '-8 -8 -8 8 8 8'
+      spawnflags: =
+      {
+        txt = "&"
+        typ = "X1"
+        cap = "TELEPORT"
+      }
+      t_commonspecifics = !
+    }
+    point_combat:form =
+    {
+      help = "Makes this the target of a monster and it will head here"$0D"whe"
+       "n first activated before going after the activator. If"$0D"hold is sel"
+       "ected, it will stay here."
+      bbox = '-8 -8 -8 8 8 8'
+      spawnflags: =
+      {
+        txt = "&"
+        typ = "X1"
+        cap = "Hold"
+      }
+      t_commonspecifics = !
+    }
+    viewthing:form =
+    {
+      help = "Just for the debugging level. Don't use"
+      bbox = '-8 -8 -8 8 8 8'
+      t_commonspecifics = !
+    }
+    info_null:form =
+    {
+      help = "Used as a positional target for spotlights, etc."
+      bbox = '-4 -4 -4 4 4 4'
+    }
+    info_notnull:form =
+    {
+      help = "Used as a positional target for lightning."
+      bbox = '-4 -4 -4 4 4 4'
+    }
+    light:form =
+    {
+      help = "Non-displayed light."$0D"Default light value is 300."$0D"Default"
+       " style is 0."$0D"If targeted, will toggle between on and off."$0D"Defa"
+       "ult _cone value is 10 (used to set size of light for spotlights)"
+      bbox = '-8 -8 -8 8 8 8'
+      spawnflags: =
+      {
+        txt = "&"
+        typ = "X1"
+        cap = "START_OFF"
+      }
+      t_commonspecifics = !
+      _color: =
+      {
+        Typ = "LN"
+        Txt = "&"
+        Hint = "Specifies light color in relative RGB Values. (Default=1 1 1)."
+         " any # can be negative for mixed light/darkness"
+      }
+      _color: =
+      {
+        Txt = "&"
+        Hint = "Specifies light color in relative RGB Values. (Default=1 1 1)."
+         " any # can be negative for mixed light/darkness"
+      }
+      _cone: =
+      {
+        Txt = "&"
+        Hint = "Specifies size of spotlight cone arc, in degrees. Range is 10-"
+         "90. (Default=10)."$0D"Ignored if no target set."
+      }
+      light: =
+      {
+        Txt = "&"
+        Hint = "Specifies light brightness level. (Default=300). # can be nega"
+         "tive, casting darkness"
+      }
+      style: =
+      {
+        Typ = "C"
+        Txt = "&"
+        Hint = "Specifies lightstyle Type. (Default=0)."$0D"Ignored when death"
+         "match=1."$0D"styles 32-62 are assigned by the light program for swit"
+         "chable lights."$0D"63 is for testing."
+        Items = "0) Normal"$0D"1) Flicker (first variety)"$0D"2) Slow Strong S"
+         "trobe"$0D"3) Candle (first variety)"$0D"4) Fast Strobe"$0D"5) Gentle"
+         " Pulse"$0D"6) Flicker (second variety)"$0D"7) Candle (second variety"
+         ")"$0D"8) Candle (third variety)"$0D"9) Slow Strobe (fourth variety)"$0D
+         "10) Flourescent Flicker"$0D"11) Slow Pulse (never to full)"
+        Values = "0"$0D"1"$0D"2"$0D"3"$0D"4"$0D"5"$0D"6"$0D"7"$0D"8"$0D"9"$0D"1"
+         "0"$0D"11"
+      }
+    }
+    func_wall:form =
+    {
+      help = "This is just a solid wall if not inhibited"$0D"TRIGGER_SPAWN the"
+       " wall will not be present until triggered"$0D"it will then blink in to"
+       " existance; it will"$0D"kill anything that was in it's way"$0D"TOGGLE "
+       "  only valid for TRIGGER_SPAWN walls"$0D"this allows the wall to be tu"
+       "rned on and off"$0D"START_ON  only valid for TRIGGER_SPAWN walls"$0D"t"
+       "he wall will initially be present"
+      spawnflags: =
+      {
+        txt = "&"
+        typ = "X1"
+        cap = "TRIGGER_SPAWN"
+      }
+      spawnflags: =
+      {
+        txt = "&"
+        typ = "X2"
+        cap = "TOGGLE"
+      }
+      spawnflags: =
+      {
+        txt = "&"
+        typ = "X4"
+        cap = "START_ON"
+      }
+      spawnflags: =
+      {
+        txt = "&"
+        typ = "X8"
+        cap = "ANIMATED"
+      }
+      spawnflags: =
+      {
+        txt = "&"
+        typ = "X16"
+        cap = "ANIMATED_FAST"
+      }
+      t_commonspecifics = !
+    }
+    func_object:form =
+    {
+      help = "This is solid bmodel that will fall if it's support it removed."
+      spawnflags: =
+      {
+        txt = "&"
+        typ = "X1"
+        cap = "TRIGGER_SPAWN"
+      }
+      spawnflags: =
+      {
+        txt = "&"
+        typ = "X2"
+        cap = "ANIMATED"
+      }
+      spawnflags: =
+      {
+        txt = "&"
+        typ = "X4"
+        cap = "ANIMATED_FAST"
+      }
+      t_commonspecifics = !
+    }
+    func_explosive:form =
+    {
+      help = "Any brush that you want to explode or break apart. If you want a"
+       "n"$0D"ex0plosion, set dmg and it will do a radius explosion of that am"
+       "ount"$0D"at the center of the bursh."$0D"If targeted it will not be sh"
+       "ootable."$0D"health defaults to 100."$0D"mass defaults to 75. This det"
+       "ermines how much debris is emitted when"$0D"it explodes. You get one l"
+       "arge chunk per 100 of mass (up to 8) and"$0D"one small chunk per 25 of"
+       " mass (up to 16). So 800 gives the most."
+      spawnflags: =
+      {
+        txt = "&"
+        typ = "X1"
+        cap = "Trigger_Spawn"
+      }
+      spawnflags: =
+      {
+        txt = "&"
+        typ = "X2"
+        cap = "ANIMATED"
+      }
+      spawnflags: =
+      {
+        txt = "&"
+        typ = "X4"
+        cap = "ANIMATED_FAST"
+      }
+      t_commonspecifics = !
+    }
+    misc_explobox:form =
+    {
+      help = "Large exploding box. You can override its mass (100),"$0D"health"
+       " (80), and dmg (150)."
+      bbox = '-16 -16 0 16 16 40'
+      t_commonspecifics = !
+    }
+    misc_blackhole:form =
+    {
+      help = "model='models/objects/black/'"
+      bbox = '-8 -8 -8 8 8 8'
+      t_commonspecifics = !
+    }
+    misc_eastertank:form =
+    {
+      bbox = '-32 -32 -16 32 32 32'
+      t_commonspecifics = !
+    }
+    misc_easterchick:form =
+    {
+      bbox = '-32 -32 0 32 32 32'
+      t_commonspecifics = !
+    }
+    misc_easterchick2:form =
+    {
+      bbox = '-32 -32 0 32 32 32'
+      t_commonspecifics = !
+    }
+    monster_commander_body:form =
+    {
+      help = "Not really a monster, this is the Tank Commander's decapitated b"
+       "ody."$0D"There should be a item_commander_head that has this as it's t"
+       "arget."
+      bbox = '-32 -32 0 32 32 48'
+      t_commonspecifics = !
+    }
+    misc_banner:form =
+    {
+      help = "The origin is the bottom of the banner."$0D"The banner is 128 ta"
+       "ll."
+      bbox = '-4 -4 -4 4 4 4'
+      t_commonspecifics = !
+    }
+    misc_deadsoldier:form =
+    {
+      help = "This is the dead player model. Comes in 6 exciting different pos"
+       "es!"
+      bbox = '-16 -16 0 16 16 16'
+      spawnflags: =
+      {
+        txt = "&"
+        typ = "X1"
+        cap = "ON_BACK"
+      }
+      spawnflags: =
+      {
+        txt = "&"
+        typ = "X2"
+        cap = "ON_STOMACH"
+      }
+      spawnflags: =
+      {
+        txt = "&"
+        typ = "X4"
+        cap = "BACK_DECAP"
+      }
+      spawnflags: =
+      {
+        txt = "&"
+        typ = "X8"
+        cap = "FETAL_POS"
+      }
+      spawnflags: =
+      {
+        txt = "&"
+        typ = "X16"
+        cap = "SIT_DECAP"
+      }
+      spawnflags: =
+      {
+        txt = "&"
+        typ = "X32"
+        cap = "IMPALED"
+      }
+      t_commonspecifics = !
+    }
+    misc_viper:form =
+    {
+      help = "This is the Viper for the flyby bombing."$0D"It is trigger_spawn"
+       "ed, so you must have something use it for it to show up."$0D"There mus"
+       "t be a path for it to follow once it is activated."$0D22"speed"$22" Ho"
+       "w fast the Viper should fly"
+      bbox = '-16 -16 0 16 16 32'
+      t_commonspecifics = !
+      speed: =
+      {
+        txt = "&"
+        hint = "How fast the Viper should fly"
+      }
+    }
+    misc_bigviper:form =
+    {
+      help = "This is a large stationary viper as seen in Paul's intro"
+      bbox = '-176 -120 -24 176 120 72'
+      t_commonspecifics = !
+    }
+    misc_viper_bomb:form =
+    {
+      help = $22"dmg"$22" how much boom should the bomb make?"
+      bbox = '-8 -8 -8 8 8 8'
+      t_commonspecifics = !
+      dmg: =
+      {
+        txt = "&"
+        hint = "how much boom should the bomb make?"
+      }
+    }
+    misc_strogg_ship:form =
+    {
+      help = "This is a Storgg ship for the flybys."$0D"It is trigger_spawned,"
+       " so you must have something use it for it to show up."$0D"There must b"
+       "e a path for it to follow once it is activated."$0D22"speed"$22" How f"
+       "ast it should fly"
+      bbox = '-16 -16 0 16 16 32'
+      t_commonspecifics = !
+      speed: =
+      {
+        txt = "&"
+        hint = "How fast it should fly"
+      }
+    }
+    misc_satellite_dish:form =
+    {
+      help = "model='models/objects/satellite/'"
+      bbox = '-64 -64 0 64 64 128'
+      t_commonspecifics = !
+    }
+    light_mine1:form =
+    {
+      help = "model='models/objects/minelite/light1/'"
+      bbox = '-2 -2 -12 2 2 12'
+      t_commonspecifics = !
+    }
+    light_mine2:form =
+    {
+      help = "model='models/objects/minelite/light2/'"
+      bbox = '-2 -2 -12 2 2 12'
+      t_commonspecifics = !
+    }
+    misc_gib_arm:form =
+    {
+      help = "Intended for use with the target_spawner"
+      bbox = '-8 -8 -8 8 8 8'
+      t_commonspecifics = !
+    }
+    misc_gib_leg:form =
+    {
+      help = "Intended for use with the target_spawner"
+      bbox = '-8 -8 -8 8 8 8'
+      t_commonspecifics = !
+    }
+    misc_gib_head:form =
+    {
+      help = "Intended for use with the target_spawner"
+      bbox = '-8 -8 -8 8 8 8'
+      t_commonspecifics = !
+    }
+    target_character:form =
+    {
+      help = "used with target_string (must be on same 'team')"$0D22"count"$22
+       " is position in the string (starts at 1)"
+      t_commonspecifics = !
+      count: =
+      {
+        txt = "&"
+        hint = "is position in the string (starts at 1)"
+      }
+    }
+    target_string:form =
+    {
+      bbox = '-8 -8 -8 8 8 8'
+      t_commonspecifics = !
+    }
+    func_clock:form =
+    {
+      help = "target a target_string with this"$0D"The default is to be a time"
+       " of day clock"$0D"TIMER_UP and TIMER_DOWN run for 'count' seconds and "
+       "the fire 'pathtarget'"$0D"If START_OFF, this entity must be used befor"
+       "e it starts"$0D22"style"$22" 0 'xx'"$0D"1 'xx:xx'"$0D"2 'xx:xx:xx'"
+      bbox = '-8 -8 -8 8 8 8'
+      spawnflags: =
+      {
+        txt = "&"
+        typ = "X1"
+        cap = "TIMER_UP"
+      }
+      spawnflags: =
+      {
+        txt = "&"
+        typ = "X2"
+        cap = "TIMER_DOWN"
+      }
+      spawnflags: =
+      {
+        txt = "&"
+        typ = "X4"
+        cap = "START_OFF"
+      }
+      spawnflags: =
+      {
+        txt = "&"
+        typ = "X8"
+        cap = "MULTI_USE"
+      }
+      t_commonspecifics = !
+      style: =
+      {
+        txt = "&"
+        hint = "0 'xx'"
+            $0D"1 'xx:xx'"
+            $0D"2 'xx:xx:xx'"
+      }
+    }
+    misc_teleporter:form =
+    {
+      help = "Stepping onto this disc will teleport players to the targeted mi"
+       "sc_teleporter_dest object."
+      bbox = '-32 -32 -24 32 32 -16'
+      t_commonspecifics = !
+    }
+    misc_teleporter_dest:form =
+    {
+      help = "Point teleporters at these."
+      bbox = '-32 -32 -24 32 32 -16'
+      t_commonspecifics = !
+    }
+    worldspawn:form =
+    {
+      help = "Only used for the world."$0D22"sky"$22" environment map name"$0D
+       $22"skyaxis"$22" vector axis for rotating sky"$0D22"skyrotate"$22" spee"
+       "d of rotation in degrees/second"$0D22"sounds"$22" music cd track numbe"
+       "r"$0D22"gravity"$22" 800 is default gravity"$0D22"message"$22" text to"
+       " print at user logon"
+      sky: =
+      {
+        txt = "&"
+        hint = "environment map name"
+      }
+      skyaxis: =
+      {
+        txt = "&"
+        hint = "vector axis for rotating sky"
+      }
+      skyrotate: =
+      {
+        txt = "&"
+        hint = "speed of rotation in degrees/second"
+      }
+      sounds: =
+      {
+        t_musicbrowser = !
+        txt = "&"
+        hint = "music cd track number"
+      }
+      gravity: =
+      {
+        txt = "&"
+        hint = "800 is default gravity"
+      }
+      message: =
+      {
+        txt = "&"
+        hint = "text to print at user logon"
+      }
+    }
+    target_temp_entity:form =
+    {
+      help = "Fire an origin based temp entity event to the clients."$0D22"sty"
+       "le"$22" type byte"
+      bbox = '-8 -8 -8 8 8 8'
+      t_commonspecifics = !
+      style: =
+      {
+        txt = "&"
+        hint = "type byte"
+      }
+    }
+    target_speaker:form =
+    {
+      help = $22"noise"$22" wav file to play"$0D22"attenuation"$220D"-1 = none"
+       ", send to whole level"$0D"1 = normal fighting sounds"$0D"2 = idle soun"
+       "d level"$0D"3 = ambient sound level"$0D22"volume"$22" 0.0 to 1.0"$0D"N"
+       "ormal sounds play each time the target is used. The reliable flag can "
+       "be set for crucial voiceovers."$0D"Looped sounds are allways atten 3 /"
+       " vol 1, and the use function toggles it on/off."$0D"Multiple identical"
+       " looping sounds will just increase volume without any speed cost."
+      bbox = '-8 -8 -8 8 8 8'
+      spawnflags: =
+      {
+        txt = "&"
+        typ = "X1"
+        cap = "looped-on"
+      }
+      spawnflags: =
+      {
+        txt = "&"
+        typ = "X2"
+        cap = "looped-off"
+      }
+      spawnflags: =
+      {
+        txt = "&"
+        typ = "X4"
+        cap = "reliable"
+      }
+      t_commonspecifics = !
+      noise: =
+      {
+        t_soundbrowser = !
+        txt = "&"
+        hint = "wav file to play"
+      }
+      attenuation: =
+      {
+        txt = "&"
+        hint = ""
+            $0D"-1 = none, send to whole level"
+            $0D"1 = normal fighting sounds"
+            $0D"2 = idle sound level"
+            $0D"3 = ambient sound level"
+      }
+      volume: =
+      {
+        txt = "&"
+        hint = "0.0 to 1.0"
+      }
+    }
+    target_help:form =
+    {
+      help = "When fired, the 'message' key becomes the current personal compu"
+       "ter string, and the message light will be set on all clients status ba"
+       "rs."
+      bbox = '-16 -16 -24 16 16 24'
+      spawnflags: =
+      {
+        txt = "&"
+        typ = "X1"
+        cap = "help1"
+      }
+      t_commonspecifics = !
+    }
+    target_secret:form =
+    {
+      help = "Counts a secret found."
+      bbox = '-8 -8 -8 8 8 8'
+      t_commonspecifics = !
+    }
+    target_goal:form =
+    {
+      help = "Counts a goal completed."
+      bbox = '-8 -8 -8 8 8 8'
+      t_commonspecifics = !
+    }
+    target_explosion:form =
+    {
+      help = "Spawns an explosion temporary entity when used."$0D22"delay"$22" "
+       "wait this long before going off"$0D22"dmg"$22" how much radius damage "
+       "should be done, defaults to 0"
+      bbox = '-8 -8 -8 8 8 8'
+      t_commonspecifics = !
+      delay: =
+      {
+        txt = "&"
+        hint = "wait this long before going off"
+      }
+      dmg: =
+      {
+        txt = "&"
+        hint = "how much radius damage should be done, defaults to 0"
+      }
+    }
+    target_changelevel:form =
+    {
+      help = "Changes level to 'map' when fired"
+      bbox = '-8 -8 -8 8 8 8'
+      t_commonspecifics = !
+    }
+    target_splash:form =
+    {
+      help = "Creates a particle splash effect when used."$0D"Set 'sounds' to "
+       "one of the following:"$0D"1) sparks"$0D"2) blue water"$0D"3) brown wat"
+       "er"$0D"4) slime"$0D"5) lava"$0D"6) blood"$0D22"count"$22" how many pix"
+       "els in the splash"$0D22"dmg"$22" if set, does a radius damage at this "
+       "location when it splashes"$0D"useful for lava/sparks"
+      bbox = '-8 -8 -8 8 8 8'
+      t_commonspecifics = !
+      count: =
+      {
+        txt = "&"
+        hint = "how many pixels in the splash"
+      }
+      dmg: =
+      {
+        txt = "&"
+        hint = "if set, does a radius damage at this location when it splashes"
+            $0D"useful for lava/sparks"
+      }
+    }
+    target_spawner:form =
+    {
+      help = "Set target to the type of entity you want spawned."$0D"Useful fo"
+       "r spawning monsters and gibs in the factory levels."$0D"For monsters:"$0D
+       "Set direction to the facing you want it to have."$0D"For gibs:"$0D"Set"
+       " direction if you want it moving and"$0D"speed how fast it should be m"
+       "oving otherwise it"$0D"will just be dropped"
+      bbox = '-8 -8 -8 8 8 8'
+      t_commonspecifics = !
+    }
+    target_blaster:form =
+    {
+      help = "Fires a blaster bolt in the set direction when triggered."$0D"dm"
+       "g  default is 15"$0D"speed default is 1000"
+      bbox = '-8 -8 -8 8 8 8'
+      spawnflags: =
+      {
+        txt = "&"
+        typ = "X1"
+        cap = "NOTRAIL"
+      }
+      spawnflags: =
+      {
+        txt = "&"
+        typ = "X2"
+        cap = "NOEFFECTS"
+      }
+      t_commonspecifics = !
+    }
+    target_crosslevel_trigger:form =
+    {
+      help = "Once this trigger is touched/used, any trigger_crosslevel_target"
+       " with the same trigger number is automatically used when a level is st"
+       "arted within the same unit. It is OK to check multiple triggers. Messa"
+       "ge, delay, target, and killtarget also work."
+      bbox = '-8 -8 -8 8 8 8'
+      spawnflags: =
+      {
+        txt = "&"
+        typ = "X1"
+        cap = "trigger1"
+      }
+      spawnflags: =
+      {
+        txt = "&"
+        typ = "X2"
+        cap = "trigger2"
+      }
+      spawnflags: =
+      {
+        txt = "&"
+        typ = "X4"
+        cap = "trigger3"
+      }
+      spawnflags: =
+      {
+        txt = "&"
+        typ = "X8"
+        cap = "trigger4"
+      }
+      spawnflags: =
+      {
+        txt = "&"
+        typ = "X16"
+        cap = "trigger5"
+      }
+      spawnflags: =
+      {
+        txt = "&"
+        typ = "X32"
+        cap = "trigger6"
+      }
+      spawnflags: =
+      {
+        txt = "&"
+        typ = "X64"
+        cap = "trigger7"
+      }
+      spawnflags: =
+      {
+        txt = "&"
+        typ = "X128"
+        cap = "trigger8"
+      }
+      t_commonspecifics = !
+    }
+    target_crosslevel_target:form =
+    {
+      help = "Triggered by a trigger_crosslevel elsewhere within a unit. If mu"
+       "ltiple triggers are checked, all must be true. Delay, target and"$0D"k"
+       "illtarget also work."$0D22"delay"$22" delay before using targets if th"
+       "e trigger has been activated (default 1)"
+      bbox = '-8 -8 -8 8 8 8'
+      spawnflags: =
+      {
+        txt = "&"
+        typ = "X1"
+        cap = "trigger1"
+      }
+      spawnflags: =
+      {
+        txt = "&"
+        typ = "X2"
+        cap = "trigger2"
+      }
+      spawnflags: =
+      {
+        txt = "&"
+        typ = "X4"
+        cap = "trigger3"
+      }
+      spawnflags: =
+      {
+        txt = "&"
+        typ = "X8"
+        cap = "trigger4"
+      }
+      spawnflags: =
+      {
+        txt = "&"
+        typ = "X16"
+        cap = "trigger5"
+      }
+      spawnflags: =
+      {
+        txt = "&"
+        typ = "X32"
+        cap = "trigger6"
+      }
+      spawnflags: =
+      {
+        txt = "&"
+        typ = "X64"
+        cap = "trigger7"
+      }
+      spawnflags: =
+      {
+        txt = "&"
+        typ = "X128"
+        cap = "trigger8"
+      }
+      t_commonspecifics = !
+      delay: =
+      {
+        txt = "&"
+        hint = "delay before using targets if the trigger has been activated (default 1)"
+      }
+    }
+    target_laser:form =
+    {
+      help = "When triggered, fires a laser. You can either set a target"$0D"o"
+       "r a direction."
+      bbox = '-8 -8 -8 8 8 8'
+      spawnflags: =
+      {
+        txt = "&"
+        typ = "X1"
+        cap = "START_ON"
+      }
+      spawnflags: =
+      {
+        txt = "&"
+        typ = "X2"
+        cap = "RED"
+      }
+      spawnflags: =
+      {
+        txt = "&"
+        typ = "X4"
+        cap = "GREEN"
+      }
+      spawnflags: =
+      {
+        txt = "&"
+        typ = "X8"
+        cap = "BLUE"
+      }
+      spawnflags: =
+      {
+        txt = "&"
+        typ = "X16"
+        cap = "YELLOW"
+      }
+      spawnflags: =
+      {
+        txt = "&"
+        typ = "X32"
+        cap = "ORANGE"
+      }
+      spawnflags: =
+      {
+        txt = "&"
+        typ = "X64"
+        cap = "FAT"
+      }
+      t_commonspecifics = !
+    }
+    target_lightramp:form =
+    {
+      help = "speed  How many seconds the ramping will take"$0D"message  two l"
+       "etters; starting lightlevel and ending lightlevel"
+      bbox = '-8 -8 -8 8 8 8'
+      spawnflags: =
+      {
+        txt = "&"
+        typ = "X1"
+        cap = "TOGGLE"
+      }
+      t_commonspecifics = !
+    }
+    target_earthquake:form =
+    {
+      help = "When triggered, this initiates a level-wide earthquake."$0D"All "
+       "players and monsters are affected."$0D22"speed"$22" severity of the qu"
+       "ake (default:200)"$0D22"count"$22" duration of the quake (default:5)"
+      bbox = '-8 -8 -8 8 8 8'
+      t_commonspecifics = !
+      speed: =
+      {
+        txt = "&"
+        hint = "severity of the quake (default:200)"
+      }
+      count: =
+      {
+        txt = "&"
+        hint = "duration of the quake (default:5)"
+      }
+    }
+    trigger_multiple:form =
+    {
+      help = "Variable sized repeatable trigger. Must be targeted at one or mo"
+       "re entities."$0D22"delay"$22" if set, the trigger waits some time afte"
+       "r activating before firing."$0D22"wait"$22" : Seconds between triggeri"
+       "ngs. (.2 default)"$0D"sounds"$0D"1) secret"$0D"2) beep beep"$0D"3) lar"
+       "ge switch"$0D"4)"$0D22"message"$22" set to text string"
+      spawnflags: =
+      {
+        txt = "&"
+        typ = "X1"
+        cap = "MONSTER"
+      }
+      spawnflags: =
+      {
+        txt = "&"
+        typ = "X2"
+        cap = "NOT_PLAYER"
+      }
+      spawnflags: =
+      {
+        txt = "&"
+        typ = "X4"
+        cap = "TRIGGERED"
+      }
+      t_commonspecifics = !
+      delay: =
+      {
+        txt = "&"
+        hint = "if set, the trigger waits some time after activating before firing."
+      }
+      wait: =
+      {
+        txt = "&"
+        hint = ": Seconds between triggerings. (.2 default)"
+            $0D"sounds"
+            $0D"1) secret"
+            $0D"2) beep beep"
+            $0D"3) large switch"
+            $0D"4)"
+      }
+      message: =
+      {
+        txt = "&"
+        hint = "set to text string"
+      }
+    }
+    trigger_once:form =
+    {
+      help = "Triggers once, then removes itself."$0D"You must set the key 'ta"
+       "rget' to the name of another object in the level that has a matching '"
+       "targetname'."$0D"If TRIGGERED, this trigger must be triggered before i"
+       "t is live."$0D"sounds"$0D"1) secret"$0D"2) beep beep"$0D"3) large swit"
+       "ch"$0D"4)"$0D22"message"$22" string to be displayed when triggered"
+      spawnflags: =
+      {
+        txt = "&"
+        typ = "X4"
+        cap = "TRIGGERED"
+      }
+      t_commonspecifics = !
+      message: =
+      {
+        txt = "&"
+        hint = "string to be displayed when triggered"
+      }
+    }
+    trigger_relay:form =
+    {
+      help = "This fixed size trigger cannot be touched, it can only be fired "
+       "by other events."
+      bbox = '-8 -8 -8 8 8 8'
+      t_commonspecifics = !
+    }
+    trigger_key:form =
+    {
+      help = "A relay trigger that only fires it's targets if player has the p"
+       "roper key."$0D"Use 'item' to specify the required key, for example 'ke"
+       "y_data_cd'"
+      bbox = '-8 -8 -8 8 8 8'
+      t_commonspecifics = !
+    }
+    trigger_counter:form =
+    {
+      help = "Acts as an intermediary for an action that takes multiple inputs"
+       "."$0D"If nomessage is not set, t will print '1 more.. ' etc when trigg"
+       "ered and 'sequence complete' when finished."$0D"After the counter has "
+       "been triggered 'count' times (default 2), it will fire all of it's tar"
+       "gets and remove itself."
+      spawnflags: =
+      {
+        txt = "&"
+        typ = "X1"
+        cap = "nomessage"
+      }
+      t_commonspecifics = !
+    }
+    trigger_always:form =
+    {
+      help = "This trigger will always fire. It is activated by the world."
+      bbox = '-8 -8 -8 8 8 8'
+      t_commonspecifics = !
+    }
+    trigger_push:form =
+    {
+      help = "Pushes the player"$0D22"speed"$22" defaults to 1000"
+      spawnflags: =
+      {
+        txt = "&"
+        typ = "X1"
+        cap = "PUSH_ONCE"
+      }
+      t_commonspecifics = !
+      speed: =
+      {
+        txt = "&"
+        hint = "defaults to 1000"
+      }
+    }
+    trigger_hurt:form =
+    {
+      help = "Any entity that touches this will be hurt."$0D"It does dmg point"
+       "s of damage each server frame"$0D"SILENT   supresses playing the sound"
+       $0D"SLOW   changes the damage rate to once per second"$0D"NO_PROTECTION"
+       " *nothing* stops the damage"$0D22"dmg"$22" default 5 (whole numbers on"
+       "ly)"
+      spawnflags: =
+      {
+        txt = "&"
+        typ = "X1"
+        cap = "START_OFF"
+      }
+      spawnflags: =
+      {
+        txt = "&"
+        typ = "X2"
+        cap = "TOGGLE"
+      }
+      spawnflags: =
+      {
+        txt = "&"
+        typ = "X4"
+        cap = "SILENT"
+      }
+      spawnflags: =
+      {
+        txt = "&"
+        typ = "X8"
+        cap = "NO_PROTECTION"
+      }
+      spawnflags: =
+      {
+        txt = "&"
+        typ = "X16"
+        cap = "SLOW"
+      }
+      t_commonspecifics = !
+      dmg: =
+      {
+        txt = "&"
+        hint = "default 5 (whole numbers only)"
+      }
+    }
+    trigger_gravity:form =
+    {
+      help = "Changes the touching entites gravity to"$0D"the value of 'gravit"
+       "y'. 1.0 is standard"$0D"gravity for the level."
+      t_commonspecifics = !
+    }
+    trigger_monsterjump:form =
+    {
+      help = "Walking monsters that touch this will jump in the direction of t"
+       "he trigger's angle"$0D22"speed"$22" default to 200, the speed thrown f"
+       "orward"$0D22"height"$22" default to 200, the speed thrown upwards"
+      t_commonspecifics = !
+      speed: =
+      {
+        txt = "&"
+        hint = "default to 200, the speed thrown forward"
+      }
+      height: =
+      {
+        txt = "&"
+        hint = "default to 200, the speed thrown upwards"
+      }
+    }
+    turret_breach:form =
+    {
+      help = "This portion of the turret can change both pitch and yaw."$0D"Th"
+       "e model should be made with a flat pitch."$0D"It (and the associated b"
+       "ase) need to be oriented towards 0."$0D"Use 'angle' to set the startin"
+       "g angle."$0D22"speed"$22" default 50"$0D22"dmg"$22" default 10"$0D22"a"
+       "ngle"$22" point this forward"$0D22"target"$22" point this at an info_n"
+       "otnull at the muzzle tip"$0D22"minpitch"$22" min acceptable pitch angl"
+       "e : default -30"$0D22"maxpitch"$22" max acceptable pitch angle : defau"
+       "lt 30"$0D22"minyaw"$22" min acceptable yaw angle : default 0"$0D22"max"
+       "yaw"$22" max acceptable yaw angle : default 360"
+      t_commonspecifics = !
+      speed: =
+      {
+        txt = "&"
+        hint = "default 50"
+      }
+      dmg: =
+      {
+        txt = "&"
+        hint = "default 10"
+      }
+      angle: =
+      {
+        txt = "&"
+        hint = "point this forward"
+      }
+      minpitch: =
+      {
+        txt = "&"
+        hint = "min acceptable pitch angle : default -30"
+      }
+      maxpitch: =
+      {
+        txt = "&"
+        hint = "max acceptable pitch angle : default 30"
+      }
+      minyaw: =
+      {
+        txt = "&"
+        hint = "min acceptable yaw angle : default 0"
+      }
+      maxyaw: =
+      {
+        txt = "&"
+        hint = "max acceptable yaw angle : default 360"
+      }
+    }
+    turret_base:form =
+    {
+      help = "This portion of the turret changes yaw only."$0D"MUST be teamed "
+       "with a turret_breach."
+      t_commonspecifics = !
+    }
+    turret_driver:form =
+    {
+      help = "Must NOT be on the team with the rest of the turret parts."$0D"I"
+       "nstead it must target the turret_breach."
+      bbox = '-16 -16 -24 16 16 32'
+      t_commonspecifics = !
+    }
+    misc_actor:form =
+    {
+      bbox = '-16 -16 -24 16 16 32'
+      t_commonspecifics = !
+    }
+    target_actor:form =
+    {
+      help = "JUMP   jump in set direction upon reaching this target"$0D"SHOOT"
+       "   take a single shot at the pathtarget"$0D"ATTACK   attack pathtarget"
+       " until it or actor is dead"$0D22"target"$22" next target_actor"$0D22"p"
+       "athtarget"$22" target of any action to be taken at this point"$0D22"wa"
+       "it"$22" amount of time actor should pause at this point"$0D22"message"$22
+       " actor will 'say' this to the player"$0D"for JUMP only:"$0D22"speed"$22
+       " speed thrown forward (default 200)"$0D22"height"$22" speed thrown upw"
+       "ards (default 200)"
+      bbox = '-8 -8 -8 8 8 8'
+      spawnflags: =
+      {
+        txt = "&"
+        typ = "X1"
+        cap = "JUMP"
+      }
+      spawnflags: =
+      {
+        txt = "&"
+        typ = "X2"
+        cap = "SHOOT"
+      }
+      spawnflags: =
+      {
+        txt = "&"
+        typ = "X4"
+        cap = "ATTACK"
+      }
+      spawnflags: =
+      {
+        txt = "&"
+        typ = "X16"
+        cap = "HOLD"
+      }
+      spawnflags: =
+      {
+        txt = "&"
+        typ = "X32"
+        cap = "BRUTAL"
+      }
+      t_commonspecifics = !
+      pathtarget: =
+      {
+        txt = "&"
+        hint = "target of any action to be taken at this point"
+      }
+      wait: =
+      {
+        txt = "&"
+        hint = "amount of time actor should pause at this point"
+      }
+      message: =
+      {
+        txt = "&"
+        hint = "actor will 'say' this to the player"
+      }
+      speed: =
+      {
+        txt = "&"
+        hint = "speed thrown forward (default 200)"
+      }
+      height: =
+      {
+        txt = "&"
+        hint = "speed thrown upwards (default 200)"
+      }
+    }
+    monster_berserk:form =
+    {
+      help = "model='models/monsters/beserk/'"
+      bbox = '-16 -16 -24 16 16 32'
+      spawnflags: =
+      {
+        txt = "&"
+        typ = "X1"
+        cap = "Ambush"
+      }
+      spawnflags: =
+      {
+        txt = "&"
+        typ = "X2"
+        cap = "Trigger_Spawn"
+      }
+      spawnflags: =
+      {
+        txt = "&"
+        typ = "X4"
+        cap = "Sight"
+      }
+      t_commonspecifics = !
+    }
+    monster_boss2:form =
+    {
+      help = "model='models/monsters/boss2/'"
+      bbox = '-56 -56 0 56 56 80'
+      spawnflags: =
+      {
+        txt = "&"
+        typ = "X1"
+        cap = "Ambush"
+      }
+      spawnflags: =
+      {
+        txt = "&"
+        typ = "X2"
+        cap = "Trigger_Spawn"
+      }
+      spawnflags: =
+      {
+        txt = "&"
+        typ = "X4"
+        cap = "Sight"
+      }
+      t_commonspecifics = !
+    }
+    monster_boss3_stand:form =
+    {
+      help = "model='models/monsters/boss3/jorg/'"$0D"Just stands and cycles i"
+       "n one place until targeted, then teleports away."
+      bbox = '-32 -32 0 32 32 90'
+      t_commonspecifics = !
+    }
+    monster_jorg:form =
+    {
+      help = "model='models/monsters/boss3/jorg/'"
+      bbox = '-80 -80 0 90 90 140'
+      spawnflags: =
+      {
+        txt = "&"
+        typ = "X1"
+        cap = "Ambush"
+      }
+      spawnflags: =
+      {
+        txt = "&"
+        typ = "X2"
+        cap = "Trigger_Spawn"
+      }
+      spawnflags: =
+      {
+        txt = "&"
+        typ = "X4"
+        cap = "Sight"
+      }
+      t_commonspecifics = !
+    }
+    monster_makron:form =
+    {
+      help = "model='models/monsters/boss3/rider'"
+      bbox = '-30 -30 0 30 30 90'
+      spawnflags: =
+      {
+        txt = "&"
+        typ = "X1"
+        cap = "Ambush"
+      }
+      spawnflags: =
+      {
+        txt = "&"
+        typ = "X2"
+        cap = "Trigger_Spawn"
+      }
+      spawnflags: =
+      {
+        txt = "&"
+        typ = "X4"
+        cap = "Sight"
+      }
+      t_commonspecifics = !
+    }
+    monster_brain:form =
+    {
+      help = "model='models/monsters/brain/'"
+      bbox = '-16 -16 -24 16 16 32'
+      spawnflags: =
+      {
+        txt = "&"
+        typ = "X1"
+        cap = "Ambush"
+      }
+      spawnflags: =
+      {
+        txt = "&"
+        typ = "X2"
+        cap = "Trigger_Spawn"
+      }
+      spawnflags: =
+      {
+        txt = "&"
+        typ = "X4"
+        cap = "Sight"
+      }
+      t_commonspecifics = !
+    }
+    monster_chick:form =
+    {
+      help = "model='models/monsters/bitch/'"
+      bbox = '-16 -16 -24 16 16 32'
+      spawnflags: =
+      {
+        txt = "&"
+        typ = "X1"
+        cap = "Ambush"
+      }
+      spawnflags: =
+      {
+        txt = "&"
+        typ = "X2"
+        cap = "Trigger_Spawn"
+      }
+      spawnflags: =
+      {
+        txt = "&"
+        typ = "X4"
+        cap = "Sight"
+      }
+      t_commonspecifics = !
+    }
+    monster_flipper:form =
+    {
+      help = "model='models/monsters/flipper/'"
+      bbox = '-16 -16 -24 16 16 32'
+      spawnflags: =
+      {
+        txt = "&"
+        typ = "X1"
+        cap = "Ambush"
+      }
+      spawnflags: =
+      {
+        txt = "&"
+        typ = "X2"
+        cap = "Trigger_Spawn"
+      }
+      spawnflags: =
+      {
+        txt = "&"
+        typ = "X4"
+        cap = "Sight"
+      }
+      t_commonspecifics = !
+    }
+    monster_floater:form =
+    {
+      help = "model='models/monsters/float/'"
+      bbox = '-16 -16 -24 16 16 32'
+      spawnflags: =
+      {
+        txt = "&"
+        typ = "X1"
+        cap = "Ambush"
+      }
+      spawnflags: =
+      {
+        txt = "&"
+        typ = "X2"
+        cap = "Trigger_Spawn"
+      }
+      spawnflags: =
+      {
+        txt = "&"
+        typ = "X4"
+        cap = "Sight"
+      }
+      t_commonspecifics = !
+    }
+    monster_flyer:form =
+    {
+      help = "model='models/monsters/flyer/'"
+      bbox = '-16 -16 -24 16 16 32'
+      spawnflags: =
+      {
+        txt = "&"
+        typ = "X1"
+        cap = "Ambush"
+      }
+      spawnflags: =
+      {
+        txt = "&"
+        typ = "X2"
+        cap = "Trigger_Spawn"
+      }
+      spawnflags: =
+      {
+        txt = "&"
+        typ = "X4"
+        cap = "Sight"
+      }
+      t_commonspecifics = !
+    }
+    monster_gladiator:form =
+    {
+      help = "model='models/monsters/gladiatr/'"
+      bbox = '-32 -32 -24 32 32 64'
+      spawnflags: =
+      {
+        txt = "&"
+        typ = "X1"
+        cap = "Ambush"
+      }
+      spawnflags: =
+      {
+        txt = "&"
+        typ = "X2"
+        cap = "Trigger_Spawn"
+      }
+      spawnflags: =
+      {
+        txt = "&"
+        typ = "X4"
+        cap = "Sight"
+      }
+      t_commonspecifics = !
+    }
+    monster_gunner:form =
+    {
+      help = "model='models/monsters/gunner/'"
+      bbox = '-16 -16 -24 16 16 32'
+      spawnflags: =
+      {
+        txt = "&"
+        typ = "X1"
+        cap = "Ambush"
+      }
+      spawnflags: =
+      {
+        txt = "&"
+        typ = "X2"
+        cap = "Trigger_Spawn"
+      }
+      spawnflags: =
+      {
+        txt = "&"
+        typ = "X4"
+        cap = "Sight"
+      }
+      t_commonspecifics = !
+    }
+    monster_hover:form =
+    {
+      help = "model='models/monsters/hover/'"
+      bbox = '-16 -16 -24 16 16 32'
+      spawnflags: =
+      {
+        txt = "&"
+        typ = "X1"
+        cap = "Ambush"
+      }
+      spawnflags: =
+      {
+        txt = "&"
+        typ = "X2"
+        cap = "Trigger_Spawn"
+      }
+      spawnflags: =
+      {
+        txt = "&"
+        typ = "X4"
+        cap = "Sight"
+      }
+      t_commonspecifics = !
+    }
+    monster_infantry:form =
+    {
+      help = "model='models/monsters/infantry/'"
+      bbox = '-16 -16 -24 16 16 32'
+      spawnflags: =
+      {
+        txt = "&"
+        typ = "X1"
+        cap = "Ambush"
+      }
+      spawnflags: =
+      {
+        txt = "&"
+        typ = "X2"
+        cap = "Trigger_Spawn"
+      }
+      spawnflags: =
+      {
+        txt = "&"
+        typ = "X4"
+        cap = "Sight"
+      }
+      t_commonspecifics = !
+    }
+    misc_insane:form =
+    {
+      help = "model='models/monsters/insane/'"
+      bbox = '-16 -16 -24 16 16 32'
+      spawnflags: =
+      {
+        txt = "&"
+        typ = "X1"
+        cap = "Ambush"
+      }
+      spawnflags: =
+      {
+        txt = "&"
+        typ = "X2"
+        cap = "Trigger_Spawn"
+      }
+      spawnflags: =
+      {
+        txt = "&"
+        typ = "X4"
+        cap = "CRAWL"
+      }
+      spawnflags: =
+      {
+        txt = "&"
+        typ = "X8"
+        cap = "CRUCIFIED"
+      }
+      spawnflags: =
+      {
+        txt = "&"
+        typ = "X16"
+        cap = "STAND_GROUND"
+      }
+      spawnflags: =
+      {
+        txt = "&"
+        typ = "X32"
+        cap = "ALWAYS_STAND"
+      }
+      t_commonspecifics = !
+    }
+    monster_medic:form =
+    {
+      help = "model='models/monsters/medic/'"
+      bbox = '-16 -16 -24 16 16 32'
+      spawnflags: =
+      {
+        txt = "&"
+        typ = "X1"
+        cap = "Ambush"
+      }
+      spawnflags: =
+      {
+        txt = "&"
+        typ = "X2"
+        cap = "Trigger_Spawn"
+      }
+      spawnflags: =
+      {
+        txt = "&"
+        typ = "X4"
+        cap = "Sight"
+      }
+      t_commonspecifics = !
+    }
+    monster_mutant:form =
+    {
+      help = "model='models/monsters/mutant/'"
+      bbox = '-32 -32 -24 32 32 32'
+      spawnflags: =
+      {
+        txt = "&"
+        typ = "X1"
+        cap = "Ambush"
+      }
+      spawnflags: =
+      {
+        txt = "&"
+        typ = "X2"
+        cap = "Trigger_Spawn"
+      }
+      spawnflags: =
+      {
+        txt = "&"
+        typ = "X4"
+        cap = "Sight"
+      }
+      t_commonspecifics = !
+    }
+    monster_parasite:form =
+    {
+      help = "model='models/monsters/parasite/'"
+      bbox = '-16 -16 -24 16 16 32'
+      spawnflags: =
+      {
+        txt = "&"
+        typ = "X1"
+        cap = "Ambush"
+      }
+      spawnflags: =
+      {
+        txt = "&"
+        typ = "X2"
+        cap = "Trigger_Spawn"
+      }
+      spawnflags: =
+      {
+        txt = "&"
+        typ = "X4"
+        cap = "Sight"
+      }
+      t_commonspecifics = !
+    }
+    monster_soldier_light:form =
+    {
+      help = "model='models/monsters/soldier/'"
+      bbox = '-16 -16 -24 16 16 32'
+      spawnflags: =
+      {
+        txt = "&"
+        typ = "X1"
+        cap = "Ambush"
+      }
+      spawnflags: =
+      {
+        txt = "&"
+        typ = "X2"
+        cap = "Trigger_Spawn"
+      }
+      spawnflags: =
+      {
+        txt = "&"
+        typ = "X4"
+        cap = "Sight"
+      }
+      t_commonspecifics = !
+    }
+    monster_soldier:form =
+    {
+      help = "model='models/monsters/soldier/'"
+      bbox = '-16 -16 -24 16 16 32'
+      spawnflags: =
+      {
+        txt = "&"
+        typ = "X1"
+        cap = "Ambush"
+      }
+      spawnflags: =
+      {
+        txt = "&"
+        typ = "X2"
+        cap = "Trigger_Spawn"
+      }
+      spawnflags: =
+      {
+        txt = "&"
+        typ = "X4"
+        cap = "Sight"
+      }
+      t_commonspecifics = !
+    }
+    monster_soldier_ss:form =
+    {
+      help = "model='models/monsters/soldier/'"
+      bbox = '-16 -16 -24 16 16 32'
+      spawnflags: =
+      {
+        txt = "&"
+        typ = "X1"
+        cap = "Ambush"
+      }
+      spawnflags: =
+      {
+        txt = "&"
+        typ = "X2"
+        cap = "Trigger_Spawn"
+      }
+      spawnflags: =
+      {
+        txt = "&"
+        typ = "X4"
+        cap = "Sight"
+      }
+      t_commonspecifics = !
+    }
+    monster_supertank:form =
+    {
+      help = "model='models/monsters/boss1/'"
+      bbox = '-64 -64 0 64 64 72'
+      spawnflags: =
+      {
+        txt = "&"
+        typ = "X1"
+        cap = "Ambush"
+      }
+      spawnflags: =
+      {
+        txt = "&"
+        typ = "X2"
+        cap = "Trigger_Spawn"
+      }
+      spawnflags: =
+      {
+        txt = "&"
+        typ = "X4"
+        cap = "Sight"
+      }
+      t_commonspecifics = !
+    }
+    monster_tank:form =
+    {
+      help = "model='models/monsters/tank/'"
+      bbox = '-32 -32 -16 32 32 72'
+      spawnflags: =
+      {
+        txt = "&"
+        typ = "X1"
+        cap = "Ambush"
+      }
+      spawnflags: =
+      {
+        txt = "&"
+        typ = "X2"
+        cap = "Trigger_Spawn"
+      }
+      spawnflags: =
+      {
+        txt = "&"
+        typ = "X4"
+        cap = "Sight"
+      }
+      t_commonspecifics = !
+    }
+    monster_tank_commander:form =
+    {
+      help = "model='models/monsters/commandr/'"
+      bbox = '-32 -32 -16 32 32 72'
+      spawnflags: =
+      {
+        txt = "&"
+        typ = "X1"
+        cap = "Ambush"
+      }
+      spawnflags: =
+      {
+        txt = "&"
+        typ = "X2"
+        cap = "Trigger_Spawn"
+      }
+      spawnflags: =
+      {
+        txt = "&"
+        typ = "X4"
+        cap = "Sight"
+      }
+      t_commonspecifics = !
+    }
+    info_player_start:form =
+    {
+      help = "The normal starting point for a level."
+      bbox = '-16 -16 -24 16 16 32'
+    }
+    info_player_deathmatch:form =
+    {
+      help = "potential spawning position for deathmatch games"
+      bbox = '-16 -16 -24 16 16 32'
+    }
+    info_player_coop:form =
+    {
+      help = "potential spawning position for coop games"
+      bbox = '-16 -16 -24 16 16 32'
+    }
+    info_player_intermission:form =
+    {
+      help = "The deathmatch intermission point will be at one of these"$0D"Us"
+       "e 'angles' instead of 'angle', so you can set pitch or roll as well as"
+       " yaw. 'pitch yaw roll'"
+      bbox = '-16 -16 -24 16 16 32'
+    }
+    info_player_team1:form =
+    {
+      help = "potential team1 spawning position for ctf games"
+      bbox = '-16 -16 -24 16 16 32'
+    }
+    info_player_team2:form =
+    {
+      help = "potential team2 spawning position for ctf games"
+      bbox = '-16 -16 -24 16 16 32'
+    }
+    misc_ctf_banner:form =
+    {
+      help = "The origin is the bottom of the banner."$0D"The banner is 248 ta"
+       "ll."
+      bbox = '-4 -64 0 4 64 248'
+      spawnflags: =
+      {
+        txt = "&"
+        typ = "X1"
+        cap = "TEAM2"
+      }
+      t_commonspecifics = !
+    }
+    misc_ctf_small_banner:form =
+    {
+      help = "The origin is the bottom of the banner."$0D"The banner is 124 ta"
+       "ll."
+      bbox = '-4 -32 0 4 32 124'
+      spawnflags: =
+      {
+        txt = "&"
+        typ = "X1"
+        cap = "TEAM2"
+      }
+      t_commonspecifics = !
+    }
+    item_flag_team1:form =
+    {
+      bbox = '-16 -16 -24 16 16 32'
+      t_commonspecifics = !
+    }
+    item_flag_team2:form =
+    {
+      bbox = '-16 -16 -24 16 16 32'
+      t_commonspecifics = !
+    }
+  }
+}

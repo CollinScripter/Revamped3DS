@@ -1,0 +1,96 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"  "http://www.w3.org/TR/html4/loose.dtd">
+<html lang="en">
+<head>
+  <title>Map compiling errors</title>
+  <meta name="Description" content="QuArK Information Database - Page: 2.7.&nbsp;Map compiling errors">
+  <meta name="Keywords" content="QuArK InfoBase Quake Army Knife QRK QKM Python PY Map Editor Hexen Heretic Half-Life Sin Kingpin Soldier-of-Fortune Star-Trek-Voyager Elite-Force">
+  <link rel=stylesheet href="standard.css" type="text/css">
+</head>
+
+<body>
+<a name="__top__"></a>
+<table width="100%" border=0 cellspacing=0>
+  <tr>
+    <td width=213>
+      <a target="_blank" href="http://quark.sourceforge.net/"><img src="quarkicon.png" width=213 height=90 border=0 alt="Go to QuArK Web Site"></a>
+    </td>
+    <td width="70%" align=center>
+      <div class="topheadline">Map compiling errors</div>
+      <div class="sm">Updated&nbsp;07 Mar 2010</div>
+    </td>
+    <td width="30%" valign=bottom nowrap>
+      Upper&nbsp;levels:<br>-&nbsp;<a href="index.html">QuArK&nbsp;Information&nbsp;Base</a><br>-&nbsp;<a href="maped.html">2.&nbsp;Map&nbsp;editing</a><br>
+    </td>
+  </tr>
+</table>
+<table width="100%" border=0 cellspacing=0>
+  <tr class="headline">
+    <td width="99%">
+      <p class="headline">&nbsp;2.7.&nbsp;Map compiling errors</p>
+    </td>
+    <td width="1%" align=right nowrap>
+      &nbsp;[&nbsp;<span class="navenable"><a href="maped.games.crystalspace.html">Prev</a></span>&nbsp;-&nbsp;<span class="navenable"><a href="maped.html">Up</a></span>&nbsp;-&nbsp;<span class="navenable"><a href="maped.builderrors.csg.html">Next</a></span>&nbsp;]&nbsp;
+    </td>
+  </tr>
+</table>
+<table border=0 width="100%" cellspacing=10><tr><td><p>Here you will find information, gathered from various places, about map compiling errors.
+</p><p>Usually the build sequence, which result in a final .BSP file from a .MAP file, are split into phases;
+</p><p><ol>
+<li>BSP - take the .MAP textfile and calculate a fullbright, non-optimized .BSP file.
+<li>VIS - optimizes the .BSP file, so the game's graphics-engine does not have to draw everything.
+<li>RAD - calculate (colored-)lights in the .BSP file, using information from the BSP and VIS phases.
+</ol>
+</p><p>However, not all QuArK supported games use the same build phases. Some might contain more or fewer phases,
+and maybe also in a different sequence.
+</p><p>If you have any questions, problems or find solutions regarding these topics, please post them in the
+<a target="_blank" href="http://quark.sourceforge.net/communication.php">QuArK forum/mailing-list</a>.
+</p>
+</td></tr></table>
+<br>
+
+<table width="100%" border=0 cellspacing=0>
+  <tr class="headline">
+    <td width="100%">
+      <p class="headline">&nbsp;Sections</p>
+    </td>
+  </tr>
+</table>
+<ul class="section">
+  <li><b>2.7.1.&nbsp;&nbsp;<a href="maped.builderrors.csg.html">CSG - Computed Solid Geometry</a></b>&nbsp;<span class="added">(07 Mar 2010)</span></li>
+  <ul class="index">
+    <li>- <a href="maped.builderrors.csg.html#error_parsing">Parsing error</a>&nbsp;<span class="added">(15 Feb 2001)</span></li>
+  </ul>
+  <li><b>2.7.2.&nbsp;&nbsp;<a href="maped.builderrors.bsp.html">BSP - Binary Space Partition</a></b>&nbsp;<span class="added">(28 Apr 2009)</span></li>
+  <ul class="index">
+    <li>- <a href="maped.builderrors.bsp.html#error_parsing">Parsing error</a>&nbsp;<span class="added">(15 Feb 2001)</span></li>
+    <li>- <a href="maped.builderrors.bsp.html#newportal">New portal was clipped away</a>&nbsp;<span class="added">(28 Apr 2009)</span></li>
+    <li>- <a href="maped.builderrors.bsp.html#pointoffplane">Point off plane</a>&nbsp;<span class="added">(26 Jun 2003)</span></li>
+    <li>- <a href="maped.builderrors.bsp.html#exceeded">Exceeded</a>&nbsp;<span class="added">(14 Mar 2009)</span></li>
+  </ul>
+  <li><b>2.7.3.&nbsp;&nbsp;<a href="maped.builderrors.vis.html">VIS - Visibility</a></b>&nbsp;<span class="added">(07 Mar 2010)</span></li>
+  <ul class="index">
+    <li>- <a href="maped.builderrors.vis.html#loadportals">LoadPortals: couldn't read maps/NoName.prt</a>&nbsp;<span class="added">(12 Sep 2008)</span></li>
+  </ul>
+  <li><b>2.7.4.&nbsp;&nbsp;<a href="maped.builderrors.rad.html">RAD - Lights/Radiosity</a></b>&nbsp;<span class="added">(07 Mar 2010)</span></li>
+  <li><b>2.7.5.&nbsp;&nbsp;<a href="maped.builderrors.aas.html">AAS - Area Awareness System</a></b>&nbsp;<span class="added">(07 Mar 2010)</span></li>
+  <li><b>2.7.6.&nbsp;&nbsp;<a href="maped.builderrors.console.html">Python - Console</a></b>&nbsp;<span class="added">(27 Mar 2003)</span></li>
+  <ul class="index">
+    <li>- <a href="maped.builderrors.console.html#mixed_face">Mixed face contents</a>&nbsp;<span class="added">(27 Mar 2003)</span></li>
+  </ul>
+</ul>
+<br>
+
+<table width="100%" border=0 cellspacing=0>
+  <tr class="headline">
+    <td width="99%" align=center>
+      <p class="sm">
+        Copyright (c) 2009, GNU General Public License by The QuArK (Quake Army Knife) Community - <a target="_blank" href="http://quark.sourceforge.net/">http://quark.sourceforge.net/</a><br>
+      </p>
+    </td>
+    <td width="1%" align=right nowrap>
+      &nbsp;[&nbsp;<span class="navenable"><a href="maped.games.crystalspace.html">Prev</a></span>&nbsp;-&nbsp;<a href="#__top__">Top</a>&nbsp;-&nbsp;<span class="navenable"><a href="maped.builderrors.csg.html">Next</a></span>&nbsp;]&nbsp;
+    </td>
+  </tr>
+</table>
+</body>
+</html>

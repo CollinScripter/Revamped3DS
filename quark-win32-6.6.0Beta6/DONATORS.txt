@@ -1,0 +1,49 @@
+$Id: DONATORS.txt,v 1.7 2012/11/17 17:02:56 danielpharos Exp $
+
+   ########                    ####                  ####    ####
+  ####  ####                 ########                ####   ####
+ ####    #### ####    #### ####    #### ####    #### ####  ####
+ ####    #### ####    #### ####    #### #### ####### #### ####
+ ####    #### ####    #### ####    #### #######      ######
+ ####    #### ####    #### ############ ####         #### ####
+ ####    #### ####    #### ####    #### ####         ####  ####
+  ####  ####   ####   #### ####    #### ####         ####   ####
+   ########     ########## ####    #### ####         ####    ####
+       #####
+        #####    Quake Army Knife Developers
+
+
+The QuArK Developers would like to thank
+the following donators for their support:
+----------------------------------------
+
+- Warcus
+                       "Creativity MUST win!! F*ck the consoles!"
+
+- warcus
+"Please keep on working on this great tool!
+                                       Quake 1 + QuArK 4ever :-)"
+
+- fafhrd_pro
+            "Truly glad this project has remained active so long"
+
+- northwood21 / Quentin
+                                                "Happy Coding :$"
+
+- hardcoal
+            "Giving Force to the hands of cdunde and Dancing Dan"
+
+- jaimi
+                                                       "Have fun"
+
+- eforhan
+                                         "Keep up the good work!"
+
+- ghostwolf1942
+                                         "Keep up the good work!"
+
+- dbk2004
+                                        "Quake Army Knife rocks!"
+
+- zy_fireblade
+

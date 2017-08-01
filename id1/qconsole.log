@@ -1,0 +1,132 @@
+Console initialized.
+
+Sound Initialization
+Sound sampling rate: 22050
+execing Solitude.rc
+execing default.cfg
+execing config.cfg
+couldn't exec autoexec.cfg
+8 demo(s) in loop
+'mapversion' is not a field
+
+VERSION 1.09 SERVER (14585 CRC)
+
+
+
+LockOut By Team Xlink
+Couldn't load sound/vehicles/WartHog/warthog.wav
+couldn't exec maps/LockOut.way
+New weapon added to your inv
+Servo entered the game
+Team Xlink was killed by Servo
+You will respawn in 8 seconds.
+You will respawn in 7 seconds.
+Servo: i rule
+You will respawn in 6 seconds.
+You will respawn in 5 seconds.
+You will respawn in 4 seconds.
+You will respawn in 3 seconds.
+You will respawn in 2 seconds.
+You will respawn in 1 seconds.
+You will respawn in 0 seconds.
+New weapon added to your inv
+Servo left the game with 1 frags
+execing default3.cfg
+no weapon.
+no weapon.
+no weapon.
+no weapon.
+no weapon.
+no weapon.
+no weapon.
+no weapon.
+no weapon.
+no weapon.
+no weapon.
+no weapon.
+no weapon.
+no weapon.
+no weapon.
+no weapon.
+]bind "LTRIGGER" impulse 104
+bind <key> [command] : attach a command to a key
+]bind "LTRIGGER" "IMPULSE 104"
+MAKE SURE THE FOLLOWING LINE CONTAINS -CONDEBUG BEFORE PROCEEDING
+"cmdline" is " -cpu333 -Solitude -listen 32 -nocdaudio -condebug % "
+'mapversion' is not a field
+
+VERSION 1.09 SERVER (14585 CRC)
+
+
+
+LockOut By Team Xlink
+Couldn't load sound/vehicles/WartHog/warthog.wav
+couldn't exec maps/LockOut.way
+MAKE SURE THE FOLLOWING LINE CONTAINS -CONDEBUG BEFORE PROCEEDING
+"cmdline" is " -cpu333 -Solitude -listen 32 -nocdaudio -condebug % "
+MAKE SURE THE FOLLOWING LINE CONTAINS -CONDEBUG BEFORE PROCEEDING
+"cmdline" is " -cpu333 -Solitude -listen 32 -nocdaudio -condebug % "
+MAKE SURE THE FOLLOWING LINE CONTAINS -CONDEBUG BEFORE PROCEEDING
+"cmdline" is " -cpu333 -Solitude -listen 32 -nocdaudio -condebug % "
+'mapversion' is not a field
+
+VERSION 1.09 SERVER (14585 CRC)
+
+
+
+LockOut By Team Xlink
+Couldn't load sound/vehicles/WartHog/warthog.wav
+couldn't exec maps/LockOut.way
+MAKE SURE THE FOLLOWING LINE CONTAINS -CONDEBUG BEFORE PROCEEDING
+"cmdline" is " -cpu333 -Solitude -listen 32 -nocdaudio -condebug % "
+MAKE SURE THE FOLLOWING LINE CONTAINS -CONDEBUG BEFORE PROCEEDING
+"cmdline" is " -cpu333 -Solitude -listen 32 -nocdaudio -condebug % "
+MAKE SURE THE FOLLOWING LINE CONTAINS -CONDEBUG BEFORE PROCEEDING
+"cmdline" is " -cpu333 -Solitude -listen 32 -nocdaudio -condebug % "
+MAKE SURE THE FOLLOWING LINE CONTAINS -CONDEBUG BEFORE PROCEEDING
+"cmdline" is " -cpu333 -Solitude -listen 32 -nocdaudio -condebug % "
+MAKE SURE THE FOLLOWING LINE CONTAINS -CONDEBUG BEFORE PROCEEDING
+"cmdline" is " -cpu333 -Solitude -listen 32 -nocdaudio -condebug % "
+MAKE SURE THE FOLLOWING LINE CONTAINS -CONDEBUG BEFORE PROCEEDING
+"cmdline" is " -cpu333 -Solitude -listen 32 -nocdaudio -condebug % "
+MAKE SURE THE FOLLOWING LINE CONTAINS -CONDEBUG BEFORE PROCEEDING
+"cmdline" is " -cpu333 -Solitude -listen 32 -nocdaudio -condebug % "
+MAKE SURE THE FOLLOWING LINE CONTAINS -CONDEBUG BEFORE PROCEEDING
+"cmdline" is " -cpu333 -Solitude -listen 32 -nocdaudio -condebug % "
+MAKE SURE THE FOLLOWING LINE CONTAINS -CONDEBUG BEFORE PROCEEDING
+"cmdline" is " -cpu333 -Solitude -listen 32 -nocdaudio -condebug % "
+HOME is unbound, hit START to set.
+MAKE SURE THE FOLLOWING LINE CONTAINS -CONDEBUG BEFORE PROCEEDING
+"cmdline" is " -cpu333 -Solitude -listen 32 -nocdaudio -condebug % "
+MAKE SURE THE FOLLOWING LINE CONTAINS -CONDEBUG BEFORE PROCEEDING
+"cmdline" is " -cpu333 -Solitude -listen 32 -nocdaudio -condebug % "
+]bind "~" "1"
+Unknown command "1"
+Unknown command "1"
+Unknown command "1"
+Unknown command "1"
+Unknown command "1"
+Unknown command "1"
+Unknown command "1"
+MAKE SURE THE FOLLOWING LINE CONTAINS -CONDEBUG BEFORE PROCEEDING
+"cmdline" is " -cpu333 -Solitude -listen 32 -nocdaudio -condebug % "
+MAKE SURE THE FOLLOWING LINE CONTAINS -CONDEBUG BEFORE PROCEEDING
+"cmdline" is " -cpu333 -Solitude -listen 32 -nocdaudio -condebug % "
+]bind "~" "0"
+Unknown command "0"
+MAKE SURE THE FOLLOWING LINE CONTAINS -CONDEBUG BEFORE PROCEEDING
+"cmdline" is " -cpu333 -Solitude -listen 32 -nocdaudio -condebug % "
+Unknown command "0"
+Unknown command "0"
+Unknown command "0"
+Unknown command "0"
+MAKE SURE THE FOLLOWING LINE CONTAINS -CONDEBUG BEFORE PROCEEDING
+"cmdline" is " -cpu333 -Solitude -listen 32 -nocdaudio -condebug % "
+Unknown command "0"
+MAKE SURE THE FOLLOWING LINE CONTAINS -CONDEBUG BEFORE PROCEEDING
+"cmdline" is " -cpu333 -Solitude -listen 32 -nocdaudio -condebug % "
+Unknown command "0"
+Unknown command "0"
+MAKE SURE THE FOLLOWING LINE CONTAINS -CONDEBUG BEFORE PROCEEDING
+"cmdline" is " -cpu333 -Solitude -listen 32 -nocdaudio -condebug % "
+CDAudio_Shutdown

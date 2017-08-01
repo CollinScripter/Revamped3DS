@@ -1,0 +1,1490 @@
+QQRKSRC1
+// This file has been written by QuArK QuArK 6.6 Beta
+// It's the text version of file: Q3_SG.qrk
+// Updated by cdunde, April 20, 2012.
+
+// This stand alone game site is http://forum.smokin-guns.org/
+// To use this add-on's default NewMap textues do the following steps:
+// 1) Go to QuArK's Config for Quake 3.
+// 2) Click on "Add-ons...".
+// 3) Select "DataQ3.qrk" and click on "Remove".
+// 4) Click on "Add..." select "Q3_SG.qrk" click "Ok".
+// 5) Click on "Add..." select "Q3_SG_textures.qrk" click "Ok".
+// 6) Click on "Add..." select "DataQ3.qrk" click "Ok" then close the addons window.
+// 7) Under the Config. "Game Settings" line "Directory of Quake 3" use the "..." button
+//      to find and select your Smoking Guns FOLDER, where the "smokinguns.exe" file is located, click "OK".
+// 8) Under the Config. "Game Settings" line "Quake 3 command-line" copy and enter (paste) this:
+//      smokinguns.exe +set sv_pure 0
+// 9) Click "Apply" at the bottom of your Config window then close it.
+// 10) If you have already opened QuArK's Map editor, clock QuArK and restart it.
+//       Everything should be there now ready to use to make maps for Smoking Guns.
+//       To put it bacck to just Quake 3 just remove the "Q3_SG.qrk" and "Q3_SG_textures.qrk" files
+//          from your Add-ons and reverse steps 7 through 9.
+
+// Quake 3 SmokinGuns Entities and Default setup file for Quark.
+
+//$Header: /cvsroot/quark/runtime/addons/Quake_3/Q3_SG.qrk,v 1.1 2012/04/20 22:55:23 cdunde Exp $
+// ----------- REVISION HISTORY ------------
+//$Log: Q3_SG.qrk,v $
+//Revision 1.1  2012/04/20 22:55:23  cdunde
+//Added Entities and Textures add-ons for Quake 3 Smoking Guns stand alone game.
+//
+//
+
+{
+  QuArKProtected = "1"
+  Description = "Addon for SmokinGuns"
+  Game Context.qctx =
+  {
+    Game = "Quake 3"
+    SourceDir = "smokinguns"
+    GameDir = "smokinguns"
+  }
+
+  walltex:incl =
+  {
+    tex = "sg_sky/sundownsky"
+  }
+  floortex:incl =
+  {
+    tex = "sg_dirt/dirt_mud_cracks"
+  }
+  ceiltex:incl =
+  {
+    tex = "sg_sky/sundownsky"
+  }
+  caulktex:incl =
+  {
+    tex = "common/caulk"
+  }
+  NewMap:incl =
+  {
+    Game = "Quake 3"
+    Root = "worldspawn:b"
+    worldspawn:b =
+    {
+      farplane_cull = "1"
+      Border walls:g =
+      {
+        East wall:p =
+        {
+          west:f =
+          {
+            v = '256 0 272 256 -128 272 256 0 400'
+            walltex = !
+          }
+          east:f =
+          {
+            v = '272 0 272 272 128 272 272 0 400'
+            caulktex = !
+          }
+          south:f =
+          {
+            v = '432 -192 272 560 -192 272 432 -192 400'
+            caulktex = !
+          }
+          north:f =
+          {
+            v = '432 192 272 304 192 272 432 192 400'
+            caulktex = !
+          }
+          down:f =
+          {
+            v = '432 0 -96 560 0 -96 432 -128 -96'
+            caulktex = !
+          }
+          up:f =
+          {
+            v = '432 0 96 560 0 96 432 128 96'
+            caulktex = !
+          }
+        }
+        West wall:p =
+        {
+          west:f =
+          {
+            v = '-272 0 272 -272 -128 272 -272 0 400'
+            caulktex = !
+          }
+          east:f =
+          {
+            v = '-256 0 272 -256 128 272 -256 0 400'
+            walltex = !
+          }
+          south:f =
+          {
+            v = '432 -192 272 560 -192 272 432 -192 400'
+            caulktex = !
+          }
+          north:f =
+          {
+            v = '432 192 272 304 192 272 432 192 400'
+            caulktex = !
+          }
+          down:f =
+          {
+            v = '432 0 -96 560 0 -96 432 -128 -96'
+            caulktex = !
+          }
+          up:f =
+          {
+            v = '432 0 96 560 0 96 432 128 96'
+            caulktex = !
+          }
+        }
+        North wall:p =
+        {
+          west:f =
+          {
+            v = '-256 0 272 -256 -128 272 -256 0 400'
+            caulktex = !
+          }
+          east:f =
+          {
+            v = '256 0 272 256 128 272 256 0 400'
+            caulktex = !
+          }
+          south:f =
+          {
+            v = '432 192 272 560 192 272 432 192 400'
+            walltex = !
+          }
+          north:f =
+          {
+            v = '432 208 272 304 208 272 432 208 400'
+            caulktex = !
+          }
+          down:f =
+          {
+            v = '432 0 -96 560 0 -96 432 -128 -96'
+            caulktex = !
+          }
+          up:f =
+          {
+            v = '432 0 96 560 0 96 432 128 96'
+            caulktex = !
+          }
+        }
+        South wall:p =
+        {
+          west:f =
+          {
+            v = '-256 0 272 -256 -128 272 -256 0 400'
+            caulktex = !
+          }
+          east:f =
+          {
+            v = '256 0 272 256 128 272 256 0 400'
+            caulktex = !
+          }
+          south:f =
+          {
+            v = '432 -208 272 560 -208 272 432 -208 400'
+            caulktex = !
+          }
+          north:f =
+          {
+            v = '432 -192 272 304 -192 272 432 -192 400'
+            walltex = !
+          }
+          down:f =
+          {
+            v = '432 0 -96 560 0 -96 432 -128 -96'
+            caulktex = !
+          }
+          up:f =
+          {
+            v = '432 0 96 560 0 96 432 128 96'
+            caulktex = !
+          }
+        }
+        Sky:p =
+        {
+          west:f =
+          {
+            v = '-256 0 272 -256 -128 272 -256 0 400'
+            caulktex = !
+          }
+          east:f =
+          {
+            v = '256 0 272 256 128 272 256 0 400'
+            caulktex = !
+          }
+          south:f =
+          {
+            v = '432 -192 272 560 -192 272 432 -192 400'
+            caulktex = !
+          }
+          north:f =
+          {
+            v = '432 192 272 304 192 272 432 192 400'
+            caulktex = !
+          }
+          down:f =
+          {
+            v = '432 0 96 560 0 96 432 -128 96'
+            ceiltex = !
+          }
+          up:f =
+          {
+            v = '432 0 112 560 0 112 432 128 112'
+            caulktex = !
+          }
+        }
+        Floor:p =
+        {
+          west:f =
+          {
+            v = '-256 0 272 -256 -128 272 -256 0 400'
+            caulktex = !
+          }
+          east:f =
+          {
+            v = '256 0 272 256 128 272 256 0 400'
+            caulktex = !
+          }
+          south:f =
+          {
+            v = '432 -192 272 560 -192 272 432 -192 400'
+            caulktex = !
+          }
+          north:f =
+          {
+            v = '432 192 272 304 192 272 432 192 400'
+            caulktex = !
+          }
+          down:f =
+          {
+            v = '432 0 -112 560 0 -112 432 -128 -112'
+            caulktex = !
+          }
+          up:f =
+          {
+            v = '432 0 -96 560 0 -96 432 128 -96'
+            floortex = !
+          }
+        }
+      }
+      info_player_start:e =
+      {
+        origin = "-144 0 -64"
+        angle = "360"
+      }
+      light:e =
+      {
+        light = "300"
+        _color = "1 1 1"
+        angles = "0 0 0"
+        origin = "0 0 0"
+      }
+    }
+  }
+//--------------------
+// ToolBox New Map Items
+//--------------------
+
+  Toolbox Folders.qtx =
+  {
+    ToolBox = "New map items..."
+    Root = "SmokinGuns Entities.qtxfolder"
+    SmokinGuns Entities.qtxfolder =
+    {
+      Weapon_* entities.qtxfolder =
+      {
+
+        weapon_dynamite:e =    { origin="0 0 0" ;desc="Dynamite." }
+        weapon_gatling:e =     { origin="0 0 0" ;desc="Gatling Gun." }
+        weapon_knife:e =       { origin="0 0 0" ;desc="Bowie Knife." }
+        weapon_lightning:e =   { origin="0 0 0" ;desc="Colt Lightning." }
+        weapon_molotov:e =     { origin="0 0 0" ;desc="Molotov." }
+        weapon_peacemaker:e =  { origin="0 0 0" ;desc="Colt Peacemmaker." }
+        weapon_remington58:e = { origin="0 0 0" ;desc="Remington '58." }
+        weapon_sawedoff:e =    { origin="0 0 0" ;desc="Sawed Off Shotgun." }
+        weapon_schofield:e =   { origin="0 0 0" ;desc="Smith & Wesson Schofield." }
+        weapon_sharps:e =      { origin="0 0 0" ;desc="Sharps Rifle." }
+        weapon_shotgun:e =     { origin="0 0 0" ;desc="Remington 12 Gauge Shotgun." }
+        weapon_winch66:e =     { origin="0 0 0" ;desc="Winchester66." }
+        weapon_winch97:e =     { origin="0 0 0" ;desc="Winchester97." }
+      }
+      Ammo_* entities.qtxfolder =
+      {
+        ammo_bullets:e =       { origin="0 0 0" ;desc="Pistol ammo. Gives the player 12 by default." }
+        ammo_dynamite:e =      { origin="0 0 0" ;desc="Dynamites. Gives the player 5 by default." }
+        ammo_cartridges:e =    { origin="0 0 0" ;desc="Rifle ammo. Gives the player 12 by default." }
+        ammo_gatling:e =       { origin="0 0 0" ;desc="Gatling Gun ammo. Gives the player 1 clip by default." }
+//        ammo_knives:e =        { origin="0 0 0" ;desc="(insert description here)" }
+//        ammo_molotov:e =       { origin="0 0 0" ;desc="(insert description here)" }
+        ammo_sharps:e =        { origin="0 0 0" ;desc="Sharps Rifle ammo. Gives the player 12 by default." }
+        ammo_shells:e =        { origin="0 0 0" ;desc="Shotgun Ammo. Gives the player 12 by default." }
+      }
+
+      Func_* entities.qtxfolder =
+      {
+        func_breakable:b =     { health="7" weapon="weapon_dynamite" ;desc="Breakable brush." ;incl="defpoly" }
+        func_door:b =          { angle="360" ;desc="A standard door"  t_funcpoly=! }
+        func_door_rotating:b = { ;desc="A rotating door." ;incl="defpoly" }
+        func_flare:b =         { color="1 1 1" minsize="30" maxsize="120" radius="20" trans="0.6" ;desc="Generates a Flare effect on a certain brush." ;incl="defpoly" }
+        func_smoke:b =         { ;desc="Generates Smoke." ;incl="defpoly" }
+      }
+
+      Item_* entities.qtxfolder =
+      {
+        item_belt:e =          { origin="0 0 0" ;desc="Ammuntion Belt." }
+        item_boiler_plate:e =  { origin="0 0 0" ;desc="Boiler Plate." }
+        item_money:e =         { origin="0 0 0" ;desc="Gold sack for bank robbery mode" }
+        item_scope:e =         { origin="0 0 0" ;desc="Rifle Scope: adds the zoom function to the rifle" }
+        pickup_money:e =       { origin="0 0 0" ;desc="Money" ;3Dmodel="models/items/bills.md3" }
+      }
+      Trigger_* entities.qtxfolder =
+      {
+        trigger_escape:b =     { ;desc="Touching this will let the team win the round who robbed the bank." ;incl="defpoly" }
+      }
+    }
+  }
+
+//--------------------
+// Default Forms
+//--------------------
+
+  Default forms.fctx =
+  {
+
+    t_weapon_form:form =
+    {
+      Caption = "Weapons Type"
+      weapon: =
+      {
+        Typ = "C"
+        Txt = "Weapons Classes"
+        Items = "weapon_lightning"$0D"weapon_dynamite"$0D"weapon_gatling"$0D
+                "weapon_knife"$0D"weapon_molotov"$0D"weapon_peacemaker"$0D
+                "weapon_shotgun"$0D"weapon_remington58"$0D"weapon_sawedoff"$0D
+                "weapon_sharps"$0D"weapon_schofield"$0D"weapon_winch66"
+        Values = "weapon_lightning"$0D"weapon_dynamite"$0D"weapon_gatling"$0D
+                 "weapon_knife"$0D"weapon_molotov"$0D"weapon_peacemaker"$0D
+                 "weapon_shotgun"$0D"weapon_remington58"$0D"weapon_sawedoff"$0D
+                 "weapon_sharps"$0D"weapon_schofield"$0D"weapon_winch66"
+      }
+    }
+
+    t_noise_sg_form:form =
+    {
+      Caption = "SmokinGuns Sounds"
+      noise: =
+      {
+        Typ = "C"
+        Txt = "ambient Sounds"
+        Hint = "Nunber of sounds = 34"
+        Items = "aceshigh.wav"$0D"bellplay1.wav"$0D"boat_bell.wav"$0D"boat_bird.wav"$0D
+                "boat_creak1.wav"$0D"boat_creak2.wav"$0D"boat_creak3.wav"$0D"boat_creak4.wav"$0D
+                "boat_creak5.wav"$0D"boat_engine.wav"$0D"boat_steamout.wav"$0D"boat_water.wav"$0D
+                "cave_drip1.wav"$0D"churchbell1.wav"$0D"churchbell1_short.wav"$0D"fire1.wav"$0D
+                "fireplace.wav"$0D"laredo.wav"$0D"lok.wav"$0D"river.wav"$0D"river1.wav"$0D
+                "river2.wav"$0D"silence.wav"$0D"stonemill1.wav"$0D"thunder3.wav"$0D"thunder_01.wav"$0D
+                "thunder_02.wav"$0D"thunder_03.wav"$0D"train.wav"$0D"train1.wav"$0D"water_splash.wav"$0D
+                "waterfall.wav"$0D"whistle1.wav"$0D"windmill1.wav"
+        Values = "sound/ambient/aceshigh.wav"$0D"sound/ambient/bellplay1.wav"$0D"sound/ambient/boat_bell.wav"$0D
+                 "sound/ambient/boat_bird.wav"$0D"sound/ambient/boat_creak1.wav"$0D"sound/ambient/boat_creak2.wav"$0D
+                 "sound/ambient/boat_creak3.wav"$0D"sound/ambient/boat_creak4.wav"$0D"sound/ambient/boat_creak5.wav"$0D
+                 "sound/ambient/boat_engine.wav"$0D"sound/ambient/boat_steamout.wav"$0D"sound/ambient/boat_water.wav"$0D
+                 "sound/ambient/cave_drip1.wav"$0D"sound/ambient/churchbell1.wav"$0D"sound/ambient/churchbell1_short.wav"$0D
+                 "sound/ambient/fire1.wav"$0D"sound/ambient/fireplace.wav"$0D"sound/ambient/laredo.wav"$0D
+                 "sound/ambient/lok.wav"$0D"sound/ambient/river.wav"$0D"sound/ambient/river1.wav"$0D
+                 "sound/ambient/river2.wav"$0D"sound/ambient/silence.wav"$0D"sound/ambient/stonemill1.wav"$0D
+                 "sound/ambient/thunder3.wav"$0D"sound/ambient/thunder_01.wav"$0D"sound/ambient/thunder_02.wav"$0D
+                 "sound/ambient/thunder_03.wav"$0D"sound/ambient/train.wav"$0D"sound/ambient/train1.wav"$0D
+                 "sound/ambient/water_splash.wav"$0D"sound/ambient/waterfall.wav"$0D"sound/ambient/whistle1.wav"$0D
+                 "sound/ambient/windmill1.wav"
+      }
+      noise: =
+      {
+        Typ = "C"
+        Txt = "Animal Sounds"
+        Hint = "Nunber of sounds = 23"
+        Items = "bird1.wav"$0D"bird2.wav"$0D"bird3.wav"$0D"bird4.wav"$0D"bird5.wav"$0D
+                "bird6.wav"$0D"bird7.wav"$0D"frog1.wav"$0D"grillen.wav"$0D"bat1.wav"$0D
+                "bat2.wav"$0D"bobcat.wav"$0D"coyote4.wav"$0D"eagle1.wav"$0D"hoot_owl.wav"$0D
+                "horse3.wav"$0D"horse_snort.wav"$0D"horse_snort2.wav"$0D"howl_1.wav"$0D
+                "owl2.wav"$0D"rattler.wav"$0D"whipoorwhil.wav"$0D"wolf7.wav"
+        Values = "sound/animal/bird1.wav"$0D"sound/animal/bird2.wav"$0D"sound/animal/bird3.wav"$0D
+                 "sound/animal/bird4.wav"$0D"sound/animal/bird5.wav"$0D"sound/animal/bird6.wav"$0D
+                 "sound/animal/bird7.wav"$0D"sound/animal/frog1.wav"$0D"sound/animal/grillen.wav"$0D
+                 "sound/animal/bat1.wav"$0D"sound/animal/bat2.wav"$0D"sound/animal/bobcat.wav"$0D
+                 "sound/animal/coyote4.wav"$0D"sound/animal/eagle1.wav"$0D"sound/animal/hoot_owl.wav"$0D
+                 "sound/animal/horse3.wav"$0D"sound/animal/horse_snort.wav"$0D"sound/animal/horse_snort2.wav"$0D
+                 "sound/animal/howl_1.wav"$0D"sound/animal/owl2.wav"$0D"sound/animal/rattler.wav"$0D
+                 "sound/animal/whipoorwhil.wav"$0D"sound/animal/wolf7.wav"
+      }
+      noise: =
+      {
+        Typ = "C"
+        Txt = "Damage Sound"
+        Hint = "Nunber of sounds = 1"
+        Items = "boiler.wav"
+        Values = "sound/damage/boiler.wav"
+      }
+      noise: =
+      {
+        Typ = "C"
+        Txt = "Feedback Sound"
+        Hint = "Nunber of sounds = 1"
+        Items = "hit.wav"
+        Values = "sound/feedback/hit.wav"
+      }
+      noise: =
+      {
+        Typ = "C"
+        Txt = "Footsteps Sounds"
+        Hint = "Nunber of sounds = 28"
+        Items = "clank1.wav"$0D"clank2.wav"$0D"clank3.wav"$0D"clank4.wav"$0D"cloth1.wav"$0D
+                "cloth2.wav"$0D"cloth3.wav"$0D"cloth4.wav"$0D"grass1.wav"$0D"grass2.wav"$0D
+                "grass3.wav"$0D"grass4.wav"$0D"sand1.wav"$0D"sand2.wav"$0D"sand3.wav"$0D
+                "sand4.wav"$0D"snow1.wav"$0D"snow2.wav"$0D"snow3.wav"$0D"snow4.wav"$0D
+                "splash1.wav"$0D"splash2.wav"$0D"splash3.wav"$0D"splash4.wav"$0D
+                "step1.wav"$0D"step2.wav"$0D"step3.wav"$0D"step4.wav"
+        Values = "sound/footsteps/clank1.wav"$0D"sound/footsteps/clank2.wav"$0D"sound/footsteps/clank3.wav"$0D
+                 "sound/footsteps/clank4.wav"$0D"sound/footsteps/cloth1.wav"$0D"sound/footsteps/cloth2.wav"$0D
+                 "sound/footsteps/cloth3.wav"$0D"sound/footsteps/cloth4.wav"$0D"sound/footsteps/grass1.wav"$0D
+                 "sound/footsteps/grass2.wav"$0D"sound/footsteps/grass3.wav"$0D"sound/footsteps/grass4.wav"$0D
+                 "sound/footsteps/sand1.wav"$0D"sound/footsteps/sand2.wav"$0D"sound/footsteps/sand3.wav"$0D
+                 "sound/footsteps/sand4.wav"$0D"sound/footsteps/snow1.wav"$0D"sound/footsteps/snow2.wav"$0D
+                 "sound/footsteps/snow3.wav"$0D"sound/footsteps/snow4.wav"$0D"sound/footsteps/splash1.wav"$0D
+                 "sound/footsteps/splash2.wav"$0D"sound/footsteps/splash3.wav"$0D"sound/footsteps/splash4.wav"$0D
+                 "sound/footsteps/step1.wav"$0D"sound/footsteps/step2.wav"$0D"sound/footsteps/step3.wav"$0D
+                 "sound/footsteps/step4.wav"
+      }
+      noise: =
+      {
+        Typ = "C"
+        Txt = "Gibs Sounds"
+        Hint = "Nunber of sounds = 3"
+        Items = "glass1.wav"$0D"glass2.wav"$0D"stone1.wav"
+        Values = "sound/gibs/glass1.wav"$0D"sound/gibs/glass2.wav"$0D"sound/gibs/stone1.wav"
+      }
+      noise: =
+      {
+        Typ = "C"
+        Txt = "Item Sounds"
+        Hint = "Nunber of sounds = 1"
+        Items = "poweruprespawn.wav"
+        Values = "sound/items/poweruprespawn.wav"
+      }
+      noise: =
+      {
+        Typ = "C"
+        Txt = "Misc Sounds"
+        Hint = "Nunber of sounds = 13"
+        Items = "am_pickup.wav"$0D"bang1.wav"$0D"bang2.wav"$0D"bang3.wav"$0D
+                "du_medal.wav"$0D"du_won.wav"$0D"fly.wav"$0D"it_pickup.wav"$0D
+                "m_pickup.wav"$0D"menu2.wav"$0D"menu3.wav"$0D"menu4.wav"$0D"w_pickup.wav"
+        Values = "sound/misc/am_pickup.wav"$0D"sound/misc/bang1.wav"$0D"sound/misc/bang2.wav"$0D
+                 "sound/misc/bang3.wav"$0D"sound/misc/du_medal.wav"$0D"sound/misc/du_won.wav"$0D
+                 "sound/misc/fly.wav"$0D"sound/misc/it_pickup.wav"$0D"sound/misc/m_pickup.wav"$0D
+                 "sound/misc/menu2.wav"$0D"sound/misc/menu3.wav"$0D"sound/misc/menu4.wav"$0D
+                 "sound/misc/w_pickup.wav"
+      }
+      noise: =
+      {
+        Typ = "C"
+        Txt = "Movers Sounds"
+        Hint = "Nunber of sounds = 4"
+        Items = "doors/dr1_end.wav"$0D"doors/dr1_start.wav"$0D"doors/dr1_strt.wav"$0D"switches/butn2.wav"
+        Values = "sound/movers/doors/dr1_end.wav"$0D"sound/movers/doors/dr1_start.wav"$0D
+                 "sound/movers/doors/dr1_strt.wav"$0D"sound/movers/switches/butn2.wav"
+      }
+      noise: =
+      {
+        Typ = "C"
+        Txt = "Player Sounds"
+        Hint = "Nunber of sounds = 22"
+        Items = "death_arm.wav"$0D"death_chest.wav"$0D"death_default.wav"$0D"death_falloff.wav"$0D
+                "death_head.wav"$0D"death_land.wav"$0D"death_leg.wav"$0D"death_stomach.wav"$0D
+                "fry.wav"$0D"gurp1.wav"$0D"gurp2.wav"$0D"land1.wav"$0D"spin.wav"$0D"talk.wav"$0D
+                "talk1.wav"$0D"talk2.wav"$0D"talk3.wav"$0D"taunt.wav"$0D"underwater.wav"$0D
+                "watr_in.wav"$0D"watr_out.wav"$0D"watr_un.wav"
+        Values = "sound/player/death_arm.wav"$0D"sound/player/death_chest.wav"$0D"sound/player/death_default.wav"$0D
+                 "sound/player/death_falloff.wav"$0D"sound/player/death_head.wav"$0D"sound/player/death_land.wav"$0D
+                 "sound/player/death_leg.wav"$0D"sound/player/death_stomach.wav"$0D"sound/player/fry.wav"$0D
+                 "sound/player/gurp1.wav"$0D"sound/player/gurp2.wav"$0D"sound/player/land1.wav"$0D
+                 "sound/player/spin.wav"$0D"sound/player/talk.wav"$0D"sound/player/talk1.wav"$0D
+                 "sound/player/talk2.wav"$0D"sound/player/talk3.wav"$0D"sound/player/taunt.wav"$0D
+                 "sound/player/underwater.wav"$0D"sound/player/watr_in.wav"$0D"sound/player/watr_out.wav"$0D
+                 "sound/player/watr_un.wav"
+      }
+      noise: =
+      {
+        Typ = "C"
+        Txt = "Player Female Sounds"
+        Hint = "Nunber of sounds = 13"
+        Items = "death1.wav"$0D"death2.wav"$0D"death3.wav"$0D"drown.wav"$0D"fall1.wav"$0D
+                "falling1.wav"$0D"gasp.wav"$0D"jump1.wav"$0D"pain25_1.wav"$0D
+                "pain50_1.wav"$0D"pain75_1.wav"$0D"pain100_1.wav"$0D"taunt.wav"
+        Values = "sound/player/female/death1.wav"$0D"sound/player/female/death2.wav"$0D"sound/player/female/death3.wav"$0D
+                 "sound/player/female/drown.wav"$0D"sound/player/female/fall1.wav"$0D"sound/player/female/falling1.wav"$0D
+                 "sound/player/female/gasp.wav"$0D"sound/player/female/jump1.wav"$0D"sound/player/female/pain25_1.wav"$0D
+                 "sound/player/female/pain50_1.wav"$0D"sound/player/female/pain75_1.wav"$0D"sound/player/female/pain100_1.wav"$0D
+                 "sound/player/female/taunt.wav"
+      }
+      noise: =
+      {
+        Typ = "C"
+        Txt = "Player Male Sounds"
+        Hint = "Nunber of sounds = 13"
+        Items = "death1.wav"$0D"death2.wav"$0D"death3.wav"$0D"drown.wav"$0D"fall1.wav"$0D
+                "falling1.wav"$0D"gasp.wav"$0D"jump1.wav"$0D"pain25_1.wav"$0D
+                "pain50_1.wav"$0D"pain75_1.wav"$0D"pain100_1.wav"$0D"taunt.wav"
+        Values = "sound/player/male/death1.wav"$0D"sound/player/male/death2.wav"$0D"sound/player/male/death3.wav"$0D
+                 "sound/player/male/drown.wav"$0D"sound/player/male/fall1.wav"$0D"sound/player/male/falling1.wav"$0D
+                 "sound/player/male/gasp.wav"$0D"sound/player/male/jump1.wav"$0D"sound/player/male/pain25_1.wav"$0D
+                 "sound/player/male/pain50_1.wav"$0D"sound/player/male/pain75_1.wav"$0D"sound/player/male/pain100_1.wav"$0D
+                 "sound/player/male/taunt.wav"
+      }
+      noise: =
+      {
+        Typ = "C"
+        Txt = "Weapons Sounds"
+        Hint = "Nunber of sounds = 91"
+        Items = "change.wav"$0D"changeto_lightning.wav"$0D"changeto_pistol.wav"$0D"changeto_sharps.wav"$0D
+                "changeto_shotgun.wav"$0D"changeto_winch66.wav"$0D"changeto_winch97.wav"$0D
+                "dyn_burn.wav"$0D"dyn_burn2.wav"$0D"dyn_throw.wav"$0D"exp_1.wav"$0D
+                "gatling_1.wav"$0D"gatling_2.wav"$0D"gatling_3.wav"$0D"gatling_4.wav"$0D
+                "gatling_build.wav"$0D"gatling_dism.wav"$0D"gatling_loop.wav"$0D"gatling_reload.wav"$0D
+                "knife_attack.wav"$0D"knife_hitflesh.wav"$0D"knife_hitwall.wav"$0D"knifehit.wav"$0D
+                "lightning_1.wav"$0D"lightning_2.wav"$0D"lightning_3.wav"$0D"noammo.wav"$0D
+                "peacem_1.wav"$0D"peacem_2.wav"$0D"peacem_3.wav"$0D"peacem_reload1.wav"$0D"peacem_reload2.wav"$0D
+                "rem58_1.wav"$0D"rem58_2.wav"$0D"rem58_3.wav"$0D"rem58_reload.wav"$0D
+                "ric1.wav"$0D"ric2.wav"$0D"ric3.wav"$0D"ric4.wav"$0D"ric5.wav"$0D"ric6.wav"$0D
+                "ric_default1.wav"$0D"ric_default2.wav"$0D"ric_default3.wav"$0D
+                "ric_glass1.wav"$0D"ric_glass2.wav"$0D"ric_glass3.wav"$0D
+                "ric_grass1.wav"$0D"ric_grass2.wav"$0D"ric_grass3.wav"$0D
+                "ric_metal1.wav"$0D"ric_metal2.wav"$0D"ric_metal3.wav"$0D
+                "ric_sand1.wav"$0D"ric_sand2.wav"$0D"ric_sand3.wav"$0D
+                "ric_stone1.wav"$0D"ric_stone2.wav"$0D"ric_stone3.wav"$0D
+                "ric_water1.wav"$0D"ric_water2.wav"$0D"ric_water3.wav"$0D
+                "ric_wood1.wav"$0D"ric_wood2.wav"$0D"ric_wood3.wav"$0D
+                "rifle_reload1.wav"$0D"rifle_reload2.wav"$0D
+                "schof_1.wav"$0D"schof_2.wav"$0D"schof_3.wav"$0D"schof_reload.wav"$0D
+                "scope.wav"$0D"sharps_1.wav"$0D"sharps_2.wav"$0D"sharps_3.wav"$0D"sharps_reload.wav"$0D
+                "shotgun_1.wav"$0D"shotgun_2.wav"$0D"shotgun_3.wav"$0D"shotgun_reload.wav"$0D"weapon_noammo.wav"$0D
+                "winch66_1.wav"$0D"winch66_2.wav"$0D"winch66_3.wav"$0D"winch97_1.wav"$0D"winch97_2.wav"$0D
+                "winch97_3.wav"$0D"winch97_reload1.wav"$0D"winch97_reload2.wav"$0D"machinegun/buletby1.wav"
+        Values = "sound/weapons/change.wav"$0D"sound/weapons/changeto_lightning.wav"$0D"sound/weapons/changeto_pistol.wav"$0D
+                 "sound/weapons/changeto_sharps.wav"$0D"sound/weapons/changeto_shotgun.wav"$0D"sound/weapons/changeto_winch66.wav"$0D
+                 "sound/weapons/changeto_winch97.wav"$0D"sound/weapons/dyn_burn.wav"$0D"sound/weapons/dyn_burn2.wav"$0D
+                 "sound/weapons/dyn_throw.wav"$0D"sound/weapons/exp_1.wav"$0D"sound/weapons/gatling_1.wav"$0D
+                 "sound/weapons/gatling_2.wav"$0D"sound/weapons/gatling_3.wav"$0D"sound/weapons/gatling_4.wav"$0D
+                 "sound/weapons/gatling_build.wav"$0D"sound/weapons/gatling_dism.wav"$0D"sound/weapons/gatling_loop.wav"$0D
+                 "sound/weapons/gatling_reload.wav"$0D"sound/weapons/knife_attack.wav"$0D"sound/weapons/knife_hitflesh.wav"$0D
+                 "sound/weapons/knife_hitwall.wav"$0D"sound/weapons/knifehit.wav"$0D"sound/weapons/lightning_1.wav"$0D
+                 "sound/weapons/lightning_2.wav"$0D"sound/weapons/lightning_3.wav"$0D"sound/weapons/noammo.wav"$0D
+                 "sound/weapons/peacem_1.wav"$0D"sound/weapons/peacem_2.wav"$0D"sound/weapons/peacem_3.wav"$0D
+                 "sound/weapons/peacem_reload1.wav"$0D"sound/weapons/peacem_reload2.wav"$0D"sound/weapons/rem58_1.wav"$0D
+                 "sound/weapons/rem58_2.wav"$0D"sound/weapons/rem58_3.wav"$0D"sound/weapons/rem58_reload.wav"$0D
+                 "sound/weapons/ric1.wav"$0D"sound/weapons/ric2.wav"$0D"sound/weapons/ric3.wav"$0D
+                 "sound/weapons/ric4.wav"$0D"sound/weapons/ric5.wav"$0D"sound/weapons/ric6.wav"$0D
+                 "sound/weapons/ric_default1.wav"$0D"sound/weapons/ric_default2.wav"$0D"sound/weapons/ric_default3.wav"$0D
+                 "sound/weapons/ric_glass1.wav"$0D"sound/weapons/ric_glass2.wav"$0D"sound/weapons/ric_glass3.wav"$0D
+                 "sound/weapons/ric_grass1.wav"$0D"sound/weapons/ric_grass2.wav"$0D"sound/weapons/ric_grass3.wav"$0D
+                 "sound/weapons/ric_metal1.wav"$0D"sound/weapons/ric_metal2.wav"$0D"sound/weapons/ric_metal3.wav"$0D
+                 "sound/weapons/ric_sand1.wav"$0D"sound/weapons/ric_sand2.wav"$0D"sound/weapons/ric_sand3.wav"$0D
+                 "sound/weapons/ric_stone1.wav"$0D"sound/weapons/ric_stone2.wav"$0D"sound/weapons/ric_stone3.wav"$0D
+                 "sound/weapons/ric_water1.wav"$0D"sound/weapons/ric_water2.wav"$0D"sound/weapons/ric_water3.wav"$0D
+                 "sound/weapons/ric_wood1.wav"$0D"sound/weapons/ric_wood2.wav"$0D"sound/weapons/ric_wood3.wav"$0D
+                 "sound/weapons/rifle_reload1.wav"$0D"sound/weapons/rifle_reload2.wav"$0D"sound/weapons/schof_1.wav"$0D
+                 "sound/weapons/schof_2.wav"$0D"sound/weapons/schof_3.wav"$0D"sound/weapons/schof_reload.wav"$0D
+                 "sound/weapons/scope.wav"$0D"sound/weapons/sharps_1.wav"$0D"sound/weapons/sharps_2.wav"$0D
+                 "sound/weapons/sharps_3.wav"$0D"sound/weapons/sharps_reload.wav"$0D"sound/weapons/shotgun_1.wav"$0D
+                 "sound/weapons/shotgun_2.wav"$0D"sound/weapons/shotgun_3.wav"$0D"sound/weapons/shotgun_reload.wav"$0D
+                 "sound/weapons/weapon_noammo.wav"$0D"sound/weapons/winch66_1.wav"$0D"sound/weapons/winch66_2.wav"$0D
+                 "sound/weapons/winch66_3.wav"$0D"sound/weapons/winch97_1.wav"$0D"sound/weapons/winch97_2.wav"$0D
+                 "sound/weapons/winch97_3.wav"$0D"sound/weapons/winch97_reload1.wav"$0D"sound/weapons/winch97_reload2.wav"$0D
+                 "sound/weapons/machinegun/buletby1.wav"
+      }
+      noise: =
+      {
+        Typ = "C"
+        Txt = "Wind Sounds"
+        Hint = "Nunber of sounds = 9"
+        Items = "tree_wind.wav"$0D"wind1.wav"$0D"wind_gust_04.wav"$0D"wind_gust_05.wav"$0D"wind_gust_06.wav"$0D
+                "wind_gust_07.wav"$0D"wind_gust_08.wav"$0D"wind_loop_01.wav"$0D"wind_loop_05.wav"
+        Values = "sound/wind/tree_wind.wav"$0D"sound/wind/wind1.wav"$0D"sound/wind/wind_gust_04.wav"$0D
+                 "sound/wind/wind_gust_05.wav"$0D"sound/wind/wind_gust_06.wav"$0D"sound/wind/wind_gust_07.wav"$0D
+                 "sound/wind/wind_gust_08.wav"$0D"sound/wind/wind_loop_01.wav"$0D"sound/wind/wind_loop_05.wav"
+      }
+      noise: =
+      {
+        Typ = "C"
+        Txt = "World Sounds"
+        Hint = "Nunber of sounds = 2"
+        Items = "electro.wav"$0D"fire.wav"
+        Values = "sound/world/electro.wav"$0D"sound/world/fire.wav"
+      }
+    }
+
+  }
+
+//--------------------
+// Entity Forms
+//--------------------
+
+  Entity forms.fctx =
+  {
+
+//--------------------
+// Ammo
+//--------------------
+
+    t_ammo_sg:incl = 
+    {
+//      delay: =      { Typ="E" Txt="&" Hint="Specifies the delay in seconds before target, killtarget and message will fire after the ammo is touched by the player. (Default=0)." }
+//      killtarget: = { Typ="E" Txt="&" Hint="Targetname of the entity to be removed from the map when the ammo is touched by the player." }
+//      message: =    { Typ="E" Txt="&" Hint="Specifies the character string to print to the screen when the ammo is touched by the player." }
+      random: =     { Typ="E" Txt="&" Hint="The integer used to multiply or divide the wait value to the respawn."  }
+      target: =     { Typ="E" Txt="&" Hint="Targetname of the entity to be triggered when the ammo is touched by the player."} 
+      targetname: = { Typ="E" Txt="&" Hint="Name of the specific Ammo entity. A target_give entity can point to this for respawn freebies." }
+      team: =       { Typ="E" Txt="&" Hint="Use for changing Weapons Ammo & Powerups spawning." }
+      wait: =       { Typ="E" Txt="&" Hint="Time that the item waits to respawn. (Default is 40, -1 never respawns)" }
+      spawnflags: = { Typ="X1" Txt="&" Hint="The SUSPENDED flag set, the ammo_* will spawn where it was placed in map and won't drop to the floor." Cap="SUSPENDED" }
+      spawnflags: = { Typ="X2" Txt="&" Hint="(HINT)"                                                                                                Cap="x" }
+      spawnflags: = { Typ="X4" Txt="&" Hint="Set spawnflags 4 in the editor to cast & receive shadows"                                              Cap="SHADOWS" }
+      Sep: =        { Txt="" Typ="S" }
+      nobot: =     { Typ="C" Txt="&" Hint="If set to 1, Bots will ignore this ammo. (Default=0)"
+                     Items = "0) Default"$0D"1) Bots Ignore"
+                     Values = "0"$0D"1" }
+      notfree: =    { Typ="C" Txt="&" Hint="If set to 1, ammo_* will not spawn in a Free for All or Tournament games. (Default=0)"
+                     Items = "0) Spawn"$0D"1) Don't Spawn"
+                     Values = "0"$0D"1" }
+      notsingle: =  { Typ="C" Txt="&" Hint="If set to 1, ammo_* will not spawn in a single player game. (Default=0)"
+                     Items = "0) Spawn"$0D"1) Don't Spawn"
+                     Values = "0"$0D"1" }
+      notteam: =    { Typ="C" Txt="&" Hint="If set to 1, ammo_* will not spawn in a Teamplay or CTF games. (Default=0)"
+                     Items = "0) Spawn"$0D"1) Don't Spawn"
+                     Values = "0"$0D"1" }
+      Sep: =        { Txt="" Typ="S" }
+      notq3a: =     { Typ="C" Txt="&" Hint="If set to 1, ammo_* will not spawn in Quake III Arena games. (Default=0)"
+                     Items = "0) Default"$0D"1) Don't Spawn"
+                     Values = "0"$0D"1" }
+      notta: =      { Typ="C" Txt="&" Hint="If set to 1, ammo_* will not spawn in Quake III: Team Arena games. (Default=0)"
+                     Items = "0) Default"$0D"1) Don't Spawn"
+                     Values = "0"$0D"1" }
+    }
+
+    ammo_bullets:form =
+    {
+      Help = "Pistol ammo. Gives the player 12 by default."
+      bbox = '-20 -20 -16 20 20 20'
+      mdl = "models/powerups/ammo/pistolammo.md3"
+      count: = { Typ="E" Txt="&" Hint="Sets the amount of ammo given to the player when picked up (Default=50)." }
+      t_ammo_sg=!
+    }
+    ammo_dynamite:form =
+    {
+      Help = "Dynamites. Gives the player 5 by default."
+      bbox = '-20 -20 -16 20 20 20'
+      mdl = "models/powerups/ammo/dynammo.md3"
+      count: = { Typ="E" Txt="&" Hint="Sets the amount of ammo given to the player when picked up (Default=5)." }
+      t_ammo_sg=!
+    }
+    ammo_cartridges:form =
+    {
+      Help = "Rifle ammo. Gives the player 12 by default.."
+      bbox = '-20 -20 -16 20 20 20'
+      mdl = "models/powerups/ammo/rifleammo.md3"
+      count: = { Typ="E" Txt="&" Hint="Sets the amount of ammo given to the player when picked up (Default=12)." }
+      t_ammo_sg=!
+    }
+    ammo_gatling:form =
+    {
+      Help = "Gatling Gun ammo. Gives the player 1 clip by default."
+      bbox = '-20 -20 -16 20 20 20'
+//      mdl = "models/powerups/ammo/"
+      count: = { Typ="E" Txt="&" Hint="Sets the amount of ammo given to the player when picked up (Default=1)." }
+      t_ammo_sg=!
+    }
+    ammo_knives:form =
+    {
+      Help = "This is ammo for the ??."
+      bbox = '-20 -20 -16 20 20 20'
+      mdl = "models/weapons2/knife/e_knife.md3"
+      count: = { Typ="E" Txt="&" Hint="Sets the amount of ammo given to the player when picked up (Default=??." }
+      t_ammo_sg=!
+    }
+    ammo_molotov:form =
+    {
+      Help = "This is ammo for the ??."
+      bbox = '-20 -20 -16 20 20 20'
+      mdl = "models/weapons2/molotov/e_molotov.md3"
+      count: = { Typ="E" Txt="&" Hint="Sets the amount of ammo given to the player when picked up (Default=??)." }
+      t_ammo_sg=!
+    }
+    ammo_sharps:form =
+    {
+      Help = "Sharps Rifle ammo. Gives the player 12 by default."
+      bbox = '-20 -20 -16 20 20 20'
+//      mdl = "models/powerups/ammo/"
+      count: = { Typ="E" Txt="&" Hint="Sets the amount of ammo given to the player when picked up (Default=12)." }
+      t_ammo_sg=!
+    }
+    ammo_shells:form =
+    {
+      Help = "Shotgun Ammo. Gives the player 12 by default."
+      bbox = '-20 -20 -16 20 20 20'
+      mdl = "models/powerups/ammo/shotgammo.md3"
+      count: = { Typ="E" Txt="&" Hint="Sets the amount of ammo given to the player when picked up (Default=12)." }
+      t_ammo_sg=!
+    }
+
+//--------------------
+// Func
+//--------------------
+
+    t_funcnonot:incl = 
+    {
+      Sep: =      { Typ = "S" Txt = "" }
+      nobot: =    { Typ = "C" Txt = "&" Hint = "If set to 1, Bots will ignore this. (Default=0)"
+                    Items = "0) Default"$0D"1) Bots Ignore"
+                    Values = "0"$0D"1" }
+      notfree: =   { Typ = "C" Txt = "&" Hint = "If set to 1, this will not spawn in a Free for All or Tournament games. (Default=0)"
+                    Items = "0) Spawn"$0D"1) Don't Spawn"
+                    Values = "0"$0D"1" }
+      notsingle: = { Typ = "C" Txt = "&" Hint = "If set to 1, this will not spawn in a single player game. (Default=0)"
+                    Items = "0) Spawn"$0D"1) Don't Spawn"
+                    Values = "0"$0D"1" }
+      notteam: =   { Typ = "C" Txt = "&" Hint = "If set to 1, this will not spawn in a Teamplay or CTF games. (Default=0)"
+                    Items = "0) Spawn"$0D"1) Don't Spawn"
+                    Values = "0"$0D"1" }
+      Sep: =        { Txt="" Typ="S" }
+      notq3a: =     { Typ="C" Txt="&" Hint="If set to 1, this will not spawn in Quake III Arena games. (Default=0)"
+                     Items = "0) Default"$0D"1) Don't Spawn"
+                     Values = "0"$0D"1" }
+      notta: =      { Typ="C" Txt="&" Hint="If set to 1, this will not spawn in Quake III: Team Arena games. (Default=0)"
+                     Items = "0) Default"$0D"1) Don't Spawn"
+                     Values = "0"$0D"1" }
+    }
+
+    t_funcmodel2:incl = 
+    {
+      Sep: =       { Typ="S" Txt="" }
+      model2: =    { Typ="EP" Txt="&" Hint="This is the path and name of a model to use with this func_*."
+                   AugPath = "models"
+                   BasePath = "$Game\baseq3\models"
+                   CutPath = "$Game\?\models"
+                   DefExt = "md3"
+                   DirSep = "/" }
+      model2: =    { Typ="B" Txt=" " Hint="Available .MD3 files" Form="t_models2_form:form"      Cap="Map Objects models..." }
+      model2: =    { Typ="B" Txt=" " Hint="Available .MD3 files" Form="t_models2items_form:form" Cap="Items models..." }
+      model2: =    { Typ="B" Txt=" " Hint="Available .MD3 files" Form="t_models2bots_form:form"  Cap="Bots models..." }
+      Sep: =       { Typ = "S" Txt = "" }
+      color: =     { Typ="LN" Txt="&" Hint="constantLight color of .md3 model included with entity. Has no effect on the entity's brushes (default 1 1 1)." }
+      color: =     { Typ="E"  Txt="&" Hint="constantLight color of .md3 model included with entity. Has no effect on the entity's brushes (default 1 1 1)." }
+      light: =     { Typ="E"  Txt="&" Hint="constantLight radius of .md3 model included with entity. Has no effect on the entity's brushes (default 0)." }
+      origin: =    { Typ="E"  Txt="&" Hint="Way to set the XYZ value of this entity." }
+    }
+
+    func_breakable:form =
+    {
+      Help = "Use spawnflags to manually set the breakable-type. Normally SG detects the breakable-type autmatically by its spawnflags."
+      health: =     { Typ="E"    Txt="&" Hint="Health of the brush. (Default=7)" }
+//      type: =       { Typ="E"    Txt="&" Hint="(HINT)" }
+      weapon: =     { Typ="E"    Txt="&" Hint="Specifies the weapon which the breakable must be destroyed use the classnames of the weapons to determine the weapon." }
+      weapon: =     { Typ="B"    Txt=""  Hint="Available Classname" Form="t_weapon_form:form" Cap="weapon type..." }
+      targetname: = { Typ="E"    Txt="&" Hint="This is its target name for the target argument." }
+      wait: =       { Typ="E"    Txt="&" Hint="(HINT)" }
+      spawnflags: = { Typ="X1"   Txt="&" Hint="(HINT)" Cap="x" }
+      spawnflags: = { Typ="X2"   Txt="&" Hint="(HINT)" Cap="x" }
+      spawnflags: = { Typ="X4"   Txt="&" Hint="(HINT)" Cap="TYPE_METAL" }
+      spawnflags: = { Typ="X8"   Txt="&" Hint="(HINT)" Cap="TYPE_WOOD" }
+      spawnflags: = { Typ="X16"  Txt="&" Hint="(HINT)" Cap="TYPE_CLOTH" }
+      spawnflags: = { Typ="X32"  Txt="&" Hint="(HINT)" Cap="TYPE_DIRT" }
+      spawnflags: = { Typ="X64"  Txt="&" Hint="(HINT)" Cap="TYPE_GLASS" }
+      spawnflags: = { Typ="X128" Txt="&" Hint="(HINT)" Cap="TYPE_STONE" }
+      t_funcnonot=!
+    }
+    func_door:form =
+    {
+      Help = "This is a door."
+      mdl = "[model2]"
+      angle: =      { Typ="E"     Txt="&" Hint="Direction the door will move on the XY plane. (Default=0). (-1 is up, -2 is down)." }
+      angles: =     { Typ="E"     Txt="&" Hint="Direction the door will move in 3 dimensions, specified by pitch and yaw. Roll is ignored. Syntax is pitch yaw 0. (Default=0 0 0)." }
+      dmg: =        { Typ="E"     Txt="&" Hint="Damage to inflict on player when he blocks operation of door (default 4)."$0D
+                      "Door will reverse direction when blocked unless CRUSHER spawnflag is set." }
+      health: =     { Typ="E"     Txt="&" Hint="If set to a non-zero value, the door must be damaged by 'health' amount of points to activate (default 0)." }
+      lip: =        { Typ="E"     Txt="&" Hint="Remaining edge left.(Default is 8)" }
+      speed: =      { Typ="E"     Txt="&" Hint="Speed at which door moves.(Default is 130)" }
+      targetname: = { Typ="E"     Txt="&" Hint="This is its target name for the target argument." }
+      team: =       { Typ="E"     Txt="&" Hint="Assign the same team name to multiple doors that should operate together." }
+      wait: =       { Typ="E"     Txt="&" Hint="Wait time till it resets.(Default is 4, -1 returns immediately)" }
+      spawnflags: = { Typ="X1"    Txt="&" Hint="The func_door_rotating will spawn in the open state and operate in reverse."                                               Cap="START_OPEN" }
+      spawnflags: = { Typ="X4"    Txt="&" Hint="The func_door will not reverse direction when blocked and will keep damaging player until he dies or gets out of the way." Cap="CRUSHER" }
+      spawnflags: = { Typ="X8"    Txt="&" Hint="The func_door will return automatically after having been opened."                                                         Cap="RETURN" }
+      spawnflags: = { Typ="X16"   Txt="&" Hint="The func_door can't be used by an activate button but a trigger."                                                          Cap="TRIGGER_DOOR" }
+      t_funcnonot=!
+      t_funcmodel2=!
+    }
+    func_door_rotating:form =
+    {
+      Help = "Rotating door. By default it will always open away from the player."$0D
+             "Unlike in Quake 2, doors that touch are NOT automatically teamed."$0D
+             "If you want doors to operate together, you have to team them manually by assigning the same team name to all of them."$0D
+             "Setting the origin key is simply an alternate method to using an origin brush. When using the model2 key,"$0D
+             "the origin point of the model will correspond to the origin point defined by either the origin brush or the origin coordinate value."
+      mdl = "[model2]"
+//      angle: =      { Typ="E"     Txt="&" Hint="Direction the door will move on the XY plane. (Default=0)." }
+      distance: =   { Typ="E"     Txt="&" Hint="Size of the arc in degrees that the func_door_rotating will describe when moving. (Default=90)." }
+      dmg: =        { Typ="E"     Txt="&" Hint="Damage to inflict on player when he blocks operation of door (default 4)."$0D
+                      "Door will reverse direction when blocked unless CRUSHER spawnflag is set." }
+      health: =     { Typ="E"     Txt="&" Hint="If set to a non-zero value, the door must be damaged by 'health' amount of points to activate (default 0)." }
+      lip: =        { Typ="E"     Txt="&" Hint="Remaining edge left.(Default is 8)" }
+      speed: =      { Typ="E"     Txt="&" Hint="Speed at which door moves.(Default is 130)" }
+      targetname: = { Typ="E"     Txt="&" Hint="This is its target name for the target argument." }
+      team: =       { Typ="E"     Txt="&" Hint="Assign the same team name to multiple doors that should operate together." }
+      wait: =       { Typ="E"     Txt="&" Hint="Wait time till it resets.(Default is 4, -1 returns immediately)" }
+      spawnflags: = { Typ="X1"    Txt="&" Hint="The func_door_rotating will spawn in the open state and operate in reverse."                                                        Cap="START_OPEN" }
+      spawnflags: = { Typ="X4"    Txt="&" Hint="The func_door_rotating will not reverse direction when blocked and will keep damaging player until he dies or gets out of the way." Cap="CRUSHER" }
+      spawnflags: = { Typ="X8"    Txt="&" Hint="The func_door_rotating will return automatically after having been opened."                                                         Cap="RETURN" }
+      spawnflags: = { Typ="X16"   Txt="&" Hint="The func_door_rotating can't be used by an activate button but a trigger."                                                          Cap="TRIGGER_DOOR" }
+      spawnflags: = { Typ="X32"   Txt="&" Hint="The func_door_rotating will rotate around the X-axis rather than the Z-axis."                                                       Cap="X_AXIS" }
+      spawnflags: = { Typ="X64"   Txt="&" Hint="The func_door_rotating will rotate around the Y-axis rather than the Z-axis."                                                       Cap="Y_AXIS" }
+      spawnflags: = { Typ="X128"  Txt="&" Hint="The func_door_rotating must be triggered to close as well as being triggered to open."                                              Cap="ONE_WAY" }
+      t_funcnonot=!
+      t_funcmodel2=!
+    }
+    func_flare:form =
+    {
+      Help = "Generates a Flare effect on a certain brush."
+      color: =      { Typ="LN" Txt="&" Hint="color of the glow effect ( default 1 1 1)" }
+      color: =      { Typ="E"  Txt="&" Hint="color of the glow effect ( default 1 1 1)" }
+      minsize: =    { Typ="E"  Txt="&" Hint="minimal size of the gloweffect (default 30 (hud units))" }
+      maxsize: =    { Typ="E"  Txt="&" Hint="maximal size of the gloweffect (default 120 (hud units))" }
+      radius: =     { Typ="E"  Txt="&" Hint="radius of glow effect (default 20 (real units))" }
+      trans: =      { Typ="E"  Txt="&" Hint="transparency of glow/lens effect (default 0.6, max 1.0)" }
+      targetname: = { Typ="E"  Txt="&" Hint="This is its target name for the target argument." }
+      spawnflags: = { Typ="X1" Txt="&" Hint="NO_GLOW"       Cap="NO_GLOW" }
+      spawnflags: = { Typ="X2" Txt="&" Hint="NO_LENSFLARES" Cap="NO_LENSFLARES" }
+      t_funcnonot=!
+    }
+    func_smoke:form =
+    {
+      Help = "Generates Smoke."
+      color: =      { Typ="LN" Txt="&" Hint="color of the glow effect ( default 1 1 1)" }
+      color: =      { Typ="E"  Txt="&" Hint="color of the glow effect ( default 1 1 1)" }
+      boost: =      { Typ="E"  Txt="&" Hint="rise-up-velocity of the sprites (default 5)" }
+      life: =       { Typ="E"  Txt="&" Hint="lifetime of the smoke (default 5 (secs))" }
+      rate: =       { Typ="E"  Txt="&" Hint="generation rate of the smoke-sprites (default 3 (sprites per second))" }
+      size: =       { Typ="E"  Txt="&" Hint="size of the smoke particles (default 50)" }
+      target: =     { Typ="E"  Txt="&" Hint="sets the direction of the wind" }
+      targetname: = { Typ="E"  Txt="&" Hint="This is its target name for the target argument." }
+      trans: =      { Typ="E"  Txt="&" Hint="transparency of the smoke (default 0.6, max 1.0)" }
+      wind: =       { Typ="E"  Txt="&" Hint="strength of the wind (default 5)" }
+      t_funcnonot=!
+    }
+
+//--------------------
+// Info 
+//--------------------
+
+    info_null:form =
+    {
+      Help = "This used as a postional target for entities."
+      bbox = '-8 -8 -8 8 8 8'
+      target: =     { Typ="E" Txt="&" Hint="(HINT)" }
+      targetname: = { Typ="E" Txt="&" Hint="Name of the specific info_null." }
+      Sep: =        { Txt = "" Typ = "S" }
+      notfree: =    { Txt = "&" Typ = "C" Hint = "If set to 1, info_null will not spawn in a Free for All or Tournament games. (Default=0)"
+                     Items = "0) Spawn"$0D"1) Don't Spawn"
+                     Values = "0"$0D"1" }
+      notsingle: =  { Txt = "&" Typ = "C" Hint = "If set to 1, info_null will not spawn in a single player game. (Default=0)"
+                     Items = "0) Spawn"$0D"1) Don't Spawn"
+                     Values = "0"$0D"1" }
+      notteam: =    { Txt = "&" Typ = "C" Hint = "If set to 1, info_null will not spawn in a Teamplay or CTF games. (Default=0)"
+                     Items = "0) Spawn"$0D"1) Don't Spawn"
+                      Values = "0"$0D"1" }
+      Sep: =        { Txt="" Typ="S" }
+      notq3a: =     { Typ="C" Txt="&" Hint="If set to 1, info_null will not spawn in Quake III Arena games. (Default=0)"
+                     Items = "0) Default"$0D"1) Don't Spawn"
+                     Values = "0"$0D"1" }
+      notta: =      { Typ="C" Txt="&" Hint="If set to 1, info_null will not spawn in Quake III: Team Arena games. (Default=0)"
+                     Items = "0) Default"$0D"1) Don't Spawn"
+                     Values = "0"$0D"1" }
+    }
+
+//--------------------
+// Player starts
+//--------------------
+
+    t_playerangleangles:incl = 
+    {
+      angle: =  { Typ="E" Txt="&" Hint="Specifies a facing direction in which player will look when spawning in the game on the XY plane. (Default=0)."
+                 "Does not apply to bots." }
+      angles: = { Typ="E" Txt="&" Hint="Specifies a facing direction in 3 dimensions, defined by pitch, yaw, and roll. (Default=0 0 0)." }
+    }
+
+    info_player_deathmatch:form =
+    {
+      Help = "Normal player spawning location for Q3A levels."
+      bbox = '-16 -16 -24 16 16 32'
+      mdl = "models/players/sarge/upper.md3"
+      md3_autolink = "1"
+      :u_torso = "Frame 125"
+      :u_rshoulder = "Frame 125"
+      :l_legs = "Frame 170"
+      :h_cigar = "Frame 1"
+      :h_head = "Frame 1"
+      t_playerangleangles=!
+      part: =   { Txt="&" Hint="(HINT)" }
+      target: =     { Typ="E" Txt="&" Hint="Targetnane of enitiey to trigger whan spawn is used. This can point at a target_give entity for respawn freebies." }
+      trio: =   { Txt="&" Hint="(HINT)" }
+      spawnflags: = { Typ="X1" Txt="&" Hint="If set, makes the spawnpoint the initial place for the player to spawn at the beginning of the game." Cap="INITIAL" }
+      Sep: =        { Typ="S" Txt="" }
+      nobot: =     { Typ="C" Txt="&" Hint="If set to 1, will prevent bots from using this spot.. (Default=0)"
+                     Items = "0) Default"$0D"1) Bots Ignore"
+                     Values = "0"$0D"1" }
+      notfree: =    { Typ="C" Txt="&" Hint="If set to 1, info_player_deathmatch will not spawn in a Free for All or Tournament games. (Default=0)"
+                     Items = "0) Spawn"$0D"1) Don't Spawn"
+                     Values = "0"$0D"1" }
+      nohumans: =   { Typ="C" Txt="&" Hint="If set to 1, human players will never use this spawn point to respawn in the game. (Default=0)"
+                     Items = "0) Spawn"$0D"1) Don't spawn"
+                     Values = "0"$0D"1" }
+      notsingle: =  { Typ="C" Txt="&" Hint="If set to 1, info_player_deathmatch will not spawn in a single player game. (Default=0)"
+                     Items = "0) Spawn"$0D"1) Don't Spawn"
+                     Values = "0"$0D"1" }
+      notteam: =    { Typ="C" Txt="&" Hint="If set to 1, info_player_deathmatch will not spawn in a Teamplay or CTF games. (Default=0)"
+                     Items = "0) Spawn"$0D"1) Don't Spawn"
+                     Values = "0"$0D"1" }
+      Sep: =        { Txt="" Typ="S" }
+      notq3a: =     { Typ="C" Txt="&" Hint="If set to 1, info_player_deathmatch will not spawn in Quake III Arena games. (Default=0)"
+                     Items = "0) Default"$0D"1) Don't Spawn"
+                     Values = "0"$0D"1" }
+      notta: =      { Typ="C" Txt="&" Hint="If set to 1, info_player_deathmatch will not spawn in Quake III: Team Arena games. (Default=0)"
+                     Items = "0) Default"$0D"1) Don't Spawn"
+                     Values = "0"$0D"1" }
+    }
+
+    info_player_intermission:form =
+    {
+      Help = "Camera for intermission screen between matches. This also automatically generates the podium for bot arena matches."
+             " Can be aimed by setting the angles key or targeting an pointing to an aiming entity. Use only one per level."
+      bbox = '-16 -16 -16 16 16 16'
+      t_playerangleangles=!
+      name: =   { Txt="&" Hint="(HINT)" }
+      part: =   { Txt="&" Hint="(HINT)" }
+      target: = { Txt="&" Hint="Targetname of an info_notnull or target_position entity to set the camera's pointing angles." }
+    }
+
+
+//--------------------
+// Items
+//--------------------
+
+    t_item_sg:incl = 
+    {
+      random: =     { Typ="E" Txt="&" Hint="The integer used to multiply or divide the wait value to the respawn." }
+      target: =     { Typ="E" Txt="&" Hint="Targetname of the entity to be triggered when the item is touched by the player." }
+      targetname: = { Typ="E" Txt="&" Hint="Name of the specific item entity. A target_give entity can point to this for respawn freebies." }
+      team: =       { Typ="E" Txt="&" Hint="Use for changing Weapons Ammo & Powerups spawning." }
+    }
+
+    t_itemspawnflags:incl = 
+    {
+      spawnflags: = { Typ="X1" Txt="&" Hint="The SUSPENDED flag set, the item_* will spawn where it was placed in map and won't drop to the floor." Cap="SUSPENDED" }
+      spawnflags: = { Typ="X2" Txt="&" Hint="(HINT)"                                                                                                Cap="x" }
+      spawnflags: = { Typ="X4" Txt="&" Hint="Set spawnflags 4 in the editor to cast & receive shadows"                                              Cap="SHADOWS" }
+      Sep: =        { Typ="S" Txt=""  }
+      nobot: =      { Typ="C" Txt="&" Hint="If set to 1, Bots will ignore this item. (Default=0)"
+                     Items = "0) Default"$0D"1) Bots Ignore"
+                     Values = "0"$0D"1" }
+      notfree: =    { Typ="C" Txt="&" Hint="If set to 1, item_* will not spawn in a Free for All or Tournament games. (Default=0)"
+                     Items = "0) Spawn"$0D"1) Don't Spawn"
+                     Values = "0"$0D"1" }
+      notsingle: =  { Typ="C" Txt="&" Hint="If set to 1, item_* will not spawn in a single player game. (Default=0)"
+                     Items = "0) Spawn"$0D"1) Don't Spawn"
+                     Values = "0"$0D"1" }
+      notteam: =    { Typ="C" Txt="&" Hint="If set to 1, item_* will not spawn in a Teamplay or CTF games. (Default=0)"
+                     Items = "0) Spawn"$0D"1) Don't Spawn"
+                     Values = "0"$0D"1" }
+      Sep: =        { Txt="" Typ="S" }
+      notq3a: =     { Typ="C" Txt="&" Hint="If set to 1, item_* will not spawn in Quake III Arena games. (Default=0)"
+                     Items = "0) Default"$0D"1) Don't Spawn"
+                     Values = "0"$0D"1" }
+      notta: =      { Typ="C" Txt="&" Hint="If set to 1, item_* will not spawn in Quake III: Team Arena games. (Default=0)"
+                     Items = "0) Default"$0D"1) Don't Spawn"
+                     Values = "0"$0D"1" }
+    }
+
+
+    item_belt:form =
+    {
+      Help = "Ammuntion Belt"
+      bbox = '-16 -16 -16 16 16 32'
+      mdl = "models/powerups/holdable/belt.md3"
+      t_item_sg=!
+      wait: = { Typ="E" Txt="&"Hint="Time that the item waits to respawn. (Default is 60, -1 never respawns)" }
+      t_itemspawnflags=!
+    }
+    item_boiler_plate:form =
+    {
+      Help = "Boiler Plate"
+      bbox = '-24 -24 -16 24 24 40'
+      mdl = "models/powerups/holdable/boiler.md3"
+      t_item_sg=!
+      wait: = { Typ="E" Txt="&"Hint="Time that the item waits to respawn. (Default is 25, -1 never respawns)" }
+      t_itemspawnflags=!
+    }
+    item_scope:form =
+    {
+      Help = "Rifle Scope: adds the zoom function to the rifle"
+      bbox = '-24 -24 -16 24 24 40'
+      mdl = "models/weapons2/scope/scope.md3"
+      t_item_sg=!
+      wait: = { Typ="E" Txt="&"Hint="Time that the item waits to respawn. (Default is 25, -1 never respawns)" }
+      t_itemspawnflags=!
+    }
+
+    item_money:form =
+    {
+      Help = "Gold sack for bank robbery mode"
+      bbox = '-20 -20 -16 20 20 20'
+      mdl = "models/items/moneybag.md3"
+      t_item_sg=!
+      t_itemspawnflags=!
+    }
+    pickup_money:form =
+    {
+      Help = "Money item for deathmatch modes(DM, TDM, DUEL)"
+      bbox = '-20 -20 -16 20 20 20'
+      mdl = "[;3Dmodel]"
+      frame1 = "[Frame]"
+      ;3Dmodel: =   { Typ="C" Txt="3D Model" Hint="QuArK 3D views only."$0D
+                     "Set this to the count amount to view the Type of model used for 3D views."
+                     Items = "1-6) Coins"$0D"7-14) Bills"$0D"15 +) Money Bag"
+                     Values = "models/items/coins.md3"$0D"models/items/bills.md3"$0D"models/items/moneybag.md3" }
+      angle: =      { Typ="E" Txt="&" Hint="Specifies a facing direction on the XY plane. (Default=0)." }
+      angles: =     { Typ="E" Txt="&" Hint="Specifies a facing direction in 3 dimensions, defined by pitch, yaw, and roll. (Default=0 0 0)." }
+      count: =      { Typ="E" Txt="&" Hint="Sets the amount of money given to the player when picked up (Default=10)." }
+      random: =     { Typ="E" Txt="&" Hint="The integer used to multiply or divide the wait value to the respawn." }
+      target: =     { Typ="E" Txt="&" Hint="Targetname of the entity to be triggered when the item is touched by the player." }
+      targetname: = { Typ="E" Txt="&" Hint="Name of the specific item entity. A target_give entity can point to this for respawn freebies." }
+      wait: =       { Typ="E" Txt="&" Hint="Time that the item waits to respawn. (Default is ??, -1 never respawns)" }
+      t_itemspawnflags=!
+    }
+
+//--------------------
+// Target
+//--------------------
+
+    target_speaker:form =
+    {
+      Help = "Sound generating entity that plays .wav files. Normal non-looping sounds play each time the target_speaker is triggered."
+             " Looping sounds can be set to play by themselves (no activating trigger) or be toggled on/off by a trigger."
+             "The path portion value of the "$22"noise"$22" key can be replaced by the implicit folder character "$22"*"$22" for"
+             " triggered sounds that belong to a particular player model. For example,"
+             " if you want to create a "$22"bottomless pit"$22" in which the player screams and dies when he falls into,"
+             " you would place a trigger_multiple over the floor of the pit and target a target_speaker with it."
+             " Then, you would set the "$22"noise"$22" key to "$22"*falling1.wav"$22"."
+             " The * character means the current player model's sound folder. So if your current player model is Visor,"
+             " * = sound/player/visor, if your current player model is Sarge, * = sound/player/sarge, etc."
+             " This cool feature provides an excellent way to create "$22"player-specific"$22" triggered sounds in your levels."
+      bbox = '-8 -8 -8 8 8 8'
+      noise: =      { Typ="EP" Txt="&" Hint="wav file to play."$0D0D"The file selection button ... to the right"$0D
+                    "lets you pick the sound you want by clicking on it."$0D
+                    "Create a sub-folder named 'sound' in your tmpQuArk folder"$0D
+                    "and place your .wav files there. You can also create"$0D
+                    "sub-folders within the 'sound' folder to group your files."$0D0D
+                    "Right clicking on the sound file will let you play it."$0D
+                    "The path is set so it will work if put into a .pak file."
+        AugPath = "sound"
+        BasePath = "$Game\?\sound"
+        CutPath = "$Game\?\sound"
+        DefExt = "wav"
+        DirSep = "/" }
+      noise: =      { Typ="B" Txt=" " Hint="Available .WAV files" form="t_noise_sg_form:form" Cap = "sounds..." }
+      random: =     { Typ="E" Txt="&" Hint="Random time variance in seconds added or subtracted from "$22"wait"$22" delay ("$22"wait"$22" key must be set - see Help)." }
+      targetname: = { Typ="E" Txt="&" Hint="The activating button or trigger points to this." }
+      wait: =       { Typ="E" Txt="&" Hint="Delay in seconds between each time the sound is played ("$22"random"$22" key must be set - see Help)." }
+      spawnflags: = { Typ="X1" Txt="&" Hint="Sound will loop and initially start on in level (will toggle on/off when triggered)."  Cap="LOOPED_ON" }
+      spawnflags: = { Typ="X2" Txt="&" Hint="Sound will loop and initially start off in level (will toggle on/off when triggered)." Cap="LOOPED_OFF" }
+      spawnflags: = { Typ="X4" Txt="&" Hint="Sound will play full volume throughout the level."                                     Cap="GLOBAL" }
+      spawnflags: = { Typ="X8" Txt="&" Hint="Sound will play only for the player that activated the target."                        Cap="ACTIVATOR" }
+      Sep: =        { Typ="S" Txt= "" }
+      notfree: =    { Typ="C" Txt="&" Hint="If set to 1, this will not spawn in a Free for All or Tournament games. (Default=0)"
+        Items = "0) Spawn"$0D"1) Don't Spawn"
+        Values = "0"$0D"1" }
+      notsingle: =  { Typ="C" Txt="&" Hint="If set to 1, this will not spawn in a single player game. (Default=0)"
+        Items = "0) Spawn"$0D"1) Don't Spawn"
+        Values = "0"$0D"1" }
+      notteam: =    { Typ="C" Txt="&" Hint="If set to 1, this will not spawn in a Teamplay or CTF games. (Default=0)"
+        Items = "0) Spawn"$0D"1) Don't Spawn"
+        Values = "0"$0D"1" }
+      Sep: =        { Typ="S" Txt="" }
+      notq3a: =     { Typ="C" Txt="&" Hint="If set to 1, this will not spawn in Quake III Arena games. (Default=0)"
+                     Items = "0) Default"$0D"1) Don't Spawn"
+                     Values = "0"$0D"1" }
+      notta: =      { Typ="C" Txt="&" Hint="If set to 1, this will not spawn in Quake III: Team Arena games. (Default=0)"
+                     Items = "0) Default"$0D"1) Don't Spawn"
+                     Values = "0"$0D"1" }
+    }
+
+//--------------------
+// TEAN
+//--------------------
+
+    t_teamctfflag:incl = 
+    {
+      angle: =  { Typ="E" Txt="&" Hint="Specifies a facing direction the Flag will face on the XY plane. (Default=0)." }
+      angles: = { Typ="E" Txt="&" Hint="Specifies a facing direction the Flag will face in 3 dimensions, defined by pitch, yaw, and roll. (Default=0 0 0)." }
+      Sep: =    { Typ="S" Txt="" }
+      notq3a: = { Typ="C" Txt="&" Hint="If set to 1, this will not spawn in Quake III Arena games. (Default=0)"
+                     Items = "0) Default"$0D"1) Don't Spawn"
+                     Values = "0"$0D"1" }
+      notta: =  { Typ="C" Txt="&" Hint="If set to 1, this will not spawn in Quake III: Team Arena games. (Default=0)"
+                     Items = "0) Default"$0D"1) Don't Spawn"
+                     Values = "0"$0D"1" }
+    }
+
+    t_teamctf:incl = 
+    {
+      angle: =  { Typ="E" Txt="&" Hint="Specifies a facing direction on the XY plane. (Default=0)." }
+      angles: = { Typ="E" Txt="&" Hint="Specifies a facing direction in 3 dimensions, defined by pitch, yaw, and roll. (Default=0 0 0)." }
+      part: =   { Txt="&" Hint="(HINT)" }
+      target: = { Typ="E" Txt="&" Hint="this can point at a target_give entity for respawn freebies." }
+      Sep: =    { Typ="S" Txt="" }
+      notq3a: = { Typ="C" Txt="&" Hint="If set to 1, this will not spawn in Quake III Arena games. (Default=0)"
+                     Items = "0) Default"$0D"1) Don't Spawn"
+                     Values = "0"$0D"1" }
+      notta: =  { Typ="C" Txt="&" Hint="If set to 1, this will not spawn in Quake III: Team Arena games. (Default=0)"
+                     Items = "0) Default"$0D"1) Don't Spawn"
+                     Values = "0"$0D"1" }
+    }
+
+    team_CTF_blueflag:form =
+    {
+      Help = "This is the blue teams flag."
+      bbox = '-16 -16 -24 16 16 32'
+      mdl = "models/flags/b_flag.md3"
+      t_teamctfflag=!
+    }
+    team_CTF_blueplayer:form =
+    {
+      Help = "Initial Blue team spawning position for CTF games."
+      bbox = '-16 -16 -24 16 16 32'
+      mdl = "models/players/crash/upper.md3"
+//      mdlskin = "models/players/crash/blue.tga"
+      md3_autolink = "1"
+      :u_arms = "Frame 133"
+      :u_chest = "Frame 133"
+      :l_legs = "Frame 71"
+      :h_helmet = "Frame 1"
+      :h_visor = "Frame 1"
+      t_teamctf=!
+    }
+    team_CTF_bluespawn:form =
+    {
+      Help = "Blue team respawning position for CTF games."
+      bbox = '-16 -16 -24 16 16 32'
+      mdl = "models/players/crash/upper.md3"
+//      mdlskin = "models/players/crash/blue.tga"
+      md3_autolink = "1"
+      :u_arms = "Frame 133"
+      :u_chest = "Frame 133"
+      :l_legs = "Frame 71"
+      :h_helmet = "Frame 1"
+      :h_visor = "Frame 1"
+      t_teamctf=!
+    }
+    team_CTF_redflag:form =
+    {
+      Help = "This is the red teams flag."
+      bbox = '-16 -16 -24 16 16 32'
+      mdl = "models/flags/r_flag.md3"
+      t_teamctfflag=!
+    }
+    team_CTF_redplayer:form =
+    {
+      Help = "Initial Red team spawning position for CTF games."
+      bbox = '-16 -16 -24 16 16 32'
+      mdl = "models/players/doom/upper.md3"
+      mdlskin = "models/players/doom/red.tga"
+      md3_autolink = "1"
+      :u_torso = "Frame 153"
+      :u_larm = "Frame 153"
+      :u_rarm = "Frame 153"
+      :l_legs = "Frame 92"
+      :h_helmet = "Frame 1"
+      :h_visor = "Frame 1"
+      t_teamctf=!
+    }
+    team_CTF_redspawn:form =
+    {
+      Help = "Red team respawning position for CTF games."
+      bbox = '-16 -16 -24 16 16 32'
+      mdl = "models/players/doom/upper.md3"
+      mdlskin = "models/players/doom/red.tga"
+      md3_autolink = "1"
+      :u_torso = "Frame 153"
+      :u_larm = "Frame 153"
+      :u_rarm = "Frame 153"
+      :l_legs = "Frame 92"
+      :h_helmet = "Frame 1"
+      :h_visor = "Frame 1"
+      t_teamctf=!
+    }
+
+//--------------------
+// Triggers
+//--------------------
+
+    trigger_escape:form =
+    {
+      Help = "Touching this will let the team win the round who robbed the bank."
+      targetname: = { Typ="E" Txt="&" Hint="This is its target name for the target argument." }
+      Sep: =        { Typ="S" Txt=""  }
+      nobot: =     { Typ="C" Txt="&" Hint="If set to 1, Bots will ignore this item. (Default=0)"
+                     Items = "0) Default"$0D"1) Bots Ignore"
+                     Values = "0"$0D"1" }
+      notfree: =    { Typ="C" Txt="&" Hint="If set to 1, item_* will not spawn in a Free for All or Tournament games. (Default=0)"
+                     Items = "0) Spawn"$0D"1) Don't Spawn"
+                     Values = "0"$0D"1" }
+      notsingle: =  { Typ="C" Txt="&" Hint="If set to 1, item_* will not spawn in a single player game. (Default=0)"
+                     Items = "0) Spawn"$0D"1) Don't Spawn"
+                     Values = "0"$0D"1" }
+      notteam: =    { Typ="C" Txt="&" Hint="If set to 1, item_* will not spawn in a Teamplay or CTF games. (Default=0)"
+                     Items = "0) Spawn"$0D"1) Don't Spawn"
+                     Values = "0"$0D"1" }
+      Sep: =        { Txt="" Typ="S" }
+      notq3a: =     { Typ="C" Txt="&" Hint="If set to 1, item_* will not spawn in Quake III Arena games. (Default=0)"
+                     Items = "0) Default"$0D"1) Don't Spawn"
+                     Values = "0"$0D"1" }
+      notta: =      { Typ="C" Txt="&" Hint="If set to 1, item_* will not spawn in Quake III: Team Arena games. (Default=0)"
+                     Items = "0) Default"$0D"1) Don't Spawn"
+                     Values = "0"$0D"1" }
+    }
+
+//--------------------
+// Weapons
+//--------------------
+
+    t_weapons_sg:incl = 
+    {
+      angle: =      { Typ="E"  Txt="&" Hint="Specifies a facing direction on the XY plane. (Default=0)." }
+      angles: =     { Typ="E"  Txt="&" Hint="Specifies a facing direction in 3 dimensions, defined by pitch, yaw, and roll. (Default=0 0 0)." }
+      random: =     { Typ="E"  Txt="&" Hint="The integer used to multiply or divide the wait value to the respawn." }
+      target: =     { Typ="E"  Txt="&" Hint="Targetname of the entity to be triggered when the weapon is touched by the player." }
+      targetname: = { Typ="E"  Txt="&" Hint="Name of the specific weapon entity. A target_give entity can point to this for respawn freebies." }
+      team: =       { Typ="E"  Txt="&" Hint="Use for changing Weapons Ammo & Powerups spawning." }
+    }
+
+    t_weaponspawnflags:incl = 
+    {
+      spawnflags: = { Typ="X1" Txt="&" Hint="The SUSPENDED flag set, the item_* will spawn where it was placed in map and won't drop to the floor." Cap="SUSPENDED" }
+      spawnflags: = { Typ="X2" Txt="&" Hint="(HINT)"                                                                                                Cap="x" }
+      spawnflags: = { Typ="X4" Txt="&" Hint="Set spawnflags 4 in the editor to cast & receive shadows"                                              Cap="SHADOWS" }
+      Sep: =        { Typ="S" Txt=""  }
+      nobot: =      { Typ="C" Txt="&" Hint="If set to 1, Bots will ignore this item. (Default=0)"
+                     Items = "0) Default"$0D"1) Bots Ignore"
+                     Values = "0"$0D"1" }
+      notfree: =    { Typ="C" Txt="&" Hint="If set to 1, item_* will not spawn in a Free for All or Tournament games. (Default=0)"
+                     Items = "0) Spawn"$0D"1) Don't Spawn"
+                     Values = "0"$0D"1" }
+      notsingle: =  { Typ="C" Txt="&" Hint="If set to 1, item_* will not spawn in a single player game. (Default=0)"
+                     Items = "0) Spawn"$0D"1) Don't Spawn"
+                     Values = "0"$0D"1" }
+      notteam: =    { Typ="C" Txt="&" Hint="If set to 1, item_* will not spawn in a Teamplay or CTF games. (Default=0)"
+                     Items = "0) Spawn"$0D"1) Don't Spawn"
+                     Values = "0"$0D"1" }
+      Sep: =        { Txt="" Typ="S" }
+      notq3a: =     { Typ="C" Txt="&" Hint="If set to 1, item_* will not spawn in Quake III Arena games. (Default=0)"
+                     Items = "0) Default"$0D"1) Don't Spawn"
+                     Values = "0"$0D"1" }
+      notta: =      { Typ="C" Txt="&" Hint="If set to 1, item_* will not spawn in Quake III: Team Arena games. (Default=0)"
+                     Items = "0) Default"$0D"1) Don't Spawn"
+                     Values = "0"$0D"1" }
+    }
+
+    weapon_dynamite:form =
+    {
+      Help = "Dynamite."
+      bbox = '-16 -16 -16 16 16 24'
+      mdl = "models/weapons2/dyn/e_dynamite.md3"
+      count: = { Typ="E" Txt="&" Hint="Sets the amount of ammo given to the player when picked up (Default=10)." }
+      t_weapons_sg=!
+      wait: =  { Typ="E"  Txt="&" Hint="Time that the weapon_* waits to respawn. (Default is 5, -1 never respawns)" }
+      t_weaponspawnflags=!
+    }
+    weapon_gatling:form =
+    {
+      Help = "Gatling Gun."
+      bbox = '-16 -16 -16 16 16 28'
+      mdl = "models/weapons2/gatling/e_gatling.md3"
+      t_weapons_sg=!
+      wait: =  { Typ="E"  Txt="&" Hint="Time that the weapon_* waits to respawn. (Default is 5, -1 never respawns)" }
+      t_weaponspawnflags=!
+    }
+    weapon_knife:form =
+    {
+      Help = "Bowie Knife."
+      bbox = '-16 -16 -16 16 16 28'
+      mdl = "models/weapons2/knife/e_knife.md3"
+      angle: =  { Txt="&" Hint="Direction the door will move on the XY plane. (Default=0). (-1 is up, -2 is down)." }
+      angles: = { Txt="&" Hint="This sets the pitch and yaw aiming angles of the portal camera (Default 0 0). Use roll key to set roll angle." }
+      t_weapons_sg=!
+      wait: =  { Typ="E"  Txt="&" Hint="Time that the weapon_* waits to respawn. (Default is 5, -1 never respawns)" }
+      t_weaponspawnflags=!
+    }
+    weapon_lightning:form =
+    {
+      Help = "Colt Lightning."
+      bbox = '-16 -16 -16 16 16 28'
+      mdl = "models/weapons2/colt_light/e_lightning.md3"
+      t_weapons_sg=!
+      wait: =  { Typ="E"  Txt="&" Hint="Time that the weapon_* waits to respawn. (Default is 5, -1 never respawns)" }
+      t_weaponspawnflags=!
+    }
+    weapon_molotov:form =
+    {
+      Help = "Molotov."
+      bbox = '-20 -20 -16 20 20 20'
+      mdl = "models/weapons2/molotov/e_molotov.md3"
+      mdlskin = "models/weapons2/molotov/bottle.tga"
+      count: = { Typ="E" Txt="&" Hint="Sets the amount of ammo given to the player when picked up (Default=5)." }
+      t_weapons_sg=!
+      wait: =  { Typ="E"  Txt="&" Hint="Time that the weapon_* waits to respawn. (Default is 5, -1 never respawns)" }
+      t_weaponspawnflags=!
+    }
+    weapon_peacemaker:form =
+    {
+      Help = "Colt Peacemmaker."
+      bbox = '-16 -16 -16 16 16 24'
+      mdl = "models/weapons2/peacemaker/e_peacemaker.md3"
+      count: = { Typ="E" Txt="&" Hint="Sets the amount of ammo given to the player when picked up (Default=100)." }
+      t_weapons_sg=!
+      wait: =  { Typ="E"  Txt="&" Hint="Time that the weapon_* waits to respawn. (Default is 5, -1 never respawns)" }
+      t_weaponspawnflags=!
+    }
+    weapon_remington58:form =
+    {
+      Help = "Remington '58."
+      bbox = '-16 -16 -16 16 16 28'
+      mdl = "models/weapons2/remington58/e_remington58.md3"
+      t_weapons_sg=!
+      wait: =  { Typ="E"  Txt="&" Hint="Time that the weapon_* waits to respawn. (Default is 5, -1 never respawns)" }
+      t_weaponspawnflags=!
+    }
+    weapon_sawedoff:form =
+    {
+      Help = "Sawed Off Shotgun."
+      bbox = '-16 -16 -16 16 16 28'
+      mdl = "models/weapons2/sawedoff/e_sawedoff.md3"
+      count: = { Typ="E" Txt="&" Hint="Sets the amount of ammo given to the player when picked up (Default=100)." }
+      t_weapons_sg=!
+      wait: =  { Typ="E"  Txt="&" Hint="Time that the weapon_* waits to respawn. (Default is 5, -1 never respawns)" }
+      t_weaponspawnflags=!
+    }
+    weapon_schofield:form =
+    {
+      Help = "Smith & Wesson Schofield."
+      bbox = '-16 -16 -16 16 16 28'
+      mdl = "models/weapons2/schofield/e_schofield.md3"
+      t_weapons_sg=!
+      wait: =  { Typ="E"  Txt="&" Hint="Time that the weapon_* waits to respawn. (Default is 5, -1 never respawns)" }
+      t_weaponspawnflags=!
+    }
+    weapon_sharps:form =
+    {
+      Help = "Sharps Rifle."
+      bbox = '-16 -16 -16 16 16 28'
+      mdl = "models/weapons2/sharps/e_sharps.md3"
+      t_weapons_sg=!
+      wait: =  { Typ="E"  Txt="&" Hint="Time that the weapon_* waits to respawn. (Default is 5, -1 never respawns)" }
+      t_weaponspawnflags=!
+    }
+    weapon_shotgun:form =
+    {
+      Help = "Remington 12 Gauge Shotgun."
+      bbox = '-16 -16 -16 16 16 28'
+      mdl = "models/weapons2/remgauge/e_remington.md3"
+      t_weapons_sg=!
+      wait: =  { Typ="E"  Txt="&" Hint="Time that the weapon_* waits to respawn. (Default is 5, -1 never respawns)" }
+      t_weaponspawnflags=!
+    }
+    weapon_winch66:form =
+    {
+      Help = "Winchester66."
+      bbox = '-16 -16 -16 16 16 28'
+      mdl = "models/weapons2/winch66/e_winchester66.md3"
+      count: = { Typ="E" Txt="&" Hint="Sets the amount of ammo given to the player when picked up (Default=10)." }
+      t_weapons_sg=!
+      wait: =  { Typ="E"  Txt="&" Hint="Time that the weapon_* waits to respawn. (Default is 5, -1 never respawns)" }
+      t_weaponspawnflags=!
+    }
+    weapon_winch97:form =
+    {
+      Help = "Winchester97."
+      bbox = '-16 -16 -16 16 16 28'
+      mdl = "models/weapons2/winch97/e_winch97.md3"
+      count: = { Typ="E" Txt="&" Hint="Sets the amount of ammo given to the player when picked up (Default=10)." }
+      t_weapons_sg=!
+      wait: =  { Typ="E"  Txt="&" Hint="Time that the weapon_* waits to respawn. (Default is 5, -1 never respawns)" }
+      t_weaponspawnflags=!
+    }
+
+//--------------------
+// Worldspawn
+//--------------------
+
+    t_ta_worldspawn_settings:incl =
+    {
+        ta: =    { Typ = "B" Txt = "(TeamArena)" Hint = "Team Arena settings" form = "f_ta_worldspawn:form"  Cap = "Push..."  }
+    }
+
+    f_ta_worldspawn:form =
+    {
+        enableBreath: = {  Txt="&" Typ="C" Hint="Players 'breath' will be visible in game."
+          items = "0) No"$0D"1) Yes"
+          values = "0"$0D"1"  }
+        enableDust: =  { Txt="&"  Typ="C" Hint="Player will raise dust on dusty surfaces"
+          items = "0) No"$0D"1) Yes"
+          values = "0"$0D"1" }
+        vertexremapshader: = { Txt="&" Hint="Shader to be used on terrain when people run the map in vertex lite mode" }
+        gridsize: = { Txt="&"  Hint="A 'x' 'y' 'z' value, i.e. '64' '64' '128'."$0D
+               "Light Grid Size is the map that the Q3A engine uses to light entities."$0D
+               "Higher values are best for terrain." }
+    }
+
+    worldspawn:form =
+    {
+      Help = "This is used for the world only need one."
+      gravity: =  { Typ="E" Txt="&" Hint="Specifies the gravity of map. (Default=800)." }
+      message: =  { Typ="E" Txt="&" Hint="This is the message it prints to the screen when a player enters this map." }
+      music: =    { Txt="&" Typ="EP" Hint="wav file to play."$0D0D
+                   "The file selection button ... to the right"$0D
+                   "lets you pick the sound you want by clicking on it."$0D
+                   "Create a sub-folder named 'sound' in your tmpQuArk folder"$0D
+                   "and place your .wav files there. You can also create"$0D
+                   "sub-folders within the 'sound' folder to group your files."$0D0D
+                   "Right clicking on the sound file will let you play it."$0D
+                   "The path is set so it will work if put into a .pak file."
+                  AugPath = "music"
+                  BasePath = "$Game\?\music"
+                  CutPath = "$Game\?\music"
+                  DefExt = "wav"
+                  DirSep = "/" }
+      music: =    { Txt="&" Typ="C" Hint="This is the path and file name of a looping wav file to play in this map."
+                  Items = "credit.wav"$0D"duel_start1.wav"$0D"duel_start2.wav"$0D"duel_start3.wav"$0D
+                          "duel_start4.wav"$0D"duel_start5.wav"$0D"menu.wav"$0D"track01.wav"$0D"track02.wav"$0D
+                          "track03.wav"$0D"track04.wav"$0D"track05.wav"$0D"track06.wav"
+                  Values = "music/credit.wav"$0D"music/duel_start1.wav"$0D"music/duel_start2.wav"$0D
+                           "music/duel_start3.wav"$0D"music/duel_start4.wav"$0D"music/duel_start5.wav"$0D
+                           "music/menu.wav"$0D"music/track01.wav"$0D"music/track02.wav"$0D"music/track03.wav"$0D
+                           "music/track04.wav"$0D"music/track05.wav"$0D"music/track06.wav" }
+      Sep: =      { Txt="" Typ="S" }
+      ambient: =  { Txt="&" Hint="This is the levels ambient light value" }
+      _color: =   { Txt="&" Typ="LN" Hint="light color (not the intensity, only the color) used for the ambient light." }
+      _color: =   { Txt="&" Typ=""   Hint="light color (not the intensity, only the color) used for the ambient light." }
+      Sep: =      { Txt=""  Typ="S" }
+      startpoints: =  { Typ="E" Txt="&" Hint="(HINT)." }
+      Sep: =      { Txt=""  Typ="S" }
+      ta: =       { Typ="B" Txt="(TeamArena)" Cap="Push..." Form="f_ta_worldspawn:form" Hint="Team Arena settings" }
+    }
+
+  }
+}

@@ -1,0 +1,103 @@
+QuArK SAS (Steam Access System)
+-------------------------------
+Version 1.02
+6 February 2010
+
+
+
+Program description
+-------------------
+QuArK SAS is a small command-line utility that allows you to extract files from Steam. For this to work, Steam must be running, and you probably have to be logged in. It produces a log-file which easily allows diagnoses when the program for some reason doesn't work. It's designed to be as light-weighted as possible (that's why there is no GUI), and run on as many systems as possible.
+
+The executable file has to be placed in the right folder to work:
+old:       %Steam%/steamapps/%username%/sourcesdk/bin
+ep1:       %Steam%/steamapps/%username%/sourcesdk/bin/ep1/bin
+orangebox: %Steam%/steamapps/%username%/sourcesdk/bin/orangebox/bin
+
+When not placed in a correct directory, it will not be able to find several Steam files (like tier0.dll) and will crash on startup.
+
+Also, use QuArKSAS.exe for the ep1 directory, and QuArKSAS_orangebox.exe for the orangebox directory.
+
+
+
+Program usage
+-------------
+This is a direct copy from the program:
+
+QuArKSAS.exe [parameters] <filenames>
+<filenames>: All the filenames of the files to extract.
+
+Available parameters:
+-g <ID>: Set Steam game number (default: 220 (HL2)).
+-gamedir <directory>: The game directory containing the to extract files.
+-help: Displays this information.
+-o <directory>: Specifies the output directory.
+-overwrite: Overwrite any existing output files.
+-v <number>: Verbose log level. 0 is least output, 40 is max.
+/?: Displays this information.
+
+
+After all parameters have been read from left to right,
+the rest will be interpreted as <filenames>.
+
+Note: all parameters are case-sensitive.
+Note: do NOT include trailing slashes in pathnames!
+
+
+
+Source code
+-----------
+The source code of this program is freely available (also see 'License' below), and can be downloaded from the SourceForge site (http://www.sourceforge.net/projects/quark).
+
+
+
+Comments and suggestions
+------------------------
+Do you have any comments or suggestions about this program? Below are links where you can find me.
+QuArK website: http://quark.sourceforge.net/
+QuArK forum:   http://quark.sourceforge.net/forums/
+
+
+
+Notes
+-----
+This program is used by the map/model editor QuArK (hence the name). However, it's free and open-source, so anybody can use this as they please (also see 'License' below). If you don't like the QuArK part of the name, simply call it QSAS :)
+
+
+
+Version changes
+---------------
+Version 1.02 - 6 February 2010:
+    Adjusted for newest Steam release
+
+Version 1.01 - 5 September 2007:
+    More output is writen to the log-file
+    Log now uses Windows text format
+    Several small clean-up-on-exit fixes
+    Set verbose to its default 20
+
+Version 1.0 - 14 August 2007:
+    Initial release
+
+
+
+Credits
+-------
+DanielPharos  - Author of QuArKSAS and developer of QuArK
+cdunde        - Developer of QuArK ("Hail the Master!")
+Mike Durand   - For helping with the technical part
+Valve         - For creating Steam
+
+
+
+License
+-------
+This program is distributed under the MIT license:
+
+Copyright (c) 2007-2010 DanielPharos
+
+Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.

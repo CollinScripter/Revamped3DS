@@ -1,0 +1,395 @@
+QQRKSRC1
+// FAKK2 definition file for Quark
+
+//$Header: /cvsroot/quark/runtime/addons/FAKK2/DataFAKK2.qrk,v 1.14 2009/03/23 20:59:59 danielpharos Exp $
+// ----------- REVISION HISTORY ------------
+//$Log: DataFAKK2.qrk,v $
+//Revision 1.14  2009/03/23 20:59:59  danielpharos
+//Workaround what appears to be a bug in FAKK2 dealing with the origin-point in the map.
+//
+//Revision 1.13  2008/05/14 20:38:54  cdunde
+//Fixed basic lighting in all games and a few other small typo errors.
+//
+//Revision 1.12  2008/03/28 19:05:05  cdunde
+//Cleaned up, fixed if needed and brought into sync with all QuArK addons.
+//
+//Revision 1.11  2008/03/25 16:22:56  cdunde
+//Minor file cleanup.
+//
+//Revision 1.10  2008/03/25 09:11:08  cdunde
+//Minor file cleanup.
+//
+//Revision 1.9  2008/03/23 21:53:54  cdunde
+//To make this file the way all of them should be, using its include statements.
+//
+//Revision 1.8  2008/03/09 20:31:06  cdunde
+//Pulled entities out of the EF2 and FAKK2 game Data.qrk files.
+//Game addons should never dump anything into their Data.qrk files.
+//Also fixed their worldspawn music to work now.
+//
+//Revision 1.7  2008/03/02 19:48:28  cdunde
+//Update
+//
+//Revision 1.6  2008/03/01 05:41:22  cdunde
+//Added more game support items.
+//
+//Revision 1.5  2008/02/29 09:14:47  cdunde
+//Completely updated by hand.
+//
+//Revision 1.4  2008/02/27 00:17:48  danielpharos
+//Fix the contextual help files not being found anymore
+//
+//Revision 1.3  2008/02/25 22:00:39  cdunde
+//Update
+//
+//Revision 1.2  2008/02/25 21:38:14  cdunde
+//Added version support.
+//
+//Revision 1.1  2008/02/25 20:38:14  cdunde
+//Started game support.
+//
+
+{
+  QuArKProtected = "1"
+  Description = "Base FAKK2 data"
+  Default forms.qctx =
+  {
+    dup arenafilemaker:form =
+    {
+      help = "put one in your map to create an .arena script automatically"
+      bots: =
+      {
+        Txt = "&"
+        Hint = "bots that are default for this map"
+      }
+      longname: =
+      {
+        Txt = "&"
+        Hint = "This name will be shown in FAKK2"
+      }
+      fraglimit: =
+      {
+        Txt = "&"
+        Typ = "EF1"
+        Hint = "default fraglimit for map"
+      }
+      type: =
+      {
+        Txt = "&"
+        Hint = "ffa tourney etc."
+      }
+    }
+  }
+  FAKK2 setup.qctx =
+  {
+    Game = "FAKK2"
+    HTML = "index.html"
+    Palette = $0000000F0F0F1F1F1F2F2F2F3F3F3F4B4B4B5B5B5B6B6B6B7B7B7B8B8B8B9B9B
+     $9BABABABBBBBBBCBCBCBDBDBDBEBEBEB634B235B431F533F1F4F3B1B47371B3F2F173B2B
+     $173327132F23132B1F13271B0F23170F1B130B170F0B130F070F0B075F5F6F5B5B675B53
+     $5F574F5B534B534F474B473F433F3B3B3B3737332F2F2F2B2B2727272323231B1B1B1717
+     $171313138F77537B6343735B3B674F2FCF974BA77B3B8B672F6F5327EB9F27CB8B23AF77
+     $1F93631B774F175B3B0F3F270B231707A73B2B9F2F23972B1B8B27137F1F0F73170B6717
+     $075713004B0F00430F003B0F00330B002B0B00230B001B07001307007B5F4B7357436B53
+     $3F674F3B5F4737574333533F2F4B372B4333273F2F2337271B2F2317271B131F170F170F
+     $0B0F0B076F3B175F3717532F17432B17372313271B0F1B130B0F0B07B35B4FBF7B6FCB9B
+     $93D7BBB7CBD7DFB3C7D39FB7C387A7B77397A75B879B47778B2F677F17536F134B670F43
+     $5B0B3F5307374B072F3F072733001F2B00171F000F1300070B0000008B5757834F4F7B47
+     $477343436B3B3B6333335B2F2F572B2B4B23233F1F1F331B1B2B13131F0F0F130B0B0B07
+     $07000000979F7B8F9773878B6B7F8363777B5F7373576B6B4F6363475B5B434F4F3B4343
+     $3337372B2F2F2323231B1717130F0F0B9F4B3F9343378B3B2F7F3727772F236B2B1B6323
+     $17571F134F1B0F43170B37130B2B0F071F0B071707000B0000000000777BCF6F73C3676B
+     $B76363A75B5B9B53578F4B4F7F4747733F3F673737572F2F4B27273F231F2F1B1723130F
+     $170B07079BAB7B8F9F6F8797637B8B5773834B6777435F6F3B5767334B5B273F4F1B3743
+     $132F3B0B232F071B23001317000B0F0000FF0023E70F3FD31B53BB275FA72F5F8F335F7B
+     $33FFFFFFFFFFD3FFFFA7FFFF7FFFFF53FFFF27FFEB1FFFD717FFBF0FFFAB07FF9300EF7F
+     $00E36B00D35700C74700B73B00AB2B009B1F008F17007F0F007307005F00004700002F00
+     $001B0000EF00003737FFFF00000000FF2B2B231B1B1713130FEB977FC373539F57337B3F
+     $1BEBD3C7C7AB9BA78B77876B579F5B53
+    ShaderFiles: =
+    {
+      shaders/shaderlist.txt =
+      {
+        Data =
+            "// Created by QuArK"$0D0A
+            "// All shaders are extracted to a single file called 'quark.shader'"$0D0A
+            "quark"$0D0A
+      }
+      shaders/shaderlist.txt =
+      {    // 2nd case: if there is no shader in the map
+        Data =
+            "// Created by QuArK"$0D0A
+            "// No shader in this map"$0D0A
+      }
+    }
+    TextureFlags:form =   // a form for setting flags on polyhedron faces
+    {
+      Style = "5"
+      Reset: =
+      {
+        Cap = "Reset to default"
+        Typ = "B"
+        Hint = "Reset all flags to the texture's default"
+        Delete: =
+        {
+          Flags = ""      // this button deletes these Specifics
+          Contents = ""
+          Value = ""
+        }
+      }
+      Contents: =
+      {
+        Cap = "detail"
+        Typ = "X134217728"
+        Hint = "for small, detail brushes that compiler can ignore"
+      }
+    }
+  }
+  NewFiles.qtx =
+  {
+    ToolBox = "New files..."
+    Root = "FAKK2 file types.qtxfolder"
+    FAKK2 file types.qtxfolder =
+    {
+      Pk3.pk3 = { }
+    }
+  }
+  walltex:incl =
+  {
+    tex = "eden/basicwall"
+  }
+  floortex:incl =
+  {
+    tex = "eden/floortile"
+  }
+  ceiltex:incl =
+  {
+    tex = "eden/edenfloor"
+  }
+  caulktex:incl =
+  {
+    tex = "common/caulk"
+  }
+  NewMap:incl =
+  {
+    Game = "FAKK2"
+    Root = "worldspawn:b"
+    worldspawn:b =
+    {
+      farplane_cull = "1"
+      Border walls:g =
+      {
+        East wall:p =
+        {
+          west:f =
+          {
+            v = '256 0 368 256 -128 368 256 0 496'
+            walltex = !
+          }
+          east:f =
+          {
+            v = '272 0 368 272 128 368 272 0 496'
+            caulktex = !
+          }
+          south:f =
+          {
+            v = '432 -192 368 560 -192 368 432 -192 496'
+            caulktex = !
+          }
+          north:f =
+          {
+            v = '432 192 368 304 192 368 432 192 496'
+            caulktex = !
+          }
+          down:f =
+          {
+            v = '432 0 0 560 0 0 432 -128 0'
+            caulktex = !
+          }
+          up:f =
+          {
+            v = '432 0 192 560 0 192 432 128 192'
+            caulktex = !
+          }
+        }
+        West wall:p =
+        {
+          west:f =
+          {
+            v = '-272 0 368 -272 -128 368 -272 0 496'
+            caulktex = !
+          }
+          east:f =
+          {
+            v = '-256 0 368 -256 128 368 -256 0 496'
+            walltex = !
+          }
+          south:f =
+          {
+            v = '432 -192 368 560 -192 368 432 -192 496'
+            caulktex = !
+          }
+          north:f =
+          {
+            v = '432 192 368 304 192 368 432 192 496'
+            caulktex = !
+          }
+          down:f =
+          {
+            v = '432 0 0 560 0 0 432 -128 0'
+            caulktex = !
+          }
+          up:f =
+          {
+            v = '432 0 192 560 0 192 432 128 192'
+            caulktex = !
+          }
+        }
+        North wall:p =
+        {
+          west:f =
+          {
+            v = '-256 0 368 -256 -128 368 -256 0 496'
+            caulktex = !
+          }
+          east:f =
+          {
+            v = '256 0 368 256 128 368 256 0 496'
+            caulktex = !
+          }
+          south:f =
+          {
+            v = '432 192 368 560 192 368 432 192 496'
+            walltex = !
+          }
+          north:f =
+          {
+            v = '432 208 368 304 208 368 432 208 496'
+            caulktex = !
+          }
+          down:f =
+          {
+            v = '432 0 0 560 0 0 432 -128 0'
+            caulktex = !
+          }
+          up:f =
+          {
+            v = '432 0 192 560 0 192 432 128 192'
+            caulktex = !
+          }
+        }
+        South wall:p =
+        {
+          west:f =
+          {
+            v = '-256 0 368 -256 -128 368 -256 0 496'
+            caulktex = !
+          }
+          east:f =
+          {
+            v = '256 0 368 256 128 368 256 0 496'
+            caulktex = !
+          }
+          south:f =
+          {
+            v = '432 -208 368 560 -208 368 432 -208 496'
+            caulktex = !
+          }
+          north:f =
+          {
+            v = '432 -192 368 304 -192 368 432 -192 496'
+            walltex = !
+          }
+          down:f =
+          {
+            v = '432 0 0 560 0 0 432 -128 0'
+            caulktex = !
+          }
+          up:f =
+          {
+            v = '432 0 192 560 0 192 432 128 192'
+            caulktex = !
+          }
+        }
+        Sky:p =
+        {
+          west:f =
+          {
+            v = '-256 0 368 -256 -128 368 -256 0 496'
+            caulktex = !
+          }
+          east:f =
+          {
+            v = '256 0 368 256 128 368 256 0 496'
+            caulktex = !
+          }
+          south:f =
+          {
+            v = '432 -192 368 560 -192 368 432 -192 496'
+            caulktex = !
+          }
+          north:f =
+          {
+            v = '432 192 368 304 192 368 432 192 496'
+            caulktex = !
+          }
+          down:f =
+          {
+            v = '432 0 192 560 0 192 432 -128 192'
+            ceiltex = !
+          }
+          up:f =
+          {
+            v = '432 0 208 560 0 208 432 128 208'
+            caulktex = !
+          }
+        }
+        Floor:p =
+        {
+          west:f =
+          {
+            v = '-256 0 368 -256 -128 368 -256 0 496'
+            caulktex = !
+          }
+          east:f =
+          {
+            v = '256 0 368 256 128 368 256 0 496'
+            caulktex = !
+          }
+          south:f =
+          {
+            v = '432 -192 368 560 -192 368 432 -192 496'
+            caulktex = !
+          }
+          north:f =
+          {
+            v = '432 192 368 304 192 368 432 192 496'
+            caulktex = !
+          }
+          down:f =
+          {
+            v = '432 0 -16 560 0 -16 432 -128 -16'
+            caulktex = !
+          }
+          up:f =
+          {
+            v = '432 0 0 560 0 0 432 128 0'
+            floortex = !
+          }
+        }
+      }
+      info_player_start:e =
+      {
+        origin = "-144 0 32"
+        angle = "360"
+      }
+      light:e =
+      {
+        light = "300"
+        _color = "1 1 1"
+        angles = "0 0 0"
+        origin = "0 0 96"
+      }
+    }
+  }
+}

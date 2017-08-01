@@ -1,0 +1,2793 @@
+QQRKSRC1
+// This file has been written by QuArK QuArK 6.4 alpha
+// It's the text version of file: prefabs_hl2.qrk
+
+{
+  Description = "Custom Add-on"
+  Toolbox Folders.qtx =
+  {
+    ToolBox = "New map items..."
+    Root = "HL2 Prefabs.qtxfolder"
+    HL2 Prefabs.qtxfolder =
+    {
+      lights+props.qtxfolder =
+      {
+        combinelight:g =
+        {
+          prop_static:e =
+          {
+            angles = "0 270 0"
+            solid = "6"
+            fademindist = "-1"
+            fadescale = "1"
+            model = "models/props_combine/combine_light002a.mdl"
+            origin = "0 -238 16.65"
+          }
+          point_spotlight:e =
+          {
+            angles = "0 90 0"
+            spawnflags = "3"
+            spotlightlength = "500"
+            spotlightwidth = "75"
+            rendercolor = "255 255 255"
+            origin = "0 -227.5 34"
+          }
+          light_spot:e =
+          {
+            angles = "0 90 0"
+            _light = "255 255 255 800"
+            _quadratic_attn = "1"
+            _inner_cone = "20"
+            _cone = "30"
+            _exponent = "1"
+            pitch = "0"
+            _constant_attn = "500000"
+            origin = "0 -226 34"
+          }
+        }
+        misc_wall_lamp:g =
+        {
+          point_spotlight:e =
+          {
+            rendercolor = "255 255 255"
+            spotlightwidth = "64"
+            spotlightlength = "256"
+            spawnflags = "3"
+            angles = "90 0 0"
+            origin = "-2 4 -5.75"
+          }
+          light_spot:e =
+          {
+            _distance = "0"
+            _linear_attn = "0"
+            _constant_attn = "0"
+            style = "0"
+            pitch = "-90"
+            _exponent = "3"
+            _cone = "60"
+            _inner_cone = "20"
+            _quadratic_attn = "1"
+            _light = "255 255 255 800"
+            angles = "-90 270 0"
+            origin = "-1.89 3.54 -2.00"
+          }
+          prop_static:e =
+          {
+            angles = "0 0 0"
+            skin = "1"
+            fademindist = "0.0"
+            fademaxdist = "0.0"
+            solid = "6"
+            model = "models/props_c17/LampFixture01a.mdl"
+            fadescale = "1"
+            origin = "-13.89 3.54 -7.84"
+          }
+        }
+        lab_flourescentlight:g =
+        {
+          prop_static:e =
+          {
+            angles = "0 90 0"
+            skin = "0"
+            fademindist = "0.0"
+            fademaxdist = "0.0"
+            solid = "6"
+            model = "models/props_lab/lab_flourescentlight002b.mdl"
+            fadescale = "1"
+            origin = "-5248 -4268.86 117"
+          }
+          light_spot:e =
+          {
+            _constant_attn = "500000"
+            pitch = "-74"
+            _exponent = "1"
+            _cone = "70"
+            _inner_cone = "30"
+            angles = "-74 90 -90"
+            _quadratic_attn = "1"
+            _light = "159 237 215 600"
+            origin = "-5248.01 -4265.9 120.954"
+          }
+        }
+        flourescentlight_effect:g =
+        {
+          prop_static:e =
+          {
+            angles = "0 90 0"
+            skin = "1"
+            fademindist = "0.0"
+            fademaxdist = "0.0"
+            solid = "6"
+            model = "models/props_interiors/Lights_Florescent01a.mdl"
+            fadescale = "1"
+            origin = "-0.08 -0.45 12.70"
+          }
+          light_spot:e =
+          {
+            _constant_attn = "20000"
+            pitch = "-90"
+            _exponent = "1"
+            _cone = "50"
+            _inner_cone = "30"
+            angles = "-90 -180 0"
+            _quadratic_attn = "1"
+            _light = "159 237 215 900"
+            origin = "-0.16 -0.45 0.00"
+          }
+          func_illusionary:b =
+          {
+            renderfx = "0"
+            rendermode = "1"
+            renderamt = "0"
+            rendercolor = "255 255 255"
+            disablereceiveshadows = "1"
+            disableshadows = "1"
+            poly:p =
+            {
+              face:f =
+              {
+                v = '31.83590 -4.45020 7.70000 -32.16020 3.54980 7.70000 -32.15891
+                  -4.45020 7.70000'
+                tex = "TOOLS/TOOLSNODRAW"
+                tv = '7364.45000 -31.83590 7364.45000 0.16410 7332.45000 -31.83590'
+              }
+              face:f =
+              {
+                v = '-28.15630 -0.45020 3.70300 -32.15891 3.54980 7.70000 31.83590
+                  3.54980 7.70000'
+                tex = "LIGHTS/WHITE002"
+                tv = '2.84235 163.68800 2.84235 254.23170 -61.15765 163.68800'
+              }
+              face:f =
+              {
+                v = '27.83980 -0.45020 3.70200 31.83200 -4.45020 7.70000 -32.16020
+                  -4.45020 7.70000'
+                tex = "LIGHTS/WHITE002"
+                tv = '-58.83845 163.66610 -58.83845 254.19850 5.16155 163.66610'
+              }
+              face:f =
+              {
+                v = '31.83590 -4.45020 7.70000 27.83840 -0.45020 3.70200 31.83590
+                  3.54980 7.70000'
+                tex = "LIGHTS/WHITE002"
+                tv = '7360.00500 169.26860 7360.00500 259.77270 7296.00500 169.26860'
+              }
+              face:f =
+              {
+                v = '-28.16020 -0.45020 3.70400 -32.15630 -4.45020 7.70000 -32.15630
+                  3.54980 7.70000'
+                tex = "LIGHTS/WHITE002"
+                tv = '-7356.00500 163.63010 -7356.00500 254.14090 -7292.00500 163.63010'
+              }
+            }
+          }
+        }
+        lab_flourescentlight_glow:g =
+        {
+          prop_static:e =
+          {
+            model = "models/props_lab/lab_flourescentlight001b.mdl"
+            angles = "0 270 0"
+            skin = "0"
+            solid = "6"
+            fademindist = "-1"
+            fademaxdist = "0"
+            fadescale = "1"
+            origin = "-62.92 -63.78 103.05"
+          }
+          env_lightglow:e =
+          {
+            angles = "0 0 0"
+            rendercolor = "245 240 224"
+            VerticalGlowSize = "32"
+            HorizontalGlowSize = "32"
+            MinDist = "550"
+            MaxDist = "1"
+            GlowProxySize = "6.0"
+            origin = "-68 -64 31"
+          }
+          light_spot:e =
+          {
+            id = "1690270"
+            angles = "0 303 0"
+            _light = "238 225 200 20"
+            _quadratic_attn = "1"
+            _inner_cone = "0"
+            _cone = "40"
+            _exponent = "0"
+            pitch = "-77"
+            origin = "-72 -56 24"
+          }
+        }
+      }
+      brushes+props.qtxfolder =
+      {
+        stairs_metal_white_handrails:g =
+        {
+          func_detail:b =
+          {
+            poly:p =
+            {
+              face:f =
+              {
+                v = '-46 796 488 -46 808 486 -46 796 486'
+                tex = "TOOLS/TOOLSNODRAW"
+                tv = '796 476 828 476 796 444'
+              }
+              face:f =
+              {
+                v = '14 808 488 14 796 486 14 808 486'
+                tex = "TOOLS/TOOLSNODRAW"
+                tv = '-808 476 -840 476 -808 444'
+              }
+              face:f =
+              {
+                v = '14 796 488 -46 796 486 14 796 486'
+                tex = "METAL/METALSTAIR003A"
+                tv = '85.75000 484 53.75000 484 85.75000 452'
+              }
+              face:f =
+              {
+                v = '-46 808 488 14 808 486 -46 808 486'
+                tex = "METAL/METALSTAIR003A"
+                tv = '-145.75000 484 -113.75000 484 -145.75000 452'
+              }
+              face:f =
+              {
+                v = '-46 808 486 14 796 486 -46 796 486'
+                tex = "METAL/METALSTAIR003A"
+                tv = '-780 -60 -780 -28 -812 -60'
+              }
+              face:f =
+              {
+                v = '-46 796 488 14 808 488 -46 808 488'
+                tex = "METAL/METALSTAIR003A"
+                tv = '-768 60 -768 28 -800 60'
+              }
+            }
+            poly:p =
+            {
+              face:f =
+              {
+                v = '-46 784 480 -46 796 478 -46 784 478'
+                tex = "TOOLS/TOOLSNODRAW"
+                tv = '784 468 816 468 784 436'
+              }
+              face:f =
+              {
+                v = '14 796 480 14 784 478 14 796 478'
+                tex = "TOOLS/TOOLSNODRAW"
+                tv = '-796 468 -828 468 -796 436'
+              }
+              face:f =
+              {
+                v = '14 784 480 -46 784 478 14 784 478'
+                tex = "METAL/METALSTAIR003A"
+                tv = '50 468 18 468 50 436'
+              }
+              face:f =
+              {
+                v = '-46 796 480 14 796 478 -46 796 478'
+                tex = "METAL/METALSTAIR003A"
+                tv = '-110 468 -78 468 -110 436'
+              }
+              face:f =
+              {
+                v = '-46 796 478 14 784 478 -46 784 478'
+                tex = "METAL/METALSTAIR003A"
+                tv = '-780 -94 -780 -62 -812 -94'
+              }
+              face:f =
+              {
+                v = '-46 784 480 14 796 480 -46 796 480'
+                tex = "METAL/METALSTAIR003A"
+                tv = '-768 94 -768 62 -800 94'
+              }
+            }
+            poly:p =
+            {
+              face:f =
+              {
+                v = '-46 772 472 -46 784 470 -46 772 470'
+                tex = "TOOLS/TOOLSNODRAW"
+                tv = '772 460 804 460 772 428'
+              }
+              face:f =
+              {
+                v = '14 784 472 14 772 470 14 784 470'
+                tex = "TOOLS/TOOLSNODRAW"
+                tv = '-784 460 -816 460 -784 428'
+              }
+              face:f =
+              {
+                v = '14 772 472 -46 772 470 14 772 470'
+                tex = "METAL/METALSTAIR003A"
+                tv = '85.75000 468 53.75000 468 85.75000 436'
+              }
+              face:f =
+              {
+                v = '-46 784 472 14 784 470 -46 784 470'
+                tex = "METAL/METALSTAIR003A"
+                tv = '-145.75000 468 -113.75000 468 -145.75000 436'
+              }
+              face:f =
+              {
+                v = '-46 784 470 14 772 470 -46 772 470'
+                tex = "METAL/METALSTAIR003A"
+                tv = '-780 -158 -780 -126 -812 -158'
+              }
+              face:f =
+              {
+                v = '-46 772 472 14 784 472 -46 784 472'
+                tex = "METAL/METALSTAIR003A"
+                tv = '-768 158 -768 126 -800 158'
+              }
+            }
+            poly:p =
+            {
+              face:f =
+              {
+                v = '-46 760 464 -46 772 462 -46 760 462'
+                tex = "TOOLS/TOOLSNODRAW"
+                tv = '760 452 792 452 760 420'
+              }
+              face:f =
+              {
+                v = '14 772 464 14 760 462 14 772 462'
+                tex = "TOOLS/TOOLSNODRAW"
+                tv = '-772 452 -804 452 -772 420'
+              }
+              face:f =
+              {
+                v = '14 760 464 -46 760 462 14 760 462'
+                tex = "METAL/METALSTAIR003A"
+                tv = '19 452 -13 452 19 420'
+              }
+              face:f =
+              {
+                v = '-46 772 464 14 772 462 -46 772 462'
+                tex = "METAL/METALSTAIR003A"
+                tv = '-110 452 -78 452 -110 420'
+              }
+              face:f =
+              {
+                v = '-46 772 462 14 760 462 -46 760 462'
+                tex = "METAL/METALSTAIR003A"
+                tv = '-764.50000 -128 -764.50000 -96 -796.50000 -128'
+              }
+              face:f =
+              {
+                v = '-46 760 464 14 772 464 -46 772 464'
+                tex = "METAL/METALSTAIR003A"
+                tv = '-752.50000 128 -752.50000 96 -784.50000 128'
+              }
+            }
+            poly:p =
+            {
+              face:f =
+              {
+                v = '-46 748 456 -46 760 454 -46 748 454'
+                tex = "TOOLS/TOOLSNODRAW"
+                tv = '748 444 780 444 748 412'
+              }
+              face:f =
+              {
+                v = '14 760 456 14 748 454 14 760 454'
+                tex = "TOOLS/TOOLSNODRAW"
+                tv = '-760 444 -792 444 -760 412'
+              }
+              face:f =
+              {
+                v = '14 748 456 -46 748 454 14 748 454'
+                tex = "METAL/METALSTAIR003A"
+                tv = '50 452 18 452 50 420'
+              }
+              face:f =
+              {
+                v = '-46 760 456 14 760 454 -46 760 454'
+                tex = "METAL/METALSTAIR003A"
+                tv = '-110 452 -78 452 -110 420'
+              }
+              face:f =
+              {
+                v = '-46 760 454 14 748 454 -46 748 454'
+                tex = "METAL/METALSTAIR003A"
+                tv = '-732.50000 -60 -732.50000 -28 -764.50000 -60'
+              }
+              face:f =
+              {
+                v = '-46 748 456 14 760 456 -46 760 456'
+                tex = "METAL/METALSTAIR003A"
+                tv = '-720.50000 60 -720.50000 28 -752.50000 60'
+              }
+            }
+            poly:p =
+            {
+              face:f =
+              {
+                v = '-46 712 432 -46 724 430 -46 712 430'
+                tex = "TOOLS/TOOLSNODRAW"
+                tv = '712 420 744 420 712 388'
+              }
+              face:f =
+              {
+                v = '14 724 432 14 712 430 14 724 430'
+                tex = "TOOLS/TOOLSNODRAW"
+                tv = '-724 420 -756 420 -724 388'
+              }
+              face:f =
+              {
+                v = '14 712 432 -46 712 430 14 712 430'
+                tex = "METAL/METALSTAIR003A"
+                tv = '72 420 40 420 72 388'
+              }
+              face:f =
+              {
+                v = '-46 724 432 14 724 430 -46 724 430'
+                tex = "METAL/METALSTAIR003A"
+                tv = '-110 420 -78 420 -110 388'
+              }
+              face:f =
+              {
+                v = '-46 724 430 14 712 430 -46 712 430'
+                tex = "METAL/METALSTAIR003A"
+                tv = '-716.50000 -128 -716.50000 -96 -748.50000 -128'
+              }
+              face:f =
+              {
+                v = '-46 712 432 14 724 432 -46 724 432'
+                tex = "METAL/METALSTAIR003A"
+                tv = '-704.50000 128 -704.50000 96 -736.50000 128'
+              }
+            }
+            poly:p =
+            {
+              face:f =
+              {
+                v = '-46 688 416 -46 700 414 -46 688 414'
+                tex = "TOOLS/TOOLSNODRAW"
+                tv = '688 404 720 404 688 372'
+              }
+              face:f =
+              {
+                v = '14 700 416 14 688 414 14 700 414'
+                tex = "TOOLS/TOOLSNODRAW"
+                tv = '-700 404 -732 404 -700 372'
+              }
+              face:f =
+              {
+                v = '14 688 416 -46 688 414 14 688 414'
+                tex = "METAL/METALSTAIR003A"
+                tv = '50 404 18 404 50 372'
+              }
+              face:f =
+              {
+                v = '-46 700 416 14 700 414 -46 700 414'
+                tex = "METAL/METALSTAIR003A"
+                tv = '-110 404 -78 404 -110 372'
+              }
+              face:f =
+              {
+                v = '-46 700 414 14 688 414 -46 688 414'
+                tex = "METAL/METALSTAIR003A"
+                tv = '-700 -172 -700 -140 -732 -172'
+              }
+              face:f =
+              {
+                v = '-46 688 416 14 700 416 -46 700 416'
+                tex = "METAL/METALSTAIR003A"
+                tv = '-688 172 -688 140 -720 172'
+              }
+            }
+            poly:p =
+            {
+              face:f =
+              {
+                v = '-46 700 424 -46 712 422 -46 700 422'
+                tex = "TOOLS/TOOLSNODRAW"
+                tv = '700 412 732 412 700 380'
+              }
+              face:f =
+              {
+                v = '14 712 424 14 700 422 14 712 422'
+                tex = "TOOLS/TOOLSNODRAW"
+                tv = '-712 412 -744 412 -712 380'
+              }
+              face:f =
+              {
+                v = '14 700 424 -46 700 422 14 700 422'
+                tex = "METAL/METALSTAIR003A"
+                tv = '-11 404 -43 404 -11 372'
+              }
+              face:f =
+              {
+                v = '-46 712 424 14 712 422 -46 712 422'
+                tex = "METAL/METALSTAIR003A"
+                tv = '-49 404 -17 404 -49 372'
+              }
+              face:f =
+              {
+                v = '-46 712 422 14 700 422 -46 700 422'
+                tex = "METAL/METALSTAIR003A"
+                tv = '-684 -70.25000 -684 -38.25000 -716 -70.25000'
+              }
+              face:f =
+              {
+                v = '-46 700 424 14 712 424 -46 712 424'
+                tex = "METAL/METALSTAIR003A"
+                tv = '-672 70.25000 -672 38.25000 -704 70.25000'
+              }
+            }
+            poly:p =
+            {
+              face:f =
+              {
+                v = '-46 676 408 -46 688 406 -46 676 406'
+                tex = "TOOLS/TOOLSNODRAW"
+                tv = '676 396 708 396 676 364'
+              }
+              face:f =
+              {
+                v = '14 688 408 14 676 406 14 688 406'
+                tex = "TOOLS/TOOLSNODRAW"
+                tv = '-688 396 -720 396 -688 364'
+              }
+              face:f =
+              {
+                v = '14 676 408 -46 676 406 14 676 406'
+                tex = "METAL/METALSTAIR003A"
+                tv = '-13 388 -45 388 -13 356'
+              }
+              face:f =
+              {
+                v = '-46 688 408 14 688 406 -46 688 406'
+                tex = "METAL/METALSTAIR003A"
+                tv = '-47 388 -15 388 -47 356'
+              }
+              face:f =
+              {
+                v = '-46 688 406 14 676 406 -46 676 406'
+                tex = "METAL/METALSTAIR003A"
+                tv = '-668 -110 -668 -78 -700 -110'
+              }
+              face:f =
+              {
+                v = '-46 676 408 14 688 408 -46 688 408'
+                tex = "METAL/METALSTAIR003A"
+                tv = '-656 110 -656 78 -688 110'
+              }
+            }
+            poly:p =
+            {
+              face:f =
+              {
+                v = '-46 664 400 -46 676 398 -46 664 398'
+                tex = "TOOLS/TOOLSNODRAW"
+                tv = '664 388 696 388 664 356'
+              }
+              face:f =
+              {
+                v = '14 676 400 14 664 398 14 676 398'
+                tex = "TOOLS/TOOLSNODRAW"
+                tv = '-676 388 -708 388 -676 356'
+              }
+              face:f =
+              {
+                v = '14 664 400 -46 664 398 14 664 398'
+                tex = "METAL/METALSTAIR003A"
+                tv = '74.50000 388 42.50000 388 74.50000 356'
+              }
+              face:f =
+              {
+                v = '-46 676 400 14 676 398 -46 676 398'
+                tex = "METAL/METALSTAIR003A"
+                tv = '-110 388 -78 388 -110 356'
+              }
+              face:f =
+              {
+                v = '-46 676 398 14 664 398 -46 664 398'
+                tex = "METAL/METALSTAIR003A"
+                tv = '-652 -110 -652 -78 -684 -110'
+              }
+              face:f =
+              {
+                v = '-46 664 400 14 676 400 -46 676 400'
+                tex = "METAL/METALSTAIR003A"
+                tv = '-640 110 -640 78 -672 110'
+              }
+            }
+            poly:p =
+            {
+              face:f =
+              {
+                v = '-46 724 440 -46 736 438 -46 724 438'
+                tex = "TOOLS/TOOLSNODRAW"
+                tv = '724 428 756 428 724 396'
+              }
+              face:f =
+              {
+                v = '14 736 440 14 724 438 14 736 438'
+                tex = "TOOLS/TOOLSNODRAW"
+                tv = '-736 428 -768 428 -736 396'
+              }
+              face:f =
+              {
+                v = '14 724 440 -46 724 438 14 724 438'
+                tex = "METAL/METALSTAIR003A"
+                tv = '50 436 18 436 50 404'
+              }
+              face:f =
+              {
+                v = '-46 736 440 14 736 438 -46 736 438'
+                tex = "METAL/METALSTAIR003A"
+                tv = '-110 436 -78 436 -110 404'
+              }
+              face:f =
+              {
+                v = '-46 736 438 14 724 438 -46 724 438'
+                tex = "METAL/METALSTAIR003A"
+                tv = '-732.50000 -94 -732.50000 -62 -764.50000 -94'
+              }
+              face:f =
+              {
+                v = '-46 724 440 14 736 440 -46 736 440'
+                tex = "METAL/METALSTAIR003A"
+                tv = '-720.50000 94 -720.50000 62 -752.50000 94'
+              }
+            }
+            poly:p =
+            {
+              face:f =
+              {
+                v = '14 640.00400 384 14 832 512 14 832 502'
+                tex = "METAL/METALSTAIR003A"
+                tv = '721.72770 427.36260 695.19840 409.46840 739.62180 400.83340'
+              }
+              face:f =
+              {
+                v = '16 832 512 16 640 384 16 832 502'
+                tex = "METAL/METALSTAIR003A"
+                tv = '-913.72360 555.36260 -887.19440 537.46840 -931.61780 528.83340'
+              }
+              face:f =
+              {
+                v = '14 832 512 16 832 502 14 832 502'
+                tex = "METAL/METALSTAIR003A"
+                tv = '106 512 74 512 106 480'
+              }
+              face:f =
+              {
+                v = '14 655 384 16 640.00400 384 14 640 384'
+                tex = "METAL/METALSTAIR003A"
+                tv = '-655 106 -655 74 -623 106'
+              }
+              face:f =
+              {
+                v = '14 640.00400 384 16 640 384 16 832 512'
+                tex = "METAL/METALSTAIR003A"
+                tv = '-104.71070 769.44460 -72.71078 769.36720 -104.77520 730.98550'
+              }
+              face:f =
+              {
+                v = '14 832 502 16 655.00400 384 14 655 384'
+                tex = "METAL/METALSTAIR003A"
+                tv = '107.67560 999.68160 75.67563 999.75900 107.61110 961.22240'
+              }
+            }
+            poly:p =
+            {
+              face:f =
+              {
+                v = '-46 652 392 -46 664 390 -46 652 390'
+                tex = "TOOLS/TOOLSNODRAW"
+                tv = '652 380 684 380 652 348'
+              }
+              face:f =
+              {
+                v = '14 664 392 14 652 390 14 664 390'
+                tex = "TOOLS/TOOLSNODRAW"
+                tv = '-664 380 -696 380 -664 348'
+              }
+              face:f =
+              {
+                v = '14 652 392 -46 652 390 14 652 390'
+                tex = "METAL/METALSTAIR003A"
+                tv = '50 372 18 372 50 340'
+              }
+              face:f =
+              {
+                v = '-46 664 392 14 664 390 -46 664 390'
+                tex = "METAL/METALSTAIR003A"
+                tv = '-110 372 -78 372 -110 340'
+              }
+              face:f =
+              {
+                v = '-46 664 390 14 652 390 -46 652 390'
+                tex = "METAL/METALSTAIR003A"
+                tv = '-652 -128 -652 -96 -684 -128'
+              }
+              face:f =
+              {
+                v = '-46 652 392 14 664 392 -46 664 392'
+                tex = "METAL/METALSTAIR003A"
+                tv = '-640 128 -640 96 -672 128'
+              }
+            }
+            poly:p =
+            {
+              face:f =
+              {
+                v = '-46 736 448 -46 748 446 -46 736 446'
+                tex = "TOOLS/TOOLSNODRAW"
+                tv = '736 436 768 436 736 404'
+              }
+              face:f =
+              {
+                v = '14 748 448 14 736 446 14 748 446'
+                tex = "TOOLS/TOOLSNODRAW"
+                tv = '-748 436 -780 436 -748 404'
+              }
+              face:f =
+              {
+                v = '14 736 448 -46 736 446 14 736 446'
+                tex = "METAL/METALSTAIR003A"
+                tv = '50 436 18 436 50 404'
+              }
+              face:f =
+              {
+                v = '-46 748 448 14 748 446 -46 748 446'
+                tex = "METAL/METALSTAIR003A"
+                tv = '-110 436 -78 436 -110 404'
+              }
+              face:f =
+              {
+                v = '-46 748 446 14 736 446 -46 736 446'
+                tex = "METAL/METALSTAIR003A"
+                tv = '-748 -60 -748 -28 -780 -60'
+              }
+              face:f =
+              {
+                v = '-46 736 448 14 748 448 -46 748 448'
+                tex = "METAL/METALSTAIR003A"
+                tv = '-736 60 -736 28 -768 60'
+              }
+            }
+            poly:p =
+            {
+              face:f =
+              {
+                v = '-48 640.00400 384 -48 832 512 -48 832 502'
+                tex = "METAL/METALSTAIR003A"
+                tv = '721.72770 427.36260 695.19840 409.46840 739.62180 400.83340'
+              }
+              face:f =
+              {
+                v = '-46 832 512 -46 640 384 -46 832 502'
+                tex = "METAL/METALSTAIR003A"
+                tv = '-913.72360 555.36260 -887.19440 537.46840 -931.61780 528.83340'
+              }
+              face:f =
+              {
+                v = '-48 832 512 -46 832 502 -48 832 502'
+                tex = "METAL/METALSTAIR003A"
+                tv = '44 512 12 512 44 480'
+              }
+              face:f =
+              {
+                v = '-48 655 384 -46 640.00400 384 -48 640 384'
+                tex = "METAL/METALSTAIR003A"
+                tv = '-655 44 -655 12 -623 44'
+              }
+              face:f =
+              {
+                v = '-48 640.00400 384 -46 640 384 -46 832 512'
+                tex = "METAL/METALSTAIR003A"
+                tv = '-42.71084 769.29460 -10.71091 769.21710 -42.77530 730.83540'
+              }
+              face:f =
+              {
+                v = '-48 832 502 -46 655.00400 384 -48 655 384'
+                tex = "METAL/METALSTAIR003A"
+                tv = '45.67569 999.83170 13.67575 999.90910 45.61124 961.37250'
+              }
+            }
+            poly:p =
+            {
+              face:f =
+              {
+                v = '-46 820 504 -46 832 502 -46 820 502'
+                tex = "TOOLS/TOOLSNODRAW"
+                tv = '820 492 852 492 820 460'
+              }
+              face:f =
+              {
+                v = '14 832 504 14 820 502 14 832 502'
+                tex = "TOOLS/TOOLSNODRAW"
+                tv = '-832 492 -864 492 -832 460'
+              }
+              face:f =
+              {
+                v = '14 820 504 -46 820 502 14 820 502'
+                tex = "METAL/METALSTAIR003A"
+                tv = '50 499.75000 18 499.75000 50 467.75000'
+              }
+              face:f =
+              {
+                v = '-46 832 504 14 832 502 -46 832 502'
+                tex = "METAL/METALSTAIR003A"
+                tv = '-110 499.75000 -78 499.75000 -110 467.75000'
+              }
+              face:f =
+              {
+                v = '-46 832 502 14 820 502 -46 820 502'
+                tex = "METAL/METALSTAIR003A"
+                tv = '-812 -110 -812 -78 -844 -110'
+              }
+              face:f =
+              {
+                v = '-46 820 504 14 832 504 -46 832 504'
+                tex = "METAL/METALSTAIR003A"
+                tv = '-800 110 -800 78 -832 110'
+              }
+            }
+            poly:p =
+            {
+              face:f =
+              {
+                v = '-46 808 496 -46 820 494 -46 808 494'
+                tex = "TOOLS/TOOLSNODRAW"
+                tv = '808 484 840 484 808 452'
+              }
+              face:f =
+              {
+                v = '14 820 496 14 808 494 14 820 494'
+                tex = "TOOLS/TOOLSNODRAW"
+                tv = '-820 484 -852 484 -820 452'
+              }
+              face:f =
+              {
+                v = '14 808 496 -46 808 494 14 808 494'
+                tex = "METAL/METALSTAIR003A"
+                tv = '50 484 18 484 50 452'
+              }
+              face:f =
+              {
+                v = '-46 820 496 14 820 494 -46 820 494'
+                tex = "METAL/METALSTAIR003A"
+                tv = '-110 484 -78 484 -110 452'
+              }
+              face:f =
+              {
+                v = '-46 820 494 14 808 494 -46 808 494'
+                tex = "METAL/METALSTAIR003A"
+                tv = '-812 -128 -812 -96 -844 -128'
+              }
+              face:f =
+              {
+                v = '-46 808 496 14 820 496 -46 820 496'
+                tex = "METAL/METALSTAIR003A"
+                tv = '-800 128 -800 96 -832 128'
+              }
+            }
+          }
+          prop_static:e =
+          {
+            angles = "0 0 0"
+            skin = "0"
+            fademindist = "0.0"
+            fademaxdist = "0.0"
+            solid = "6"
+            model = "models/props_c17/Handrail04_DoubleRise.mdl"
+            fadescale = "1"
+            origin = "-47.002 731.35 468.486"
+          }
+          prop_static:e =
+          {
+            angles = "0 0 0"
+            skin = "0"
+            fademindist = "0.0"
+            fademaxdist = "0.0"
+            solid = "6"
+            model = "models/props_c17/Handrail04_DoubleRise.mdl"
+            fadescale = "1"
+            origin = "14.999 731.35 468.486"
+          }
+          playerclip:p =
+          {
+            face:f =
+            {
+              v = '-48 831 511.99600 -48 638 384 -48 819.36200 552'
+              tex = "Tools/toolsplayerclip"
+              tv = '831 511.99600 863 511.99600 831 479.99600'
+            }
+            face:f =
+            {
+              v = '-46 831 552 -46 638.99800 428 -46 637.99800 383.99600'
+              tex = "Tools/toolsplayerclip"
+              tv = '-831 552 -799 552 -831 520'
+            }
+            face:f =
+            {
+              v = '-48 831 552 -46 831 552 -46 831 511.99600'
+              tex = "Tools/toolsplayerclip"
+              tv = '-48 552 -16 552 -48 520'
+            }
+            face:f =
+            {
+              v = '-48 819.36200 552 -46 831 552 -48 831 552'
+              tex = "Tools/toolsplayerclip"
+              tv = '-819.36200 48 -851.36200 48 -819.36200 80'
+            }
+            face:f =
+            {
+              v = '-46 639 428 -48 639 428 -48 638 383.99600'
+              tex = "Tools/toolsplayerclip"
+              tv = '46 442.40480 78 442.40480 46 410.39650'
+            }
+            face:f =
+            {
+              v = '-48 638.99600 428 -46 819.35800 552 -48 819.35900 552'
+              tex = "Tools/toolsplayerclip"
+              tv = '48.32877 769.01320 48.34245 801.01320 80.32877 768.99950'
+            }
+            face:f =
+            {
+              v = '-48 831 512.00200 -46 831 512 -46 637.99600 383.99800'
+              tex = "Tools/toolsplayerclip"
+              tv = '-46.76548 975.58230 -46.80597 943.58230 -78.76546 975.62270'
+            }
+          }
+          playerclip:p =
+          {
+            face:f =
+            {
+              v = '14 832 511.99600 14 639 384 14 820.36200 552'
+              tex = "Tools/toolsplayerclip"
+              tv = '832 511.99600 864 511.99600 832 479.99600'
+            }
+            face:f =
+            {
+              v = '16 832 552 16 639.99800 428 16 638.99800 383.99600'
+              tex = "Tools/toolsplayerclip"
+              tv = '-832 552 -800 552 -832 520'
+            }
+            face:f =
+            {
+              v = '14 832 552 16 832 552 16 832 511.99600'
+              tex = "Tools/toolsplayerclip"
+              tv = '14 552 46 552 14 520'
+            }
+            face:f =
+            {
+              v = '14 820.36200 552 16 832 552 14 832 552'
+              tex = "Tools/toolsplayerclip"
+              tv = '-820.36200 -14 -852.36200 -14 -820.36200 18'
+            }
+            face:f =
+            {
+              v = '16 640 428 14 640 428 14 639 383.99600'
+              tex = "Tools/toolsplayerclip"
+              tv = '-16 442.42750 16 442.42750 -16 410.41930'
+            }
+            face:f =
+            {
+              v = '14 640 428 16 640 427.99900 16 820.36400 552'
+              tex = "Tools/toolsplayerclip"
+              tv = '-14.46464 769.85250 -14.48396 801.85250 17.53535 769.87180'
+            }
+            face:f =
+            {
+              v = '14 832 512 16 832 512.00200 16 638.99600 384'
+              tex = "Tools/toolsplayerclip"
+              tv = '12.76444 976.37150 12.80493 944.37150 -19.23555 976.33100'
+            }
+          }
+        }
+        stairs_metal_dark:g =
+        {
+          func_detail:b =
+          {
+            poly:p =
+            {
+              face:f =
+              {
+                v = '-610 -436 200 -670 -436 198 -670 -436 200'
+                tex = "METAL/METALSTAIR004A"
+                tv = '-725.75000 196 -693.75000 196 -725.75000 164'
+              }
+              face:f =
+              {
+                v = '-670 -448 200 -610 -448 198 -610 -448 200'
+                tex = "METAL/METALSTAIR004A"
+                tv = '785.75000 196 753.75000 196 785.75000 164'
+              }
+              face:f =
+              {
+                v = '-546 -448 200 -546 -436 198 -546 -436 200'
+                tex = "METAL/METALSTAIR004A"
+                tv = '360 188 392 188 360 156'
+              }
+              face:f =
+              {
+                v = '-670 -436 200 -670 -448 198 -670 -448 200'
+                tex = "METAL/METALSTAIR004A"
+                tv = '-348 188 -380 188 -348 156'
+              }
+              face:f =
+              {
+                v = '-670 -436 198 -610 -448 198 -670 -448 198'
+                tex = "METAL/METALSTAIR004A"
+                tv = '432 -700 432 -668 464 -700'
+              }
+              face:f =
+              {
+                v = '-610 -436 200 -670 -448 200 -610 -448 200'
+                tex = "METAL/METALSTAIR004A"
+                tv = '432 496 432 464 464 496'
+              }
+            }
+            poly:p =
+            {
+              face:f =
+              {
+                v = '-610 -448 208 -670 -448 206 -670 -448 208'
+                tex = "METAL/METALSTAIR004A"
+                tv = '-725.75000 196 -693.75000 196 -725.75000 164'
+              }
+              face:f =
+              {
+                v = '-670 -460 208 -610 -460 206 -610 -460 208'
+                tex = "METAL/METALSTAIR004A"
+                tv = '785.75000 196 753.75000 196 785.75000 164'
+              }
+              face:f =
+              {
+                v = '-546 -460 208 -546 -448 206 -546 -448 208'
+                tex = "METAL/METALSTAIR004A"
+                tv = '360 188 392 188 360 156'
+              }
+              face:f =
+              {
+                v = '-670 -448 208 -670 -460 206 -670 -460 208'
+                tex = "METAL/METALSTAIR004A"
+                tv = '-348 188 -380 188 -348 156'
+              }
+              face:f =
+              {
+                v = '-670 -448 206 -610 -460 206 -670 -460 206'
+                tex = "METAL/METALSTAIR004A"
+                tv = '432 -700 432 -668 464 -700'
+              }
+              face:f =
+              {
+                v = '-610 -448 208 -670 -460 208 -610 -460 208'
+                tex = "METAL/METALSTAIR004A"
+                tv = '432 536 432 504 464 536'
+              }
+            }
+            poly:p =
+            {
+              face:f =
+              {
+                v = '-610 -460 216 -670 -460 214 -670 -460 216'
+                tex = "METAL/METALSTAIR004A"
+                tv = '-725.75000 196 -693.75000 196 -725.75000 164'
+              }
+              face:f =
+              {
+                v = '-670 -472 216 -610 -472 214 -610 -472 216'
+                tex = "METAL/METALSTAIR004A"
+                tv = '785.75000 196 753.75000 196 785.75000 164'
+              }
+              face:f =
+              {
+                v = '-546 -472 216 -546 -460 214 -546 -460 216'
+                tex = "METAL/METALSTAIR004A"
+                tv = '360 188 392 188 360 156'
+              }
+              face:f =
+              {
+                v = '-670 -460 216 -670 -472 214 -670 -472 216'
+                tex = "METAL/METALSTAIR004A"
+                tv = '-348 188 -380 188 -348 156'
+              }
+              face:f =
+              {
+                v = '-670 -460 214 -610 -472 214 -670 -472 214'
+                tex = "METAL/METALSTAIR004A"
+                tv = '432 -700 432 -668 464 -700'
+              }
+              face:f =
+              {
+                v = '-610 -460 216 -670 -472 216 -610 -472 216'
+                tex = "METAL/METALSTAIR004A"
+                tv = '432 640 432 608 464 640'
+              }
+            }
+            poly:p =
+            {
+              face:f =
+              {
+                v = '-610 -472 224 -670 -472 222 -670 -472 224'
+                tex = "METAL/METALSTAIR004A"
+                tv = '-690 212 -658 212 -690 180'
+              }
+              face:f =
+              {
+                v = '-670 -484 224 -610 -484 222 -610 -484 224'
+                tex = "METAL/METALSTAIR004A"
+                tv = '750 212 718 212 750 180'
+              }
+              face:f =
+              {
+                v = '-546 -484 224 -546 -472 222 -546 -472 224'
+                tex = "METAL/METALSTAIR004A"
+                tv = '476 212 508 212 476 180'
+              }
+              face:f =
+              {
+                v = '-670 -472 224 -670 -484 222 -670 -484 224'
+                tex = "METAL/METALSTAIR004A"
+                tv = '-464 212 -496 212 -464 180'
+              }
+              face:f =
+              {
+                v = '-670 -472 222 -610 -484 222 -670 -484 222'
+                tex = "METAL/METALSTAIR004A"
+                tv = '464 -734 464 -702 496 -734'
+              }
+              face:f =
+              {
+                v = '-610 -472 224 -670 -484 224 -610 -484 224'
+                tex = "METAL/METALSTAIR004A"
+                tv = '464 674 464 642 496 674'
+              }
+            }
+            poly:p =
+            {
+              face:f =
+              {
+                v = '-610 -484 232 -670 -484 230 -670 -484 232'
+                tex = "METAL/METALSTAIR004A"
+                tv = '-725.75000 228 -693.75000 228 -725.75000 196'
+              }
+              face:f =
+              {
+                v = '-670 -496 232 -610 -496 230 -610 -496 232'
+                tex = "METAL/METALSTAIR004A"
+                tv = '785.75000 228 753.75000 228 785.75000 196'
+              }
+              face:f =
+              {
+                v = '-546 -496 232 -546 -484 230 -546 -484 232'
+                tex = "METAL/METALSTAIR004A"
+                tv = '488 220 520 220 488 188'
+              }
+              face:f =
+              {
+                v = '-670 -484 232 -670 -496 230 -670 -496 232'
+                tex = "METAL/METALSTAIR004A"
+                tv = '-476 220 -508 220 -476 188'
+              }
+              face:f =
+              {
+                v = '-670 -484 230 -610 -496 230 -670 -496 230'
+                tex = "METAL/METALSTAIR004A"
+                tv = '464 -700 464 -668 496 -700'
+              }
+              face:f =
+              {
+                v = '-610 -484 232 -670 -496 232 -610 -496 232'
+                tex = "METAL/METALSTAIR004A"
+                tv = '464 640 464 608 496 640'
+              }
+            }
+            poly:p =
+            {
+              face:f =
+              {
+                v = '-610 -496 240 -670 -496 238 -670 -496 240'
+                tex = "METAL/METALSTAIR004A"
+                tv = '-690 212 -658 212 -690 180'
+              }
+              face:f =
+              {
+                v = '-670 -508 240 -610 -508 238 -610 -508 240'
+                tex = "METAL/METALSTAIR004A"
+                tv = '750 212 718 212 750 180'
+              }
+              face:f =
+              {
+                v = '-546 -508 240 -546 -496 238 -546 -496 240'
+                tex = "METAL/METALSTAIR004A"
+                tv = '476 212 508 212 476 180'
+              }
+              face:f =
+              {
+                v = '-670 -496 240 -670 -508 238 -670 -508 240'
+                tex = "METAL/METALSTAIR004A"
+                tv = '-464 212 -496 212 -464 180'
+              }
+              face:f =
+              {
+                v = '-670 -496 238 -610 -508 238 -670 -508 238'
+                tex = "METAL/METALSTAIR004A"
+                tv = '496 -734 496 -702 528 -734'
+              }
+              face:f =
+              {
+                v = '-610 -496 240 -670 -508 240 -610 -508 240'
+                tex = "METAL/METALSTAIR004A"
+                tv = '496 674 496 642 528 674'
+              }
+            }
+            poly:p =
+            {
+              face:f =
+              {
+                v = '-610 -508 248 -670 -508 246 -670 -508 248'
+                tex = "METAL/METALSTAIR004A"
+                tv = '-725.75000 228 -693.75000 228 -725.75000 196'
+              }
+              face:f =
+              {
+                v = '-670 -520 248 -610 -520 246 -610 -520 248'
+                tex = "METAL/METALSTAIR004A"
+                tv = '785.75000 228 753.75000 228 785.75000 196'
+              }
+              face:f =
+              {
+                v = '-546 -520 248 -546 -508 246 -546 -508 248'
+                tex = "METAL/METALSTAIR004A"
+                tv = '488 220 520 220 488 188'
+              }
+              face:f =
+              {
+                v = '-670 -508 248 -670 -520 246 -670 -520 248'
+                tex = "METAL/METALSTAIR004A"
+                tv = '-476 220 -508 220 -476 188'
+              }
+              face:f =
+              {
+                v = '-670 -508 246 -610 -520 246 -670 -520 246'
+                tex = "METAL/METALSTAIR004A"
+                tv = '496 -700 496 -668 528 -700'
+              }
+              face:f =
+              {
+                v = '-610 -508 248 -670 -520 248 -610 -520 248'
+                tex = "METAL/METALSTAIR004A"
+                tv = '496 640 496 608 528 640'
+              }
+            }
+            poly:p =
+            {
+              face:f =
+              {
+                v = '-610 -520 256 -670 -520 254 -670 -520 256'
+                tex = "METAL/METALSTAIR004A"
+                tv = '-690 244 -658 244 -690 212'
+              }
+              face:f =
+              {
+                v = '-670 -532 256 -610 -532 254 -610 -532 256'
+                tex = "METAL/METALSTAIR004A"
+                tv = '750 244 718 244 750 212'
+              }
+              face:f =
+              {
+                v = '-546 -532 256 -546 -520 254 -546 -520 256'
+                tex = "METAL/METALSTAIR004A"
+                tv = '476 244 508 244 476 212'
+              }
+              face:f =
+              {
+                v = '-670 -520 256 -670 -532 254 -670 -532 256'
+                tex = "METAL/METALSTAIR004A"
+                tv = '-464 244 -496 244 -464 212'
+              }
+              face:f =
+              {
+                v = '-670 -520 254 -610 -532 254 -670 -532 254'
+                tex = "METAL/METALSTAIR004A"
+                tv = '496 -734 496 -702 528 -734'
+              }
+              face:f =
+              {
+                v = '-610 -520 256 -670 -532 256 -610 -532 256'
+                tex = "METAL/METALSTAIR004A"
+                tv = '496 674 496 642 528 674'
+              }
+            }
+            poly:p =
+            {
+              face:f =
+              {
+                v = '-610 -532 264 -670 -532 262 -670 -532 264'
+                tex = "METAL/METALSTAIR004A"
+                tv = '-690 243.75000 -658 243.75000 -690 211.75000'
+              }
+              face:f =
+              {
+                v = '-670 -544 264 -610 -544 262 -610 -544 264'
+                tex = "METAL/METALSTAIR004A"
+                tv = '750 243.75000 718 243.75000 750 211.75000'
+              }
+              face:f =
+              {
+                v = '-546 -544 264 -546 -532 262 -546 -532 264'
+                tex = "METAL/METALSTAIR004A"
+                tv = '512 236 544 236 512 204'
+              }
+              face:f =
+              {
+                v = '-670 -532 264 -670 -544 262 -670 -544 264'
+                tex = "METAL/METALSTAIR004A"
+                tv = '-500 236 -532 236 -500 204'
+              }
+              face:f =
+              {
+                v = '-670 -532 262 -610 -544 262 -670 -544 262'
+                tex = "METAL/METALSTAIR004A"
+                tv = '528 -750 528 -718 560 -750'
+              }
+              face:f =
+              {
+                v = '-610 -532 264 -670 -544 264 -610 -544 264'
+                tex = "METAL/METALSTAIR004A"
+                tv = '528 690 528 658 560 690'
+              }
+            }
+            poly:p =
+            {
+              face:f =
+              {
+                v = '-610 -544 272 -670 -544 270 -670 -544 272'
+                tex = "METAL/METALSTAIR004A"
+                tv = '-690 244 -658 244 -690 212'
+              }
+              face:f =
+              {
+                v = '-670 -556 272 -610 -556 270 -610 -556 272'
+                tex = "METAL/METALSTAIR004A"
+                tv = '750 244 718 244 750 212'
+              }
+              face:f =
+              {
+                v = '-546 -556 272 -546 -544 270 -546 -544 272'
+                tex = "METAL/METALSTAIR004A"
+                tv = '476 244 508 244 476 212'
+              }
+              face:f =
+              {
+                v = '-670 -544 272 -670 -556 270 -670 -556 272'
+                tex = "METAL/METALSTAIR004A"
+                tv = '-464 244 -496 244 -464 212'
+              }
+              face:f =
+              {
+                v = '-670 -544 270 -610 -556 270 -670 -556 270'
+                tex = "METAL/METALSTAIR004A"
+                tv = '528 -734 528 -702 560 -734'
+              }
+              face:f =
+              {
+                v = '-610 -544 272 -670 -556 272 -610 -556 272'
+                tex = "METAL/METALSTAIR004A"
+                tv = '528 674 528 642 560 674'
+              }
+            }
+            poly:p =
+            {
+              face:f =
+              {
+                v = '-610 -556 280 -670 -556 278 -670 -556 280'
+                tex = "METAL/METALSTAIR004A"
+                tv = '-690 275.75000 -658 275.75000 -690 243.75000'
+              }
+              face:f =
+              {
+                v = '-670 -568 280 -610 -568 278 -610 -568 280'
+                tex = "METAL/METALSTAIR004A"
+                tv = '750 275.75000 718 275.75000 750 243.75000'
+              }
+              face:f =
+              {
+                v = '-546 -568 280 -546 -556 278 -546 -556 280'
+                tex = "METAL/METALSTAIR004A"
+                tv = '512 268 544 268 512 236'
+              }
+              face:f =
+              {
+                v = '-670 -556 280 -670 -568 278 -670 -568 280'
+                tex = "METAL/METALSTAIR004A"
+                tv = '-500 268 -532 268 -500 236'
+              }
+              face:f =
+              {
+                v = '-670 -556 278 -610 -568 278 -670 -568 278'
+                tex = "METAL/METALSTAIR004A"
+                tv = '528 -750 528 -718 560 -750'
+              }
+              face:f =
+              {
+                v = '-610 -556 280 -670 -568 280 -610 -568 280'
+                tex = "METAL/METALSTAIR004A"
+                tv = '528 690 528 658 560 690'
+              }
+            }
+            poly:p =
+            {
+              face:f =
+              {
+                v = '-610 -568 288 -670 -568 286 -670 -568 288'
+                tex = "METAL/METALSTAIR004A"
+                tv = '-690 276 -658 276 -690 244'
+              }
+              face:f =
+              {
+                v = '-670 -580 288 -610 -580 286 -610 -580 288'
+                tex = "METAL/METALSTAIR004A"
+                tv = '750 276 718 276 750 244'
+              }
+              face:f =
+              {
+                v = '-546 -580 288 -546 -568 286 -546 -568 288'
+                tex = "METAL/METALSTAIR004A"
+                tv = '476 276 508 276 476 244'
+              }
+              face:f =
+              {
+                v = '-670 -568 288 -670 -580 286 -670 -580 288'
+                tex = "METAL/METALSTAIR004A"
+                tv = '-464 276 -496 276 -464 244'
+              }
+              face:f =
+              {
+                v = '-670 -568 286 -610 -580 286 -670 -580 286'
+                tex = "METAL/METALSTAIR004A"
+                tv = '560 -734 560 -702 592 -734'
+              }
+              face:f =
+              {
+                v = '-610 -568 288 -670 -580 288 -610 -580 288'
+                tex = "METAL/METALSTAIR004A"
+                tv = '560 674 560 642 592 674'
+              }
+            }
+            poly:p =
+            {
+              face:f =
+              {
+                v = '-610 -580 296 -670 -580 294 -670 -580 296'
+                tex = "METAL/METALSTAIR004A"
+                tv = '-690 275.75000 -658 275.75000 -690 243.75000'
+              }
+              face:f =
+              {
+                v = '-670 -592 296 -610 -592 294 -610 -592 296'
+                tex = "METAL/METALSTAIR004A"
+                tv = '750 275.75000 718 275.75000 750 243.75000'
+              }
+              face:f =
+              {
+                v = '-546 -592 296 -546 -580 294 -546 -580 296'
+                tex = "METAL/METALSTAIR004A"
+                tv = '512 268 544 268 512 236'
+              }
+              face:f =
+              {
+                v = '-670 -580 296 -670 -592 294 -670 -592 296'
+                tex = "METAL/METALSTAIR004A"
+                tv = '-500 268 -532 268 -500 236'
+              }
+              face:f =
+              {
+                v = '-670 -580 294 -610 -592 294 -670 -592 294'
+                tex = "METAL/METALSTAIR004A"
+                tv = '560 -750 560 -718 592 -750'
+              }
+              face:f =
+              {
+                v = '-610 -580 296 -670 -592 296 -610 -592 296'
+                tex = "METAL/METALSTAIR004A"
+                tv = '560 690 560 658 592 690'
+              }
+            }
+            poly:p =
+            {
+              face:f =
+              {
+                v = '-610 -592 304 -670 -592 302 -670 -592 304'
+                tex = "METAL/METALSTAIR004A"
+                tv = '-690 276 -658 276 -690 244'
+              }
+              face:f =
+              {
+                v = '-670 -604 304 -610 -604 302 -610 -604 304'
+                tex = "METAL/METALSTAIR004A"
+                tv = '750 276 718 276 750 244'
+              }
+              face:f =
+              {
+                v = '-546 -604 304 -546 -592 302 -546 -592 304'
+                tex = "METAL/METALSTAIR004A"
+                tv = '604 276 636 276 604 244'
+              }
+              face:f =
+              {
+                v = '-670 -592 304 -670 -604 302 -670 -604 304'
+                tex = "METAL/METALSTAIR004A"
+                tv = '-592 276 -624 276 -592 244'
+              }
+              face:f =
+              {
+                v = '-670 -592 302 -610 -604 302 -670 -604 302'
+                tex = "METAL/METALSTAIR004A"
+                tv = '592 -734 592 -702 624 -734'
+              }
+              face:f =
+              {
+                v = '-610 -592 304 -670 -604 304 -610 -604 304'
+                tex = "METAL/METALSTAIR004A"
+                tv = '592 674 592 642 624 674'
+              }
+            }
+            poly:p =
+            {
+              face:f =
+              {
+                v = '-610 -604 312 -670 -604 310 -670 -604 312'
+                tex = "METAL/METALSTAIR004A"
+                tv = '-690 307.75000 -658 307.75000 -690 275.75000'
+              }
+              face:f =
+              {
+                v = '-670 -616 312 -610 -616 310 -610 -616 312'
+                tex = "METAL/METALSTAIR004A"
+                tv = '750 307.75000 718 307.75000 750 275.75000'
+              }
+              face:f =
+              {
+                v = '-546 -616 312 -546 -604 310 -546 -604 312'
+                tex = "METAL/METALSTAIR004A"
+                tv = '512 300 544 300 512 268'
+              }
+              face:f =
+              {
+                v = '-670 -604 312 -670 -616 310 -670 -616 312'
+                tex = "METAL/METALSTAIR004A"
+                tv = '-500 300 -532 300 -500 268'
+              }
+              face:f =
+              {
+                v = '-670 -604 310 -610 -616 310 -670 -616 310'
+                tex = "METAL/METALSTAIR004A"
+                tv = '592 -750 592 -718 624 -750'
+              }
+              face:f =
+              {
+                v = '-610 -604 312 -670 -616 312 -610 -616 312'
+                tex = "METAL/METALSTAIR004A"
+                tv = '592 690 592 658 624 690'
+              }
+            }
+            poly:p =
+            {
+              face:f =
+              {
+                v = '-610 -616 320 -670 -616 318 -670 -616 320'
+                tex = "METAL/METALSTAIR004A"
+                tv = '-690 308 -658 308 -690 276'
+              }
+              face:f =
+              {
+                v = '-670 -628 320 -610 -628 318 -610 -628 320'
+                tex = "METAL/METALSTAIR004A"
+                tv = '750 308 718 308 750 276'
+              }
+              face:f =
+              {
+                v = '-546 -628 320 -546 -616 318 -546 -616 320'
+                tex = "METAL/METALSTAIR004A"
+                tv = '604 308 636 308 604 276'
+              }
+              face:f =
+              {
+                v = '-670 -616 320 -670 -628 318 -670 -628 320'
+                tex = "METAL/METALSTAIR004A"
+                tv = '-592 308 -624 308 -592 276'
+              }
+              face:f =
+              {
+                v = '-670 -616 318 -610 -628 318 -670 -628 318'
+                tex = "METAL/METALSTAIR004A"
+                tv = '592 -734 592 -702 624 -734'
+              }
+              face:f =
+              {
+                v = '-610 -616 320 -670 -628 320 -610 -628 320'
+                tex = "METAL/METALSTAIR004A"
+                tv = '592 674 592 642 624 674'
+              }
+            }
+            poly:p =
+            {
+              face:f =
+              {
+                v = '-610 -628 328 -670 -628 326 -670 -628 328'
+                tex = "METAL/METALSTAIR004A"
+                tv = '-690 307.75000 -658 307.75000 -690 275.75000'
+              }
+              face:f =
+              {
+                v = '-670 -640 328 -610 -640 326 -610 -640 328'
+                tex = "METAL/METALSTAIR004A"
+                tv = '750 307.75000 718 307.75000 750 275.75000'
+              }
+              face:f =
+              {
+                v = '-546 -640 328 -546 -628 326 -546 -628 328'
+                tex = "METAL/METALSTAIR004A"
+                tv = '640 300 672 300 640 268'
+              }
+              face:f =
+              {
+                v = '-670 -628 328 -670 -640 326 -670 -640 328'
+                tex = "METAL/METALSTAIR004A"
+                tv = '-628 300 -660 300 -628 268'
+              }
+              face:f =
+              {
+                v = '-670 -628 326 -610 -640 326 -670 -640 326'
+                tex = "METAL/METALSTAIR004A"
+                tv = '624 -750 624 -718 656 -750'
+              }
+              face:f =
+              {
+                v = '-610 -628 328 -670 -640 328 -610 -640 328'
+                tex = "METAL/METALSTAIR004A"
+                tv = '624 690 624 658 656 690'
+              }
+            }
+            poly:p =
+            {
+              face:f =
+              {
+                v = '-544 -448 192 -546 -463 192 -546 -448 192'
+                tex = "METAL/METALTRUSS008A"
+                tv = '440 -544 440 -512 472 -544'
+              }
+              face:f =
+              {
+                v = '-546 -640 272 -544 -640 262 -544 -640 272'
+                tex = "METAL/METALTRUSS008A"
+                tv = '546 192 514 192 546 160'
+              }
+              face:f =
+              {
+                v = '-544 -544 272 -544 -463 208 -544 -448 208'
+                tex = "METAL/METALTRUSS008A"
+                tv = '536 192 568 192 536 160'
+              }
+              face:f =
+              {
+                v = '-546 -448 208 -546 -544 262 -546 -544 272'
+                tex = "METAL/METALTRUSS008A"
+                tv = '-440 128 -472 128 -440 96'
+              }
+              face:f =
+              {
+                v = '-546 -463 208 -544 -544 262 -546 -544 262'
+                tex = "METAL/METALTRUSS008A"
+                tv = '546 546.75990 514 546.75990 546 585.21920'
+              }
+              face:f =
+              {
+                v = '-544 -448 208 -546 -544 272 -544 -544 272'
+                tex = "METAL/METALTRUSS008A"
+                tv = '-544 528.73160 -512 528.73160 -544 567.19080'
+              }
+            }
+            poly:p =
+            {
+              face:f =
+              {
+                v = '-670 -448 192 -672 -463 192 -672 -448 192'
+                tex = "METAL/METALTRUSS008A"
+                tv = '440 -670 440 -638 472 -670'
+              }
+              face:f =
+              {
+                v = '-672 -640 272 -670 -640 262 -670 -640 272'
+                tex = "METAL/METALTRUSS008A"
+                tv = '672 192 640 192 672 160'
+              }
+              face:f =
+              {
+                v = '-670 -544 272 -670 -463 208 -670 -448 208'
+                tex = "METAL/METALTRUSS008A"
+                tv = '536 192 568 192 536 160'
+              }
+              face:f =
+              {
+                v = '-672 -448 208 -672 -544 262 -672 -544 272'
+                tex = "METAL/METALTRUSS008A"
+                tv = '-440 128 -472 128 -440 96'
+              }
+              face:f =
+              {
+                v = '-672 -463 208 -670 -544 262 -672 -544 262'
+                tex = "METAL/METALTRUSS008A"
+                tv = '672 546.75990 640 546.75990 672 585.21920'
+              }
+              face:f =
+              {
+                v = '-670 -448 208 -672 -544 272 -670 -544 272'
+                tex = "METAL/METALTRUSS008A"
+                tv = '-670 528.73160 -638 528.73160 -670 567.19080'
+              }
+            }
+          }
+        }
+        stairs_concrete_red:g =
+        {
+          func_detail:b =
+          {
+            poly:p =
+            {
+              face:f =
+              {
+                v = '784 -68 368 592 -80 368 784 -80 368'
+                tex = "CONCRETE/CONCRETESTAIR004A"
+                tv = '52 -768 52 -800 20 -768'
+              }
+              face:f =
+              {
+                v = '784 -80 360 592 -68 360 784 -68 360'
+                tex = "TOOLS/TOOLSNODRAW"
+                tv = '88 795 120 795 88 827'
+              }
+              face:f =
+              {
+                v = '784 -80 368 592 -80 360 784 -80 360'
+                tex = "TOOLS/TOOLSNODRAW"
+                tv = '-784 365 -816 365 -784 333'
+              }
+              face:f =
+              {
+                v = '592 -68 368 784 -68 360 592 -68 360'
+                tex = "CONCRETE/CONCRETESTAIR004A"
+                tv = '517.75000 340 549.75000 340 517.75000 308'
+              }
+              face:f =
+              {
+                v = '592 -80 368 592 -68 360 592 -80 360'
+                tex = "TOOLS/TOOLSNODRAW"
+                tv = '-88 360 -120 360 -88 328'
+              }
+              face:f =
+              {
+                v = '720 -68 368 720 -80 360 720 -68 360'
+                tex = "TOOLS/TOOLSNODRAW"
+                tv = '76 360 108 360 76 328'
+              }
+            }
+            poly:p =
+            {
+              face:f =
+              {
+                v = '784 -56 360 592 -68 360 784 -68 360'
+                tex = "CONCRETE/CONCRETESTAIR004A"
+                tv = '36 -768 36 -800 4 -768'
+              }
+              face:f =
+              {
+                v = '784 -68 352 592 -56 352 784 -56 352'
+                tex = "TOOLS/TOOLSNODRAW"
+                tv = '72 795 104 795 72 827'
+              }
+              face:f =
+              {
+                v = '784 -68 360 592 -68 352 784 -68 352'
+                tex = "TOOLS/TOOLSNODRAW"
+                tv = '-784 349 -816 349 -784 317'
+              }
+              face:f =
+              {
+                v = '592 -56 360 784 -56 352 592 -56 352'
+                tex = "CONCRETE/CONCRETESTAIR004A"
+                tv = '533.75000 340 565.75000 340 533.75000 308'
+              }
+              face:f =
+              {
+                v = '592 -68 360 592 -56 352 592 -68 352'
+                tex = "TOOLS/TOOLSNODRAW"
+                tv = '-72 360 -104 360 -72 328'
+              }
+              face:f =
+              {
+                v = '720 -56 360 720 -68 352 720 -56 352'
+                tex = "TOOLS/TOOLSNODRAW"
+                tv = '60 360 92 360 60 328'
+              }
+            }
+            poly:p =
+            {
+              face:f =
+              {
+                v = '784 -44 352 592 -56 352 784 -56 352'
+                tex = "CONCRETE/CONCRETESTAIR004A"
+                tv = '52 -768 52 -800 20 -768'
+              }
+              face:f =
+              {
+                v = '784 -56 344 592 -44 344 784 -44 344'
+                tex = "TOOLS/TOOLSNODRAW"
+                tv = '56 795 88 795 56 827'
+              }
+              face:f =
+              {
+                v = '784 -56 352 592 -56 344 784 -56 344'
+                tex = "TOOLS/TOOLSNODRAW"
+                tv = '-784 349 -816 349 -784 317'
+              }
+              face:f =
+              {
+                v = '592 -44 352 784 -44 344 592 -44 344'
+                tex = "CONCRETE/CONCRETESTAIR004A"
+                tv = '549.75000 340 581.75000 340 549.75000 308'
+              }
+              face:f =
+              {
+                v = '592 -56 352 592 -44 344 592 -56 344'
+                tex = "TOOLS/TOOLSNODRAW"
+                tv = '-56 344 -88 344 -56 312'
+              }
+              face:f =
+              {
+                v = '720 -44 352 720 -56 344 720 -44 344'
+                tex = "TOOLS/TOOLSNODRAW"
+                tv = '44 344 76 344 44 312'
+              }
+            }
+            poly:p =
+            {
+              face:f =
+              {
+                v = '784 -32 344 592 -44 344 784 -44 344'
+                tex = "CONCRETE/CONCRETESTAIR004A"
+                tv = '20 -768 20 -800 -12 -768'
+              }
+              face:f =
+              {
+                v = '784 -44 336 592 -32 336 784 -32 336'
+                tex = "TOOLS/TOOLSNODRAW"
+                tv = '56 795 88 795 56 827'
+              }
+              face:f =
+              {
+                v = '784 -44 344 592 -44 336 784 -44 336'
+                tex = "TOOLS/TOOLSNODRAW"
+                tv = '-784 333 -816 333 -784 301'
+              }
+              face:f =
+              {
+                v = '592 -32 344 784 -32 336 592 -32 336'
+                tex = "CONCRETE/CONCRETESTAIR004A"
+                tv = '581.75000 340 613.75000 340 581.75000 308'
+              }
+              face:f =
+              {
+                v = '592 -44 344 592 -32 336 592 -44 336'
+                tex = "TOOLS/TOOLSNODRAW"
+                tv = '-56 344 -88 344 -56 312'
+              }
+              face:f =
+              {
+                v = '720 -32 344 720 -44 336 720 -32 336'
+                tex = "TOOLS/TOOLSNODRAW"
+                tv = '44 344 76 344 44 312'
+              }
+            }
+            poly:p =
+            {
+              face:f =
+              {
+                v = '784 -20 336 592 -32 336 784 -32 336'
+                tex = "CONCRETE/CONCRETESTAIR004A"
+                tv = '4 -768 4 -800 -28 -768'
+              }
+              face:f =
+              {
+                v = '784 -32 328 592 -20 328 784 -20 328'
+                tex = "TOOLS/TOOLSNODRAW"
+                tv = '40 795 72 795 40 827'
+              }
+              face:f =
+              {
+                v = '784 -32 336 592 -32 328 784 -32 328'
+                tex = "TOOLS/TOOLSNODRAW"
+                tv = '-784 333 -816 333 -784 301'
+              }
+              face:f =
+              {
+                v = '592 -20 336 784 -20 328 592 -20 328'
+                tex = "CONCRETE/CONCRETESTAIR004A"
+                tv = '565.75000 308 597.75000 308 565.75000 276'
+              }
+              face:f =
+              {
+                v = '592 -32 336 592 -20 328 592 -32 328'
+                tex = "TOOLS/TOOLSNODRAW"
+                tv = '-40 328 -72 328 -40 296'
+              }
+              face:f =
+              {
+                v = '720 -20 336 720 -32 328 720 -20 328'
+                tex = "TOOLS/TOOLSNODRAW"
+                tv = '28 328 60 328 28 296'
+              }
+            }
+            poly:p =
+            {
+              face:f =
+              {
+                v = '784 -8 328 592 -20 328 784 -20 328'
+                tex = "CONCRETE/CONCRETESTAIR004A"
+                tv = '20 -768 20 -800 -12 -768'
+              }
+              face:f =
+              {
+                v = '784 -20 320 592 -8 320 784 -8 320'
+                tex = "TOOLS/TOOLSNODRAW"
+                tv = '24 795 56 795 24 827'
+              }
+              face:f =
+              {
+                v = '784 -20 328 592 -20 320 784 -20 320'
+                tex = "TOOLS/TOOLSNODRAW"
+                tv = '-784 317 -816 317 -784 285'
+              }
+              face:f =
+              {
+                v = '592 -8 328 784 -8 320 592 -8 320'
+                tex = "CONCRETE/CONCRETESTAIR004A"
+                tv = '549.75000 308 581.75000 308 549.75000 276'
+              }
+              face:f =
+              {
+                v = '592 -20 328 592 -8 320 592 -20 320'
+                tex = "TOOLS/TOOLSNODRAW"
+                tv = '-24 328 -56 328 -24 296'
+              }
+              face:f =
+              {
+                v = '720 -8 328 720 -20 320 720 -8 320'
+                tex = "TOOLS/TOOLSNODRAW"
+                tv = '12 328 44 328 12 296'
+              }
+            }
+          }
+        }
+        stairs_concrete_green:g =
+        {
+          func_detail:b =
+          {
+            poly:p =
+            {
+              face:f =
+              {
+                v = '-384 -100 408 -192 -88 408 -384 -88 408'
+                tex = "CONCRETE/CONCRETESTAIR001A"
+                tv = '76 272 76 304 108 272'
+              }
+              face:f =
+              {
+                v = '-384 -88 400 -192 -100 400 -384 -100 400'
+                tex = "TOOLS/TOOLSNODRAW"
+                tv = '88 -395 56 -395 88 -427'
+              }
+              face:f =
+              {
+                v = '-384 -88 408 -192 -88 400 -384 -88 400'
+                tex = "TOOLS/TOOLSNODRAW"
+                tv = '-384 397 -416 397 -384 365'
+              }
+              face:f =
+              {
+                v = '-192 -100 408 -384 -100 400 -192 -100 400'
+                tex = "CONCRETE/CONCRETESTAIR001A"
+                tv = '181.75000 404 213.75000 404 181.75000 372'
+              }
+              face:f =
+              {
+                v = '-192 -88 408 -192 -100 400 -192 -88 400'
+                tex = "TOOLS/TOOLSNODRAW"
+                tv = '88 408 56 408 88 376'
+              }
+              face:f =
+              {
+                v = '-320 -100 408 -320 -88 400 -320 -100 400'
+                tex = "TOOLS/TOOLSNODRAW"
+                tv = '-100 408 -68 408 -100 376'
+              }
+            }
+            poly:p =
+            {
+              face:f =
+              {
+                v = '-384 -88 416 -192 -76 416 -384 -76 416'
+                tex = "CONCRETE/CONCRETESTAIR001A"
+                tv = '76 288 76 320 108 288'
+              }
+              face:f =
+              {
+                v = '-384 -76 408 -192 -88 408 -384 -88 408'
+                tex = "TOOLS/TOOLSNODRAW"
+                tv = '72 -395 40 -395 72 -427'
+              }
+              face:f =
+              {
+                v = '-384 -76 416 -192 -76 408 -384 -76 408'
+                tex = "TOOLS/TOOLSNODRAW"
+                tv = '-384 413 -416 413 -384 381'
+              }
+              face:f =
+              {
+                v = '-192 -88 416 -384 -88 408 -192 -88 408'
+                tex = "CONCRETE/CONCRETESTAIR001A"
+                tv = '69.75000 404 101.75000 404 69.75000 372'
+              }
+              face:f =
+              {
+                v = '-192 -76 416 -192 -88 408 -192 -76 408'
+                tex = "TOOLS/TOOLSNODRAW"
+                tv = '72 408 40 408 72 376'
+              }
+              face:f =
+              {
+                v = '-320 -88 416 -320 -76 408 -320 -88 408'
+                tex = "TOOLS/TOOLSNODRAW"
+                tv = '-84 408 -52 408 -84 376'
+              }
+            }
+            poly:p =
+            {
+              face:f =
+              {
+                v = '-384 -76 424 -192 -64 424 -384 -64 424'
+                tex = "CONCRETE/CONCRETESTAIR001A"
+                tv = '76 384 76 416 108 384'
+              }
+              face:f =
+              {
+                v = '-384 -64 416 -192 -76 416 -384 -76 416'
+                tex = "TOOLS/TOOLSNODRAW"
+                tv = '56 -395 24 -395 56 -427'
+              }
+              face:f =
+              {
+                v = '-384 -64 424 -192 -64 416 -384 -64 416'
+                tex = "TOOLS/TOOLSNODRAW"
+                tv = '-384 413 -416 413 -384 381'
+              }
+              face:f =
+              {
+                v = '-192 -76 424 -384 -76 416 -192 -76 416'
+                tex = "CONCRETE/CONCRETESTAIR001A"
+                tv = '293.75000 404 325.75000 404 293.75000 372'
+              }
+              face:f =
+              {
+                v = '-192 -64 424 -192 -76 416 -192 -64 416'
+                tex = "TOOLS/TOOLSNODRAW"
+                tv = '56 424 24 424 56 392'
+              }
+              face:f =
+              {
+                v = '-320 -76 424 -320 -64 416 -320 -76 416'
+                tex = "TOOLS/TOOLSNODRAW"
+                tv = '-68 424 -36 424 -68 392'
+              }
+            }
+            poly:p =
+            {
+              face:f =
+              {
+                v = '-384 -64 432 -192 -52 432 -384 -52 432'
+                tex = "CONCRETE/CONCRETESTAIR001A"
+                tv = '44 368 44 400 76 368'
+              }
+              face:f =
+              {
+                v = '-384 -52 424 -192 -64 424 -384 -64 424'
+                tex = "TOOLS/TOOLSNODRAW"
+                tv = '40 -395 8 -395 40 -427'
+              }
+              face:f =
+              {
+                v = '-384 -52 432 -192 -52 424 -384 -52 424'
+                tex = "TOOLS/TOOLSNODRAW"
+                tv = '-384 429 -416 429 -384 397'
+              }
+              face:f =
+              {
+                v = '-192 -64 432 -384 -64 424 -192 -64 424'
+                tex = "CONCRETE/CONCRETESTAIR001A"
+                tv = '149.75000 404 181.75000 404 149.75000 372'
+              }
+              face:f =
+              {
+                v = '-192 -52 432 -192 -64 424 -192 -52 424'
+                tex = "TOOLS/TOOLSNODRAW"
+                tv = '40 424 8 424 40 392'
+              }
+              face:f =
+              {
+                v = '-320 -64 432 -320 -52 424 -320 -64 424'
+                tex = "TOOLS/TOOLSNODRAW"
+                tv = '-52 424 -20 424 -52 392'
+              }
+            }
+            poly:p =
+            {
+              face:f =
+              {
+                v = '-384 -52 440 -192 -40 440 -384 -40 440'
+                tex = "CONCRETE/CONCRETESTAIR001A"
+                tv = '44 352 44 384 76 352'
+              }
+              face:f =
+              {
+                v = '-384 -40 432 -192 -52 432 -384 -52 432'
+                tex = "TOOLS/TOOLSNODRAW"
+                tv = '40 -395 8 -395 40 -427'
+              }
+              face:f =
+              {
+                v = '-384 -40 440 -192 -40 432 -384 -40 432'
+                tex = "TOOLS/TOOLSNODRAW"
+                tv = '-384 429 -416 429 -384 397'
+              }
+              face:f =
+              {
+                v = '-192 -52 440 -384 -52 432 -192 -52 432'
+                tex = "CONCRETE/CONCRETESTAIR001A"
+                tv = '133.75000 436 165.75000 436 133.75000 404'
+              }
+              face:f =
+              {
+                v = '-192 -40 440 -192 -52 432 -192 -40 432'
+                tex = "TOOLS/TOOLSNODRAW"
+                tv = '40 440 8 440 40 408'
+              }
+              face:f =
+              {
+                v = '-320 -52 440 -320 -40 432 -320 -52 432'
+                tex = "TOOLS/TOOLSNODRAW"
+                tv = '-52 440 -20 440 -52 408'
+              }
+            }
+            poly:p =
+            {
+              face:f =
+              {
+                v = '-384 -40 448 -192 -28 448 -384 -28 448'
+                tex = "CONCRETE/CONCRETESTAIR001A"
+                tv = '12 272 12 304 44 272'
+              }
+              face:f =
+              {
+                v = '-384 -28 440 -192 -40 440 -384 -40 440'
+                tex = "TOOLS/TOOLSNODRAW"
+                tv = '24 -395 -8 -395 24 -427'
+              }
+              face:f =
+              {
+                v = '-384 -28 448 -192 -28 440 -384 -28 440'
+                tex = "TOOLS/TOOLSNODRAW"
+                tv = '-384 445 -416 445 -384 413'
+              }
+              face:f =
+              {
+                v = '-192 -40 448 -384 -40 440 -192 -40 440'
+                tex = "CONCRETE/CONCRETESTAIR001A"
+                tv = '181.75000 436 213.75000 436 181.75000 404'
+              }
+              face:f =
+              {
+                v = '-192 -28 448 -192 -40 440 -192 -28 440'
+                tex = "TOOLS/TOOLSNODRAW"
+                tv = '24 440 -8 440 24 408'
+              }
+              face:f =
+              {
+                v = '-320 -40 448 -320 -28 440 -320 -40 440'
+                tex = "TOOLS/TOOLSNODRAW"
+                tv = '-36 440 -4 440 -36 408'
+              }
+            }
+            poly:p =
+            {
+              face:f =
+              {
+                v = '-384 -28 456 -192 -16 456 -384 -16 456'
+                tex = "CONCRETE/CONCRETESTAIR001A"
+                tv = '12 288 12 320 44 288'
+              }
+              face:f =
+              {
+                v = '-384 -16 448 -192 -28 448 -384 -28 448'
+                tex = "TOOLS/TOOLSNODRAW"
+                tv = '8 -395 -24 -395 8 -427'
+              }
+              face:f =
+              {
+                v = '-384 -16 456 -192 -16 448 -384 -16 448'
+                tex = "TOOLS/TOOLSNODRAW"
+                tv = '-384 445 -416 445 -384 413'
+              }
+              face:f =
+              {
+                v = '-192 -28 456 -384 -28 448 -192 -28 448'
+                tex = "CONCRETE/CONCRETESTAIR001A"
+                tv = '69.75000 436 101.75000 436 69.75000 404'
+              }
+              face:f =
+              {
+                v = '-192 -16 456 -192 -28 448 -192 -16 448'
+                tex = "TOOLS/TOOLSNODRAW"
+                tv = '8 456 -24 456 8 424'
+              }
+              face:f =
+              {
+                v = '-320 -28 456 -320 -16 448 -320 -28 448'
+                tex = "TOOLS/TOOLSNODRAW"
+                tv = '-20 456 12 456 -20 424'
+              }
+            }
+          }
+        }
+        stairs_concrete_grey:g =
+        {
+          func_detail:b =
+          {
+            poly:p =
+            {
+              face:f =
+              {
+                v = '-236 -192 392 -224 -384 392 -224 -192 392'
+                tex = "CONCRETE/CONCRETESTAIR002A"
+                tv = '96 236 64 236 96 268'
+              }
+              face:f =
+              {
+                v = '-224 -192 384 -236 -384 384 -236 -192 384'
+                tex = "TOOLS/TOOLSNODRAW"
+                tv = '181 -216 181 -184 149 -216'
+              }
+              face:f =
+              {
+                v = '-224 -192 392 -224 -384 384 -224 -192 384'
+                tex = "TOOLS/TOOLSNODRAW"
+                tv = '192 381 160 381 192 349'
+              }
+              face:f =
+              {
+                v = '-236 -384 392 -236 -192 384 -236 -384 384'
+                tex = "CONCRETE/CONCRETESTAIR002A"
+                tv = '-314.25000 372 -282.25000 372 -314.25000 340'
+              }
+              face:f =
+              {
+                v = '-224 -384 392 -236 -384 384 -224 -384 384'
+                tex = "TOOLS/TOOLSNODRAW"
+                tv = '216 392 184 392 216 360'
+              }
+              face:f =
+              {
+                v = '-236 -256 392 -224 -256 384 -236 -256 384'
+                tex = "TOOLS/TOOLSNODRAW"
+                tv = '-228 392 -196 392 -228 360'
+              }
+            }
+            poly:p =
+            {
+              face:f =
+              {
+                v = '-248 -192 384 -236 -384 384 -236 -192 384'
+                tex = "CONCRETE/CONCRETESTAIR002A"
+                tv = '112 236 80 236 112 268'
+              }
+              face:f =
+              {
+                v = '-236 -192 376 -248 -384 376 -248 -192 376'
+                tex = "TOOLS/TOOLSNODRAW"
+                tv = '181 -232 181 -200 149 -232'
+              }
+              face:f =
+              {
+                v = '-236 -192 384 -236 -384 376 -236 -192 376'
+                tex = "TOOLS/TOOLSNODRAW"
+                tv = '192 381 160 381 192 349'
+              }
+              face:f =
+              {
+                v = '-248 -384 384 -248 -192 376 -248 -384 376'
+                tex = "CONCRETE/CONCRETESTAIR002A"
+                tv = '-346.25000 372 -314.25000 372 -346.25000 340'
+              }
+              face:f =
+              {
+                v = '-236 -384 384 -248 -384 376 -236 -384 376'
+                tex = "TOOLS/TOOLSNODRAW"
+                tv = '232 376 200 376 232 344'
+              }
+              face:f =
+              {
+                v = '-248 -256 384 -236 -256 376 -248 -256 376'
+                tex = "TOOLS/TOOLSNODRAW"
+                tv = '-244 376 -212 376 -244 344'
+              }
+            }
+            poly:p =
+            {
+              face:f =
+              {
+                v = '-260 -192 376 -248 -384 376 -248 -192 376'
+                tex = "CONCRETE/CONCRETESTAIR002A"
+                tv = '128 236 96 236 128 268'
+              }
+              face:f =
+              {
+                v = '-248 -192 368 -260 -384 368 -260 -192 368'
+                tex = "TOOLS/TOOLSNODRAW"
+                tv = '181 -248 181 -216 149 -248'
+              }
+              face:f =
+              {
+                v = '-248 -192 376 -248 -384 368 -248 -192 368'
+                tex = "TOOLS/TOOLSNODRAW"
+                tv = '192 365 160 365 192 333'
+              }
+              face:f =
+              {
+                v = '-260 -384 376 -260 -192 368 -260 -384 368'
+                tex = "CONCRETE/CONCRETESTAIR002A"
+                tv = '-346.25000 372 -314.25000 372 -346.25000 340'
+              }
+              face:f =
+              {
+                v = '-248 -384 376 -260 -384 368 -248 -384 368'
+                tex = "TOOLS/TOOLSNODRAW"
+                tv = '248 376 216 376 248 344'
+              }
+              face:f =
+              {
+                v = '-260 -256 376 -248 -256 368 -260 -256 368'
+                tex = "TOOLS/TOOLSNODRAW"
+                tv = '-260 376 -228 376 -260 344'
+              }
+            }
+            poly:p =
+            {
+              face:f =
+              {
+                v = '-272 -192 368 -260 -384 368 -260 -192 368'
+                tex = "CONCRETE/CONCRETESTAIR002A"
+                tv = '176 268 144 268 176 300'
+              }
+              face:f =
+              {
+                v = '-260 -192 360 -272 -384 360 -272 -192 360'
+                tex = "TOOLS/TOOLSNODRAW"
+                tv = '181 -248 181 -216 149 -248'
+              }
+              face:f =
+              {
+                v = '-260 -192 368 -260 -384 360 -260 -192 360'
+                tex = "TOOLS/TOOLSNODRAW"
+                tv = '192 365 160 365 192 333'
+              }
+              face:f =
+              {
+                v = '-272 -384 368 -272 -192 360 -272 -384 360'
+                tex = "CONCRETE/CONCRETESTAIR002A"
+                tv = '-266.25000 340 -234.25000 340 -266.25000 308'
+              }
+              face:f =
+              {
+                v = '-260 -384 368 -272 -384 360 -260 -384 360'
+                tex = "TOOLS/TOOLSNODRAW"
+                tv = '248 360 216 360 248 328'
+              }
+              face:f =
+              {
+                v = '-272 -256 368 -260 -256 360 -272 -256 360'
+                tex = "TOOLS/TOOLSNODRAW"
+                tv = '-260 360 -228 360 -260 328'
+              }
+            }
+            poly:p =
+            {
+              face:f =
+              {
+                v = '-284 -192 360 -272 -384 360 -272 -192 360'
+                tex = "CONCRETE/CONCRETESTAIR002A"
+                tv = '160 268 128 268 160 300'
+              }
+              face:f =
+              {
+                v = '-272 -192 352 -284 -384 352 -284 -192 352'
+                tex = "TOOLS/TOOLSNODRAW"
+                tv = '181 -264 181 -232 149 -264'
+              }
+              face:f =
+              {
+                v = '-272 -192 360 -272 -384 352 -272 -192 352'
+                tex = "TOOLS/TOOLSNODRAW"
+                tv = '192 349 160 349 192 317'
+              }
+              face:f =
+              {
+                v = '-284 -384 360 -284 -192 352 -284 -384 352'
+                tex = "CONCRETE/CONCRETESTAIR002A"
+                tv = '-378.25000 340 -346.25000 340 -378.25000 308'
+              }
+              face:f =
+              {
+                v = '-272 -384 360 -284 -384 352 -272 -384 352'
+                tex = "TOOLS/TOOLSNODRAW"
+                tv = '264 360 232 360 264 328'
+              }
+              face:f =
+              {
+                v = '-284 -256 360 -272 -256 352 -284 -256 352'
+                tex = "TOOLS/TOOLSNODRAW"
+                tv = '-276 360 -244 360 -276 328'
+              }
+            }
+            poly:p =
+            {
+              face:f =
+              {
+                v = '-296 -192 352 -284 -384 352 -284 -192 352'
+                tex = "CONCRETE/CONCRETESTAIR002A"
+                tv = '144 268 112 268 144 300'
+              }
+              face:f =
+              {
+                v = '-284 -192 344 -296 -384 344 -296 -192 344'
+                tex = "TOOLS/TOOLSNODRAW"
+                tv = '181 -280 181 -248 149 -280'
+              }
+              face:f =
+              {
+                v = '-284 -192 352 -284 -384 344 -284 -192 344'
+                tex = "TOOLS/TOOLSNODRAW"
+                tv = '192 349 160 349 192 317'
+              }
+              face:f =
+              {
+                v = '-296 -384 352 -296 -192 344 -296 -384 344'
+                tex = "CONCRETE/CONCRETESTAIR002A"
+                tv = '-362.25000 340 -330.25000 340 -362.25000 308'
+              }
+              face:f =
+              {
+                v = '-284 -384 352 -296 -384 344 -284 -384 344'
+                tex = "TOOLS/TOOLSNODRAW"
+                tv = '280 344 248 344 280 312'
+              }
+              face:f =
+              {
+                v = '-296 -256 352 -284 -256 344 -296 -256 344'
+                tex = "TOOLS/TOOLSNODRAW"
+                tv = '-292 344 -260 344 -292 312'
+              }
+            }
+            poly:p =
+            {
+              face:f =
+              {
+                v = '-308 -192 344 -296 -384 344 -296 -192 344'
+                tex = "CONCRETE/CONCRETESTAIR002A"
+                tv = '128 300 96 300 128 332'
+              }
+              face:f =
+              {
+                v = '-296 -192 336 -308 -384 336 -308 -192 336'
+                tex = "TOOLS/TOOLSNODRAW"
+                tv = '181 -296 181 -264 149 -296'
+              }
+              face:f =
+              {
+                v = '-296 -192 344 -296 -384 336 -296 -192 336'
+                tex = "TOOLS/TOOLSNODRAW"
+                tv = '192 333 160 333 192 301'
+              }
+              face:f =
+              {
+                v = '-308 -384 344 -308 -192 336 -308 -384 336'
+                tex = "CONCRETE/CONCRETESTAIR002A"
+                tv = '-346.25000 340 -314.25000 340 -346.25000 308'
+              }
+              face:f =
+              {
+                v = '-296 -384 344 -308 -384 336 -296 -384 336'
+                tex = "TOOLS/TOOLSNODRAW"
+                tv = '296 344 264 344 296 312'
+              }
+              face:f =
+              {
+                v = '-308 -256 344 -296 -256 336 -308 -256 336'
+                tex = "TOOLS/TOOLSNODRAW"
+                tv = '-308 344 -276 344 -308 312'
+              }
+            }
+          }
+        }
+      }
+      useful stuff.qtxfolder =
+      {
+        combine_shield_static:g =
+        {
+          logic_auto:e =
+          {
+            id = "1021"
+            spawnflags = "1"
+            output#OnMapSpawn = "sound_staticcombineshieldwall_idle&i,PlaySoun"
+             "d,,0,-1"
+            origin = "0 16 32"
+          }
+          func_illusionary:b =
+          {
+            id = "1024"
+            renderamt = "255"
+            rendercolor = "255 255 255"
+            origin = "0 -3.5 96"
+            disableshadows = "1"
+            renderfx = "0"
+            rendermode = "0"
+            disablereceiveshadows = "0"
+            poly:p =
+            {
+              face:f =
+              {
+                v = '-64 -4 64 64 -3 64 -64 -3 64'
+                tex = "TOOLS/TOOLSNODRAW"
+                tv = '-16.53220 50.29930 -16.53220 114.29930 47.46780 50.29930'
+              }
+              face:f =
+              {
+                v = '64 -4 -128 -64 -3 -128 64 -3 -128'
+                tex = "TOOLS/TOOLSNODRAW"
+                tv = '-16.53220 77.70070 -16.53220 13.70070 47.46780 77.70070'
+              }
+              face:f =
+              {
+                v = '-64 -4 64 64 -4 -128 64 -4 64'
+                tex = "EFFECTS/COMBINESHIELD/COMSHIELDWALL2"
+                tv = '64 192 89.60000 192 64 166.40000'
+              }
+              face:f =
+              {
+                v = '-64 -3 -128 64 -3 64 64 -3 -128'
+                tex = "EFFECTS/COMBINESHIELD/COMSHIELDWALL2"
+                tv = '-64 0 -89.60000 0 -64 -25.60000'
+              }
+              face:f =
+              {
+                v = '-64 -3 64 -64 -4 -128 -64 -4 64'
+                tex = "TOOLS/TOOLSNODRAW"
+                tv = '-5.29930 161 -69.29930 161 -5.29930 97'
+              }
+              face:f =
+              {
+                v = '64 -3 -128 64 -4 64 64 -4 -128'
+                tex = "TOOLS/TOOLSNODRAW"
+                tv = '5.29930 -31 69.29930 -31 5.29930 -95'
+              }
+            }
+          }
+          prop_static:e =
+          {
+            id = "1027"
+            angles = "0 90 180"
+            solid = "6"
+            fademindist = "-1"
+            model = "models/props_combine/combine_fence01a.mdl"
+            disableshadows = "0"
+            screenspacefade = "0"
+            origin = "72 -2 24"
+          }
+          prop_static:e =
+          {
+            id = "1029"
+            angles = "0 90 180"
+            solid = "6"
+            fademindist = "-1"
+            model = "models/props_combine/combine_fence01b.mdl"
+            disableshadows = "0"
+            screenspacefade = "0"
+            origin = "-72 -2 24"
+          }
+          trigger_multiple:b =
+          {
+            id = "1034"
+            origin = "0 -4 96"
+            targetname = "trigger_staticcombineshieldwall&i"
+            wait = "1"
+            spawnflags = "1"
+            output#OnStartTouch = "sound_staticcombineshieldwall_touch&i,PlayS"
+             "ound,,0,-1"
+            output#OnEndTouch = "sound_staticcombineshieldwall_touch&i,StopSou"
+             "nd,,0,-1"
+            poly:p =
+            {
+              face:f =
+              {
+                v = '-64 -23.99750 64 64 16 64 -64 16 64'
+                tex = "TOOLS/TOOLSTRIGGER"
+                tv = '-4.53470 8.29930 -4.53470 136.29930 123.46530 8.29930'
+              }
+              face:f =
+              {
+                v = '64 -23.99750 -128 -64 16 -128 64 16 -128'
+                tex = "TOOLS/TOOLSTRIGGER"
+                tv = '-4.53470 119.70070 -4.53470 -8.29930 123.46530 119.70070'
+              }
+              face:f =
+              {
+                v = '-64 -23.99750 64 64 -23.99750 -128 64 -23.99750 64'
+                tex = "TOOLS/TOOLSTRIGGER"
+                tv = '59.46780 129 187.46780 129 59.46780 1'
+              }
+              face:f =
+              {
+                v = '-64 16 -128 64 16 64 64 16 -128'
+                tex = "TOOLS/TOOLSTRIGGER"
+                tv = '-59.46780 -63 -187.46780 -63 -59.46780 -191'
+              }
+              face:f =
+              {
+                v = '-64 16 64 -64 -23.99750 -128 -64 -23.99750 64'
+                tex = "TOOLS/TOOLSTRIGGER"
+                tv = '31.70070 129 -96.29930 129 31.70070 1'
+              }
+              face:f =
+              {
+                v = '64 16 -128 64 -23.99750 64 64 -23.99750 -128'
+                tex = "TOOLS/TOOLSTRIGGER"
+                tv = '-31.70070 -63 96.29930 -63 -31.70070 -191'
+              }
+            }
+          }
+          ambient_generic:e =
+          {
+            id = "1037"
+            health = "10"
+            pitch = "100"
+            pitchstart = "100"
+            radius = "500"
+            spawnflags = "16"
+            targetname = "sound_staticcombineshieldwall_idle&i"
+            message = "d3_citadel.shield_loop"
+            origin = "0 8 -16"
+          }
+          ambient_generic:e =
+          {
+            id = "1040"
+            health = "10"
+            pitch = "100"
+            pitchstart = "100"
+            radius = "500"
+            spawnflags = "16"
+            targetname = "sound_staticcombineshieldwall_touch&i"
+            message = "d3_citadel.shield_touch_loop"
+            origin = "0 8 -32"
+          }
+          poly:p =
+          {
+            face:f =
+            {
+              v = '-80 -32 64 80 32 64 -80 32 64'
+              tex = "TOOLS/TOOLSSKIP"
+              tv = '11.46780 66.29930 11.46780 130.29930 75.46780 66.29930'
+            }
+            face:f =
+            {
+              v = '80 -32 -128 -80 32 -128 80 32 -128'
+              tex = "TOOLS/TOOLSSKIP"
+              tv = '11.46780 93.70070 11.46780 29.70070 75.46780 93.70070'
+            }
+            face:f =
+            {
+              v = '-80 -32 64 80 -32 -128 80 -32 64'
+              tex = "TOOLS/TOOLSSKIP"
+              tv = '75.46780 161 139.46780 161 75.46780 97'
+            }
+            face:f =
+            {
+              v = '-80 32 -128 80 32 64 80 32 -128'
+              tex = "TOOLS/TOOLSSKIP"
+              tv = '-80 0 -105.60000 0 -80 -25.60000'
+            }
+            face:f =
+            {
+              v = '-80 32 64 -80 -32 -128 -80 -32 64'
+              tex = "TOOLS/TOOLSSKIP"
+              tv = '61.70070 161 -2.29930 161 61.70070 97'
+            }
+            face:f =
+            {
+              v = '80 32 -128 80 -32 64 80 -32 -128'
+              tex = "TOOLS/TOOLSSKIP"
+              tv = '-61.70070 -31 2.29930 -31 -61.70070 -95'
+            }
+          }
+          poly:p =
+          {
+            face:f =
+            {
+              v = '-64 -8.00020 64 64 0 64 -64 0 64'
+              tex = "TOOLS/TOOLSPLAYERCLIP"
+              tv = '71.00020 48 71.00020 176 199.00020 48'
+            }
+            face:f =
+            {
+              v = '64 -8.00020 -128 -64 0 -128 64 0 -128'
+              tex = "TOOLS/TOOLSPLAYERCLIP"
+              tv = '71.00020 80 71.00020 -48 199.00020 80'
+            }
+            face:f =
+            {
+              v = '-64 -8.00020 64 64 -8.00020 -128 64 -8.00020 64'
+              tex = "TOOLS/TOOLSPLAYERCLIP"
+              tv = '48 129 176 129 48 1'
+            }
+            face:f =
+            {
+              v = '-64 0 -128 64 0 64 64 0 -128'
+              tex = "TOOLS/TOOLSPLAYERCLIP"
+              tv = '-48 -63 -176 -63 -48 -191'
+            }
+            face:f =
+            {
+              v = '-64 0 64 -64 -8.00020 -128 -64 -8.00020 64'
+              tex = "TOOLS/TOOLSPLAYERCLIP"
+              tv = '-48 129 -176 129 -48 1'
+            }
+            face:f =
+            {
+              v = '64 0 -128 64 -8.00020 64 64 -8.00020 -128'
+              tex = "TOOLS/TOOLSPLAYERCLIP"
+              tv = '48 -63 176 -63 48 -191'
+            }
+          }
+        }
+      }
+    }
+  }
+}

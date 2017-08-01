@@ -1,0 +1,1224 @@
+QQRKSRC1
+// 6DX entities file for Quark
+
+//$Header: /cvsroot/quark/runtime/addons/6DX/6DXEntities.qrk,v 1.2 2008/05/14 20:38:38 cdunde Exp $
+// ----------- REVISION HISTORY ------------
+//$Log: 6DXEntities.qrk,v $
+//Revision 1.2  2008/05/14 20:38:38  cdunde
+//Fixed basic lighting in all games and a few other small typo errors.
+//
+//Revision 1.1  2008/03/28 19:03:54  cdunde
+//Cleaned up, fixed if needed and brought into sync with all QuArK addons.
+//
+//
+
+{
+  QuArKProtected = "1"
+  Description = "6DX Entities"
+
+  Toolbox Folders.qtx =
+  {
+    Toolbox = "New map items..."
+    Root = "6DX Entities.qtxfolder"
+    6DX Entities.qtxfolder =
+    {
+        6dx_cross_entity:e =
+        {
+          ;desc = "A sprite constructed from a number of crossing sprites. Typically "
+           "used for trees & bushes"
+          width = "128"
+          origin = "0 0 0"
+          angle = "360"
+        }
+        6dx_mdl:e =
+        {
+          ;desc = "A MD2 Actor/Model. MD3 actor/models cannot be added as an entity."
+          MDL = "model.md2"
+          origin = "0 0 0"
+          angle = "360"
+        }
+        6dx_particles:e =
+        {
+          ;desc = "A simple particle generator"
+          origin = "0 0 0"
+          angle = "360"
+        }
+        entity_custom:e =
+        {
+          ;desc = "A sample custom entity."
+          origin = "0 0 0"
+          angle = "360"
+        }
+        func_button:b =
+        {
+          ;desc = "A button you can push to trigger something."
+        }
+        func_door:b =
+        {
+          ;desc = "A door that slides to open"
+        }
+        func_door_rotating:b =
+        {
+          ;desc = "A door that swings to open"
+        }
+        func_group:b =
+        {
+          minlight = "0 0 0"
+          ;desc = "Defines map hierarchy."
+        }
+        func_portal:b =
+        {
+          ;desc = "Represent a portal brush."
+        }
+        func_plat:b =
+        {
+          ;desc = "Moves brush up and then down"
+        }
+        func_rotating:b =
+        {
+          ;desc = "Permanently rotating brushes"
+        }
+        func_train:b =
+        {
+          ;desc = "A brush that moves by using waypoints (path_corners)"
+        }
+        func_wall:b =
+        {
+          ;desc = "A brush that can be turned on/off"
+        }
+        info_player_start:e =
+        {
+          ;desc = "The normal starting point for a level."
+          origin = "0 0 0"
+          angle = "360"
+        }
+        light:e =
+        {
+          ;desc = "Light-source with no model"
+          light = "300"
+          _color = "1 1 1"
+          origin = "0 0 0"
+        }
+        lstart:e =
+        {
+          ;desc = "A starting point for a 3D line"
+          origin = "0 0 0"
+          angle = "360"
+        }
+        lend:e =
+        {
+          ;desc = "A end point for a 3D line. Link 'start' to 'number' of lsta"
+           "rt (or another lend)"
+          origin = "0 0 0"
+          angle = "360"
+        }
+        path_corner:e =
+        {
+          ;desc = "Path point for func_train or for actor auto moving"
+          origin = "0 0 0"
+          angle = "360"
+        }
+        trigger_multiple:b =
+        {
+          ;desc = "A repeatable trigger. The same as trigger_once"
+        }
+        trigger_once:b =
+        {
+          ;desc = "A repeatable trigger. The same as trigger_multiple"
+        }
+    }
+  }
+  Entity forms.fctx =
+  {
+    6dx_cross_entity:form =
+    {
+      Help = "A sprite that can be crossed by itself multiple times."
+      bbox = '-16 -16 -16 16 16 16'
+      origin: =
+      {
+        Txt = "&"
+        Hint = "The position where the cross entity is placed."
+      }
+      bitmap: =
+      {
+        Txt = "&"
+        Hint = "The bitmap (BMP, PCX or TGA file) used for the entity."
+      }
+      width: =
+      {
+        Txt = "&"
+        Hint = "The width in world space of the entity."
+      }
+      height: =
+      {
+        Txt = "&"
+        Hint = "The height in world space of the entity."
+      }
+      tiles_across: =
+      {
+        Txt = "&"
+        Hint = "The number of tiles across the bitmap will be split into."
+      }
+      tiles_down: =
+      {
+        Txt = "&"
+        Hint = "The number of tiles down the bitmap will be split into."
+      }
+      planecount: =
+      {
+        Txt = "&"
+        Hint = "The number of planes this cross entity consists of. Remember to set the USES-PLANECOUT spawnflag."
+      }
+      targetname: =
+      {
+        Txt = "&"
+        Hint = "When targets with this name is activated the cross entity is toggled on/off."
+      }
+      target :=
+      {
+        Txt = "&"
+        Hint = "When this entity is triggered (only from program) the specified target will be activated."
+      }
+      corona :=
+      {
+        Txt = "&"
+        Hint = "The size of the corona to be used with this cross entity. The default is 0, which means that no corona is shown."
+      }
+      spawnflags: =
+      {
+        Txt = "&"
+        Hint = "The style of this entity. If spawnflags is 0 a single sprite is shown that is turned to camera no matter the value of planecount. If a flag is set planecount is used and the sprite no longer turns towards the camera. It is colorkeyed"
+      }
+      spawnflags: =
+      {
+        Txt = "&"
+        Typ = "X1"
+        Cap = "COLORKEYED"
+        Hint = "If the pixel has the color magenta (r=255,g=0,b=255) then it will be fully transparent. If it has another color it will be shown fully non-transparent."
+      }
+      spawnflags: =
+      {
+        Txt = "&"
+        Typ = "X2"
+        Cap = "ALPHAONLY"
+        Hint = "Turn the pixel white."
+      }
+      spawnflags: =
+      {
+        Txt = "&"
+        Typ = "X4"
+        Cap = "SEND_EVENT"
+        Hint = "When this entity is activated the OnActorTrigger event is called."
+      }
+      spawnflags: =
+      {
+        Txt = "&"
+        Typ = "X4"
+        Cap = "HALFALPHA"
+        Hint = "Reduce the transparency to half."
+      }
+      spawnflags: =
+      {
+        Txt = "&"
+        Typ = "X8"
+        Cap = "DOUBLEALPHA"
+        Hint = "Double the transparency."
+      }
+      spawnflags: =
+      {
+        Txt = "&"
+        Typ = "X16"
+        Cap = "INVERTALPHA"
+        Hint = "Invert the transparency, i.e. make the previously very transparent things opaque and visa versa."
+      }
+      spawnflags: =
+      {
+        Txt = "&"
+        Typ = "X32"
+        Cap = "FILLBLACK"
+        Hint = "Turn the pixel black."
+      }
+      spawnflags: =
+      {
+        Txt = "&"
+        Typ = "X512"
+        Cap = "TOGGLE"
+        Hint = "When this entity is activated it will turn the entity on/off."
+      }
+      spawnflags: =
+      {
+        Txt = "&"
+        Typ = "X1024"
+        Cap = "ONLYONCE"
+        Hint = "If TOGGLE is set this entity can be turned on/off as long as it is activated. By setting this flag only one activation can happen."
+      }
+      spawnflags: =
+      {
+        Txt = "&"
+        Typ = "X2048"
+        Cap = "START_ON"
+        Hint = "Set this flag to make cross_entities show by default."
+      }
+    }
+    6dx_mdl:form =
+    {
+      Help = "A actor using an MD2 model"
+      bbox = '-24 -24 -32 24 24 32'
+      origin: =
+      {
+        Txt = "&"
+        Hint = "The starting position of the actor."
+      }
+      targetname: =
+      {
+        Txt = "&"
+        Hint = "The identifier of this actor. You can use this to recoginize the actor at run-time or to activate it."
+      }
+      target: =
+      {
+        Txt = "&"
+        Hint = "The actor will run to the path_corner with this target name."
+      }
+      MDL: =
+      {
+        Txt = "&"
+        Hint = "The *.MD2 file that this actor/model will use."
+      }
+      defaultanim: =
+      {
+        Text = "&"
+        Hint = "The number of the animation to be used initially for this actor. If this is not set it will use animation 0."
+      }
+      waitanim: =
+      {
+        Text = "&"
+        Hint = "Is a rollover animation. Is used when the default anim is complete. If this is not set the default animation will just loop."
+      }
+      corona: =
+      {
+        Text = "&"
+        Hint = "The size of the corona to be used with this entity. The default is 0, which means that no corona is shown. The corona will not move with the actor."
+      }
+      spawnflags: =
+      {
+        Txt = "&"
+        Typ = "X1"
+        Cap = "HIDDEN"
+        Hint = "Set to true to avoid rendering this actor. You can show it later via your program."
+      }
+      spawnflags: =
+      {
+        Txt = "&"
+        Typ = "X2"
+        Cap = "BLOCKING"
+        Hint = "if checked it blocks movement"
+      }
+      spawnflags: =
+      {
+        Txt = "&"
+        Typ = "X4"
+        Cap = "SENDEVENT"
+        Hint = "Triggers an event when walked over (non-blocking only)"
+      }
+      spawnflags: =
+      {
+        Txt = "&"
+        Typ = "X32"
+        Cap = "NOGRAVITY"
+        Hint = "Set this flag to avoid having the built-in physics engine apply gravity to this actor when moved using clipping movement methods (i.e. movement methods that detects whether a wall was hit)."
+      }
+    }
+    6dx_particles:form =
+    {
+      Help = "A simple particle generator."
+      bbox = '-16 -16 -16 16 16 16'
+      count: =
+      {
+        Txt = "&"
+        Hint = "The number of particles shown at the time. I.e. a low number gives a lower particles density. We warned that very high values require more processor power of the computer and may lower the frame rate. Default: 10."
+      }
+      speed: =
+      {
+        Txt = "&"
+        Hint = "The speed of upward movement that the particle has. use a negative value of downward movement. Use particles in your programs if you need horizontal movement. Default: 1"
+      }
+      size: =
+      {
+        Txt = "&"
+        Hint = "The size in texture pixels that each particle image will have in the the world. Default: 1"
+      }
+      size_add: =
+      {
+        Txt = "&"
+        Hint = "The change in size the particles have each second. A negative value makes the particles smaller, while a positive value makes the larger. Default: 0"
+      }
+      trans: =
+      {
+        Txt = "&"
+        Hint = "The starting alpha value of the particle. A value of 1.0 is as it is in the loaded image and 0.0 is invisible. Default: 1"
+      }
+      trans_add: =
+      {
+        Txt = "&"
+        Hint = "The change applied to the transparency each second. Use a negative value to make the particles transparent with time or a positive value to make the opaque with time. Default: 0"
+      }
+      gravity: =
+      {
+        Txt = "&"
+        Hint = "The gravity applied to the particles when they move. A positive values acts upward while a negative value pull them down. Default: 2"
+      }
+      divergence: =
+      {
+        Txt = "&"
+        Hint = "The amount of spread. A random number (0-1) is multiplied with the movement vector and the divergence to give the final movement vector of the particle. A low value (near 0) sends out particles in a straight line while a high value makes more explosion like effects where the particles are spread in all directions. Default: 1"
+      }
+      bitmap: =
+      {
+        Txt = "&"
+        Hint = "The name of bitmap file to be used for the particles. You cannot set texture load flags; these are always 0."
+      }
+      target: =
+      {
+        Txt = "&"
+        Hint = "When this entity is triggered (happens only programmatically) all entities with this name as their targetname is activated."
+      }
+      targetname: =
+      {
+        Txt = "&"
+        Hint = "This is the identifier of this entity. When activated the particle generator will be toggles on/off."
+      }
+      corona: =
+      {
+        Txt = "&"
+        Hint = "The size of the corona to be used with this entity. The default is 0, which means that no corona is shown."
+      }
+      spawnflags: =
+      {
+        Txt = "&"
+        Typ = "X4"
+        Cap = "SENDEVENT"
+        Hint = "When this entity is activated it will call the OnActorTrigger event. This happens even if TOGGLE is not set."
+      }
+      spawnflags: =
+      {
+        Txt = "&"
+        Typ = "X512"
+        Cap = "TOGGLE"
+        Hint = "When this entity is activated it will turn the entity on/off. Otherwise activation has no effect."
+      }
+      spawnflags: =
+      {
+        Txt = "&"
+        Typ = "X1024"
+        Cap = "ONLYONCE"
+        Hint = "If toggle is set, then by setting this flag only one activation can happen."
+      }
+    }
+    entity_custom:form =
+    {
+      Help = "An example entity whose keys and values can be read from 6DX OnEntity."$0D
+             "See the general information about entities for more info."
+      bbox = '-16 -16 -16 16 16 16'
+      origin: =
+      {
+        Txt = "&"
+        Hint = "The position of this custom entity."
+      }
+    }
+    func_button:form =
+    {
+      Help = "A button that is activated when the player/an actor touches it. It is almost identical to func_door."
+      angle: =
+      {
+        Txt = "&"
+        Hint = "Specifies the yaw of the opening direction of the door. Of special values is: -2 is down. -1 is up. Default value is 0. Note that the yaw will be rounded of the nearest 90 degrees and the movement made in that direction."
+      }
+      speed: =
+      {
+        Txt = "&"
+        Hint = "The speed with which this button is pressed/depressed (100 is default)."
+      }
+      lip: =
+      {
+        Txt = "&"
+        Hint = "The amount of the door that is overlapped in open and closed state. A lip of zero moves the door such that it exactly moves one length of itself. A lip at the length of the door will not make the door move when opened. Typical values are a fifths of the door width. The default is 8."
+      }
+      wait: =
+      {
+        Txt = "&"
+        Hint = "Time before a door closes after it has been opened. Is defined in seconds.  The default value is 1 second."
+      }
+      targetname: =
+      {
+        Txt = "&"
+        Hint = "The string identifier of this button. When the button is activated, it opens, remain open for the during of wait, and then closes again (unless flags are set that changes this behavior)."
+      }
+      target: =
+      {
+        Txt = "&"
+        Hint = "The target of this door when it is used as trigger. This is not fired automatically, so if you want to use the door as a trigger you must call dxx_activatetargets() yourself."
+      }
+      sound: =
+      {
+        Txt = "&"
+        Hint = "The name of the WAV file to be played when this door is activated. The sound will be emitted using the 3D sound capabilities in DirectX."
+      }
+      minlight: =
+      {
+        Txt = "&"
+        Hint = "Specifies an ambient light emitted from the entity that lights up only the entity."
+      }
+      minlight: =
+      {
+        Txt = "&"
+        Typ = "L"
+        Hint = "Specifies an ambient light emitted from the entity that lights up only the entity."
+      }
+      corona: =
+      {
+        Txt = "&"
+        Hint = "The size of the corona to be used with this entity. The default is 0, which means that no corona is shown. The corona will not move with the brush."
+      }
+      spawnflags: =
+      {
+        Txt = "&"
+        Typ = "X1"
+        Cap = "START_OPEN"
+        Hint = "The door/button starts in open position."
+      }
+      spawnflags: =
+      {
+        Txt = "&"
+        Typ = "X4"
+        Cap = "SEND_EVENT"
+        Hint = "An OnActorTrigger trigger event is sent when this flag is set and the door/button is activated. This will allow the programmer to cancel the activation before the door moves."
+      }
+      spawnflags: =
+      {
+        Txt = "&"
+        Typ = "X32"
+        Cap = "TOGGLE"
+        Hint = "The door/button does not go back to the original position automatically but activating it again will close it. Activations will toggle it on/off."
+      }
+    }
+    func_door:form =
+    {
+      Help = "A sliding door that is activated when the player/an actor touches it. It is almost identical to func_button."
+      angle: =
+      {
+        Txt = "&"
+        Hint = "Specifies the yaw of the opening direction of the door. Of special values is: -2 is down. -1 is up. Default value is 0. Note that the yaw will be rounded of the nearest 90 degrees and the movement made in that direction."
+      }
+      speed: =
+      {
+        Txt = "&"
+        Hint = "The speed with which this button is pressed/depressed (40 is default)."
+      }
+      lip: =
+      {
+        Txt = "&"
+        Hint = "The amount of the door that is overlapped in open and closed state. A lip of zero moves the door such that it exactly moves one length of itself. A lip at the length of the door will not make the door move when opened. Typical values are a fifths of the door width. The default is 8."
+      }
+      wait: =
+      {
+        Txt = "&"
+        Hint = "Time before a door closes after it has been opened. Is defined in seconds.  The default value is 3 seconds."
+      }
+      targetname: =
+      {
+        Txt = "&"
+        Hint = "The string identifier of this button. When the button is activated, it opens, remain open for the during of wait, and then closes again (unless flags are set that changes this behavior)."
+      }
+      target: =
+      {
+        Txt = "&"
+        Hint = "The target of this door when it is used as trigger. This is not fired automatically, so if you want to use the door as a trigger you must call dxx_activatetargets() yourself."
+      }
+      sound: =
+      {
+        Txt = "&"
+        Hint = "The name of the WAV file to be played when this door is activated. The sound will be emitted using the 3D sound capabilities in DirectX."
+      }
+      minlight: =
+      {
+        Txt = "&"
+        Hint = "Specifies an ambient light emitted from the entity that lights up only the entity."
+      }
+      corona: =
+      {
+        Txt = "&"
+        Hint = "The size of the corona to be used with this entity. The default is 0, which means that no corona is shown. The corona will not move with the brush."
+      }
+      spawnflags: =
+      {
+        Txt = "&"
+        Typ = "X1"
+        Cap = "START_OPEN"
+        Hint = "The door/button starts in open position."
+      }
+      spawnflags: =
+      {
+        Txt = "&"
+        Typ = "X4"
+        Cap = "SEND_EVENT"
+        Hint = "An OnActorTrigger trigger event is sent when this flag is set and the door/button is activated. This will allow the programmer to cancel the activation before the door moves."
+      }
+      spawnflags: =
+      {
+        Txt = "&"
+        Typ = "X32"
+        Cap = "TOGGLE"
+        Hint = "The door/button does not go back to the original position automatically but activating it again will close it. Activations will toggle it on/off."
+      }
+    }
+    func_door_rotating:form =
+    {
+      Help = "A door that rotates counter-clockwise along the z-axis and back again."
+      origin: =
+      {
+        Txt = "&"
+        Hint = "The position of this entity and the center of rotation."
+      }
+      speed: =
+      {
+        Txt = "&"
+        Hint = "The speed with which the func_door_rotating revolves. The default value is 10."
+      }
+      distance: =
+      {
+        Txt = "&"
+        Hint = "The amount if degrees the entity should turn."
+      }
+      wait: =
+      {
+        Txt = "&"
+        Hint = "Time before a func_door_rotating can be activated again after just being activated."
+      }
+      targetname: =
+      {
+        Txt = "&"
+        Hint = "The string identifier of this func_door_rotating."
+      }
+      target:=
+      {
+        Txt = "&"
+        Hint = "The target of this func_door_rotating when it is used as trigger. This is not fired automatically, so if you want to use the door as a trigger you must call dxx_activatetargets() yourself."
+      }
+      sound: =
+      {
+        Txt = "&"
+        Hint = "The name of the WAV file to be played when this door is activated. The sound will be emitted using the 3D sound capabilities in DirectX."
+      }
+      minlight: =
+      {
+        Txt = "&"
+        Hint = "Specifies an ambient light emitted from the entity that lights up only the entity."
+      }
+      minlight: =
+      {
+        Txt = "&"
+        Typ = "L"
+        Hint = "Specifies an ambient light emitted from the entity that lights up only the entity."
+      }
+      corona: =
+      {
+        Txt = "&"
+        Hint = "The size of the corona to be used with this entity. The default is 0, which means that no corona is shown. The corona will not move with the brush."
+      }
+      spawnflags: =
+      {
+        Txt = "&"
+        Typ = "X1"
+        Cap = "START_OPEN"
+        Hint = "The door starts in open position."
+      }
+      spawnflags: =
+      {
+        Txt = "&"
+        Typ = "X2"
+        Cap = "REVERSE"
+        Hint = "The direction the door is opened is reversed."
+      }
+      spawnflags: =
+      {
+        Txt = "&"
+        Typ = "X4"
+        Cap = "SEND_EVENT"
+        Hint = "An OnActorTrigger trigger event is sent when this flag is set and the func_door_rotating is activated. This will allow the programmer to cancel the activation before the entity moves."
+      }
+      spawnflags: =
+      {
+        Txt = "&"
+        Typ = "X32"
+        Cap = "TOGGLE"
+        Hint = "The door does not go back to the original position automatically but activating it again will close it. Activations will toggle it open/closed."
+      }
+      spawnflags: =
+      {
+        Txt = "&"
+        Typ = "X64"
+        Cap = "ROTATE_X"
+        Hint = "Instead of revolving around the Z axis it revolves around the X axis."
+      }
+      spawnflags: =
+      {
+        Txt = "&"
+        Typ = "X128"
+        Cap = "ROTATE_Y"
+        Hint = "Instead of revolving around the Z axis it revolves around the Y axis."
+      }
+    }
+    func_group:form =
+    {
+      Help = "A func_group is a grouping entity. As the only entity (except worldspawn of course) this entity may contain other entities as its brushes."
+      minlight: =
+      {
+        Txt = "&"
+        Hint = "minimum light color for this group"
+      }
+      minlight: =
+      {
+        Txt = "&"
+        Typ = "L"
+        Hint = "minimum light color for this group"
+      }
+      targetname: =
+      {
+        Txt = "&"
+        Hint = "The string identifier of this func_door_rotating."
+      }
+      spawnflags: =
+      {
+        Txt = "&"
+        Typ = "X1"
+        Cap = "INVISIBLE"
+        Hint = "Make the brushes within this group invisible. A good alternative for making a lot of nodraw surfaces."
+      }
+      spawnflags: =
+      {
+        Txt = "&"
+        Typ = "X2"
+        Cap = "INTANGIBLE"
+        Hint = "Make the brushes insubstantial. This makes the brushes faster since there is no need to do collision detection or trigger detection."
+      }
+      spawnflags: =
+      {
+        Txt = "&"
+        Typ = "X4"
+        Cap = "TRIGGER"
+        Hint = "Like INSUBSTANTIAL above, but includes checks for triggers."
+      }
+      spawnflags: =
+      {
+        Txt = "&"
+        Typ = "X8"
+        Cap = "VISTRIGGER"
+        Hint = "Makes trigger_once and trigger_multiple entities visible although they are normally invisible. Can be good for testing purposes."
+      }
+    }
+    func_plat:form =
+    {
+      Help = "func_plat is very similar to func_door and func_button entities. Its purpose is to act as a lift."
+      height: =
+      {
+        Txt = "&"
+        Hint = "The amount of world units that the lift will move up. After moving up it will continue in the same direction like when the func_door is activated. Use the lip attribute to specify how much more it should be moved. The default value is 0, meaning that the lift acts as a func_door that moves up. A negative height value can be used to make lifts that goes down."
+      }
+      speed: =
+      {
+        Txt = "&"
+        Hint = "The speed with which the func_plat moves when it up and down. Default value is 100."
+      }
+      lip: =
+      {
+        Txt = "&"
+        Hint = "The amount of the brush that is overlapped in open and closed state. A lip of zero (and height of 0) moves the brush such that it exactly moves one length of itself. A lip at the length of the door will not make the door move when opened. Typical values are a fifths of the door width. The default is 8."
+      }
+      wait: =
+      {
+        Txt = "&"
+        Hint = "Time before a lift goes back after going up/down. Is defined in seconds.  The default value is 3 seconds."
+      }
+      targetname: =
+      {
+        Txt = "&"
+        Hint = "The string identifier of this func_plat. When the func_plat is activated, it moves, stops for the duration of wait, and then moves back again (unless flags are set that changes this behavior)."
+      }
+      target:=
+      {
+        Txt = "&"
+        Hint = "The target of this func_plat when it is used as trigger. This is not fired automatically, so if you want to use the door as a trigger you must call dxx_activatetargets() yourself."
+      }
+      sound: =
+      {
+        Txt = "&"
+        Hint = "The name of the WAV file to be played when this door is activated. The sound will be emitted using the 3D sound capabilities in DirectX."
+      }
+      minlight: =
+      {
+        Txt = "&"
+        Hint = "Specifies an ambient light emitted from the entity that lights up only the entity."
+      }
+      minlight: =
+      {
+        Txt = "&"
+        Typ = "L"
+        Hint = "Specifies an ambient light emitted from the entity that lights up only the entity."
+      }
+      corona: =
+      {
+        Txt = "&"
+        Hint = "The size of the corona to be used with this entity. The default is 0, which means that no corona is shown. The corona will not move with the brush."
+      }
+      spawnflags: =
+      {
+        Txt = "&"
+        Typ = "X4"
+        Cap = "SEND_EVENT"
+        Hint = "An OnActorTrigger trigger event is sent when this flag is set and the func_plat is activated. This will allow the programmer to cancel the activation before the entity moves."
+      }
+    }
+    func_portal:form =
+    {
+      Help = "Used to make a make a portal to another top-level func_group. See the documentation for more info."
+      target:=
+      {
+        Txt = "&"
+        Hint = "The top-level func_group that this portal leads to."
+      }
+    }
+    func_rotating:form =
+    {
+      Help = "The func_rotating entity is an entity that while active rotates around the entity origin. Unless any flags are set it will revolve around the z axis."
+      origin: =
+      {
+        Txt = "&"
+        Hint = "The position of this entity and the center of rotation."
+      }
+      speed: =
+      {
+        Txt = "&"
+        Hint = "The speed with which the func_rotating revolves. The default value is 10."
+      }
+      wait: =
+      {
+        Txt = "&"
+        Hint = "Time before a func_rotating can be activated again after just being activated."
+      }
+      targetname: =
+      {
+        Txt = "&"
+        Hint = "The string identifier of this func_rotating."
+      }
+      target: =
+      {
+        Txt = "&"
+        Hint = "The target of this func_rotating when it is used as trigger. This is not fired automatically, so if you want to use the door as a trigger you must call dxx_activatetargets() yourself."
+      }
+      sound: =
+      {
+        Txt = "&"
+        Hint = "The name of the WAV file to be played when this door is activated. The sound will be emitted using the 3D sound capabilities in DirectX."
+      }
+      minlight: =
+      {
+        Txt = "&"
+        Hint = "Specifies an ambient light emitted from the entity that lights up only the entity."
+      }
+      minlight: =
+      {
+        Txt = "&"
+        Typ = "L"
+        Hint = "Specifies an ambient light emitted from the entity that lights up only the entity."
+      }
+      corona: =
+      {
+        Txt = "&"
+        Hint = "The size of the corona to be used with this entity. The default is 0, which means that no corona is shown. The corona will not move with the brush."
+      }
+      spawnflags: =
+      {
+        Txt = "&"
+        Typ = "X1"
+        Cap = "START_ON"
+        Hint = "By default the func_rotating is not started. By setting this flag it is."
+      }
+      spawnflags: =
+      {
+        Txt = "&"
+        Typ = "X4"
+        Cap = "SEND_EVENT"
+        Hint = "An OnActorTrigger trigger event is sent when this flag is set and the func_rotating is activated. This will allow the programmer to cancel the activation before the entity moves."
+      }
+      spawnflags: =
+      {
+        Txt = "&"
+        Typ = "X4"
+        Cap = "ROTATE_X"
+        Hint = "The func_rotating revolves around the x-axis."
+      }
+      spawnflags: =
+      {
+        Txt = "&"
+        Typ = "X8"
+        Cap = "ROTATE_Y"
+        Hint = "The func_rotating rovolves around the y-axis."
+      }
+    }
+    func_train:form =
+    {
+      Help = "A moving platform that the camera can ride. It follows path_corner series. The brush will never rotate."
+      origin: =
+      {
+        Txt = "&"
+        Hint = "The position of this entity."
+      }
+      speed: =
+      {
+        Txt = "&"
+        Hint = "The speed with which the train moves. Default 100"
+      }
+      wait: =
+      {
+        Txt = "&"
+        Hint = "The the time in seconds the func_train wait from arriving to a path_corner until it moves on. The default is 0."
+      }
+      targetname: =
+      {
+        Txt = "&"
+        Hint = "The string identifier of this func_train."
+      }
+      target: =
+      {
+        Txt = "&"
+        Hint = "The target of this func_train when it is used as trigger. This is not fired automatically, so if you want to use the door as a trigger you must call dxx_activatetargets() yourself."
+      }
+      sound: =
+      {
+        Txt = "&"
+        Hint = "The name of the WAV file to be played when this door is activated. The sound will be emitted using the 3D sound capabilities in DirectX."
+      }
+      corona: =
+      {
+        Txt = "&"
+        Hint = "The size of the corona to be used with this entity. The default is 0, which means that no corona is shown. The corona will not move with the brush."
+      }
+      spawnflags: =
+      {
+        Txt = "&"
+        Typ = "X1"
+        Cap = "START_ON"
+        Hint = "The train will immediately move towards the first path_corner. If this is off it needs to be activated."
+      }
+      spawnflags: =
+      {
+        Txt = "&"
+        Typ = "X2"
+        Cap = "TOGGLE"
+        Hint = "Normally a func_train keeps moving until it runs out of path_corners (if ever). If you set this flag you must activate it at every path_corner to get to move on."
+      }
+      spawnflags: =
+      {
+        Txt = "&"
+        Typ = "X4"
+        Cap = "SEND_EVENT"
+        Hint = "An OnActorTrigger trigger event is sent when this flag is set and the func_train is activated. This will allow the programmer to cancel the activation before the entity moves."
+      }
+    }
+    func_wall:form =
+    {
+      Help = "This is a brush that can be turned on/off."
+      origin: =
+      {
+        Txt = "&"
+        Hint = "The position of this entity."
+      }
+      wait: =
+      {
+        Txt = "&"
+        Hint = "The the time in seconds the func_wait waits between being toggled on/off."
+      }
+      targetname: =
+      {
+        Txt = "&"
+        Hint = "The string identifier of this func_wall."
+      }
+      target: =
+      {
+        Txt = "&"
+        Hint = " The target of this func_wall when it is used as trigger. This is not fired automatically, so if you want to use the door as a trigger you must call dxx_activatetargets() yourself."
+      }
+      sound: =
+      {
+        Txt = "&"
+        Hint = "The name of the WAV file to be played when this door is activated. The sound will be emitted using the 3D sound capabilities in DirectX."
+      }
+      corona: =
+      {
+        Txt = "&"
+        Hint = "The size of the corona to be used with this entity. The default is 0, which means that no corona is shown. The corona will not move with the brush."
+      }
+      spawnflags: =
+      {
+        Txt = "&"
+        Typ = "X1"
+        Cap = "START_ON"
+        Hint = "Normally the func_train remains placed at the start position until activated. If this flag is set it will immediately move towards the path_corner in its target."
+      }
+      spawnflags: =
+      {
+        Txt = "&"
+        Typ = "X4"
+        Cap = "SEND_EVENT"
+        Hint = "An OnActorTrigger trigger event is sent when this flag is set and the func_train is activated. This will allow the programmer to cancel the activation before the entity moves."
+      }
+    }
+    info_player_start:form =
+    {
+      Help = "The player starting point for a level. Only include one on each map."
+      bbox = '-16 -16 -24 16 16 32'
+      origin: =
+      {
+        Txt = "&"
+        Hint = "The position where the player starts on this map."
+      }
+      corona: =
+      {
+        Txt = "&"
+        Hint = "The size of the corona to be used with this entity. The default is 0, which means that no corona is shown."
+      }
+    }
+    light:form =
+    {
+      Help = "Point light-source with no model."
+      bbox = '-8 -8 -8 8 8 8'
+      origin: =
+      {
+        Txt = "&"
+        Hint = "The position where the light is on this map."
+      }
+      light: =
+      {
+        Txt = "&"
+        Hint = "The strength of the light. The default value is 300"
+      }
+      style: =
+      {
+        Txt = "&"
+        Hint = "Set the style of light. This allows the light to be animated. Several styles exist: 0. Default. Steady. 1. Subtle flicker 2. strong slow pulse 3. Candle 4. Strobe 5. Light pulse 6. Light flicker 7. Candle 2 8. Candle 3 9. Slow strobe 10. Flourescent bult. All styles consist of 50 frames of animation that are run at 20 frames/second. The speed of this animation follow the physics engine so you can change the animation speed by adjusting the argument given to dxx_updateframe()."
+      }
+      corona: =
+      {
+        Txt = "&"
+        Hint = "The size of the corona to be used with this entity. The default is 0, which means that no corona is shown. The corona will not move with the brush."
+      }
+      _color: =
+      {
+        Txt = "&"
+        Hint = "color of light radiated; triple of RGB vals 0-1"$0D"  Or use"
+         " color-selection button below to select visually."
+      }
+      _color: =
+      {
+        Txt = "&"
+        Typ = "LN"
+        Hint = "Click here to pick the light color."
+      }
+      targetname: =
+      {
+        Txt = "&"
+        Hint = "The name identifying this entity. When it is activated the light will toggle on/off."
+      }
+      spawnflags: =
+      {
+        Txt = "&"
+        Typ = "X1"
+        Cap = "START_OFF"
+        Hint = "Instead of being on at the being the light it is off. Turn it on by activating it."
+      }
+    }
+    lstart:form =
+    {
+      Help = "The starting point of a 3D line."
+      bbox = '-16 -16 -16 16 16 16'
+      origin: =
+      {
+        Txt = "&"
+        Hint = "The position of this starting point."
+      }
+      number: =
+      {
+        Txt = "&"
+        Hint = "Set the ID number of this point. Only non-negative IDs can be referenced, the default is -1, meaning that it is disabled."
+      }
+      corona: =
+      {
+        Txt = "&"
+        Hint = "The size of the corona to be used with this entity. The default is 0, which means that no corona is shown. The corona will not move with the brush."
+      }
+    }
+    lend:form =
+    {
+      Help = "The ending point of a 3D line."
+      bbox = '-16 -16 -16 16 16 16'
+      origin: =
+      {
+        Txt = "&"
+        Hint = "The position of this entity."
+      }
+      number: =
+      {
+        Txt = "&"
+        Hint = "Set the ID number of this point. Only non-negative IDs can be referenced, the default is -1, meaning that it is disabled."
+      }
+      start: =
+      {
+        Txt = "&"
+        Hint = "Set the ID number of the lstart or lend at the other end of the line. The default value is 0."
+      }
+      corona: =
+      {
+        Txt = "&"
+        Hint = "The size of the corona to be used with this entity. The default is 0, which means that no corona is shown. The corona will not move with the brush."
+      }
+    }
+    path_corner:form =
+    {
+      Help = "A waypoint for use with actor or func_train movement."
+      bbox = '-16 -16 -16 16 16 16'
+      origin: =
+      {
+        Txt = "&"
+        Hint = "The position of this waypoint."
+      }
+      target: =
+      {
+        Txt = "&"
+        Hint = "The name of the next waypoint."
+      }
+      targetname: =
+      {
+        Txt = "&"
+        Hint = "The name of this waypoint."
+      }
+      wait: =
+      {
+        Txt = "&"
+        Hint = "Pause for this number of seconds after reaching this waypoint."
+      }
+      teleport: =
+      {
+        Txt = "&"
+        Hint = "If this is set to a non-zero value then the actor or func_train will teleport directly to the target instead of moving at its normal speed."
+      }
+      corona: =
+      {
+        Txt = "&"
+        Hint = "The size of the corona to be used with this entity. The default is 0, which means that no corona is shown. The corona will not move with the brush."
+      }
+    }
+    trigger_multiple:form =
+    {
+      Help = "A repeatable trigger. Is activated when the camera enters the brush of the trigger."
+      origin: =
+      {
+        Txt = "&"
+        Hint = "The position of this entity."
+      }
+      target: =
+      {
+        Txt = "&"
+        Hint = "Object with matching targetname is triggered."
+      }
+      targetname: =
+      {
+        Txt = "&"
+        Hint = "The name that identifies this trigger."
+      }
+      wait: =
+      {
+        Txt = "&"
+        Hint = "The period in seconds between activations will activate targets - prevents many rapid activations."
+      }
+      sound: =
+      {
+        Txt = "&"
+        Hint = "The name of the WAV file to be played when this door is activated. The sound will be emitted using the 3D sound capabilities in DirectX."
+      }
+      corona: =
+      {
+        Txt = "&"
+        Hint = "The size of the corona to be used with this entity. The default is 0, which means that no corona is shown. The corona will not move with the brush."
+      }
+      spawnflags: =
+      {
+        Txt = "&"
+        Typ = "X4"
+        Cap = "SEND_EVENT"
+        Hint = "When this trigger is activated the OnActorTrigger() event is called if this flag is set."
+      }
+    }
+    trigger_once:form =
+    {
+      Help = "A repeatable trigger. Is activated when the camera enters the brush of the trigger."
+      origin: =
+      {
+        Txt = "&"
+        Hint = "The position of this entity."
+      }
+      target: =
+      {
+        Txt = "&"
+        Hint = "Object with matching targetname is triggered."
+      }
+      targetname: =
+      {
+        Txt = "&"
+        Hint = "The name that identifies this trigger."
+      }
+      wait: =
+      {
+        Txt = "&"
+        Hint = "The period in seconds between activations will activate targets - prevents many rapid activations."
+      }
+      sound: =
+      {
+        Txt = "&"
+        Hint = "The name of the WAV file to be played when this door is activated. The sound will be emitted using the 3D sound capabilities in DirectX."
+      }
+      corona: =
+      {
+        Txt = "&"
+        Hint = "The size of the corona to be used with this entity. The default is 0, which means that no corona is shown. The corona will not move with the brush."
+      }
+      spawnflags: =
+      {
+        Txt = "&"
+        Typ = "X4"
+        Cap = "SEND_EVENT"
+        Hint = "When this trigger is activated the OnActorTrigger() event is called if this flag is set."
+      }
+    }
+    worldspawn:form =
+    {
+      Help = "Global properties of the level. Every level must have one and only one of these. Quark puts it in automatically."
+      spawnflags: =
+      {
+        Txt = "&"
+        Typ = "X1"
+        Cap = "NOLIGHTMAPS"
+        Hint = "Overrides all LIGHTMAP texture flags in the map. There will be no lighting in this map."
+      }
+      spawnflags: =
+      {
+        Txt = "&"
+        Typ = "X2"
+        Cap = "ALLLIGHTMAPS"
+        Hint = "Overrides all LIGHTMAP texture flags in the map. There will be used lighting all over this map."
+      }
+      ;mapversion: = { Txt="&" Hint="QuArK speciality."$0D"This instructs QuArK to write in 6DX compatible .MAP format" }
+    }
+  }
+}
+
+

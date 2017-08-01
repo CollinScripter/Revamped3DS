@@ -1,0 +1,31 @@
+QQRKSRC1
+// Model Editor textures file for Quark
+
+//$Header: /cvsroot/quark/runtime/addons/ModelEditor/ModelEditorTextures.qrk,v 1.1 2010/05/08 07:39:56 cdunde Exp $
+// ----------- REVISION HISTORY ------------
+//$Log: ModelEditorTextures.qrk,v $
+//Revision 1.1  2010/05/08 07:39:56  cdunde
+//Setup the QuArK Model Editor to allow obtaining textures dynamically in the Texture Browser.
+//
+//
+
+{
+  QuArKProtected = "1"
+  Description = "Model Editor Textures"
+
+  Textures.qtx =
+  {
+    Toolbox = "Texture Browser..."
+    Root = "Model Editor Textures.qtxfolder"
+    HTML = "intro.texturebrowser.html"
+
+    Model Editor Textures.qtxfolder =
+    {
+      Dynamically Found.osfolder =
+      {
+        path = "../textures"
+     //   build = "1"
+      }
+    }
+  }
+}

@@ -1,0 +1,388 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"  "http://www.w3.org/TR/html4/loose.dtd">
+<html lang="en">
+<head>
+  <title>QuArK Conversion Tools</title>
+  <meta name="Description" content="QuArK Information Database - Page: 3.2.&nbsp;QuArK Conversion Tools">
+  <meta name="Keywords" content="QuArK InfoBase Quake Army Knife QRK QKM Python PY Map Editor Hexen Heretic Half-Life Sin Kingpin Soldier-of-Fortune Star-Trek-Voyager Elite-Force">
+  <link rel=stylesheet href="standard.css" type="text/css">
+</head>
+
+<body>
+<a name="__top__"></a>
+<table width="100%" border=0 cellspacing=0>
+  <tr>
+    <td width=213>
+      <a target="_blank" href="http://quark.sourceforge.net/"><img src="quarkicon.png" width=213 height=90 border=0 alt="Go to QuArK Web Site"></a>
+    </td>
+    <td width="70%" align=center>
+      <div class="topheadline">QuArK Conversion Tools</div>
+      <div class="sm">Updated&nbsp;25 Jul 2009</div>
+    </td>
+    <td width="30%" valign=bottom nowrap>
+      Upper&nbsp;levels:<br>-&nbsp;<a href="index.html">QuArK&nbsp;Information&nbsp;Base</a><br>-&nbsp;<a href="adv.html">3.&nbsp;Advanced&nbsp;customization</a><br>
+    </td>
+  </tr>
+</table>
+<table width="100%" border=0 cellspacing=0>
+  <tr class="headline">
+    <td width="99%">
+      <p class="headline">&nbsp;3.2.&nbsp;QuArK Conversion Tools</p>
+    </td>
+    <td width="1%" align=right nowrap>
+      &nbsp;[&nbsp;<span class="navenable"><a href="adv.intro.html">Prev</a></span>&nbsp;-&nbsp;<span class="navenable"><a href="adv.html">Up</a></span>&nbsp;-&nbsp;<span class="navenable"><a href="adv.newgame.html">Next</a></span>&nbsp;]&nbsp;
+    </td>
+  </tr>
+</table>
+<table border=0 width="100%" cellspacing=10><tr><td><p><img border=1 align=right src="adv.conversion.conversion1.png">
+There are three conversion tools in QuArK:
+<ul>
+<li><a href="adv.conversion.html#conversiontool">Conversion Tool</a> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(makes multiple types of .qrk files)
+<li><a href="adv.conversion.html#qeradiant">QERadiant .def file</a> &nbsp;(only works with this type of file)
+<li><a href="adv.conversion.html#worldcraft">Worldcraft .fgd file</a> &nbsp;&nbsp;&nbsp;(only works with this type of file)
+</ul>
+All of these tools will convert other files into <a href="adv.intro.html#qrk">.qrk</a>
+files that QuArK can use for game <a href="adv.addons.html">Add-Ons</a> files that
+provide specific elements to work with in the
+<a href="intro.mapeditor.overview.html#overview">QuArK Map Editor</a>.
+</p><p>But the <a href="glossary.html#q">QERadiant</a> and <a href="glossary.html#w">Worldcraft</a> tools will only make one of the needed
+files, the entities.qrk file.
+The <a href="adv.conversion.html#conversiontool">Conversion Tool</a> can make one or all
+of the needed files.
+<ul>
+<li><a href="glossary.html#d">Data(gamename).qrk</a>  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Used to setup basic things such as the <a href="maped.tutorial.starting.html#defaultroom">default room</a> for <a href="maped.tutorial.starting.html">NewMap</a>,
+<li><a href="glossary.html#u">UserData (gamename).qrk</a> &nbsp;Used to setup items for the QuArK <a href="intro.mapeditor.userdata.html">Userdata panel</a> and the <a href="intro.mapeditor.menu.html#gamemenu">Games menu</a> items.
+<li><a href="glossary.html#(">(gamename)Entities.qrk</a> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Used to create the <a href="intro.mapeditor.dataforms.html#specsargsview">games entities and entities :form sections</a>.
+<li><a href="glossary.html#(">(gamename)Textures.qrk</a> &nbsp;&nbsp;&nbsp;&nbsp;Used to setup the games textures to be displayed in the QuArK <a href="intro.texturebrowser.overview.html">Texture Browser</a>.
+<li><a href="glossary.html#(">(gamename)Shaders.qrk</a> &nbsp;&nbsp;&nbsp;&nbsp;Used to setup the games shaders, scrips, materials (if used) to be displayed in the QuArK <a href="intro.texturebrowser.overview.html">Texture Browser</a>.
+<li><a href="glossary.html#(">(gamename)ModelEntities.qrk</a> &nbsp;&nbsp;&nbsp;Used to setup special <a href="intro.mapeditor.dataforms.html#specsargsview">model entities</a> if the game has these.
+<li><a href="glossary.html#(">(gamename)(special)Lists.qrk</a> &nbsp;&nbsp;&nbsp;&nbsp;Used to setup other special lists of items that the game uses.
+</ul>
+</p><p>The reasoning behind the above structure is that in the <b>OLD</b> days when games were small it didn't matter...<br>
+so everything was purtty much thrown into one file.... that's just the way it was done....<br>
+But now that games are 10 times bigger (and all their editing items) that way just doesn't work anymore.<br>
+Try updating just the entities in a file that has all of that other different stuff in it.....
+ and you will see what I mean.  ???<br>
+(what a mess!) ....makes your hair stand on end....!
+</p><p>Now, the above individual files (for a basic game like HL2) are added to the &quot;<a href="glossary.html#a">AddOns</a>&quot;
+in the &quot;<a href="glossary.html#(">(gamename):config =</a>&quot; section of the <a href="glossary.html#d">Defaults.qrk</a> file so they get registered
+and loaded right out of the box..... which also makes it easer for the end user.
+Other addons for that game are registered by the user as desired.<br>
+See how all of that works together now?
+It keeps things simple, more directly related and easer to update a single component of a games
+editing item individually without having to thrash through a bunch of different formatted code for other items.
+</p>
+</td></tr></table>
+<br>
+
+<table width="100%" border=0 cellspacing=0>
+  <tr class="headline">
+    <td width="100%">
+      <p class="subheadline">&nbsp;Index</p>
+    </td>
+  </tr>
+</table>
+<ul class="index">
+  <li>- <a href="#conversiontool">Conversion Tool</a>&nbsp;<span class="added">(25 Apr 2008)</span>
+  <li>- <a href="#qeradiant">QERadiant .def file</a>&nbsp;<span class="added">(27 Apr 2008)</span>
+  <li>- <a href="#worldcraft">Worldcraft .fgd file</a>&nbsp;<span class="added">(27 Apr 2008)</span>
+  <li>- <a href="#conversiontoolsys">Conversion Tool System</a>&nbsp;<span class="added">(25 Jul 2009)</span>
+</ul>
+<br>
+
+
+<a name="conversiontool"></a>
+  <table width="100%" border=0 cellspacing=0>
+    <tr class="headline">
+      <td>
+        <p class="item">&nbsp;Conversion Tool</p>
+      </td>
+      <td align=right>
+        <font size=-2>cdunde&nbsp;-&nbsp;25 Apr 2008</font>
+      </td>
+      <td width="1%" align=right nowrap>
+        &nbsp;&nbsp;[&nbsp;<a href="#__top__">Top</a>&nbsp;]&nbsp;
+      </td>
+    </tr>
+  </table>
+  <table border=0 width="100%" cellspacing=10><tr><td>
+<p>This tool is the most detailed of the three because it can create any of the types of
+<a href="adv.intro.html#qrk">.qrk</a> files that QuArK uses (mouse over
+each input displays its instructions) .<br>
+Folders and their files that are going to be used by this tool must be extracted from
+the games pak files in the same order that they are in those pak files.
+<img border=1 align=right src="adv.conversion.conversiontool1.png">
+</p><p>Holding the mouse cursor over any <b>bold title</b> will cause some general instructions to
+be displayed.<br>
+This is also true for any of the non-bold items and their related input boxes
+to act as a step-by-step guide.
+</p><p><a href="glossary.html#<"><i>Game Files Loacation</i></a> : Here you select the folder that the actual
+<b>game files</b> are in, like the <a href="glossary.html#fileext">.pk3</a> files.<br>
+<a href="glossary.html#<"><i>Pak file type</i></a> : Here you click on the <b><a href="glossary.html#fileext">...</a></b> button to
+select one of those <a href="glossary.html#fileext">.pk3</a> files using a file selection window.<br>
+<a href="glossary.html#<"><i>Game Name</i></a> : Type in a short name that the addons folder and files will use,
+ex: <b>Quake3</b> for Quake 3 Arena.<br>
+<a href="glossary.html#<"><i>Game Engine type</i></a> : Clicking on the <a href="glossary.html#d">down arrow</a> gives a list to choose
+from that is closest to your game type.
+</p><p><a href="glossary.html#<"><i>Entities folder path</i></a> : Here you select the folder that the
+<b>definition file(s)</b> are in, like the <a href="glossary.html#fileext">.def</a> or <a href="glossary.html#fileext">.cpp</a> files.<br>
+<a href="glossary.html#<"><i>Entities file type</i></a> : Here you click on the <b><a href="glossary.html#fileext">...</a></b> button to
+select any one of those files using a file selection window.<br>
+<a href="glossary.html#<"><i>Shaders folder path</i></a> : Here you select the folder that the
+<b>shader file(s)</b> are in, like the <a href="glossary.html#fileext">.shader</a> or <a href="glossary.html#fileext">.mat</a> files.<br>
+<a href="glossary.html#<"><i>Shaders file type</i></a> : Here you click on the <b><a href="glossary.html#fileext">...</a></b> button to
+select any one of those files using a file selection window.<br>
+<a href="glossary.html#<"><i>Textures folder path</i></a> : Here you select the folder that the
+<b>texture file(s)</b> are in, like <a href="glossary.html#fileext">.jpg</a> or multipal file types.<br>
+<a href="glossary.html#<"><i>Textures file type</i></a> : Here you click on the <b><a href="glossary.html#fileext">...</a></b> button to
+select any one of those files using a file selection window.<br>
+<a href="glossary.html#<"><i>Model folder path</i></a> : Here you select the folder that the
+<b>model file(s)</b> are in, like the <a href="glossary.html#fileext">.md2</a> or <a href="glossary.html#fileext">.md3</a> files.<br>
+<a href="glossary.html#<"><i>Model file type</i></a> : Here you click on the <b><a href="glossary.html#fileext">...</a></b> button to
+select any one of those files using a file selection window.<br>
+<a href="glossary.html#<"><i>Sound folder path</i></a> : Here you select the folder that the
+<b>sound file(s)</b> are in, like <a href="glossary.html#fileext">.wav</a> or multipal file types.<br>
+<a href="glossary.html#<"><i>Sound file type</i></a> : Here you click on the <b><a href="glossary.html#fileext">...</a></b> button to
+select any one of those files using a file selection window.<br>
+<a href="glossary.html#<"><i>Music folder path</i></a> : Here you select the folder that the
+<b>music file(s)</b> are in, like <a href="glossary.html#fileext">.ogg</a> or multipal file types.<br>
+<a href="glossary.html#<"><i>Music file type</i></a> : Here you click on the <b><a href="glossary.html#fileext">...</a></b> button to
+select any one of those files using a file selection window.
+</p><p>Holding the mouse cursor over any <b>bold title</b> will cause some general instructions to
+be displayed.
+</p><p><a href="glossary.html#<"><i>Make Data file</i></a> : Check this box to make the <a href="glossary.html#d">Data(gamename).qrk</a> file.<br>
+<a href="glossary.html#<"><i>Make UserData file</i></a> : Check this box to make the <a href="glossary.html#u">UserData (gamename).qrk</a> file.<br>
+<a href="glossary.html#<"><i>Make Entities file</i></a> : Check this box to make the <a href="glossary.html#(">(gamename)Entities.qrk</a> file.<br>
+<a href="glossary.html#<"><i>Make Shaders file</i></a> : Check this box to make the <a href="glossary.html#(">(gamename)Shaders.qrk</a> file.<br>
+<a href="glossary.html#<"><i>Make Textures file</i></a> : Check this box to make the <a href="glossary.html#(">(gamename)Textures.qrk</a> file.<br>
+<a href="glossary.html#<"><i>Make Mdl Entity file</i></a> : Check this box to make the <a href="glossary.html#(">(gamename)ModelEntities.qrk</a> file.<br>
+<a href="glossary.html#<"><i>Mdl Entity folder path</i></a> : Here you select the folder that the
+<b>Mdl Entity files</b> are in, like <a href="glossary.html#fileext">.lst</a> (text script) files.<br>
+<a href="glossary.html#<"><i>Mdl Entity file type</i></a> : Here you click on the <b><a href="glossary.html#fileext">...</a></b> button to
+select one of those files using a file selection window.<br>
+<a href="glossary.html#<"><i>Make List file</i></a> : Check this box to make the <a href="glossary.html#(">(gamename)(special)Lists.qrk</a> file.<br>
+<a href="glossary.html#<"><i>List File folder path</i></a> : Here you select the folder that the
+<b>List files</b> are in, this can be any set of files.<br>
+<a href="glossary.html#<"><i>List file type</i></a> : Here you click on the <b><a href="glossary.html#fileext">...</a></b> button to
+select one of those files using a file selection window.<br>
+</p><p><a href="glossary.html#<"><i>Make .qrk files</i></a> : Starts the creation process for the above selected <a href="adv.intro.html#qrk">.qrk</a> files.
+As the individual files are<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+created other dialogs may open for additional selections depending on the <b>files to make</b> you checked.<br>
+<a href="glossary.html#<"><i>Close this dialog</i></a> : Closes the dialog, canceling the process.
+</p><p><b><u>Notes :</u></b><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+1) You should always leave this dialog open until you test the files it creates to avoid
+having to re-select everything if a change is needed.<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+2) If so, individual fines can be re-created by leaving only those <b>files to make</b> checked in <b>Step 2</b>
+and clicking the <a href="glossary.html#m">Make .qrk files</a> button again.<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+3) Also see the <a href="adv.conversion.html#conversiontoolsys">Conversion Tool System</a> section below
+for more info as to how this system is structured and can be improved and\or expanded upon.
+</p>
+  </td></tr></table>
+  <br>
+
+<a name="qeradiant"></a>
+  <table width="100%" border=0 cellspacing=0>
+    <tr class="headline">
+      <td>
+        <p class="item">&nbsp;QERadiant .def file</p>
+      </td>
+      <td align=right>
+        <font size=-2>cdunde&nbsp;-&nbsp;27 Apr 2008</font>
+      </td>
+      <td width="1%" align=right nowrap>
+        &nbsp;&nbsp;[&nbsp;<a href="#__top__">Top</a>&nbsp;]&nbsp;
+      </td>
+    </tr>
+  </table>
+  <table border=0 width="100%" cellspacing=10><tr><td>
+<p><img border=1 align=right src="adv.conversion.qeradiant1.png">
+This tool only works with <a href="glossary.html#fileext">.def</a> files that come with different versions of QERadiant, another map editor,
+or sometimes a game may contain its own <a href="glossary.html#fileext">.def</a> file(s).
+</p><p>Also, it will only work with one of these files at a time and it will not setup any of the entity’s <a href="glossary.html#s">Specifics</a>,
+optional items to set for an entity. Those would need to be done by hand or by using the
+<a href="adv.conversion.html#conversiontool">Conversion Tool</a> above.
+</p><p>When its menu item is selected, a file selection window will open that is used to navigate to the <a href="glossary.html#fileext">.def</a>
+file location and select it. This will start the conversion and give further instructions.
+</p><p>Another tool that exist in <a href="glossary.html#q">QuArK</a> is the <a href="adv.addons.html#entitytool">Entity Extractor</a> which
+will search through a game's <a href="glossary.html#fileext">.bsp</a> files to get the entities.
+</p>
+  </td></tr></table>
+  <br>
+
+<a name="worldcraft"></a>
+  <table width="100%" border=0 cellspacing=0>
+    <tr class="headline">
+      <td>
+        <p class="item">&nbsp;Worldcraft .fgd file</p>
+      </td>
+      <td align=right>
+        <font size=-2>cdunde&nbsp;-&nbsp;27 Apr 2008</font>
+      </td>
+      <td width="1%" align=right nowrap>
+        &nbsp;&nbsp;[&nbsp;<a href="#__top__">Top</a>&nbsp;]&nbsp;
+      </td>
+    </tr>
+  </table>
+  <table border=0 width="100%" cellspacing=10><tr><td>
+<p><img border=1 align=right src="adv.conversion.worldcraft1.png">
+This tool only works with <a href="glossary.html#fileext">.fgd</a> files that come with different versions of Worldcraft, another map editor.
+</p><p>Also, it will only work with one of these files at a time and it will not setup any of the entity’s <a href="glossary.html#s">Specifics</a>,
+optional items to set for an entity. Those would need to be done by hand. At this time, the
+<a href="adv.conversion.html#conversiontool">Conversion Tool</a> above does not process these types of files.
+</p><p>When its menu item is selected, a file selection window will open that is used to navigate to the <a href="glossary.html#fileext">.fgd</a>
+file location and select it. This will start the conversion and give further instructions.
+</p><p>Another tool that exist in <a href="glossary.html#q">QuArK</a> is the <a href="adv.addons.html#entitytool">Entity Extractor</a> which
+will search through a game's <a href="glossary.html#fileext">.bsp</a> files to get the entities.
+</p>
+  </td></tr></table>
+  <br>
+
+<a name="conversiontoolsys"></a>
+  <table width="100%" border=0 cellspacing=0>
+    <tr class="headline">
+      <td>
+        <p class="item">&nbsp;Conversion Tool System</p>
+      </td>
+      <td align=right>
+        <font size=-2>cdunde&nbsp;-&nbsp;25 Jul 2009</font>
+      </td>
+      <td width="1%" align=right nowrap>
+        &nbsp;&nbsp;[&nbsp;<a href="#__top__">Top</a>&nbsp;]&nbsp;
+      </td>
+    </tr>
+  </table>
+  <table border=0 width="100%" cellspacing=10><tr><td>
+<p>The <a href="adv.conversion.html#conversiontool">Conversion Tool</a> is the most detailed and
+flexible of the <a href="adv.conversion.html#__top__">three tools above</a>
+because it not only can use the other two, it also is completely modular to allow individual
+module component updates and new modules to be added. Here we will cover the structure of this
+system to encourage further development of it.
+<img border=1 align=right src="adv.conversion.conversiontoolsys1.png">
+</p><p><b><u>System Hierarchy :</u></b> As shown in the image to the right, all of this systems files are located
+in the <b>QuArK\plugins</b> folder at its current development stage.
+</p><p>The only two exceptions to this is the <b>QuArK\quarkpy\qmacro.py</b> file which is used to place the
+<a href="adv.conversion.html#conversiontool">Conversion Tool</a> on QuArK's Explorer Main Files menu.
+Comparing version 1.27 and 1.28 of this file will disclose the first part of the changes needed to do so.
+The second part is in the plugins\ent1conversiontools.py file at the very bottom
+</p><p>The other file is the <b>QuArK\quarkpy\qentbase.py</b> file that did not require any changes and is only used
+at the same location in the plugins\ent1conversiontools.py file to pass the menu item to the qmacro.py file.
+<ul>
+<a href="glossary.html#<"><b><u>1st Level Hierarchy :</u></b></a><br>
+<li><b>ent1conversiontools.py :</b> This is the main control file. It has <b>4</b> major functions:
+</p><p><b>1</b>) It produces the main dialog where all of the core selections are made at the very beginning
+(<a href="adv.conversion.html#conversiontool">shown above</a>).<br>
+<b>2</b>) It processes these selections to <a href="glossary.html#t">trim</a> and provide only that part of the input as needed.<br>
+<b>3</b>) First it will create a new <a href="glossary.html#g">game folder</a> in <a href="glossary.html#q">QuArK's main directory folder</a>
+to handle temporary work files (that are removed later, if all goes well)<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;and place the new
+<a href="adv.intro.html#qrk">.qrk</a> files into.<br>
+&nbsp;&nbsp;&nbsp;&nbsp;
+If something should go wrong, the temporary work files remain in the new game folder as a means to help
+track down the problem and rectify it.<br>
+&nbsp;&nbsp;&nbsp;&nbsp;
+It then <a href="glossary.html#s">steps through</a> each <b>files to make</b> selection of code creating the more <a href="glossary.html#s">simple</a>
+type of <a href="adv.intro.html#qrk">.qrk</a> files, the <a href="glossary.html#d">Data(gamename).qrk</a> and<br>
+&nbsp;&nbsp;&nbsp;&nbsp;
+<a href="glossary.html#u">UserData (gamename).qrk</a> files, which are copies of the selected <a href="adv.conversion.html#conversiontool">Game Engine type:</a>
+files that was chosen in its <a href="adv.conversion.html#conversiontool">main dialog</a>.<br>
+&nbsp;&nbsp;&nbsp;&nbsp;
+It also produces its own <a href="glossary.html#s">Secondary Dialog</a> for the selection of the <a href="glossary.html#d">Default Room Textures</a>
+to be used in the <a href="glossary.html#d">Data(gamename).qrk</a> file.<br>
+&nbsp;&nbsp;&nbsp;&nbsp;
+As these files are copied things such as the <a href="glossary.html#g">game name</a> and <a href="glossary.html#t">type of Pak file</a>
+it uses are exchanged in the file's copy.<br>
+<b>4</b>) It calls on the <b>2nd &amp; 3rd Level</b>
+files and passes the input data to those modular sections for creation of the particular
+<a href="adv.intro.html#qrk">.qrk</a> file that they deal with.<br>
+&nbsp;&nbsp;&nbsp;&nbsp;
+Each time a <b>2nd or 3rd Level</b> file has complete crating its <a href="adv.intro.html#qrk">.qrk</a> file
+the processing returns to the <a href="glossary.html#e">ent1conversiontools.py</a> control file to continue<br>
+&nbsp;&nbsp;&nbsp;&nbsp;
+on to the next step until it reaches the end where it displays a message that
+all of the selected files have been created successfully.<br>
+&nbsp;&nbsp;&nbsp;&nbsp;
+If a problem does exist with one or more of the files due to a selection in the
+<a href="adv.conversion.html#conversiontool">main dialog</a>, those selections can be changed<br>
+&nbsp;&nbsp;&nbsp;&nbsp;
+and the individual files re-created as long as the <a href="adv.conversion.html#conversiontool">main dialog</a>
+has not been closed. Other wise it will reset the entire system and clear all selections.
+</ul>
+<ul>
+<a href="glossary.html#<"><b><u>2nd Level Hierarchy :</u></b></a><br>
+<li><b>ConvertToolQ3typeEnts.py :</b> This creates the <a href="glossary.html#(">(gamename)Entities.qrk</a> file for a
+<a href="adv.conversion.html#conversiontool">Quake 3 type game engine</a>.<br>
+It can use <a href="glossary.html#fileext">.def, .cpp</a> or any other entity definition file that uses the <b>keyword</b> <a href="glossary.html#/">/*Quaked</a>
+to designate a new entity.<br>
+It also produces its own dialog input for selection of aditional items to include in that
+<a href="adv.intro.html#qrk">.qrk</a> file.<br>
+It then calls on the <a href="glossary.html#a">AddSpecificsList.py</a> and <a href="glossary.html#e">entdef2qrk.py</a> 3rd level files below to add the
+entity Specifics detail data<br>
+as well as create its own <a href="glossary.html#c">Color Setting</a> and <a href="glossary.html#s">Selection Lists</a> code for such things as
+<a href="glossary.html#g">Game Models</a>, <a href="glossary.html#g">Game Sounds</a> and<br>
+<a href="glossary.html#g">Game Music</a> if those items are seleced from its dialog to be included in the <a href="adv.intro.html#qrk">.qrk</a> file.
+</p>
+<p><li><b>ConvertToolD3typeEnts.py :</b> This creates the <a href="glossary.html#(">(gamename)Entities.qrk</a> file for a
+<a href="adv.conversion.html#conversiontool">Doom 3 type game engine</a>.<br>
+It can use <a href="glossary.html#fileext">.def, .cpp</a> or any other entity definition file that uses the <b>keyword</b> <a href="glossary.html#e">entityDef</a>
+to designate a new entity.<br>
+It also produces its own dialog input for selection of aditional items to include in that
+<a href="adv.intro.html#qrk">.qrk</a> file.<br>
+It then calls on the <a href="glossary.html#c">ConvertToolGet_tokens.py</a> 3rd level file below to assist in creating the
+entity Specifics detail data<br>
+as well as create its own <a href="glossary.html#c">Color Setting</a> and <a href="glossary.html#s">Selection Lists</a> code for such things as
+<a href="glossary.html#g">Game Models</a>, <a href="glossary.html#g">Game Sounds</a> and<br>
+<a href="glossary.html#g">Game Music</a> if those items are seleced from its dialog to be included in the <a href="adv.intro.html#qrk">.qrk</a> file.
+</ul>
+<ul>
+<a href="glossary.html#<"><b><u>3rd Level Hierarchy :</u></b></a><br>
+<li><b>AddModelEnts.py :</b> This file is called on directly by the <a href="glossary.html#e">ent1conversiontools.py</a> file to make the
+<a href="glossary.html#(">(gamename)ModelEntities.qrk</a> file.
+<li><b>AddShaderList.py :</b> This file is called on directly by the <a href="glossary.html#e">ent1conversiontools.py</a> file to make the
+<a href="glossary.html#(">(gamename)Shaders.qrk</a> file.
+<li><b>AddSpecificsList.py :</b> This file is used by the <a href="glossary.html#c">ConvertToolQ3typeEnts.py</a> file
+and works in conjunction with the <a href="glossary.html#e">entdef2qrk.py</a> file below<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+to create the final<a href="glossary.html#(">(gamename)Entities.qrk</a>
+file for a <a href="adv.conversion.html#conversiontool">Quake 3 type game engine</a>.
+<li><b>AddTextureList.py :</b> This file is called on directly by the <a href="glossary.html#e">ent1conversiontools.py</a> to make the
+<a href="glossary.html#(">(gamename)Textures.qrk</a> file.
+<li><b>ConvertToolGet_tokens.py :</b> This file is <b><a href="glossary.html#t">Tool</a></b> file used by both the
+<a href="glossary.html#c">ConvertToolD3typeEnts.py</a> and <a href="glossary.html#a">AddShaderList.py</a> files above for data processing.
+<li><b>entdef2qrk.py :</b> This file is used by the <a href="glossary.html#c">ConvertToolQ3typeEnts.py</a> file before the
+<a href="glossary.html#a">AddSpecificsList.py</a> file above to create a temporary <a href="adv.intro.html#qrk">.qrk</a> file<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+that it uses to merge all of the collected entity Specific items detail data with
+to create the final <a href="glossary.html#(">(gamename)Entities.qrk</a> file.
+</ul>
+</p><p>As you can see, all of these modular files, including the control file, can be updated, improved upon
+or added to for any future QuArK game file support needs.
+</p><p>In addition, the code has been written to process multiple levels of folders and their sub-folders
+as well as allowing the input for multiple texture and sound type files in the dialogs. All of this
+is displayed to the user as they move along, in the way of individual <a href="glossary.html#h">Hints</a> for each input
+to act as a guide and assist them.
+</p>
+  </td></tr></table>
+  <br>
+
+<br>
+
+<table width="100%" border=0 cellspacing=0>
+  <tr class="headline">
+    <td width="99%" align=center>
+      <p class="sm">
+        Copyright (c) 2009, GNU General Public License by The QuArK (Quake Army Knife) Community - <a target="_blank" href="http://quark.sourceforge.net/">http://quark.sourceforge.net/</a><br>
+      </p>
+    </td>
+    <td width="1%" align=right nowrap>
+      &nbsp;[&nbsp;<span class="navenable"><a href="adv.intro.html">Prev</a></span>&nbsp;-&nbsp;<a href="#__top__">Top</a>&nbsp;-&nbsp;<span class="navenable"><a href="adv.newgame.html">Next</a></span>&nbsp;]&nbsp;
+    </td>
+  </tr>
+</table>
+</body>
+</html>

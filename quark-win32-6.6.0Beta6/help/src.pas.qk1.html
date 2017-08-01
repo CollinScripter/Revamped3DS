@@ -1,0 +1,157 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"  "http://www.w3.org/TR/html4/loose.dtd">
+<html lang="en">
+<head>
+  <title>Qk1.pas</title>
+  <meta name="Description" content="QuArK Information Database - Page: 4.5.5.&nbsp;Qk1.pas">
+  <meta name="Keywords" content="QuArK InfoBase Quake Army Knife QRK QKM Python PY Map Editor Hexen Heretic Half-Life Sin Kingpin Soldier-of-Fortune Star-Trek-Voyager Elite-Force">
+  <link rel=stylesheet href="standard.css" type="text/css">
+</head>
+
+<body>
+<a name="__top__"></a>
+<table width="100%" border=0 cellspacing=0>
+  <tr>
+    <td width=213>
+      <a target="_blank" href="http://quark.sourceforge.net/"><img src="quarkicon.png" width=213 height=90 border=0 alt="Go to QuArK Web Site"></a>
+    </td>
+    <td width="70%" align=center>
+      <div class="topheadline">Qk1.pas</div>
+      <div class="sm">Updated&nbsp;23 Feb 2001</div>
+    </td>
+    <td width="30%" valign=bottom nowrap>
+      Upper&nbsp;levels:<br>-&nbsp;<a href="index.html">QuArK&nbsp;Information&nbsp;Base</a><br>-&nbsp;<a href="src.html">4.&nbsp;The&nbsp;Source&nbsp;Code</a><br>-&nbsp;<a href="src.pas.html">4.5.&nbsp;File-by-file&nbsp;descriptions</a><br>
+    </td>
+  </tr>
+</table>
+<table width="100%" border=0 cellspacing=0>
+  <tr class="headline">
+    <td width="99%">
+      <p class="headline">&nbsp;4.5.5.&nbsp;Qk1.pas</p>
+    </td>
+    <td width="1%" align=right nowrap>
+      &nbsp;[&nbsp;<span class="navenable"><a href="src.pas.logging.html">Prev</a></span>&nbsp;-&nbsp;<span class="navenable"><a href="src.pas.html">Up</a></span>&nbsp;-&nbsp;<span class="navenable"><a href="src.pas.qkexceptions.html">Next</a></span>&nbsp;]&nbsp;
+    </td>
+  </tr>
+</table>
+<table border=0 width="100%" cellspacing=10><tr><td>
+</td></tr></table>
+<br>
+
+<table width="100%" border=0 cellspacing=0>
+  <tr class="headline">
+    <td width="100%">
+      <p class="subheadline">&nbsp;Index</p>
+    </td>
+  </tr>
+</table>
+<ul class="index">
+  <li>- <a href="#intro">Introduction</a>&nbsp;<span class="added">(23 Feb 2001)</span>
+  <li>- <a href="#idle">Idle jobs</a>&nbsp;<span class="added">(23 Feb 2001)</span>
+</ul>
+<br>
+
+
+<a name="intro"></a>
+  <table width="100%" border=0 cellspacing=0>
+    <tr class="headline">
+      <td>
+        <p class="item">&nbsp;Introduction</p>
+      </td>
+      <td align=right>
+        <font size=-2>tiglari&nbsp;-&nbsp;23 Feb 2001</font>
+      </td>
+      <td width="1%" align=right nowrap>
+        &nbsp;&nbsp;[&nbsp;<a href="#__top__">Top</a>&nbsp;]&nbsp;
+      </td>
+    </tr>
+  </table>
+  <table border=0 width="100%" cellspacing=10><tr><td>
+<p>Qk1 and its form Form1 (an instance of TForm1, descendent of TQkForm,
+descendant of the standard Delphi class TForm), kick off initializing QuArK -
+TForm1 is the main window; its Create method FormCreate (the OnCreate event
+handler for a TForm1, as you can see by looking in Qk1.dfm, the which defines
+the setup of a TForm1) initializes Python, sets up the main explorer window,
+and heaps of other things. Read the Delphi help on OnCreate.
+</p><p>The handlers for the various Main Menu items are all there (opening/saving
+files, cut/paste in the tree-view), tho you should not have to mess with any of
+this stuff in order to support a new file-type for example (you do that by
+defining a subclass of QkFileObject and redefining methods, as discussed in the
+<a href="src.struct.html#fileobjects">'QFileObjects'</a>).
+</p><p>The Toolbars containing the main menus at the left and right of the main window
+are set up in Form1 itself, defined in Qk1.dfm, also the menus. The buttons are
+defined in defaults.qrk, in Tool bars|Main.toolbar, which is put into the
+topdock control by the line:
+</p><div class="doccode"><pre>
+ RestorePositionTb('Main', False, Explorer);
+</pre></div>
+
+<p>in Tform1.FormCreate (QkForm.pas).  Lines of this form can be used to put
+additional button toolbars into the main window (with names other then 'Main').
+</p><p>The actions of the buttons are defined by their cmd:macro values; the msg
+specifies of these become the cmd parameter to the method TQkForm.MacroCommand
+(QkForm.pas).
+</p><p>For those who aren't really up on how Delphi programs work, TForm1 is fired up
+by the QuArK.dpr file, which you can look at in Pascal Source form by opening
+up the project manager, then RMB|View Source on the QuArK.exe item (from which
+all the various modules hang as dependents). Or in fact you can just look at it
+with a text editor. You'll see a long list of 'uses' statements, followed by a
+few lines of the kind of code that's normally used to fire up GUI applications
+built with class libraries.
+</p><p>The line:
+</p><div class="doccode"><pre>
+ Application.CreateForm(TForm1, Form1);
+</pre></div>
+
+<p>is responsible for setting up <b>everything</b> that distinguishes QuArK from
+other Delphi applications (with the uses statement marshalling the resources).
+</p>
+<p>(What else should we know about Qk1?)
+</p>
+  </td></tr></table>
+  <br>
+
+<a name="idle"></a>
+  <table width="100%" border=0 cellspacing=0>
+    <tr class="headline">
+      <td>
+        <p class="item">&nbsp;Idle jobs</p>
+      </td>
+      <td align=right>
+        <font size=-2>Armin Rigo&nbsp;-&nbsp;23 Feb 2001</font>
+      </td>
+      <td width="1%" align=right nowrap>
+        &nbsp;&nbsp;[&nbsp;<a href="#__top__">Top</a>&nbsp;]&nbsp;
+      </td>
+    </tr>
+  </table>
+  <table border=0 width="100%" cellspacing=10><tr><td>
+<p>The 'idle job' is what runs when the application is idle, i.e. has nothing else
+to do. Qk1.pas defines general methods to register new idle jobs, which will be
+performed step-by-step -- every time the application is idle, a little bit of
+the job is performed (through the AppIdle method). This is only used for the
+texture browser, whose idle job consists of filling the texture pages (in
+QkWad.pas), one texture at a time. This is done as an idle job so that it can
+be interrupted by the user. I found it more convenient to do it like this
+instead of starting a new thread that would load textures in parallel with
+normal program execution, mainly because there are a number of issues with
+multiple threads accessing the same internal data at the same time.
+</p>
+  </td></tr></table>
+  <br>
+
+<br>
+
+<table width="100%" border=0 cellspacing=0>
+  <tr class="headline">
+    <td width="99%" align=center>
+      <p class="sm">
+        Copyright (c) 2009, GNU General Public License by The QuArK (Quake Army Knife) Community - <a target="_blank" href="http://quark.sourceforge.net/">http://quark.sourceforge.net/</a><br>
+      </p>
+    </td>
+    <td width="1%" align=right nowrap>
+      &nbsp;[&nbsp;<span class="navenable"><a href="src.pas.logging.html">Prev</a></span>&nbsp;-&nbsp;<a href="#__top__">Top</a>&nbsp;-&nbsp;<span class="navenable"><a href="src.pas.qkexceptions.html">Next</a></span>&nbsp;]&nbsp;
+    </td>
+  </tr>
+</table>
+</body>
+</html>

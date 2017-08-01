@@ -1,0 +1,137 @@
+BODY {
+  background-color: #FFFFFF;
+  margin: 1;
+  font-family: MS Sans Serif, Arial;
+  font-size: 10pt;
+  color: #000000;
+}
+P {
+  font-family: MS Sans Serif, Arial;
+  font-size: 10pt;
+  color: #000000;
+  margin-left: 0;
+  margin-right: 0;
+}
+P.sm {
+  font-size: 8pt;
+}
+A:link {
+  color: #3060c0;
+  text-decoration: none;
+  font-family: MS Sans Serif, Arial;
+}
+A:visited {
+  color: #1050a0;
+  text-decoration: none;
+  font-family: MS Sans Serif, Arial;
+}
+.sm {
+  font-family: MS Sans Serif, Arial;
+  font-size: 8pt;
+  color: #000000;
+}
+.warning {
+  font-size: 12pt; color: #FF0000;
+}
+.topheadline {
+  font-family: MS Sans Serif, Arial;
+  font-size: 24pt;
+  font-weight: bold;
+}
+P.headline {
+  text-align: left;
+  font-weight: bold;
+  font-size: 14pt;
+}
+P.subheadline {
+  text-align: left;
+  font-weight: bold;
+  font-size: 12pt;
+}
+P.subsubheadline {
+  text-align: left;
+  font-weight: bold;
+  font-size: 10pt;
+}
+TR.headline {
+  background: #E0E0E0;
+}
+UL {
+  font-family: MS Sans Serif, Arial;
+  font-size: 10pt;
+  color: #000000;
+}
+UL.section {
+  list-style: none;
+  margin-left: 10;
+  margin-top: 5;
+  margin-bottom: 5;
+}
+UL.subsection, UL.index {
+  list-style: none;
+  margin-top: 5;
+  margin-bottom: 5;
+}
+TH, TD, OL {
+  font-family: MS Sans Serif, Arial;
+  font-size: 10pt;
+  color: #000000;
+}
+DL {
+  font-family: MS Sans Serif, Arial;
+  font-size: 10pt;
+  color: #000000;
+}
+DT {
+  font-weight: bold;
+  font-family: MS Sans Serif, Arial;
+  font-size: 10pt;
+  color: #000000;
+  margin: 5, 20, 0, 20; /* this because of Netscape4 - Decker */
+}
+DD {
+  font-family: MS Sans Serif, Arial;
+  font-size: 10pt;
+  color: #000000;
+  margin: 0, 20, 0, 70; /* this because of Netscape4 - Decker */
+}
+SPAN.added {
+/* For the "(01 jan 2000)" texts */
+  font-family: Small Fonts;
+  font-size: 6pt;
+  color: #AAAAAA;
+}
+SPAN.q_a {
+/* (Q)uestion and (A)nswers */
+  font-family: MS Sans Serif, Arial;
+  font-size: 12pt;
+  font-weight: bold;
+  color: #000000;
+}
+.doccode {
+  font-family: Courier New, Courier;
+  font-size: 10pt;
+  color: #000088;
+  margin-left: 20;
+}
+DIV.sections {
+  margin: 10, 10, 10, 10;
+}
+.navdisable {
+  color: #A0A0A0;
+}
+.navenable {
+}
+PRE {
+  font-family: Fixed;
+}
+P.item {
+  font-family: MS Sans Serif, Arial;
+  font-weight: bold;
+}
+TT {
+  color: #880000;
+}
+SPAN.act {
+  background: #F0F0FF;
+}

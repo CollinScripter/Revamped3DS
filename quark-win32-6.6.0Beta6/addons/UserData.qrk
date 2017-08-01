@@ -1,0 +1,51 @@
+QQRKSRC1
+//**************************************************************************
+//QuArK -- Quake Army Knife -- 3D game editor
+//Copyright (C) QuArK Development Team
+//
+//This program is free software; you can redistribute it and/or
+//modify it under the terms of the GNU General Public License
+//as published by the Free Software Foundation; either version 2
+//of the License, or (at your option) any later version.
+//
+//This program is distributed in the hope that it will be useful,
+//but WITHOUT ANY WARRANTY; without even the implied warranty of
+//MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+//GNU General Public License for more details.
+//
+//You should have received a copy of the GNU General Public License
+//along with this program; if not, write to the Free Software
+//Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
+//
+//http://quark.sourceforge.net/ - Contact information in AUTHORS.TXT
+//**************************************************************************
+
+// User-modifiable configuration file for QuArK 5.3.
+
+// Please see infobase/help for more information about this file format.
+
+//$Header: /cvsroot/quark/runtime/addons/UserData.qrk,v 1.7 2010/04/16 21:24:19 danielpharos Exp $
+// ----------- REVISION HISTORY ------------
+//$Log: UserData.qrk,v $
+//Revision 1.7  2010/04/16 21:24:19  danielpharos
+//Updated website address and GPL block.
+//
+//Revision 1.6  2007/03/18 22:47:32  danielpharos
+//Changed the file header comments a bit.
+//
+//Revision 1.5  2005/10/15 01:00:03  cdunde
+//To reinstate headers and history
+//
+//Revision 1.2  2001/03/20 21:50:24  decker_dk
+//Added log-header
+//
+
+{
+  Description = "Custom configuration file."
+
+  MdlObjPanel.qrk =
+  {
+  }
+
+}
+

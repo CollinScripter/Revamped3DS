@@ -1,0 +1,1192 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"  "http://www.w3.org/TR/html4/loose.dtd">
+<html lang="en">
+<head>
+  <title>Introducing QuArK development</title>
+  <meta name="Description" content="QuArK Information Database - Page: 3.1.&nbsp;Introducing QuArK development">
+  <meta name="Keywords" content="QuArK InfoBase Quake Army Knife QRK QKM Python PY Map Editor Hexen Heretic Half-Life Sin Kingpin Soldier-of-Fortune Star-Trek-Voyager Elite-Force">
+  <link rel=stylesheet href="standard.css" type="text/css">
+</head>
+
+<body>
+<a name="__top__"></a>
+<table width="100%" border=0 cellspacing=0>
+  <tr>
+    <td width=213>
+      <a target="_blank" href="http://quark.sourceforge.net/"><img src="quarkicon.png" width=213 height=90 border=0 alt="Go to QuArK Web Site"></a>
+    </td>
+    <td width="70%" align=center>
+      <div class="topheadline">Introducing QuArK development</div>
+      <div class="sm">Updated&nbsp;01 Apr 2013</div>
+    </td>
+    <td width="30%" valign=bottom nowrap>
+      Upper&nbsp;levels:<br>-&nbsp;<a href="index.html">QuArK&nbsp;Information&nbsp;Base</a><br>-&nbsp;<a href="adv.html">3.&nbsp;Advanced&nbsp;customization</a><br>
+    </td>
+  </tr>
+</table>
+<table width="100%" border=0 cellspacing=0>
+  <tr class="headline">
+    <td width="99%">
+      <p class="headline">&nbsp;3.1.&nbsp;Introducing QuArK development</p>
+    </td>
+    <td width="1%" align=right nowrap>
+      &nbsp;[&nbsp;<span class="navenable"><a href="adv.html">Prev</a></span>&nbsp;-&nbsp;<span class="navenable"><a href="adv.html">Up</a></span>&nbsp;-&nbsp;<span class="navenable"><a href="adv.conversion.html">Next</a></span>&nbsp;]&nbsp;
+    </td>
+  </tr>
+</table>
+<table border=0 width="100%" cellspacing=10><tr><td>
+</td></tr></table>
+<br>
+
+<table width="100%" border=0 cellspacing=0>
+  <tr class="headline">
+    <td width="100%">
+      <p class="subheadline">&nbsp;Index</p>
+    </td>
+  </tr>
+</table>
+<ul class="index">
+  <li>- <a href="#intro">Introduction</a>&nbsp;<span class="added">(28 Apr 2009)</span>
+  <li>- <a href="#qrk">.Qrk files</a>&nbsp;<span class="added">(12 Sep 2008)</span>
+  <li>- <a href="#typ">Guide to Typ's</a>&nbsp;<span class="added">(01 Apr 2013)</span>
+  <li>- <a href="#oopintro">Understanding OOP</a>&nbsp;<span class="added">(26 Jan 2009)</span>
+</ul>
+<br>
+
+
+<a name="intro"></a>
+  <table width="100%" border=0 cellspacing=0>
+    <tr class="headline">
+      <td>
+        <p class="item">&nbsp;Introduction</p>
+      </td>
+      <td align=right>
+        <font size=-2>Tiglari&nbsp;-&nbsp;28 Apr 2009</font>
+      </td>
+      <td width="1%" align=right nowrap>
+        &nbsp;&nbsp;[&nbsp;<a href="#__top__">Top</a>&nbsp;]&nbsp;
+      </td>
+    </tr>
+  </table>
+  <table border=0 width="100%" cellspacing=10><tr><td>
+<p>QuArK development can be carried out at three levels:
+</p><p><ul>
+<li>the *.qrk configuration files
+</p><p><li>the Python code
+</p><p><li>the Delphi code.
+</ul>
+</p><p>The first two require just a text-editor, since a functioning QuArK
+installation includes the Python interpreter, while the last requires
+Delphi (Borland's version of Pascal, enhanced with visual development
+tools).  The current developers seem to be using versions 6 or 7;
+it's possible that older versions such as 3 or even 2, might work.
+Older versions can sometimes be acquired free on computer magazine
+CD's.  The Delphi is written in a mixture of French and English,
+and the French is slowly being converted to English (so there is
+a possibility that some references to things in the Delphi here
+will be outdated).
+</p><p>TC's can typically be supported by creating new *.qrk files in the
+form of `addons', while supporting a new game usually requires some
+Delphi coding (mostly because each game tends to introduce some quirks
+into the texture and map formats, and the read/write code for these
+needs to be reasonably fast).  Interface ideas on the other hand can
+often be supported just in Python, with maybe a little bit of Delphi
+to support a new `specific type' in a form (if you have a bright idea
+and think you need a new specific type, some Delphi coder might
+well be able to provide it).
+</p><p>Central to everything is the concept of `QObject', QuArK's universal
+format for the storage and management of structured information.
+Maps, game information supplied in add-ons, and the descriptions of
+most of the dialog boxes and other data-entry windows in QuArK are
+all described as QOjects.  The .Qrk files are just QObjects presented
+in a written format for QObjects, and understanding
+them is essential for following the Python and Delphi as well.
+</p><p>A QObject is a thing (technically an instance of a class in Delphi)
+with two kinds of properties:
+<ul>
+<li>A list of attributes called `Specifics', each with a value, which
+    might be a string, a number, a sequence of numbers or a few
+    other things.
+<li>A list of `subelements' (SubElements in the Delphi, .subitems
+    in the Python), each of which is just another QObject.
+</ul>
+</p><p>So a face is a QObject with a `v' specific of 9 numbers indicating
+the face and texture position information (the location of the
+corner and two ends of the Cyan L), and a `tex' specific giving
+the name of the texture.  You can see the specifics of a map object
+by hitting the second button over the multi-page panel (it's usually
+only interesting for entities).
+</p><p>And a poly (brush) is a QObject whose list of subitems are the non-shared
+faces of that poly (shared faces appear in the subitem list of the group
+containing that poly).  And so on.
+</p><p>There's one special specific that should always be there, and maybe
+shouldn't be thought of as a specific at all, and that is `name'.
+A QObject's name is divided into two parts, shortname and extension.
+The shortname is usually just an identifying label (tho for entities
+it's the classname), but the extension, separated by a dot or colon,
+specifies the kind of object.  The dot separator is used for types of
+QObjects that can plausibly be stored in a file of their own (so they
+are in effect a file-type), while the colons are for smaller types
+of objects, such as the different components of a map.
+</p><p>Here are some of the more important extensions:
+<ul>
+<li>.qctx - Quake Context.  Contains info that modifies how things are done
+<li>.qtx - Toolbox.  Collection of objects that can be chosen from and inserted into something.
+<li>.qtxfolder - folder in .qtx
+<li>:form - specifies a format for a window whereby info about something
+    is entered into QuArK.  To support a mod, you'll have to
+    get familiar with the :form object associated with each
+    entity; these are found in the entity forms.qctx of the .qrk
+<li>:f - face
+<li>:p - poly (brush; faces in subitems thereof, shortname arbitrary label)
+<li>:g - group (contained faces, brushes &amp; entities in subitems, shortname arbitrary label)
+<li>:b - brush entity (attached brushes in subitems, entity attributes in specifics, shortname = classname)
+<li>:b2 - (quadratic) bezier patch or quilt
+<li>:e - point entity (entity attributes in specifics, shortname = classname)
+</ul>
+</p><p>Because each specific has a unique identifying name, the order of the
+specifics list doesn't matter, but the subelements don't have labels;
+for map objects, they are displayed in the tree-view, and the order is
+as given.  In principle you could make something depend on it, tho I
+don't think anyone ever has).
+</p><p>It might be useful to note that QObjects are sort of like a limited
+form of XML, with no character data interspersed between subelements.
+With QObjects in hand, we push on to .qrk's.
+</p>
+  </td></tr></table>
+  <br>
+
+<a name="qrk"></a>
+  <table width="100%" border=0 cellspacing=0>
+    <tr class="headline">
+      <td>
+        <p class="item">&nbsp;.Qrk files</p>
+      </td>
+      <td align=right>
+        <font size=-2>Tiglari&nbsp;-&nbsp;12 Sep 2008</font>
+      </td>
+      <td width="1%" align=right nowrap>
+        &nbsp;&nbsp;[&nbsp;<a href="#__top__">Top</a>&nbsp;]&nbsp;
+      </td>
+    </tr>
+  </table>
+  <table border=0 width="100%" cellspacing=10><tr><td>
+<pre>
+Useful additions:
+  *a rundown of the major compoments of a game-support file and an addon file.
+  *a guide to Typ's in :form's
+</pre>
+
+<p>.qrk files are just QObjects stored in files.  There are actually
+two kinds of .qrk files, text and binary (both unfortunately with
+the extension .qrk).  The text files can be read an edited with
+a text-editor (although the format is initially forbidding), whereas
+the binaries are much more compact, and allow `delay loading'
+which helps QuArK manage big ones with less chugging.
+</p><p>To get a text version of a binary *.qrk, just open it, and save then save
+it (as `structured text', with the extension .txt to keep the file system
+happy).  The `technical info' zips for the older QuArK versions,
+and the current development snapshots, contain the
+text versions of the *.qrk files, which furthermore tend to contain useful
+information such as comments on the syntax, etc.
+</p><p>A (text format) .Qrk begins with the line `QQRKSRC1', which says
+that it's a QuArK text format file.  Then there can be comment
+lines beginning with `//' (everything after `//' on a line is
+igored), whitespace and blank lines etc. until we get down to
+business with a line whose first nonblack character is:
+</p><p>  '{'.
+</p><p>'{' opens a QObject.  We already know that QObjects have two
+`Specifics' (name-value pairs), and `Subitems', which are
+QObjects which will have a `name' specific.  So it's not too
+surprising that the rest of a QObject will consist of a series
+of pairs:
+</p><div class="doccode"><pre>
+  &lt;Name&gt; = &lt;Value&gt;
+</pre></div>
+
+<p>  (where &lt;Value&gt; can be as large an expanse of text as you like,
+   if it's a great big QOobject)
+</p><p>Until we fetch up at the end with the closing `}', after which the
+file must end.
+</p><p>So let's look at the beginning of the Portal of Praevus add-on
+(I started as a Hexen II entity guy, so we gotta have some Hx2
+content here ...)
+</p><div class="doccode"><pre>
+QQRKSRC1
+// This file has been written by QuArK Version 5.0.b5
+// It's the text version of file: Praevus.qrk
+// Portal of Praevus add-on by tiglari@hexenworld.com
+//   to be added on to datah2.qrk (data file for Hexen II)
+//
+// The Textures need to be further subsorted into wall, floor/ceiling,
+//  button, etc; if you want to do this please do, it's not rocket
+//  science!
+
+{
+  QuArKProtected = &quot;1&quot;
+  Description = &quot;Portal of Praevus Data&quot;
+
+    praevus directory infos.qctx =
+    {
+        Game = &quot;Hexen II&quot;
+        SourceDir = &quot;PORTALS&quot;
+//      GameDir = &quot;fortress&quot;
+    }
+</pre></div>
+
+<p>After the opening guff, we see that the first specific is
+`QuArKProtected'. This will cause a warning to pop up whenever QuArK
+tries to save/overwrite this file (only use this if the file is
+considered part of QuArK).  'QuArKProtected''s value is a string, enclosed
+in quotes.  There are several other schemes for representing values, such
+as Hex codes, which we'll get into shortly.
+</p><p>Then comes our first subelement.  Its Name specific will be
+`praevus directory infos.qctx'.  Its shortname is `praevus directory infos'
+and its extension is .qctx, so it's a Quake Context, and modifies
+how things are done (here where to look for info about the game).
+This particular QObject has two ordinary string-specifics,
+and then ends.  So it goes on with more subelements until the final
+'}' on line 6108.
+</p><p>So that's the basic idea, but there is a bit more to it than that.
+</p><p>First, in addition to strings, there are several additional types of
+specific-values.  Binary data is introduced with `$'.  So for example
+the line from the Defaults.qrk file prescribing the red default
+color for tags is:
+</p><div class="doccode"><pre>
+  Tag        = $FF0000
+</pre></div>
+
+<p>(a standard <a href="glossary.html#r">RGB</a> color code, for those new to such things)
+</p><p>Multiline strings can be specified as sequences of ordinary &quot;-bounded
+strings separated by `$0D':
+</p><div class="doccode"><pre>
+  Hint = &quot;This ought to work&quot;
+      $0D&quot;  if it doesn't, why not try extreme skiing?&quot;
+</pre></div>
+
+<p>And sequences of numbers are bounded by ', a bounding box for example
+might be specified as:
+</p><div class="doccode"><pre>
+     bbox = '-8 -8 -8 8 8 8'
+</pre></div>
+
+<p>All this and some more stuff that I haven't seen exemplified is
+prescribed in the function ConstructObjsFromText
+in the file QkFileObject.
+</p><p>* sections on the major components of the major kinds of .qrk file would go nicely here *
+</p><p><strong>Forms:</strong>
+ For game supporters, one of the most important kinds of components
+ of .qrk files are :forms, since these control how the specifics
+ of entities are entered into maps.  :forms are also important
+ in Python coding, since they are used to control in making dialog
+ boxes, etc.
+</p><p> To get a sense of how it goes, here's the beginning of the entity
+ forms specifications from DATAH2.QRK:
+</p><div class="doccode"><pre>
+   Entity forms.qctx =
+   {  // ENTFRM
+     Ring_Flight:form =
+     {
+      Help = &quot;Ring of Flight&quot;
+      bbox = '-8 -8 -44 8 8 20'
+      mdl = &quot;models/ringft.mdl&quot;
+     more: = {
+       Typ=&quot;B&quot;
+       Txt=&quot;triggering&quot;
+       Cap=&quot;Push&quot;
+       Form=&quot;item_triggers:form&quot;
+       Hint=&quot;specifics for triggering when item is taken&quot;
+     }
+      spawnflags: =
+        {Txt=&quot;&amp;&quot;
+         Typ=&quot;X1&quot;
+         Cap=&quot;FLOAT&quot;
+         Hint=&quot;item doesn't drop to floor when spawned  &quot;}
+     }
+     Ring_Regeneration:form =
+     { ...
+     ....
+</pre></div>
+
+<p>Entity Forms is a Quake Context, its subitems are a (big) list of
+:form objects.  These have some specifics (all QObjects, regardless
+of type, can have specifics freely added to them), and then comes
+a list of subitems.  Each subitem is a little window, `control'
+or `widget' (GUI geekspeak) whereby some attribute of the entity
+can be set by the editor.  I need to call them something, so I'll
+call them `fields'.
+</p><p>The way fields work is a bit devious.  They have names like `more:',
+`spawnflags:', etc. (colon, null extension). Then inside the brackets are
+listed further specifics, of which the most important is `Typ'.  Typ
+determines what kind of control is used; X1 for example is a checkbox that
+sets the first bit position (flag) in an integer.  Usually the name
+determines what attribute of the entity is being set, so the `spawnflags'
+subitem sets the the first bit position of the `spawnflags' attribute of
+the entity.  But not always; `more:' above is just a label.
+</p><p>Another important specific of fields is `Txt'.  This is the `label'
+that appears to the left of the data-entry widget itself.  If it's
+&quot;&amp;&quot;, then the name of the field is used as the label, so if you look
+at entity specifics in the map editor, you'll see the name of the
+various entity attributes on the left, their values on the right
+(in the data-entry widgets).  Their are various further field specifics,
+&quot;Cap&quot; for additional text (appearing on the right) and &quot;Hint&quot;,
+for flyover hints, and whatever more the delphi code for that
+kind of Typ happends to support.  So the :more button calls up
+an additional window for entering further specifics, its form is
+given as the value of the Form specific.
+</p><p>Unfortunately, there is no solid list of all the Typs (programmers
+might like to know that they're defined in a big cascade of
+Case statements in prog/FormCfg.pas:TFormCfg..wmMessageInterne;
+once you've got the hang of it, it's not too hard to add new ones,
+without fully understanding everything that's going on).  Browsing
+in the text versions of the game support files, especially dataq2.qrk,
+is a way to get started learning them.
+</p><p> * A guide to Typ's would also be nice to have *
+</p>
+  </td></tr></table>
+  <br>
+
+<a name="typ"></a>
+  <table width="100%" border=0 cellspacing=0>
+    <tr class="headline">
+      <td>
+        <p class="item">&nbsp;Guide to Typ's</p>
+      </td>
+      <td align=right>
+        <font size=-2>cdunde&nbsp;-&nbsp;01 Apr 2013</font>
+      </td>
+      <td width="1%" align=right nowrap>
+        &nbsp;&nbsp;[&nbsp;<a href="#__top__">Top</a>&nbsp;]&nbsp;
+      </td>
+    </tr>
+  </table>
+  <table border=0 width="100%" cellspacing=10><tr><td>
+<p>Typ's are used in all kinds of forms but the most common are <a href="adv.quarkpy.gui.html#dialogs">Dialog Boxes</a>.
+These are placed within tripple double quotes <a href="glossary.html#"">"""</a> and ends with them also, because it's a multi-line string.<br>
+A <b>very important</b> thing to know and remember about this is how to use a Python defined variable within this
+tripple double quotes area.
+</p><p>First the variable, which can also be a stored setting, must be defind before and outside of the above area like this:
+<div class="doccode"><pre>
+    NbrOfLines = &quot;10&quot;
+</pre></div>
+Then that variable can be used within the tripple double quotes area like this:
+</p><div class="doccode"><pre>
+    mesh_shader: = {Typ=&quot;M&quot;
+                    Rows = &quot;&quot;&quot; + chr(34) + NbrOfLines + chr(34) + &quot;&quot;&quot;
+                    Scrollbars=&quot;1&quot;
+                    Txt = &quot;mesh shader&quot;
+                    Hint=&quot;Contains the full text of this skin texture's shader, if any.&quot;$0D
+                         &quot;This can be copied to a text file, changed and saved.&quot;
+                   }
+</pre></div>
+The <a href="glossary.html#c">chr(34)</a> items, which is for a single double quote, must be used like this to avoid confusion with the tripple double quotes.
+
+<p>Here is a list of the most common used Typ's in .QRK :form definitions.
+</p><p>Almost all components have some standard specifics you can use:
+</p><p><u>Hint</u> - displays a help message when the cursor hovers over the item. You can have spread it on several lines.<br>A valid text can look like this:
+</p><div class="doccode"><pre>
+Hint = &quot;Help text&quot;$ODOD&quot;How to spr&quot;
+       &quot;ead text on several lines.&quot;
+</pre></div>
+
+<p>The dollar sign is used to enter one or more special/invisible characters. In this case two new-line characters.<br>It is also valid to cut the text off and begin a new line if it becomes too long.<br>The above Hint will display:
+</p><p><b>Help text
+</p><p>How to spread text on several lines.</b>
+</p><p><u>Txt</u> - defines the lable. Labels are special in QuArK. If you set their value to &quot;&amp;&quot; they will display the name of the component.<br>So if you have defined a component like this:
+</p><div class="doccode"><pre>
+name: = { Typ=&quot;E&quot; Txt=&quot;&amp;&quot; } 
+</pre></div>
+
+<p>you will get 'name' as caption for this entry field. This is often used for the labels of entity specifics.
+</p><p><u>SelectMe</u> - set this to one and the component will become selected when its window/dialog is displayed.<br>This should be used on the first
+component on a dialog only, as it may be confusing to have input directed<br>to a component in the middle from the beginning. 
+</p><p><b>Note:</b> The first character of Typ works as a flag. If you use a lower-case character the button/entry field will fill<br>all available space
+its caption (Txt) does not occupy.
+</p><p><table border=1 cellpadding=2 cellspacing=0>
+</p><p><tr><td align=center>----</td>
+<td align=center><b>Entry fields</b></td>
+<td align=center><b>----</b></td></tr>
+</p><p><tr><th width=10%>Typ's</th><th width=40%>Description</th><th width=50%>Examples and Comments</th></tr>
+</p><p><tr><td align=center>
+E<br>
+</p><p>E R
+</td><td valign=top>
+<b>Entry field</b>.<br>
+This is the default type, if Typ=&quot;...&quot; is not given.<br>
+Hint: Use &quot;ER&quot; to make it read-only. Use it for simple text entries for read-only text displays.
+</td><td>
+<pre>
+targetname: = { Typ=&quot;E&quot; Txt=&quot;&amp;&quot; }
+target: = { Txt=&quot;&amp;&quot; }
+readonly: = {
+    Typ=&quot;ER&quot;
+    Txt=&quot;Output:&quot;
+    Hint=&quot;Displays the current memory usage.&quot;
+    }
+</pre>
+<u><i>Specifics:</i>&nbsp;</u><br>
+only common specifics (see above)
+</td></tr>
+</p><p><tr><td align=center>
+EF<br>
+</p><p>EFR<br>
+</p><p>EF[0..0]<br>
+</p><p>[x]
+</td><td valign=top>
+<b>Entry field containing Float(s)</b>.<br>
+The last &quot;R&quot; (at third position) means Read/Only.<br>
+EF is special in the way that you can choose how many values you have to enter and how many digits they should have. To set the number of digits after the decimal dot add zeros after EF. To make the field accept more than one value add the number of values at the end.
+<br><br>
+<b><u>NOTE:</u></b><br>
+Do <b>NOT</b> use this for entities, it will not be exported to the .map file. Use Typ=&quot;E&quot; above instead.
+</td><td>
+<pre>
+three: = {
+    Typ=&quot;EF003&quot; 
+    Txt=&quot;The three values:&quot;
+    Hint=&quot;You must enter three values here. They have&quot;
+         &quot;an accuracy of two digits.&quot;
+    }<br>
+greater_than_zero: = {
+    Typ=&quot;EF00&quot; 
+    Txt=&quot;Value:&quot;
+    Min=&quot;0.01&quot;
+    Hint=&quot;Enter positive value here.&quot;
+    }
+</pre>
+<u><i>Important:</i>&nbsp;</u>
+To have a dialog round values to the desired accuracy you have to use the LiveEditDlg class. Look at some Python scripts to find out how it works.<br>
+</p><p><u><i>Specifics:</i>&nbsp;</u> 
+Min/Max - set minimum or maximum values with this.<br> 
+</td></tr>
+</p><p><tr><td align=center>
+ED<br>
+</p><p>EDL
+</td><td valign=top>
+<b>Entry field containing Directory-path (with browse button)</b>.<br>
+The last &quot;L&quot; (at third position) means only the last foldername of the path is to be used.<br>
+</td><td>
+<pre>
+SourceDir: = {
+    Typ=&quot;ED&quot;
+    Hint=&quot;Full directory-path&quot;
+    CheckFile=&quot;Game.exe&quot;
+    }
+
+GameMod: = {
+    Typ=&quot;EDL&quot;
+    Hint=&quot;Modification folder&quot;
+    }
+</pre>
+<u><i>Specifics:</i>&nbsp;</u> 
+CheckFile - set this and the dialog will only enable the Ok button if it finds this<br>file in the chosen directory. 
+</td></tr>
+</p><p><tr><td align=center>
+ET<br>
+</td><td valign=top>
+<b>Entry field containing Texture-name (with browse button)</b>.<br>
+Opens the texture-browser, if the browse button is pressed.<br>
+</td><td>
+<pre>
+Texture: = {
+    Typ=&quot;ET&quot;
+    Hint=&quot;Choose texture&quot;
+    }<br>
+QuakeTexture: = {
+    Typ=&quot;ET&quot;
+    Hint=&quot;Choose a Quake texture&quot;
+    GameCfg=&quot;Quake 1&quot;
+    }
+</pre>
+<u><i>Specifics:</i>&nbsp;</u> 
+GameCfg - set one of the short game names here to make QuArK switch to this game when the browse button is pressed. You can find these names in the Defaults.qrk 
+</td></tr>
+</p><p><tr><td align=center>
+EP<br>
+</td><td valign=top>
+<b>Entry field containing Path and File-name (with browse button)</b>.<br>
+Opens a file-dialog, so the user can choose a filename.
+</td><td>
+<pre>
+QBSP1: = { Typ=&quot;EP&quot; Txt=&quot;Path to QBSP&quot; DefExt=&quot;exe&quot; }
+LIGHT1: = { Typ=&quot;EP&quot; Txt=&quot;Path to QRAD3&quot; DefExt=&quot;exe&quot; }
+soundfile: = {
+    Typ=&amp;quot;EP&amp;quot;
+    Txt=&amp;quot;Select a file&amp;quot;
+    DefExt=&amp;quot;WAV&amp;quot;
+    BasePath=&amp;quot;$Game\basedata\sound&amp;quot;
+    CutPath=&amp;quot;$Game\?\sound&amp;quot;
+    AugPath=&amp;quot;sound&amp;quot;
+    }
+</pre>
+</td></tr>
+</p><p><tr><td align=center>
+EP<br>
+specifics<br>
+</td><td valign=top>
+<b>This is a list of specifics that effect the path<br>
+handling for the Typ=&quot;EP&quot; above</b>.
+</td><td>
+<pre>
+1) <b>Typ=&quot;EP&quot;</b> opens the file browser window.
+2) <b>Txt=&quot;Path to QBSP&quot;</b> gives the title at the top of the window.
+3) <b>DefExt=&quot;md2; *.map; *.pcx&quot;</b> sets the type of file/files to accept.
+                          Set it to &quot;*&quot; if file type does't matter.
+4) <b>BasePath=&quot;$Game&quot;</b> sets the Directory that the browser window
+                           will start with.
+                      $Game will be converted to the game
+                           directory... for example &quot;C:\Quake2&quot;.
+5) <b>CutPath=&quot;$Game\?\&quot;</b> will be cut off the beginning of the
+                           full path string.
+                      $Game is the same as above.
+                      ? means that there HAS to be a directory.
+                      * means that there may or may not be a
+                           directory and only stands for ONE
+                           directory. For example
+               &quot;$Game\?\sprites\*\&quot; accepts all of the following:
+                           C:\Quake2\baseq2\sprites\abc.spr
+                           C:\Quake2\xyz\sprites\xyz\abc.spr
+                      but not:
+                           C:\Quake2\baseq2\sprites\a\b\c\abc.spr
+6) <b>DirSep=&quot;/&quot;</b> Quake games use '/' as path separator. Using this
+                   specific will convert all the &quot;\&quot; to &quot;/&quot;.
+                   Many games don't use the Windows directory
+                   separator '\'. Instead they use '/'.
+7) <b>AugPath=&quot;../ &quot;</b>  will augment the modified path and add ../ to
+                           it at the beginning. The DirSep specific
+                           above does not effect this specific,
+                           so proper coding should be used.
+</pre>
+</td></tr>
+</p><p><tr><td align=center>
+EQ<br>
+</td><td valign=top>
+<b>Entry field with direction button</b>.<br>
+Displays entry field for two floating point entries and 
+4-way directional button as pressed gives floating point entries.<br>
+</td><td>
+<pre><br>
+<img align=left src="adv.intro.EQ_btn.png">
+</br>
+<br>
+offset: = { Txt = &quot;Offset&quot; Typ=&quot;EQ&quot; Hint=&quot;x, y offsets&quot; }
+</br>
+</pre>
+</td></tr>
+</p><p><tr><td align=center>
+EU<br>
+</td><td valign=top>
+<b>Entry field with increase/decrease button</b>.<br>
+Displays entry field for single digit entry and 
+increase/decrease button as pressed gives single digit entry.<br>
+</td><td>
+<pre><br>
+<img align=left src="adv.intro.EU_btn.png">
+</br>
+<br>
+tilt: = { Txt = &quot;Tilt&quot; Typ=&quot;EU&quot; Hint=&quot;`tilt' angle, in degrees.&quot; }
+</br>
+</pre>
+</td></tr>
+</p><p><tr><td align=center>
+K<br>
+</td><td valign=top>
+<b>Key entry field</b>.<br>
+Use this if you want to define keyboard shortcuts 
+or otherwise need info in form of a key.<br>
+</td><td>
+<pre><br>
+KeyLeft: = {Typ=&quot;K&quot; Txt=&quot; turn left&quot;}
+</br>
+</pre>
+</td></tr>
+</p><p><tr><td align=center>
+T<br>
+</p><p>TF
+</td><td valign=top>
+<b>Slider bar with sliding button</b>. (only top portions shown)<br>
+T returns integer, TF returns float value when slider released.<br>
+</p><p><b><u>Continuous</u></b> values can be applied by example code below:
+</p><p>def macro_slider(self, value):<br>
+&nbsp;&nbsp;&nbsp;&nbsp;editor.Root.currentcomponent['control_slider'] = str(value)<br>
+def macro_slider2(self, value):<br>
+&nbsp;&nbsp;&nbsp;&nbsp;editor.Root.currentcomponent['control_slider2'] = str(value)<br>
+</p><p>quarkpy.qmacro.MACRO_slider = macro_slider<br>
+quarkpy.qmacro.MACRO_slider2 = macro_slider2<br>
+</td><td valign=top>
+<img align=right src="adv.intro.slider.png">
+&nbsp;<u><i>Specifics:</i>&nbsp;</u><br>
+&nbsp;Txt = &quot;control slider&quot;<br>
+&nbsp;Hint = &quot;Contains text&quot; # optional.<br>
+&nbsp;Min = &quot;-1000&quot; # shown if 'Labels' below is used.<br>
+&nbsp;Max = &quot;1000&quot; # shown if 'Labels' below is used.<br>
+&nbsp;Steps = &quot;50&quot; # increment of values between Min &amp; Max.<br>
+&nbsp;TickFreq = &quot;5&quot; # number of 'Steps' between tick marks.<br>
+&nbsp;Labels = &quot;1&quot; # To display Min &amp; Max settings above.<br>
+&nbsp;ShowValue = &quot;1&quot; # To display value below slider bar.<br>
+&nbsp;Macro=&quot;slider&quot; # To use macro code (shown on left) for continuous value use as slider is moved.<br>
+<P>
+</td></tr>
+</p><p><tr><td align=center>----</td>
+<td align=center><b>Choices</b></td>
+<td align=center><b>Examples and Comments</b></td></tr>
+</p><p><tr><td align=center>
+X<br>
+[value]
+</td><td valign=top>
+<b>Checkbox</b>,<br>which sets the bits according to &lt;value&gt;.<br>
+The same specificname may appear, with different &lt;values&gt;, so each bit in the specific can be controlled individually.<br>
+Usually used together with a Cap=&quot;...&quot;, to tell what the bit controls.
+</td><td>
+<pre>
+spawnflags: = { Typ=&quot;X1&quot; Cap=&quot;Ambush&quot; Txt=&quot;&amp;&quot; }
+spawnflags: = { Typ=&quot;X2&quot; Cap=&quot;On Trigger&quot; Txt=&quot;&amp;&quot; }
+spawnflags: = { Typ=&quot;X128&quot; Cap=&quot;X Axis&quot; Txt=&quot;&amp;&quot; }
+option: = { Typ=&quot;X&quot; Cap=&quot;on/off&quot; Txt=&quot;An option:&quot; }
+</pre><br>
+</p><p><u><i>Specifics:</i>&nbsp;</u>
+Cap - Like Txt, but to the right of the checkbox. Clicking on the text will toggle the option. 
+</td></tr>
+</p><p><tr><td align=center>
+C<br>
+</p><p>CL
+</td><td valign=top>
+<b>Combo box</b>.<br>
+A predefined list of choices and their values. To use this type, the <i>items</i>&nbsp; and <i>values</i>&nbsp; must also be set, as can be seen in the example.<br>
+Each choice in the list will be indicated by a newline ($0D), except for the last choice!<br>
+</p><p>&quot;CL&quot; will create a list only without an entry field. You have to set items  here and you should also use values. 
+</td><td>
+<pre>
+mylist: = { Typ=&quot;C&quot; Txt=&quot;&amp;&quot;
+    items =
+        &quot;Choice 1&quot; $0D
+        &quot;Choice 2&quot; $0D
+        &quot;Choice 3&quot;
+    values =
+        &quot;1&quot; $0D
+        &quot;2&quot; $0D
+        &quot;3&quot;
+    }
+</pre>
+<u><i>Specifics:</i>&nbsp;</u><br>
+<u>items</u> - The list will be filled with these items. Separate them with a new line character ($0D).<br>
+<u>values</u> - In many cases a program can not work with the displayed items. To have a more 'computer friendly' version you can set this specific. This list must be as long as the items list. Most used are numbers or names of variables.<br>
+<u>Rows</u> - This specifies the maximum number of items to show in the dropdown list.
+</td></tr>
+</p><p><tr><td align=center>----</td>
+<td align=center><b>Buttons &amp; misc.</b></td>
+<td align=center><b>Examples and Comments</b></td></tr>
+</p><p><tr><td align=center>
+B
+</td><td valign=top>
+<b>Pushbutton</b>.<br>
+Usually used to activate a second spec/arg view (a :form), which contains other spec/args thats more specialized for some purpose.
+</td><td>
+<pre>
+more: = { Typ=&quot;B&quot; Txt=&quot;Specialize&quot;
+    Cap = &quot;Push...&quot;
+    Form = &quot;specialize_this:form&quot;
+    }
+</pre>
+<u><i>Specifics:</i>&nbsp;</u><br>
+The Cap=&quot;...&quot; controls the text in the pushbutton.
+</td></tr>
+</p><p><tr><td align=center>
+L<br>
+[4]<br>
+</p><p>LI<br>
+[4]<br>
+</p><p>LN<br>
+[4]<br>
+</p><p>LP<br>
+[4]
+</td><td valign=top>
+<b>Color-picker pushbutton</b>.<br>
+A pushbutton which shows the choosen color, and when activated, will bring up a color dialog.<br>
+If only Typ=&quot;L&quot; is given, the resulting RGB values will be in range 0 - 255.<br>
+If Typ=&quot;LI&quot; is given, the resulting RGB values will be in range 0 - 255 and will be packed into a single integer.<br>
+If Typ=&quot;LN&quot; is given, the RGB values will be normalized to range 0.0 - 1.0.<br>
+If Typ=&quot;LP&quot; is given, you will only be able to pick from the game's palette (i.e. Quake palette)
+</td><td>
+<pre>
+_color: = { Typ=&quot;L&quot; Txt=&quot;&amp;&quot; }
+_light: = { Typ=&quot;LN&quot; Txt=&quot;&amp;&quot; }
+light: = { Typ=&quot;L4&quot; Txt=&quot;&amp;&quot; }
+_lightbright: = { Typ=&quot;LN4&quot; Txt=&quot;&amp;&quot; }
+
+//To view the exact values, create a
+//second spec/arg pair
+color: = { Txt=&quot;&amp;&quot; Typ=&quot;L&quot; } //Pushbutton
+color: = { Txt=&quot;&amp;&quot; } //Entryfield
+</pre><br>
+</p><p><u><i>Typ = &quot;LI&quot;</i>&nbsp;</u><br>
+The &quot;LI&quot; type works like &quot;L&quot;, except that the values are stored in a single integer that can be directly used for canvas.pencolor functions and similars.
+</p><p><u><i>Specifics:</i>&nbsp;</u><br>
+If the additional 4 is given, for example Typ=&quot;LN4&quot; or Typ=&quot;L 4&quot;, there will be created a fourth value, which controls the brightness of the light. This however, must be changed using a second spec/arg pair, with Typ=&quot;E&quot;.
+</td></tr>
+</p><p><tr><td align=center>
+M
+</td><td valign=top>
+<b>Message button</b>.
+</td><td>
+<pre>
+extedit:tbbtn = {
+    Typ = &quot;M&quot;
+    Hint = &quot;call external editor&quot;
+    Msg = &quot;EXTE&quot;
+    Icon = $6677777777777776600000000000007660FFFFFFFFFFF07660
+               FFFFFFFFFFF07660F7
+         $F33FFFFFF07660FFF3333FF7F07660F7F333118FF07660FFFF
+             331118807660FFFF91
+         $1111807760FF7FF91111107760FFFFFF9111117660FF877FF9
+             11111660FFFFFFFF91
+         $111160F777787F79111660FFFFFFFF7F911660FFFFFFFF7069
+             666000000000066666
+    Rows = &quot;10&quot;
+    Scrollbars = &quot;V&quot;
+    }
+</pre>
+<u><i>Specifics:</i>&nbsp;</u><br>
+<u>Msg</u> - Message to send.<br> 
+<u>Cap</u> - Caption of the button/menu.<br>
+<u>Icon</u> - Hex raw-data of a 16*16 pixel 16 colors icon (same as for Typ &quot;I&quot;).<br>
+<u>Rows</u> - Set this to the string number value of rows of text to display at once (max:35, default: 3).<br>
+<u>Scrollbars</u> - Set this to add scrollbars to the control.<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Three values are available: (default: No scrollbars)
+<pre>
+    -&quot;H&quot;: The control will have a horizontal scrollbar.
+    -&quot;V&quot;: The control will have a vertical scrollbar.
+    -&quot;1&quot;: The control will have both a horizontal AND a vertical scrollbar.
+Any other setting will result in no scrollbars.
+</pre>
+</td></tr>
+</p><p><tr><td align=center>
+P
+</td><td valign=top>
+<b>Python macro button</b>.
+</td><td>
+generates a button to fire a python-macro.
+<pre>
+centering: = {
+    Txt = &quot;&amp;&quot;
+    Typ = &quot;P&quot;
+    Macro = &quot;usercenter&quot;
+    Cap = &quot;push&quot;
+    Hint = &quot;Push to add a user center&quot;
+    }
+</pre>
+<u><i>Specifics:</i>&nbsp;</u><br>
+<u>Cap</u> - button caption<br>
+<u>Macro</u> - macro to be fired. Most of the items called in the macro are pre-coded in the source code.<br>
+But using the <a href="src.quarkx.html#qmacro_py">quarkx.externaledit(obj)</a> function, any object, such as text or a texture image,<br>
+can be passed to it causing that object to be opened in an external editor.
+</td></tr>
+</p><p><tr><td align=center>
+PM
+</td><td valign=top>
+<b>Button array</b>,<br>
+same as above, for multiple buttons. Each button gets one character out of Cap as it's caption.<br>
+</p><p>While all buttons will fire the same script they will also send their index so the script can identify the exact button.
+</td><td>
+<pre>
+buttons: = {
+    Typ = &quot;PM&quot;
+    Num = &quot;2&quot;
+    Macro = &quot;fixview&quot;
+    Caps = &quot;IF&quot;
+    Txt = &quot;Actions:&quot;
+    Hint1 = &quot;Inspect the chosen one&quot;
+    Hint2 = &quot;Fix the chosen one&quot;
+    }
+</pre>
+<u><i>Specifics:</i>&nbsp;</u><br>
+<u>Macro</u> - macro to be fired<br>
+<u>Count</u> - number of buttons<br>
+<u>Caps</u> - enter on character for each button here<br>
+<u>Hint1</u> - What button 1 does<br>
+<u>Hint2</u> - What button 2 does etc... 
+</td></tr>
+</p><p><tr><td align=center>
+F
+</td><td valign=top>
+<b>Font dialog button<br>with preview</b>.
+</td><td>
+<pre>
+Font: = {
+    Typ = &quot;F&quot;
+    Txt = &quot;Plain text&quot;
+    Cap = &quot;Plain text sample&quot;
+    }
+</pre>
+<u><i>Specifics:</i>&nbsp;</u><br>
+<u>Cap</u> - button caption (will be displayed with the selected font)
+</td></tr>
+</p><p><tr><td align=center>
+I
+</td><td valign=top>
+<b>Icon display</b>.<br>
+Displays an icon.
+</td><td>
+<pre>
+planes: = {
+    Txt = &amp;quot;Brush icon&amp;quot;
+    Typ = &quot;I&quot;
+    Icon = $66000000000000066687777777775506668FFFFFFFFFF
+               506668FF557FFFFF706
+           $668FFF55577FF706668FFFF500F77706668FFFFF00FFF
+               706668FF002200FF706
+           $668F5990AA00F706668F5F90AA000706668FF55AAA200
+               506668FFF2BAA270006
+           $6685FF222227000666855FFFFFF7860066888888888866
+               056666666666666666
+    }
+</pre>
+<u><i>Specifics:</i>&nbsp;</u><br>
+<u>Icon</u> - 16x16 pixel icon. As in the example each character represents the hex. code of a pixel (16 colors). This is raw data, don't include any file header! 
+</td></tr>
+</p><p><tr><td align=center>
+S
+</td><td valign=top>
+<b>Seperator</b>.
+</td><td>
+<pre>
+sep: = { Typ=&quot;S&quot; }
+</pre>
+</td></tr>
+</p><!--
+<tr><td align=center>
+</td><td valign=top>
+</td><td>
+<pre>
+</pre>
+</td></tr>
+-->
+
+<p></table>
+</p>
+  </td></tr></table>
+  <br>
+
+<a name="oopintro"></a>
+  <table width="100%" border=0 cellspacing=0>
+    <tr class="headline">
+      <td>
+        <p class="item">&nbsp;Understanding OOP</p>
+      </td>
+      <td align=right>
+        <font size=-2>Tiglari/cdunde&nbsp;-&nbsp;26 Jan 2009</font>
+      </td>
+      <td width="1%" align=right nowrap>
+        &nbsp;&nbsp;[&nbsp;<a href="#__top__">Top</a>&nbsp;]&nbsp;
+      </td>
+    </tr>
+  </table>
+  <table border=0 width="100%" cellspacing=10><tr><td>
+<p>1. Intro
+</p><p>OOP, or object-oriented programming, is a programming methodology
+developed in the 70s that became popular in the 80s for building
+large and complex programs, such as especially GUI applications,
+of which QuArK is a fine instance.  Popular OOP languages include
+C++, Java, Object Pascal/Delphi and Python.  There are both subtle
+and obvious differences between the approaches taken by all of these
+languages, but there is also a lot of commonality, such that someone
+already familiar with OOP from the first three mentioned languages
+can probably pick up what they need to know about Python OOP from
+the documentation and QuArK code.
+</p><p>2.  Basic Objects
+</p><p>An object is basically a chunk of the computer's memory that has been
+organized to provide storage for some data, and methods for
+changing it and reading it.  So it's like a 'struct' in C,
+or a 'record' in Pascal, but more powerful.  For a simple example
+that's not totally irrelevant to a geometry-managing program such
+as QuArK, suppose we have circles to manage.  A circle can be
+characterized by the three coordinates of its center, and by its
+radius:
+</p><div class="doccode"><pre>
+  class Circle:
+      x = 1
+      y = 0
+      z = 5
+      r = 1.5
+</pre></div>
+
+<p>(Important: watch your letters, they are case sensitive.)
+</p><p>Or you can just create the object by writing:
+</p><div class="doccode"><pre>
+  class Circle:
+      pass
+</pre></div>
+
+<p>and add the data later:
+</p><div class="doccode"><pre>
+  Circle.x = 1
+  Circle.y = 0
+  Circle.z = 5
+  Circle.r = 1.5
+</pre></div>
+The '.' separates the name of the class itself from its 'attributes'.
+
+<p>Whichever you've done, you can get the data back later (Delphi users
+take note: there's no 'with' statement, since Guido van Rossum, Python's
+creator, finds them harmful to programs' maintainability).  So if
+either of the above is in a file 'circles.py', in the Python
+interpreter you can write:
+<div class="doccode"><pre>
+&gt;&gt;&gt; import plugins.circles         [you type]
+&gt;&gt;&gt; plugins.circles.Circle.r       [ditto]
+1.5                        [Python answers]
+</pre></div>
+</p><p>Note that Python is <strong>much</strong> more liberal than C++,
+Object Pascal/Delphi, or Java, since in these languages you'd have
+to declare your object as belonging to a 'type', and say what kinds
+of 'data members' it could have, in advance of using it.
+</p><p>This rather minimalistic sort of class has its uses (for example
+as a package for passing bundles of data round in the 'live edit dialog'
+facility (LiveEditDlg in quarkpy.dlgclasses), but to make classes
+really worthwhile several closely related new ideas are needed, first
+instances and methods, and later, inheritance.
+</p><p>2. Methods and Instances
+</p><p>A method is basically a function, closely associated with an object,
+for doing something involving its data (adding data, reading it,
+performing some calculation involving it and returning the result,
+or whatever).   For example having created a circle, we might
+want to access its circumference and area; the idea is that
+we'll write things like
+<div class="doccode"><pre>
+answer =  plugins.circle.circumference()
+</pre></div>
+(plugins because that is the folder in which the circles.py file will be located.)
+</p><p>(Parentheses because this is going to be produced by a kind of function,
+and functions are marked in Python by parentheses.)
+</p><p>But to do this in a sensible way we need to distinguish two slightly
+different notions, 'circle' as a particular object, and 'circle' as
+a template for making objects.  Different circles will have different
+centers and radii, but use the same method to make them.  So we need a way to
+define both a template and a method for making things that fit it.  Templates
+for objects are what 'classes' are really supposed to be, and the methods
+for making particular objects, 'instances', are called 'constructors.
+</p><p>In Python, constructors all have the same name, '__init__': the double
+underscores on either side are a signal that something with special
+meaning for Python is involved.  All methods, including constructors,
+are defined as functions internal to the class, so their definitions
+start with 'def'.  And these functions have 'self' as their first
+argument, which always refers to the object (being created, if the
+function is a constructor).  So the revised definition for the circle
+class might look like this:
+<div class="doccode"><pre>
+import math
+
+class Circle:
+    def __init__(self, x, y, z, r):
+        self.x = x
+        self.y = y
+        self.z = z
+        self.radius = r
+
+    def circumference(self):
+        return self.radius*math.pi
+
+    def radius(self):
+        return self.radius
+</pre></div>
+The constructor <b>attaches</b> the three coordinates and the radius as
+'data members' of the object <b>self</b> it creates, and there are two methods
+to write this; the second is included to help people who can't remember whether
+to write circle.radius or circle.radius() (pretty much anybody who's
+focused on content rather than punctuation).  We've used uppercase
+for the name of our class, in accord with a sensible but not always
+obeyed convention to use uppercase to start 'template' names,
+lowercase for 'instance names'.
+</p><p>At this point, we have completed the creation of our class.
+Because we write this code in a text editor we need to save it as a
+Python file, in this case as 'circles.py', and include 'import math'
+(because we have used its <b>pi</b> function in our 'def circumference')
+in front of the 'circles' definition, before we save it. We then need to
+move the 'circles.py' file to the plugins folder. As a matter of good
+coding practice, the 'import' and 'from' statements are usually grouped
+together at the beginning of the Python file.
+</p><p>At this point we could continue to add more code, to this file, to apply
+(or use) the 'class Circle' and its definitions we just created, or we can
+create another Python 'plugin' file and 'import circles' to there, which is
+what we will do now just to demonstrate how files can pass data and functions.
+</p><p>So we will now write another simple 'plugin' Python file (and save that to the
+plugins folder as well) with the following code to see the effect of the
+Circle class in the circles.py file:
+<div class="doccode"><pre>
+import quarkpy.qmacro   # to bring in qmacro functions we need
+import quarkx           # to bring in quarkx functions we need
+from circles import *   # to bring in all of our circle class
+
+def printcir(self):
+    circle = Circle(1,0,3,1.5)  # assigns values to the attributes
+    circle.circumference()      # passes the values to circle class
+    answer = circle.circumference()  # collects the 'return' data
+    print answer                # prints the answer to the console
+</pre></div>
+This will pass the three coordinates of 1,0,3 (for x,y,z) and
+the radius of 1.5 to the Circle class which will process it then
+'return' the 'answer' of 4.71238898038 that will be printed to the console.
+</p><p>But before we can save this file, we need to add some code to create a
+menu item, that we can use to activate (or call) the 'printcir' function:
+<div class="doccode"><pre>
+def WindowClick(self):
+    import quarkpy.mapoptions   # brings in the 'Options' menu
+    printcir(self)              # calls our function
+    quarkx.console(1)           # brings the console into view
+
+quarkpy.mapoptions.items.append(quarkpy.qmenu.item(&quot;&amp;Print Cir.&quot;, 
+WindowClick)) # adds it to the 'Options' menu
+</pre></div>
+Now we can save this 'plugin' file as well, calling it something like ' mapcircles.py ',
+to the plugins folder. You can either cut-n-paste these scripts to a text editor
+to create your own files as we have discussed, or use the ones provided here,
+<a href="zips">OOP_examples.zip</a>, of working examples for this tutorial (and others)
+in the 'zips' sub-folder of your QuArK-help folder on your hard drive.
+</p><p>For a concrete example of some rather basic classes, look at the
+two kinds of menu items defined in quarkpy.qmenu, 'item', and 'popup'.
+These classes have only constructors, and no other methods, and all
+the constructors do is attach the same parameters as data members,
+and add in some extra default stuff, such as 'normal' as a value
+of 'state'.    Note that functions, such as 'onclick'. can be attached
+to objects by constructors (but these aren't methods).
+</p>
+<p>3. Inheritance
+</p><p>The final thing we need for a real OOP system is inheritance, which
+is basing classes on other classes.  In a real geometry-managing
+program we'd have lots of different shapes, with various features.
+For example points wouldn't have radius or circumference (perhaps),
+but they would have a 'center' or 'origin', like all other figures.
+So we might define:
+</p><div class="doccode"><pre>
+class Figure
+    def __init__(self, x, y ,z):
+        self.x = x
+        self.y = y
+        self.z = z
+
+    def origin(self):
+    def origin(self):
+        return self.x, self.y, self.z
+</pre></div>
+Now we might want at least two 'derived classes', or 'subclasses', Point
+and Circle, so we might write something like this:
+<div class="doccode"><pre>
+class Point(Figure):
+    pass
+
+class Circle(Figure)
+    def __init__(x, y, z, r):
+        Figure.__init__(self, x, y, z)
+        self.radius = r
+
+    def circumference(self):
+        return self.radius*math.pi
+
+    def radius(self):
+        return self.radius
+</pre></div>
+The Point class is strictly cosmetic: there's a sensible opinion to the
+effect that subclasses ought to be more specialized than their parents,
+not just different (golden lab is a good subclass of dog, but not of cat).
+Circles aren't kinds of points, but the point class doesn't add anything
+to our Figure concept (at least yet).  So we define it as a subclass
+of Figure with no new content; note that the 'base class' <b>(Figure)</b>
+is put in parentheses.
+
+<p>A derived class 'inherits' all methods and data members from its parent, so we
+can write something like:
+<div class="doccode"><pre>
+&gt;&gt;&gt;from Figures import *
+&gt;&gt;&gt;point = Point(1,1,1)
+&gt;&gt;&gt;point.origin()
+</pre></div>
+and get
+<div class="doccode"><pre>
+(1,1,1)
+</pre></div>
+in reply.
+</p><p>In addition to being inherited, methods (and data members) can be 'overridden':
+if the derived class defines a method or data member with the same name as
+one of the parent class, then the definition in the derived class is normally
+used rather than in the parent, for instances of the derived class.  This is
+illustrated with the second constructor __init__() of class Circle with the code
+line of Figure.__init__(self, x, y, z) as shown above in the script.
+</p><p>However, sometimes we need to get at the parent method, which is also illustrated
+in this constructor: when one name is put in front of another with '.', we say
+that the first name is a qualifier of the second.  So to get at the parent's definition,
+we qualify the method name with the name of the parent class, but when we do
+this we have to provide the 'self' argument explicitly.  Indeed, any method of
+any class can be used in this way, qualifying it with the class name and providing
+the first argument.
+</p><p>So what is the difference between a method and a function that just happens to
+have been attached to an object, such as the onclick function for qmenu.item?
+First, only methods participate in inheritance, and second, only methods can be
+called via the shortcut technique with an instance as qualifier, and automatically
+supplied as first argument (but you could write something like Circle.circumference(mycircle)
+instead of mycircle.circumference(), if you wanted to).
+</p><p>Unfortunately I haven't been able to find any really simple example of a base class
+and some subclasses in the QuArK code.  Some important ones are the dialog boxes,
+base class dialogbox in quarkpy.qmacro, and the handles, base class GenericHandle
+in qhandles.py.  But there's lots of stuff in them.  An example of a subclass of
+dialogbox is SimpleCancelDlgBox defined in quarkpy.qeditor; you can find further
+subclasses of SimpleCancelDlgBox by searching for 'CancelDlgBox)' (the final
+parenthesis picks up that it's being used as a base class in a class statement).
+There is much more to Python classes than this; it wouldn't be a bad idea to
+look over the classes section in the tutorial, although there's a fair amount
+of stuff that wouldn't make much sense to beginners (but also some reasonably 
+straightforward examples.
+</p><p>4.  Classes, Builtin types and Extension types.
+</p><p>There's one more basic topic that really has to be covered, which is the difference
+between classes, builtin types, and extension types.  Classes are the things we've
+just covered, whereas builtin types are the basic types such as int, string etc.
+provided by Python.  A basic difference between them is that you can't add random
+new stuff to a builtin type.  For example, if you write:
+<div class="doccode"><pre>
+myinteger = 2
+myinteger.tag = 'this cool one I just invented'
+</pre></div>
+you'll get an error, whereas:
+<div class="doccode"><pre>
+mycircle = Circle(0,0,0,3)
+mycircle.tag= 'this cool one I just invented'
+</pre></div>
+will work fine (assuming you've imported the definition of Circle, etc.).
+</p><p>Extension types are types which have been defined in extensions to Python, which in
+the case of QuArK Python will have been written in Delphi.  Some important extension
+types for QuArK Python are vector and qobject, created by calls such as:
+<div class="doccode"><pre>
+myvector = quarkx.vect(1, 0 , 10)
+face = quarkx.newobj(&quot;top:f&quot;)
+</pre></div>
+Like classes, extension types have methods (followed by ()) and data members
+(not followed by ()), but unlike classes, and like builtin types, you can't
+attach random stuff to them. (Note: in recent versions of Python, these differences
+have been largely eliminated, but rewriting QuArK to take advantage of this would
+be a major enterprise).  The various extension classes that Delphi provides
+to QuArK Python are described in the quarkx section of the infobase.
+</p><p>An especially noteworthy feature is, that the QObject type in particular is
+defined by means of a rather large Delphi class hierarchy; Delphi classes are
+also OOP, but different in various ways from Python.  The 'suffixes' to the string
+argument passed to quarkx.newobj (&quot;:f&quot;, &quot;:b&quot;, etc.) determine what Delphi type
+is used to make the instance of the extension class, and this then determines what
+data members and methods are available from Python (e.g. .normal is available for
+faces (suffix &quot;:f&quot;), but not polys (suffix &quot;:p&quot;).
+</p>
+  </td></tr></table>
+  <br>
+
+<br>
+
+<table width="100%" border=0 cellspacing=0>
+  <tr class="headline">
+    <td width="99%" align=center>
+      <p class="sm">
+        Copyright (c) 2009, GNU General Public License by The QuArK (Quake Army Knife) Community - <a target="_blank" href="http://quark.sourceforge.net/">http://quark.sourceforge.net/</a><br>
+      </p>
+    </td>
+    <td width="1%" align=right nowrap>
+      &nbsp;[&nbsp;<span class="navenable"><a href="adv.html">Prev</a></span>&nbsp;-&nbsp;<a href="#__top__">Top</a>&nbsp;-&nbsp;<span class="navenable"><a href="adv.conversion.html">Next</a></span>&nbsp;]&nbsp;
+    </td>
+  </tr>
+</table>
+</body>
+</html>

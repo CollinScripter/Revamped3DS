@@ -1,0 +1,194 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"  "http://www.w3.org/TR/html4/loose.dtd">
+<html lang="en">
+<head>
+  <title>Model-editor in QuArK</title>
+  <meta name="Description" content="QuArK Information Database - Page: 1.6.&nbsp;Model-editor in QuArK">
+  <meta name="Keywords" content="QuArK InfoBase Quake Army Knife QRK QKM Python PY Map Editor Hexen Heretic Half-Life Sin Kingpin Soldier-of-Fortune Star-Trek-Voyager Elite-Force">
+  <link rel=stylesheet href="standard.css" type="text/css">
+</head>
+
+<body>
+<a name="__top__"></a>
+<table width="100%" border=0 cellspacing=0>
+  <tr>
+    <td width=213>
+      <a target="_blank" href="http://quark.sourceforge.net/"><img src="quarkicon.png" width=213 height=90 border=0 alt="Go to QuArK Web Site"></a>
+    </td>
+    <td width="70%" align=center>
+      <div class="topheadline">Model-editor in QuArK</div>
+      <div class="sm">Updated&nbsp;09 Jul 2012</div>
+    </td>
+    <td width="30%" valign=bottom nowrap>
+      Upper&nbsp;levels:<br>-&nbsp;<a href="index.html">QuArK&nbsp;Information&nbsp;Base</a><br>-&nbsp;<a href="intro.html">1.&nbsp;Introduction&nbsp;to&nbsp;QuArK</a><br>
+    </td>
+  </tr>
+</table>
+<table width="100%" border=0 cellspacing=0>
+  <tr class="headline">
+    <td width="99%">
+      <p class="headline">&nbsp;1.6.&nbsp;Model-editor in QuArK</p>
+    </td>
+    <td width="1%" align=right nowrap>
+      &nbsp;[&nbsp;<span class="navenable"><a href="intro.mapeditor.floating3dview.html">Prev</a></span>&nbsp;-&nbsp;<span class="navenable"><a href="intro.html">Up</a></span>&nbsp;-&nbsp;<span class="navenable"><a href="intro.modeleditor.overview.html">Next</a></span>&nbsp;]&nbsp;
+    </td>
+  </tr>
+</table>
+<table border=0 width="100%" cellspacing=10><tr><td><p>The model editor is the secondary part of QuArK. A model can represent a number of things
+depending on the game it is being created for. It can be an object like a prop, a table or chair.
+It can be a structure such as a door or an entire building. It can even be the terrain in a map.
+But typically a model is a character used to play in the game itself. The model editor lets you view,
+change and manipulate these kind of game models for the formats that QuArK's Model Editor supports.
+</p><p>Basically, a model is made out of a mathematical mesh consisting of individual triangular <a href="glossary.html#f">faces</a> in 3D space.
+Each face of a model has three <a href="glossary.html#v">vertexes</a> which can be moved, in 3D space, to form the shape of the models mesh.
+The entire mesh is then &quot;Skinned&quot; using a <a href="glossary.html#t">texture</a> image file such as a .pcx, .jpg, .tga or some other
+format that the editor will support. The &quot;Skin-view&quot; page of the editor is used for this skinning process,
+where there is another set of <a href="glossary.html#v">vertexes</a> of the &quot;unwrapped&quot; model mesh and their vertex handles that are used
+to move this flat mesh of the model over the texture image changing the projected image position of the texture on
+the model's 3D mesh and giving the model its final appearance.
+</p><p>The <a href="intro.modeleditor.skinview.html">Skin-view page</a> works a bit differently then the editor's views do,
+based on the fact that it has no actual triangles. Only what is known as <a href="glossary.html#v">view.handles</a>, view being the view
+displayed on the <a href="intro.modeleditor.skinview.html">Skin-view page</a> itself. Another big difference,
+at this time, is that unlike all of the other <a href="glossary.html#v">views</a> of the editor which are in a <a href="glossary.html#l">list</a> of its
+<a href="glossary.html#e">editor.layout.view</a>, the <a href="intro.modeleditor.skinview.html">Skin-view page</a> view is never actually added
+(appended) to that list, on a permanent bases, making it pretty much isolated from the rest of the views of the editor.
+Because of this I needed to create a <a href="glossary.html#g">global</a> in the <a href="glossary.html#q">quarkpy\mdlhandles.py</a> file called <a href="glossary.html#s">SkinView1</a>
+that can be used, when needed, to call that view when the <a href="intro.modeleditor.skinview.html">Skin-view page</a> is open.
+It does seem to be added periodically when the mouse cursor is actually somewhere within the
+<a href="intro.modeleditor.skinview.html">Skin-view page</a> view.
+</p>
+</td></tr></table>
+<br>
+
+<table width="100%" border=0 cellspacing=0>
+  <tr class="headline">
+    <td width="100%">
+      <p class="headline">&nbsp;Sections</p>
+    </td>
+  </tr>
+</table>
+<ul class="section">
+  <li><b>1.6.1.&nbsp;&nbsp;<a href="intro.modeleditor.overview.html">Overview</a></b>&nbsp;<span class="added">(09 Jul 2012)</span></li>
+  <ul class="index">
+    <li>- <a href="intro.modeleditor.overview.html#overview">Overview</a>&nbsp;<span class="added">(09 Jul 2012)</span></li>
+    <li>- <a href="intro.modeleditor.overview.html#selection">Selection & Navigation Methods</a>&nbsp;<span class="added">(13 Sep 2007)</span></li>
+    <li>- <a href="intro.modeleditor.overview.html#hintbox">Hintbox</a>&nbsp;<span class="added">(09 Jul 2012)</span></li>
+  </ul>
+  <li><b>1.6.2.&nbsp;&nbsp;<a href="intro.modeleditor.model.html">QuArK's Model Structure</a></b>&nbsp;<span class="added">(27 Jul 2009)</span></li>
+  <ul class="index">
+    <li>- <a href="intro.modeleditor.model.html#components">Components of a Model</a>&nbsp;<span class="added">(27 Jul 2009)</span></li>
+    <li>- <a href="intro.modeleditor.model.html#mesh">The Model's Mesh(s)</a>&nbsp;<span class="added">(26 Apr 2007)</span></li>
+    <li>- <a href="intro.modeleditor.model.html#skinmesh">The Skin-view Mesh(s)</a>&nbsp;<span class="added">(27 Jul 2009)</span></li>
+  </ul>
+  <li><b>1.6.3.&nbsp;&nbsp;<a href="intro.modeleditor.importexport.html">How to Write Model Importers & Exporters</a></b>&nbsp;<span class="added">(25 May 2011)</span></li>
+  <ul class="index">
+    <li>- <a href="intro.modeleditor.importexport.html#componentmakeup">What Makes Up a Model Component</a>&nbsp;<span class="added">(27 Jul 2009)</span></li>
+    <li>- <a href="intro.modeleditor.importexport.html#codeelements">Writing QuArK Elements into the Code</a>&nbsp;<span class="added">(09 Dec 2008)</span></li>
+    <li>- <a href="intro.modeleditor.importexport.html#codestart">Writing the Start Function of the Code</a>&nbsp;<span class="added">(25 May 2011)</span></li>
+    <li>- <a href="intro.modeleditor.importexport.html#codeprocessing">Writing the File Processing of the Code</a>&nbsp;<span class="added">(28 Jul 2008)</span></li>
+    <li>- <a href="intro.modeleditor.importexport.html#componentcreation">Creating a Component in the Code</a>&nbsp;<span class="added">(25 May 2011)</span></li>
+    <li>- <a href="intro.modeleditor.importexport.html#structmodule">About the Python Struct Module</a>&nbsp;<span class="added">(28 Jul 2008)</span></li>
+    <li>- <a href="intro.modeleditor.importexport.html#bones">Adding Bones & Their Structure</a>&nbsp;<span class="added">(25 May 2011)</span></li>
+    <li>- <a href="intro.modeleditor.importexport.html#specifics">Adding Specifics Page & Menu Items</a>&nbsp;<span class="added">(28 Jan 2009)</span></li>
+    <li>- <a href="intro.modeleditor.importexport.html#bonematrix">Bones & Their Matrixes</a>&nbsp;<span class="added">(10 Aug 2009)</span></li>
+  </ul>
+  <li><b>1.6.4.&nbsp;&nbsp;<a href="intro.modeleditor.menu.html">Menubar</a></b>&nbsp;<span class="added">(30 May 2011)</span></li>
+  <ul class="index">
+    <li>- <a href="intro.modeleditor.menu.html#filemenu">File menu</a>&nbsp;<span class="added">(27 Jul 2008)</span></li>
+    <li>- <a href="intro.modeleditor.menu.html#layoutmenu">Layout menu</a>&nbsp;<span class="added">(26 Apr 2007)</span></li>
+    <li>- <a href="intro.modeleditor.menu.html#editmenu">Edit menu</a>&nbsp;<span class="added">(28 May 2011)</span></li>
+    <li>- <a href="intro.modeleditor.menu.html#toolboxesmenu">Toolboxes menu</a>&nbsp;<span class="added">(26 Apr 2007)</span></li>
+    <li>- <a href="intro.modeleditor.menu.html#searchmenu">Search menu</a>&nbsp;<span class="added">(27 Mar 2011)</span></li>
+    <li>- <a href="intro.modeleditor.menu.html#commandsmenu">Commands menu</a>&nbsp;<span class="added">(28 May 2011)</span></li>
+    <li>- <a href="intro.modeleditor.menu.html#toolbarsmenu">Toolbars menu</a>&nbsp;<span class="added">(28 May 2011)</span></li>
+    <li>- <a href="intro.modeleditor.menu.html#optionsmenu">Options menu</a>&nbsp;<span class="added">(30 May 2011)</span></li>
+    <li>- <a href="intro.modeleditor.menu.html#helpmenu">Help menu</a>&nbsp;<span class="added">(28 May 2011)</span></li>
+  </ul>
+  <li><b>1.6.5.&nbsp;&nbsp;<a href="intro.modeleditor.rmbmenus.html">Right Mouse Button (RMB) Menus</a></b>&nbsp;<span class="added">(30 May 2011)</span></li>
+  <ul class="index">
+    <li>- <a href="intro.modeleditor.rmbmenus.html#treeviewrmbmenus">Tree-view RMB menus</a>&nbsp;<span class="added">(30 May 2011)</span></li>
+    <li>- <a href="intro.modeleditor.rmbmenus.html#viewsrmbmenus">Editor Views RMB menus</a>&nbsp;<span class="added">(30 May 2011)</span></li>
+    <li>- <a href="intro.modeleditor.rmbmenus.html#facermbmenu">Face RMB menu</a>&nbsp;<span class="added">(12 Sep 2007)</span></li>
+    <li>- <a href="intro.modeleditor.rmbmenus.html#vertexrmbmenu">Vertex RMB menu</a>&nbsp;<span class="added">(05 Dec 2007)</span></li>
+    <li>- <a href="intro.modeleditor.rmbmenus.html#bboxrmbmenu">BBox RMB menu</a>&nbsp;<span class="added">(26 May 2011)</span></li>
+  </ul>
+  <li><b>1.6.6.&nbsp;&nbsp;<a href="intro.modeleditor.toolpalettes.html">Tool-palettes</a></b>&nbsp;<span class="added">(01 Mar 2011)</span></li>
+  <ul class="subsection">
+    <li>1.6.6.1.&nbsp;<a href="intro.modeleditor.toolpalettes.animation.html">Animation tool-palette</a>&nbsp;<span class="added">(14 Oct 2009)</span></li>
+    <li>1.6.6.2.&nbsp;<a href="intro.modeleditor.toolpalettes.display.html">Display tool-palette</a>&nbsp;<span class="added">(24 Aug 2007)</span></li>
+    <li>1.6.6.3.&nbsp;<a href="intro.modeleditor.toolpalettes.edittools.html">Editing Tools tool-palette</a>&nbsp;<span class="added">(01 Mar 2011)</span></li>
+    <li>1.6.6.4.&nbsp;<a href="intro.modeleditor.toolpalettes.movement.html">Movement tool-palette</a>&nbsp;<span class="added">(29 Oct 2007)</span></li>
+    <li>1.6.6.5.&nbsp;<a href="intro.modeleditor.toolpalettes.objectmodes.html">Object modes tool-palette</a>&nbsp;<span class="added">(17 Nov 2007)</span></li>
+    <li>1.6.6.6.&nbsp;<a href="intro.modeleditor.toolpalettes.paintmodes.html">Paint Modes tool-palette</a>&nbsp;<span class="added">(19 Mar 2008)</span></li>
+    <li>1.6.6.7.&nbsp;<a href="intro.modeleditor.toolpalettes.viewselection.html">View Selection tool-palette</a>&nbsp;<span class="added">(01 Mar 2011)</span></li>
+  </ul>
+  <li><b>1.6.7.&nbsp;&nbsp;<a href="intro.modeleditor.userdata.html">Userdata panel</a></b>&nbsp;<span class="added">(01 Mar 2011)</span></li>
+  <ul class="index">
+    <li>- <a href="intro.modeleditor.userdata.html#components">Components</a>&nbsp;<span class="added">(01 Mar 2011)</span></li>
+    <li>- <a href="intro.modeleditor.userdata.html#skinfolders">Skins folders</a>&nbsp;<span class="added">(01 Mar 2011)</span></li>
+    <li>- <a href="intro.modeleditor.userdata.html#skins">Skin Textures</a>&nbsp;<span class="added">(01 Mar 2011)</span></li>
+    <li>- <a href="intro.modeleditor.userdata.html#bboxes">Bounding Boxes</a>&nbsp;<span class="added">(01 Mar 2011)</span></li>
+    <li>- <a href="intro.modeleditor.userdata.html#bones">Bones</a>&nbsp;<span class="added">(01 Mar 2011)</span></li>
+  </ul>
+  <li><b>1.6.8.&nbsp;&nbsp;<a href="intro.modeleditor.misctools.html">Misc tools</a></b>&nbsp;<span class="added">(01 Mar 2011)</span></li>
+  <ul class="index">
+    <li>- <a href="intro.modeleditor.misctools.html#newitem">New item</a>&nbsp;<span class="added">(01 Mar 2011)</span></li>
+    <li>- <a href="intro.modeleditor.misctools.html#trashcan">Trashcan</a>&nbsp;<span class="added">(01 Mar 2011)</span></li>
+    <li>- <a href="intro.modeleditor.misctools.html#undoredo">Undo/Redo</a>&nbsp;<span class="added">(01 Mar 2011)</span></li>
+    <li>- <a href="intro.modeleditor.misctools.html#bboxsubgroup">New BBox sub-group</a>&nbsp;<span class="added">(01 Mar 2011)</span></li>
+    <li>- <a href="intro.modeleditor.misctools.html#skinsubgroup">New Skins sub-group</a>&nbsp;<span class="added">(01 Mar 2011)</span></li>
+  </ul>
+  <li><b>1.6.9.&nbsp;&nbsp;<a href="intro.modeleditor.dataforms.html">Data-displays</a></b>&nbsp;<span class="added">(26 Jul 2009)</span></li>
+  <ul class="index">
+    <li>- <a href="intro.modeleditor.dataforms.html#treeview">Tree-view (hierarchy-view)</a>&nbsp;<span class="added">(18 Nov 2008)</span></li>
+    <li>- <a href="intro.modeleditor.dataforms.html#specsargsview">Specifics/Args-view</a>&nbsp;<span class="added">(26 Jul 2009)</span></li>
+    <li>- <a href="intro.modeleditor.dataforms.html#skinview">Skin-view</a>&nbsp;<span class="added">(29 Oct 2007)</span></li>
+  </ul>
+  <li><b>1.6.10.&nbsp;&nbsp;<a href="intro.modeleditor.skinview.html">Skin-view page</a></b>&nbsp;<span class="added">(03 Mar 2011)</span></li>
+  <ul class="index">
+    <li>- <a href="intro.modeleditor.skinview.html#overview">Overview</a>&nbsp;<span class="added">(15 Sep 2007)</span></li>
+    <li>- <a href="intro.modeleditor.skinview.html#selection">Selection & Navigation Methods</a>&nbsp;<span class="added">(29 Oct 2007)</span></li>
+    <li>- <a href="intro.modeleditor.skinview.html#funcsnmenus">Functions & RMB Menus</a>&nbsp;<span class="added">(05 Dec 2007)</span></li>
+    <li>- <a href="intro.modeleditor.skinview.html#importskins">Importing Skin Textures</a>&nbsp;<span class="added">(03 Mar 2011)</span></li>
+  </ul>
+  <li><b>1.6.11.&nbsp;&nbsp;<a href="intro.modeleditor.editelements.html">Editing Elements</a></b>&nbsp;<span class="added">(25 May 2011)</span></li>
+  <ul class="index">
+    <li>- <a href="intro.modeleditor.editelements.html#bones">Bones System</a>&nbsp;<span class="added">(26 Jul 2009)</span></li>
+    <li>- <a href="intro.modeleditor.editelements.html#boundingboxes">Bounding Boxes</a>&nbsp;<span class="added">(25 May 2011)</span></li>
+    <li>- <a href="intro.modeleditor.editelements.html#boundframes">Bound Frames</a>&nbsp;<span class="added">(25 May 2011)</span></li>
+    <li>- <a href="intro.modeleditor.editelements.html#tags">Tags System</a>&nbsp;<span class="added">(16 Oct 2009)</span></li>
+  </ul>
+  <li><b>1.6.12.&nbsp;&nbsp;<a href="intro.modeleditor.vertexcolorandweights.html">Vertex Coloring and Weights</a></b>&nbsp;<span class="added">(27 Jul 2009)</span></li>
+  <ul class="index">
+    <li>- <a href="intro.modeleditor.vertexcolorandweights.html#vertexcoloring">Vertex Coloring</a>&nbsp;<span class="added">(27 Jul 2009)</span></li>
+    <li>- <a href="intro.modeleditor.vertexcolorandweights.html#vertexweights">Vertex Weights</a>&nbsp;<span class="added">(27 Jul 2009)</span></li>
+  </ul>
+  <li><b>1.6.13.&nbsp;&nbsp;<a href="intro.modeleditor.exportmodelformats.html">Exporting Model Formats</a></b>&nbsp;<span class="added">(28 Jan 2011)</span></li>
+  <ul class="index">
+    <li>- <a href="intro.modeleditor.exportmodelformats.html#ase">.ase format</a>&nbsp;<span class="added">(27 Jan 2011)</span></li>
+    <li>- <a href="intro.modeleditor.exportmodelformats.html#lwo">.lwo format</a>&nbsp;<span class="added">(27 Jan 2011)</span></li>
+    <li>- <a href="intro.modeleditor.exportmodelformats.html#mdl">.mdl format</a>&nbsp;<span class="added">(27 Jan 2011)</span></li>
+    <li>- <a href="intro.modeleditor.exportmodelformats.html#md2">.md2 format</a>&nbsp;<span class="added">(27 Jan 2011)</span></li>
+    <li>- <a href="intro.modeleditor.exportmodelformats.html#md3">.md3 format</a>&nbsp;<span class="added">(28 Jan 2011)</span></li>
+    <li>- <a href="intro.modeleditor.exportmodelformats.html#md5mesh">.md5mesh format</a>&nbsp;<span class="added">(28 Jan 2011)</span></li>
+    <li>- <a href="intro.modeleditor.exportmodelformats.html#md5anim">.md5anim format</a>&nbsp;<span class="added">(28 Jan 2011)</span></li>
+    <li>- <a href="intro.modeleditor.exportmodelformats.html#ska">.ska format</a>&nbsp;<span class="added">(28 Jan 2011)</span></li>
+    <li>- <a href="intro.modeleditor.exportmodelformats.html#skb">.skb format</a>&nbsp;<span class="added">(28 Jan 2011)</span></li>
+    <li>- <a href="intro.modeleditor.exportmodelformats.html#tan">.tan format</a>&nbsp;<span class="added">(27 Jan 2011)</span></li>
+  </ul>
+</ul>
+<br>
+
+<table width="100%" border=0 cellspacing=0>
+  <tr class="headline">
+    <td width="99%" align=center>
+      <p class="sm">
+        Copyright (c) 2009, GNU General Public License by The QuArK (Quake Army Knife) Community - <a target="_blank" href="http://quark.sourceforge.net/">http://quark.sourceforge.net/</a><br>
+      </p>
+    </td>
+    <td width="1%" align=right nowrap>
+      &nbsp;[&nbsp;<span class="navenable"><a href="intro.mapeditor.floating3dview.html">Prev</a></span>&nbsp;-&nbsp;<a href="#__top__">Top</a>&nbsp;-&nbsp;<span class="navenable"><a href="intro.modeleditor.overview.html">Next</a></span>&nbsp;]&nbsp;
+    </td>
+  </tr>
+</table>
+</body>
+</html>

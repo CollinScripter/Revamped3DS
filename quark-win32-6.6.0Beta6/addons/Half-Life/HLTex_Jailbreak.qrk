@@ -1,0 +1,65 @@
+QQRKSRC1
+{
+  QuArKProtected = "1"
+  Description = "HL Textures - Jailbreak"
+
+//
+// Jailbreak
+//
+  JailbreakTextures.qtx =
+  {
+    ToolBox = "Texture Browser..."
+    Root = "Jailbreak Textures.qtxfolder"
+    HTML = "intro.texturebrowser.html"
+
+    // Raw definition of WAD3 files
+    t_jailbreak:incl =  { s = "jail" d = "jailbreak" h = "C" }
+
+    Jailbreak Textures.qtxfolder =
+    {
+      Jailbreak.txlist =
+      {
+        C1A3FIREDR01_B.wl = {t_jailbreak=!}
+        C1A3_W1D2_B.wl = {t_jailbreak=!}
+        C1A3_W1D_B.wl = {t_jailbreak=!}
+        C1A4I_W1B_B.wl = {t_jailbreak=!}
+        C2A2_DR_B.wl = {t_jailbreak=!}
+        C2A5_DR_B.wl = {t_jailbreak=!}
+//      C3A1_CRATE1B.wl = {t_jailbreak=!}
+//      C3A1_CRATE2B.wl = {t_jailbreak=!}
+//      C3A1_CRATE3B.wl = {t_jailbreak=!}
+        FENCE_BLACK.wl = {t_jailbreak=!}
+        FIFTIES_DR3A_B.wl = {t_jailbreak=!}
+        FIFTIES_DR3B_B.wl = {t_jailbreak=!}
+        FIFTIES_DR3D_B.wl = {t_jailbreak=!}
+        FIFTIES_DR3_B.wl = {t_jailbreak=!}
+        jb_floor01.wl = {t_jailbreak=!}
+        jb_floor02.wl = {t_jailbreak=!}
+        jb_names01.wl = {t_jailbreak=!}
+        jb_names02.wl = {t_jailbreak=!}
+        jb_roof01.wl = {t_jailbreak=!}
+        jb_roof02.wl = {t_jailbreak=!}
+        jb_sign_01.wl = {t_jailbreak=!}
+        jb_sign_02.wl = {t_jailbreak=!}
+        jb_sign_03.wl = {t_jailbreak=!}
+        jb_sign_04.wl = {t_jailbreak=!}
+        jb_sign_05.wl = {t_jailbreak=!}
+        jb_sign_06.wl = {t_jailbreak=!}
+        jb_w5d_01.wl = {t_jailbreak=!}
+        jb_w5d_02.wl = {t_jailbreak=!}
+        jb_w5d_03.wl = {t_jailbreak=!}
+        jb_w5d_04.wl = {t_jailbreak=!}
+        jb_w5d_05.wl = {t_jailbreak=!}
+        jb_w5d_06.wl = {t_jailbreak=!}
+        jb_wall01.wl = {t_jailbreak=!}
+        jb_wall02.wl = {t_jailbreak=!}
+        {LADDER1B_B.wl = {t_jailbreak=!}
+        {LADDER1_B.wl = {t_jailbreak=!}
+        {RAIL1B_B.wl = {t_jailbreak=!}
+        {RAIL1_B.wl = {t_jailbreak=!}
+        {STAIRRAIL1_B.wl = {t_jailbreak=!}
+        {TENSION3_B.wl = {t_jailbreak=!}
+      }
+    }
+  }
+}

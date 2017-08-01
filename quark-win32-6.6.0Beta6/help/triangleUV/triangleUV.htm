@@ -1,0 +1,207 @@
+<html>
+    <head>
+        <style>
+            a {}
+            a:hover {color:#FFFFFF}
+            h1 {color:#FFFFFF}
+            img {bordercolor:#444444}
+            .code {font-family:"courier new"; font-size:x-small;}
+            .tuttitle {font-family:"arial"; font-size:x-large;color:#dddddd}
+            .subtitle {font-family:"courier new"; font-size:x-small;color:#cccccc}
+        </style>
+    </head>
+    <body bgcolor="#000000" text="#BBBBBB" link="#CCCCCC" vlink="#CCCCCC" alink="#CCCCCC">
+        <table align="center" border="0" background="titlebg.jpg" width="500px">
+            <tr>
+                <td align="center"><span class="tuttitle">Triangle Texture U V Position</span></td>
+            </tr>
+            <tr>
+        </table>
+        <br>
+        <hr>
+        <h2>Same Side Technique</h2>
+        <p>
+        A common way to check if a point is in a triangle is to find the vectors 
+        connecting the point to each of the triangle's three vertices and sum the 
+        angles between those vectors. If the sum of the angles is 2*pi then the point 
+        is inside the triangle, otherwise it is not. It works, but it is very slow. 
+        This text explains a faster and much easier method.
+        <p>
+            <table>
+                <tr>
+                    <td><img src="diag01.gif"></td>
+                    <td valign="top">
+                        First off, forgive the nasty coloring. I'm really sorry about it. Honest.
+                        <p>
+                        Okay, A B C forms a triangle and all the points inside it are yellow. Lines AB, 
+                        BC, and CA each split space in half and one of those halves is entirely outside 
+                        the triangle. This is what we'll take advantage of.
+                        <p>
+                        For a point to be inside the traingle A B C it must be below AB and left of BC 
+                        and right of AC. If any one of these tests fails we can return early.
+                    </td>
+                </tr>
+            </table>
+        <p>
+        But, how do we tell if a point is on the correct side of a line? I'm glad you 
+        asked.
+        <p>
+            <img src="diag02.jpg"><br>
+            If you take the cross product of [B-A] and [p-A], you'll get a vector pointing 
+            out of the screen. On the other hand, if you take the cross product of [B-A] 
+            and [p'-A] you'll get a vector pointing into the screen. Ah ha! In fact if you 
+            cross [B-A] with the vector from A to <i>any</i> point above the line AB, the 
+            resulting vector points out of the screen while using <i>any</i>
+        point below AB yields a vector pointing into the screen. So all we need to do 
+        to distinguish which side of a line a point lies on is take a cross product.
+        <p>
+            The only question remaining is: how do we know what direction the cross product <i>should</i>
+        point in? Because the triangle can be oriented in any way in 3d-space, there 
+        isn't some set value we can compare with. Instead what we need is a reference 
+        point - a point that we know is on a certain side of the line. For our 
+        triangle, this is just the third point C.
+        <p>
+            So, any point p where [B-A] cross [p-A] does not point in the same direction as 
+            [B-A] cross [C-A] isn't inside the triangle. If the cross products <i>do</i> point 
+            in the same direction, then we need to test p with the other lines as well. <i>If 
+                the point was on the same side of AB as C and is also on the same side of BC as 
+                A and on the same side of CA as B, then it is in the triangle.</i>
+        <p>
+        Implementing this is a breeze. We'll make a function that tells us if two 
+        points are on the same side of a line and have the actual point-in-triangle 
+        function call this for each edge.
+        <p>
+                <table cellpadding="2" bgcolor="#444444">
+                    <tr>
+                        <td background="../cellular/bg2.jpg">
+                            <pre>
+function SameSide(p1,p2, a,b)
+    cp1 = CrossProduct(b-a, p1-a)
+    cp2 = CrossProduct(b-a, p2-a)
+    if DotProduct(cp1, cp2) >= 0 then return true
+    else return false
+
+function PointInTriangle(p, a,b,c)
+    if SameSide(p,a, b,c) and SameSide(p,b, a,c)
+        and SameSide(p,c, a,b) then return true
+    else return false
+</pre>
+                        </td>
+                    </tr>
+                </table>
+                <p>
+                    It's simple, effective and has no square roots, arc cosines, or strange 
+                    projection axis determination nastiness.
+                </p>
+                <br>
+                <hr>
+                <h2>Barycentric Technique</h2>
+                <p>
+                    The advantage of the method above is that it's very simple to understand so that 
+                    once you read it you should be able to remember it forever and code it up at 
+                    any time without having to refer back to anything. It's just - hey the point 
+                    has to be on the same side of each line as the triangle point that's not in the 
+                    line. Cake.
+                </p>
+                <p>
+                    Well, there's another method that is also as easy conceptually but executes 
+                    faster. The downside is there's a little more math involved, but once you 
+                    see it worked out it should be no problem.
+                </p>
+                <p>
+                    So remember that the three points of the triangle define a plane in space. Pick 
+                    one of the points and we can consider all other locations on the plane as 
+                    relative to that point. Let's go with A -- it'll be our origin on the plane. Now 
+                    what we need are basis vectors so we can give coordinate values to all the 
+                    locations on the plane. We'll pick the two edges of the triangle that 
+                    touch A, (C - A) and (B - A).  Now we can get to any point on
+                    the plane just by starting at A and walking some distance along (C - A) and
+                    then from there walking some more in the direction (B - A).
+                </p>
+                <p>
+                    With that in mind we can now describe any point on the plane as
+                </p>
+                <pre>    P = A + u * (C - A) + v * (B - A)</pre>
+                <p>
+                    Notice now that if u or v < 0 then we've walked in the wrong
+                    direction and must be outside the triangle.  Also if u or v > 1
+                    then we've walked too far in a direction and are outside the triangle.
+                    Finally if u + v > 1 then we've crossed the edge BC again leaving the triangle.
+                </p>
+                <p>
+                    Given u and v we can easily calculate the point P with the above equation,
+                    but how can we go in the reverse direction and calculate u and v from a given
+                    point P?  Time for some math!
+                </p>
+<pre>
+    P = A + u * (C - A) + v * (B - A)       // Original equation
+    (P - A) = u * (C - A) + v * (B - A)     // Subtract A from both sides
+    v2 = u * v0 + v * v1                    // Substitute v0, v1, v2 for less writing
+    
+    // We have two unknowns (u and v) so we need two equations to solve
+    // for them.  Dot both sides by v0 to get one and dot both sides by
+    // v1 to get a second.
+    (v2) . v0 = (u * v0 + v * v1) . v0
+    (v2) . v1 = (u * v0 + v * v1) . v1
+
+    // Distribute v0 and v1
+    v2 . v0 = u * (v0 . v0) + v * (v1 . v0)
+    v2 . v1 = u * (v0 . v1) + v * (v1 . v1)
+
+    // Now we have two equations and two unknowns and can solve one 
+    // equation for one variable and substitute into the other.  Or
+    // if you're lazy like me, fire up Mathematica and save yourself
+    // some handwriting.
+    Solve[v2.v0 == {u(v0.v0) + v(v1.v0), v2.v1 == u(v0.v1) + v(v1.v1)}, {u, v}]
+    u = ((v1.v1)(v2.v0)-(v1.v0)(v2.v1)) / ((v0.v0)(v1.v1) - (v0.v1)(v1.v0))
+    v = ((v0.v0)(v2.v1)-(v0.v1)(v2.v0)) / ((v0.v0)(v1.v1) - (v0.v1)(v1.v0))
+</pre>
+
+<p>Here's an implementation in Flash that you can play with.  :)</p>
+
+<table><tr>
+    <td>
+        <div style='margin:3em;'>
+            <object classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000"
+            	codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=6,0,0,0"
+            	width="300" height="300" id="movie" VIEWASTEXT>
+            		<param name="movie" value="app.swf" />
+            			<embed src="app.swf" quality="high" width="300" height="300" name="movie"
+            				type="application/x-shockwave-flash"
+            				pluginspage="http://www.macromedia.com/go/getflashplayer" /> 
+            </object>
+        </div>
+    </td>
+
+<td>
+<pre>
+// Compute vectors        
+v0 = C - A
+v1 = B - A
+v2 = P - A
+
+// Compute dot products
+dot00 = dot(v0, v0)
+dot01 = dot(v0, v1)
+dot02 = dot(v0, v2)
+dot11 = dot(v1, v1)
+dot12 = dot(v1, v2)
+
+// Compute barycentric coordinates
+invDenom = 1 / (dot00 * dot11 - dot01 * dot01)
+u = (dot11 * dot02 - dot01 * dot12) * invDenom
+v = (dot00 * dot12 - dot01 * dot02) * invDenom
+
+// Check if point is in triangle
+return (u > 0) && (v > 0) && (u + v < 1)
+</pre></td>
+</tr></table>
+
+<p>The algorithm outlined here follows one of the techniques described in 
+<a href="http://realtimecollisiondetection.net/">Realtime Collision Detection</a>.  You can
+also find more information about Barycentric Coordinates at 
+<a href="http://en.wikipedia.org/wiki/Barycentric_coordinates_%28mathematics%29">Wikipedia</a> and
+<a href="http://mathworld.wolfram.com/BarycentricCoordinates.html">MathWorld</a>.</p>
+                
+    </body>
+</html>

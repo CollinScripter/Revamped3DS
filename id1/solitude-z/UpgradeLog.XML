@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet type='text/xsl' href='_UpgradeReport_Files/UpgradeReport.xslt'?><UpgradeLog>
+<Properties><Property Name="Solution" Value="zquake">
+</Property><Property Name="Solution File" Value="C:\kurokx\zquake\zquake-c\zquake.sln">
+</Property><Property Name="Date" Value="Sunday, January 04, 2009">
+</Property><Property Name="Time" Value="14:37 PM">
+</Property></Properties><Event ErrorLevel="0" Project="" Source="zquake.sln" Description="File successfully backed up as C:\kurokx\zquake\zquake-c\zquake.sln.old">
+</Event><Event ErrorLevel="0" Project="zqclient" Source="zqclient.vcproj" Description="Web deployment to the local IIS server is no longer supported. The Web Deployment build tool has been removed from your project settings.">
+</Event><Event ErrorLevel="1" Project="zqclient" Source="zqclient.vcproj" Description="This application has been updated to include settings related to the User Account Control (UAC) feature of Windows Vista. By default, when run on Windows Vista with UAC enabled, this application is marked to run with the same privileges as the process that launched it. This marking also disables the application from running with virtualization. You can change UAC related settings from the Property Pages of the project.">
+</Event><Event ErrorLevel="0" Project="zqclient" Source="zqclient.vcproj" Description="Project file successfully backed up as 'C:\kurokx\zquake\zquake-c\zqclient.vcproj.8.00.old'.">
+</Event><Event ErrorLevel="0" Project="zqclient" Source="zqclient.vcproj" Description="Project upgraded successfully.">
+</Event><Event ErrorLevel="3" Project="zqclient" Source="zqclient.vcproj" Description="Converted">
+</Event><Event ErrorLevel="0" Project="zqds" Source="zqds.vcproj" Description="Web deployment to the local IIS server is no longer supported. The Web Deployment build tool has been removed from your project settings.">
+</Event><Event ErrorLevel="1" Project="zqds" Source="zqds.vcproj" Description="This application has been updated to include settings related to the User Account Control (UAC) feature of Windows Vista. By default, when run on Windows Vista with UAC enabled, this application is marked to run with the same privileges as the process that launched it. This marking also disables the application from running with virtualization. You can change UAC related settings from the Property Pages of the project.">
+</Event><Event ErrorLevel="0" Project="zqds" Source="zqds.vcproj" Description="Project file successfully backed up as 'C:\kurokx\zquake\zquake-c\zqds.vcproj.8.00.old'.">
+</Event><Event ErrorLevel="0" Project="zqds" Source="zqds.vcproj" Description="Project upgraded successfully.">
+</Event><Event ErrorLevel="3" Project="zqds" Source="zqds.vcproj" Description="Converted">
+</Event><Event ErrorLevel="0" Project="zquake" Source="zquake.vcproj" Description="Web deployment to the local IIS server is no longer supported. The Web Deployment build tool has been removed from your project settings.">
+</Event><Event ErrorLevel="1" Project="zquake" Source="zquake.vcproj" Description="This application has been updated to include settings related to the User Account Control (UAC) feature of Windows Vista. By default, when run on Windows Vista with UAC enabled, this application is marked to run with the same privileges as the process that launched it. This marking also disables the application from running with virtualization. You can change UAC related settings from the Property Pages of the project.">
+</Event><Event ErrorLevel="0" Project="zquake" Source="zquake.vcproj" Description="Project file successfully backed up as 'C:\kurokx\zquake\zquake-c\zquake.vcproj.8.00.old'.">
+</Event><Event ErrorLevel="0" Project="zquake" Source="zquake.vcproj" Description="Project upgraded successfully.">
+</Event><Event ErrorLevel="3" Project="zquake" Source="zquake.vcproj" Description="Converted">
+</Event><Event ErrorLevel="0" Project="" Source="zquake.sln" Description="Solution converted successfully">
+</Event><Event ErrorLevel="3" Project="" Source="zquake.sln" Description="Converted">
+</Event></UpgradeLog>

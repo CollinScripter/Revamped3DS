@@ -1,0 +1,85 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"  "http://www.w3.org/TR/html4/loose.dtd">
+<html lang="en">
+<head>
+  <title>Python Interpreters & Versions</title>
+  <meta name="Description" content="QuArK Information Database - Page: 4.4.7.&nbsp;Python Interpreters & Versions">
+  <meta name="Keywords" content="QuArK InfoBase Quake Army Knife QRK QKM Python PY Map Editor Hexen Heretic Half-Life Sin Kingpin Soldier-of-Fortune Star-Trek-Voyager Elite-Force">
+  <link rel=stylesheet href="standard.css" type="text/css">
+</head>
+
+<body>
+<a name="__top__"></a>
+<table width="100%" border=0 cellspacing=0>
+  <tr>
+    <td width=213>
+      <a target="_blank" href="http://quark.sourceforge.net/"><img src="quarkicon.png" width=213 height=90 border=0 alt="Go to QuArK Web Site"></a>
+    </td>
+    <td width="70%" align=center>
+      <div class="topheadline">Python Interpreters & Versions</div>
+      <div class="sm">Updated&nbsp;09 Jul 2012</div>
+    </td>
+    <td width="30%" valign=bottom nowrap>
+      Upper&nbsp;levels:<br>-&nbsp;<a href="index.html">QuArK&nbsp;Information&nbsp;Base</a><br>-&nbsp;<a href="src.html">4.&nbsp;The&nbsp;Source&nbsp;Code</a><br>-&nbsp;<a href="src.topics.html">4.4.&nbsp;Specific&nbsp;Topics</a><br>
+    </td>
+  </tr>
+</table>
+<table width="100%" border=0 cellspacing=0>
+  <tr class="headline">
+    <td width="99%">
+      <p class="headline">&nbsp;4.4.7.&nbsp;Python Interpreters & Versions</p>
+    </td>
+    <td width="1%" align=right nowrap>
+      &nbsp;[&nbsp;<span class="navenable"><a href="src.topics.mapread.html">Prev</a></span>&nbsp;-&nbsp;<span class="navenable"><a href="src.topics.html">Up</a></span>&nbsp;-&nbsp;<span class="navenable"><a href="src.topics.logging.html">Next</a></span>&nbsp;]&nbsp;
+    </td>
+  </tr>
+</table>
+<table border=0 width="100%" cellspacing=10><tr><td><p>Python support and versioning is implemented in
+'source/python/Python.pas' and 'source/python/PyVersions.inc'.
+</p><p>QuArK first looks for the 'dlls/Python.dll', and if that is not
+found, it looks for the appropriate DLL using the default Windows
+search behaviour.  The following versions are supported with the
+appropriate defines set.
+<ul>
+<li>Python 2.7: 'PYTHON27' (python27.dll) (not supported)</li>
+<li>Python 2.6: 'PYTHON26' (python26.dll) (not supported)</li>
+<li>Python 2.5: 'PYTHON25' (python25.dll) (not supported)</li>
+<li>Python 2.4: 'PYTHON24' (python24.dll) - this is the default</li>
+<li>Python 2.3: 'PYTHON23' (python23.dll)</li>
+<li>Python 2.2: 'PYTHON22' (python22.dll)</li>
+<li>Python 2.1: 'PYTHON21' (python21.dll)</li>
+<li>Python 2.0: 'PYTHON20' (python20.dll)</li>
+<li>Python 1.x: Not supported anymore</li>
+</ul>
+</p><p>Note that if you downloaded a source distribution of QuArK, the
+appropriate 'python.dll' should be included in the archive.
+</p><p>The bundled Python support is to get around the fact that the version
+of Python supported can only be set at compile time.  It substantially
+simplifies the installation process for the end user, and makes only
+one download necessary.  It also ensures that all end users are
+running the same version of Python, removing a possible source of bugs
+(people using the wrong version of Python for the QuArK binary they
+have).  It also allows us to go ahead with writing code that requires
+features only available in more recent versions of Python.
+</p><p>Even though Python 2.4 is outdated and Python 2.6 runs QuArK just fine,
+Python 2.5 and later have dropped Windows 95 support.  Dropping support
+for an entire operating system just because you're updating some
+internally used library without a real benefit is not a smart idea, so
+the current branch of QuArK will probably remain Python 2.4 forever.
+</p>
+</td></tr></table>
+<br>
+
+<table width="100%" border=0 cellspacing=0>
+  <tr class="headline">
+    <td width="99%" align=center>
+      <p class="sm">
+        Copyright (c) 2009, GNU General Public License by The QuArK (Quake Army Knife) Community - <a target="_blank" href="http://quark.sourceforge.net/">http://quark.sourceforge.net/</a><br>
+      </p>
+    </td>
+    <td width="1%" align=right nowrap>
+      &nbsp;[&nbsp;<span class="navenable"><a href="src.topics.mapread.html">Prev</a></span>&nbsp;-&nbsp;<a href="#__top__">Top</a>&nbsp;-&nbsp;<span class="navenable"><a href="src.topics.logging.html">Next</a></span>&nbsp;]&nbsp;
+    </td>
+  </tr>
+</table>
+</body>
+</html>

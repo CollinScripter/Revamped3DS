@@ -1,0 +1,720 @@
+QQRKSRC1
+// This file has been written by QuArK QuArK 6.6 Beta
+// It's the text version of file: entities-dod.qrk
+
+// Day of Defeat Entities 2008/09/20 Who Gives A Dam
+
+{
+  Description = "DOD Entities"
+  Toolbox Folders.qtx =
+  {
+    Toolbox = "New map items..."
+    Root = "DOD Entities.qtxfolder"
+    DOD Entities.qtxfolder =
+    {
+      ;desc = "Created from dod.fgd"
+      dod_* entities.qtxfolder =
+      {
+        dod_bomb_dispenser:b =
+        {
+          ;incl = "defpoly"
+          ;desc = "Bomb Dispenser Area"
+          dispense_team = "0"
+        }
+        dod_bomb_target:e =
+        {
+          origin = "0 0 0"
+          ;desc = "Bomb Target"
+          bombing_team = "2"
+          add_timer_seconds = "0"
+        }
+        dod_capture_area:b =
+        {
+          ;incl = "defpoly"
+          ;desc = "Capture Area"
+          area_allies_cancap = "1"
+          area_axis_cancap = "1"
+          area_allies_numcap = "1"
+          area_axis_numcap = "1"
+          area_time_to_cap = "5"
+        }
+        dod_control_point:e =
+        {
+          origin = "0 0 0"
+          ;desc = "Control Point"
+          point_printname = "TODO: Set Name"
+          point_timedpoints_allies = "0"
+          point_timedpoints_axis = "0"
+          point_default_owner = "0"
+          point_allies_model = "models/mapmodels/flags.mdl"
+          point_allies_model_bodygroup = "1"
+          point_axis_model = "models/mapmodels/flags.mdl"
+          point_axis_model_bodygroup = "0"
+          point_reset_model = "models/mapmodels/flags.mdl"
+          point_reset_model_bodygroup = "3"
+          point_group = "0"
+          point_index = "0"
+          point_hud_icon_neutral = "sprites/obj_icons/icon_obj_neutral"
+          point_hud_icon_axis = "sprites/obj_icons/icon_obj_axis"
+          point_hud_icon_allies = "sprites/obj_icons/icon_obj_allies"
+          point_hud_icon_timercap = "sprites/obj_icons/icon_obj_neutral"
+          point_hud_icon_bombed = "sprites/obj_icons/icon_obj_neutral"
+          point_num_bombs = "0"
+        }
+        dod_control_point_master:e =
+        {
+          origin = "0 0 0"
+          ;desc = "Control Point Master"
+          cpm_use_timer = "0"
+          cpm_timer_length = "300"
+          cpm_timer_team = "0"
+        }
+        dod_location:e =
+        {
+          origin = "0 0 0"
+          ;desc = "Location"
+        }
+        dod_scoring:e =
+        {
+          origin = "0 0 0"
+          ;desc = "Custom Scoring"
+          point_give_delay = "60"
+          point_give_amount = "1"
+          point_give_max_times = "10"
+        }
+      }
+      filter_* entities.qtxfolder =
+      {
+        filter_activator_team:e =
+        {
+          origin = "0 0 0"
+          ;desc = "A filter that filters by the team of the activator."
+          filterteam = "2"
+        }
+      }
+      func_* entities.qtxfolder =
+      {
+        func_ladder:b =
+        {
+          ;incl = "defpoly"
+          ;desc = "Ladder. Players will be able to freely along this brush, as"
+           " if it was a ladder. If you are using a model prop for the visual "
+           "representation of the ladder in the map, apply the toolsinvisiblel"
+           "adder material to the func_ladder brush."
+        }
+        func_team_wall:b =
+        {
+          ;incl = "defpoly"
+          ;desc = "Team Blocker Wall"
+          blockteam = "0"
+        }
+        func_teamblocker:b =
+        {
+          ;incl = "defpoly"
+          ;desc = "Walls that players of a certain team are unable to pass thr"
+           "ough"
+        }
+      }
+      info_* entities.qtxfolder =
+      {
+        info_doddetect:e =
+        {
+          origin = "0 0 0"
+          ;desc = "DoD Gamerules"
+          detect_allies_respawnfactor = "1.0"
+          detect_axis_respawnfactor = "1.0"
+          detect_allies_startroundvoice = "0"
+          detect_axis_startroundvoice = "0"
+        }
+        info_player_allies:e =
+        {
+          origin = "0 0 0"
+          ;desc = "This entity marks the start point for Allied players."
+        }
+        info_player_axis:e =
+        {
+          origin = "0 0 0"
+          ;desc = "This entity marks the start point for Axis players."
+        }
+      }
+    }
+  }
+  Entity Forms.fctx =
+  {
+    t_Target:incl =
+    {
+      target: =
+      {
+        txt = "&"
+        hint = "Target"
+      }
+    }
+    t_TeamNum:incl =
+    {
+      TeamNum: =
+      {
+        txt = "&"
+        hint = "Team Number (int)"
+        typ = "C"
+        items = "Allies"$0D"Axis"
+        values = "2"$0D"3"
+      }
+      input#SetTeam: =
+      {
+        txt = "&"
+        hint = "Changes the entity's team"
+      }
+    }
+    t_filter_activator_team:incl =
+    {
+      bbox = '-8 -8 -8 8 8 8'
+      t_BaseFilter = "!"
+      filterteam: =
+      {
+        txt = "&"
+        hint = "Filter Team Number"
+        typ = "C"
+        items = "Allies"$0D"Axis"
+        values = "2"$0D"3"
+      }
+    }
+    filter_activator_team:form =
+    {
+      t_filter_activator_team = "!"
+    }
+    t_info_player_allies:incl =
+    {
+      t_Angles = "!"
+      t_Targetname = "!"
+      t_EnableDisable = "!"
+    }
+    info_player_allies:form =
+    {
+      t_info_player_allies = "!"
+    }
+    t_info_player_axis:incl =
+    {
+      t_Angles = "!"
+      t_Targetname = "!"
+      t_EnableDisable = "!"
+    }
+    info_player_axis:form =
+    {
+      t_info_player_axis = "!"
+    }
+    t_info_doddetect:incl =
+    {
+      t_EnableDisable = "!"
+      detect_allies_respawnfactor: =
+      {
+        txt = "&"
+        hint = "Allies Respawn delay factor"
+      }
+      detect_axis_respawnfactor: =
+      {
+        txt = "&"
+        hint = "Axis Respawn delay factor"
+      }
+      detect_allies_startroundvoice: =
+      {
+        txt = "&"
+        hint = "Start round command for Allies"
+        typ = "C"
+        items = "Attack"$0D"Defend"$0D"Beach"$0D"Timed Attack"$0D"Timed Defend"
+         $0D"Flags"
+        values = "0"$0D"1"$0D"2"$0D"3"$0D"4"$0D"5"
+      }
+      detect_axis_startroundvoice: =
+      {
+        txt = "&"
+        hint = "Start round command for Axis"
+        typ = "C"
+        items = "Attack"$0D"Defend"$0D"Beach"$0D"Timed Attack"$0D"Timed Defend"
+         $0D"Flags"
+        values = "0"$0D"1"$0D"2"$0D"3"$0D"4"$0D"5"
+      }
+    }
+    info_doddetect:form =
+    {
+      t_info_doddetect = "!"
+    }
+    t_dod_scoring:incl =
+    {
+      t_Targetname = "!"
+      t_TeamNum = "!"
+      point_give_delay: =
+      {
+        txt = "&"
+        hint = "Seconds between point gives"
+      }
+      point_give_amount: =
+      {
+        txt = "&"
+        hint = "Points to give each time"
+      }
+      point_give_max_times: =
+      {
+        txt = "&"
+        hint = "Max number of times to give points"
+      }
+      input#GiveTickPoints: =
+      {
+        txt = "&"
+        hint = "Give tick points to the selected team"
+      }
+    }
+    dod_scoring:form =
+    {
+      t_dod_scoring = "!"
+    }
+    t_dod_control_point_master:incl =
+    {
+      t_Targetname = "!"
+      t_EnableDisable = "!"
+      cpm_use_timer: =
+      {
+        txt = "&"
+        hint = "Use round timer?"
+        typ = "C"
+        items = "No"$0D"Yes"
+        values = "0"$0D"1"
+      }
+      cpm_timer_length: =
+      {
+        txt = "&"
+        hint = "Round timer length in seconds"
+      }
+      cpm_timer_team: =
+      {
+        txt = "&"
+        hint = "Which team wins when timer expires"
+        typ = "C"
+        items = "Neither"$0D"Allies"$0D"Axis"
+        values = "0"$0D"2"$0D"3"
+      }
+      output#OnAlliesWin: =
+      {
+        txt = "&"
+        hint = "Output sent when Allies win the round"
+      }
+      output#OnAxisWin: =
+      {
+        txt = "&"
+        hint = "Output sent when Axis win the round"
+      }
+      input#AddTimerSeconds: =
+      {
+        txt = "&"
+        hint = "Add seconds to the duration of the round timer"
+      }
+    }
+    dod_control_point_master:form =
+    {
+      t_dod_control_point_master = "!"
+    }
+    t_dod_location:incl =
+    {
+      t_Targetname = "!"
+      location_name: =
+      {
+        txt = "&"
+        hint = "Name of this location"
+      }
+    }
+    dod_location:form =
+    {
+      t_dod_location = "!"
+    }
+    t_dod_control_point:incl =
+    {
+      t_EnableDisable = "!"
+      t_Targetname = "!"
+      t_Angles = "!"
+      spawnflags: =
+      {
+        txt = "&"
+        typ = "X1"
+        cap = "Hide Control Point on HUD"
+      }
+      spawnflags: =
+      {
+        txt = "&"
+        typ = "X2"
+        cap = "Start with model hidden"
+      }
+      spawnflags: =
+      {
+        txt = "&"
+        typ = "X4"
+        cap = "Give tick points for bombs remaining"
+      }
+      point_printname: =
+      {
+        txt = "&"
+        hint = "LOCALIZED name to print on the hud"
+      }
+      point_timedpoints_allies: =
+      {
+        txt = "&"
+        hint = "Time based point value for Allies"
+      }
+      point_timedpoints_axis: =
+      {
+        txt = "&"
+        hint = "Time based point value for Axis"
+      }
+      point_default_owner: =
+      {
+        txt = "&"
+        hint = "Default Owner of the control point"
+        typ = "C"
+        items = "Neither"$0D"Allies"$0D"Axis"
+        values = "0"$0D"2"$0D"3"
+      }
+      point_axis_capsound: =
+      {
+        txt = "&"
+        hint = "Sound Made when Axis captures"
+      }
+      point_allies_capsound: =
+      {
+        txt = "&"
+        hint = "Sound Made when Allies captures"
+      }
+      point_resetsound: =
+      {
+        txt = "&"
+        hint = "Sound Made when point resets"
+      }
+      point_allies_model: =
+      {
+        txt = "&"
+        hint = "Allies Model"
+        typ = "B"
+        Cap = "models..."
+        form = "t_models_hl2_form:form"
+      }
+      point_allies_model_bodygroup: =
+      {
+        txt = "&"
+        hint = "Allies model bodygroup"
+      }
+      point_axis_model: =
+      {
+        txt = "&"
+        hint = "Axis Model"
+        typ = "B"
+        Cap = "models..."
+        form = "t_models_hl2_form:form"
+      }
+      point_axis_model_bodygroup: =
+      {
+        txt = "&"
+        hint = "Axis model bodygroup"
+      }
+      point_reset_model: =
+      {
+        txt = "&"
+        hint = "Reset Model"
+        typ = "B"
+        Cap = "models..."
+        form = "t_models_hl2_form:form"
+      }
+      point_reset_model_bodygroup: =
+      {
+        txt = "&"
+        hint = "Reset model bodygroup"
+      }
+      output#OnAlliesCap: =
+      {
+        txt = "&"
+        hint = "Send when owner is changed to allies"
+      }
+      output#OnAxisCap: =
+      {
+        txt = "&"
+        hint = "Send when owner is changed to axis"
+      }
+      output#OnCapReset: =
+      {
+        txt = "&"
+        hint = "Send when owner is changed to neutral"
+      }
+      output#AlliesCapturePoint: =
+      {
+        txt = "&"
+        hint = "Send when Allies capture this point"
+      }
+      output#AxisCapturePoint: =
+      {
+        txt = "&"
+        hint = "Send when Allies capture this point"
+      }
+      point_group: =
+      {
+        txt = "&"
+        hint = "Group Index"
+      }
+      point_index: =
+      {
+        txt = "&"
+        hint = "Index of this point ( unique )"
+      }
+      point_hud_icon_neutral: =
+      {
+        txt = "&"
+        hint = "Hud icon material when noone owns point"
+        typ = "ET"
+        Cap = "texture..."
+      }
+      point_hud_icon_axis: =
+      {
+        txt = "&"
+        hint = "Hud icon material when Axis own point"
+        typ = "ET"
+        Cap = "texture..."
+      }
+      point_hud_icon_allies: =
+      {
+        txt = "&"
+        hint = "Hud icon material when Allies own point"
+        typ = "ET"
+        Cap = "texture..."
+      }
+      point_hud_icon_timercap: =
+      {
+        txt = "&"
+        hint = "Hud icon - bomb planted"
+        typ = "ET"
+        Cap = "texture..."
+      }
+      point_hud_icon_bombed: =
+      {
+        txt = "&"
+        hint = "Hud icon - point destroyed"
+        typ = "ET"
+        Cap = "texture..."
+      }
+      input#HideModel: =
+      {
+        txt = "&"
+        hint = "Hide the control point model"
+      }
+      input#ShowModel: =
+      {
+        txt = "&"
+        hint = "Show the control point model again"
+      }
+      point_num_bombs: =
+      {
+        txt = "&"
+        hint = "Number of Bombs required to destroy"
+        typ = "C"
+        items = "0"$0D"1"$0D"2"$0D"3"
+        values = "0"$0D"1"$0D"2"$0D"3"
+      }
+    }
+    dod_control_point:form =
+    {
+      t_dod_control_point = "!"
+    }
+    t_func_ladder:incl =
+    {
+    }
+    func_ladder:form =
+    {
+      t_func_ladder = "!"
+    }
+    t_dod_capture_area:incl =
+    {
+      t_EnableDisable = "!"
+      t_Targetname = "!"
+      area_allies_cancap: =
+      {
+        txt = "&"
+        hint = "Can Allies Cap?"
+        typ = "C"
+        items = "Yes"$0D"No"
+        values = "1"$0D"0"
+      }
+      area_axis_cancap: =
+      {
+        txt = "&"
+        hint = "Can Axis Cap?"
+        typ = "C"
+        items = "Yes"$0D"No"
+        values = "1"$0D"0"
+      }
+      area_allies_numcap: =
+      {
+        txt = "&"
+        hint = "Number of Allies to cap"
+      }
+      area_axis_numcap: =
+      {
+        txt = "&"
+        hint = "Number of Axis to cap"
+      }
+      area_time_to_cap: =
+      {
+        txt = "&"
+        hint = "Time to cap (sec)"
+      }
+      output#OnAlliesStartCap: =
+      {
+        txt = "&"
+        hint = "Sent when Allies start capture"
+      }
+      output#OnAlliesBreakCap: =
+      {
+        txt = "&"
+        hint = "Sent when Allies break capture"
+      }
+      output#OnAlliesEndCap: =
+      {
+        txt = "&"
+        hint = "Sent when Allies end capture"
+      }
+      output#OnAxisStartCap: =
+      {
+        txt = "&"
+        hint = "Sent when Axis start capture"
+      }
+      output#OnAxisBreakCap: =
+      {
+        txt = "&"
+        hint = "Sent when Axis break capture"
+      }
+      output#OnAxisEndCap: =
+      {
+        txt = "&"
+        hint = "Sent when Axis end capture"
+      }
+      output#OnStartCap: =
+      {
+        txt = "&"
+        hint = "Sent when either team starts capture"
+      }
+      output#OnBreakCap: =
+      {
+        txt = "&"
+        hint = "Sent when either team break capture"
+      }
+      output#OnEndCap: =
+      {
+        txt = "&"
+        hint = "Sent when either team end capture"
+      }
+      area_cap_point: =
+      {
+        txt = "&"
+        hint = "Name of the control point this area is linked to"
+      }
+    }
+    dod_capture_area:form =
+    {
+      t_dod_capture_area = "!"
+    }
+    t_dod_bomb_target:incl =
+    {
+      t_EnableDisable = "!"
+      t_Angles = "!"
+      t_Targetname = "!"
+      target_control_point: =
+      {
+        txt = "&"
+        hint = "Target CP"
+      }
+      bombing_team: =
+      {
+        txt = "&"
+        hint = "Bombing Team"
+        typ = "C"
+        items = "U.S. Army"$0D"Wermacht"
+        values = "2"$0D"3"
+      }
+      output#OnBombTargetActivated: =
+      {
+        txt = "&"
+        hint = "Send when bomb target becomes active"
+      }
+      output#OnBombTargetDeactivated: =
+      {
+        txt = "&"
+        hint = "Send when bomb target becomes inactive"
+      }
+      output#OnBombPlanted: =
+      {
+        txt = "&"
+        hint = "Send when bomb is planted at this target"
+      }
+      output#OnBombExploded: =
+      {
+        txt = "&"
+        hint = "Send when timer expires and bomb explodes"
+      }
+      output#OnBombDefused: =
+      {
+        txt = "&"
+        hint = "Send when bomb is completely defused"
+      }
+      add_timer_seconds: =
+      {
+        txt = "&"
+        hint = "Add To Timer (sec)"
+      }
+    }
+    dod_bomb_target:form =
+    {
+      t_dod_bomb_target = "!"
+    }
+    t_dod_bomb_dispenser:incl =
+    {
+      t_EnableDisable = "!"
+      t_Targetname = "!"
+      dispense_team: =
+      {
+        txt = "&"
+        hint = "Team to give bombs to"
+        typ = "C"
+        items = "Both Teams"$0D"U.S. Army Only"$0D"Wermacht Only"
+        values = "0"$0D"2"$0D"3"
+      }
+    }
+    dod_bomb_dispenser:form =
+    {
+      t_dod_bomb_dispenser = "!"
+    }
+    t_func_team_wall:incl =
+    {
+      blockteam: =
+      {
+        txt = "&"
+        hint = "Team to block"
+        typ = "C"
+        items = "Neither"$0D"U.S. Army Only"$0D"Wermacht Only"
+        values = "0"$0D"2"$0D"3"
+      }
+    }
+    func_team_wall:form =
+    {
+      t_func_team_wall = "!"
+    }
+    t_func_teamblocker:incl =
+    {
+      t_Targetname = "!"
+      t_Parentname = "!"
+      t_TeamNum = "!"
+      spawnflags: =
+      {
+        txt = "&"
+        typ = "X2"
+        cap = "Don't show hint when touched"
+      }
+    }
+    func_teamblocker:form =
+    {
+      t_func_teamblocker = "!"
+    }
+  }
+}

@@ -1,0 +1,490 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"  "http://www.w3.org/TR/html4/loose.dtd">
+<html lang="en">
+<head>
+  <title>Vectors</title>
+  <meta name="Description" content="QuArK Information Database - Page: 4.9.1.&nbsp;Vectors">
+  <meta name="Keywords" content="QuArK InfoBase Quake Army Knife QRK QKM Python PY Map Editor Hexen Heretic Half-Life Sin Kingpin Soldier-of-Fortune Star-Trek-Voyager Elite-Force">
+  <link rel=stylesheet href="standard.css" type="text/css">
+</head>
+
+<body>
+<a name="__top__"></a>
+<table width="100%" border=0 cellspacing=0>
+  <tr>
+    <td width=213>
+      <a target="_blank" href="http://quark.sourceforge.net/"><img src="quarkicon.png" width=213 height=90 border=0 alt="Go to QuArK Web Site"></a>
+    </td>
+    <td width="70%" align=center>
+      <div class="topheadline">Vectors</div>
+      <div class="sm">Updated&nbsp;11 Jul 2001</div>
+    </td>
+    <td width="30%" valign=bottom nowrap>
+      Upper&nbsp;levels:<br>-&nbsp;<a href="index.html">QuArK&nbsp;Information&nbsp;Base</a><br>-&nbsp;<a href="src.html">4.&nbsp;The&nbsp;Source&nbsp;Code</a><br>-&nbsp;<a href="src.math.html">4.9.&nbsp;Math&nbsp;Background</a><br>
+    </td>
+  </tr>
+</table>
+<table width="100%" border=0 cellspacing=0>
+  <tr class="headline">
+    <td width="99%">
+      <p class="headline">&nbsp;4.9.1.&nbsp;Vectors</p>
+    </td>
+    <td width="1%" align=right nowrap>
+      &nbsp;[&nbsp;<span class="navenable"><a href="src.math.html">Prev</a></span>&nbsp;-&nbsp;<span class="navenable"><a href="src.math.html">Up</a></span>&nbsp;-&nbsp;<span class="navenable"><a href="src.math.linear.html">Next</a></span>&nbsp;]&nbsp;
+    </td>
+  </tr>
+</table>
+<table border=0 width="100%" cellspacing=10><tr><td>
+<p>Here is a rather short introduction to vectors, in certain
+respects rather philosophical, but also with reference
+to QuArK's vector facilities.  The first few chapters of
+books on 'vector calculus' are a good source for this
+kind of material, although fortunately there's little need
+to wade very far into them (I learned a lot from
+Marsen &amp; Tromba (1976) <U>Vector Calculus</U>, Freeman
+and Co., the material here being covered in Chapter 1).
+</p>
+</td></tr></table>
+<br>
+
+<table width="100%" border=0 cellspacing=0>
+  <tr class="headline">
+    <td width="100%">
+      <p class="subheadline">&nbsp;Index</p>
+    </td>
+  </tr>
+</table>
+<ul class="index">
+  <li>- <a href="#intro">Vectors and Points</a>&nbsp;<span class="added">(11 Jul 2001)</span>
+  <li>- <a href="#coords">Coordinate Systems and the Dot Product</a>&nbsp;<span class="added">(11 Jul 2001)</span>
+  <li>- <a href="#cross">The Cross Product</a>&nbsp;<span class="added">(06 Jul 2001)</span>
+</ul>
+<br>
+
+
+<a name="intro"></a>
+  <table width="100%" border=0 cellspacing=0>
+    <tr class="headline">
+      <td>
+        <p class="item">&nbsp;Vectors and Points</p>
+      </td>
+      <td align=right>
+        <font size=-2>tiglari&nbsp;-&nbsp;11 Jul 2001</font>
+      </td>
+      <td width="1%" align=right nowrap>
+        &nbsp;&nbsp;[&nbsp;<a href="#__top__">Top</a>&nbsp;]&nbsp;
+      </td>
+    </tr>
+  </table>
+  <table border=0 width="100%" cellspacing=10><tr><td>
+<p>'Vector' means 'carrier' in Latin.  Hence rats as plague
+vectors.  In mathematics, the most basic meaning is
+a relationship between two points, namely, the
+displacement that would carry one into the other, and
+also a sequence of numbers representing that displacement,
+such as 2 units forward, 3 to the left and 1 up, giving
+the vector &lt;2,3,1&gt;, or quarkx.vect(2,4,1) in QuArK
+Python programming.  We'll call the relationships between
+points 'geometric' vectors, the sequences of numbers
+'sequence' vectors (this isn't standard terminology, but I
+find it useful).
+Since only the sequence vectors can be manipulated
+by computer programs, in a sense they are the only ones
+that are relevant, but on the other hand what the programs
+are doing is helping people to build their spatial
+imaginings, so I personally think it's helpful to have
+a solid grasp of the relationship between the sequence
+vectors and the geometrical ideas they represent.
+</p><p>Geometrical vectors can be 'added'
+in the sense of performing one displacement after another,
+and also multiplied by numbers, in the sense of performing
+the displacement a (possibly fractional or irrational)
+number of times.  Similarly, the sequence
+vectors can be added by adding the numbers in the
+corresponding positions, or multiplying all the numbers
+by the same number:
+<div class="doccode"><pre>
+&lt;x, y, z&gt; + &lt;u, v, w&gt; = &lt;x+u, y+v, z+w&gt;
+a*&lt;x, y, z&gt; = &lt;a*x, a*y, a*z&gt;
+</pre></div>
+In jargon, for sequence vectors, addition of vectors and
+multiplication of a
+vector by a 'scalar' (an ordinary number, in context where
+vectors are the focus of attention) are defined
+'componentwise'.
+</p><p>The components are of course the individual numbers, and if
+v is a QuArK vector, we can get its first, second and third
+components as v.x, v.y and v.z respectively (there are also
+5-component vectors for use with bezier patches, with .s and
+.t in addition, but we won't worry about those here).
+</p><p>If we're using the number sequences to represent
+displacements, we can see that the algebraic definition
+agrees with our intuitive conceptions of how addition of
+displacements and the multiplication of a displacement
+by a number should work, and if you crank through the
+algebra you should be able to see that all of the standard
+sequence laws such as commutative and associative
+work, for those combinations to which they are applicable.
+For example:
+<div class="doccode"><pre>
+(a+b)*(v+w) = a*b + a*w + b*v + b*w
+a*(b*v) = (a*b)*v = (b*a)*v = b*(a*v)
+</pre></div>
+Vector algebra or calculus textbooks will give complete
+lists, but basically it's just Junior Hi-level algebra.
+</p><p>And in QuArK python, + works for vectors, and * will
+combine a vector and a float, the only difference from
+standard math notation being that you can also put the
+float second, or use the division symbol in the usual
+way:
+<div class="doccode"><pre>
+(1/a)*v == v*(1/a) == v/a
+</pre></div>
+(if v is a vector and a is a float).
+</p><p>It is also usual for vectors to be used to represent points,
+but there's a issue here: it makes no sense to add
+points to each other, or multiply them by numbers.  What's
+going on is that to represent a point by a vector, we first
+need to pick a special point called the 'origin'.  Then we can
+use vectors to represent other points as relationships to (i.e.
+displacements from) the origin.
+</p><p>So at this point we have three somewhat different kinds of things
+floating around:
+<UL>
+<LI> Geometric vectors: relationships between points in space, independent
+of any representation, by number-sequences or otherwise, with the conceptions
+of addition and multiplication.
+</p><p><LI> 'Sequence vectors':  sequences of numbers (in this case sequences
+of length 3, tho there are other possibilities), with the componentwise
+addition and scalar multiplication.
+</p><p><LI> Geometric points in space: relationships between these give geometric
+vectors, which can be represented by sequence vectors given some further
+arrangements, which we'll be looking ito shortly.
+</UL>
+</p><p>To get a geometric vector from a point, we need an origin
+point; how do we get an sequence vector from a geometric one?
+What we need is three vectors of length one, all perpendicular
+to each other, taken in a definite order.  This is called
+an 'orthormal basis', 'ortho-' meaning perpendicular, 'normal'
+meaning of length one, and 'basis' being a math term whose
+true meaning we won't reveal quite yet.  The vectors in the
+basis are by convention associated with the x, y and z axes,
+and often designated as <b>i</b>, <b>j</b> and <b>k</b> in
+3D math books.  Given an orthonormal
+basis, we can represent a geometric vector by the sequence
+of numbers indicating how far you go in the direction of each
+vector of the basis, taken in order.
+</p><p>It's an essential point that the representation of geometrical
+vectors by sequence vectors has an arbitrary aspect: given a
+different choice of basis, there will be different numbers.
+Suppose for example we have an orthonormal basis
+<b>i</b>, <b>j</b> and <b>k</b>, and replace <b>j</b> with
+-<b>j</b>.  What will happen to the sequence vector
+representing a given geometric one?
+</p><p>To represent a geometric vector with an sequence vector(in
+the standard way; there are some other possibilities), we
+need an orthonormal basis, but we don't need an origin.
+But to represent a point as an sequence vector, both an
+origin and an orthonormal basis is required: the origin lets
+us represent a point with a (geometric) vector, and the
+basis lets us represent the geometric vector with an sequence
+one.  We find out more about this in the next section.
+an origin with an orthonormal basis is a 'coordinate system'.
+</p>
+  </td></tr></table>
+  <br>
+
+<a name="coords"></a>
+  <table width="100%" border=0 cellspacing=0>
+    <tr class="headline">
+      <td>
+        <p class="item">&nbsp;Coordinate Systems and the Dot Product</p>
+      </td>
+      <td align=right>
+        <font size=-2>tiglari&nbsp;-&nbsp;11 Jul 2001</font>
+      </td>
+      <td width="1%" align=right nowrap>
+        &nbsp;&nbsp;[&nbsp;<a href="#__top__">Top</a>&nbsp;]&nbsp;
+      </td>
+    </tr>
+  </table>
+  <table border=0 width="100%" cellspacing=10><tr><td>
+<p>The dot product (also sometimes called the 'inner
+product') might be the leading 'value for money'
+vector operation, since its definition is simple and
+its results extremely useful.  For sequence vectors,
+we can define it like this:
+<div class="doccode"><pre>
+&lt;x,y,z&gt;*&lt;p,s,t&gt; = x*p + y*s + z*t
+</pre></div>
+In other words, to compute the dot product of
+two vectors, multiply their corresponding components,
+and add the results.
+</p><p>In QuArK python, the dot product is represented
+by the '*' symbol, so that if u and v are vectors,
+'u*v' will be their dot product, a number.  If you
+crank through the definition, you can work out that
+the dot product obeys many (but not quite all)
+applicable instances of the
+associative and commutative laws, such as (where u and v are
+vectors, and a is a number):
+<div class="doccode"><pre>
+u*v = v*u
+a*(u*v) = (a*u)*v
+(a+b)*u = a*u + b*u
+a*(u+v)  = a*u+a*v
+</pre></div>
+One that doesn't work is:
+<div class="doccode"><pre>
+(u*v)*w = (u*w)*v  (NOT!!)
+</pre></div>
+where u, v w are all vectors.
+</p><p>One aspect of the geometric significance of the dot
+product is that we can use it to compute the length
+of a vector:
+<div class="doccode"><pre>
+length(v) = sqrt(v*v)
+</pre></div>
+This follows from the Pythagorean formula for the
+hypoteneuse (long side) of a right triangle, generalized
+to give the diagonal of a box.  However we don't actually
+have to know this for QuArK Python, since the abs()
+function delivers the length of a vector.  Also in
+QuArK Python, the square root function needs to be preceded
+by 'math.', since it's part of the math module, so we
+can render the above equation into an always-true
+QuArK Python statement as follows:
+<div class="doccode"><pre>
+abs(v) == math.sqrt(v*v)
+</pre></div>
+This illustrates a very important feature of the dot
+product, which is that even though we compute it from
+coordinates, which depend on a choice of a basis, it is
+actually independent of the exact choice of basis: no matter
+what basis we chose to get an sequence vector w representing
+a geometric vector v, the dot product w*w will be the same.
+This means that we can think of the dot product as
+a property of geometric vectors, as well as sequence
+ones.
+</p><p>A further essential fact about the dot product is that if
+the dot product of two sequence vectors is zero,
+then the geometric vectors they represent, with
+respect to any coordinate system, will be zero.  So
+we have a fast and easy to compute test for
+perpendicularity.  A typical application is determining
+whether a point lies on a plane.
+</p><p>One way to represent a plane is to pick one vector
+p representing a point on the plane (it doesn't
+matter which one), and another vector n to represent
+a 'normal' to the plane, that is a line perpendicular to it. (If
+(If the plane is thought of as dividing space into an 'inside'
+and an 'outside', there is an essentially arbitrary
+convention that the normal sticks into the outside.
+So the direction handles sticking out of faces in
+QuArK are normals to the face plane, pointing in the
+conventional direction).  The plane will then be
+defined as all points v such that the vector from v
+to p is perpendicular to n.  And given a point v, we
+can test it for lying on the plane by seeing if
+n*(p-v) equals the 0 vector &lt;0,0,0&gt;.
+</p><p>The &lt;0,0,0&gt; vector evaluates to 'false' in a QuArK
+Python conditional, so a piece of code might be:
+<div class="doccode"><pre>
+if not n*(p-v):  # if v lies on the plane defined by p, n
+  [do something]
+</pre></div>
+Recall that when we're using vectors to represent points
+(v and p), we're assuming a prior choice of origin, but
+n is a direction, so doesn't require an origin, and notice
+that p-v will be independent of the choice of origin,
+since if you move the origin by say some vector d, d
+will be addeed to both v and p, and so cancel out in their
+difference.
+</p><p>The perpendicularity test provided by the dot product
+is a consequence of something more general, which we
+push on to investigate.
+</p><p>Suppose we have two vectors, u and v, which we represent as
+lines in space going from an arbitrarily chosen origin to the
+point that the vectors relate to that origin, and we draw a line
+from the end of u so that it intersects the line that v
+extends along, and is perpendicular to v.  The relation
+between the origin and this intersection point is then
+a vector, which might point in the same direction as
+v, or the opposite one.
+</p><p>This vector is called 'the projection of v onto u'; note
+that it depends on the length and direction of v, and
+the direction of u, but <strong>not</strong> on the
+length of v.  The big news is that projection of u onto v,
+which we've defined geometrically, can be computed algebraically
+using the dot product:
+<div class="doccode"><pre>
+proj(u,v) = ((u*v)/abs(u))*u
+</pre></div>
+The ability to compute these projections is something we
+can put to use in various ways. 
+</p><p>Suppose we have a point v, and a plane defined by a point
+v and a normal vector n, and what we want to do is to
+'project' the point v to the plane along the plane's normal,
+that is, find a vector that is perpendicular to the
+plane that will take v onto a point in the plane (this
+might be part of a routine to attach an object to a face,
+for example).  Now we already have one vector (p-v) that
+will take p onto the plane, but this isn't the one we
+want because it might not be perpendicular to the
+plane.  But we can fix this by projecting (p-v) onto
+the normal.  The resulting vector will be parallel to
+the normal and therefore perpendicular to the plane,
+and the line connecting its end to v will also be
+perpendicular to the normal, so its satisfies the test
+above for being on the plane (you should try to visualize
+this too, to see intuitively that it makes sense).
+</p><p>And since plane normals, including the output of face.normal
+in QuArK Python, are by convention of length 1, we can drop
+the abs(u) term from the computation, and find the vector
+proj taking v onto the plane by computing:
+<div class="doccode"><pre>
+proj = ((p-v)*n)*n
+</pre></div>
+And if we want the actual point, we just add proj to v.
+</p><p>A more general version of this is to project a point to a
+plane along any normal; that's what the procedure projectpointtoplane
+in quarkpy.maputils does.  The idea behind that code is to take
+two dot products of the plane normal, one with the vector from
+the point we're projecting from to the point that defines the
+plane, the other with the vector we're projecting along.  These
+are used to compute a ratio, by which the 'along' vector is
+multiplied to produce the projection vector.
+</p><p>A final, easier, example is the 'perptonormthru' procedure,
+also in quarkpy.maputils.  Here the idea is that we're given
+a 'source' point, a (sort of) 'destination' point, and a normal
+vector thru the destination point.  The idea is to find vector
+that's perpendicular to the normal, going from source to a point
+on the line of that normal (so the destination)
+is only a sort-of destination.  So the idea here is to compute
+the projection of (source-dest) onto norm, then subtract that
+from (source-dest) to get the desired answer.  This procedure is
+used in various ways, for example in computing the circumference
+of prism-shaped brushes with irregular ends in the texture-wrapping
+code.
+</p><p>And finally we come to the most general and important application.
+Suppose u is coordinate axis of a basis. Then u*v
+is v's coordinate for that axis, w.r.t. the basis.
+So out of all of this we have gotten a way to compute the
+coordinates of a vector w.r.t a new coordinate system.
+This is very convenient.  Suppose we've worked out the
+coordinates of a bunch of points, and suddenly decide that
+we need them w.r.t a different coordinate system.  It would
+be annoying to have to pull out our surveying gear and measure
+everything again, but thanks to the dot product we don't
+have to.  All we have to do is get the coordinates of
+the new origin (w.r.t the original coordinate system),
+call it <b>o</b>, and of the new basis vectors.
+If <b>v</b> is an
+sequence vector representing a point in the old
+coordinate system, and <b>ax</b> is an axis vector
+of the new basis, then (<b>v</b>-<b>o</b>)*<b>ax</b>
+will be <b>v</b>'s ax-coordinate in that basis, also with
+three computations of this nature, one for each of the
+new axes, we can get the new coordinates.
+</p>
+
+  </td></tr></table>
+  <br>
+
+<a name="cross"></a>
+  <table width="100%" border=0 cellspacing=0>
+    <tr class="headline">
+      <td>
+        <p class="item">&nbsp;The Cross Product</p>
+      </td>
+      <td align=right>
+        <font size=-2>tiglari&nbsp;-&nbsp;06 Jul 2001</font>
+      </td>
+      <td width="1%" align=right nowrap>
+        &nbsp;&nbsp;[&nbsp;<a href="#__top__">Top</a>&nbsp;]&nbsp;
+      </td>
+    </tr>
+  </table>
+  <table border=0 width="100%" cellspacing=10><tr><td>
+<p>Now we move on to a rather more complicated operation,
+the cross product.  What this is useful for is finding
+vectors that are perpendicular to other vectors.
+Unfortunately most of the applications of this
+in the code seem to be involved with more advanced things
+such as matrices, but hopefully these basic facts
+will be useful, especially that when a cross product
+is used, the motive is generally to find a vector
+that's perpendicular to two that are already in hand.
+</p><p>The full algebraic definition of the cross product is
+rather complicated, and for QuArK programming, there's
+no real reason to know it, since it's computed by the
+'^' operation:  'u^v' is the cross-product of u and v.
+But although we don't need to know how to compute it,
+we do have to know something about its properties.
+</p><p>The most important property is that if u and v don't
+lie on the same line (which implies that neither is the
+<b>0</b> vector), then u^v is perpendicular to both u and v.
+Otherwise u^v is the <b>0</b> vector (and isn't really useful
+for anything, afaik).  Another useful fact is that if
+u and v are the unit vectors along the x and y axes,
+respectively, then u^v is the unit vector along the z
+axis.  Since these unit vectors are standardly
+designated <b>i</b>, <b>j</b> and <b>k</b>, we have:
+<div class="doccode"><pre>
+i ^ j = k
+</pre></div>
+</p><p>More generally, we'd like to know how to tell:
+<UL>
+<LI>how long u^v is
+<LI>which way it points
+</UL>
+The length turns out to be abs(sin(th))*abs(u)*abs(v),
+where th is the angle between u and v.   More relevant
+for QuArK is the direction: there is a principle called
+the 'right hand rule' for figuring out the direction
+of a cross-product: if v goes perpendicularly through
+the palm of your right hand, with your fingurs curling
+around so that they point towards u, then your thumb
+points in the direction of u^v.
+</p><p>If you work through this you'll see that there is a
+consequence that u^v does not equal v^u, but point in
+the opposite direction, so we have:
+<div class="doccode"><pre>
+u^v = -(v^u)
+</pre></div>
+There are other algebraic facts about the cross product
+to be found in math books, but I have yet to find them
+useful for QuArK Python.
+</p><p>The cross product can not only be used to manufacture a
+z axis from suitable x and y axes, but it can also be
+used to make an orthonormal basis from any two non-colinear
+vectors.  Suppose we have u and v, and want u to be the
+x axis, and v to lie in the xy plane.  Then we can get
+the direction of the z axis by taking u^v, and given
+the z axis, we can get the direction of the y axis
+as (u^v)^u.  Symbolically, using <b>i</b>, <b>j</b>,
+<b>k</b> as the unit vectors for the three axes:
+<div class="doccode"><pre>
+i = u.normalized
+j = (u^v).normalized
+k = j^k  (normalization not needed here)
+</pre></div>
+</p>
+  </td></tr></table>
+  <br>
+
+<br>
+
+<table width="100%" border=0 cellspacing=0>
+  <tr class="headline">
+    <td width="99%" align=center>
+      <p class="sm">
+        Copyright (c) 2009, GNU General Public License by The QuArK (Quake Army Knife) Community - <a target="_blank" href="http://quark.sourceforge.net/">http://quark.sourceforge.net/</a><br>
+      </p>
+    </td>
+    <td width="1%" align=right nowrap>
+      &nbsp;[&nbsp;<span class="navenable"><a href="src.math.html">Prev</a></span>&nbsp;-&nbsp;<a href="#__top__">Top</a>&nbsp;-&nbsp;<span class="navenable"><a href="src.math.linear.html">Next</a></span>&nbsp;]&nbsp;
+    </td>
+  </tr>
+</table>
+</body>
+</html>

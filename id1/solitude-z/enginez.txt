@@ -1,0 +1,77 @@
+enginez Homepage : http://www.enginez.net/
+enginez Author   : A Nourai aka 'fuh' (#enginez on Quakenet irc)
+enginez Forum    : http://www.enginez.net/forum
+
+
+View this text file with a width that fits in at least 105 characters.
+
+
+enginez
+--------
+enginez is an open source (GPL) modification of ID Software's Quakeworld.
+It contains numerous gameplay and eyecandy enhancements over the original Quakeworld gane.
+
+
+Installation Notes
+------------------
+Most people can skip straight to step 2.
+
+STEP 1
+You need id1/pak0.pak installed by the original ID's Quake.  If you do not have
+a copy of Quake, the shareware version will do.  You can download id's
+shareware version of Quake 1 from here :
+http://www.enginez.net/files/misc/quake-shareware.zip .
+
+The id1/pak1.pak is also important but not necessary.  This can only be obtained from the
+full version of Quake made by ID Software.
+
+STEP2
+For a quick installation:
+Simply unzip the enginez zip into your quake folder and run enginez-gl.exe (or
+enginez.exe).  Press escape to bring up the menu and start a single player game!
+
+For a complete installation:
+Following the step by step guide at http://www.enginez.net/forum/viewtopic.php?t=2 .
+
+
+Source Code
+-----------
+enginez is an open source project.  You can download the source from the 'Files and Links'
+section at www.enginez.net .
+
+The win32 project files supplied with enginez requires Microsoft's Visual Studio.Net .
+The linux Makefile is written for gcc 2.95 .  It may require editing to fit your system's
+directory structure.
+
+The following libraries are optional:
+*) libpng (if WITH_PNG and WITH_ZLIB are defined) to enable png image routines.
+libpng can be obtained from http://www.libpng.org/pub/png/libpng.html.
+*) libjpeg (if WITH_JPEG is defined) to enable jpeg image routines.
+libjpeg can be obtained from http://www.ijg.org/.
+*) libxmms (if WITH_XMMS is defined) to enable xmms control in linux clients.
+libxmms can be obtained from http;//www.xmms.org .
+
+
+Licence and Warranty
+--------------------
+enginez is released under the GNU GPL licence.
+There is no warranty attached with using enginez.
+Read gnu.txt for details on the licence.
+
+
+Credits
+-------
+See http://www.enginez.net/ .
+
+
+Contacting Author
+-----------------
+If you want to request a feature to be added into enginez or to report a bug,
+you can contact fuh through the enginez forum http://www.enginez.net/forum/ .
+Fuh can also be emailed at fuh@enginez.net, or found on Quakenet irc in #enginez .
+
+
+
+Fuh
+
+20/12/2003

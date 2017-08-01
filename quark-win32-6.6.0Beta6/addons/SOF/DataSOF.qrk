@@ -1,0 +1,298 @@
+QQRKSRC1
+// Soldier of Fortune definition file for Quark
+
+//$Header: /cvsroot/quark/runtime/addons/SOF/DataSOF.qrk,v 1.10 2008/05/21 18:15:08 cdunde Exp $
+// ----------- REVISION HISTORY ------------
+//$Log: DataSOF.qrk,v $
+//Revision 1.10  2008/05/21 18:15:08  cdunde
+//To add and\or activate Half-Life 2 functions: (all original code by Alexander)
+//1) to create extra Specifics setting handles for func_useableladder function (point0 & point1)
+//      func_breakable_glass and func_breakable_surf functions
+//      (lowerleft, upperleft, lowerright and upperright)
+//2) to draw special light entity lines for functions like light_spot that have the Specifics
+//      (angles, _cone, spotlightwidth and\or _inner_cone)
+//3) face displacement. Commented out at this time. believe bezier type code should be used instead.
+//
+//Revision 1.9  2008/05/14 20:38:56  cdunde
+//Fixed basic lighting in all games and a few other small typo errors.
+//
+//Revision 1.8  2008/03/28 19:12:47  cdunde
+//Cleaned up, fixed if needed and brought into sync with all QuArK addons.
+//
+//Revision 1.7  2008/02/27 00:22:34  danielpharos
+//Fix the contextual help files not being found anymore
+//
+//Revision 1.6  2005/10/15 01:00:27  cdunde
+//To reinstate headers and history
+//
+//Revision 1.3  2002/04/07 12:44:40  decker_dk
+//Purified texture-flags
+//
+//Revision 1.2  2001/03/20 21:55:32  decker_dk
+//Added log-header / misc.
+//
+//Revision 1.1  2001/02/11 11:31:42  decker_dk
+//Moved from addons directory
+//
+//Revision 1.14  2001/01/30 19:09:17  decker_dk
+//Texture-links for 1.06 pak2.pak supplied by Sniper-HQ@gmx.de
+//
+//Revision 1.13  2001/01/21 09:34:13  decker_dk
+//added item_control_flag and trigger_conquer (thanks to Sniper-HQ@gmx.de)
+//
+//Revision 1.12  2000/09/01 00:42:04  alexander
+//merged in tiglaris missing sky specific fix from rel6_1 branch
+//
+//Revision 1.11.2.1  2000/08/26 09:57:29  tiglari
+//added sky "ny" specific to worldspawn
+//
+//Revision 1.11  2000/07/04 22:49:04  alexander
+//improved some enumerated attributes like skin and style
+//
+//Revision 1.10  2000/07/04 20:18:31  alexander
+//added SOF specific default form for quakemenu (without extract textures)
+//
+//Revision 1.9  2000/07/02 00:56:41  alexander
+//added skynames in wordspawn form
+//
+//Revision 1.8  2000/06/08 19:33:47  alexander
+//added ainame tag to worldspawn
+//
+//Revision 1.7  2000/06/04 16:07:44  alexander
+//cvs header added
+//
+//
+//template 2000-07-04
+//
+
+{
+  QuArKProtected = "1"
+  Description = "Base Soldier of Fortune data"
+  Default forms.qctx =
+  {
+    // this form is used for some games when SpecialCustomQuakeMenu is set to the forms name
+    CustomQuakeMenuSOF:form =    // "customize Quake menu" box for games with bspc
+    {
+      Style = "7"
+      RunGame: = {Typ="X" Txt="finally..." Cap="Run the game" Hint="run the game when the map has been rebuilt"}
+      Pause: = {Typ="X" Cap="Console stay open" Hint="don't automatically close the console where all QBSP/VIS/LIGHT output has been written"}
+      sep: = {Typ="S"}
+      QBSP1: = {Typ="X" Txt="Rebuild the map" Cap="QBSP" Hint="this program builds the .bsp file from your map"}
+      QBSPCmd: = {
+        Typ="C"
+        Txt="...additional parameters"
+        Items="" $0D "-onlyents"
+        Hint="with -onlyents, read the previous version of the .bsp file and only update the entities"
+      }
+      sep: = {Typ="S"}
+      VIS1: = {Typ="X" Txt="Compute visibility list" Cap="VIS / QVIS3" Hint="required for large maps to run smoothly in Quake. For Quake 2, it is also required for QRAD3 to work properly"}
+      VISCmd: = {
+        Typ="C"
+        Txt="...additional parameters"
+        Items="" $0D "-fast" $0D "-level 0" $0D "-level 1" $0D "-level 2" $0D "-level 3" $0D "-level 4"
+        Hint="computation details, from fastest to compute to fastest in Quake"
+      }
+      sep: = {Typ="S"}
+      LIGHT1: = {Typ="X" Txt="Compute lights" Cap="LIGHT / QRAD3" Hint="computes lights and shadows from 'light' entities. Without this, your map looks full bright"}
+      LIGHTCmd: = {
+        Typ="C"
+        Txt="...additional parameters"
+        Items="" $0D "-extra"
+        Hint="-extra takes longer to compute but looks much better (it prevents 'stairsteps' between shadow and light)"
+      }
+      sep: = {Typ="S"}
+      BSPC1: = {Typ="X" Txt="Build AAS file for Bots" Cap="BSPC" Hint="Only needed if you want to play this map with bots"}
+      BSPCCmd: = {
+        Typ="C"
+        Txt="...additional parameters"
+        Items="" $0D "-noverbose" $0D "-bsp2aas"
+        Hint="noverbose removes the lot of detail messages"
+      }
+      sep: = {Typ="S"}
+      Shortcut: = {Typ="E" Txt="Keyboard shortcut" Hint="Keyboard shortcut as it appears in the menu (recommended: 'Ctrl+letter')"}
+    }
+  }
+  SOF setup.qctx =
+  {
+    Game = "SOF"
+    HTML = "index.html"
+    SFSkills = '256 512 1024 2048'
+    CreateFiles: =
+    {
+      liblist.gam =
+      {
+        Data = "game "$22"tmpQuArK"$220D0A"gamedll "$22"..\base\gamex86.dll"$22
+         $0D0A".\base\gamex86.dll"$0D0A
+      }
+    }
+    TextureFlags:form =     // a form for setting SOF texture flags on polyhedron faces
+    {
+      Style = "5"
+      Reset: =
+      {
+        Cap = "Reset to default"
+        Typ = "B"
+        Hint = "Reset all flags to the texture's default"
+        Delete: =
+        {
+          Flags = ""      // this button deletes these Specifics
+          Contents = ""
+          Value = ""
+        }
+      }
+
+      Sep:     ={Txt="" Typ="S"}  // separator
+
+      Contents:={Txt="Brush" Cap="solid"          Typ="X1"           Hint=""}
+      Contents:={Txt=""      Cap="window"         Typ="X2"           Hint="translucent (the opposite face of windows are not drawn)"}
+      Contents:={Txt=""      Cap="push/pull"      Typ="X4"           Hint=""}
+      Contents:={Txt=""      Cap="lava"           Typ="X8"           Hint="very damaging"}
+      Contents:={Txt=""      Cap="slime"          Typ="X16"          Hint="mildly damaging"}
+      Contents:={Txt=""      Cap="water"          Typ="X32"          Hint=""}
+      Contents:={Txt=""      Cap="mist"           Typ="X64"          Hint="non-solid window (Player can walk through it)"}
+      Contents:={Txt=""      Cap="shot"           Typ="X128"         Hint=""}
+      Contents:={Txt=""      Cap="fog"            Typ="X256"         Hint=""}
+      Contents:={Txt=""      Cap="playerclip"     Typ="X65536"       Hint=""}
+      Contents:={Txt=""      Cap="monsterclip"    Typ="X131072"      Hint="Stops monsters passing through"}
+      Contents:={Txt=""      Cap="origin"         Typ="X16777216"    Hint="use ascenter of a rotating entity"}
+      Contents:={Txt=""      Cap="monster"        Typ="X33554432"    Hint=""}
+      Contents:={Txt=""      Cap="corpse"         Typ="X67108864"    Hint=""}
+      Contents:={Txt=""      Cap="detail"         Typ="X134217728"   Hint="for small, detail brushes that QVIS3 can ignore"}
+      Contents:={Txt=""      Cap="translucent"    Typ="X268435456"   Hint=""}
+      Contents:={Txt=""      Cap="ladder"         Typ="X536870912"   Hint="Player can climb up this"}
+      Contents:={Txt=""      Cap="camnoblck"      Typ="X1073741824"  Hint=""}
+
+      Sep:     ={Txt="" Typ="S"}  // separator
+
+      Contents:={Txt="Flowing" Cap="current_0"      Typ="X262144"      Hint="Flowing water pushes to 0 west"}
+      Contents:={Txt=""        Cap="current_90"     Typ="X524288"      Hint="Flowing water pushes to 90 north"}
+      Contents:={Txt=""        Cap="current_180"    Typ="X1048576"     Hint="Flowing water pushes to 180 east"}
+      Contents:={Txt=""        Cap="current_270"    Typ="X2097152"     Hint="Flowing water pushes to 270 south"}
+      Contents:={Txt=""        Cap="current_up"     Typ="X4194304"     Hint="Flowing water pushes Upwards"}
+      Contents:={Txt=""        Cap="current_dn"     Typ="X8388608"     Hint="Flowing water pushes Down"}
+
+      Sep:     ={Txt="" Typ="S"}  // separator
+
+      Flags:   ={Txt="Face" Cap="light"             Typ="X1"         Hint="'value' is the light quantity"}
+      Flags:   ={Txt=""     Cap="slick"             Typ="X2"         Hint="slidy surface"}
+      Flags:   ={Txt=""     Cap="sky"               Typ="X4"         Hint="sky -can be used with 'light'"}
+      Flags:   ={Txt=""     Cap="warping"           Typ="X8"         Hint="turbulent water warp (for 64x64 textures only)"}
+      Flags:   ={Txt=""     Cap="trans33"           Typ="X16"        Hint="translucent, 33% (more see-through than 50%)"}
+      Flags:   ={Txt=""     Cap="trans66"           Typ="X32"        Hint="translucent, 66% (less see-through than 50%)"}
+      Flags:   ={Txt=""     Cap="flowing"           Typ="X64"        Hint="flow direction towards angle 0"}
+      Flags:   ={Txt=""     Cap="nodraw"            Typ="X128"       Hint="for clip textures and trigger textures"}
+      Flags:   ={Txt=""     Cap="hint"              Typ="X256"       Hint="tell QBSP3 to cut along this plane first"}
+      Flags:   ={Txt=""     Cap="skip"              Typ="X512"       Hint="completely ignore, allowing non-closed brushes"}
+      Flags:   ={Txt=""     Cap="no Detail"         Typ="X1024"      Hint=""}
+      Flags:   ={Txt=""     Cap="Alpha Tex"         Typ="X2048"      Hint=""}
+      Flags:   ={Txt=""     Cap="Anim Speed"        Typ="X4096"      Hint=""}
+      Flags:   ={Txt=""     Cap="Undulate"          Typ="X8192"      Hint=""}
+      Flags:   ={Txt=""     Cap="Sky Reflect"       Typ="X16384"     Hint=""}
+      Flags:   ={Txt=""     Cap="Map"               Typ="X32768"     Hint=""}
+      Flags:   ={Txt=""     Cap="Region"            Typ="X65536"     Hint=""}
+      Flags:   ={Txt=""     Cap="Simple Spherical"  Typ="X131072"    Hint=""}
+
+      Sep:     ={Txt="" Typ="S"}  // separator
+
+      Value:   ={Txt="Value" Typ="E" Hint="The meaning of this depends on the other flags"}
+    }
+  }
+  NewFiles.qtx =
+  {
+    ToolBox = "New files..."
+    Root = "SOF file types.qtxfolder"
+    SOF file types.qtxfolder =
+    {
+      Texture Wad.wad = { }
+    }
+  }
+  walltex:incl =
+  {
+    tex="armory/1_bathroom_men"
+  }
+  floortex:incl =
+  {
+    tex="armory/1_2_subfloor1"
+  }
+  ceiltex:incl =
+  {
+    tex="armory/sky"
+  }
+  NewMap:incl =
+  {
+    Game = "SOF"
+    Root = "worldspawn:b"
+    worldspawn:b =
+    {
+      sky = "ny"
+      Border walls:g =
+      {
+        East wall:p =
+        {
+          west:f =  { v = '256 0 272 256 -128 272 256 0 400'       walltex = ! }
+          east:f =  { v = '272 0 272 272 128 272 272 0 400'        walltex = ! }
+          south:f = { v = '432 -192 272 560 -192 272 432 -192 400' walltex = ! }
+          north:f = { v = '432 192 272 304 192 272 432 192 400'    walltex = ! }
+          down:f =  { v = '432 0 -96 560 0 -96 432 -128 -96'       walltex = ! }
+          up:f =    { v = '432 0 96 560 0 96 432 128 96'           walltex = ! }
+        }
+        West wall:p =
+        {
+          west:f =  { v = '-272 0 272 -272 -128 272 -272 0 400'    walltex = ! }
+          east:f =  { v = '-256 0 272 -256 128 272 -256 0 400'     walltex = ! }
+          south:f = { v = '432 -192 272 560 -192 272 432 -192 400' walltex = ! }
+          north:f = { v = '432 192 272 304 192 272 432 192 400'    walltex = ! }
+          down:f =  { v = '432 0 -96 560 0 -96 432 -128 -96'       walltex = ! }
+          up:f =    { v = '432 0 96 560 0 96 432 128 96'           walltex = ! }
+        }
+        North wall:p =
+        {
+          west:f =  { v = '-256 0 272 -256 -128 272 -256 0 400'    walltex = ! }
+          east:f =  { v = '256 0 272 256 128 272 256 0 400'        walltex = ! }
+          south:f = { v = '432 192 272 560 192 272 432 192 400'    walltex = ! }
+          north:f = { v = '432 208 272 304 208 272 432 208 400'    walltex = ! }
+          down:f =  { v = '432 0 -96 560 0 -96 432 -128 -96'       walltex = ! }
+          up:f =    { v = '432 0 96 560 0 96 432 128 96'           walltex = ! }
+        }
+        South wall:p =
+        {
+          west:f =  { v = '-256 0 272 -256 -128 272 -256 0 400'    walltex = ! }
+          east:f =  { v = '256 0 272 256 128 272 256 0 400'        walltex = ! }
+          south:f = { v = '432 -208 272 560 -208 272 432 -208 400' walltex = ! }
+          north:f = { v = '432 -192 272 304 -192 272 432 -192 400' walltex = ! }
+          down:f =  { v = '432 0 -96 560 0 -96 432 -128 -96'       walltex = ! }
+          up:f =    { v = '432 0 96 560 0 96 432 128 96'           walltex = ! }
+        }
+        Sky:p =
+        {
+          west:f =  { v = '-256 0 272 -256 -128 272 -256 0 400'    ceiltex = ! }
+          east:f =  { v = '256 0 272 256 128 272 256 0 400'        ceiltex = ! }
+          south:f = { v = '432 -192 272 560 -192 272 432 -192 400' ceiltex = ! }
+          north:f = { v = '432 192 272 304 192 272 432 192 400'    ceiltex = ! }
+          down:f =  { v = '432 0 96 560 0 96 432 -128 96'          ceiltex = ! }
+          up:f =    { v = '432 0 112 560 0 112 432 128 112'        ceiltex = ! }
+        }
+        Floor:p =
+        {
+          west:f =  { v = '-256 0 272 -256 -128 272 -256 0 400'    floortex = ! }
+          east:f =  { v = '256 0 272 256 128 272 256 0 400'        floortex = ! }
+          south:f = { v = '432 -192 272 560 -192 272 432 -192 400' floortex = ! }
+          north:f = { v = '432 192 272 304 192 272 432 192 400'    floortex = ! }
+          down:f =  { v = '432 0 -112 560 0 -112 432 -128 -112'    floortex = ! }
+          up:f =    { v = '432 0 -96 560 0 -96 432 128 -96'        floortex = ! }
+        }
+      }
+      info_player_start:e =
+      {
+        origin = "-144 0 -72"
+        angle = "360"
+      }
+      light:e =
+      {
+        _light = "255 255 255 300"
+        angles = "0 0 0"
+        origin = "0 0 0"
+      }
+    }
+  }
+}

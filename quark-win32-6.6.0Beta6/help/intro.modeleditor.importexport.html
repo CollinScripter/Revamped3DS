@@ -1,0 +1,1315 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"  "http://www.w3.org/TR/html4/loose.dtd">
+<html lang="en">
+<head>
+  <title>How to Write Model Importers & Exporters</title>
+  <meta name="Description" content="QuArK Information Database - Page: 1.6.3.&nbsp;How to Write Model Importers & Exporters">
+  <meta name="Keywords" content="QuArK InfoBase Quake Army Knife QRK QKM Python PY Map Editor Hexen Heretic Half-Life Sin Kingpin Soldier-of-Fortune Star-Trek-Voyager Elite-Force">
+  <link rel=stylesheet href="standard.css" type="text/css">
+</head>
+
+<body>
+<a name="__top__"></a>
+<table width="100%" border=0 cellspacing=0>
+  <tr>
+    <td width=213>
+      <a target="_blank" href="http://quark.sourceforge.net/"><img src="quarkicon.png" width=213 height=90 border=0 alt="Go to QuArK Web Site"></a>
+    </td>
+    <td width="70%" align=center>
+      <div class="topheadline">How to Write Model Importers & Exporters</div>
+      <div class="sm">Updated&nbsp;25 May 2011</div>
+    </td>
+    <td width="30%" valign=bottom nowrap>
+      Upper&nbsp;levels:<br>-&nbsp;<a href="index.html">QuArK&nbsp;Information&nbsp;Base</a><br>-&nbsp;<a href="intro.html">1.&nbsp;Introduction&nbsp;to&nbsp;QuArK</a><br>-&nbsp;<a href="intro.modeleditor.html">1.6.&nbsp;Model-editor&nbsp;in&nbsp;QuArK</a><br>
+    </td>
+  </tr>
+</table>
+<table width="100%" border=0 cellspacing=0>
+  <tr class="headline">
+    <td width="99%">
+      <p class="headline">&nbsp;1.6.3.&nbsp;How to Write Model Importers & Exporters</p>
+    </td>
+    <td width="1%" align=right nowrap>
+      &nbsp;[&nbsp;<span class="navenable"><a href="intro.modeleditor.model.html">Prev</a></span>&nbsp;-&nbsp;<span class="navenable"><a href="intro.modeleditor.html">Up</a></span>&nbsp;-&nbsp;<span class="navenable"><a href="intro.modeleditor.menu.html">Next</a></span>&nbsp;]&nbsp;
+    </td>
+  </tr>
+</table>
+<table border=0 width="100%" cellspacing=10><tr><td><p>The <a href="intro.modeleditor.model.html">QuArK's Model Structure</a> section covers more of the
+technical part, in detail, of QuArK's Model Structure for programming purposes and is very important to
+understand if you plan to do any code writing for the Model Editor.
+</p><p>This section is dedicated to the structure of a <a href="glossary.html#q">QuArK Internal Object</a> that makes up a
+<a href="glossary.html#m">model component</a> and how to create it when writing a Model Importer and Exporter plugins file.
+Occasionally references will be made to the Model Editor's Python code located in the quarkpy and
+plugins folders as well as areas in the <a href="src.quarkx.html">'QuarkX'</a> section of these Infobase docs.
+</p><p>It is highly recommended that you at least read the
+<a href="intro.modeleditor.model.html#components">Components of a Model</a> section before going on with
+this section to get a good understanding and visualization of a <a href="glossary.html#m">model component's</a> structure since
+that is what an importer will be creating and an exporter will be writing the model file from.
+</p><p>Although highly technical in understanding a components structure and Python coding, writing a QuArK Model
+Importer and Exporter is truly a rewarding learning experience. These sections are designed to help you
+gain that experience with a little effort, time and perseverance. We look forward to
+seeing your results.
+</p>
+</td></tr></table>
+<br>
+
+<table width="100%" border=0 cellspacing=0>
+  <tr class="headline">
+    <td width="100%">
+      <p class="subheadline">&nbsp;Index</p>
+    </td>
+  </tr>
+</table>
+<ul class="index">
+  <li>- <a href="#componentmakeup">What Makes Up a Model Component</a>&nbsp;<span class="added">(27 Jul 2009)</span>
+  <li>- <a href="#codeelements">Writing QuArK Elements into the Code</a>&nbsp;<span class="added">(09 Dec 2008)</span>
+  <li>- <a href="#codestart">Writing the Start Function of the Code</a>&nbsp;<span class="added">(25 May 2011)</span>
+  <li>- <a href="#codeprocessing">Writing the File Processing of the Code</a>&nbsp;<span class="added">(28 Jul 2008)</span>
+  <li>- <a href="#componentcreation">Creating a Component in the Code</a>&nbsp;<span class="added">(25 May 2011)</span>
+  <li>- <a href="#structmodule">About the Python Struct Module</a>&nbsp;<span class="added">(28 Jul 2008)</span>
+  <li>- <a href="#bones">Adding Bones & Their Structure</a>&nbsp;<span class="added">(25 May 2011)</span>
+  <li>- <a href="#specifics">Adding Specifics Page & Menu Items</a>&nbsp;<span class="added">(28 Jan 2009)</span>
+  <li>- <a href="#bonematrix">Bones & Their Matrixes</a>&nbsp;<span class="added">(10 Aug 2009)</span>
+</ul>
+<br>
+
+
+<a name="componentmakeup"></a>
+  <table width="100%" border=0 cellspacing=0>
+    <tr class="headline">
+      <td>
+        <p class="item">&nbsp;What Makes Up a Model Component</p>
+      </td>
+      <td align=right>
+        <font size=-2>cdunde&nbsp;-&nbsp;27 Jul 2009</font>
+      </td>
+      <td width="1%" align=right nowrap>
+        &nbsp;&nbsp;[&nbsp;<a href="#__top__">Top</a>&nbsp;]&nbsp;
+      </td>
+    </tr>
+  </table>
+  <table border=0 width="100%" cellspacing=10><tr><td>
+<p>A model is a single <b>QuArK Internal Object</b> that can consist of a single or multiple <a href="glossary.html#c">components</a>.
+The elements that make up a model are stored as &quot;<a href="glossary.html#k">key</a> <b>:</b> <a href="glossary.html#v">value</a>&quot; pairs of the QuArK Internal Object,
+where there is a <a href="glossary.html#k">key</a> name and a <a href="glossary.html#v">value</a> that goes along with that <a href="glossary.html#k">key</a> name.
+</p><p>Also, each of the &quot;key names&quot; CAN BE given a specific <a href="glossary.html#t">type</a> to distinguish what kind of element it is.<br>
+So an example of a <a href="glossary.html#k">key</a>, its <a href="glossary.html#t">type</a> and its related <a href="glossary.html#v">value</a> would look like this:
+<div class="doccode"><pre>{'teeth:mc': &lt;QuArK Internal object at 0x00CC1E4C&gt;}</pre></div>
+</p><p>The <a href="glossary.html#k">key</a> name is teeth, its <a href="glossary.html#t">type</a> mc (model component) and its <a href="glossary.html#v">value</a> is another QuArK Internal Object
+containing its <a href="glossary.html#s">subitems</a>, <a href="glossary.html#d">dictspec</a> items and <a href="glossary.html#d">dictitems</a>.<br>
+This method of using &quot;<a href="glossary.html#k">key</a><b>:</b><a href="glossary.html#v">value</a>&quot; pairs runs all the way through as a model's <a href="glossary.html#c">component(s)</a>
+elements are broken down.
+</p><p><b><a href="glossary.html#s">subitems</a> :</b> This is a list of <b>QuArK Internal Objects</b> that make up a component and controls the order
+that they are displayed in the <a href="intro.modeleditor.overview.html#overview">editor's tree-view</a>.<br>
+They consist of the <a href="glossary.html#s">Skins</a> group (its texture images), <a href="glossary.html#f">Frames</a> group (its animation\<a href="glossary.html#v">vertexes</a> frames)
+and, <a href="glossary.html#s">SDO</a> group (SystemDataObject) which is not really used at this time but still needs to be created.
+</p><p>A <a href="intro.modeleditor.importexport.html#bones">Skeleton</a> group (its bones if any) is created outside of,and shaired by,
+the components. This group is covered in detail <a href="intro.modeleditor.importexport.html#bones">further below</a>.
+</p><p>The creation of the <a href="glossary.html#s">subitems</a> list is not something you need to be concerned about when writing an
+<a href="glossary.html#i">importer or exporter file</a>.<br>
+QuArK takes care of that internally using the component's <a href="glossary.html#d">dictitems</a> below.
+</p><p><a name="dictitems1"></a>
+<b><a href="glossary.html#d">dictitems</a> :</b> These are other <a href="glossary.html#d">dictionary</a> items within the component that make it up, they are the
+same items as its <a href="glossary.html#s">subitems</a> and each one is a <a href="glossary.html#k">key</a> <b>:</b> <a href="glossary.html#v">value</a> pair that an <a href="glossary.html#i">importer</a> file
+will use to create a <a href="glossary.html#q">QuArK editor component</a>, for example:
+<div class="doccode"><pre>
+{
+ 'SDO:sdo': <QuArK Internal object at 0x0165FE7C>, # stands for SystemDataObject
+ 'Skins:sg': <QuArK Internal object at 0x0166D48C>,
+ 'Frames:fg': <QuArK Internal object at 0x0166D864>
+}
+</pre></div>
+Notice how these items are not in any particular order. Because they are <a href="glossary.html#d">dictionary list</a> they do not need to be.
+We use their <a href="glossary.html#k">key</a> name to get what goes along with them, not the order that they are in the <a href="glossary.html#d">dictitems list</a>.
+Each of these <a href="glossary.html#d">dictitems</a> brake down into their own <a href="glossary.html#d">dictspecs</a> items, but <a href="#dictitems2">more on that later<a>.
+</p><p><a name="dictspec1"></a>
+<b><a href="glossary.html#d">dictspec items</a> :</b> These are <a href="glossary.html#k">key</a> <b>:</b> <a href="glossary.html#v">value</a> item pairs that pertain to the component and
+its <a href="glossary.html#s">subitems</a> as a whole and are only QuArK editor related.<br>
+They are individual dictionary items that contain settings for that component. Some of these settings are used and reset
+by simply moving things around in the editor, such as <a href="glossary.html#v">vertexes</a>, while others are used to fill in the values
+on the <a href="intro.modeleditor.dataforms.html#specsargsview">editor's Specifics/Args</a> page
+where they can be viewed and\or reset there. The <a href="glossary.html#i">importer</a> file will
+create these items (<a href="#dictspec2">covered in detail later<a>), for example:<br>
+<u>dictspec items of a model component</u> :
+<div class="doccode"><pre>{'skinsize': (128.0, 64.0), 'Tris': '\x00\x00\x7f\...(a bunch more), 'show': '\x01'}</pre></div>
+<a href="glossary.html#'">'skinsize'</a> is the size of a component's first skin image or a default size of <a href="glossary.html#(">(256, 256)</a> can be used if
+there are no skins.<br>
+<a href="glossary.html#'">'show'</a> Components can be <a href="glossary.html#h">Hidden</a> in the editor (not seen) when this is set to <a href="glossary.html#'">'\x00'</a> and visible
+when set to <a href="glossary.html#'">'\x01'</a>, so it should always be set to the latter.<br>
+<a href="glossary.html#'">'Tris'</a> This is the primary one we will be concerned with when writing a <a href="glossary.html#m">model importer</a> or <a href="glossary.html#e">exporter</a> file.<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Its <a href="glossary.html#v">value</a> is in <a href="glossary.html#b">binary</a> code
+and needs to remain so to work in QuArK.
+Think of this code as one big list of smaller, individual list.<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Each of which contain three items,
+a <a href="glossary.html#v">vert_index</a> (vertex index number), a <a href="glossary.html#u">U</a> texture position value and a <a href="glossary.html#v">V</a> texture position value.<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;The <a href="glossary.html#u">U, V</a> values give the flat
+<a href="glossary.html#numbers">2D</a> x , y position of that vertex on the model's skin (in <a href="glossary.html#p">pixels</a>) and the <a href="glossary.html#v">vert_index</a> points to that vertex.<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Each vertex can have more then one
+<a href="glossary.html#u">U, V</a> value and this is a key point to remember. But more will be covered on that later.
+</p><p><u>dictspec items of a frame</u> :
+<div class="doccode"><pre>{'Vertices': (-1.859375, 31.234375, ...(a bunch more), 54.078125)}</pre></div>
+<a href="glossary.html#'">'Vertices'</a> This is a continuous list of float values that give the <a href="glossary.html#x">x,y,z position</a> for each vertex of a model's
+component mesh. QuArK's internal code breaks these into groups of three to accomplish this, and of course it takes three
+vertexes, most of which are shared, to make a single triangle of a models mesh.
+</p><p>So there you have it, the breakdown of a component...which can be a bit bewildering at first, but just remember,<br>
+you have a <a href="glossary.html#d">dictionary</a> inside a <a href="glossary.html#d">dictionary</a> inside a <a href="glossary.html#d">dictionary</a>.... 
+and just about every <a href="glossary.html#d">dictionary</a> has <a href="glossary.html#d">dictspec</a> items that pertain directly to it.
+</p><p>Now for their relationship between one another in making up a QuArK model component in a <a href="glossary.html#m">model importer</a> file
+and used for the <a href="glossary.html#e">exporter</a> file as well.<br>
+By the way...don't make an importer without an exporter to go along with it...that can be extremely frustrating to others.
+</p><p>All of these files are in the <a href="glossary.html#q">QuArK\plugins</a> folder and are
+written in <a href="glossary.html#p">Python</a>, look at <a href="glossary.html#i">ie_md2_import.py</a> as a guide. Also, all of them <b>MUST</b> start with <a href="glossary.html#i">ie_</a> for their name.<br>
+That is used to identify them for file loading purposes when QuArK's Model Editor is started up.
+Otherwise they will not show up on the <a href="glossary.html#i">Importer \ Exporter</a> menu.
+</p><p>As we go through each item of a component, its title is shown the same way it would be written in <a href="glossary.html#p">Python</a>
+code to gain access to it in an <a href="glossary.html#i">importer</a> or <a href="glossary.html#e">exporter</a> file.
+</p><p><a name="dictitems2"></a>
+<b><u><a href="#dictitems1">Component.dictitems :</a></u></b>
+</p><p><img border=0 align=right src="intro.modeleditor.importexport.componentmakeup1.png">
+<a href="glossary.html#c">Component.dictitems['Frames:fg'].dictspec :</a><br>
+The only item here is <a href="glossary.html#{">{'type': '\x01'}</a> which must be written to the frames group as shown.<br>
+<a href="glossary.html#<"><SMALL>Component.dictitems['Frames:fg'].dictspec['type'] = '\x01'</SMALL></a><br>
+This is its group type which is used by QuArK's internal source code to identify and handle it.
+</p><p><a href="glossary.html#c">Component.dictitems['Frames:fg'].dictitems :</a>
+These are individual dictionary items, one for each frame in the frame group, for example:<br>
+<a href="glossary.html#<"><SMALL>'Frame 1:mf': &lt;QuArK Internal object at 0x016827FC></SMALL></a><br>
+Each <a href="glossary.html#f">frame</a> has its own <a href="glossary.html#d">dictspec</a> items which are <a href="glossary.html#'">'index'</a> and <a href="glossary.html#'">'Vertices'</a>.<br>
+<b>index</b> is its position in the frames group, ex:<br>
+<a href="glossary.html#<"><b>(0.0,)</b></a> the comma behind it means it is a <a href="glossary.html#t">tuple</a>.<br>
+<b>Vertices</b> is a list of all its <a href="glossary.html#numbers">3D</a> vertex positions.<br>
+Each vertex position has an <b>x, y and z</b> float value, ex: <a href="glossary.html#-">-1.859375</a> (positive or negative)<br>
+and since it is the first item in this list its <a href="glossary.html#v">vert_index</a> would be <b><a href="glossary.html#numbers">0</b></a> shown as <b>Vertex 0</b>.<br>
+These items are indicated in <font color="RED">red</font> to the right.
+</p><p>Even though this is a <a href="glossary.html#c">continuous list</a>, QuArK knows to brake them up into groups of three (x,y,z) for each vertex.
+</p><p>So all of a frames vertexes make up the <a href="glossary.html#p">points</a> in 3D space that give the model <a href="glossary.html#m">mesh</a> its shape.
+And it takes three of these vertexes to make a single <a href="glossary.html#f">face</a> of the <a href="glossary.html#m">mesh</a>, even though most vertexes are what
+we call <a href="glossary.html#c">common vertexes</a>, meaning that they are shared with other <a href="glossary.html#f">faces</a> of the <a href="glossary.html#m">mesh</a>.
+That's what holds a <a href="glossary.html#m">mesh</a> together as one complete unit. Other wise you could pull it apart into individual
+<a href="glossary.html#f">faces</a> or pieces...not a good thing.
+</p><p><a name="footnote1a"></a>
+If a model has more then one <a href="glossary.html#f">frame</a>, these vertex positions change from frame to frame, thus creating its
+animation movement, but that can also be handled using other files and methods from one model format to another.<br>
+<a href="#footnote1b">(see added footnote 1 below for more info)</a>
+</p><p><a name="tris1"></a>
+Even though the frame <a href="glossary.html#v">vertexes</a> provide the mesh's <a href="glossary.html#numbers">3D points in space</a>, the lines between those points
+(or <a href="glossary.html#v">vertexes</a>) still need to be drawn and a working relationship between them still needs to be connected
+from one to the other and the other... to create a completed and joined mesh.
+That is done by the <a href="glossary.html#c">Component.dictspec{'Tris']</a> item.
+</p><p><a name="dictspec2"></a>
+<b><u><a href="#dictspec1">Component.dictspec :</a></u></b>
+</p><p><a href="glossary.html#c">Component.dictspec{'Tris']</a><br>
+As indicated by the <font color="BLUE">blue line</font> to the right,<br>
+(put your mouse over these for their results)<br>
+the <a href="" title="The entire list of triangle faces shown to the right __/ ">'Tris'</a> is one big list of individual sub-list and each sub-list consist of three items,
+one for each vertex of a face (or triangle), and each vertex consist of three items
+also. 1) vert_index, 2) U texture position and 3) V texture position. Follow the <font color="BLUE">blue line</font>
+to see how each vert_index links to its actual <b>x,y,z</b> 3D point position in a <a href="" title=" \__ The entire Models's 'frame vertices'&#10;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;list shown further above">frame['Vertices']</a> list (covered above)<br>
+This is how the two lists link to one another. When refering to the <a href="" title=" \__ The entire list of triangle faces shown above">'Tris'</a> a <a href="" title="a triangle index number">tri_index</a>
+(triangle index) number is used that relates to its <a href="" title="where it's located in the list,&#10;starting from position 0 (zero)">group's poistion</a> in the <a href="" title=" \__ The entire list of triangle faces shown above">'Tris'</a> list.
+</p><p>So the first triangle (<a href="" title=" tri_index 0 ">tri_index</a>) in the list would be:
+<a href="" title=" tri_index 0 = ((2, 83, 105), (1, 216, 78), (0, 216 303)) "><SMALL>Component.dictspec['Tris'][0]</SMALL></a>
+its first vertex: <a href="" title=" vert_index 0 = (2, 83, 105) "><SMALL>Component.dictspec['Tris'][0][0]</SMALL></a><br>
+and that vertex's vert_index: <a href="" title="vert_index 0 = 2 &#10;frame vertices 2 = -1.5, 31.65625, 53.265625"><SMALL>Component.dictspec['Tris'][0][0][0]</SMALL></a>
+its <b><a href="" title=" U = 83 ">U</a></b> value: <a href="" title=" U = 83 "><SMALL>Component.dictspec['Tris'][0][0][1]</SMALL></a> and
+its <b><a href="" title=" V = 105 ">V</a></b> value:
+<a href="" title=" V = 105 "><SMALL>Component.dictspec['Tris'][0][0][2]</SMALL></a> that's it.<br>
+The second vert_index would be: <a href="" title="vert_index 1 = (1, 216, 78) &#10;frame vertices 1 = -1.171875, 29.25, 52.75"><SMALL>Component.dictspec['Tris'][0][1]</SMALL></a> and
+the third vert_index would be: <a href="" title="vert_index 2 = (0, 216 303) &#10;frame vertices 0 = -1.859375, 31.234375, 52.65625"><SMALL>Component.dictspec['Tris'][0][2]</SMALL></a>.
+</p><p>Also notice how each vert_index (vertex) can have more then one U,V texture position
+(indicated by the <font color="GREEN">green</font> and <font color="FUSHA">fusha</font> lines).<br>
+It is this vertex multiple uv capability system that allows the skinning of model sections
+on different <a href="glossary.html#t">tiles</a> (repeated) images of a components skin texture. So even though
+a model's component mesh is one combined object, its texturing can be made up of many sections,
+either stacked on top of one another or spread out over many copies of its texture making it much
+easer to get to and work with those areas.
+</p><p>================================================ Footnotes ==================================================
+</p><p><a name="footnote1b"><u>footnote 1</u>: Model Animation Methods</a><br>
+As <a href="#footnote1a">mentioned above</a>, model formats can use different methods of animating a model.
+For example, <b>Quake 2</b> <a href="glossary.html#fileext">.md2</a> models use <a href="glossary.html#f">frames</a>, like we have been covering, for their movement,
+animation, while <b>Quake 4</b> models use <a href="glossary.html#l">Lightwave model formats</a> which are <a href="glossary.html#fileext">.lwo, .md5mesh</a> and
+<a href="glossary.html#fileext">.md5anim</a> files. The <a href="glossary.html#fileext">.lwo</a> is a <a href="glossary.html#s">static</a> model, meaning it only has one <a href="glossary.html#f">frame</a> and it does
+not have any animation movement to it. While the <a href="glossary.html#fileext">.md5mesh</a> and <a href="glossary.html#fileext">.md5anim</a> files (which are text files)
+are used together to create a moving model. The <a href="glossary.html#fileext">.md5mesh</a> is a <a href="glossary.html#s">static</a> model that gives
+the model its base shape and <a href="intro.modeleditor.editelements.html#bones">Bones System</a> hierarchy.
+The <a href="glossary.html#fileext">.md5anim</a> file gives the vertex movement for its animation using that <a href="intro.modeleditor.editelements.html#bones">Bones System</a>.
+It gets a bit more complicated then that as to how they work exactly, but that is the basic method used for that format.</p>
+  </td></tr></table>
+  <br>
+
+<a name="codeelements"></a>
+  <table width="100%" border=0 cellspacing=0>
+    <tr class="headline">
+      <td>
+        <p class="item">&nbsp;Writing QuArK Elements into the Code</p>
+      </td>
+      <td align=right>
+        <font size=-2>cdunde&nbsp;-&nbsp;09 Dec 2008</font>
+      </td>
+      <td width="1%" align=right nowrap>
+        &nbsp;&nbsp;[&nbsp;<a href="#__top__">Top</a>&nbsp;]&nbsp;
+      </td>
+    </tr>
+  </table>
+  <table border=0 width="100%" cellspacing=10><tr><td>
+<p>First off, a little bit of encouragement. When I first started developing for QuArK I knew absolutely nothing
+about Python code writing, not to mention C or C++ as well. So if you know anything about these languages
+at all, you are far ahead from where I started. And Python is one of the easiest languages for you to learn.
+</p><p>To begin with, there a numbers of ways to get started. You can look for model importer\exporter files that
+someone else has already written to go by as a guide<br>
+(no I'm not suggesting that you steal code) or you can look for them written in other computer languages
+or you can start from scratch using a model's format doc.<br>
+No matter the choice, I highly recommend that you obtain a copy of the model's format documentation as a
+guide to go by as you create your own code because many times other files may have parts that have been
+left out, skipped over or completely incorrect to start with. The format doc will help you spot these
+kinds of situations and avoid a lot of wasted time. Conversely, having other code to go by as a guide,
+can help in understanding parts of the documentation when needed.
+</p><p>The example that I am going to be working from is the Quake 2 .md2 model importer file named <a href="glossary.html#i">ie_md2_import.py</a>
+which is located in your <a href="glossary.html#q">QuArK\plugins</a> folder, so you should open that file now with any text editor as well.
+We won't be covering everything in that file, just certain points as needed.
+</p><p><a name="fileheader"></a>
+<u><b><i>File Header</i>&nbsp;</b></u> :<br>
+At the very top and bottom of you file you should setup its version control code. This is used by us at QuArK when
+you send us a copy to go into the Official Set for distribution with furture releases....you ARE going to share
+it with us aren't you? At the very top the header would be as shown below:
+<div class="doccode"><pre>
+#$Header: /cvsroot/quark/infobase/intro/modeleditor/importexport/codeelements.txt,v 1.2 2008/12/10 03:02:36 cdunde Exp $
+
+
+Info = {
+   &quot;plug-in&quot;:       &quot;ie_md2_importer&quot;,
+   &quot;desc&quot;:          &quot;This script imports a Quake 2 file (MD2), textures, and animations into QuArK for editing.
+                     Original code from Blender, md2_import.py, author - Bob Holcomb.&quot;,
+   &quot;date&quot;:          &quot;June 3 2008&quot;,
+   &quot;author&quot;:        &quot;cdunde &amp; DanielPharos&quot;,
+   &quot;author e-mail&quot;: &quot;cdunde@sbcglobal.net&quot;,
+   &quot;quark&quot;:         &quot;Version 6.6.0 Beta 2&quot; }
+</pre></div>
+What you enter for the <a href="glossary.html#i">Info</a> is up to you but we would like to know who made it and any acknowledgements to
+others that might have helped or were authors of files you used as a guide, that's only fair. Then at the very
+bottom add the following code for your files history:
+<div class="doccode"><pre>
+# ----------- REVISION HISTORY ------------
+#
+# $Log: codeelements.txt,v $
+# Revision 1.2  2008/12/10 03:02:36  cdunde
+# Update
+#
+# Revision 1.1  2008/07/28 22:40:28  cdunde
+# Update
+#
+#
+</pre></div>
+The file name <b>MUST</b> start with <b>ie_</b> or it will not show up on the QuArK Importer\Exporter menu,
+that is what QuArK uses to identify and load it by. Also, to be consistent with other files please use its
+file type, in this case <b>md2</b>, and whether it is an importer or exporter for the rest of its name and
+please make two separate files, one for each operation. That way users can tell at a glance that both operations
+exist and it's easer for any possible future additions and changes.
+</p><p><a name="fileimports"></a>
+<u><b><i>File Imports</i>&nbsp;</b></u> :<br>
+The very next thing we need to do is to bring in (<a href="glossary.html#i">import</a>) other files and <a href="glossary.html#p">Python Modules</a> that
+we will be using through out this file. Below is the code which does that.
+<div class="doccode"><pre>
+import struct, sys, os, time, operator
+import quarkx
+from types import *
+import ie_utils
+from ie_utils import tobj
+from quarkpy.qdictionnary import Strings
+</pre></div>
+You will see how these are used later on as we go through the code writing process from section to section and
+at which time they will be covered as needed.
+</p><p><a name="logging"></a>
+<u><b><i>Logging Implementation</i>&nbsp;</b></u> :<br>
+QuArK has a built in model importer\exporter logging system that should be added to your file.
+By adding this code, a log can be created in various ways, or not at all, depending on the settings you select in the
+<a href="intro.configuration.model.html#options">Configuration... &gt; Model &gt; Options &gt; Importers \ Exporters</a>
+section. One point about logging, the more that you add the slower the operation of importing or exporting can
+become, so try to keep it to valid and critical areas only without repeating data logging. When the logging
+option is turned off it has very little effect on the operations.
+</p><p>The working code for this system is in the <a href="glossary.html#q">QuArK\plugins\ie_utils.py</a> file, where other useful functions and
+utilities should be added that strictly relate to the importers and exporters only.
+Now, for adding the code, this is also shown in the <a href="glossary.html#q">QuArK\plugins\ie_utils.py</a> file. Be sure to change the
+names in step (1) for <a href="glossary.html#e">exportername</a> and <a href="glossary.html#t">textlog</a> to your file name and type.
+<div class="doccode"><pre>
+1) To add logging to an importer or exporter put these lines near the top, under the file header, in this order:
+import os, time, operator
+import ie_utils
+from ie_utils import tobj
+
+# Globals
+logging = 0
+exportername = &quot;ie_md2_export.py&quot; (or importername = &quot;ie_md2_import.py&quot; depending on which one you're doing)
+textlog = &quot;md2_ie_log.txt&quot;
+
+2) Then add needed globals and calls to start and end the logging in your main file function like this:
+def save_md2(filename):
+    global tobj, logging, exportername, textlog ### Needed globals.
+    ### Next line starts the logging.
+    ### Use &quot;EX&quot; for exporter text, &quot;IM&quot; for importer text.
+    logging, tobj, starttime = ie_utils.default_start_logging(exportername, textlog, filename, &quot;EX&quot;)
+
+    ### Line below here saves the model (just for this example---DO NOT COPY NEXT LINE).
+    fill_md2(md2, component)
+
+    ### Next line is optional, it adds additional text at the bottom of the default message,
+    ### with a blank line between them. If none then just exclude it from the function arguments below.
+    add_to_message = &quot;Any used skin textures that are not a .pcx\nwill need to be created to go with the model&quot;
+    ### Next line ends the logging.
+    ### Use &quot;EX&quot; for exporter text, &quot;IM&quot; for importer text.
+    ie_utils.default_end_logging(filename, &quot;EX&quot;, starttime, add_to_message)
+
+
+3) Then in any function you want logging declair the global and call for tobj like this: (all items must be strings)
+def fill_md2(md2, component):
+    global tobj
+    if logging == 1:
+        tobj.logcon (&quot;#####################################################################&quot;)
+        tobj.logcon (&quot;Skins group data: &quot; + str(md2.num_skins) + &quot; skins&quot;)
+        tobj.logcon (&quot;#####################################################################&quot;)
+        tobj.logcon (&quot;&quot;)
+</pre></div>
+You can use <a href="glossary.html#t">tobj.logcon</a> for a word search in any of the importer\exporter files to see how step (3) is applied.
+</p><p><a name="pathchecking"></a>
+<u><b><i>Path Checking Implementation</i>&nbsp;</b></u> :<br>
+Now to start the working part of your file. This is another function which is also located in the
+<a href="glossary.html#q">QuArK\plugins\ie_utils.py</a> file. It's purpose is to test for a proper model path, meaning that games setup
+what you would call a folder path hierarchy for their files to keep things organized and working properly in the game.
+Some models store this information within the model file itself especially when it comes to the skin texture(s) they use.
+So it is always best to try and work under these same conditions when importing or exporting a model file.
+</p><p>For example, say you have the game setup for <a href="glossary.html#q">Quake 2</a>, its full path to the actual game files folder might be
+<a href="glossary.html#c">C:\Program Files\Quake2\baseq2</a>. This is where you would find the <a href="glossary.html#fileext">.pak</a> files for <a href="glossary.html#q">Quake 2</a>.
+If you open a couple of those you would see more folders inside them shuch as <a href="glossary.html#m">models/monsters/boss1</a>
+and finally the actual model file, <a href="glossary.html#t">tris.md2</a>, inside that last folder. The <a href="glossary.html#v">valid path</a> for that model
+would then be what is shown within the <a href="glossary.html#fileext">.pak</a> file itself <a href="glossary.html#m">models/monsters/boss1</a> and that is all that
+this function is checking for. To import or export a modle these folders <b>MUST</b> be extracted, copied, from the
+<a href="glossary.html#fileext">.pak</a> file to the game folder exactly the same way they are arranged in the <a href="glossary.html#fileext">.pak</a> file or things may not
+work right later. Therefore, you can have, what I call a dummy folder, anywhere else on your drive and do the same
+extraction to that folder to work from, but again using their same exact folder path hierarchy.
+This helps to ensure that things should work fine later.
+</p><p>If you already did the <a href="#logging">Logging Implementation</a> above you do not need to do step (1) here.
+<div class="doccode"><pre>
+1) To add path checking to an importer or exporter put this line near the top:
+import ie_utils
+
+2) Call for the path check like this:
+def loadmodel(root, filename, gamename, nomessage=0):
+    ### First we test for a valid (proper) model path.
+    basepath = ie_utils.validpath(filename)
+    if basepath is None:
+        return
+</pre></div>
+If you look near the bottom of the <a href="glossary.html#i">ie_md2_import.py</a> file you will see the above <a href="glossary.html#d">def loadmodel</a> code
+along with some more code in that function. So now with the <a href="#fileheader">File Header</a> code in, <a href="#logging">Logging Implementation</a>
+and <a href="#pathchecking">Path Checking Implementation</a> from above completed, we can now go on to the actual importing code below.
+</p>
+  </td></tr></table>
+  <br>
+
+<a name="codestart"></a>
+  <table width="100%" border=0 cellspacing=0>
+    <tr class="headline">
+      <td>
+        <p class="item">&nbsp;Writing the Start Function of the Code</p>
+      </td>
+      <td align=right>
+        <font size=-2>cdunde&nbsp;-&nbsp;25 May 2011</font>
+      </td>
+      <td width="1%" align=right nowrap>
+        &nbsp;&nbsp;[&nbsp;<a href="#__top__">Top</a>&nbsp;]&nbsp;
+      </td>
+    </tr>
+  </table>
+  <table border=0 width="100%" cellspacing=10><tr><td>
+<p>Now is a good time to bring up some general code writing points that apply to Python and probably some other
+programming languages as well. Basically speaking, you do not always start at the top of your file and work your
+way down, but the other way around, from the bottom to the top.
+</p><p>As far as Python goes, there are two general types of code writing, <a href="glossary.html#c">classes</a>, which we will cover later, and
+<a href="glossary.html#s">standard functions</a>. <a href="glossary.html#c">classes</a> can pretty much be placed anywhere in your file that you wish.
+That is because they have their own functions written within them, which makes them more placement independent and
+a broader type of operation handling item.
+</p><p>While <a href="glossary.html#s">standard functions</a> must be placed above any other functions that use them, or things just won't happen,
+except for some error messages. When you start writing your file you really don't know all the functions that you
+might need until you reach a point where you half to create some, at which case you'll want to always place them
+above the one(s) that will be using them so that they get <a href="glossary.html#d">defined</a>, or loaded, first.
+So with that out of the way, lets go on from where we left off.
+</p><p>As mentioned just above and looking near the bottom of the <a href="glossary.html#i">ie_md2_import.py</a> file you will see the
+<a href="glossary.html#d">def loadmodel</a> code function. This is the starting, or entry, point into your file to perform its operation,
+that of importing a <a href="glossary.html#q">Quake 2 .md2 model file</a> that can be edited in
+<a href="intro.modeleditor.html">QuArK's Model Editor</a>. The same would apply to an exporter.
+</p><p>This is where another function will be called to actually open the <a href="glossary.html#fileext">.md2 model file</a>, read it and start
+processing it. But before we get to that part, there are a few other things that need to be done here.
+so lets breakdown the things that make up this function and what they are doing first.
+</p><p><a name="loadmodel1"></a>
+<u><b><i>Function Definition</i>&nbsp;</b></u> :
+<div class="doccode"><pre>
+def loadmodel(root, filename, gamename, nomessage=0):
+</pre></div>
+This is where a function is <a href="glossary.html#d">defined</a>, comes alive, and usually has <a href="glossary.html#a">arguments</a> that go along with it.
+These <a href="glossary.html#a">arguments</a> are things that are being sent to the function to work with and\or do special things within
+the function, like setting optional items within the function to perform or not perform. When you see something like
+the <a href="glossary.html#n">nomessage=0</a> argument, that means it is being set to a default value of zero so if you don't want to
+change that to another value then you don't need to send that argument when calling this function from another function.
+</p><p><u><b><i>Function Description</i>&nbsp;</b></u> :<br>
+Next we have what this function is and does...sometimes. Unless it's very obvious, I recommend this be done. It saves
+people a lot of head scratching time.
+</p><p><a name="progressbars1"></a>
+<u><b><i>Globals &amp; Imports</i>&nbsp;</b></u> :<br>
+Some functions need more then just what is being sent to them using their <a href="glossary.html#a">arguments</a>. Unless a <a href="glossary.html#g">global's</a>
+value is going to be changed within the function, it is not necessary to bring them in like this, they can still
+be called by their name to get whatever they represent. But if they are then
+they are the first thing that should be written to the function. <a href="glossary.html#g">Globals</a> are things that are defined, set,
+elsewhere like at the beginning of a file or even another file. They are used to pass their settings from one
+function to another and\or to set their values, or what else they may be, within a function for passing to others.
+In this example we are bring in a <a href="src.quarkx.html#moduleprogressbar">progressbar</a>,
+<a href="#progressbars2">(which is covered in the footnotes at the end of this section)</a> and all the logging
+<a href="glossary.html#g">globals</a> because they are needed this way for the logging to work.
+</p><p>Next we bring in any <a href="glossary.html#i">imports</a> that are needed, in this case the <a href="glossary.html#m">mdleditor</a> file to define which editor
+we are working with. If an imported file is in <a href="glossary.html#a">another folder location</a> then where this file will be kept,
+which it is, then the folder's name needs to proceed the files name, its file type <a href="glossary.html#fileext">.py</a> is not required.
+This is so that Python can locate the file and import it, meaning its functions are available to use in this function.
+Most <a href="glossary.html#i">imports</a> are done at the very top of a file, but if only one or two functions use the file then it might
+be imported within those functions. Other times things will not work right unless they are imported within the function,
+so experiment with this.
+<div class="doccode"><pre>
+global progressbar, tobj, logging, importername, textlog, Strings
+import quarkpy.mdleditor
+editor = quarkpy.mdleditor.mdleditor
+</pre></div>
+</p><p><u><b><i>The Function's Body</i>&nbsp;</b></u> :<br>
+This is where the function does its job. First we test to see if the <a href="glossary.html#b">basepath</a> of the file we will be importing
+is valid or not using the <a href="glossary.html#i">ie_utils.validpath</a> function which
+<a href="intro.modeleditor.importexport.html#pathchecking">we covered earlier</a> and should have already been written
+to the importer file we are making.
+</p><p>Next comes the call to start the logging, notice how that function is <a href="glossary.html#r">returning</a> other items. Those will be
+used latter in this function to stop the logging.
+</p><p><a name="import_md2_model1"></a>
+Then comes the actual importing function <a href="#import_md2_model2">import_md2_model</a>
+which will be <a href="glossary.html#r">returning</a> the <a href="glossary.html#c">Component</a> that we will be using next to finish the importation of the model.
+</p><p>Once the model has been imported it still needs to be <a href="glossary.html#d">dropped</a> into the editor, that is what the
+<a href="src.quarkx.html#moduleundo">undo function</a>undo function</a>
+part of our code does. The part dealing with <a href="glossary.html#c">compframe</a> is assigning each frame a <a href="glossary.html#p">parent</a> or upper
+level. Without this process, you would not be able to relocate the order of any frames within their component.
+So it is vital that this code be included in every import\export file made.
+</p><p>Next we close the <a href="#progressbars2">progressbar</a> since we are done with it at this point
+and we make the call to <a href="glossary.html#e">end any logging</a> that might be going on.<br>
+<b>Notice</b> here how we are now using the <a href="glossary.html#a">arguments</a> returned from above, when we called to
+<a href="glossary.html#s">start</a> the logging function. This is a perfect example to demonstrate how you can pass things around (<a href="glossary.html#a">arguments</a>)
+from one function to another and even have things <a href="glossary.html#r">returned</a> to be used latter on. Like a
+<a href="http://www.wham-o.com/default.cfm?page=ViewProducts&Category=2">Frisbee</a> with a lot of players.
+</p><p><a name="undo1"></a>
+Finally we call the <a href="src.quarkx.html#moduleundo">editor.ok</a> of the
+<a href="src.quarkx.html#moduleundo">undo function</a>, set the current component skin (for proper selection)
+and our job is done....the model should now be imported. (SUCCESS ! ...well at least once we finish.)
+</p><p>One last point here, have you noticed how you have also been using some of the
+<a href="src.quarkx.html#__top__">quarkx functions</a> in your file to get the job done? You can do this if you have
+also written a <a href="glossary.html#i">import quarkx</a> call at the top of your file....which you have. This demonstrates how you can use
+functions from all over the place to help you do the work and, as you will see soon, even Python functions and <a href="glossary.html#m">modules</a>
+which are whole sections of added functions for each <a href="glossary.html#m">module</a>.
+<div class="doccode"><pre>
+(not all code lines are being shown here ..... represent lines left out, see the <b>ie_md2_import.py</b> file for those lines)
+
+    basepath = ie_utils.validpath(filename)
+.....
+    ### Use &quot;EX&quot; for exporter text, &quot;IM&quot; for importer text.
+    logging, tobj, starttime = ie_utils.default_start_logging(importername, textlog, filename, &quot;IM&quot;)
+.....
+    ModelRoot, Component = import_md2_model(editor, filename)
+.....
+    undo = quarkx.action()
+    undo.put(editor.Root, Component)
+    editor.Root.currentcomponent = Component
+    compframes = editor.Root.currentcomponent.findallsubitems(&quot;&quot;, ':mf') # get all frames
+    for compframe in compframes:
+        compframe.compparent = editor.Root.currentcomponent # To allow frame relocation after editing.
+        progressbar.progress()
+
+    progressbar.close()
+.....
+    ie_utils.default_end_logging(filename, &quot;IM&quot;, starttime) ### Use &quot;EX&quot; for exporter text, &quot;IM&quot; for importer text.
+
+    editor.ok(undo, Component.shortname + &quot; created&quot;)
+
+    comp = editor.Root.currentcomponent
+    skins = comp.findallsubitems(&quot;&quot;, ':sg')      # Gets the skin group.
+    if len(skins[0].subitems) != 0:
+        comp.currentskin = skins[0].subitems[0]      # To try and set to the correct skin.
+        quarkpy.mdlutils.Update_Skin_View(editor, 2) # Sends the Skin-view for updating and center the texture in the view.
+    else:
+        comp.currentskin = None
+</pre></div>
+</p><p><a name="place2"></a>
+If you were also importing <a href="intro.modeleditor.editelements.html#bones">Bones</a> or
+<a href="intro.modeleditor.editelements.html#boundingboxes">BBoxes</a> (bounding boxes)
+from the model this is the second of
+<a href="intro.modeleditor.importexport.html#place1">two places</a>
+where that code would be added now that the component has been created.<br>
+See the section below covering
+<a href="intro.modeleditor.importexport.html#bones">Bones Structure</a> and
+<a href="intro.modeleditor.importexport.html#bones2">QuArK's ModelComponentList</a>
+for the needed code to copy and paste in this location of your import file.
+</p><p>Last, but not least, at the very bottom of our importer file we need to <a href="glossary.html#r">Register</a> our starting function so that
+it will show up on the <a href="intro.modeleditor.menu.html#filemenu">Files &gt; Importer \ Exporter</a> menus in the
+<a href="intro.modeleditor.html">QuArK Model Editor</a>. This is done outside of our function and just below it.
+<div class="doccode"><pre>
+### To register this Python plugin and put it on the importers menu.
+import quarkpy.qmdlbase
+quarkpy.qmdlbase.RegisterMdlImporter(&quot;.md2 Quake2 Importer&quot;, &quot;.md2 file&quot;, &quot;*.md2&quot;, loadmodel)
+</pre></div>
+</p><p>After reading the footnote below about <a href="src.quarkx.html#moduleprogressbar">Progress Bars</a>
+proceed on to the <a href="intro.modeleditor.importexport.html#codeprocess">next section</a>.
+</p><p>================================================ Footnotes ==================================================
+</p><p><a name="progressbars2"><u>footnote 1</u></a>: <a href="src.quarkx.html#moduleprogressbar">Progress Bars</a><br>
+As <a href="#progressbars1">mentioned above</a> this file uses a <a href="src.quarkx.html#moduleprogressbar">Progress Bar</a>
+as all of them <b>should</b> but it is optional. They will not always be seen if the model file is small, but for
+those that are fairly large, such as <a href="glossary.html#l">Lightwave Doom 3 .lwo outdoor scene</a> files
+(I've loaded one with <b><a href="glossary.html#numbers">13 Components</a></b>) the progress bar lets people know that QuArK has not crashed but
+still hard at work getting the model into the editor. You might have already click on the
+<a href="src.quarkx.html#moduleprogressbar">Progress Bars</a> link to the
+<a href="src.quarkx.html#__top__">quarkx functions</a> and read about it, but there is one nice little <a href="glossary.html#t">trick</a>
+that you can add to it....have the name of the component that is currently being imported displayed as you
+import them. But first let's cover how to set them up, this is done as a <a href="glossary.html#g">global</a> (Aw-Ha ! Now you see why
+we called it in <a href="#progressbars1">our function above here</a>.)
+</p><p>Originally the <a href="glossary.html#g">global</a> for it could have been <a href="glossary.html#c">created</a> near the very top of our file when we did the
+<a href="#logging">Logging Implementation</a> and <a href="#pathchecking">Path Checking Implementation</a>
+in the <a href="intro.modeleditor.importexport.html#codeelements">previous section</a>. But it might have been a bit
+confusing to do at that time, so I waited until now to <b>spring</b> this on you. (Aren't I a stinker !)<br>
+So now go back to the top and add this code with the rest of the <a href="glossary.html#g">globals</a> to <a href="glossary.html#i">initialize</a> (setup)
+your <a href="src.quarkx.html#moduleprogressbar">Progress Bar</a>. Then come back for the next step.
+<div class="doccode"><pre>
+progressbar = None
+</pre></div>
+In the next section below we will cover a function called <a href="glossary.html#l">load_md2</a> and where you will once again see the
+<a href="glossary.html#g">global progressbar</a> being called and soon afterwards you will see the next two lines of code.
+The first line is where that <a href="glossary.html#t">trick</a> I was telling you about takes place by adding the component's name
+that is currently being processed to the <a href="glossary.html#d">default string of text</a> that would <a href="glossary.html#n">normally</a> be used to
+display on the progress bar, and the second line of code which activates the progressbar by giving its settings
+for the updated string and <a href="glossary.html#m">md2.num_faces + (md2.num_frames * 2)</a>, maximum faces that it should count to.
+<div class="doccode"><pre>
+    Strings[2454] = name + &quot;\n&quot; + Strings[2454]
+    progressbar = quarkx.progressbar(2454, md2.num_faces + (md2.num_frames * 2))
+</pre></div>
+Further down in that same function you will see the next line of code that advances the progressbar as
+that particular component's models faces are processed.
+<div class="doccode"><pre>
+        progressbar.progress()
+</pre></div>
+Later on you will see these next two lines of code, the first to close the progressbar and the second to
+<a href="glossary.html#r">reset its default string</a> back to what it was.
+<div class="doccode"><pre>
+    progressbar.close()
+    Strings[2454] = Strings[2454].replace(Component.shortname + &quot;\n&quot;, &quot;&quot;)
+</pre></div>
+This is required or you will wind up with the previously processed component's name showing up above the component's
+name that is currently being processed. This same <a href="glossary.html#t">trick</a> can be used in as many places as you desire, but
+the process must always be the same. It's best to use as few as possible or they won't show up.<br>
+<a href="glossary.html#numbers">1)</a> Import the global progressbar, <a href="glossary.html#numbers">2)</a> add the name to the default string, <a href="glossary.html#numbers">3)</a> activate (set) the progressbar,<br>
+<a href="glossary.html#numbers">4)</a> advance its count, <a href="glossary.html#numbers">5)</a> close the progrssbar and <a href="glossary.html#numbers">6)</a> reset its default string.
+</p><p>The <a href="glossary.html#s">Strings</a> you see in the code, and also imported as a global, are all of the string (text) statements
+which are in the <a href="glossary.html#q">QuArK\quarkpy\qdictionnary.py</a> file and using the number for the default setting above <a href="glossary.html#numbers">2454</a>
+as a word search in that file you will find that default text string which is
+<a href="glossary.html#"">"Preparation data read...Exporting model"</a>.
+</p>
+  </td></tr></table>
+  <br>
+
+<a name="codeprocessing"></a>
+  <table width="100%" border=0 cellspacing=0>
+    <tr class="headline">
+      <td>
+        <p class="item">&nbsp;Writing the File Processing of the Code</p>
+      </td>
+      <td align=right>
+        <font size=-2>cdunde&nbsp;-&nbsp;28 Jul 2008</font>
+      </td>
+      <td width="1%" align=right nowrap>
+        &nbsp;&nbsp;[&nbsp;<a href="#__top__">Top</a>&nbsp;]&nbsp;
+      </td>
+    </tr>
+  </table>
+  <table border=0 width="100%" cellspacing=10><tr><td>
+<p>If you have completed the previous sections, you are now ready to start writing the part of the code that opens, reads
+and processes a model file.<br>
+We will continue to use the <a href="glossary.html#q">QuArK\plugins\ie_md2_import.py</a> file as our working example, refer to it often since
+most of the code will be skipped here to keep it brief.
+</p><p><a name="import_md2_model2"></a>
+The next function we need to write is <a href="#import_md2_model1">import_md2_model</a>, which is called from our
+previous function <a href="#loadmodel1">loadmodel</a> passing the <a href="glossary.html#e">editor</a> and <a href="glossary.html#f">filename</a> to our new function.
+</p><p>In the first part of its code you will see a section that deals with checking to see if we have already imported any
+other models into the editor so that it can get a proper numbering sequence to add to the name of the component that
+is currently being imported.<br>
+<b>All names need to be distinct to avoid problems with other functions of the editor's code</b>
+later on when working on (editing) the model.
+</p><p><a name="load_md2_1"></a>
+The line of code following the above section calls another function,
+<a href="#load_md2_2">load_md2</a>, which will return the various parts of
+data we will use in the
+<a href="intro.modeleditor.importexport.html#componentcreation">following section of this function to create the component</a>
+itself in a format that QuArK can understand and use, <a href="#dictitems2">The Component's Format</a>.
+<div class="doccode"><pre>
+    Tris, skinsize, skingroup, framesgroup = load_md2(md2_filename, name) # Loads the model.
+</pre></div>
+</p><p>And finally, at the very end, this function will return the <a href="glossary.html#m">ModelRoot</a> and the <a href="glossary.html#c">Component</a> back to the
+<a href="#loadmodel1">loadmodel</a> function to finish the whole process by putting the model's component
+into the editor, using its <a href="#undo1">undo</a> section of code.
+</p><p>Because we are working with the <a href="glossary.html#fileext">.md2</a> code, a <a href="glossary.html#q">Quake 2 model</a> only has one component per model.
+If we were importing a different kind of model format it might have more then one.
+In which case, this whole process would continue in one big <a href="glossary.html#l">loop</a>, in this function, until all of
+the model's components have been loaded, creating a <a href="glossary.html#l">list of components</a> that would then be returned
+to the previous function <a href="#loadmodel1">loadmodel</a> where each component in that list would be
+handled by its <a href="#undo1">undo</a> section to put them into the editor. You can find this kind of coding in the
+<a href="glossary.html#q">QuArK\plugins\ie_lwo_import.py</a> file to use as a guide.
+</p><p><a name="load_md2_2"></a>
+Now let's go on to our next function <a href="#load_md2_1">load_md2</a>
+</p><p><u><b><i>Code to Open &amp; Read a Model File</i>&nbsp;</b></u> :<br>
+Near the very beginning of the <a href="#load_md2_1">load_md2</a> function we see this line of code which actually
+opens the <a href="glossary.html#fileext">.md2</a> model file for reading.
+<div class="doccode"><pre>
+    file=open(md2_filename,&quot;rb&quot;)
+</pre></div>
+Notice the <a href="glossary.html#"">"rb"</a>, that stands for <a href="glossary.html#r">read binary</a> because that is how most model files store their data,
+in <b>binary</b> format which you can not read like a regular text file. This saves space and speeds up the use of
+that file in the game. So yes, we will be getting into a little bit of <a href="glossary.html#b">binary code</a> now. But not to worry,
+Python has a <a href="glossary.html#m">module</a> called <a href="#fileimports">struct</a> that handles the conversion of that type of
+code into regular text so we can work with it. We just need to cover on how to use that <a href="glossary.html#m">module</a>
+because we already <a href="#fileimports">imported the module</a> at the beginning.
+</p><p>It reads the entire file at one time, stores all the data into memory and then closes the file with the code
+<a href="glossary.html#f">file.close()</a> a few lines down. Now we're ready to <a href="glossary.html#p">Process</a>.
+</p><p>But before we do that we first need to deal with our <a href="src.quarkx.html#moduleprogressbar">progressbar</a>
+by using that <a href="#progressbars2">trick</a>
+to add a component's name to its text and <a href="#progressbars2">give its settings</a> to start it.<br>
+And just below that, after another function call, we start with some of our <a href="glossary.html#l">logging text calls</a> (see the file).
+Ok, let's go <a href="glossary.html#p">Process the Model's Data</a>.
+</p><p><a name="processdata"></a>
+<u><b><i>Code to Process the Model's Data</i>&nbsp;</b></u> :<br>
+Remember, we are still in our <a href="#load_md2_1">load_md2</a> function that is going to be calling two other
+functions to do certain parts of the data processing and return what we need, right back to here, to pass on
+and create the component with later. These other two functions are:
+<div class="doccode"><pre>
+    skinsize, skingroup = load_textures(md2) # Calls here to make the Skins Group.
+
+    (the <a href="#tris1"><b>Tris</b></a> creation code is done here)
+
+    framesgroup = animate_md2(md2) # Calls here to make the Frames Group.
+</pre></div>
+And finally it <a href="glossary.html#r">returns</a> all of this reconstructed data right back to our
+<a href="#load_md2_1">import_md2_model</a> function to finish
+<a href="intro.modeleditor.importexport.html#componentcreation">creating the comonent</a> with.
+<div class="doccode"><pre>
+    return Tris, skinsize, skingroup, framesgroup
+</pre></div>
+But lets not get ahead of ourselves, first we need to cover two more things, the '<a href="#tris1"><b>Tris</b></a>'
+and using the <a href="intro.modeleditor.importexport.html#structmodule">struct module</a>
+in one of the above functions for the binary code.
+</p><p>As we had covered earlier in the <a href="intro.modeleditor.importexport.html#componentmakeup">What Makes Up a Model Component</a>
+section the <a href="#tris1"><b>Tris</b></a> is a list of smaller lists, each containing a <a href="glossary.html#(">(vert_index, U, V)</a>
+but in <a href="glossary.html#b">binary</a> code. The section above creates that <a href="#tris1"><b>Tris</b></a>. The lines of code are long,
+so I will need to split them up to demonstrate here, looking at the file may also help you.
+</p><p>When ever you set something like this up you first need to define it (make a blank one) and since the
+<a href="#tris1"><b>Tris</b></a> is nothing more then a long text <a href="glossary.html#s">string</a> of data, that's what we'll
+make it with the first line of code.
+</p><p>Then we write a <a href="glossary.html#p">Python loop</a> which just runs through each <a href="glossary.html#f">face</a> (triangle) of the component's
+<a href="glossary.html#m">mesh</a> adding that data to the <a href="#tris1"><b>Tris</b></a>. That's what the three lines of code are doing
+inside our <a href="glossary.html#l">loop</a>, one line for each of the three vertexes of that <a href="glossary.html#f">face</a> (triangle).
+</p><p>Now you are seeing one of the functions (<a href="intro.modeleditor.importexport.html#structmodule">pack</a>) of the
+<a href="intro.modeleditor.importexport.html#structmodule">struct module</a> being put to work here and that is what
+the first part (<a href="intro.modeleditor.importexport.html#structmodule">&quot;Hhh&quot;</a>) is about.<br>
+This is how it tells the <a href="intro.modeleditor.importexport.html#structmodule">pack</a>
+function that the next three peices of data that follow are
+<a href="intro.modeleditor.importexport.html#structmodule">1 unsigned short integer and 2 short integers</a> and<br>
+that we want to <a href="intro.modeleditor.importexport.html#structmodule">pack</a> (or put) them into the
+<a href="#tris1"><b>Tris</b></a> as <a href="intro.modeleditor.importexport.html#structmodule">binary code</a>,
+because that is the way QuArK needs them in order to work.
+</p><p>Notice how each piece of data is split up by a comma at the end, except for the last one, giving four data items per line.<br>
+The final three are the <a href="glossary.html#v">vert_index, U,</a> and <a href="glossary.html#v">V</a> values that are read in from the model file else ware in the code
+(see our work file).<br>
+They are other <a href="glossary.html#l">lists of data</a> that have been <a href="glossary.html#a">attached</a> (that's what the <a href="glossary.html#d">dot</a> betweeNotice how each piece of data is split up by a comma at the end, except for the last one, giving four data items per line.
+The final three are the vert_index, U, and V values that are read in from the model file else ware in the code (see our work file).
+They are other lists of data that have been attached (that's what the dot betwean them does) to the md2 object which is created in another function in the file.
+Search and study the file to see where and how that is done. You shouldn't have a problem doing that now. 
+</p><p>Also take a look at the load_textures and animate_md2 functions while you are there to see how those are written and handled as well. 
+</p><p>n them does) to
+the <a href="glossary.html#m">md2 object</a> which is created in another function in the file.<br>
+Search and study the file to see where and how that is done. You shouldn't have a problem doing that now.
+<div class="doccode"><pre>
+Tris = ''
+for i in xrange(0, md2.num_faces):
+    Tris = Tris + struct.pack(&quot;Hhh&quot;, md2.faces[i].vertex_index[0], md2.tex_coords[md2.faces[i].texture_index[0]].u,
+                                     md2.tex_coords[md2.faces[i].texture_index[0]].v)
+    Tris = Tris + struct.pack(&quot;Hhh&quot;, md2.faces[i].vertex_index[1], md2.tex_coords[md2.faces[i].texture_index[1]].u,
+                                     md2.tex_coords[md2.faces[i].texture_index[1]].v)
+    Tris = Tris + struct.pack(&quot;Hhh&quot;, md2.faces[i].vertex_index[2], md2.tex_coords[md2.faces[i].texture_index[2]].u,
+                                     md2.tex_coords[md2.faces[i].texture_index[2]].v)
+</pre></div>
+Also take a look at the <a href="#processdata">load_textures</a> and <a href="#processdata">animate_md2</a> functions
+while you are there to see how those are written and handled as well.<br>
+Once you have done that, continue on to our final step below. To write the <a href="glossary.html#e">exporter</a>, basically it's just the reverse
+process.</p>
+  </td></tr></table>
+  <br>
+
+<a name="componentcreation"></a>
+  <table width="100%" border=0 cellspacing=0>
+    <tr class="headline">
+      <td>
+        <p class="item">&nbsp;Creating a Component in the Code</p>
+      </td>
+      <td align=right>
+        <font size=-2>cdunde&nbsp;-&nbsp;25 May 2011</font>
+      </td>
+      <td width="1%" align=right nowrap>
+        &nbsp;&nbsp;[&nbsp;<a href="#__top__">Top</a>&nbsp;]&nbsp;
+      </td>
+    </tr>
+  </table>
+  <table border=0 width="100%" cellspacing=10><tr><td>
+<p>In one of our previous functions, <a href="#import_md2_model2">import_md2_model</a>,
+we had the data to create a component returned to that function.
+Here we will look at its code, which is shown below, to see exactly how that is written.
+<div class="doccode"><pre>
+    # Now we can name our component that will be imported.
+    Component = quarkx.newobj(name + ':mc')
+    Component['skinsize'] = skinsize
+    Component['Tris'] = Tris
+    Component['show'] = chr(1)
+    sdogroup = quarkx.newobj('SDO:sdo')
+    Component.appenditem(sdogroup)
+    Component.appenditem(skingroup)
+    Component.appenditem(framesgroup)
+</pre></div>
+<a name="place1"></a>
+<a href="glossary.html#<"><b>A special note here :</b></a><br>
+If you were also importing <a href="intro.modeleditor.editelements.html#bones">Bones</a> or
+<a href="intro.modeleditor.editelements.html#boundingboxes">BBoxes</a> (bounding boxes)
+from the model this is the first of
+<a href="intro.modeleditor.importexport.html#place2">two places</a>
+where that code <b>COULD</b> be added if there is only <b>ONE</b> component used for the model.
+If there is more then one then they would need to be added at
+<a href="intro.modeleditor.importexport.html#bones">the second location</a> as a mater of code consistency.
+The additional line of code should be placed just <b>before</b> the <a href="glossary.html#c">Component</a> lines
+above and can be copied from below just as it is shown.
+<div class="doccode"><pre>
+    editor.Root.dictitems['Skeleton:bg'].appenditem(skeletongroup)
+</pre></div>
+See the section below covering
+<a href="intro.modeleditor.importexport.html#bones">Bones Structure, Data within the Bone</a>
+for the needed code to create individual bones for the <a href="glossary.html#s">skeletongroup</a> <b>before</b>
+the line above is called.
+</p><p>Just under the above code in the <a href="glossary.html#q">QuArK\plugins\ie_md2_import.py</a> file you will see this code.
+<div class="doccode"><pre>
+    ### Use the 'ModelRoot' below to test opening the QuArK's Model Editor with,
+    ### needs to be qualified with main menu item.
+    ModelRoot = quarkx.newobj('Model:mr')
+</pre></div></p>
+  </td></tr></table>
+  <br>
+
+<a name="structmodule"></a>
+  <table width="100%" border=0 cellspacing=0>
+    <tr class="headline">
+      <td>
+        <p class="item">&nbsp;About the Python Struct Module</p>
+      </td>
+      <td align=right>
+        <font size=-2>cdunde&nbsp;-&nbsp;28 Jul 2008</font>
+      </td>
+      <td width="1%" align=right nowrap>
+        &nbsp;&nbsp;[&nbsp;<a href="#__top__">Top</a>&nbsp;]&nbsp;
+      </td>
+    </tr>
+  </table>
+  <table border=0 width="100%" cellspacing=10><tr><td>
+<p>We'll only cover a very small portion of it here, but basically the <a href="glossary.html#s">Struct Module</a> is made up of functions
+to handle <a href="glossary.html#b">binary</a> code data, converting it into standard text format and back again. A link to the entire
+module is <a href="http://docs.python.org/lib/module-struct.html">here</a> and another good part to review is
+the chart at the top, <a href="http://docs.python.org/lib/module-array.html">here</a>, which is also shown below.
+<div class="doccode"><pre>
+<b>pack(<i> fmt, v1, v2,</i>&nbsp; ...)</b>
+       Return a string containing the values v1, v2, ... packed according to the given format.
+       The arguments must match the values required by the format exactly.
+
+<b>unpack(<i> fmt, string</i>&nbsp;)</b>
+         Unpack the string (presumably packed by pack(fmt, ...)) according to the given format.
+         The result is a tuple even if it contains exactly one item.
+         The string must contain exactly the amount of data required by the format
+         (len(string) must equal calcsize(fmt))
+
+A format character may be preceded by an integral repeat count.
+    For example, the format string '4h' means exactly the same as 'hhhh'.
+Whitespace characters between formats are ignored; a count and its format must not contain whitespace though.
+
+<b>calcsize(<i> fmt</i>&nbsp;)</b>
+           Return the size of the struct (and hence of the string) corresponding to the given format.
+
+For the &quot;s&quot; format character, the count is interpreted as the size of the string,
+    not a repeat count like for the other format characters;
+    for example, '10s' means a single 10-byte string, while '10c' means 10 characters.
+</pre></div>
+Format characters have the following meaning; the conversion between C and Python values should be obvious given their types:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+(&quot;signed&quot; means they can be positive + or negative - values, &quot;unsigned&quot; means they are only positive +)
+<img border=0 align=left src="intro.modeleditor.importexport.struct2.png">
+<img border=0 align=left src="intro.modeleditor.importexport.struct1.png">
+</p>
+
+
+
+  </td></tr></table>
+  <br>
+
+<a name="bones"></a>
+  <table width="100%" border=0 cellspacing=0>
+    <tr class="headline">
+      <td>
+        <p class="item">&nbsp;Adding Bones & Their Structure</p>
+      </td>
+      <td align=right>
+        <font size=-2>cdunde&nbsp;-&nbsp;25 May 2011</font>
+      </td>
+      <td width="1%" align=right nowrap>
+        &nbsp;&nbsp;[&nbsp;<a href="#__top__">Top</a>&nbsp;]&nbsp;
+      </td>
+    </tr>
+  </table>
+  <table border=0 width="100%" cellspacing=10><tr><td>
+<p><table border=0 cellspacing=0>
+<tr><td valign=top>
+<img border=1 align=right src="intro.modeleditor.importexport.bones2.png">
+Some models have their own bone structure built into them for animation purposes.
+So those need to be imported\exported along with the other data.<br>
+This section covers how QuArK needs the data to work with its bone system.
+It would be a good idea to read about the <a href="intro.modeleditor.editelements.html#bones">Bones System<a><br>
+to get an understanding of how it works and its capabilities.
+</p><p><a name="bones1"></a>
+<a href="glossary.html#<"><i><b><u>Creating a Bone</u></b></i></a>&nbsp;:<br>
+Beside the description below, a good summery of the code to make a bone can be seen in the <a href="glossary.html#q">quarkpy\mdlutils.py</a>
+file's <a href="glossary.html#d">def addbone</a> function.
+</p><p>Basically the bone data is split up into two areas, that which is
+<a href="intro.modeleditor.importexport.html#componentcreation">kept within the bone</a> object itself
+<a href="intro.modeleditor.importexport.html#componentcreation">when it is created</a><br>
+and that which is created by QuArK <b>and</b> the import file when the model is read into the editor.<br>
+This data is kept in a <a href="glossary.html#p">Python Dictionary List</a> named the <a href="#bones2">editor.ModelComponentList</a>.
+</p><p>The data that is <a href="#bones1">kept within the bone</a> primarily is what is displayed on a
+<a href="intro.modeleditor.editelements.html#specificsettings">Bones Specifics/ Args</a> page, shown to the right here,<br>
+although it is also used throughout QuArK's internal code.
+</p><p>This data must be read in from the imported model file and added to the
+<a href="intro.modeleditor.importexport.html#componentcreation">editor.Root.dictitems['Skeleton:bg']</a> when the
+<a href="intro.modeleditor.importexport.html#componentcreation">component is created</a> in
+the Python import file <a href="intro.modeleditor.importexport.html#componentcreation">shown futher above</a>.<br>
+</p><p>If a model consist of multiple parts, or components, then the bones need to be created and added in a fashion that
+addresses this issue.<br>
+This is because the editor only has one set of bones, the <a href="glossary.html#s">Skeleton:bg</a> which can be used,
+and\or added to, by more then one component.
+</p><p>In addition, each bone must have its own individual name to avoid errors from occurring in the editor
+by over writing other bones.
+</p><p><u><i>Data within the Bone </i>&nbsp;</u>&nbsp;:
+</p><p>Data that must be added for a models imported bones consist of two groups,
+<a href="#baseitems">Base Items</a> and <a href="#otheritems">Other Items</a>.
+</p><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a name="baseitems"><a href="glossary.html#<"><i>Base Items </i></a></a>&nbsp;:
+The minimum items to construct a bone, known as its <a href="glossary.html#d">dictspec</a> items, are shown below and are stored in a <a href="glossary.html#p">Python Dictionary List</a>.<br>
+With this type of list, the order of their arrangement does not matter because their <a href="glossary.html#k">key</a>
+names, such as <a href="glossary.html#s">scale</a>, are used to retrieve the data as it is needed.<br>
+All <a href="glossary.html#d">dictspec</a> items are <b>not</b> shown in the editor's <a href="intro.modeleditor.dataforms.html#treeview">tree-view</a>,
+where as all its <a href="glossary.html#d">dictitems</a>, such as bones, components, frames and the like <b>do</b> show up.
+</td></tr>
+</table>
+<div class="doccode"><pre>
+{
+'flags': (0,0,0,0,0,0),
+'show': (1.0,),
+'parent_name': 'NewBone1:bone',
+'position': (-23.702332855224609, -4.4704371452331543, 2.0622565078735352),
+'scale': (1.0,),
+'bone_length': (0.0, 0.0, 0.0),
+'component': 'h_head:mc',
+'draw_offset': (0.0, 0.0, 0.0),
+'_color': '\x00\xff\xff'
+}
+</pre></div>
+</p><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a name="otheritems"><a href="glossary.html#<"><i>Other Items </i></a></a>&nbsp;:
+If a bone has vertexes assigned to it already, these items must be added to the bone itself as an <a href="glossary.html#a">attribute</a>.<br>
+</p><div class="doccode"><pre>
+new_bone.vtxlist = { 'mesh1:mc' : [0, 18, 34, 36, 7, 8] , 'mesh2:mc' : [0, 3, 45, 88] }
+new_bone.vtx_pos = {} or { 'mesh1:mc' : [0, 18, 34] } # Sets the bones custom position by those vertexes.
+</pre></div>
+One last <a href="glossary.html#a">attribute</a> that must be created is the
+<div class="doccode"><pre>
+new_bone.rotmatrix = quarkx.matrix((1, 0, 0), (0, 1, 0), (0, 0, 1))
+</pre></div>
+
+<p>The <a href="glossary.html#n">new_bone.vtx_pos</a> are specific vertex indexes (of a single component) from their respective <a href="glossary.html#n">new_bone.vtxlist</a>.<br>
+These are used to reposition the handle of any <b>newly added bone</b> from frame to frame by averaging those vertex positions and applying
+that to the bone handle.<br>
+Bones that are imported with a model have their positions stored for each frame in the <a href="glossary.html#m">ModelComponentList</a>, covered a little further down.
+</p><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a name="baseitems"><a href="glossary.html#<"><i>Sample Code </i></a></a>&nbsp;:
+</p><p>Because the values are read in from the model file being imported we can not give code here that you can just copy and paste But you should be able to get enough from the<br>
+following example to write your own code. Also you can see more by opening the <a href="glossary.html#q">QuArK\quarkpy\mdlutils.py</a> file, use any text editor like <a href="glossary.html#w">WordPad</a> and do a word search for<br>
+<a href="glossary.html#d">def addbone(</a>. You will also find many other functions there in the <a href="glossary.html##"># Skeleton & Bone functions</a> area.
+<div class="doccode"><pre>
+    skeletongroup = editor.Root.dictitems['Skeleton:bg']  # gets the bones group.
+    bones = skeletongroup.findallsubitems(&quot;&quot;, ':bone')    # get all bones (because bones can have other bones inside them it MUST be called this way).
+    name = &quot;NewBone1&quot; # Can be any string item.
+    new_bone = quarkx.newobj(name + &quot;:bone&quot;) # Creates the bone as a QuArK Internal Object.
+    new_bone['show'] = (1.0,) # Sets the bone to be drawn (displayed) in the editor, 0.0, would hide the bone.
+    new_bone['component'] = component.name # The component name that this handle is assigned to. # Can be any component.
+    new_bone['parent_name'] = &quot;None&quot; # Or &quot;parent bonename:bone&quot; if attached to another bone.
+    new_bone['position'] = (-23.702332855224609, -4.4704371452331543, 2.0622565078735352) # As a tuple as shown for x,y,z.
+    from math import sqrt
+    new_bone.rotmatrix = quarkx.matrix((sqrt(2)/2, -sqrt(2)/2, 0), (sqrt(2)/2, sqrt(2)/2, 0), (0, 0, 1)) # Sets the Default or other rotation matrix.
+    new_bone['draw_offset'] = (0.0,0.0,0.0) # Or a value can be read in here if one exist, but as a tuple as shown for x,y,z.
+    new_bone['scale'] = (1.0,) # Or a value can be read in here if one exist, but as a tuple as shown.
+    new_bone['_color'] = MapColor(&quot;BoneHandles&quot;, SS_MODEL) # Default QuArK function call.
+         (or)
+    new_bone['_color'] = str(\x80\x00\x80) # A Hex value of a color converted to a string.
+    new_bone['bone_length'] = (0.0,0.0,0.0) # If no other bones are attached to this one...
+         (or as in most cases, needs to be calculated using another bone's position)
+    startpoint = quarkx.vect(new_bone['position']))
+    endpoint = quarkx.vect(attached_bone['position']
+    new_bone['bone_length'] = ((startpoint - endpoint)*-1).tuple # *-1 must be used or things will come out backwards.
+
+    vtxlist = {}
+    list = []
+    for vtx in vertexes: # &quot;list&quot; being assigned vertex indexes you read in (by component) from the model file, each vertex index must be an integer.
+        list = list + [vtx] # This will build a single &quot;list of vertexes&quot;, which is needed to be that way.
+    vtxlist[components name + &quot;:mc&quot;] = list # Puts each component in a dictionary with that component's name as the key (NOTE the &quot;:mc&quot; added as its type).
+    new_bone.vtxlist = vtxlist # Needs to be done this way to work right.
+
+    skeletongroup.appenditem(new_bone) # Each bone must be appended (added) to the skeletongroup here.
+</pre></div>
+</p><p>Once again, the bone creation code must be added to the import python file, further above,
+<a href="intro.modeleditor.importexport.html#componentcreation">where each component is created</a><br>
+or some other fashion if more then one component (mesh) exist.<br>
+A <b>reversal</b> of the bones code and <a href="#bones2">editor.ModelComponentList</a> use must <b>also</b> be added to its <b>export</b> file.
+</p><p>The best thing for bones is to look at their sections in both the <a href="glossary.html#p">plugins\ie_md5_import.py</a> and <a href="glossary.html#p">plugins\ie_md5_export.py</a><br>
+files to really see, as an example, how the code should be written.
+</p><p><a name="bones2"></a>
+<u><i>QuArK's ModelComponentList </i>&nbsp;</u>&nbsp;:
+</p><p>Because the <a href="intro.modeleditor.html">QuArK Model Editor</a>
+has been setup to handle a variety of different model formats, and more of them in the future,<br>
+a means of storing different types and structures of data for them was needed. That is what this <a href="glossary.html#d">dictionary list</a> was created for.<br>
+It was made as a <a href="glossary.html#d">dictionary list</a>, (primarily) using the component's full name and type, for three reasons:
+</p><p><a href="glossary.html#numbers">1)</a> To make it easy to have access to a particular component's data.<br>
+<a href="glossary.html#numbers">2)</a> To allow different items and structures for each component, allowing different model formats to be imported at the same time.<br>
+<a href="glossary.html#numbers">3)</a> To provide a means for additional specialized data lists to be added as the editor is developed further.
+</p><p>If you open the <a href="glossary.html#q">QuArK\quarkpy\mdleditor.py</a> file, use any text editor like <a href="glossary.html#w">WordPad</a> and do a word
+search for <a href="glossary.html#m">ModelComponentList</a><br>
+you will find a description of everything that is stored in this list and the structure as how the data is stored in detail.<br>
+Below is an example of those data structures.
+</p><p><a name="ModelComponentList"></a>
+<u><i>What's in ModelComponentList </i>&nbsp;</u>&nbsp;:
+</p><p>The first three items <a href="glossary.html#[">['bboxlist']</a>, <a href="glossary.html#[">['bonelist']</a> and <a href="glossary.html#[">['tristodraw']</a> do <b>not</b> use a component's name as their<br>
+<a href="glossary.html#k">key</a> because they are used for <b>all</b> components to store <a href="glossary.html#s">special</a> data that can not be stored with the individual<br>
+bones or bboxes for components them selves because of code restrictions. This data is created directly from the model import file when it is read in.
+</p><p>The <a href="glossary.html#[">['bboxlist']</a> is a dictionary list, its <a href="glossary.html#k">keys</a> are the bbox names. If a bbox is associated with a bone then its name<br>
+matches that bone's name, for example upperleg:bone -&gt; upperleg:p and the same applies if they are associated with a component.
+</p><p>Bboxes are <a href="glossary.html#p">polyhedrons</a> just like in the map editor.<br>
+Bbox stands for bounding box which can also be used for a collision box depending on the model format's needs.
+</p><p>For bones, each bbox in the <a href="glossary.html#[">['bboxlist']</a> contains another list of two sets of values, minimum x, y, z and maximum x, y, z values.<br>
+Below is a sample of what it looks like in the <a href="glossary.html#m">ModelComponentList</a>:
+<div class="doccode"><pre>
+editor.ModelComponentList['bboxlist']
+    {
+    'upperleg:p':
+        {'size':
+                [(-34,-60,-14), (16,-30,16)]
+        }
+    }
+</pre></div>
+Their positions get set by the bones they are assigned to for any animation frame that exist. They can be placed in the
+<a href="intro.modeleditor.dataforms.html#treeview">tree-view</a><br>
+individually or in a <a href="intro.modeleditor.misctools.html">BboxGroupFolder:bbg</a>,
+which is usually done to keep them identified with one particular imported model.
+</p><p>For bboxes assigned to a component the same method above can also be used<br>
+and in addition they have two other methods available using different key names.<br>
+The second method uses ['vtx_list'] to create a list of vertexes for each bbox that will be used to surround them from frame to frame<br>
+The third method uses ['frames'] to create a list of two distinct minimum and maximum vectors, as described above, for each individual frame.
+</p><p>The <a href="glossary.html#[">['bonelist']</a> is also a dictionary list and its <a href="glossary.html#k">keys</a> are the bone names.<br>
+It is used to store each bones exact imported position and rotation matrix for each animation frame.<br>
+This is done in another dictionary list, for each bone, called <a href="glossary.html#[">['frames']</a>. The <a href="glossary.html#k">keys</a> are the frame names.<br>
+It can also have a <a href="glossary.html#[">['type']</a> to specify what type of model format it was originally imported as (currently not really used).<br>
+Below is a sample of what it looks like in the <a href="glossary.html#m">ModelComponentList</a>:
+<div class="doccode"><pre>
+editor.ModelComponentList['bonelist']
+    {
+    'lostsoul_lost_flame1:bone':
+        {'frames':
+            {'meshframe:mf':
+                {
+                'position': (2.48, -0.04, -1.79),
+                'rotmatrix': ((0.91, 0.41, -1.57), (-9.01, -1.81, -1.0), (-0.41, 0.91, -1.28))
+                }
+            }
+        }
+        {'type': 'md5'}
+    }
+</pre></div>
+</p><p>The <a href="glossary.html#[">['tristodraw']</a> also does <b>not</b> use a component's name as its <a href="glossary.html#k">key</a> because it is used for <b>all</b> components to store data<br>
+for drawing the correct triangles (<a href="glossary.html#f">faces</a>) when a drag operation takes place. As shown below, its data is created from the:
+<div class="doccode"><pre>
+editor.ModelVertexSelList
+    [
+        [92, &lt;vect 211.72 197.40 -14.58&gt;],
+        [90, &lt;vect 210.12 203.39 -21.97&gt;],
+        [91, &lt;vect 211.92 209.79 -14.98&gt;]
+    ]
+</pre></div>
+And a sample of what it looks like in the list is this:
+<div class="doccode"><pre>
+editor.ModelComponentList['tristodraw']
+    {
+    'h_head:mc':
+        {
+         0: [35, 34, 21, 2, 1],
+         1: [21, 20, 2, 0],
+         2: [39, 35, 1, 0],
+         3: [27, 25, 17,13, 12, 5, 4],
+         ....
+         90: [91, 92, 5, 3],
+         91: [28, 92, 90, 3],
+         92: [28, 26, 25, 91, 90]
+        }
+    }
+</pre></div>
+The component's full names and types are used as keys within the <a href="glossary.html#'">'tristodraw'</a> list for its own mesh which is made up of individual vertexes.<br>
+Then each vertex <a href="glossary.html#i">index</a> (number) is, in turn, used as a key with its own list of other vertex indexes needed to draw its triangles or faces.
+</p><p>All the other items in the <a href="glossary.html#e">editor.ModelComponentList</a> <b>do</b> use the component's full name and type (<b><a href="glossary.html#:">:mc</a></b>) as its primary key, for example <a href="glossary.html#<"><b>Component1:mc</b></a>.
+</p><p>The first item we'll cover for components is the <a href="glossary.html#'">'bonevtxlist'</a> which stores data for the
+<a href="intro.modeleditor.editelements.html#bones">Bones System</a> (using the full bone name and type) for a component.<br>
+Its sub-keys are vertex indexes (from that component, as intigers), that are assigned to that bone<br>
+and the value (what goes with that key) is that bone's handle color as a <a href="glossary.html#h">hex value</a> converted to a <a href="glossary.html#s">string</a> stored under the <a href="glossary.html#k">key</a> of <b>color</b>.<br>
+This dictionary list is used to draw each assigned vertex (of that component) in the bone's handle color that the vertex is assigned to.<br>
+We do it this way because not everything can be stored with the bones as we would like, the <b>Delphi code</b> is not setup to allow it.
+</p><p><table border=0 cellspacing=0>
+<tr>
+<td>
+<div class="doccode"><pre>
+editor.ModelComponentList[Component1:mc]['bonevtxlist']
+    {
+    'NewBone2:bone':
+        {
+         18: {'color': '\xa4\x00\xa4'},
+         34: {'color': '\xa4\x00\xa4'},
+         ....
+         90: {'color': '\x00\x00\xff'}
+        }
+    'NewBone3:bone':
+        {
+         92: {'color': '\x00\x00\xff'},
+         90: {'color': '\x00\x00\xff'},
+         ....
+         91: {'color': '\x00\x00\xff'}
+        }
+    }
+</pre></div>
+</td><td align=right valign=top>
+<img border=1 align=right src="intro.modeleditor.importexport.bones1.png">
+</td>
+</tr>
+</table>
+</p><p>The next item we'll cover for components is the <a href="glossary.html#'">'colorvtxlist'</a> which stores a component's data for its
+<a href="intro.modeleditor.vertexcolorandweights.html#vertexcoloring">Vertex Coloring System</a>, if one exist.<br>
+Here again, its sub-keys are vertex indexes (from that component, as integers) but this time the value for each vertex key<br>
+is another dictionary list where the key is <a href="glossary.html#v">vtx_color</a> and again a color as a <a href="glossary.html#h">hex value</a> converted to a <a href="glossary.html#s">string</a>.<br>
+But this color is used independently from the bone handle color described above and is for this particular system only.
+<div class="doccode"><pre>
+editor.ModelComponentList[Component1:mc]['colorvtxlist']
+    {
+     39: {'vtx_color': '\xbf\xbf\xbf\x00'},
+     38: {'vtx_color': '\xbf\xbf\xbf\x00'},
+     49: {'vtx_color': '\xbf\xbf\xbf\x00'},
+     ....
+     51: {'vtx_color': '\xbf\xbf\xbf\x00'},
+     57: {'vtx_color': '\xbf\xbf\xbf\x00'},
+     ....
+    }
+</pre></div>
+The final item we'll cover for components is the <a href="glossary.html#'">'weightvtxlist'</a> which stores a component's data for its
+<a href="intro.modeleditor.vertexcolorandweights.html#vertexweights">Vertex Weights System</a>, if one exist.<br>
+Once more, its sub-keys are vertex indexes (from that component, as integers) yet this time the value for each vertex key<br>
+are a number of different items, all strictly pertaining to this particular system. You will notice that a single vertex<br>
+can have more then one full bone name as its sub-keys. That is because a vertex can be shared between more then one bone.<br>
+And then the bone sub-keys have sub-keys values of their own for each item needed in that system.
+<div class="doccode"><pre>
+editor.ModelComponentList[Component1:mc]['weightvtxlist']
+    {
+     18: {'NewBone2:bone': {'weight_value': 0.8, 'color': 'x00\xb7'}}
+         {'NewBone3:bone': {'weight_value': 0.2, 'color': 'x00\xa4'}}
+    }
+</pre></div>
+As stated above, more items can be added to these component dictionary lists as needed in the future without disrupting what is already there<br>
+as well as entirely new component dictionary list making the editor very flexible and expandable for future development.
+</p>
+
+
+  </td></tr></table>
+  <br>
+
+<a name="specifics"></a>
+  <table width="100%" border=0 cellspacing=0>
+    <tr class="headline">
+      <td>
+        <p class="item">&nbsp;Adding Specifics Page & Menu Items</p>
+      </td>
+      <td align=right>
+        <font size=-2>cdunde&nbsp;-&nbsp;28 Jan 2009</font>
+      </td>
+      <td width="1%" align=right nowrap>
+        &nbsp;&nbsp;[&nbsp;<a href="#__top__">Top</a>&nbsp;]&nbsp;
+      </td>
+    </tr>
+  </table>
+  <table border=0 width="100%" cellspacing=10><tr><td>
+<p><table border=0 cellspacing=0>
+<tr><td valign=top>
+<i><u><b>Using existing icons</b></u></i>&nbsp; :<br>
+Button icons are .bmp files in the QuArK images folder which are loaded into QuArK when it starts up
+using a Python all in the <a href="glossary.html#q">quarkpy\qeditor.py</a> file such as this one for example:
+<div class="doccode"><pre>
+    ico_dict['ico_maped'] = LoadIconSet1(&quot;maped&quot;, 1.0)
+</pre></div>
+The <a href="glossary.html#numbers">1.0</a> tells it to use the file with the <a href="glossary.html#-">-1</a> in its name when a button is clicked.
+</p><p>This puts those images, which are maped-0.bmp and maped-1.bmp,
+into a dictionary list <a href="glossary.html#i">ico_dict</a> so that entire list of objects will be removed from memory when QuArK is closed,<br>
+avoiding a memory leak. Do a word search using the above example line of code to see all of the image dictionary
+list that are available to use and trace those back to the actual<br>
+images in the <a href="glossary.html#i">images</a> folder.
+</p><p>Each .bmp file is like a <a href="glossary.html#b">bar</a> of icon images. The -0.bmp is used when a button is not active
+and the -1.bmp is used when a button is active.<br>
+Each icon image is counted from left to right starting with the digit zero to identify it.<br>
+An example on how to call one would be like this:(shortened)
+</td></tr>
+</table>
+<div class="doccode"><pre>
+    from quarkpy.qeditor import ico_dict # Get the dictionary list of all icon image files available.
+    import quarkpy.qtoolbar              # Get the toolbar functions to make the button with.
+    ico_maped=ico_dict['ico_maped']      # Just to shorten our call later.
+    icon_btns = {}                       # Setup our button list, as a dictionary list, to return at the end.
+                                         # Make our first button, below, to go into the above list.
+    vtxcolorbtn = quarkpy.qtoolbar.button(colorclick, &quot;Color UV Vertex mode||When active, puts the editor\nvertex selection into this mode.|intro.modeleditor.dataforms.html&quot;, ico_maped, 10)
+    icon_btns['color'] = vtxcolorbtn     # Put our button in the above list to return.
+</pre></div>
+<table border=0 cellspacing=0>
+<tr><td valign=top>
+You can see at the very end of the next to the last line of code above that we are using icon 10, the 11th one,
+from the maped-0.bmp and maped-1.bmp image files.
+</p><p>The first argument of the quarkpy.qtoolbar.button call is <a href="glossary.html#c">colorclick</a>. This is the name of the function to call
+when the button is activated (or clicked) that you write, define, in your import file.<br>
+This name can be anything you wish and the actual function can do just about anything you want it to do in the editor,<br>
+such as storing vertex and\or triangle indexes and other needed data within the component that will be needed for exporting later.
+</p><p>The second argument does a couple of things:
+<ul>
+<li> 1) Gives a brief hint, of what the button does, followed by two bars || then
+<li> 2) a brief description of how to use the function and\or what it does in more detail.<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;This shows up when someone presses their <a href="glossary.html#f">F1</a> key to get a help box window.<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Notice the \n in <a href="glossary.html#e">editor\nvertex</a> which causes a new line. \n\n can be use for a space between lines and so on.
+<li> 3) Next we have a single bar | that allows us to provide a link to the InfoBase docs, with a button, to give more help.
+<li> 4) It gives our icon list item to use and which icon from that list.
+</ul>
+</p><p>For each button you want to add simply do it like above, with its own name like icon_btn2, and add it to the list as well.
+</p><p><i><u><b>Making your own icon</b></u></i>&nbsp; :<br>
+If you can not find an icon that gives a distinct appearance of what a button is for, then you can make your own.<br>
+To keep things simple and consistent, that new icon should be added at the <b>end</b> of the mdlskv-0.bmp, mdlskv-1.bmp and
+mdlskv-2.bmp files and submitted,<br>
+along with your import and export files, for others to draw from.
+The first five spaces, including blanks, are reserved for the editor's <a href="glossary.html#s">Skin-view</a> and for future use.<br>
+Notice also that the image in mdled-1.bmp and mdlskv-2.bmp are slightly brighter or even a different set of colors.
+That is so when the button is active it will be more noticeable then the others.<br>
+Not all buttons will need to remain active but all three files still need to have the new icon to keep things straight.
+</p><p>The reason there are three related image files in this set is because the mdlskv-1.bmp is used as a pass over highlighted look
+when used with the proper button function type.<br>
+There are also other kinds of buttons that you can use. See the <a href="glossary.html#q">quarkpy\qtoolbar</a> file or other <a href="glossary.html#m">mdl</a> files for those.
+</p><p><i><u><b>Menu items</b></u></i>&nbsp; :<br>
+These types of items apply to the <a href="intro.modeleditor.rmbmenus.html">RMB menus</a>. Using this type of method,
+complete functions can be written within the import file to perform special tasks required by that type of model format.<br>
+The results can then be stored within the model component and used for its exporting. The only requirement is that of
+using explicit function names to add items to the RMB menus.<br>
+One good example to look at is the <a href="glossary.html#i">ie_md5_import.py</a> file. Some of these function names are given below along with
+a brief description of what they are for.<br>
+Others may be added later, so if you see something special used, it is a good idea to look at the code for that particular
+model import file for how it was done.
+</td></tr>
+</table>
+<div class="doccode"><pre>
+def dataformname(o):
+    &quot;Returns the data form for this type of object 'o' to use for the Specific/Args page.&quot;
+
+def dataforminput(o):
+    &quot;Returns the default settings or input data for this type of object 'o' to use for the Specific/Args page.&quot;
+
+def newmenuitems(editor, extra):
+    &quot;To add new menu items to other RMB menus. 'extra' is the current list of RMB menu items.&quot;
+
+def bonemodeclick(btn_menu_item):
+    &quot;To add new menu mode items to this RMB menu, use editor.layout.buttons['bonemode'] to get the base menu.&quot;
+
+def macro_opentexteditor(btn):
+    &quot;To open an object, such as a shader text object or skin texture object, in an outside editor.&quot;
+</pre></div>
+</p>
+  </td></tr></table>
+  <br>
+
+<a name="bonematrix"></a>
+  <table width="100%" border=0 cellspacing=0>
+    <tr class="headline">
+      <td>
+        <p class="item">&nbsp;Bones & Their Matrixes</p>
+      </td>
+      <td align=right>
+        <font size=-2>cdunde&nbsp;-&nbsp;10 Aug 2009</font>
+      </td>
+      <td width="1%" align=right nowrap>
+        &nbsp;&nbsp;[&nbsp;<a href="#__top__">Top</a>&nbsp;]&nbsp;
+      </td>
+    </tr>
+  </table>
+  <table border=0 width="100%" cellspacing=10><tr><td>
+<p>The under lying engine of the bones are their <a href="#bones3">Matrixes</a> which are primarily used in their rotation
+movements but can also be used for their linier movements as well.
+</p><p>This is exactly why they are stored in the <a href="intro.modeleditor.importexport.html#bones2">editor.ModelComponentList</a>
+when they are read in from an imported model file that has bones. Without these, the model could not be properly exported.
+But simply having their matrixes is not enough, they also need to be <a href="glossary.html#i">inverted</a> to give the opposite values that the importer brings in,
+because that is what happens when they are used to import them, the bone handle's positions are changed around by the matrixes for the editor's uses.
+So that needs to be reversed on export.
+</p><p>Unfortunately, I am not a Mathematician, but I was lucky enough to stumble across a page on
+<a href="http://www.maths.surrey.ac.uk/explore/emmaspages/option1.html">Matrices and Determinants</a>.
+After many hours of extreme hair pulling, I was able to decipher what it was trying to explain.
+And that is why I made up the <a href="glossary.html#l">Layman's Chart</a> on Inverse Matrix below, to help others to understand
+how it works and how to use it.
+</p><p><a name="bones3"></a>
+<img border=1 align=right src="intro.modeleditor.importexport.bonematrix1.png">
+There's not a lot to explain here, hopefully the colored steps will do the job much better.
+</p><p>Just one basic point. For a 3x3 matrix, each row has three values stored in it as a small list,
+and those are in position 0, 1 and 2 of their list. Three of this lists make up the matrix.
+</p><p>It also has three columns, which starts from the left hand side, of all the values in that position
+running from top to bottom.
+</p><p>One very important thing to remember in working to invert a matrix is that you do <b>not</b> want
+to change to original values as you invert the matrix. You need to make a copy of it and change
+the copy. Other wise this method will not work and you'll wind up with a mess on your hands.
+</p><p>To see this applied in <a href="glossary.html#p">Python code</a> take a look at the <a href="glossary.html#p">plugins\ie_md5_export.py</a> file's
+<a href="glossary.html#d">def inverse_matrix</a> function near the top. Then use the name of that function for a word search
+to backtrack it in the file to see the preparation of <a href="glossary.html#s">self.bones</a> for it to work with.
+</p><p>This function creates a new list of these inverted matrixes, one for each bone, called <a href="glossary.html#s">self.bone_matrix_list</a>
+and that list is called on later in the file for their use. So use that list name in another word search
+to see how they are used to define ( <b><a href="glossary.html#=">=</a></b> ) another variable and just keep following those names to the end results.
+</p><p>In the last step of the chart it shows <a href="glossary.html#numbers">1/6.0</a> as though it is multiplying the matrix by that value.
+I have no idea if it is or not, or what that is used for. I did <b>not</b> use it in the md5 export file,
+but it works great without it.
+</p>
+  </td></tr></table>
+  <br>
+
+<br>
+
+<table width="100%" border=0 cellspacing=0>
+  <tr class="headline">
+    <td width="99%" align=center>
+      <p class="sm">
+        Copyright (c) 2009, GNU General Public License by The QuArK (Quake Army Knife) Community - <a target="_blank" href="http://quark.sourceforge.net/">http://quark.sourceforge.net/</a><br>
+      </p>
+    </td>
+    <td width="1%" align=right nowrap>
+      &nbsp;[&nbsp;<span class="navenable"><a href="intro.modeleditor.model.html">Prev</a></span>&nbsp;-&nbsp;<a href="#__top__">Top</a>&nbsp;-&nbsp;<span class="navenable"><a href="intro.modeleditor.menu.html">Next</a></span>&nbsp;]&nbsp;
+    </td>
+  </tr>
+</table>
+</body>
+</html>

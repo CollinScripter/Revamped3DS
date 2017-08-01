@@ -1,0 +1,305 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"  "http://www.w3.org/TR/html4/loose.dtd">
+<html lang="en">
+<head>
+  <title>Logging.pas</title>
+  <meta name="Description" content="QuArK Information Database - Page: 4.5.4.&nbsp;Logging.pas">
+  <meta name="Keywords" content="QuArK InfoBase Quake Army Knife QRK QKM Python PY Map Editor Hexen Heretic Half-Life Sin Kingpin Soldier-of-Fortune Star-Trek-Voyager Elite-Force">
+  <link rel=stylesheet href="standard.css" type="text/css">
+</head>
+
+<body>
+<a name="__top__"></a>
+<table width="100%" border=0 cellspacing=0>
+  <tr>
+    <td width=213>
+      <a target="_blank" href="http://quark.sourceforge.net/"><img src="quarkicon.png" width=213 height=90 border=0 alt="Go to QuArK Web Site"></a>
+    </td>
+    <td width="70%" align=center>
+      <div class="topheadline">Logging.pas</div>
+      <div class="sm">Updated&nbsp;20 Sep 2008</div>
+    </td>
+    <td width="30%" valign=bottom nowrap>
+      Upper&nbsp;levels:<br>-&nbsp;<a href="index.html">QuArK&nbsp;Information&nbsp;Base</a><br>-&nbsp;<a href="src.html">4.&nbsp;The&nbsp;Source&nbsp;Code</a><br>-&nbsp;<a href="src.pas.html">4.5.&nbsp;File-by-file&nbsp;descriptions</a><br>
+    </td>
+  </tr>
+</table>
+<table width="100%" border=0 cellspacing=0>
+  <tr class="headline">
+    <td width="99%">
+      <p class="headline">&nbsp;4.5.4.&nbsp;Logging.pas</p>
+    </td>
+    <td width="1%" align=right nowrap>
+      &nbsp;[&nbsp;<span class="navenable"><a href="src.pas.extrafunctionality.html">Prev</a></span>&nbsp;-&nbsp;<span class="navenable"><a href="src.pas.html">Up</a></span>&nbsp;-&nbsp;<span class="navenable"><a href="src.pas.qk1.html">Next</a></span>&nbsp;]&nbsp;
+    </td>
+  </tr>
+</table>
+<table border=0 width="100%" cellspacing=10><tr><td><p>This file contains all functions that deal with the QuArK.LOG file.
+</p>
+</td></tr></table>
+<br>
+
+<table width="100%" border=0 cellspacing=0>
+  <tr class="headline">
+    <td width="100%">
+      <p class="subheadline">&nbsp;Index</p>
+    </td>
+  </tr>
+</table>
+<ul class="index">
+  <li>- <a href="#const">Constants</a>&nbsp;<span class="added">(20 Sep 2008)</span>
+  <li>- <a href="#type">Types</a>&nbsp;<span class="added">(20 Sep 2008)</span>
+  <li>- <a href="#openlogfile">OpenLogFile</a>&nbsp;<span class="added">(20 Sep 2008)</span>
+  <li>- <a href="#closelogfile">CloseLogFile</a>&nbsp;<span class="added">(20 Sep 2008)</span>
+  <li>- <a href="#log">Log</a>&nbsp;<span class="added">(20 Sep 2008)</span>
+  <li>- <a href="#alog">aLog</a>&nbsp;<span class="added">(20 Sep 2008)</span>
+  <li>- <a href="#getpatchversion">GetPatchVersion</a>&nbsp;<span class="added">(20 Sep 2008)</span>
+</ul>
+<br>
+
+
+<a name="const"></a>
+  <table width="100%" border=0 cellspacing=0>
+    <tr class="headline">
+      <td>
+        <p class="item">&nbsp;Constants</p>
+      </td>
+      <td align=right>
+        <font size=-2>DanielPharos&nbsp;-&nbsp;20 Sep 2008</font>
+      </td>
+      <td width="1%" align=right nowrap>
+        &nbsp;&nbsp;[&nbsp;<a href="#__top__">Top</a>&nbsp;]&nbsp;
+      </td>
+    </tr>
+  </table>
+  <table border=0 width="100%" cellspacing=10><tr><td>
+<div class="doccode"><pre>
+  LOG_FILENAME = 'QUARK.LOG';
+  LOG_PATCHFILE = 'PATCH.TXT';
+
+  LOG_ALWAYS = 0;
+  LOG_CRITICAL = 10;
+  LOG_WARNING = 20;
+  LOG_INFO = 30;
+  LOG_VERBOSE = 40;
+</pre></div>
+
+<p>All these constants are used by the logging procedures or their callers.
+</p><p>&nbsp;<tt>LOG_FILENAME</tt>&nbsp; is the filename of the logfile. The path of the logfile is set in &nbsp;<tt>OpenLogFile</tt>&nbsp;.<br>
+&nbsp;<tt>LOG_PATCHFILE</tt>&nbsp; is not used anymore.
+</p><p>&nbsp;<tt>LOG_*</tt>&nbsp; are a bunch of constants that define the default verbose output levels. Their names describe when the log-line what kind of info it contains. See &nbsp;<tt>Log</tt>&nbsp; for more info about what this means.
+</p>
+  </td></tr></table>
+  <br>
+
+<a name="type"></a>
+  <table width="100%" border=0 cellspacing=0>
+    <tr class="headline">
+      <td>
+        <p class="item">&nbsp;Types</p>
+      </td>
+      <td align=right>
+        <font size=-2>DanielPharos&nbsp;-&nbsp;20 Sep 2008</font>
+      </td>
+      <td width="1%" align=right nowrap>
+        &nbsp;&nbsp;[&nbsp;<a href="#__top__">Top</a>&nbsp;]&nbsp;
+      </td>
+    </tr>
+  </table>
+  <table border=0 width="100%" cellspacing=10><tr><td>
+<div class="doccode"><pre>
+  TLogName = (LOG_DEFAULT, LOG_PASCAL, LOG_PYTHON, LOG_SYS, LOG_DEBUG);
+</pre></div>
+
+<p>This type is used by the callers of the &nbsp;<tt>Log</tt>&nbsp; procedure.
+</p><p>&nbsp;<tt>TLogName</tt>&nbsp; is the name of the logger/'outputer' that will appear in front of the log-line. The following table describes all the options:
+</p><p><table border=1 cellspacing=0 cellpadding=4>
+</p><p><tr><td class="doccode">
+LOG_DEFAULT
+</td><td>
+Outputs 'Log'<br>
+This is the default. Use this when no other options apply.
+</td></tr>
+</p><p><tr><td class="doccode">
+LOG_PASCAL
+</td><td>
+Outputs 'QuArKLog'<br>
+You can use this when an error in the Pascal/Delphi code has occured.
+</td></tr>
+</p><p><tr><td class="doccode">
+LOG_PYTHON
+</td><td>
+Outputs 'PythonLog'<br>
+You can use this when an error in the Python code has occured.
+</td></tr>
+</p><p><tr><td class="doccode">
+LOG_SYS
+</td><td>
+Outputs 'SysLog'<br>
+This is used in the SystemDetails.pas. Use this only in this module.
+</td></tr>
+</p><p><tr><td class="doccode">
+LOG_DEBUG
+</td><td>
+Outputs 'DebugLog'<br>
+Use this for debug-output to the log. You should only use these in debug code, so they do not appear in the logfile in release-files.
+</td></tr>
+</p><p></table>
+</p>
+  </td></tr></table>
+  <br>
+
+<a name="openlogfile"></a>
+  <table width="100%" border=0 cellspacing=0>
+    <tr class="headline">
+      <td>
+        <p class="item">&nbsp;OpenLogFile</p>
+      </td>
+      <td align=right>
+        <font size=-2>DanielPharos&nbsp;-&nbsp;20 Sep 2008</font>
+      </td>
+      <td width="1%" align=right nowrap>
+        &nbsp;&nbsp;[&nbsp;<a href="#__top__">Top</a>&nbsp;]&nbsp;
+      </td>
+    </tr>
+  </table>
+  <table border=0 width="100%" cellspacing=10><tr><td>
+<div class="doccode"><pre>
+Procedure OpenLogFile;
+</pre></div>
+
+<p>This procedure opens and clears the logfile.
+</p><p>It first checks if there already is a log open (using the boolean &nbsp;<tt>LogOpened</tt>&nbsp;). If not, it then either creates a new file, or opens an existing file and blanks it. The filename is &nbsp;<tt>GetQPath(pQuArK)+LogFilename</tt>&nbsp;. It then invokes the procedure that outputs the system details into the logfile.
+</p>
+  </td></tr></table>
+  <br>
+
+<a name="closelogfile"></a>
+  <table width="100%" border=0 cellspacing=0>
+    <tr class="headline">
+      <td>
+        <p class="item">&nbsp;CloseLogFile</p>
+      </td>
+      <td align=right>
+        <font size=-2>DanielPharos&nbsp;-&nbsp;20 Sep 2008</font>
+      </td>
+      <td width="1%" align=right nowrap>
+        &nbsp;&nbsp;[&nbsp;<a href="#__top__">Top</a>&nbsp;]&nbsp;
+      </td>
+    </tr>
+  </table>
+  <table border=0 width="100%" cellspacing=10><tr><td>
+<div class="doccode"><pre>
+Procedure CloseLogFile;
+</pre></div>
+
+<p>This procedure closes the logfile.
+</p><p>It first checks if the log is open (using the boolean &nbsp;<tt>LogOpened</tt>&nbsp;). If it is, it writes the date and time to the log, and closes it.
+</p>
+  </td></tr></table>
+  <br>
+
+<a name="log"></a>
+  <table width="100%" border=0 cellspacing=0>
+    <tr class="headline">
+      <td>
+        <p class="item">&nbsp;Log</p>
+      </td>
+      <td align=right>
+        <font size=-2>DanielPharos&nbsp;-&nbsp;20 Sep 2008</font>
+      </td>
+      <td width="1%" align=right nowrap>
+        &nbsp;&nbsp;[&nbsp;<a href="#__top__">Top</a>&nbsp;]&nbsp;
+      </td>
+    </tr>
+  </table>
+  <table border=0 width="100%" cellspacing=10><tr><td>
+<div class="doccode"><pre>
+Procedure Log(s: string); overload;
+Procedure Log(level: cardinal; s: string); overload;
+Procedure Log(s: string; args: array of const); overload;
+Procedure Log(level: cardinal; s: string; args: array of const); overload;
+Procedure Log(Logger: TLogName; s: string); overload;
+Procedure Log(Logger: TLogName; level: cardinal; s: string); overload;
+Procedure Log(Logger: TLogName; s: string; args: array of const); overload;
+Procedure Log(Logger: TLogName; level: cardinal; s: string; args: array of const); overload;
+</pre></div>
+
+<p>These procedures all do the same thing: they write something to the log. There are all defined with &nbsp;<tt>overload</tt>&nbsp;, so the parameters define which procedure is picked.
+</p><p>So let's only describe the two longest ones, since the rest is just smaller versions.
+</p><div class="doccode"><pre>
+Procedure Log(Logger: TLogName; level: cardinal; s: string); overload;
+Procedure Log(Logger: TLogName; level: cardinal; s: string; args: array of const); overload;
+</pre></div>
+
+<p>&nbsp;<tt>Logger</tt>&nbsp; is the TLogName that should appear in front of the log-line.<br>
+&nbsp;<tt>level</tt>&nbsp; is the priority-level of the ouput. This is compared to &nbsp;<tt>LogLevel</tt>&nbsp; variable, and a log-line is only written if the &nbsp;<tt>level</tt>&nbsp; is smaller or equal to this value. Use the LOG_* constants as a guide.<br>
+&nbsp;<tt>s</tt>&nbsp; or &nbsp;<tt>s; args</tt>&nbsp; are the text that is outputted. The second one is first formatted using the array &nbsp;<tt>args</tt>&nbsp;.
+</p>
+  </td></tr></table>
+  <br>
+
+<a name="alog"></a>
+  <table width="100%" border=0 cellspacing=0>
+    <tr class="headline">
+      <td>
+        <p class="item">&nbsp;aLog</p>
+      </td>
+      <td align=right>
+        <font size=-2>DanielPharos&nbsp;-&nbsp;20 Sep 2008</font>
+      </td>
+      <td width="1%" align=right nowrap>
+        &nbsp;&nbsp;[&nbsp;<a href="#__top__">Top</a>&nbsp;]&nbsp;
+      </td>
+    </tr>
+  </table>
+  <table border=0 width="100%" cellspacing=10><tr><td>
+<div class="doccode"><pre>
+Procedure aLog(logger: TLogName; s: string);
+</pre></div>
+
+<p>This procedure actually outputs the log-line. This procedure cannot be called from outside this module; use &nbsp;<tt>Log</tt>&nbsp; for that.
+</p>
+  </td></tr></table>
+  <br>
+
+<a name="getpatchversion"></a>
+  <table width="100%" border=0 cellspacing=0>
+    <tr class="headline">
+      <td>
+        <p class="item">&nbsp;GetPatchVersion</p>
+      </td>
+      <td align=right>
+        <font size=-2>DanielPharos&nbsp;-&nbsp;20 Sep 2008</font>
+      </td>
+      <td width="1%" align=right nowrap>
+        &nbsp;&nbsp;[&nbsp;<a href="#__top__">Top</a>&nbsp;]&nbsp;
+      </td>
+    </tr>
+  </table>
+  <table border=0 width="100%" cellspacing=10><tr><td>
+<div class="doccode"><pre>
+function GetPatchVersion: String;
+</pre></div>
+
+<p>This procedure retrieves the patch version.
+</p><p>This procedure is called from &nbsp;<tt>OpenLogFile</tt>&nbsp;, but doesn't return anything useful, since the patch-file construction is not used anymore.
+</p>
+  </td></tr></table>
+  <br>
+
+<br>
+
+<table width="100%" border=0 cellspacing=0>
+  <tr class="headline">
+    <td width="99%" align=center>
+      <p class="sm">
+        Copyright (c) 2009, GNU General Public License by The QuArK (Quake Army Knife) Community - <a target="_blank" href="http://quark.sourceforge.net/">http://quark.sourceforge.net/</a><br>
+      </p>
+    </td>
+    <td width="1%" align=right nowrap>
+      &nbsp;[&nbsp;<span class="navenable"><a href="src.pas.extrafunctionality.html">Prev</a></span>&nbsp;-&nbsp;<a href="#__top__">Top</a>&nbsp;-&nbsp;<span class="navenable"><a href="src.pas.qk1.html">Next</a></span>&nbsp;]&nbsp;
+    </td>
+  </tr>
+</table>
+</body>
+</html>

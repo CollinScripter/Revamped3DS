@@ -1,0 +1,175 @@
+QQRKSRC1
+{
+  QuArKProtected = "1"
+  Description = "HL Textures - War In Europe"
+
+//
+// War In Europe
+//
+  WIETextures.qtx =
+  {
+    ToolBox = "Texture Browser..."
+    Root = "War In Europe Textures.qtxfolder"
+    HTML = "intro.texturebrowser.html"
+
+    // Raw definition of WAD3 files
+    t_wie_wie_wad:incl = { s = "wie" d = "wie_wad" h = "C" }
+    t_wie_corpes:incl = { s = "wie" d = "corpes" h = "C" }
+    t_wie_kamikazi_pack1:incl = { s = "wie" d = "kamikazi_pack1" h = "C" }
+
+    War In Europe Textures.qtxfolder =
+    {
+      wie_wad.txlist =
+      {
+        5SHOTWAL.wl = { t_wie_wie_wad = !}
+        ACRUT.wl = { t_wie_wie_wad = !}
+        AWALLF2.wl = { t_wie_wie_wad = !}
+        BRICK.wl = { t_wie_wie_wad = !}
+        BRICK2.wl = {t_wie_wie_wad=!}
+        BRICK3.wl = {t_wie_wie_wad=!}
+        BRICK4.wl = {t_wie_wie_wad=!}
+        BRICK5.wl = {t_wie_wie_wad=!}
+        BRICK6.wl = {t_wie_wie_wad=!}
+        BRICK7.wl = {t_wie_wie_wad=!}
+        BRICK8.wl = {t_wie_wie_wad=!}
+        BRICKWALL.wl = {t_wie_wie_wad=!}
+        BRICKWALL2.wl = {t_wie_wie_wad=!}
+        BRICK_1.wl = {t_wie_wie_wad=!}
+        BRICK_2.wl = {t_wie_wie_wad=!}
+        BRICK_5.wl = {t_wie_wie_wad=!}
+        BRK34.wl = {t_wie_wie_wad=!}
+        CEDFENCE.wl = {t_wie_wie_wad=!}
+        DIRT.wl = {t_wie_wie_wad=!}
+        DIRT1.wl = {t_wie_wie_wad=!}
+        DOOR.wl = {t_wie_wie_wad=!}
+        FOLIAGE.wl = {t_wie_wie_wad=!}
+        GCROSS.wl = {t_wie_wie_wad=!}
+        GRASS.wl = {t_wie_wie_wad=!}
+        GRASS2.wl = {t_wie_wie_wad=!}
+        GRYDIRT1.wl = {t_wie_wie_wad=!}
+        GRYDIRT2.wl = {t_wie_wie_wad=!}
+        LIMESTO3.wl = {t_wie_wie_wad=!}
+        NAZI.wl = {t_wie_wie_wad=!}
+        NAZI2.wl = {t_wie_wie_wad=!}
+        OLDWOOD.wl = {t_wie_wie_wad=!}
+        PAVE142.wl = {t_wie_wie_wad=!}
+        PAVE170.wl = {t_wie_wie_wad=!}
+        PROP1.wl = {t_wie_wie_wad=!}
+        PROP2.wl = {t_wie_wie_wad=!}
+        PROP3.wl = {t_wie_wie_wad=!}
+        PROP4.wl = {t_wie_wie_wad=!}
+        PROP5.wl = {t_wie_wie_wad=!}
+        PROP6.wl = {t_wie_wie_wad=!}
+        PROP7.wl = {t_wie_wie_wad=!}
+        PROP8.wl = {t_wie_wie_wad=!}
+        RAILROAD.wl = {t_wie_wie_wad=!}
+        ROAD.wl = {t_wie_wie_wad=!}
+        ROOFING.wl = {t_wie_wie_wad=!}
+        RUBBLE.wl = {t_wie_wie_wad=!}
+        RUBBLE2.wl = {t_wie_wie_wad=!}
+        SAND3.wl = {t_wie_wie_wad=!}
+        SANDBAGS1.wl = {t_wie_wie_wad=!}
+        SHINGLE.wl = {t_wie_wie_wad=!}
+        SIGN.wl = {t_wie_wie_wad=!}
+//      SIGN2.wl = {t_wie_wie_wad=!}
+//      SIGN3.wl = {t_wie_wie_wad=!}
+        STONES.wl = {t_wie_wie_wad=!}
+        STONEWALL2.wl = {t_wie_wie_wad=!}
+        STONEWALL3.wl = {t_wie_wie_wad=!}
+        TEX1.wl = {t_wie_wie_wad=!}
+        TEX2.wl = {t_wie_wie_wad=!}
+        TEX3.wl = {t_wie_wie_wad=!}
+        TIRE2_S.wl = {t_wie_wie_wad=!}
+        TIREBUS.wl = {t_wie_wie_wad=!}
+        TIRESIDE.wl = {t_wie_wie_wad=!}
+        TIRE_NKA.wl = {t_wie_wie_wad=!}
+        TREELINE.wl = {t_wie_wie_wad=!}
+        TREELINE2.wl = {t_wie_wie_wad=!}
+        USSTAR.wl = {t_wie_wie_wad=!}
+        WALL.wl = {t_wie_wie_wad=!}
+        WALL013.wl = {t_wie_wie_wad=!}
+        WALL3.wl = {t_wie_wie_wad=!}
+        WALL4.wl = {t_wie_wie_wad=!}
+        WALL5.wl = {t_wie_wie_wad=!}
+        WALL6.wl = {t_wie_wie_wad=!}
+        WALLBRICK.wl = {t_wie_wie_wad=!}
+        WALLLBRICK1.wl = {t_wie_wie_wad=!}
+        WALL_1.wl = {t_wie_wie_wad=!}
+        WALL_2.wl = {t_wie_wie_wad=!}
+        WALL_4.wl = {t_wie_wie_wad=!}
+        WEEDS.wl = {t_wie_wie_wad=!}
+        WHEEL.wl = {t_wie_wie_wad=!}
+        WINDOW.wl = {t_wie_wie_wad=!}
+        WINDOW2.wl = {t_wie_wie_wad=!}
+        WINDOW3.wl = {t_wie_wie_wad=!}
+        WINDOW4.wl = {t_wie_wie_wad=!}
+        WINDOW5.wl = {t_wie_wie_wad=!}
+        WOOD.wl = {t_wie_wie_wad=!}
+      }
+      corpes.txlist =
+      {
+        Agent.wl = {t_wie_corpes=!}
+      }
+      kamikazi_pack1.txlist =
+      {
+        tile_1.wl = {t_wie_kamikazi_pack1=!}
+        mesh_1.wl = {t_wie_kamikazi_pack1=!}
+        cement_1.wl = {t_wie_kamikazi_pack1=!}
+        metal_sding1.wl = {t_wie_kamikazi_pack1=!}
+        cement_2.wl = {t_wie_kamikazi_pack1=!}
+        dark_rock1.wl = {t_wie_kamikazi_pack1=!}
+        cement_4.wl = {t_wie_kamikazi_pack1=!}
+        cement_5.wl = {t_wie_kamikazi_pack1=!}
+        crate_wood.wl = {t_wie_kamikazi_pack1=!}
+        light_side.wl = {t_wie_kamikazi_pack1=!}
+        marble1.wl = {t_wie_kamikazi_pack1=!}
+        rock_1.wl = {t_wie_kamikazi_pack1=!}
+        sand_1.wl = {t_wie_kamikazi_pack1=!}
+        crate_wood2.wl = {t_wie_kamikazi_pack1=!}
+        crate_wood3.wl = {t_wie_kamikazi_pack1=!}
+        {cargo_net1.wl = {t_wie_kamikazi_pack1=!}
+        {cargo_net2.wl = {t_wie_kamikazi_pack1=!}
+        wood_floor1.wl = {t_wie_kamikazi_pack1=!}
+        whell_log1.wl = {t_wie_kamikazi_pack1=!}
+        wood_floor2.wl = {t_wie_kamikazi_pack1=!}
+        tile_2.wl = {t_wie_kamikazi_pack1=!}
+        tile_3.wl = {t_wie_kamikazi_pack1=!}
+        stone_wall1.wl = {t_wie_kamikazi_pack1=!}
+        stone_wall2.wl = {t_wie_kamikazi_pack1=!}
+        tile_4.wl = {t_wie_kamikazi_pack1=!}
+        wood_floor3.wl = {t_wie_kamikazi_pack1=!}
+        brick_1.wl = {t_wie_kamikazi_pack1=!}
+        brick_2.wl = {t_wie_kamikazi_pack1=!}
+        rock_2.wl = {t_wie_kamikazi_pack1=!}
+        stone_wall3.wl = {t_wie_kamikazi_pack1=!}
+        dirt_1.wl = {t_wie_kamikazi_pack1=!}
+        Dark_wood1.wl = {t_wie_kamikazi_pack1=!}
+        stone_wall4.wl = {t_wie_kamikazi_pack1=!}
+        birch_tree1.wl = {t_wie_kamikazi_pack1=!}
+        HAVAC_PANEL1.wl = {t_wie_kamikazi_pack1=!}
+        stone_wall5.wl = {t_wie_kamikazi_pack1=!}
+        tree_wood2.wl = {t_wie_kamikazi_pack1=!}
+        dirt_2.wl = {t_wie_kamikazi_pack1=!}
+        stone_wall6.wl = {t_wie_kamikazi_pack1=!}
+        stone_wall7.wl = {t_wie_kamikazi_pack1=!}
+        brick_3.wl = {t_wie_kamikazi_pack1=!}
+        stone_wall8.wl = {t_wie_kamikazi_pack1=!}
+        stone_wall9.wl = {t_wie_kamikazi_pack1=!}
+        {wires_1.wl = {t_wie_kamikazi_pack1=!}
+        !Kam_water2.wl = {t_wie_kamikazi_pack1=!}
+        sand2.wl = {t_wie_kamikazi_pack1=!}
+        brick_5.wl = {t_wie_kamikazi_pack1=!}
+        wood_panel1.wl = {t_wie_kamikazi_pack1=!}
+        white_wood1.wl = {t_wie_kamikazi_pack1=!}
+        white_wood2.wl = {t_wie_kamikazi_pack1=!}
+        barrel_1.wl = {t_wie_kamikazi_pack1=!}
+        rusty_wall1.wl = {t_wie_kamikazi_pack1=!}
+        rock_3.wl = {t_wie_kamikazi_pack1=!}
+        wood_panel2.wl = {t_wie_kamikazi_pack1=!}
+        roof_panel1.wl = {t_wie_kamikazi_pack1=!}
+        wood_floor4.wl = {t_wie_kamikazi_pack1=!}
+        dirt_3.wl = {t_wie_kamikazi_pack1=!}
+      }
+    }
+  }
+}

@@ -1,0 +1,158 @@
+QQRKSRC1
+// This file has been written by QuArK QuArK 6.4 alpha
+// It's the text version of file: hl2mp.qrk
+
+// HL2 MP (multiplayer) Entities. last changes july/09/2005 by cbxpm.
+
+{
+  Description = "HL2 MP Entities"
+  Toolbox Folders.qtx =
+  {
+    Toolbox = "New map items..."
+    Root = "HL2 MP Entities.qtxfolder"
+    HL2 MP Entities.qtxfolder =
+    {
+
+// filter entities
+
+      filter_* entities.qtxfolder =
+      {
+        filter_activator_team:e =
+        {
+          origin = "0 0 0"
+          ;desc = "A filter that filters by the team of the activator."
+          filterteam = "2"
+        }
+      }
+
+// info entities
+
+      info_* entities.qtxfolder =
+      {
+        info_player_combine:e =
+        {
+          origin = "0 0 0"
+          ;desc = "This entity indicates the position and facing direction at "
+           "which the player will spawn during a deathmatch map. Any number of"
+           " info_player_deathmatch entities may be placed in a map."
+        }
+        info_player_deathmatch:e =
+        {
+          origin = "0 0 0"
+          ;desc = "This entity indicates the position and facing direction at "
+           "which the player will spawn during a deathmatch map. Any number of"
+           " info_player_deathmatch entities may be placed in a map."
+        }
+        info_player_rebel:e =
+        {
+          origin = "0 0 0"
+          ;desc = "This entity indicates the position and facing direction at "
+           "which the player will spawn during a deathmatch map. Any number of"
+           " info_player_deathmatch entities may be placed in a map."
+        }
+        info_teleporter_countdown:e =
+        {
+          origin = "0 0 0"
+          ;desc = "Countdown timer for the teleporter. The status of the telep"
+           "orter will appear on vgui_screen entities whose panel is 'teleport"
+           "_countdown_screen'."
+        }
+      }
+
+// prop entities
+
+      prop_* entities.qtxfolder =
+      {
+        prop_physics_respawnable:e =
+        {
+          origin = "0 0 0"
+          ;desc = "This class is the same as prop_physics, except it respawns "
+           "after it breaks"
+          RespawnTime = "60"
+        }
+      }
+
+// weapon entities
+
+      weapon_* entities.qtxfolder =
+      {
+        weapon_slam:e =
+        {
+          origin = "0 0 0"
+          ;desc = "S.L.A.M. - Selectable Lightweight Attack Munition"
+        }
+      }
+    }
+  }
+
+  Entity Forms.fctx =
+  {
+    info_teleporter_countdown:form =
+    {
+      t_Targetname = !
+      input#StartCountdown: =
+      {
+        txt = "&"
+        hint = "Starts the teleporter countdown. Requires an argument which is"
+         " the number of seconds for the countdown."
+      }
+      input#StopCountdown: =
+      {
+        txt = "&"
+        hint = "Stops the countdown permanently"
+      }
+      input#Disable: =
+      {
+        txt = "&"
+        hint = "Pauses the countdown due to a temporary malfunction. A warning"
+         " sign will appear on the linked vgui screens."
+      }
+      input#Enable: =
+      {
+        txt = "&"
+        hint = "Restarts the countdown since the malfunction is finished."
+      }
+    }
+    info_player_deathmatch:form =
+    {
+      t_PlayerClass = !
+      t_Angles = !
+    }
+    info_player_combine:form =
+    {
+      t_PlayerClass = !
+      t_Angles = !
+    }
+    info_player_rebel:form =
+    {
+      t_PlayerClass = !
+      t_Angles = !
+    }
+    filter_activator_team:form =
+    {
+      bbox = '-8 -8 -8 8 8 8'
+      t_BaseFilter = !
+      filterteam: =
+      {
+        txt = "&"
+        hint = "Filter Team Number"
+        typ = "C"
+        items = "Combine"$0D"Rebels"
+        values = "2"$0D"3"
+      }
+    }
+    prop_physics_respawnable:form =
+    {
+      t_prop_physics = !
+      RespawnTime: =
+      {
+        txt = "&"
+        hint = "Respawn Time"
+      }
+    }
+    weapon_slam:form =
+    {
+      t_Weapon = !
+    }
+  }
+}

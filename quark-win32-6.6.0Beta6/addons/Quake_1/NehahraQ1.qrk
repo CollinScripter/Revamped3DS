@@ -1,0 +1,2541 @@
+QQRKSRC1
+//$Header: /cvsroot/quark/runtime/addons/Quake_1/NehahraQ1.qrk,v 1.4 2005/10/15 01:00:27 cdunde Exp $
+// ----------- REVISION HISTORY ------------
+//$Log: NehahraQ1.qrk,v $
+//Revision 1.4  2005/10/15 01:00:27  cdunde
+//To reinstate headers and history
+//
+//Revision 1.1  2001/02/11 11:07:05  decker_dk
+//Moved from addons directory
+//
+{
+	QuArKProtected = "1"
+    Nehahra directory infos.qctx =
+	{
+        Game = "Quake 1"
+        SourceDir = "Nehahra"
+        GameDir = "Nehahra"
+	}
+
+	NewMapItems.qtx =
+	{
+
+		ToolBox = "New Map Items..."
+        Root = "Nehahra Entities.qtxfolder"
+        Nehahra Entities.qtxfolder =
+		{
+            Player.qtxfolder =
+			{
+                info_player_start:e = { angle="360" origin="0 0 0" ;desc="Player 1 start" }
+                info_player_deathmatch:e = { angle="360" origin="0 0 0" ;desc="Player deathmatch start" }
+                info_player_coop:e = { angle="360" origin="0 0 0" ;desc="Player cooperative start" }
+                info_player_start2:e = { angle="360" origin="0 0 0" ;desc="Player episode return point" }
+            }
+            Info_.qtxfolder =
+            {
+                info_teleport_destination:e = { angle="360" origin="0 0 0" ;desc="Teleport destination" }
+                info_null:e = { angle="360" origin="0 0 0" ;desc="info_null (spotlight target)" }
+                info_start:e = { angle="360" origin="0 0 0" ;desc="info_start"
+                            fog_enable="0"
+                            fog_start="50"
+                            fog_end="1500"
+                            fog_density="1"
+                            fog_red="1"
+                            fog_green="1"
+                            fog_blue="1"
+                            gravity="800"
+                            walpha="1"
+                            wripple="0"
+                }
+                info_player_team1:e = { angle="360" origin="0 0 0" ;desc="CTF: Red team base start" }
+                info_player_team2:e = { angle="360" origin="0 0 0" ;desc="CTF: Blue team base start" }
+                info_intermission:e = { angle="360" origin="0 0 0" ;desc="Intermission camera" }
+                info_jagnest:e = { angle="360" origin="0 0 0" ;desc="jagnest" }
+                info_jagwater:e = { angle="360" origin="0 0 0" ;desc="jagwater" }
+                info_throw_rubble:e = { angle="360" origin="0 0 0" ;desc="Rubble thrower"
+                            cnt="2000"
+                            dmg="0"
+                }
+                info_weight_switch:e = { angle="360" origin="0 0 0" ;desc="Weight switch" }
+                info_particles:e = { angle="360" origin="0 0 0" ;desc="Particle effect"
+                            method="0"
+                            endtime="0"
+                }
+                info_idscale:e = { angle="360" origin="0 0 0" ;desc="Wave Effect"
+                            message="1"
+                }
+                info_camera:e = { angle="360" origin="0 0 0" ;desc="Movie Camera" }
+                info_script:e = { angle="360" origin="0 0 0" ;desc="Script Machine"
+                            script_num="0"
+                            next_script="0"
+                            script_delay="0"
+                }
+                info_movecam:e = { angle="360" origin="0 0 0" ;desc="Active Camera Finder" }
+                info_fadeout:e = { angle="360" origin="0 0 0" ;desc="Fadeout picture"
+                            speed="0"
+                }
+                info_fadein:e = { angle="360" origin="0 0 0" ;desc="Fadein picture"
+                            speed="0"
+                }
+                info_rotate:e = { angle="360" origin="0 0 0" ;desc="Point of rotation" }
+            }
+            Item_.qtxfolder =
+            {
+                item_flag_team1:e = { angle="360" origin="0 0 0" ;desc="CTF: Red Team Flag" }
+                item_flag_team2:e = { angle="360" origin="0 0 0" ;desc="CTF: Blue Team Flag" }
+                item_cells:e = { angle="360" origin="0 0 0" ;desc="Thunderbolt ammo" }
+                item_rockets:e = { angle="360" origin="0 0 0" ;desc="Rockets" }
+                item_shells:e = { angle="360" origin="0 0 0" ;desc="Shells" }
+                item_spikes:e = { angle="360" origin="0 0 0" ;desc="Perforator/Nailgun ammo" }
+                item2_health:e = { angle="360" origin="0 0 0" ;desc="Medieval health pack" }
+                item_health:e = { angle="360" origin="0 0 0" ;desc="Health pack" }
+                item_artifact_envirosuit:e = { angle="360" origin="0 0 0" ;desc="Environmental protection suit" }
+                item_artifact_super_damage:e = { angle="360" origin="0 0 0" ;desc="Quad damage" }
+                item_artifact_invulnerability:e = { angle="360" origin="0 0 0" ;desc="Pentagram of Protection" }
+                item_artifact_invisibility:e = { angle="360" origin="0 0 0" ;desc="Ring of Shadows" }
+                item_armorInv:e = { angle="360" origin="0 0 0" ;desc="200% armor (Red)" }
+                item_armor2:e = { angle="360" origin="0 0 0" ;desc="150% armor (Yellow)" }
+                item_armor1:e = { angle="360" origin="0 0 0" ;desc="100% armor (Green)" }
+                item_key1:e = { angle="360" origin="0 0 0" ;desc="Silver key" }
+                item_key2:e = { angle="360" origin="0 0 0" ;desc="Gold key" }
+                item_sigil:e = { angle="360" origin="0 0 0" ;desc="Sigil" }
+                item_artifact_regeneration:e = { angle="360" origin="0 0 0" ;desc="regen" }
+                item_artifact_flight:e = { angle="360" origin="0 0 0" ;desc="flight" }
+                item_artifact_resurrection:e = { angle="360" origin="0 0 0" ;desc="resurrection" }
+            }
+            Weapon_.qtxfolder =
+            {
+                weapon_supershotgun:e = { angle="360" origin="0 0 0" ;desc="Super shotgun" }
+                weapon_nailgun:e = { angle="360" origin="0 0 0" ;desc="Nailgun" }
+                weapon_supernailgun:e = { angle="360" origin="0 0 0" ;desc="autoshotgun" }
+                weapon_grenadelauncher:e = { angle="360" origin="0 0 0" ;desc="Grenade launcher" }
+                weapon_rocketlauncher:e = { angle="360" origin="0 0 0" ;desc="Rocket launcher" }
+                weapon_lightning:e = { angle="360" origin="0 0 0" ;desc="Thunderbolt" }
+                weapon_sprocket:e = { angle="360" origin="0 0 0" ;desc="sprocket!" }
+                weapon_sword:e = { angle="360" origin="0 0 0" ;desc="sword" }
+                weapon_gshotgun:e = { angle="360" origin="0 0 0" ;desc="gshotgun" }
+            }
+            Monster_.qtxfolder =
+            {
+                monster_army:e = { angle="360" origin="0 0 0" ;desc="Grunt sg" }
+                monster_army2:e = { angle="360" origin="0 0 0" ;desc="Grunt sg rl" }
+                monster_army3:e = { angle="360" origin="0 0 0" ;desc="Grunt ng" }
+                monster_army4:e = { angle="360" origin="0 0 0" ;desc="Grunt st gl rl" }
+                monster_enforcer:e = { angle="360" origin="0 0 0" ;desc="Enforcer" }
+                monster_enf2:e = { angle="360" origin="0 0 0" ;desc="Enforcer2 asg" }
+                monster_enf3:e = { angle="360" origin="0 0 0" ;desc="Enforcer3 ng" }
+                monster_qguy:e = { angle="360" origin="0 0 0" ;desc="quake guy"
+                            cnt="0"
+                }
+                monster_hunter:e = { angle="360" origin="0 0 0" ;desc="hunter"
+                            impulse="1"
+                }
+                monster_gaunt:e = { angle="360" origin="0 0 0" ;desc="gaunt"
+                            cnt="0"
+                }
+                monster_archgaunt:e = { angle="360" origin="0 0 0" ;desc="archgaunt" }
+                monster_library:e = { angle="360" origin="0 0 0" ;desc="library gaunt" }
+                monster_cook:e = { angle="360" origin="0 0 0" ;desc="ogre cook" }
+                monster_dog:e = { angle="360" origin="0 0 0" ;desc="Nasty Doggie" }
+                monster_ogre:e = { angle="360" origin="0 0 0" ;desc="Ogre" }
+                monster_oglib:e = { angle="360" origin="0 0 0" ;desc="Ogre librerian" }
+                monster_ogre_marksman:e = { angle="360" origin="0 0 0" ;desc="Ogre marksman" }
+                monster_knight:e = { angle="360" origin="0 0 0" ;desc="Knight" }
+                monster_hell_knight:e = { angle="360" origin="0 0 0" ;desc="Hell knight" }
+                monster_baron:e = { angle="360" origin="0 0 0" ;desc="Hell baron" }
+                monster_wizard:e = { angle="360" origin="0 0 0" ;desc="Scrag" }
+                monster_wraith:e = { angle="360" origin="0 0 0" ;desc="wraith" }
+                monster_demon1:e = { angle="360" origin="0 0 0" ;desc="Fiend" }
+                monster_jagger:e = { angle="360" origin="0 0 0" ;desc="jagger" }
+                monster_vomitus:e = { angle="360" origin="0 0 0" ;desc="Vomitus" }
+                monster_shambler:e = { angle="360" origin="0 0 0" ;desc="Shambler" }
+                monster_boss:e = { angle="360" origin="0 0 0" ;desc="Chthon" }
+                monster_drone:e = { angle="360" origin="0 0 0" ;desc="Drone" }
+                monster_shalrath:e = { angle="360" origin="0 0 0" ;desc="Shalrath" }
+                monster_tarbaby:e = { angle="360" origin="0 0 0" ;desc="Tarbaby" }
+                monster_fish:e = { angle="360" origin="0 0 0" ;desc="Rotfish" }
+                monster_oldone:e = { angle="360" origin="0 0 0" ;desc="Shub-Niggurath" }
+                monster_zombie:e = { angle="360" origin="0 0 0" ;desc="Zombie" }
+                monster_beard:e = { angle="360" origin="0 0 0" ;desc="Bearded boss" }
+                monster_nehahra:e = { angle="360" origin="0 0 0" ;desc="Nehahra" }
+            }
+            Light_.qtxfolder =
+            {
+                light:e = { angle="360" origin="0 0 0" ;desc="Invisible lightsource" }
+                light_lantern:e = { angle="360" origin="0 0 0" ;desc="lantern" }
+                light_candle_t:e = { angle="360" origin="0 0 0" ;desc="Thin candle" }
+                light_candle_w:e = { angle="360" origin="0 0 0" ;desc="Thick candle" }
+                light_candlews:e = { angle="360" origin="0 0 0" ;desc="Candle on wood holder" }
+                light_candleth:e = { angle="360" origin="0 0 0" ;desc="Candle on holder" }
+                light_swinging_lantern:e = { angle="360" origin="0 0 0" ;desc="swinging lantern" }
+                light_fluoro:e = { angle="360" origin="0 0 0" ;desc="Fluorescent light" }
+                light_fluorospark:e = { angle="360" origin="0 0 0" ;desc="Sparking fluorescent light" }
+                light_globe:e = { angle="360" origin="0 0 0" ;desc="Globe light" }
+                light_flame_large_yellow:e = { angle="360" origin="0 0 0" ;desc="Large yellow flame" }
+                light_flame_small_yellow:e = { angle="360" origin="0 0 0" ;desc="Small yellow flame" }
+                light_flame_small_white:e = { angle="360" origin="0 0 0" ;desc="Small white flame" }
+                light_torch_small_walltorch:e = { angle="360" origin="0 0 0" ;desc="Small walltorch" }
+            }
+            Misc_.qtxfolder =
+            {
+                air_bubbles:e = { angle="360" origin="0 0 0" ;desc="Air bubbles" }
+                event_lightning:e = { angle="360" origin="0 0 0" ;desc="Chthon's lightning" }
+                main_weight_switch:e = { angle="360" origin="0 0 0" ;desc="Main weight switch" }
+                trap_spikeshooter:e = { angle="360" origin="0 0 0" ;desc="Triggered shooter" }
+                trap_shooter:e = { angle="360" origin="0 0 0" ;desc="Continuous shooter" }
+                custom_item:e = { angle="360" origin="0 0 0" ;desc="Customizable item"
+                            skin="1"
+                            frame="1"
+                }
+                trigger_custom:b = { angle="360" ;incl="defpoly" ;desc="Trigger for custom_item" }
+                misc_fireball:e = { angle="360" origin="0 0 0" ;desc="Small fireball"
+                            speed="40"
+                }
+                misc_explobox:e = { angle="360" origin="0 0 0" ;desc="Large nuclear container" }
+                misc_explobox2:e = { angle="360" origin="0 0 0" ;desc="Small nuclear container" }
+                misc_boom:e = { angle="360" origin="0 0 0" ;desc="Misc_boom" }
+                misc_smokemaker:e = { angle="360" origin="0 0 0" ;desc="Smokemaker"
+                            speed="2000"
+                }
+                misc_slime_ball:e = { angle="360" origin="0 0 0" ;desc="Ball of green gunk"
+                            speed="40"
+                }
+                misc_barrel:e = { angle="360" origin="0 0 0" ;desc="explosive barrel"
+                            frame="0"
+                }
+                misc_corpse:e = { angle="360" origin="0 0 0" ;desc="corpse"
+                            cnt="0"
+                }
+                misc_hummer:e = { angle="360" origin="0 0 0" ;desc="Hummer" }
+                misc_vend:e = { angle="360" origin="0 0 0" ;desc="Vending machine"
+                            skin="0"
+                }
+                misc_sign:e = { angle="360" origin="0 0 0" ;desc="Forge city sign"
+                            skin="0"
+                            frame="0"
+                            cnt="0"
+                }
+                misc_motel:e = { angle="360" origin="0 0 0" ;desc="Motel sign" }
+                misc_fscreen:e = { angle="360" origin="0 0 0" ;desc="Computer screen"
+                            frame="0"
+                }
+                misc_valve:e = { angle="360" origin="0 0 0" ;desc="Valve" }
+                misc_tree:e = { angle="360" origin="0 0 0" ;desc="Tree"
+                            cnt="0"
+                }
+                misc_misc:e = { angle="360" origin="0 0 0" ;desc="Idle model" }
+            }
+            Ambient_.qtxfolder =
+            {
+                ambient_drip:e = { angle="360" origin="0 0 0" ;desc="Dripping sound" }
+                ambient_drone:e = { angle="360" origin="0 0 0" ;desc="Engine/machinery sound" }
+                ambient_comp_hum:e = { angle="360" origin="0 0 0" ;desc="Computer background sounds" }
+                ambient_flouro_buzz:e = { angle="360" origin="0 0 0" ;desc="Fluorescent buzzing sound" }
+                ambient_light_buzz:e = { angle="360" origin="0 0 0" ;desc="Buzzing sound from light" }
+                ambient_suck_wind:e = { angle="360" origin="0 0 0" ;desc="Wind sound" }
+                ambient_swamp1:e = { angle="360" origin="0 0 0" ;desc="Frogs croaking" }
+                ambient_swamp2:e = { angle="360" origin="0 0 0" ;desc="Frogs croaking B" }
+                ambient_thunder:e = { angle="360" origin="0 0 0" ;desc="Thunder sound" }
+                ambient_swamp3:e = { angle="360" origin="0 0 0" ;desc="swamp3" }
+                ambient_rain:e = { angle="360" origin="0 0 0" ;desc="rain" }
+                ambient_humming:e = { angle="360" origin="0 0 0" ;desc="humming" }
+                ambient_zzxzz:e = { angle="360" origin="0 0 0" ;desc="zzxzz" }
+                ambient_machines:e = { angle="360" origin="0 0 0" ;desc="machines" }
+                ambient_whnoise:e = { angle="360" origin="0 0 0" ;desc="whnoise" }
+                ambient_nehum:e = { angle="360" origin="0 0 0" ;desc="nehum" }
+                ambient_flies:e = { angle="360" origin="0 0 0" ;desc="flies" }
+                ambient_moor:e = { angle="360" origin="0 0 0" ;desc="moor" }
+                ambient_eerie:e = { angle="360" origin="0 0 0" ;desc="eerie" }
+                ambient_fan_blowing:e = { angle="360" origin="0 0 0" ;desc="fanblowing" }
+                ambient_drain:e = { angle="360" origin="0 0 0" ;desc="drain" }
+                ambient_sound:e = { angle="360" origin="0 0 0" ;desc="Generic ambient"
+                            volume="1"
+                }
+                ambient_toggle:e = { angle="360" origin="0 0 0" ;desc="Sound sequence"
+                            delay="5"
+                            wait="10"
+                            impulse="0"
+                }
+                ambient_global:e = { angle="360" origin="0 0 0" ;desc="Global sound"
+                            volume="1"
+                }
+                play_sound:e = { angle="360" origin="0 0 0" ;desc="play sound"
+                            volume="1"
+                            wait="20"
+                            delay="2"
+                            impulse="0"
+                            speed="1"
+                }
+                play_sound_triggered:e = { angle="360" origin="0 0 0" ;desc="Triggered sound"
+                            volume="1.0"
+                            impulse="0"
+                            speed="1"
+                }
+                play_sound_looped:e = { angle="360" origin="0 0 0" ;desc="Looped sound"
+                            wait="20"
+                            volume="1.0"
+                            cnt="0"
+                }
+                snd_beat_toggle:e = { angle="360" origin="0 0 0" ;desc="Rhythm"
+                            volume="1"
+                            delay="2"
+                            wait="20"
+                }
+            }
+            Func_.qtxfolder =
+            {
+                func_door:b = { angle="360" ;incl="defpoly" ;desc="Basic door"
+                            cnt="0"
+                            fullbright="0"
+                }
+                func_door_secret:b = { angle="360" ;incl="defpoly" ;desc="Triggered door"
+                            fullbright="0"
+                }
+                func_wall:b = { angle="360" ;incl="defpoly" ;desc="Moving wall"
+                            fullbright="0"
+                }
+                func_button:b = { angle="360" ;incl="defpoly" ;desc="Button"
+                            speed="5"
+                            sounds="1"
+                            wait="3"
+                            lip="8"
+                            fullbright="0"
+                }
+                func_train:b = { angle="360" ;incl="defpoly" ;desc="Moving platform"
+                            sounds="1"
+                            speed="64"
+                            dmg="0"
+                            fullbright="0"
+                }
+                path_corner:e = { angle="360" origin="0 0 0" ;desc="Moving platform stop" }
+                func_plat:b = { angle="360" ;incl="defpoly" ;desc="Elevator"
+                            height="0"
+                            speed="100"
+                            sounds="1"
+                            fullbright="0"
+                }
+                func_dm_only:b = { angle="360" ;incl="defpoly" ;desc="Deathmatch teleporter" }
+                func_illusionary:b = { angle="360" ;incl="defpoly" ;desc="Solids can be walked through"
+                            fullbright="0"
+                }
+                func_episodegate:b = { angle="360" ;incl="defpoly" ;desc="Episode Gate"
+                            spawnflags="1"
+                            fullbright="0"
+                }
+                func_bossgate:b = { angle="360" ;incl="defpoly" ;desc="Boss gate"
+                            fullbright="0"
+                }
+                func_mindcrime:b = { angle="360" ;incl="defpoly" ;desc="Mindcrime"
+                            speed="0"
+                            impulse="1"
+                            cnt="0"
+                            sounds="0"
+                            dmg="0"
+                            ammo_shells="0"
+                            ammo_nails="0"
+                            ammo_cells="0"
+                            ammo_rockets="0"
+                            armorvalue="0"
+                            items="0"
+                            fullbright="0"
+                }
+                func_earthquake:b = { angle="360" ;incl="defpoly" ;desc="earthquake" }
+                func_pushable:b = { angle="360" ;incl="defpoly" ;desc="Pushable object"
+                            fullbright="0"
+                }
+                func_explodable:b = { angle="360" ;incl="defpoly" ;desc="explodable"
+                            health="100"
+                            dmg="0"
+                            sounds="0"
+                            ammo_shells="0"
+                            ammo_nails="0"
+                            ammo_cells="0"
+                            ammo_rockets="0"
+                            armorvalue="0"
+                            items="0"
+                            fullbright="0"
+                }
+                func_sobject:b = { angle="360" ;incl="defpoly" ;desc="sobject"
+                            health="10"
+                            dmg="0"
+                            sounds="0"
+                            ammo_shells="0"
+                            ammo_nails="0"
+                            ammo_cells="0"
+                            ammo_rockets="0"
+                            armorvalue="0"
+                            items="0"
+                            fullbright="0"
+                }
+                func_quakedmg:b = { angle="360" ;incl="defpoly" ;desc="quakedmg"
+                            dmg="0"
+                            sounds="0"
+                            ammo_shells="0"
+                            ammo_nails="0"
+                            ammo_cells="0"
+                            ammo_rockets="0"
+                            armorvalue="0"
+                            items="0"
+                            fullbright="0"
+                }
+                func_raining:e = { angle="360" origin="0 0 0" ;desc="rain"
+                            cnt="0"
+                            frame="0"
+                }
+                func_object:b = { angle="360" ;incl="defpoly" ;desc="func_object" }
+                func_cover:b = { angle="360" ;incl="defpoly" ;desc="func_cover" }
+                func_remove:b = { angle="360" ;incl="defpoly" ;desc="func_remove" }
+                func_pain:b = { angle="360" ;incl="defpoly" ;desc="func_pain"
+                            cnt="0"
+                }
+                func_bobbingwater:b = { angle="360" ;incl="defpoly" ;desc="bobbingwater" }
+                func_bobbingobject:b = { angle="360" ;incl="defpoly" ;desc="bobbingobject" }
+                func_drift:b = { angle="360" ;incl="defpoly" ;desc="Floating object" }
+            }
+            Effects_.qtxfolder =
+            {
+                efx_lightning:e = { angle="360" origin="0 0 0" ;desc="lightning" }
+                efx_snow:e = { angle="360" origin="0 0 0" ;desc="snow" }
+                floating_gibs:e = { angle="360" origin="0 0 0" ;desc="floating gibs" }
+            }
+            Trigger_.qtxfolder =
+            {
+                trigger_changelevel:b = { angle="360" ;incl="defpoly" ;desc="Trigger: Change level" }
+                trigger_once:b = { angle="360" ;incl="defpoly" ;desc="Trigger: Activate once" }
+                trigger_multiple:b = { angle="360" ;incl="defpoly" ;desc="Trigger: Activate multiple"
+                            wait="10"
+                }
+                trigger_onlyregistered:b = { angle="360" ;incl="defpoly" ;desc="Trigger: Registered only" }
+                trigger_secret:b = { angle="360" ;incl="defpoly" ;desc="Trigger: Secret"
+                            wait="10"
+                }
+                trigger_teleport:b = { angle="360" ;incl="defpoly" ;desc="Trigger teleport" }
+                trigger_qtele:b = { angle="360" ;incl="defpoly" ;desc="Trigger teleport silent" }
+                trigger_setskill:b = { angle="360" ;incl="defpoly" ;desc="Trigger set skill"
+                            message="1"
+                }
+                trigger_relay:e = { angle="360" origin="0 0 0" ;desc="Trigger relay" }
+                trigger_monsterjump:b = { angle="360" ;incl="defpoly" ;desc="Trigger monster jump"
+                            speed="40"
+                            height="128"
+                }
+                trigger_counter:e = { angle="360" origin="0 0 0" ;desc="Trigger counter"
+                            count="2"
+                }
+                trigger_push:b = { angle="360" ;incl="defpoly" ;desc="Trigger player push"
+                            speed="40"
+                            sounds="0"
+                }
+                trigger_hurt:b = { angle="360" ;incl="defpoly" ;desc="Trigger player hurt"
+                            dmg="10"
+                            cnt="0"
+                }
+                trigger_fog:b = { angle="360" ;incl="defpoly" ;desc="Trigger_fog"
+                            fog_disable="1"
+                            fog_start="50"
+                            fog_end="1500"
+                }
+                trigger_console:b = { angle="360" ;incl="defpoly" ;desc="trigger_console"
+                            wait="4"
+                }
+                trigger_camera:b = { angle="360" ;incl="defpoly" ;desc="Trigger Camera"
+                            script="0"
+                            script_delay="0"
+                }
+            }
+            Rotate.qtxfolder =
+            {
+                func_rotate_entity:e = { angle="360" origin="0 0 0" ;desc="Creates rotating entity" }
+                path_rotate:e = { angle="360" origin="0 0 0" ;desc="path_rotate" }
+                func_rotate_train:e = { angle="360" origin="0 0 0" ;desc="Moving platform"
+                            speed="100"
+                            dmg="0"
+                            sounds="1"
+                }
+                rotate_object:b = { angle="360" ;incl="defpoly" ;desc="Object to be rotated" }
+                func_rotate_door:e = { angle="360" origin="0 0 0" ;desc="Create rotating door"
+                            dmg="2"
+                            speed="10"
+                            sounds="1"
+                }
+                func_movewall:b = { angle="360" ;incl="defpoly" ;desc="Emulate collision on rotating brushes"
+                            spawnflags="1"
+                }
+            }
+		}
+	}
+
+	Entity forms.qctx =
+	{
+        worldspawn:form = {
+            message:    = { txt="&" hint="Text on entering the world" }
+            worldtype:    = { typ="C" txt="&" hint="Ambience"
+                items =
+                       "Medieval"
+                    $0D"Runic (metal)"
+                    $0D"Present (base)"
+                values =
+                       "0"
+                    $0D"1"
+                    $0D"2"
+            }
+            sounds:    = { txt="&" hint="CD track to play" }
+            light:    = { txt="&" hint="Default light level" }
+        }
+        t_Appearflags:incl = {
+        }
+        t_Targetname:incl = {
+            targetname:    = { txt="&" hint="Name" }
+        }
+        t_Target:incl = {
+            target:    = { txt="&" hint="Target" }
+        }
+        t_PlayerClass:incl = {
+            bbox = '-16 -16 -24 16 16 32'
+            t_Appearflags = !
+        }
+        info_player_start:form = {
+            t_PlayerClass = !
+        }
+        info_player_deathmatch:form = {
+            t_PlayerClass = !
+        }
+        info_player_coop:form = {
+            t_PlayerClass = !
+        }
+        info_player_start2:form = {
+            t_PlayerClass = !
+        }
+        info_teleport_destination:form = {
+            t_PlayerClass = !
+            t_Targetname = !
+        }
+        info_null:form = {
+            targetname:    = { txt="&" hint="Name" }
+        }
+        info_start:form = {
+            sky:    = { txt="&" hint="Name of skybox" }
+            fog_enable:    = { typ="C" txt="&" hint="Fog when starting."
+                items =
+                       "Off"
+                    $0D"On"
+                values =
+                       "0"
+                    $0D"1"
+            }
+            fog_start:    = { txt="&" hint="Start drawing fog" }
+            fog_end:    = { txt="&" hint="Stop drawing fog" }
+            fog_density:    = { txt="&" hint="Fog density (Relative)" }
+            fog_red:    = { txt="&" hint="Fog redness (Relative)" }
+            fog_green:    = { txt="&" hint="Fog greeness (Relative)" }
+            fog_blue:    = { txt="&" hint="Fog blueness (Relative)" }
+            gravity:    = { txt="&" hint="Gravity" }
+            walpha:    = { txt="&" hint="R_Wateralpha" }
+            wripple:    = { txt="&" hint="Water ripple" }
+            noise:    = { txt="&" hint="Path to ambient mod file" }
+        }
+        item_flag_team1:form = {
+            bbox = '-16 -16 -24 16 16 32'
+            t_Appearflags = !
+        }
+        item_flag_team2:form = {
+            bbox = '-16 -16 -24 16 16 32'
+            t_Appearflags = !
+        }
+        info_player_team1:form = {
+            t_PlayerClass = !
+        }
+        info_player_team2:form = {
+            t_PlayerClass = !
+        }
+        info_intermission:form = {
+            t_Appearflags = !
+            mangle:    = { txt="&" hint="Pitch & Yaw" }
+        }
+        t_Ammo:incl = {
+            bbox = '0 0 0 32 32 32'
+            t_Appearflags = !
+            spawnflags:    = { txt="&" typ="X1" cap="Large box" hint="" }
+        }
+        item_cells:form = {
+            t_Ammo = !
+        }
+        item_rockets:form = {
+            t_Ammo = !
+        }
+        item_shells:form = {
+            t_Ammo = !
+        }
+        item_spikes:form = {
+            t_Ammo = !
+        }
+        item2_health:form = {
+            bbox = '0 0 0 32 32 48'
+            t_Appearflags = !
+            spawnflags:    = { txt="&" typ="X1" cap="Rotten" hint="" }
+            spawnflags:    = { txt="&" typ="X2" cap="Megahealth" hint="" }
+        }
+        item_health:form = {
+            bbox = '0 0 0 32 32 16'
+            t_Appearflags = !
+            spawnflags:    = { txt="&" typ="X1" cap="Rotten" hint="" }
+            spawnflags:    = { txt="&" typ="X2" cap="Megahealth" hint="" }
+        }
+        item_artifact_envirosuit:form = {
+            t_Appearflags = !
+        }
+        item_artifact_super_damage:form = {
+            t_Appearflags = !
+        }
+        item_artifact_invulnerability:form = {
+            t_Appearflags = !
+        }
+        item_artifact_invisibility:form = {
+            t_Appearflags = !
+        }
+        item_armorInv:form = {
+            bbox = '-16 -16 -24 16 16 32'
+            t_Appearflags = !
+        }
+        item_armor2:form = {
+            bbox = '-16 -16 -24 16 16 32'
+            t_Appearflags = !
+        }
+        item_armor1:form = {
+            bbox = '-16 -16 -24 16 16 32'
+            t_Appearflags = !
+        }
+        item_key1:form = {
+            bbox = '-16 -16 -24 16 16 32'
+            t_Appearflags = !
+        }
+        item_key2:form = {
+            bbox = '-16 -16 -24 16 16 32'
+            t_Appearflags = !
+        }
+        item_sigil:form = {
+            bbox = '-16 -16 -24 16 16 32'
+            t_Appearflags = !
+            spawnflags:    = { txt="&" typ="X1" cap="Episode 1" hint="" }
+            spawnflags:    = { txt="&" typ="X2" cap="Episode 2" hint="" }
+            spawnflags:    = { txt="&" typ="X4" cap="Episode 3" hint="" }
+            spawnflags:    = { txt="&" typ="X8" cap="Episode 4" hint="" }
+        }
+        t_Weapon:incl = {
+            bbox = '-16 -16 0 16 16 32'
+            t_Appearflags = !
+        }
+        weapon_supershotgun:form = {
+            t_Weapon = !
+        }
+        weapon_nailgun:form = {
+            t_Weapon = !
+        }
+        weapon_supernailgun:form = {
+            t_Weapon = !
+        }
+        weapon_grenadelauncher:form = {
+            t_Weapon = !
+        }
+        weapon_rocketlauncher:form = {
+            t_Weapon = !
+        }
+        weapon_lightning:form = {
+            t_Weapon = !
+        }
+        weapon_sprocket:form = {
+            t_Weapon = !
+        }
+        weapon_sword:form = {
+            t_Weapon = !
+        }
+        weapon_gshotgun:form = {
+            t_Weapon = !
+        }
+        t_Monster:incl = {
+            t_Appearflags = !
+            t_Target = !
+            t_Targetname = !
+            spawnflags:    = { txt="&" typ="X1" cap="Ambush" hint="" }
+            spawnflags:    = { txt="&" typ="X32" cap="Deaf 'n dumb" hint="" }
+            brain:    = { typ="C" txt="&" hint="Brain See devkit for details"
+                items =
+                       "0 - Brainless"
+                    $0D"1 - NavLogic"
+                    $0D"2 - Intrepid"
+                    $0D"4 - Blink"
+                    $0D"8 - No Jump"
+                    $0D"16 - No swim"
+                    $0D"32 - Spawned"
+                values =
+                       "0"
+                    $0D"1"
+                    $0D"2"
+                    $0D"4"
+                    $0D"8"
+                    $0D"16"
+                    $0D"32"
+            }
+            style:    = { typ="C" txt="&" hint="TFog when spawned?"
+                items =
+                       "Yes"
+                    $0D"No"
+                values =
+                       "0"
+                    $0D"1"
+            }
+            nojump:    = { txt="&" hint="Not jumping monster" }
+            event:    = { txt="&" hint="Follow this monster" }
+            relations:    = { typ="C" txt="&" hint="Relation to player"
+                items =
+                       "Normal (Jaggers and Qguys)"
+                    $0D"Normal Quake monster"
+                    $0D"No attack, easy to irritate"
+                    $0D"Idle ally, attacks if provoked"
+                    $0D"Ally that attempts to follow you"
+                    $0D"Ally that never attacks"
+                values =
+                       "-1"
+                    $0D"0"
+                    $0D"1"
+                    $0D"2"
+                    $0D"3"
+                    $0D"4"
+            }
+        }
+        monster_army:form = {
+            bbox = '-16 -16 -24 16 16 40'
+            t_Monster = !
+            spawnflags:    = { txt="&" typ="X64" cap="controls" hint="" }
+        }
+        monster_army2:form = {
+            bbox = '-16 -16 -24 16 16 40'
+            t_Monster = !
+            spawnflags:    = { txt="&" typ="X64" cap="controls" hint="" }
+        }
+        monster_army3:form = {
+            bbox = '-16 -16 -24 16 16 40'
+            t_Monster = !
+            spawnflags:    = { txt="&" typ="X64" cap="controls" hint="" }
+        }
+        monster_army4:form = {
+            bbox = '-16 -16 -24 16 16 40'
+            t_Monster = !
+            spawnflags:    = { txt="&" typ="X64" cap="controls" hint="" }
+        }
+        monster_enforcer:form = {
+            bbox = '-16 -16 -24 16 16 40'
+            t_Monster = !
+        }
+        monster_enf2:form = {
+            bbox = '-16 -16 -24 16 16 40'
+            t_Monster = !
+        }
+        monster_enf3:form = {
+            bbox = '-16 -16 -24 16 16 40'
+            t_Monster = !
+        }
+        monster_qguy:form = {
+            bbox = '-16 -16 -24 16 16 40'
+            t_Monster = !
+            cnt:    = { txt="&" hint="rl/gl" }
+        }
+        monster_hunter:form = {
+            bbox = '-16 -16 -24 16 16 40'
+            t_Targetname = !
+            t_Appearflags = !
+            impulse:    = { typ="C" txt="&" hint="Weapons"
+                items =
+                       "sg"
+                    $0D"asg"
+                    $0D"ng"
+                    $0D"ssg/sl"
+                    $0D"asg/sl"
+                    $0D"ng/sl"
+                values =
+                       "1"
+                    $0D"2"
+                    $0D"3"
+                    $0D"4"
+                    $0D"5"
+                    $0D"6"
+            }
+            state:    = { typ="C" txt="&" hint="Alert at level load?"
+                items =
+                       "Yes"
+                    $0D"No"
+                values =
+                       "0"
+                    $0D"1"
+            }
+            cnt:    = { txt="&" hint="delay" }
+        }
+        monster_gaunt:form = {
+            bbox = '-16 -16 -24 16 16 40'
+            t_Monster = !
+            spawnflags:    = { txt="&" typ="X64" cap="Dead, set pose" hint="" }
+            spawnflags:    = { txt="&" typ="X128" cap="Crucified, alive" hint="" }
+            cnt:    = { typ="C" txt="&" hint="Death pose"
+                items =
+                       "Random (1 or 2)"
+                    $0D"Stiff"
+                    $0D"Loose"
+                    $0D"Boxed"
+                values =
+                       "0"
+                    $0D"1"
+                    $0D"2"
+                    $0D"3"
+            }
+        }
+        monster_archgaunt:form = {
+            bbox = '-16 -16 -24 16 16 40'
+            t_Monster = !
+            spawnflags:    = { txt="&" typ="X64" cap="Dead in coffin" hint="" }
+        }
+        monster_library:form = {
+            bbox = '-16 -16 -24 16 16 40'
+            t_Monster = !
+        }
+        monster_cook:form = {
+            bbox = '-16 -16 -24 16 16 40'
+            t_Monster = !
+        }
+        monster_dog:form = {
+            bbox = '-32 -32 -24 32 32 40'
+            t_Monster = !
+        }
+        monster_ogre:form = {
+            bbox = '-32 -32 -24 32 32 64'
+            t_Monster = !
+        }
+        monster_oglib:form = {
+            bbox = '-32 -32 -24 32 32 64'
+            t_Monster = !
+        }
+        monster_ogre_marksman:form = {
+            bbox = '-32 -32 -24 32 32 64'
+            t_Monster = !
+        }
+        monster_knight:form = {
+            bbox = '-16 -16 -24 16 16 40'
+            t_Monster = !
+        }
+        monster_hell_knight:form = {
+            bbox = '-16 -16 -24 16 16 40'
+            t_Monster = !
+        }
+        monster_baron:form = {
+            bbox = '-16 -16 -24 16 16 40'
+            t_Monster = !
+        }
+        monster_wizard:form = {
+            bbox = '-16 -16 -24 16 16 40'
+            t_Monster = !
+        }
+        monster_wraith:form = {
+            bbox = '-16 -16 -24 16 16 40'
+            t_Monster = !
+        }
+        monster_demon1:form = {
+            bbox = '-32 -32 -24 32 32 64'
+            t_Monster = !
+            spawnflags:    = { txt="&" typ="X2" cap="alpha fiend" hint="" }
+        }
+        monster_jagger:form = {
+            bbox = '-32 -32 -24 32 32 64'
+            t_Monster = !
+        }
+        monster_vomitus:form = {
+            bbox = '-32 -32 -24 32 32 64'
+            t_Monster = !
+            spawnflags:    = { txt="&" typ="X64" cap="deflated" hint="" }
+        }
+        monster_shambler:form = {
+            bbox = '-32 -32 -24 32 32 64'
+            t_Monster = !
+        }
+        monster_boss:form = {
+            bbox = '-128 -128 -24 128 128 256'
+            t_Monster = !
+        }
+        monster_drone:form = {
+            bbox = '-16 -16 -24 16 16 40'
+            t_Monster = !
+        }
+        monster_shalrath:form = {
+            bbox = '-32 -32 -24 32 32 48'
+            t_Monster = !
+            spawnflags:    = { txt="&" typ="X64" cap="Ceiling" hint="" }
+        }
+        monster_tarbaby:form = {
+            t_Monster = !
+        }
+        monster_fish:form = {
+            t_Monster = !
+        }
+        monster_oldone:form = {
+            bbox = '-16 -16 -24 16 16 32'
+            t_Monster = !
+        }
+        monster_zombie:form = {
+            bbox = '-16 -16 -24 16 16 32'
+            t_Monster = !
+            spawnflags:    = { txt="&" typ="X1" cap="Crucified" hint="" }
+            spawnflags:    = { txt="&" typ="X2" cap="Ambush" hint="" }
+            spawnflags:    = { txt="&" typ="X8" cap="Crucified unmoving" hint="" }
+        }
+        monster_beard:form = {
+        }
+        monster_nehahra:form = {
+        }
+        info_jagnest:form = {
+        }
+        info_jagwater:form = {
+            spawnflags:    = { txt="&" typ="X1" cap="info_jagout" hint="" }
+        }
+        t_Light:incl = {
+            light:    = { txt="&" hint="Brightness" }
+            message:    = { txt="&" hint="LightDLX tags" }
+            wait:    = { txt="&" hint="Fading" }
+            delay:    = { txt="&" hint="Attenuation" }
+            style:    = { typ="C" txt="&" hint="Appearance"
+                items =
+                       "Normal"
+                    $0D"Fluorescent flicker"
+                    $0D"Slow, strong pulse"
+                    $0D"Slow pulse, noblack"
+                    $0D"Gentle pulse"
+                    $0D"Flicker A"
+                    $0D"Flicker B"
+                    $0D"Candle A"
+                    $0D"Candle B"
+                    $0D"Candle C"
+                    $0D"Fast strobe"
+                    $0D"Slow strobe"
+                    $0D"throb1"
+                    $0D"creepy pulse"
+                    $0D"Neh strobe"
+                    $0D"flash1"
+                    $0D"flash2"
+                    $0D"flash3"
+                values =
+                       "0"
+                    $0D"10"
+                    $0D"2"
+                    $0D"11"
+                    $0D"5"
+                    $0D"1"
+                    $0D"6"
+                    $0D"3"
+                    $0D"7"
+                    $0D"8"
+                    $0D"4"
+                    $0D"9"
+                    $0D"15"
+                    $0D"16"
+                    $0D"19"
+                    $0D"12"
+                    $0D"13"
+                    $0D"18"
+            }
+        }
+        light:form = {
+            bbox = '-8 -8 -8 8 8 8'
+            t_Light = !
+            t_Target = !
+            t_Targetname = !
+            spawnflags:    = { txt="&" typ="X1" cap="Initially dark" hint="" }
+        }
+        light_lantern:form = {
+            bbox = '-8 -8 -24 8 8 8'
+            t_Light = !
+            t_Target = !
+            t_Targetname = !
+            spawnflags:    = { txt="&" typ="X1" cap="Initially dark" hint="" }
+        }
+        light_candle_t:form = {
+            bbox = '-4 -4 0 4 4 16'
+            t_Light = !
+            t_Target = !
+            t_Targetname = !
+            spawnflags:    = { txt="&" typ="X1" cap="Initially dark" hint="" }
+        }
+        light_candle_w:form = {
+            bbox = '-4 -4 0 4 4 16'
+            t_Light = !
+            t_Target = !
+            t_Targetname = !
+            spawnflags:    = { txt="&" typ="X1" cap="Initially dark" hint="" }
+        }
+        light_candlews:form = {
+            bbox = '-8 -8 -16 8 0 16'
+            t_Light = !
+            t_Target = !
+            t_Targetname = !
+            spawnflags:    = { txt="&" typ="X1" cap="Initially dark" hint="" }
+        }
+        light_candleth:form = {
+            bbox = '-4 -4 0 4 4 40'
+            t_Light = !
+            t_Target = !
+            t_Targetname = !
+            spawnflags:    = { txt="&" typ="X1" cap="Initially dark" hint="" }
+        }
+        light_swinging_lantern:form = {
+            bbox = '-8 -8 -24 8 8 8'
+            t_Light = !
+            t_Target = !
+            t_Targetname = !
+            spawnflags:    = { txt="&" typ="X1" cap="Initially dark" hint="" }
+        }
+        light_fluoro:form = {
+            bbox = '-8 -8 -8 8 8 8'
+            t_Light = !
+            t_Targetname = !
+            t_Target = !
+            spawnflags:    = { txt="&" typ="X1" cap="Initially dark" hint="" }
+        }
+        light_fluorospark:form = {
+            bbox = '-8 -8 -8 8 8 8'
+            t_Light = !
+            t_Targetname = !
+            t_Target = !
+            spawnflags:    = { txt="&" typ="X1" cap="Initially dark" hint="" }
+        }
+        light_globe:form = {
+            bbox = '-8 -8 -8 8 8 8'
+            t_Light = !
+            t_Targetname = !
+            t_Target = !
+        }
+        light_flame_large_yellow:form = {
+            bbox = '-10 -10 -12 12 12 18'
+            t_Light = !
+            t_Targetname = !
+            t_Target = !
+        }
+        light_flame_small_yellow:form = {
+            bbox = '-10 -10 -12 12 12 18'
+            t_Light = !
+            t_Targetname = !
+            t_Target = !
+            spawnflags:    = { txt="&" typ="X1" cap="Initially dark" hint="" }
+        }
+        light_flame_small_white:form = {
+            bbox = '-10 -10 -12 12 12 18'
+            t_Light = !
+            t_Targetname = !
+            t_Target = !
+            spawnflags:    = { txt="&" typ="X1" cap="Initially dark" hint="" }
+        }
+        light_torch_small_walltorch:form = {
+            bbox = '-10 -10 -20 10 10 20'
+            t_Light = !
+            t_Targetname = !
+            t_Target = !
+        }
+        air_bubbles:form = {
+            t_Appearflags = !
+        }
+        event_lightning:form = {
+            t_Appearflags = !
+            t_Targetname = !
+        }
+        misc_fireball:form = {
+            t_Appearflags = !
+            speed:    = { txt="&" hint="Speed" }
+        }
+        misc_explobox:form = {
+        }
+        misc_explobox2:form = {
+        }
+        t_trap_spikeshooter:incl = {
+            t_Targetname = !
+            spawnflags:    = { txt="&" typ="X1" cap="Superspike" hint="" }
+            spawnflags:    = { txt="&" typ="X2" cap="Laser" hint="" }
+        }
+        trap_spikeshooter:form = {
+            t_trap_spikeshooter = !
+        }
+        trap_shooter:form = {
+            t_trap_spikeshooter = !
+        }
+        ambient_drip:form = {
+        }
+        ambient_drone:form = {
+        }
+        ambient_comp_hum:form = {
+        }
+        ambient_flouro_buzz:form = {
+        }
+        ambient_light_buzz:form = {
+        }
+        ambient_suck_wind:form = {
+        }
+        ambient_swamp1:form = {
+        }
+        ambient_swamp2:form = {
+        }
+        ambient_thunder:form = {
+        }
+        ambient_swamp3:form = {
+        }
+        ambient_rain:form = {
+        }
+        ambient_humming:form = {
+        }
+        ambient_zzxzz:form = {
+        }
+        ambient_machines:form = {
+        }
+        ambient_whnoise:form = {
+        }
+        ambient_nehum:form = {
+        }
+        ambient_flies:form = {
+        }
+        ambient_moor:form = {
+        }
+        ambient_eerie:form = {
+        }
+        ambient_fan_blowing:form = {
+        }
+        ambient_drain:form = {
+        }
+        ambient_sound:form = {
+            noise:    = { txt="&" hint="wav file to use" }
+            volume:    = { txt="&" hint="Sound volume (1-0)" }
+        }
+        play_sound:form = {
+            t_Target = !
+            volume:    = { txt="&" hint="Volume" }
+            noise:    = { txt="&" hint="Path to .wav" }
+            wait:    = { txt="&" hint="Base wait time" }
+            delay:    = { txt="&" hint="Random variation" }
+            impulse:    = { txt="&" hint="Channel to play on (1-7)" }
+            speed:    = { typ="C" txt="&" hint="Attenuation"
+                items =
+                       "no attenuation"
+                    $0D"normal"
+                    $0D"idle"
+                    $0D"static"
+                values =
+                       "-1"
+                    $0D"1"
+                    $0D"2"
+                    $0D"3"
+            }
+        }
+        play_sound_triggered:form = {
+            bbox = '-8 -8 -8 8 8 8'
+            t_Targetname = !
+            t_Appearflags = !
+            spawnflags:    = { txt="&" typ="X1" cap="Toggle" hint="" }
+            volume:    = { txt="&" hint="Volume" }
+            noise:    = { txt="&" hint="Sound to play" }
+            impulse:    = { txt="&" hint="Channel (0 to 7)" }
+            speed:    = { typ="C" txt="&" hint="Attenuation"
+                items =
+                       "no attenuation"
+                    $0D"normal"
+                    $0D"idle"
+                    $0D"static"
+                values =
+                       "-1"
+                    $0D"1"
+                    $0D"2"
+                    $0D"3"
+            }
+        }
+        play_sound_looped:form = {
+            bbox = '-8 -8 -8 8 8 8'
+            t_Targetname = !
+            t_Appearflags = !
+            noise:    = { txt="&" hint=".wav to play" }
+            wait:    = { txt="&" hint="Lenght of .wav" }
+            volume:    = { txt="&" hint="Volume" }
+            cnt:    = { typ="C" txt="&" hint="On when level starts?"
+                items =
+                       "Yes"
+                    $0D"No"
+                values =
+                       "0"
+                    $0D"1"
+            }
+        }
+        t_Door:incl = {
+            t_Appearflags = !
+            t_Targetname = !
+            speed:    = { txt="&" hint="Speed" }
+            sounds:    = { typ="C" txt="&" hint="Sound"
+                items =
+                       "Stone"
+                    $0D"Machine"
+                    $0D"Stone Chain"
+                    $0D"Screechy Metal"
+                values =
+                       "1"
+                    $0D"2"
+                    $0D"3"
+                    $0D"4"
+            }
+            wait:    = { typ="C" txt="&" hint="Delay before close"
+                items =
+                       "Stays open"
+                values =
+                       "-1"
+            }
+            lip:    = { txt="&" hint="Lip" }
+            dmg:    = { txt="&" hint="Damage inflicted when blocked" }
+            message:    = { txt="&" hint="Message if triggered" }
+            health:    = { txt="&" hint="Health (shoot open)" }
+        }
+        func_door:form = {
+            t_Door = !
+            t_Target = !
+            spawnflags:    = { txt="&" typ="X1" cap="Starts Open" hint="" }
+            spawnflags:    = { txt="&" typ="X4" cap="Don't link" hint="" }
+            spawnflags:    = { txt="&" typ="X8" cap="Gold Key required" hint="" }
+            spawnflags:    = { txt="&" typ="X16" cap="Silver Key required" hint="" }
+            spawnflags:    = { txt="&" typ="X32" cap="Toggle" hint="" }
+            cnt:    = { typ="C" txt="&" hint="Obituary"
+                items =
+                       "squished"
+                    $0D"hot plate"
+                    $0D"spikes"
+                    $0D"diced"
+                    $0D"hands of death"
+                    $0D"went to hell"
+                    $0D"fell into void"
+                    $0D"swallowed"
+                    $0D"machines"
+                    $0D"furnace"
+                values =
+                       "0"
+                    $0D"1"
+                    $0D"2"
+                    $0D"3"
+                    $0D"4"
+                    $0D"5"
+                    $0D"6"
+                    $0D"7"
+                    $0D"8"
+                    $0D"9"
+            }
+            alpha:    = { txt="&" hint="Transparency (0.1 - 1.0)" }
+            fullbright:    = { typ="C" txt="&" hint="Fullbright ?"
+                items =
+                       "No"
+                    $0D"Yes"
+                values =
+                       "0"
+                    $0D"1"
+            }
+        }
+        func_door_secret:form = {
+            t_Door = !
+            spawnflags:    = { txt="&" typ="X1" cap="Open once only" hint="" }
+            spawnflags:    = { txt="&" typ="X2" cap="Moves left first" hint="" }
+            spawnflags:    = { txt="&" typ="X4" cap="Moves down first" hint="" }
+            spawnflags:    = { txt="&" typ="X8" cap="Not shootable" hint="" }
+            spawnflags:    = { txt="&" typ="X16" cap="Always shootable" hint="" }
+            alpha:    = { txt="&" hint="Transparency (0.1 - 1.0)" }
+            fullbright:    = { typ="C" txt="&" hint="Fullbright ?"
+                items =
+                       "No"
+                    $0D"Yes"
+                values =
+                       "0"
+                    $0D"1"
+            }
+        }
+        func_wall:form = {
+            t_Appearflags = !
+            t_Targetname = !
+            alpha:    = { txt="&" hint="Transparency (0.1 - 1.0)" }
+            fullbright:    = { typ="C" txt="&" hint="Fullbright ?"
+                items =
+                       "No"
+                    $0D"Yes"
+                values =
+                       "0"
+                    $0D"1"
+            }
+        }
+        func_button:form = {
+            t_Targetname = !
+            spawnflags:    = { txt="&" typ="X8" cap="Gold key required" hint="" }
+            spawnflags:    = { txt="&" typ="X16" cap="Silver key required" hint="" }
+            spawnflags:    = { txt="&" typ="X64" cap="Monster use" hint="" }
+            speed:    = { txt="&" hint="Speed" }
+            target:    = { txt="&" hint="Targetted object" }
+            killtarget:    = { txt="&" hint="Killtarget" }
+            health:    = { txt="&" hint="Health (shootable if > 0)" }
+            sounds:    = { typ="C" txt="&" hint="Sounds"
+                items =
+                       "Steam metal"
+                    $0D"Wooden clunk"
+                    $0D"Metallic clink"
+                    $0D"In-out"
+                    $0D"Nehahra"
+                values =
+                       "1"
+                    $0D"2"
+                    $0D"3"
+                    $0D"4"
+                    $0D"5"
+            }
+            wait:    = { typ="C" txt="&" hint="Delay before reset"
+                items =
+                       "Stays pressed"
+                values =
+                       "-1"
+            }
+            delay:    = { txt="&" hint="Delay before trigger" }
+            message:    = { txt="&" hint="Message when pressed" }
+            lip:    = { txt="&" hint="Lip" }
+            alpha:    = { txt="&" hint="Transparency (0.1 - 1.0)" }
+            fullbright:    = { typ="C" txt="&" hint="Fullbright ?"
+                items =
+                       "No"
+                    $0D"Yes"
+                values =
+                       "0"
+                    $0D"1"
+            }
+        }
+        func_train:form = {
+            t_Targetname = !
+            sounds:    = { typ="C" txt="&" hint="Sound"
+                items =
+                       "None"
+                    $0D"Ratchet Metal"
+                    $0D"door1"
+                    $0D"door2"
+                    $0D"door3"
+                    $0D"door4"
+                    $0D"door5"
+                values =
+                       "0"
+                    $0D"1"
+                    $0D"3"
+                    $0D"4"
+                    $0D"5"
+                    $0D"6"
+                    $0D"7"
+            }
+            wait:    = { txt="&" hint="wait (-1)" }
+            speed:    = { txt="&" hint="Speed (units per second)" }
+            target:    = { txt="&" hint="First stop target" }
+            dmg:    = { txt="&" hint="Damage on crush" }
+            alpha:    = { txt="&" hint="Transparency (0.1 - 1.0)" }
+            fullbright:    = { typ="C" txt="&" hint="Fullbright ?"
+                items =
+                       "No"
+                    $0D"Yes"
+                values =
+                       "0"
+                    $0D"1"
+            }
+        }
+        path_corner:form = {
+            t_Targetname = !
+            target:    = { txt="&" hint="Next stop target" }
+            target2:    = { txt="&" hint="Alternate stop target" }
+            wait:    = { txt="&" hint="Wait time" }
+            delay:    = { txt="&" hint="Delay (-1)" }
+            event:    = { txt="&" hint="Angry at..." }
+        }
+        func_plat:form = {
+            spawnflags:    = { txt="&" typ="X1" cap="Low trigger" hint="" }
+            height:    = { txt="&" hint="Travel altitude (can be negative)" }
+            speed:    = { txt="&" hint="Speed" }
+            sounds:    = { typ="C" txt="&" hint="Sound group"
+                items =
+                       "None"
+                    $0D"Base fast"
+                    $0D"Chain Slow"
+                values =
+                       "0"
+                    $0D"1"
+                    $0D"2"
+            }
+            alpha:    = { txt="&" hint="Transparency (0.1 - 1.0)" }
+            fullbright:    = { typ="C" txt="&" hint="Fullbright ?"
+                items =
+                       "No"
+                    $0D"Yes"
+                values =
+                       "0"
+                    $0D"1"
+            }
+        }
+        func_dm_only:form = {
+        }
+        func_illusionary:form = {
+            alpha:    = { txt="&" hint="Transparency (0.1 - 1.0)" }
+            fullbright:    = { typ="C" txt="&" hint="Fullbright ?"
+                items =
+                       "No"
+                    $0D"Yes"
+                values =
+                       "0"
+                    $0D"1"
+            }
+        }
+        func_episodegate:form = {
+            spawnflags:    = { txt="&" typ="X1" cap="Episode 1" hint="" }
+            spawnflags:    = { txt="&" typ="X2" cap="Episode 2" hint="" }
+            spawnflags:    = { txt="&" typ="X4" cap="Episode 3" hint="" }
+            spawnflags:    = { txt="&" typ="X8" cap="Episode 4" hint="" }
+            alpha:    = { txt="&" hint="Transparency (0.1 - 1.0)" }
+            fullbright:    = { typ="C" txt="&" hint="Fullbright ?"
+                items =
+                       "No"
+                    $0D"Yes"
+                values =
+                       "0"
+                    $0D"1"
+            }
+        }
+        func_bossgate:form = {
+            alpha:    = { txt="&" hint="Transparency (0.1 - 1.0)" }
+            fullbright:    = { typ="C" txt="&" hint="Fullbright ?"
+                items =
+                       "No"
+                    $0D"Yes"
+                values =
+                       "0"
+                    $0D"1"
+            }
+        }
+        t_Trigger:incl = {
+            t_Target = !
+            style:    = { txt="&" hint="Style" }
+            killtarget:    = { txt="&" hint="Kill target" }
+            sounds:    = { typ="C" txt="&" hint="Sound style"
+                items =
+                       "Secret sound"
+                    $0D"Beep beep"
+                    $0D"Large switch"
+                    $0D"Set message to text string"
+                values =
+                       "1"
+                    $0D"2"
+                    $0D"3"
+                    $0D"4"
+            }
+            delay:    = { txt="&" hint="Delay before trigger" }
+            message:    = { txt="&" hint="Message (set sound too!)" }
+        }
+        trigger_changelevel:form = {
+            map:    = { txt="&" hint="New map name" }
+            demo:    = { txt="&" hint="Demo cutscene to play" }
+            spawnflags:    = { txt="&" typ="X1" cap="No Intermission" hint="" }
+        }
+        trigger_once:form = {
+            t_Trigger = !
+            t_Targetname = !
+            spawnflags:    = { txt="&" typ="X1" cap="Entity only" hint="" }
+        }
+        trigger_multiple:form = {
+            t_Trigger = !
+            t_Targetname = !
+            spawnflags:    = { txt="&" typ="X1" cap="Entity only" hint="" }
+            wait:    = { txt="&" hint="Delay before reset" }
+        }
+        trigger_onlyregistered:form = {
+            t_Trigger = !
+            spawnflags:    = { txt="&" typ="X1" cap="Entity only" hint="" }
+        }
+        trigger_secret:form = {
+            t_Trigger = !
+            t_Targetname = !
+            spawnflags:    = { txt="&" typ="X1" cap="Entity only" hint="" }
+            wait:    = { txt="&" hint="Delay before reset" }
+        }
+        trigger_teleport:form = {
+            t_Target = !
+            t_Targetname = !
+            spawnflags:    = { txt="&" typ="X1" cap="Player only" hint="" }
+            spawnflags:    = { txt="&" typ="X2" cap="Silent" hint="" }
+        }
+        trigger_qtele:form = {
+            t_Target = !
+            t_Targetname = !
+            spawnflags:    = { txt="&" typ="X1" cap="Player only" hint="" }
+            spawnflags:    = { txt="&" typ="X2" cap="Silent" hint="" }
+        }
+        trigger_setskill:form = {
+            message:    = { typ="C" txt="&" hint="Skill to change to"
+                items =
+                       "Easy"
+                    $0D"Medium"
+                    $0D"Hard"
+                    $0D"Nightmare!"
+                values =
+                       "0"
+                    $0D"1"
+                    $0D"2"
+                    $0D"3"
+            }
+        }
+        trigger_relay:form = {
+            t_Trigger = !
+            t_Targetname = !
+        }
+        trigger_monsterjump:form = {
+            t_Trigger = !
+            speed:    = { txt="&" hint="Jump Speed" }
+            height:    = { txt="&" hint="Jump Height" }
+        }
+        trigger_counter:form = {
+            t_Trigger = !
+            t_Targetname = !
+            spawnflags:    = { txt="&" typ="X1" cap="No Message" hint="" }
+            count:    = { txt="&" hint="Count before activation" }
+        }
+        trigger_push:form = {
+            t_Targetname = !
+            spawnflags:    = { txt="&" typ="X1" cap="Once Only" hint="" }
+            spawnflags:    = { txt="&" typ="X2" cap="Start on" hint="" }
+            speed:    = { txt="&" hint="Speed of push" }
+            sounds:    = { txt="&" hint="Silent push" }
+        }
+        trigger_hurt:form = {
+            t_Trigger = !
+            dmg:    = { txt="&" hint="Damage" }
+            cnt:    = { typ="C" txt="&" hint="Obituary"
+                items =
+                       "squished"
+                    $0D"hot plate"
+                    $0D"spikes"
+                    $0D"diced"
+                    $0D"hands of death"
+                    $0D"went to hell"
+                    $0D"fell into void"
+                    $0D"swallowed"
+                    $0D"machines"
+                    $0D"furnace"
+                values =
+                       "0"
+                    $0D"1"
+                    $0D"2"
+                    $0D"3"
+                    $0D"4"
+                    $0D"5"
+                    $0D"6"
+                    $0D"7"
+                    $0D"8"
+                    $0D"9"
+            }
+        }
+        trigger_fog:form = {
+            spawnflags:    = { txt="&" typ="X32" cap="Reset to defaults" hint="" }
+            fog_disable:    = { typ="C" txt="&" hint="Turn fog on/off"
+                items =
+                       "Off"
+                    $0D"On"
+                values =
+                       "1"
+                    $0D"0"
+            }
+            fog_start:    = { txt="&" hint="Start drawing fog" }
+            fog_end:    = { txt="&" hint="Stop drawing fog" }
+            fog_density:    = { txt="&" hint="Fog density (Relative)" }
+            fog_red:    = { txt="&" hint="Fog redness (Relative)" }
+            fog_green:    = { txt="&" hint="Fog greeness (Relative)" }
+            fog_blue:    = { txt="&" hint="Fog blueness (Relative)" }
+        }
+        trigger_console:form = {
+            t_Trigger = !
+            t_Targetname = !
+            event:    = { txt="&" hint="Console command" }
+            wait:    = { typ="C" txt="&" hint="Delay before reset"
+                items =
+                       "Once only"
+                values =
+                       "-1"
+            }
+        }
+        info_throw_rubble:form = {
+            t_Targetname = !
+            cnt:    = { txt="&" hint="Power of throw" }
+            dmg:    = { typ="C" txt="&" hint="Rubble skin"
+                items =
+                       "Brown"
+                    $0D"Grey"
+                values =
+                       "0"
+                    $0D"1"
+            }
+            blink:    = { txt="&" hint="Rubble transparency (1-0)" }
+        }
+        misc_boom:form = {
+            t_Targetname = !
+        }
+        func_mindcrime:form = {
+            t_Targetname = !
+            spawnflags:    = { txt="&" typ="X1" cap="Controlable" hint="" }
+            spawnflags:    = { txt="&" typ="X2" cap="Throw upwards" hint="" }
+            spawnflags:    = { txt="&" typ="X4" cap="Spin" hint="" }
+            target:    = { txt="&" hint="target" }
+            speed:    = { typ="C" txt="&" hint="Damage on touch"
+                items =
+                       "No damage"
+                values =
+                       "0"
+            }
+            impulse:    = { typ="C" txt="&" hint="Behaviour on ground"
+                items =
+                       "Normal"
+                    $0D"Become pushable"
+                    $0D"Burst (Set sound & skin)"
+                    $0D"Bounce or float"
+                values =
+                       "0"
+                    $0D"1"
+                    $0D"2"
+                    $0D"3"
+            }
+            cnt:    = { typ="C" txt="&" hint="Obituary"
+                items =
+                       "squished"
+                    $0D"hot plate"
+                    $0D"spikes"
+                    $0D"diced"
+                    $0D"hands of death"
+                    $0D"went to hell"
+                    $0D"fell into void"
+                    $0D"swallowed"
+                    $0D"machines"
+                    $0D"furnace"
+                values =
+                       "0"
+                    $0D"1"
+                    $0D"2"
+                    $0D"3"
+                    $0D"4"
+                    $0D"5"
+                    $0D"6"
+                    $0D"7"
+                    $0D"8"
+                    $0D"9"
+            }
+            sounds:    = { typ="C" txt="&" hint="Sound"
+                items =
+                       "generic 1"
+                    $0D"generic 2"
+                    $0D"generic 3"
+                    $0D"wood"
+                    $0D"glass"
+                    $0D"weird"
+                    $0D"metal"
+                    $0D"clay"
+                values =
+                       "0"
+                    $0D"1"
+                    $0D"2"
+                    $0D"3"
+                    $0D"4"
+                    $0D"5"
+                    $0D"6"
+                    $0D"7"
+            }
+            dmg:    = { typ="C" txt="&" hint="Skin"
+                items =
+                       "Brown"
+                    $0D"Grey"
+                    $0D"Wood (Frubble only)"
+                values =
+                       "0"
+                    $0D"1"
+                    $0D"2"
+            }
+            angles:    = { txt="&" hint="Angle to throw at. (Set flag)" }
+            boost:    = { txt="&" hint="Speed to throw at. (Set flag)" }
+            nojump:    = { txt="&" hint="Negative upwards velocity. (Set flag)" }
+            ammo_shells:    = { typ="C" txt="&" hint="Throw some shells"
+                items =
+                       "No"
+                    $0D"Yes"
+                values =
+                       "0"
+                    $0D"1"
+            }
+            ammo_nails:    = { typ="C" txt="&" hint="Throw some nails"
+                items =
+                       "No"
+                    $0D"Yes"
+                values =
+                       "0"
+                    $0D"1"
+            }
+            ammo_cells:    = { typ="C" txt="&" hint="Throw some cells"
+                items =
+                       "No"
+                    $0D"Yes"
+                values =
+                       "0"
+                    $0D"1"
+            }
+            ammo_rockets:    = { typ="C" txt="&" hint="Throw some rockets"
+                items =
+                       "No"
+                    $0D"Yes"
+                values =
+                       "0"
+                    $0D"1"
+            }
+            armorvalue:    = { typ="C" txt="&" hint="Throw some armor"
+                items =
+                       "No"
+                    $0D"Green"
+                    $0D"Yellow"
+                    $0D"Red"
+                values =
+                       "0"
+                    $0D"1"
+                    $0D"2"
+                    $0D"3"
+            }
+            items:    = { typ="C" txt="&" hint="Item value. Flagwise"
+                items =
+                       "0 - None"
+                    $0D"2 - Super shotgun"
+                    $0D"4 - Nailgun"
+                    $0D"8 - Super nailgun"
+                    $0D"16 - Grenade launcher"
+                    $0D"32 - Rocket launcher"
+                    $0D"64 - Thunderbolt"
+                    $0D"128 - Sprocket"
+                    $0D"65536 - Health"
+                    $0D"2097152 - Biosuit"
+                    $0D"4194304 - Quad damage"
+                    $0D"8388608 - Flying artifact"
+                values =
+                       "0"
+                    $0D"2"
+                    $0D"4"
+                    $0D"8"
+                    $0D"16"
+                    $0D"32"
+                    $0D"64"
+                    $0D"128"
+                    $0D"65536"
+                    $0D"2097152"
+                    $0D"4194304"
+                    $0D"8388608"
+            }
+            alpha:    = { txt="&" hint="Transparency (0.1 - 1.0)" }
+            blink:    = { txt="&" hint="Rubble transparency (0.1 - 1.0)" }
+            fullbright:    = { typ="C" txt="&" hint="Fullbright ?"
+                items =
+                       "No"
+                    $0D"Yes"
+                values =
+                       "0"
+                    $0D"1"
+            }
+        }
+        func_earthquake:form = {
+            t_Targetname = !
+            cnt:    = { txt="&" hint="length" }
+        }
+        func_pushable:form = {
+            alpha:    = { txt="&" hint="Transparency (0.1 - 1.0)" }
+            fullbright:    = { typ="C" txt="&" hint="Fullbright ?"
+                items =
+                       "No"
+                    $0D"Yes"
+                values =
+                       "0"
+                    $0D"1"
+            }
+        }
+        info_weight_switch:form = {
+            bbox = '-4 -4 -4 4 4 4'
+            t_Target = !
+        }
+        main_weight_switch:form = {
+            t_target = !
+        }
+        func_explodable:form = {
+            t_Targetname = !
+            spawnflags:    = { txt="&" typ="X1" cap="Flat rubble" hint="" }
+            target:    = { txt="&" hint="target" }
+            health:    = { txt="&" hint="Health" }
+            dmg:    = { typ="C" txt="&" hint="Skin"
+                items =
+                       "Brown"
+                    $0D"Grey"
+                    $0D"Wood (Frubble only)"
+                values =
+                       "0"
+                    $0D"1"
+                    $0D"2"
+            }
+            sounds:    = { typ="C" txt="&" hint="sound"
+                items =
+                       "generic 1"
+                    $0D"generic 2"
+                    $0D"generic 3"
+                    $0D"wood"
+                    $0D"glass"
+                    $0D"weird"
+                    $0D"metal"
+                    $0D"clay"
+                values =
+                       "0"
+                    $0D"1"
+                    $0D"2"
+                    $0D"3"
+                    $0D"4"
+                    $0D"5"
+                    $0D"6"
+                    $0D"7"
+            }
+            ammo_shells:    = { typ="C" txt="&" hint="Throw some shells"
+                items =
+                       "No"
+                    $0D"Yes"
+                values =
+                       "0"
+                    $0D"1"
+            }
+            ammo_nails:    = { typ="C" txt="&" hint="Throw some nails"
+                items =
+                       "No"
+                    $0D"Yes"
+                values =
+                       "0"
+                    $0D"1"
+            }
+            ammo_cells:    = { typ="C" txt="&" hint="Throw some cells"
+                items =
+                       "No"
+                    $0D"Yes"
+                values =
+                       "0"
+                    $0D"1"
+            }
+            ammo_rockets:    = { typ="C" txt="&" hint="Throw some rockets"
+                items =
+                       "No"
+                    $0D"Yes"
+                values =
+                       "0"
+                    $0D"1"
+            }
+            armorvalue:    = { typ="C" txt="&" hint="Throw some armor"
+                items =
+                       "No"
+                    $0D"Green"
+                    $0D"Yellow"
+                    $0D"Red"
+                values =
+                       "0"
+                    $0D"1"
+                    $0D"2"
+                    $0D"3"
+            }
+            items:    = { typ="C" txt="&" hint="Item value. Flagwise"
+                items =
+                       "0 - None"
+                    $0D"2 - Super shotgun"
+                    $0D"4 - Nailgun"
+                    $0D"8 - Super nailgun"
+                    $0D"16 - Grenade launcher"
+                    $0D"32 - Rocket launcher"
+                    $0D"64 - Thunderbolt"
+                    $0D"128 - Sprocket"
+                    $0D"65536 - Health"
+                    $0D"2097152 - Biosuit"
+                    $0D"4194304 - Quad damage"
+                    $0D"8388608 - Flying artifact"
+                values =
+                       "0"
+                    $0D"2"
+                    $0D"4"
+                    $0D"8"
+                    $0D"16"
+                    $0D"32"
+                    $0D"64"
+                    $0D"128"
+                    $0D"65536"
+                    $0D"2097152"
+                    $0D"4194304"
+                    $0D"8388608"
+            }
+            alpha:    = { txt="&" hint="Transparency (0.1 - 1.0)" }
+            blink:    = { txt="&" hint="Rubble transparency (0.1 - 1.0)" }
+            fullbright:    = { typ="C" txt="&" hint="Fullbright ?"
+                items =
+                       "No"
+                    $0D"Yes"
+                values =
+                       "0"
+                    $0D"1"
+            }
+        }
+        func_sobject:form = {
+            t_Targetname = !
+            spawnflags:    = { txt="&" typ="X1" cap="Flat rubble" hint="" }
+            target:    = { txt="&" hint="target" }
+            health:    = { txt="&" hint="health" }
+            dmg:    = { typ="C" txt="&" hint="Skin"
+                items =
+                       "Brown"
+                    $0D"Grey"
+                    $0D"Wood (Frubble only)"
+                values =
+                       "0"
+                    $0D"1"
+                    $0D"2"
+            }
+            sounds:    = { typ="C" txt="&" hint="sound"
+                items =
+                       "generic 1"
+                    $0D"generic 2"
+                    $0D"generic 3"
+                    $0D"wood"
+                    $0D"glass"
+                    $0D"weird"
+                    $0D"metal"
+                    $0D"clay"
+                values =
+                       "0"
+                    $0D"1"
+                    $0D"2"
+                    $0D"3"
+                    $0D"4"
+                    $0D"5"
+                    $0D"6"
+                    $0D"7"
+            }
+            ammo_shells:    = { typ="C" txt="&" hint="Throw some shells"
+                items =
+                       "No"
+                    $0D"Yes"
+                values =
+                       "0"
+                    $0D"1"
+            }
+            ammo_nails:    = { typ="C" txt="&" hint="Throw some nails"
+                items =
+                       "No"
+                    $0D"Yes"
+                values =
+                       "0"
+                    $0D"1"
+            }
+            ammo_cells:    = { typ="C" txt="&" hint="Throw some cells"
+                items =
+                       "No"
+                    $0D"Yes"
+                values =
+                       "0"
+                    $0D"1"
+            }
+            ammo_rockets:    = { typ="C" txt="&" hint="Throw some rockets"
+                items =
+                       "No"
+                    $0D"Yes"
+                values =
+                       "0"
+                    $0D"1"
+            }
+            armorvalue:    = { typ="C" txt="&" hint="Throw some armor"
+                items =
+                       "No"
+                    $0D"Green"
+                    $0D"Yellow"
+                    $0D"Red"
+                values =
+                       "0"
+                    $0D"1"
+                    $0D"2"
+                    $0D"3"
+            }
+            items:    = { typ="C" txt="&" hint="Item value. Flagwise"
+                items =
+                       "0 - None"
+                    $0D"2 - Super shotgun"
+                    $0D"4 - Nailgun"
+                    $0D"8 - Super nailgun"
+                    $0D"16 - Grenade launcher"
+                    $0D"32 - Rocket launcher"
+                    $0D"64 - Thunderbolt"
+                    $0D"128 - Sprocket"
+                    $0D"65536 - Health"
+                    $0D"2097152 - Biosuit"
+                    $0D"4194304 - Quad damage"
+                    $0D"8388608 - Flying artifact"
+                values =
+                       "0"
+                    $0D"2"
+                    $0D"4"
+                    $0D"8"
+                    $0D"16"
+                    $0D"32"
+                    $0D"64"
+                    $0D"128"
+                    $0D"65536"
+                    $0D"2097152"
+                    $0D"4194304"
+                    $0D"8388608"
+            }
+            alpha:    = { txt="&" hint="Transparency (0.1 - 1.0)" }
+            blink:    = { txt="&" hint="Rubble transparency (0.1 - 1.0)" }
+            fullbright:    = { typ="C" txt="&" hint="Fullbright ?"
+                items =
+                       "No"
+                    $0D"Yes"
+                values =
+                       "0"
+                    $0D"1"
+            }
+        }
+        func_quakedmg:form = {
+            spawnflags:    = { txt="&" typ="X1" cap="Flat rubble" hint="" }
+            dmg:    = { typ="C" txt="&" hint="Skin"
+                items =
+                       "Brown"
+                    $0D"Grey"
+                    $0D"Wood (Frubble only)"
+                values =
+                       "0"
+                    $0D"1"
+                    $0D"2"
+            }
+            sounds:    = { typ="C" txt="&" hint="sound"
+                items =
+                       "generic 1"
+                    $0D"generic 2"
+                    $0D"generic 3"
+                    $0D"wood"
+                    $0D"glass"
+                    $0D"weird"
+                    $0D"metal"
+                    $0D"clay"
+                values =
+                       "0"
+                    $0D"1"
+                    $0D"2"
+                    $0D"3"
+                    $0D"4"
+                    $0D"5"
+                    $0D"6"
+                    $0D"7"
+            }
+            ammo_shells:    = { typ="C" txt="&" hint="Throw some shells"
+                items =
+                       "No"
+                    $0D"Yes"
+                values =
+                       "0"
+                    $0D"1"
+            }
+            ammo_nails:    = { typ="C" txt="&" hint="Throw some nails"
+                items =
+                       "No"
+                    $0D"Yes"
+                values =
+                       "0"
+                    $0D"1"
+            }
+            ammo_cells:    = { typ="C" txt="&" hint="Throw some cells"
+                items =
+                       "No"
+                    $0D"Yes"
+                values =
+                       "0"
+                    $0D"1"
+            }
+            ammo_rockets:    = { typ="C" txt="&" hint="Throw some rockets"
+                items =
+                       "No"
+                    $0D"Yes"
+                values =
+                       "0"
+                    $0D"1"
+            }
+            armorvalue:    = { typ="C" txt="&" hint="Throw some armor"
+                items =
+                       "No"
+                    $0D"Green"
+                    $0D"Yellow"
+                    $0D"Red"
+                values =
+                       "0"
+                    $0D"1"
+                    $0D"2"
+                    $0D"3"
+            }
+            items:    = { typ="C" txt="&" hint="Item value. Flagwise"
+                items =
+                       "0 - None"
+                    $0D"2 - Super shotgun"
+                    $0D"4 - Nailgun"
+                    $0D"8 - Super nailgun"
+                    $0D"16 - Grenade launcher"
+                    $0D"32 - Rocket launcher"
+                    $0D"64 - Thunderbolt"
+                    $0D"128 - Sprocket"
+                    $0D"65536 - Health"
+                    $0D"2097152 - Biosuit"
+                    $0D"4194304 - Quad damage"
+                    $0D"8388608 - Flying artifact"
+                values =
+                       "0"
+                    $0D"2"
+                    $0D"4"
+                    $0D"8"
+                    $0D"16"
+                    $0D"32"
+                    $0D"64"
+                    $0D"128"
+                    $0D"65536"
+                    $0D"2097152"
+                    $0D"4194304"
+                    $0D"8388608"
+            }
+            alpha:    = { txt="&" hint="Transparency (0.1 - 1.0)" }
+            blink:    = { txt="&" hint="Rubble transparency (0.1 - 1.0)" }
+            fullbright:    = { typ="C" txt="&" hint="Fullbright ?"
+                items =
+                       "No"
+                    $0D"Yes"
+                values =
+                       "0"
+                    $0D"1"
+            }
+        }
+        misc_smokemaker:form = {
+            t_Targetname = !
+            speed:    = { txt="&" hint="Speed of smoke" }
+            cnt:    = { txt="&" hint="Frequency" }
+            wait:    = { txt="&" hint="Smoke lifetime" }
+        }
+        misc_slime_ball:form = {
+            t_Appearflags = !
+            speed:    = { txt="&" hint="Speed" }
+        }
+        misc_barrel:form = {
+            bbox = '-16 -16 -32 16 16 16'
+            frame:    = { typ="C" txt="&" hint="frame"
+                items =
+                       "small"
+                    $0D"medium"
+                    $0D"large"
+                values =
+                       "0"
+                    $0D"1"
+                    $0D"2"
+            }
+        }
+        misc_corpse:form = {
+            bbox = '-24 -24 -24 24 24 0'
+            targetname:    = { txt="&" hint="name" }
+            cnt:    = { typ="C" txt="&" hint="type"
+                items =
+                       "player 1"
+                    $0D"player 2"
+                    $0D"player 3"
+                    $0D"player 4"
+                    $0D"grunt 1"
+                    $0D"grunt 2"
+                    $0D"enf2 1"
+                    $0D"enf2 2"
+                values =
+                       "0"
+                    $0D"1"
+                    $0D"3"
+                    $0D"4"
+                    $0D"5"
+                    $0D"6"
+                    $0D"7"
+                    $0D"8"
+            }
+        }
+        misc_hummer:form = {
+        }
+        misc_vend:form = {
+            skin:    = { typ="C" txt="&" hint="Type"
+                items =
+                       "Peej soda"
+                    $0D"Snack #1"
+                    $0D"Cold drinks"
+                    $0D"Snack #2"
+                values =
+                       "0"
+                    $0D"1"
+                    $0D"2"
+                    $0D"3"
+            }
+        }
+        misc_sign:form = {
+            skin:    = { typ="C" txt="&" hint="Skin"
+                items =
+                       "Route 160, east"
+                    $0D"Route 160, west"
+                    $0D"Route 90, east"
+                    $0D"Route 90, west"
+                    $0D"Route 60, east"
+                    $0D"Route 60, west"
+                    $0D"Danger of death"
+                values =
+                       "0"
+                    $0D"1"
+                    $0D"2"
+                    $0D"3"
+                    $0D"4"
+                    $0D"5"
+                    $0D"6"
+            }
+            frame:    = { typ="C" txt="&" hint="Frame"
+                items =
+                       "Freestanding sign"
+                    $0D"Wall mounted sign"
+                    $0D"Generic sign"
+                values =
+                       "0"
+                    $0D"1"
+                    $0D"2"
+            }
+            cnt:    = { typ="C" txt="&" hint="Solid?"
+                items =
+                       "Yes"
+                    $0D"No"
+                values =
+                       "0"
+                    $0D"1"
+            }
+        }
+        misc_motel:form = {
+        }
+        misc_fscreen:form = {
+            t_Targetname = !
+            frame:    = { typ="C" txt="&" hint="Size"
+                items =
+                       "0"
+                    $0D"1"
+                    $0D"2"
+                    $0D"3"
+                    $0D"4"
+                    $0D"5"
+                values =
+                       "0"
+                    $0D"1"
+                    $0D"2"
+                    $0D"3"
+                    $0D"4"
+                    $0D"5"
+            }
+        }
+        misc_valve:form = {
+            t_Target = !
+        }
+        misc_tree:form = {
+            model:    = { txt="&" hint="Model to use" }
+            frame:    = { txt="&" hint="Frame to use" }
+            skin:    = { txt="&" hint="Skin to use" }
+            cnt:    = { typ="C" txt="&" hint="Solid?"
+                items =
+                       "Yes"
+                    $0D"No"
+                values =
+                       "0"
+                    $0D"1"
+            }
+        }
+        misc_misc:form = {
+            model:    = { txt="&" hint="Model to use" }
+        }
+        efx_lightning:form = {
+            targetname:    = { txt="&" hint="name" }
+        }
+        efx_snow:form = {
+        }
+        func_raining:form = {
+            targetname:    = { txt="&" hint="Name" }
+            cnt:    = { typ="C" txt="&" hint="Rain color"
+                items =
+                       "watery blue"
+                    $0D"Dark, dirty"
+                    $0D"Red, blood"
+                    $0D"Blue"
+                    $0D"Green"
+                values =
+                       "0"
+                    $0D"1"
+                    $0D"2"
+                    $0D"3"
+                    $0D"4"
+            }
+            frame:    = { typ="C" txt="&" hint="Radius"
+                items =
+                       "Aprox. 150 units"
+                    $0D"Aprox. 700 units"
+                    $0D"Less than 100 units"
+                values =
+                       "0"
+                    $0D"1"
+                    $0D"2"
+            }
+        }
+        floating_gibs:form = {
+            count:    = { txt="&" hint="count" }
+            delay:    = { txt="&" hint="delay" }
+            targetname:    = { txt="&" hint="name" }
+        }
+        info_particles:form = {
+            t_Targetname = !
+            spawnflags:    = { txt="&" typ="X64" cap="Start on" hint="" }
+            method:    = { typ="C" txt="&" hint="Method"
+                items =
+                       "Normal"
+                    $0D"One sided radial"
+                    $0D"Two sided radial"
+                values =
+                       "0"
+                    $0D"1"
+                    $0D"2"
+            }
+            movedir:    = { txt="&" hint="Direction vector (X Y Z)" }
+            duration:    = { txt="&" hint="Particle lifetime" }
+            wait:    = { txt="&" hint="Wait before beginning" }
+            cnt:    = { txt="&" hint="Color index (0 - 255)" }
+            endtime:    = { typ="C" txt="&" hint="Length of effect"
+                items =
+                       "Don't stop"
+                values =
+                       "-1"
+            }
+            delay:    = { txt="&" hint="Time between each particle" }
+            impulse:    = { txt="&" hint="Radius" }
+            speed:    = { txt="&" hint="Rotation speed (-360 > 360)" }
+        }
+        item_artifact_regeneration:form = {
+        }
+        item_artifact_flight:form = {
+        }
+        item_artifact_resurrection:form = {
+        }
+        func_object:form = {
+        }
+        func_cover:form = {
+            targetname:    = { txt="&" hint="name" }
+            spawnflags:    = { txt="&" typ="X1" cap="invisble" hint="" }
+        }
+        func_remove:form = {
+            spawnflags:    = { txt="&" typ="X64" cap="Teleport effect" hint="" }
+            spawnflags:    = { txt="&" typ="X128" cap="Remove all" hint="" }
+        }
+        func_pain:form = {
+            dmg:    = { txt="&" hint="damage" }
+            targetname:    = { txt="&" hint="name" }
+            cnt:    = { typ="C" txt="&" hint="Obituary"
+                items =
+                       "squished"
+                    $0D"hot plate"
+                    $0D"spikes"
+                    $0D"diced"
+                    $0D"hands of death"
+                    $0D"went to hell"
+                    $0D"fell into void"
+                    $0D"swallowed"
+                    $0D"machines"
+                    $0D"furnace"
+                values =
+                       "0"
+                    $0D"1"
+                    $0D"2"
+                    $0D"3"
+                    $0D"4"
+                    $0D"5"
+                    $0D"6"
+                    $0D"7"
+                    $0D"8"
+                    $0D"9"
+            }
+        }
+        func_bobbingwater:form = {
+            speed:    = { txt="&" hint="speed" }
+        }
+        func_bobbingobject:form = {
+            speed:    = { txt="&" hint="speed" }
+            targetname:    = { txt="&" hint="name" }
+        }
+        func_drift:form = {
+            t_Targetname = !
+        }
+        ambient_toggle:form = {
+            noise:    = { txt="&" hint="noise" }
+            noise1:    = { txt="&" hint="noise1" }
+            noise2:    = { txt="&" hint="noise2" }
+            noise3:    = { txt="&" hint="noise3" }
+            noise4:    = { txt="&" hint="noise4" }
+            delay:    = { txt="&" hint="min time between sounds" }
+            wait:    = { txt="&" hint="max time between sounds" }
+            impulse:    = { txt="&" hint="1 - whole level" }
+        }
+        ambient_global:form = {
+            noise:    = { txt="&" hint="noise" }
+            volume:    = { txt="&" hint="volume" }
+        }
+        snd_beat_toggle:form = {
+            volume:    = { txt="&" hint="times to play" }
+            noise:    = { txt="&" hint="first wav" }
+            noise1:    = { txt="&" hint="second wav" }
+            delay:    = { txt="&" hint="time between beats" }
+            wait:    = { txt="&" hint="time before" }
+            targetname:    = { txt="&" hint="Name" }
+        }
+        info_idscale:form = {
+            targetname:    = { txt="&" hint="Name" }
+            message:    = { txt="&" hint="Wave effect" }
+        }
+        trigger_camera:form = {
+            t_Trigger = !
+            script:    = { txt="&" hint="Starting script number" }
+            script_delay:    = { txt="&" hint="Delay on first page" }
+        }
+        info_camera:form = {
+            targetname:    = { txt="&" hint="Name" }
+        }
+        info_script:form = {
+            script_num:    = { txt="&" hint="Script number" }
+            next_script:    = { txt="&" hint="Next script number (0 if final)" }
+            script_delay:    = { txt="&" hint="NEXT page delay" }
+            message:    = { txt="&" hint="Message" }
+            target:    = { txt="&" hint="Target" }
+        }
+        info_movecam:form = {
+            targetname:    = { txt="&" hint="info_camera name" }
+        }
+        info_fadeout:form = {
+            targetname:    = { txt="&" hint="Name" }
+            speed:    = { txt="&" hint="0.01 quick -0.1 slow" }
+            spawnflags:    = { txt="&" typ="X1" cap="Red Color" hint="" }
+        }
+        info_fadein:form = {
+            targetname:    = { txt="&" hint="Name" }
+            speed:    = { txt="&" hint="0.01 quick -0.1 slow" }
+            spawnflags:    = { txt="&" typ="X1" cap="Red Color" hint="" }
+        }
+        info_rotate:form = {
+            bbox = '-4 -4 -4 4 4 4'
+            t_Targetname = !
+        }
+        func_rotate_entity:form = {
+            bbox = '-8 -8 -8 8 8 8'
+            t_Targetname = !
+            t_Target = !
+            spawnflags:    = { txt="&" typ="X1" cap="Toggle" hint="" }
+            spawnflags:    = { txt="&" typ="X2" cap="Start on" hint="" }
+            deathtype:    = { txt="&" hint="Kill Message" }
+            rotate:    = { txt="&" hint="Rate of rotation (x y z)" }
+            target:    = { txt="&" hint="Center of rotation" }
+            speed:    = { txt="&" hint="Speed (0 to full) time" }
+        }
+        path_rotate:form = {
+            t_Targetname = !
+            t_Target = !
+            spawnflags:    = { txt="&" typ="X1" cap="Rotation" hint="" }
+            spawnflags:    = { txt="&" typ="X2" cap="Angles" hint="" }
+            spawnflags:    = { txt="&" typ="X4" cap="Stop" hint="" }
+            spawnflags:    = { txt="&" typ="X8" cap="No Rotate" hint="" }
+            spawnflags:    = { txt="&" typ="X16" cap="Damage" hint="" }
+            spawnflags:    = { txt="&" typ="X32" cap="Move Time" hint="" }
+            spawnflags:    = { txt="&" typ="X64" cap="Set Damage" hint="" }
+            rotate:    = { txt="&" hint="Rotation (x y z)" }
+            angles:    = { txt="&" hint="Angles (x y z)" }
+            noise:    = { txt="&" hint="Wait Noise" }
+            noise1:    = { txt="&" hint="Move Noise" }
+            wait:    = { txt="&" hint="Wait Time" }
+            event:    = { txt="&" hint="Event Target" }
+            message:    = { txt="&" hint="Event Message" }
+            dmg:    = { txt="&" hint="Damage" }
+            speed:    = { txt="&" hint="Move Time(if flaged) or Speed" }
+        }
+        func_rotate_train:form = {
+            bbox = '-8 -8 -8 8 8 8'
+            t_Targetname = !
+            t_Target = !
+            noise1:    = { txt="&" hint="Train move noise" }
+            noise:    = { txt="&" hint="Train stop noise" }
+            path:    = { txt="&" hint="First path_rotate" }
+            deathtype:    = { txt="&" hint="Kill Message" }
+            speed:    = { txt="&" hint="Speed" }
+            dmg:    = { txt="&" hint="Damage" }
+            sounds:    = { typ="C" txt="&" hint="Sound"
+                items =
+                       "None"
+                    $0D"Ratchet Metal"
+                values =
+                       "0"
+                    $0D"1"
+            }
+        }
+        rotate_object:form = {
+            t_Targetname = !
+            t_Target = !
+        }
+        func_rotate_door:form = {
+            bbox = '-8 -8 -8 8 8 8'
+            t_Targetname = !
+            t_Target = !
+            spawnflags:    = { txt="&" typ="X1" cap="Stay open" hint="" }
+            dmg:    = { txt="&" hint="Damage" }
+            speed:    = { txt="&" hint="Time to rotate" }
+            angles:    = { txt="&" hint="Angles (x y z)" }
+            rotate:    = { txt="&" hint="Rotate (x y z)" }
+            sounds:    = { typ="C" txt="&" hint="Sound"
+                items =
+                       "None"
+                    $0D"Medieval (default)"
+                    $0D"Metal"
+                    $0D"Base"
+                values =
+                       "0"
+                    $0D"1"
+                    $0D"2"
+                    $0D"3"
+            }
+        }
+        func_movewall:form = {
+            t_Targetname = !
+            spawnflags:    = { txt="&" typ="X1" cap="Visible" hint="" }
+            spawnflags:    = { txt="&" typ="X2" cap="Damage on touch" hint="" }
+            spawnflags:    = { txt="&" typ="X4" cap="Non-Solid" hint="" }
+            dmg:    = { txt="&" hint="Damage" }
+        }
+        custom_item:form = {
+            bbox = '-8 -8 0 8 8 32'
+            t_Target = !
+            effects:    = { typ="C" txt="&" hint="Effects"
+                items =
+                       "Yellow particles"
+                    $0D"Bright glow"
+                    $0D"Flickering glow"
+                values =
+                       "1"
+                    $0D"4"
+                    $0D"8"
+            }
+            noise:    = { txt="&" hint="Pickup sound" }
+            netname:    = { txt="&" hint="Name of item" }
+            model:    = { txt="&" hint="Model to use" }
+            skin:    = { txt="&" hint="Skin # to use" }
+            frame:    = { txt="&" hint="Frame # to use" }
+        }
+        trigger_custom:form = {
+            t_Target = !
+            noise1:    = { txt="&" hint="Locked sound" }
+            noise:    = { txt="&" hint="Sound when triggered" }
+            event:    = { txt="&" hint="Name of item to use" }
+        }
+    }
+}

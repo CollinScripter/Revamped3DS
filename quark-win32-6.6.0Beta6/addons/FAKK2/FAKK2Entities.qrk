@@ -1,0 +1,4089 @@
+QQRKSRC1
+// FAKK2 Entities file for Quark
+
+//$Header: /cvsroot/quark/runtime/addons/FAKK2/FAKK2Entities.qrk,v 1.4 2008/08/26 11:51:24 danielpharos Exp $
+// ----------- REVISION HISTORY ------------
+//$Log: FAKK2Entities.qrk,v $
+//Revision 1.4  2008/08/26 11:51:24  danielpharos
+//Added missing map specific to trigger_changelevel
+//
+//Revision 1.3  2008/05/14 20:38:54  cdunde
+//Fixed basic lighting in all games and a few other small typo errors.
+//
+//Revision 1.2  2008/03/11 22:24:10  cdunde
+//Update to add Specific include selectors and correct other stuff.
+//
+//Revision 1.1  2008/03/09 20:31:07  cdunde
+//Pulled entities out of the EF2 and FAKK2 game Data.qrk files.
+//Game addons should never dump anything into their Data.qrk files.
+//Also fixed their worldspawn music to work now.
+//
+//
+
+{
+  QuArKProtected = "1"
+  Description = "FAKK2 Entities"
+
+  Toolbox Folders.qtx =
+  {
+    Toolbox = "New map items..."
+    Root = "FAKK2 Entities.qtxfolder"
+    FAKK2 Entities.qtxfolder =
+    {
+      ;desc = "Created from FAKK2Entities.def"
+      func_* entities.qtxfolder =
+      {
+        func_beam:e =
+        {
+          angle = "360"
+          origin = "0 0 0"
+        }
+        func_door:b =
+        {
+          angle = "360"
+          ;incl = "defpoly"
+        }
+        func_earthquake:e =
+        {
+          angle = "360"
+          origin = "0 0 0"
+        }
+        func_emitter:b =
+        {
+          angle = "360"
+          ;incl = "defpoly"
+        }
+        func_explodeobject:b =
+        {
+          angle = "360"
+          ;incl = "defpoly"
+        }
+        func_exploder:e =
+        {
+          angle = "360"
+          origin = "0 0 0"
+        }
+        func_explodingwall:b =
+        {
+          angle = "360"
+          ;incl = "defpoly"
+        }
+        func_fallingrock:b =
+        {
+          angle = "360"
+          ;incl = "defpoly"
+        }
+        func_fulcrum:b =
+        {
+          angle = "360"
+          ;incl = "defpoly"
+        }
+        func_group:b =
+        {
+          angle = "360"
+          ;incl = "defpoly"
+        }
+        func_horizontalpipe:b =
+        {
+          angle = "360"
+          ;incl = "defpoly"
+        }
+        func_monkeybars:b =
+        {
+          angle = "360"
+          ;incl = "defpoly"
+        }
+        func_multi_exploder:b =
+        {
+          angle = "360"
+          ;incl = "defpoly"
+        }
+        func_pushobject:b =
+        {
+          angle = "360"
+          ;incl = "defpoly"
+        }
+        func_rain:b =
+        {
+          angle = "360"
+          ;incl = "defpoly"
+        }
+        func_randomspawn:e =
+        {
+          angle = "360"
+          origin = "0 0 0"
+        }
+        func_remove:b =
+        {
+          angle = "360"
+          ;incl = "defpoly"
+        }
+        func_respawn:e =
+        {
+          angle = "360"
+          origin = "0 0 0"
+        }
+        func_rope:b =
+        {
+          angle = "360"
+          ;incl = "defpoly"
+        }
+        func_rope_base:e =
+        {
+          angle = "360"
+          origin = "0 0 0"
+        }
+        func_rope_piece:e =
+        {
+          angle = "360"
+          origin = "0 0 0"
+        }
+        func_rotatingdoor:b =
+        {
+          angle = "360"
+          ;incl = "defpoly"
+        }
+        func_runthrough:b =
+        {
+          angle = "360"
+          ;incl = "defpoly"
+        }
+        func_sinkobject:b =
+        {
+          angle = "360"
+          ;incl = "defpoly"
+        }
+        func_spawn:e =
+        {
+          angle = "360"
+          origin = "0 0 0"
+        }
+        func_spawnchain:e =
+        {
+          angle = "360"
+          origin = "0 0 0"
+        }
+        func_spawnoutofsight:e =
+        {
+          angle = "360"
+          origin = "0 0 0"
+        }
+        func_supplywater:b =
+        {
+          angle = "360"
+          ;incl = "defpoly"
+        }
+        func_teleportdest:e =
+        {
+          angle = "360"
+          origin = "0 0 0"
+        }
+        func_throwobject:e =
+        {
+          angle = "360"
+          origin = "0 0 0"
+        }
+        func_useanim:b =
+        {
+          angle = "360"
+          ;incl = "defpoly"
+        }
+        func_useobject:b =
+        {
+          angle = "360"
+          ;incl = "defpoly"
+        }
+      }
+      info_* entities.qtxfolder =
+      {
+        info_grav_pathnode:e =
+        {
+          angle = "360"
+          origin = "0 0 0"
+        }
+        info_notnull:e =
+        {
+          angle = "360"
+          origin = "0 0 0"
+        }
+        info_null:e =
+        {
+          angle = "360"
+          origin = "0 0 0"
+        }
+        info_pathnode:e =
+        {
+          angle = "360"
+          origin = "0 0 0"
+        }
+        info_player_deathmatch:e =
+        {
+          angle = "360"
+          origin = "0 0 0"
+        }
+        info_player_intermission:e =
+        {
+          angle = "360"
+          origin = "0 0 0"
+        }
+        info_player_start:e =
+        {
+          angle = "360"
+          origin = "0 0 0"
+        }
+        info_waypoint:e =
+        {
+          angle = "360"
+          origin = "0 0 0"
+        }
+      }
+      misc_* entities.qtxfolder =
+      {
+        misc_model:e =
+        {
+          angle = "360"
+          origin = "0 0 0"
+        }
+      }
+      other entities.qtxfolder =
+      {
+        detail:b =
+        {
+          angle = "360"
+          ;incl = "defpoly"
+        }
+        light:e =
+        {
+          ;desc = "Light up the map."
+          light = "300"
+          _color = "1 1 1"
+          angles = "0 0 0"
+          origin = "0 0 0"
+        }
+        worldspawn:b =
+        {
+        }
+      }
+      portal_* entities.qtxfolder =
+      {
+        portal_camera:e =
+        {
+          angle = "360"
+          origin = "0 0 0"
+        }
+        portal_surface:e =
+        {
+          angle = "360"
+          origin = "0 0 0"
+        }
+      }
+      script_* entities.qtxfolder =
+      {
+        script_door:b =
+        {
+          angle = "360"
+          ;incl = "defpoly"
+        }
+        script_model:e =
+        {
+          angle = "360"
+          origin = "0 0 0"
+        }
+        script_object:b =
+        {
+          angle = "360"
+          ;incl = "defpoly"
+        }
+        script_origin:e =
+        {
+          angle = "360"
+          origin = "0 0 0"
+        }
+        script_skyorigin:b =
+        {
+          angle = "360"
+          ;incl = "defpoly"
+        }
+      }
+      sound_* entities.qtxfolder =
+      {
+        sound_randomspeaker:e =
+        {
+          angle = "360"
+          origin = "0 0 0"
+        }
+        sound_speaker:e =
+        {
+          angle = "360"
+          origin = "0 0 0"
+        }
+      }
+      trigger_* entities.qtxfolder =
+      {
+        trigger_camerause:b =
+        {
+          angle = "360"
+          ;incl = "defpoly"
+        }
+        trigger_changelevel:b =
+        {
+          angle = "360"
+          ;incl = "defpoly"
+        }
+        trigger_damagetargets:b =
+        {
+          angle = "360"
+          ;incl = "defpoly"
+        }
+        trigger_exit:b =
+        {
+          angle = "360"
+          ;incl = "defpoly"
+        }
+        trigger_givepowerup:b =
+        {
+          angle = "360"
+          ;incl = "defpoly"
+        }
+        trigger_hurt:b =
+        {
+          angle = "360"
+          ;incl = "defpoly"
+        }
+        trigger_multiple:b =
+        {
+          angle = "360"
+          ;incl = "defpoly"
+        }
+        trigger_music:b =
+        {
+          angle = "360"
+          ;incl = "defpoly"
+        }
+        trigger_once:b =
+        {
+          angle = "360"
+          ;incl = "defpoly"
+        }
+        trigger_push:b =
+        {
+          angle = "360"
+          ;incl = "defpoly"
+        }
+        trigger_pushany:b =
+        {
+          angle = "360"
+          ;incl = "defpoly"
+        }
+        trigger_pushobject:b =
+        {
+          angle = "360"
+          ;incl = "defpoly"
+        }
+        trigger_relay:e =
+        {
+          angle = "360"
+          origin = "0 0 0"
+        }
+        trigger_reverb:b =
+        {
+          angle = "360"
+          ;incl = "defpoly"
+        }
+        trigger_secret:b =
+        {
+          angle = "360"
+          ;incl = "defpoly"
+        }
+        trigger_setvariable:b =
+        {
+          angle = "360"
+          ;incl = "defpoly"
+        }
+        trigger_teleport:b =
+        {
+          angle = "360"
+          ;incl = "defpoly"
+        }
+        trigger_use:b =
+        {
+          angle = "360"
+          ;incl = "defpoly"
+        }
+        trigger_useonce:b =
+        {
+          angle = "360"
+          ;incl = "defpoly"
+        }
+      }
+    }
+  }
+  Entity Forms.fctx =
+  {
+    // Definition of includes
+
+    t_commonspecifics:incl =
+    {
+      target: =
+      {
+        txt = "&"
+        hint = "Name of the entity that this one targets."
+      }
+      targetname: =
+      {
+        txt = "&"
+        hint = "Name of this entity, used as a target by another entity."
+            $0D"Click the 'Help Book' above for more possible detail."
+      }
+    }
+
+    t_modelbrowser:incl =
+    {
+      hint ="Use this to select any .tik file you want."$0D
+            "You must extract the folder with the .tik files"$0D
+            "from the .pk3 file and put it in your 'fakk' folder."
+            $0D"Click the 'Help Book' above for more possible detail."
+      Typ = "EP"
+      BasePath = "$Game\fakk"
+      CutPath = "$Game\?\"
+      DefExt = "tik"
+      DirSep = "/"
+    }
+
+    t_soundbrowser:incl =
+    {
+      hint ="Use this to select any .wav file you want."$0D
+            "You must extract the folder with the .wav files"$0D
+            "from the .pk3 file and put it in your 'fakk' folder."
+            $0D"Click the 'Help Book' above for more possible detail."
+      Typ = "EP"
+      BasePath = "$Game\fakk"
+      CutPath = "$Game\?\"
+      DefExt = "wav"
+      DirSep = "/"
+    }
+
+    t_musicbrowser:incl =
+    {
+      hint ="Use this to select any .mus file you want."$0D
+            "You must extract the folder with the .mus files"$0D
+            "from the .pk3 file and put it in your 'fakk' folder."
+            $0D"Click the 'Help Book' above for more possible detail."
+      Typ = "EP"
+      BasePath = "$Game\fakk"
+      CutPath = "$Game\?\"
+      DefExt = "mus"
+      DirSep = "/"
+    }
+
+    func_beam:form =
+    {
+      help = "This creates a beam effect from the origin to the target's origi"
+       "n. If no"$0D"target is specified, uses angles and projects beam out fr"
+       "om there."$0D22"model"$22" Specifies the model to use as the beam"$0D22
+       "overlap"$22" Specifies the amount of overlap each beam link should hav"
+       "e. Use this to fill"$0D"in the cracks when using electric on beams. (D"
+       "efault is 0)"$0D22"minoffset"$22" Minimum amount of electrical variati"
+       "on (Default is 0)"$0D22"maxoffset"$22" Maximum amount of electrical va"
+       "riation (Default is 5)"$0D22"color"$22" Vector specifiying the red,gre"
+       "en, and blue components. (Default is '1 1 1')"$0D22"alpha"$22" Alpha o"
+       "f the beam (Default is 1.0)"$0D22"damage"$22" Amount of damage the bea"
+       "m inflicts if beam hits someone (Default is 0)"$0D22"angles"$22" Sets "
+       "the angle of the beam if no target is specified."$0D22"life"$22" Sets "
+       "the life of the beam for use with the persist spawnflag. This is how l"
+       "ong a beam will"$0D"be displayed."$0D22"numsegments"$22" Number of seg"
+       "ments in a beam (Default is 4)"$0D22"delay"$22" Delay between beam upd"
+       "ates. (i.e. slows the effect of the beam down)"$0D22"shader"$22" Set t"
+       "he shader of the beam"$0D22"scale"$22" Set the width of the beam"$0D"S"
+       "TART_ON - Starts the beam on"$0D"PERSIST - Keeps the last few beams ar"
+       "ound and fades them out over the life of the beam"$0D"WAVE - Make the "
+       "beam follow a sin wave pattern"$0D"NOISE - Use a more computationally "
+       "expensive random effect, but the results are smoother"$0D"If the model"
+       " field is not set, then a renderer generated beam will be created"$0D"u"
+       "sing the color, minoffset, maxoffset, scale, and subdivisions fields"$0D
+       "If the targetname is set, it will use the target specified as the endp"
+       "oint of the beam"
+      bbox = '-8 -8 -8 8 8 8'
+      spawnflags: =
+      {
+        typ = "X1"
+        cap = "START_ON"
+      }
+      spawnflags: =
+      {
+        typ = "X2"
+        cap = "PERSIST"
+      }
+      spawnflags: =
+      {
+        typ = "X4"
+        cap = "WAVE"
+      }
+      spawnflags: =
+      {
+        typ = "X8"
+        cap = "NOISE"
+      }
+      t_commonspecifics = !
+      model: =
+      {
+        t_modelbrowser = !
+        txt = "&"
+        hint = "Specifies the model to use as the beam"
+      }
+      overlap: =
+      {
+        txt = "&"
+        hint = "Specifies the amount of overlap each beam link should have. Use this to fill"
+            $0D"in the cracks when using electric on beams. (Default is 0)"
+      }
+      minoffset: =
+      {
+        txt = "&"
+        hint = "Minimum amount of electrical variation (Default is 0)"
+      }
+      maxoffset: =
+      {
+        txt = "&"
+        hint = "Maximum amount of electrical variation (Default is 5)"
+      }
+      color: =
+      {
+        txt = "&"
+        Typ = "LN"
+        hint = "Vector specifiying the red,green, and blue components. (Default is '1 1 1')"
+      }
+      alpha: =
+      {
+        txt = "&"
+        hint = "Alpha of the beam (Default is 1.0)"
+      }
+      damage: =
+      {
+        txt = "&"
+        hint = "Amount of damage the beam inflicts if beam hits someone (Default is 0)"
+      }
+      angles: =
+      {
+        txt = "&"
+        hint = "Sets the angle of the beam if no target is specified."
+      }
+      life: =
+      {
+        txt = "&"
+        hint = "Sets the life of the beam for use with the persist spawnflag. This is how long a beam will"
+            $0D"be displayed."
+      }
+      numsegments: =
+      {
+        txt = "&"
+        hint = "Number of segments in a beam (Default is 4)"
+      }
+      delay: =
+      {
+        txt = "&"
+        hint = "Delay between beam updates. (i.e. slows the effect of the beam down)"
+      }
+      shader: =
+      {
+        txt = "&"
+        hint = "Set the shader of the beam"
+      }
+      scale: =
+      {
+        txt = "&"
+        hint = "Set the width of the beam"
+      }
+    }
+    func_rotatingdoor:form =
+    {
+      help = "if two doors touch, they are assumed to be connected and operate"
+       " as a unit."$0D"TOGGLE causes the door to wait in both the start and e"
+       "nd states for a trigger event."$0D"DOOR_DONT_LINK is for when you have"
+       " two doors that are touching but you want to operate independently."$0D
+       "START_OPEN causes the door to move to its destination when spawned, an"
+       "d operate in reverse. It is used to temporarily or permanently close o"
+       "ff an area when triggered (not usefull for touch or takedamage doors)."
+       $0D"OPEN_DIRECTION indicates which direction to open when START_OPEN is"
+       " set."$0D"AUTO_OPEN causes the door to open when a player is near inst"
+       "ead of waiting for the player to use the door."$0D"TARGETED door is on"
+       "ly operational from triggers or script"$0D22"message"$22" is printed w"
+       "hen the door is touched if it is a trigger door and it hasn't been fir"
+       "ed yet"$0D22"openangle"$22" how wide to open the door"$0D22"angle"$22" "
+       "determines the opening direction. point toward the middle of the door "
+       "(away from the hinge)"$0D22"targetname"$22" if set, no touch field wil"
+       "l be spawned and a remote button or trigger field activates the door."$0D
+       $22"health"$22" if set, door must be shot open"$0D22"time"$22" move tim"
+       "e (0.3 default)"$0D22"wait"$22" wait before returning (3 default, -1 ="
+       " never return)"$0D22"dmg"$22" damage to inflict when blocked (0 defaul"
+       "t)"$0D22"key"$22" The item needed to open this door (default nothing)"$0D
+       $22"sound_stop"$22" Specify the sound that plays when the door stops mo"
+       "ving (default global door_stop)"$0D22"sound_move"$22" Specify the soun"
+       "d that plays when the door opens or closes (default global door_moving"
+       ")"$0D22"sound_message"$22" Specify the sound that plays when the door "
+       "displays a message"$0D22"sound_locked"$22" Specify the sound that play"
+       "s when the door is locked"
+      spawnflags: =
+      {
+        typ = "X1"
+        cap = "START_OPEN"
+      }
+      spawnflags: =
+      {
+        typ = "X2"
+        cap = "OPEN_DIRECTION"
+      }
+      spawnflags: =
+      {
+        typ = "X4"
+        cap = "DOOR_DONT_LINK"
+      }
+      spawnflags: =
+      {
+        typ = "X8"
+        cap = "NOT_PLAYERS"
+      }
+      spawnflags: =
+      {
+        typ = "X16"
+        cap = "NOT_MONSTERS"
+      }
+      spawnflags: =
+      {
+        typ = "X32"
+        cap = "TOGGLE"
+      }
+      spawnflags: =
+      {
+        typ = "X64"
+        cap = "AUTO_OPEN"
+      }
+      spawnflags: =
+      {
+        typ = "X128"
+        cap = "TARGETED"
+      }
+      t_commonspecifics = !
+      message: =
+      {
+        txt = "&"
+        hint = "is printed when the door is touched if it is a trigger door and it hasn't been fired yet"
+      }
+      openangle: =
+      {
+        txt = "&"
+        hint = "how wide to open the door"
+      }
+      angle: =
+      {
+        txt = "&"
+        hint = "determines the opening direction. point toward the middle of the door (away from the hinge)"
+      }
+      health: =
+      {
+        txt = "&"
+        hint = "if set, door must be shot open"
+      }
+      time: =
+      {
+        txt = "&"
+        hint = "move time (0.3 default)"
+      }
+      wait: =
+      {
+        txt = "&"
+        hint = "wait before returning (3 default, -1 = never return)"
+      }
+      dmg: =
+      {
+        txt = "&"
+        hint = "damage to inflict when blocked (0 default)"
+      }
+      key: =
+      {
+        txt = "&"
+        hint = "The item needed to open this door (default nothing)"
+      }
+      sound_stop: =
+      {
+        t_soundbrowser = !
+        txt = "&"
+        hint = "Specify the sound that plays when the door stops moving (default global door_stop)"
+      }
+      sound_move: =
+      {
+        t_soundbrowser = !
+        txt = "&"
+        hint = "Specify the sound that plays when the door opens or closes (default global door_moving)"
+      }
+      sound_message: =
+      {
+        t_soundbrowser = !
+        txt = "&"
+        hint = "Specify the sound that plays when the door displays a message"
+      }
+      sound_locked: =
+      {
+        t_soundbrowser = !
+        txt = "&"
+        hint = "Specify the sound that plays when the door is locked"
+      }
+    }
+    func_door:form =
+    {
+      help = "if two doors touch, they are assumed to be connected and operate"
+       " as a unit."$0D"TOGGLE causes the door to wait in both the start and e"
+       "nd states for a trigger event."$0D"DOOR_DONT_LINK is for when you have"
+       " two doors that are touching but you want to operate independently."$0D
+       "START_OPEN causes the door to move to its destination when spawned, an"
+       "d operate in reverse. It is used to temporarily or permanently close o"
+       "ff an area when triggered (not usefull for touch or takedamage doors)."
+       $0D"OPEN_DIRECTION indicates which direction to open when START_OPEN is"
+       " set."$0D"AUTO_OPEN causes the door to open when a player is near inst"
+       "ead of waiting for the player to use the door."$0D"TARGETED door is on"
+       "ly operational from triggers or script"$0D22"message"$22" is printed w"
+       "hen the door is touched if it is a trigger door and it hasn't been fir"
+       "ed yet"$0D22"angle"$22" determines the opening direction. point toward"
+       " the middle of the door (away from the hinge)"$0D22"targetname"$22" if"
+       " set, no touch field will be spawned and a remote button or trigger fi"
+       "eld activates the door."$0D22"health"$22" if set, door must be shot op"
+       "en"$0D22"speed"$22" move speed (100 default)"$0D22"time"$22" move time"
+       " (1/speed default, overides speed)"$0D22"wait"$22" wait before returni"
+       "ng (3 default, -1 = never return)"$0D22"lip"$22" lip remaining at end "
+       "of move (8 default)"$0D22"dmg"$22" damage to inflict when blocked (0 d"
+       "efault)"$0D22"key"$22" The item needed to open this door (default noth"
+       "ing)"$0D22"sound_stop"$22" Specify the sound that plays when the door "
+       "stops moving (default global door_stop)"$0D22"sound_move"$22" Specify "
+       "the sound that plays when the door opens or closes (default global doo"
+       "r_moving)"$0D22"sound_message"$22" Specify the sound that plays when t"
+       "he door displays a message"$0D22"sound_locked"$22" Specify the sound t"
+       "hat plays when the door is locked"
+      spawnflags: =
+      {
+        typ = "X1"
+        cap = "START_OPEN"
+      }
+      spawnflags: =
+      {
+        typ = "X4"
+        cap = "DOOR_DONT_LINK"
+      }
+      spawnflags: =
+      {
+        typ = "X8"
+        cap = "NOT_PLAYERS"
+      }
+      spawnflags: =
+      {
+        typ = "X16"
+        cap = "NOT_MONSTERS"
+      }
+      spawnflags: =
+      {
+        typ = "X32"
+        cap = "TOGGLE"
+      }
+      spawnflags: =
+      {
+        typ = "X64"
+        cap = "AUTO_OPEN"
+      }
+      spawnflags: =
+      {
+        typ = "X128"
+        cap = "TARGETED"
+      }
+      t_commonspecifics = !
+      message: =
+      {
+        txt = "&"
+        hint = "is printed when the door is touched if it is a trigger door and it hasn't been fired yet"
+      }
+      angle: =
+      {
+        txt = "&"
+        hint = "determines the opening direction. point toward the middle of the door (away from the hinge)"
+      }
+      health: =
+      {
+        txt = "&"
+        hint = "if set, door must be shot open"
+      }
+      speed: =
+      {
+        txt = "&"
+        hint = "move speed (100 default)"
+      }
+      time: =
+      {
+        txt = "&"
+        hint = "move time (1/speed default, overides speed)"
+      }
+      wait: =
+      {
+        txt = "&"
+        hint = "wait before returning (3 default, -1 = never return)"
+      }
+      lip: =
+      {
+        txt = "&"
+        hint = "lip remaining at end of move (8 default)"
+      }
+      dmg: =
+      {
+        txt = "&"
+        hint = "damage to inflict when blocked (0 default)"
+      }
+      key: =
+      {
+        txt = "&"
+        hint = "The item needed to open this door (default nothing)"
+      }
+      sound_stop: =
+      {
+        t_soundbrowser = !
+        txt = "&"
+        hint = "Specify the sound that plays when the door stops moving (default global door_stop)"
+      }
+      sound_move: =
+      {
+        t_soundbrowser = !
+        txt = "&"
+        hint = "Specify the sound that plays when the door opens or closes (default global door_moving)"
+      }
+      sound_message: =
+      {
+        t_soundbrowser = !
+        txt = "&"
+        hint = "Specify the sound that plays when the door displays a message"
+      }
+      sound_locked: =
+      {
+        t_soundbrowser = !
+        txt = "&"
+        hint = "Specify the sound that plays when the door is locked"
+      }
+    }
+    script_door:form =
+    {
+      help = "if two doors touch, they are assumed to be connected and operate"
+       " as a unit."$0D"TOGGLE causes the door to wait in both the start and e"
+       "nd states for a trigger event."$0D"DOOR_DONT_LINK is for when you have"
+       " two doors that are touching but you want to operate independently."$0D
+       "START_OPEN causes the door to move to its destination when spawned, an"
+       "d operate in reverse. It is used to temporarily or permanently close o"
+       "ff an area when triggered (not usefull for touch or takedamage doors)."
+       $0D"OPEN_DIRECTION indicates which direction to open when START_OPEN is"
+       " set."$0D"AUTO_OPEN causes the door to open when a player is near inst"
+       "ead of waiting for the player to use the door."$0D"TARGETED door is on"
+       "ly operational from triggers or script"$0D22"message"$22" is printed w"
+       "hen the door is touched if it is a trigger door and it hasn't been fir"
+       "ed yet"$0D22"angle"$22" determines the opening direction. point toward"
+       " the middle of the door (away from the hinge)"$0D22"targetname"$22" if"
+       " set, no touch field will be spawned and a remote button or trigger fi"
+       "eld activates the door."$0D22"health"$22" if set, door must be shot op"
+       "en"$0D22"speed"$22" move speed (100 default)"$0D22"time"$22" move time"
+       " (1/speed default, overides speed)"$0D22"wait"$22" wait before returni"
+       "ng (3 default, -1 = never return)"$0D22"dmg"$22" damage to inflict whe"
+       "n blocked (0 default)"$0D22"key"$22" The item needed to open this door"
+       " (default nothing)"$0D22"initthread"$22" code to execute to setup the "
+       "door (optional)"$0D22"openthread"$22" code to execute when opening the"
+       " door (required)"$0D"The openthread should send the 'dooropened' event"
+       " to the door, when it is completely open"$0D22"closethread"$22" code t"
+       "o execute when closing the door (required)"$0D"The closethread should "
+       "send the 'doorclosed' event to the door, when it is completely closed"$0D
+       $22"sound_stop"$22" Specify the sound that plays when the door stops mo"
+       "ving (default global door_stop)"$0D22"sound_move"$22" Specify the soun"
+       "d that plays when the door opens or closes (default global door_moving"
+       ")"$0D22"sound_message"$22" Specify the sound that plays when the door "
+       "displays a message"$0D22"sound_locked"$22" Specify the sound that play"
+       "s when the door is locked"
+      spawnflags: =
+      {
+        typ = "X1"
+        cap = "START_OPEN"
+      }
+      spawnflags: =
+      {
+        typ = "X4"
+        cap = "DOOR_DONT_LINK"
+      }
+      spawnflags: =
+      {
+        typ = "X8"
+        cap = "NOT_PLAYERS"
+      }
+      spawnflags: =
+      {
+        typ = "X16"
+        cap = "NOT_MONSTERS"
+      }
+      spawnflags: =
+      {
+        typ = "X32"
+        cap = "TOGGLE"
+      }
+      spawnflags: =
+      {
+        typ = "X64"
+        cap = "AUTO_OPEN"
+      }
+      spawnflags: =
+      {
+        typ = "X128"
+        cap = "TARGETED"
+      }
+      t_commonspecifics = !
+      message: =
+      {
+        txt = "&"
+        hint = "is printed when the door is touched if it is a trigger door and it hasn't been fired yet"
+      }
+      angle: =
+      {
+        txt = "&"
+        hint = "determines the opening direction. point toward the middle of the door (away from the hinge)"
+      }
+      health: =
+      {
+        txt = "&"
+        hint = "if set, door must be shot open"
+      }
+      speed: =
+      {
+        txt = "&"
+        hint = "move speed (100 default)"
+      }
+      time: =
+      {
+        txt = "&"
+        hint = "move time (1/speed default, overides speed)"
+      }
+      wait: =
+      {
+        txt = "&"
+        hint = "wait before returning (3 default, -1 = never return)"
+      }
+      dmg: =
+      {
+        txt = "&"
+        hint = "damage to inflict when blocked (0 default)"
+      }
+      key: =
+      {
+        txt = "&"
+        hint = "The item needed to open this door (default nothing)"
+      }
+      initthread: =
+      {
+        txt = "&"
+        hint = "code to execute to setup the door (optional)"
+      }
+      openthread: =
+      {
+        txt = "&"
+        hint = "code to execute when opening the door (required)"
+            $0D"The openthread should send the 'dooropened' event to the door, when it is completely open"
+      }
+      closethread: =
+      {
+        txt = "&"
+        hint = "code to execute when closing the door (required)"
+            $0D"The closethread should send the 'doorclosed' event to the door, when it is completely closed"
+      }
+      sound_stop: =
+      {
+        t_soundbrowser = !
+        txt = "&"
+        hint = "Specify the sound that plays when the door stops moving (default global door_stop)"
+      }
+      sound_move: =
+      {
+        t_soundbrowser = !
+        txt = "&"
+        hint = "Specify the sound that plays when the door opens or closes (default global door_moving)"
+      }
+      sound_message: =
+      {
+        t_soundbrowser = !
+        txt = "&"
+        hint = "Specify the sound that plays when the door displays a message"
+      }
+      sound_locked: =
+      {
+        t_soundbrowser = !
+        txt = "&"
+        hint = "Specify the sound that plays when the door is locked"
+      }
+    }
+    func_earthquake:form =
+    {
+      help = "Causes an earthquake"$0D22"duration"$22" is the duration of the "
+       "earthquake. Default is 0.8 seconds."$0D22"magnitude"$22" severity of t"
+       "he quake. Default 1.0"
+      bbox = '-8 -8 -8 8 8 8'
+      spawnflags: =
+      {
+        typ = "X1"
+        cap = "NO_RAMPUP"
+      }
+      spawnflags: =
+      {
+        typ = "X2"
+        cap = "NO_RAMPDOWN"
+      }
+      t_commonspecifics = !
+      duration: =
+      {
+        txt = "&"
+        hint = "is the duration of the earthquake. Default is 0.8 seconds."
+      }
+      magnitude: =
+      {
+        txt = "&"
+        hint = "severity of the quake. Default 1.0"
+      }
+    }
+    func_exploder:form =
+    {
+      help = "Spawns an explosion when triggered. Triggers any targets."$0D22"d"
+       "mg"$22" specifies how much damage to cause. Default indicates 120."$0D
+       $22"key"$22" The item needed to activate this. (default nothing)"$0D22"t"
+       "hread"$22" name of thread to trigger. This can be in a different scrip"
+       "t file as well"$0D"by using the '::' notation."
+      bbox = '0 0 0 8 8 8'
+      t_commonspecifics = !
+      dmg: =
+      {
+        txt = "&"
+        hint = "specifies how much damage to cause. Default indicates 120."
+      }
+      key: =
+      {
+        txt = "&"
+        hint = "The item needed to activate this. (default nothing)"
+      }
+      thread: =
+      {
+        txt = "&"
+        hint = "name of thread to trigger. This can be in a different script file as well"
+            $0D"by using the '::' notation."
+      }
+    }
+    func_multi_exploder:form =
+    {
+      help = "Spawns an explosion when triggered. Triggers any targets."$0D"si"
+       "ze of brush determines where explosions will occur."$0D22"dmg"$22" spe"
+       "cifies how much damage to cause from each explosion. (Default 120)"$0D
+       $22"delay"$22" delay before exploding (Default 0 seconds)"$0D22"duratio"
+       "n"$22" how long to explode for (Default 1 second)"$0D22"wait"$22" time"
+       " between each explosion (default 0.25 seconds)"$0D22"random"$22" rando"
+       "m factor (default 0.25)"$0D22"key"$22" The item needed to activate thi"
+       "s. (default nothing)"$0D22"thread"$22" name of thread to trigger. This"
+       " can be in a different script file as well"$0D"by using the '::' notat"
+       "ion."$0D22"health"$22" makes the object damageable"$0D22"scale"$22" se"
+       "t the maximum size for spawned debris and explosions."$0D"MULTI_USE al"
+       "lows the func_multi_exploder to be used more than once"$0D"RANDOM_TIME"
+       " adjusts the wait between each explosion by the random factor"$0D"VISI"
+       "BLE allows you to make the trigger visible"$0D"RANDOM_SCALE scale expl"
+       "osions randomly. size will be between 0.25 and 1 times scale"
+      spawnflags: =
+      {
+        typ = "X1"
+        cap = "MULTI_USE"
+      }
+      spawnflags: =
+      {
+        typ = "X2"
+        cap = "RANDOM_TIME"
+      }
+      spawnflags: =
+      {
+        typ = "X4"
+        cap = "VISIBLE"
+      }
+      spawnflags: =
+      {
+        typ = "X8"
+        cap = "RANDOM_SCALE"
+      }
+      t_commonspecifics = !
+      dmg: =
+      {
+        txt = "&"
+        hint = "specifies how much damage to cause from each explosion. (Default 120)"
+      }
+      delay: =
+      {
+        txt = "&"
+        hint = "delay before exploding (Default 0 seconds)"
+      }
+      duration: =
+      {
+        txt = "&"
+        hint = "how long to explode for (Default 1 second)"
+      }
+      wait: =
+      {
+        txt = "&"
+        hint = "time between each explosion (default 0.25 seconds)"
+      }
+      random: =
+      {
+        txt = "&"
+        hint = "random factor (default 0.25)"
+      }
+      key: =
+      {
+        txt = "&"
+        hint = "The item needed to activate this. (default nothing)"
+      }
+      thread: =
+      {
+        txt = "&"
+        hint = "name of thread to trigger. This can be in a different script file as well"
+            $0D"by using the '::' notation."
+      }
+      health: =
+      {
+        txt = "&"
+        hint = "makes the object damageable"
+      }
+      scale: =
+      {
+        txt = "&"
+        hint = "set the maximum size for spawned debris and explosions."
+      }
+    }
+    func_explodeobject:form =
+    {
+      help = "Spawns different kinds of debris when triggered. Triggers any ta"
+       "rgets."$0D"size of brush determines where explosions and debris will b"
+       "e spawned."$0D22"dmg"$22" specifies how much damage to cause from each"
+       " explosion. (Default 120)"$0D22"delay"$22" delay before exploding (Def"
+       "ault 0 seconds)"$0D22"duration"$22" how long to explode for (Default 1"
+       " second)"$0D22"wait"$22" time between each explosion (default 0.25 sec"
+       "onds)"$0D22"random"$22" random factor (default 0.25)"$0D22"health"$22" "
+       "if specified, object must be damaged to trigger"$0D22"key"$22" The ite"
+       "m needed to activate this. (default nothing)"$0D22"severity"$22" how v"
+       "iolent the debris should be ejected from the object( default 1.0 )"$0D
+       $22"debrismodel"$22" What kind of debris to spawn (default nothing)"$0D
+       $22"amount"$22" how much debris to spawn for each explosion (default 4)"
+       $0D22"thread"$22" name of thread to trigger. This can be in a different"
+       " script file as well"$0D"by using the '::' notation."$0D22"health"$22" "
+       "makes the object damageable"$0D22"scale"$22" set the maximum size for "
+       "spawned debris and explosions"$0D"MULTI_USE allows the func_explodeobj"
+       "ect to be used more than once"$0D"RANDOM_TIME adjusts the wait between"
+       " each explosion by the random factor"$0D"VISIBLE allows you to make th"
+       "e trigger visible"$0D"RANDOM_SCALE scale explosions and debris randoml"
+       "y. size will be between 0.25 and 1 times scale"$0D"NO_EXPLOSIONS, if c"
+       "hecked no explosions will be created"$0D"METAL_DEBRIS automatically sp"
+       "awn metal debris, no need for debrismodel to be set"$0D"ROCK_DEBRIS au"
+       "tomatically spawn rock debris, no need for debrismodel to be set"$0D"N"
+       "OTSOLID debris is not solid"$0D"other valid tiki files include:"$0D"ob"
+       "j_debris_glass1-4.tik"$0D"obj_debris_wood1-4.tik"
+      spawnflags: =
+      {
+        typ = "X1"
+        cap = "MULTI_USE"
+      }
+      spawnflags: =
+      {
+        typ = "X2"
+        cap = "RANDOM_TIME"
+      }
+      spawnflags: =
+      {
+        typ = "X4"
+        cap = "VISIBLE"
+      }
+      spawnflags: =
+      {
+        typ = "X8"
+        cap = "RANDOM_SCALE"
+      }
+      spawnflags: =
+      {
+        typ = "X16"
+        cap = "NO_EXPLOSIONS"
+      }
+      spawnflags: =
+      {
+        typ = "X32"
+        cap = "METAL_DEBRIS"
+      }
+      spawnflags: =
+      {
+        typ = "X64"
+        cap = "ROCK_DEBRIS"
+      }
+      spawnflags: =
+      {
+        typ = "X128"
+        cap = "NOTSOLID"
+      }
+      t_commonspecifics = !
+      dmg: =
+      {
+        txt = "&"
+        hint = "specifies how much damage to cause from each explosion. (Default 120)"
+      }
+      delay: =
+      {
+        txt = "&"
+        hint = "delay before exploding (Default 0 seconds)"
+      }
+      duration: =
+      {
+        txt = "&"
+        hint = "how long to explode for (Default 1 second)"
+      }
+      wait: =
+      {
+        txt = "&"
+        hint = "time between each explosion (default 0.25 seconds)"
+      }
+      random: =
+      {
+        txt = "&"
+        hint = "random factor (default 0.25)"
+      }
+      health: =
+      {
+        txt = "&"
+        hint = "if specified, object must be damaged to trigger"
+      }
+      key: =
+      {
+        txt = "&"
+        hint = "The item needed to activate this. (default nothing)"
+      }
+      severity: =
+      {
+        txt = "&"
+        hint = "how violent the debris should be ejected from the object( default 1.0 )"
+      }
+      debrismodel: =
+      {
+        t_modelbrowser = !
+        txt = "&"
+        hint = "What kind of debris to spawn (default nothing)"
+      }
+      amount: =
+      {
+        txt = "&"
+        hint = "how much debris to spawn for each explosion (default 4)"
+      }
+      thread: =
+      {
+        txt = "&"
+        hint = "name of thread to trigger. This can be in a different script file as well"
+            $0D"by using the '::' notation."
+      }
+      health: =
+      {
+        txt = "&"
+        hint = "makes the object damageable"
+      }
+      scale: =
+      {
+        txt = "&"
+        hint = "set the maximum size for spawned debris and explosions"
+      }
+    }
+    info_grav_pathnode:form =
+    {
+      help = $22"radius"$22" Radius of the effect of the pull (Default is 256)"
+       $0D22"speed"$22" Speed of the pull (Use negative for a repulsion) (Defa"
+       "ult is 100)"$0D"Set HEADNODE to signify the head of the path."$0D"Set "
+       "FORCE if you want un-fightable gravity ( i.e. can't go backwards )"$0D
+       "Set PULL_UPWARDS if you want the gravnodes to pull you upwards also"
+      bbox = '-16 -16 0 16 16 32'
+      spawnflags: =
+      {
+        typ = "X1"
+        cap = "HEADNODE"
+      }
+      spawnflags: =
+      {
+        typ = "X2"
+        cap = "FORCE"
+      }
+      spawnflags: =
+      {
+        typ = "X4"
+        cap = "PULL_UPWARDS"
+      }
+      radius: =
+      {
+        txt = "&"
+        hint = "Radius of the effect of the pull (Default is 256)"
+      }
+      speed: =
+      {
+        txt = "&"
+        hint = "Speed of the pull (Use negative for a repulsion) (Default is 100)"
+      }
+    }
+    light:form =
+    {
+      help = "Non-displayed light. If it targets another entity it will become"
+       " a spot light"$0D"if 'LINEAR' is set, it will be a linear light"$0D"if"
+       " 'NO_ENTITIES' is set, this light will only effect the world, not enti"
+       "ties"$0D"if 'ENTITY_TRACE' is set, a trace is done betwee the light an"
+       "d the entity."$0D"The light is only added if the trace is clear"$0D22"n"
+       "o_entity_light"$22" - this light will not effect entities, just the wo"
+       "rld"$0D22"light"$22" - the intensity of the light, default 300"$0D22"c"
+       "olor"$22" - the color of the light"$0D22"falloff"$22" - if linear, spe"
+       "cify the linear falloff (defaults to 1)"$0D22"radius"$22" - make this "
+       "a spot light of the given radius"$0D22"angles"$22" - make this a spot "
+       "light centered on angles"$0D22"spot_angle"$22" - if this is a spot lig"
+       "ht, what angle to use (default 45)"$0D22"entity_trace"$22" - trace bet"
+       "ween the entity and the light"
+      bbox = '-8 -8 -8 8 8 8'
+      spawnflags: =
+      {
+        typ = "X1"
+        cap = "LINEAR"
+      }
+      spawnflags: =
+      {
+        typ = "X2"
+        cap = "NO_ENTITIES"
+      }
+      spawnflags: =
+      {
+        typ = "X4"
+        cap = "ENTITY_TRACE"
+      }
+      t_commonspecifics = !
+      no_entity_light: =
+      {
+        txt = "&"
+        hint = "this light will not effect entities, just the world"
+      }
+      light: =
+      {
+        txt = "&"
+        hint = "the intensity of the light, default 300"
+      }
+      _color: =
+      {
+        txt = "&"
+        hint = "light color (not the intensity, only the color)"
+      }
+      _color: =
+      {
+        txt = "&"
+        Typ = "LN"
+        hint = "Click here to pick the light color."
+      }
+      falloff: =
+      {
+        txt = "&"
+        hint = "if linear, specify the linear falloff (defaults to 1)"
+      }
+      radius: =
+      {
+        txt = "&"
+        hint = "make this a spot light of the given radius"
+      }
+      angles: =
+      {
+        txt = "&"
+        hint = "make this a spot light centered on angles"
+      }
+      spot_angle: =
+      {
+        txt = "&"
+        hint = "if this is a spot light, what angle to use (default 45)"
+      }
+      entity_trace: =
+      {
+        txt = "&"
+        hint = "trace between the entity and the light"
+      }
+    }
+    detail:form =
+    {
+      help = "Used to fake detail brushes, convenient for grouping"
+      t_commonspecifics = !
+    }
+    func_group:form =
+    {
+      help = "Used to group brushes together just for editor convenience."
+      t_commonspecifics = !
+    }
+    func_remove:form =
+    {
+      help = "Used for lighting and such"
+      t_commonspecifics = !
+    }
+    misc_model:form =
+    {
+      help = $22"model"$22" arbitrary .tik file to display"
+      bbox = '0 0 0 0 0 0'
+      t_commonspecifics = !
+      model: =
+      {
+        t_modelbrowser = !
+        txt = "&"
+        hint = "arbitrary .tik file to display"
+      }
+    }
+    info_null:form =
+    {
+      help = "Used as a positional target for spotlights, etc."
+      bbox = '-4 -4 -4 4 4 4'
+    }
+    info_notnull:form =
+    {
+      help = "Used as a positional target for lightning."
+      bbox = '-4 -4 -4 4 4 4'
+    }
+    func_explodingwall:form =
+    {
+      help = "Blows up on activation or when attacked"$0D22"explosions"$22" nu"
+       "mber of explosions to spawn ( default 1 )"$0D22"land_angles"$22" The a"
+       "ngles you want this piece to"$0D"orient to when it lands on the ground"
+       $0D22"land_radius"$22" The distance of the ground the piece"$0D"should "
+       "be when on the ground ( default 16 )"$0D22"anglespeed"$22" Speed at wh"
+       "ich pieces rotate ( default 100 )"$0D"if RANDOMANGLES ( default is 600"
+       " )"$0D22"key"$22" The item needed to activate this. (default nothing)"$0D
+       $22"base_velocity"$22" The speed that the debris will have when trigger"
+       "ed. (default 0 0 280)"$0D22"random_velocity"$22" The variation of the "
+       "velocity. x & y will be from -n < X,Y < n and z is 0 <= Z < n. (defaul"
+       "t 140 140 140)"$0D"IF RANDOMANGLES is set, object randomly spins while"
+       " in the air."$0D"IF LANDSHATTER is set, object shatters when it hits t"
+       "he ground."$0D"IF TWOSTAGE is set, object can be shattered once it lan"
+       "ds on the ground."$0D"IF ACCUMALATIVE is set, damage is accumlative no"
+       "t threshold"$0D"IF INVISIBLE is set, these are invisible and not solid"
+       " until triggered"$0D"If NOT_PLAYERS is set, the trigger does not respo"
+       "nd to players"$0D"If MONSTERS is set, the trigger will respond to mons"
+       "ters"$0D"If PROJECTILES is set, the trigger will respond to projectile"
+       "s (rockets, grenades, etc.)"
+      spawnflags: =
+      {
+        typ = "X1"
+        cap = "RANDOMANGLES"
+      }
+      spawnflags: =
+      {
+        typ = "X2"
+        cap = "LANDSHATTER"
+      }
+      spawnflags: =
+      {
+        typ = "X4"
+        cap = "NOT_PLAYERS"
+      }
+      spawnflags: =
+      {
+        typ = "X8"
+        cap = "MONSTERS"
+      }
+      spawnflags: =
+      {
+        typ = "X16"
+        cap = "PROJECTILES"
+      }
+      spawnflags: =
+      {
+        typ = "X32"
+        cap = "INVISIBLE"
+      }
+      spawnflags: =
+      {
+        typ = "X64"
+        cap = "ACCUMALATIVE"
+      }
+      spawnflags: =
+      {
+        typ = "X128"
+        cap = "TWOSTAGE"
+      }
+      t_commonspecifics = !
+      explosions: =
+      {
+        txt = "&"
+        hint = "number of explosions to spawn ( default 1 )"
+      }
+      land_angles: =
+      {
+        txt = "&"
+        hint = "The angles you want this piece to"
+            $0D"orient to when it lands on the ground"
+      }
+      land_radius: =
+      {
+        txt = "&"
+        hint = "The distance of the ground the piece"
+            $0D"should be when on the ground ( default 16 )"
+      }
+      anglespeed: =
+      {
+        txt = "&"
+        hint = "Speed at which pieces rotate ( default 100 )"
+            $0D"if RANDOMANGLES ( default is 600 )"
+      }
+      key: =
+      {
+        txt = "&"
+        hint = "The item needed to activate this. (default nothing)"
+      }
+      base_velocity: =
+      {
+        txt = "&"
+        hint = "The speed that the debris will have when triggered. (default 0 0 280)"
+      }
+      random_velocity: =
+      {
+        txt = "&"
+        hint = "The variation of the velocity. x & y will be from -n < X,Y < n and z is 0 <= Z < n. (default 140 140 140)"
+      }
+    }
+    trigger_teleport:form =
+    {
+      help = "Touching this entity will teleport players to the targeted objec"
+       "t."$0D22"key"$22" The item needed to activate this. (default nothing)"$0D
+       $22"teleportthread"$22" The thread that is run when the player is telep"
+       "orted"$0D"If NOT_PLAYERS is set, the teleporter does not teleport play"
+       "ers"$0D"If NOT_MONSTERS is set, the teleporter does not teleport monst"
+       "ers"$0D"If NOT_PROJECTILES is set, the teleporter does not teleport pr"
+       "ojectiles (rockets, grenades, etc.)"$0D"If NO_EFFECTS is set, the spec"
+       "ial effect will not happen and the teleport will be instant"
+      spawnflags: =
+      {
+        typ = "X1"
+        cap = "VISIBLE"
+      }
+      spawnflags: =
+      {
+        typ = "X4"
+        cap = "NOT_PLAYERS"
+      }
+      spawnflags: =
+      {
+        typ = "X8"
+        cap = "NOT_MONSTERS"
+      }
+      spawnflags: =
+      {
+        typ = "X16"
+        cap = "NOT_PROJECTILES"
+      }
+      spawnflags: =
+      {
+        typ = "X32"
+        cap = "NO_EFFECTS"
+      }
+      t_commonspecifics = !
+      key: =
+      {
+        txt = "&"
+        hint = "The item needed to activate this. (default nothing)"
+      }
+      teleportthread: =
+      {
+        txt = "&"
+        hint = "The thread that is run when the player is teleported"
+      }
+    }
+    func_teleportdest:form =
+    {
+      help = "Point trigger_teleport at these."
+      bbox = '-32 -32 0 32 32 8'
+      t_commonspecifics = !
+    }
+    func_useanim:form =
+    {
+      help = "This object allows you to place the player into a specific anima"
+       "tion for the"$0D"purposes of using an object within the world."$0D"Thi"
+       "s object should point at a func_useanimdest which contains specific"$0D
+       "information about how the player is supposed to be posed."$0D22"count"$22
+       " - how many times this should trigger (default -1, infinite)"$0D22"thr"
+       "ead"$22" - thread to fire when used"$0D22"triggertarget"$22" - what to"
+       " trigger when used."$0D22"delay"$22" - how long it takes to be re-trig"
+       "gered ( default 3 seconds )"$0D22"key"$22" - item needed to activate t"
+       "his"$0D"VISIBLE - if this is checked the trigger itself will be visibl"
+       "e"$0D"TOUCHABLE - if this is set we can activate the trigger by standi"
+       "ng in it."$0D"CONTINUOUS - if this is checked the thing will re-trigge"
+       "r continously, otherwise"$0D"it waits until the player has left the tr"
+       "igger field."
+      spawnflags: =
+      {
+        typ = "X1"
+        cap = "VISIBLE"
+      }
+      spawnflags: =
+      {
+        typ = "X2"
+        cap = "TOUCHABLE"
+      }
+      spawnflags: =
+      {
+        typ = "X4"
+        cap = "CONTINUOUS"
+      }
+      t_commonspecifics = !
+      count: =
+      {
+        txt = "&"
+        hint = "- how many times this should trigger (default -1, infinite)"
+      }
+      thread: =
+      {
+        txt = "&"
+        hint = "- thread to fire when used"
+      }
+      triggertarget: =
+      {
+        txt = "&"
+        hint = "- what to trigger when used."
+      }
+      delay: =
+      {
+        txt = "&"
+        hint = "- how long it takes to be re-triggered ( default 3 seconds )"
+      }
+      key: =
+      {
+        txt = "&"
+        hint = "- item needed to activate this"
+      }
+    }
+    func_useobject:form =
+    {
+      help = "Allows you to setup a special object that places the player into"
+       " a specific state"$0D"sequence. Primarily used for levers and cranks."$0D
+       "Object starts out in the 'start' animation, when used the following oc"
+       "curs:"$0D"It is determined whether or not the player is in the right p"
+       "osition to activate"$0D"the object, if it is, the player is moved to t"
+       "he exact offset and angle specified"$0D"by 'offset' and 'yaw_offset'. "
+       "The right position is determined by a dot product"$0D"with 'offset' an"
+       "d 'yaw_offset'. The 'cone' parameter controls the cone in which the"$0D
+       "object can be triggered. Once the player is in the right position, the"
+       " player is placed"$0D"into 'state' and the 'move' animation is played."
+       " Once the player animation ends, the"$0D22"move_thread"$22" will be ca"
+       "lled. If the use button is continued to be held down and count"$0D"is "
+       "not finite, the animation will be continued to be played until the use"
+       " key is held"$0D"down. Once the use key is let go, the 'stop' animatio"
+       "n will be played on the lever and"$0D"the 'stop_thread' will be called"
+       "."$0D22"activate"$22" - turns the useobject on"$0D22"deactivate"$22" -"
+       " turns the useobject off"$0D22"offset"$22" - vector offset of where th"
+       "e player should stand"$0D22"state"$22" - state to go into when used"$0D
+       $22"state_backwards"$22" - what state to use when reversing the object"$0D
+       $22"yaw_offset"$22" - what direction the player should be facing when u"
+       "sing the object"$0D22"cone"$22" - the cone in which the object can be "
+       "used"$0D22"count"$22" - how many times this should trigger (default -1"
+       ", infinite)"$0D22"move_thread"$22" - thread that is fired when the obj"
+       "ect has cycled one animation"$0D22"stop_thread"$22" - thread that is f"
+       "ired when the object has finished animating"$0D22"reset_thread"$22" - "
+       "thread that is fired when the object is resetting itself"$0D22"reset_t"
+       "ime"$22" - the time it takes for the object to reset, (default 0, it d"
+       "oesn't)"$0D22"triggertarget"$22" - target to trigger when finished ani"
+       "mating, if reset_time is set, target"$0D"will be fired again when rese"
+       "tting"$0D22"damage_type"$22" - if set, can be triggered by using a wea"
+       "pon to activate it. If set to 'all',"$0D"any damage will activate it."$0D
+       "MULTI-STATE - the object has two different states and must be used eac"
+       "h time to set the state"$0D"when multi state is active, the reset_thre"
+       "ad is called instead of stop_thread. All UseObjects"$0D"have two state"
+       "s on and off. When reset_time is set, the object will automatically re"
+       "turn to the"$0D"off state after a preset amount of time. When multi-st"
+       "ate is set this must be done manually."
+      spawnflags: =
+      {
+        typ = "X1"
+        cap = "MULTI-STATE"
+      }
+      t_commonspecifics = !
+      move_thread: =
+      {
+        txt = "&"
+        hint = "will be called. If the use button is continued to be held down and count"
+            $0D"is not finite, the animation will be continued to be played until the use key is held"
+            $0D"down. Once the use key is let go, the 'stop' animation will be played on the lever and"
+            $0D"the 'stop_thread' will be called."
+      }
+      activate: =
+      {
+        txt = "&"
+        hint = "- turns the useobject on"
+      }
+      deactivate: =
+      {
+        txt = "&"
+        hint = "- turns the useobject off"
+      }
+      offset: =
+      {
+        txt = "&"
+        hint = "- vector offset of where the player should stand"
+      }
+      state: =
+      {
+        txt = "&"
+        hint = "- state to go into when used"
+      }
+      state_backwards: =
+      {
+        txt = "&"
+        hint = "- what state to use when reversing the object"
+      }
+      yaw_offset: =
+      {
+        txt = "&"
+        hint = "- what direction the player should be facing when using the object"
+      }
+      cone: =
+      {
+        txt = "&"
+        hint = "- the cone in which the object can be used"
+      }
+      count: =
+      {
+        txt = "&"
+        hint = "- how many times this should trigger (default -1, infinite)"
+      }
+      move_thread: =
+      {
+        txt = "&"
+        hint = "- thread that is fired when the object has cycled one animation"
+      }
+      stop_thread: =
+      {
+        txt = "&"
+        hint = "- thread that is fired when the object has finished animating"
+      }
+      reset_thread: =
+      {
+        txt = "&"
+        hint = "- thread that is fired when the object is resetting itself"
+      }
+      reset_time: =
+      {
+        txt = "&"
+        hint = "- the time it takes for the object to reset, (default 0, it doesn't)"
+      }
+      triggertarget: =
+      {
+        txt = "&"
+        hint = "- target to trigger when finished animating, if reset_time is set, target"
+            $0D"will be fired again when resetting"
+      }
+      damage_type: =
+      {
+        txt = "&"
+        hint = "- if set, can be triggered by using a weapon to activate it. If set to 'all',"
+            $0D"any damage will activate it."
+      }
+    }
+    info_waypoint:form =
+    {
+      help = "Used as a positioning device for objects"
+      bbox = '-8 -8 -8 8 8 8'
+    }
+    func_monkeybars:form =
+    {
+      help = "Monkey bars"
+      t_commonspecifics = !
+    }
+    func_horizontalpipe:form =
+    {
+      help = "Horizontal pipe that play can crawl upside down on."
+      t_commonspecifics = !
+    }
+    func_pushobject:form =
+    {
+      help = "Pushable object"$0D22"dmg"$22" how much damage to cause when blo"
+       "cked. (default 2)"$0D22"pushsound"$22" Sound to play when object is pu"
+       "shed (default is none)"
+      t_commonspecifics = !
+      dmg: =
+      {
+        txt = "&"
+        hint = "how much damage to cause when blocked. (default 2)"
+      }
+      pushsound: =
+      {
+        t_soundbrowser = !
+        txt = "&"
+        hint = "Sound to play when object is pushed (default is none)"
+      }
+    }
+    func_fallingrock:form =
+    {
+      help = "Creates a rock that, when triggered, begins falling and bounces "
+       "along a path"$0D"specified by targetname. Use info_waypoint for the pa"
+       "th."$0D22"targetname"$22" the path to follow."$0D22"dmg"$22" how much "
+       "damage to cause creatures it hits (default 20)."$0D22"speed"$22" how f"
+       "ast to move (default 200)."$0D22"wait"$22" how long to wait before fal"
+       "ling when triggered (default 0)."$0D22"noise"$22" sound to play when r"
+       "ock touches the world"$0D"AUTO_RESET - when done falling, automaticall"
+       "y return to the start"$0D"NO_RANDOMNESS - don't use any randomness whe"
+       "n making the rocks fall"$0D"REMOVE_ON_GROUND - remove the rocks when d"
+       "one"
+      spawnflags: =
+      {
+        typ = "X1"
+        cap = "AUTO_RESET"
+      }
+      spawnflags: =
+      {
+        typ = "X2"
+        cap = "NO_RANDOMNESS"
+      }
+      spawnflags: =
+      {
+        typ = "X4"
+        cap = "REMOVE_ON_GROUND"
+      }
+      t_commonspecifics = !
+      dmg: =
+      {
+        txt = "&"
+        hint = "how much damage to cause creatures it hits (default 20)."
+      }
+      speed: =
+      {
+        txt = "&"
+        hint = "how fast to move (default 200)."
+      }
+      wait: =
+      {
+        txt = "&"
+        hint = "how long to wait before falling when triggered (default 0)."
+      }
+      noise: =
+      {
+        t_soundbrowser = !
+        txt = "&"
+        hint = "sound to play when rock touches the world"
+      }
+    }
+    func_supplywater:form =
+    {
+      help = "Creates a trigger than when touched gives the player water over "
+       "a continuous time"$0D22"wait"$22" - how long to wait before re-trigger"
+       "ing ( default 0.1 seconds )"$0D22"amount"$22" - how much water to give"
+       " player on each trigger ( default 1 unit )"$0D22"maxwater"$22" - what "
+       "the maximum amount of water this supply should charge the player to ( "
+       "default 50 )"$0D"If NOT_PLAYERS is set, the trigger does not respond t"
+       "o players"$0D"If MONSTERS is set, the trigger will respond to monsters"
+       $0D"If PROJECTILES is set, the trigger will respond to projectiles (roc"
+       "kets, grenades, etc.)"
+      spawnflags: =
+      {
+        typ = "X4"
+        cap = "NOT_PLAYERS"
+      }
+      spawnflags: =
+      {
+        typ = "X8"
+        cap = "MONSTERS"
+      }
+      spawnflags: =
+      {
+        typ = "X16"
+        cap = "PROJECTILES"
+      }
+      t_commonspecifics = !
+      wait: =
+      {
+        txt = "&"
+        hint = "- how long to wait before re-triggering ( default 0.1 seconds )"
+      }
+      amount: =
+      {
+        txt = "&"
+        hint = "- how much water to give player on each trigger ( default 1 unit )"
+      }
+      maxwater: =
+      {
+        txt = "&"
+        hint = "- what the maximum amount of water this supply should charge the player to ( default 50 )"
+      }
+    }
+    func_emitter:form =
+    {
+      help = $22"emitter"$22" - Name of emitter to use."
+      t_commonspecifics = !
+      emitter: =
+      {
+        txt = "&"
+        hint = "- Name of emitter to use."
+      }
+    }
+    func_rain:form =
+    {
+      help = "This creates a raining effect in the brush"$0D22"emitter"$22" - "
+       "Name of emitter to use for the rain."
+      t_commonspecifics = !
+      emitter: =
+      {
+        txt = "&"
+        hint = "- Name of emitter to use for the rain."
+      }
+    }
+    info_pathnode:form =
+    {
+      help = "FLEE marks the node as a safe place to flee to. Actor will be re"
+       "moved when it reaches a flee node and is not visible to a player."$0D"D"
+       "UCK marks the node as a good place to duck behind during weapon fire."$0D
+       "COVER marks the node as a good place to hide behind during weapon fire"
+       "."$0D"DOOR marks the node as a door node. If an adjacent node has DOOR"
+       " marked as well, the actor will only use the path if the door in betwe"
+       "en them is unlocked."$0D"JUMP marks the node as one to jump from when "
+       "going to the node specified by target."$0D22"target"$22" the pathnode "
+       "to jump to."
+      bbox = '-24 -24 0 24 24 32'
+      spawnflags: =
+      {
+        typ = "X1"
+        cap = "FLEE"
+      }
+      spawnflags: =
+      {
+        typ = "X2"
+        cap = "DUCK"
+      }
+      spawnflags: =
+      {
+        typ = "X4"
+        cap = "COVER"
+      }
+      spawnflags: =
+      {
+        typ = "X8"
+        cap = "DOOR"
+      }
+      spawnflags: =
+      {
+        typ = "X16"
+        cap = "JUMP"
+      }
+      spawnflags: =
+      {
+        typ = "X32"
+        cap = "LADDER"
+      }
+    }
+    func_throwobject:form =
+    {
+      help = "This is an object you can pickup and throw at people"
+      bbox = '-16 -16 0 16 16 32'
+      t_commonspecifics = !
+    }
+    info_player_start:form =
+    {
+      help = "The normal starting point for a level."$0D22"angle"$22" - the di"
+       "rection the player should face"$0D22"thread"$22" - the thread that sho"
+       "uld be called when spawned at this position"
+      bbox = '-16 -16 0 16 16 96'
+      angle: =
+      {
+        txt = "&"
+        hint = "- the direction the player should face"
+      }
+      thread: =
+      {
+        txt = "&"
+        hint = "- the thread that should be called when spawned at this position"
+      }
+    }
+    info_player_deathmatch:form =
+    {
+      help = "potential spawning position for deathmatch games"$0D22"angle"$22
+       " - the direction the player should face"$0D22"thread"$22" - the thread"
+       " that should be called when spawned at this position"
+      bbox = '-16 -16 0 16 16 96'
+      angle: =
+      {
+        txt = "&"
+        hint = "- the direction the player should face"
+      }
+      thread: =
+      {
+        txt = "&"
+        hint = "- the thread that should be called when spawned at this position"
+      }
+    }
+    info_player_intermission:form =
+    {
+      help = "viewing point in between deathmatch levels"
+      bbox = '-16 -16 0 16 16 96'
+    }
+    portal_surface:form =
+    {
+      help = "The portal surface nearest this entity will show a view from the"
+       " targeted portal_camera, or a mirror view if untargeted."
+      bbox = '-8 -8 -8 8 8 8'
+      t_commonspecifics = !
+    }
+    portal_camera:form =
+    {
+      help = "The target for a portal_surface. You can set either angles or ta"
+       "rget another entity to determine the direction of view."$0D22"roll"$22
+       " an angle modifier to orient the camera around the target vector;"
+      bbox = '-8 -8 -8 8 8 8'
+      spawnflags: =
+      {
+        typ = "X1"
+        cap = "slowrotate"
+      }
+      spawnflags: =
+      {
+        typ = "X2"
+        cap = "fastrotate"
+      }
+      t_commonspecifics = !
+      roll: =
+      {
+        txt = "&"
+        hint = "an angle modifier to orient the camera around the target vector;"
+      }
+    }
+    func_rope:form =
+    {
+      help = "The rope is defined by a bounding box. The top of the box denote"
+       "s the top of the rope and"$0D"the bottom of the rope is denoted by the"
+       " bottom of the box. The width of the box determines"$0D"the trigger fi"
+       "eld in which the player will hang on to the rope when grabbing it."$0D
+       $22"ropeshader"$22" : Name of the shader to use to render the rope (def"
+       "ault is 'ropeshader')"
+      t_commonspecifics = !
+      ropeshader: =
+      {
+        txt = "&"
+        hint = ": Name of the shader to use to render the rope (default is 'ropeshader')"
+      }
+    }
+    func_rope_piece:form =
+    {
+      help = "Rope Piece - A single piece of a rope"$0D"WIGGLE : Makes this pi"
+       "ece of the rope wiggle about randomly. Only does this while not attach"
+       "ed."$0D"ATT_WIGGLE : Makes this piece of the rope wiggle around even w"
+       "hile attached. WIGGLE must also be marked for this to work."$0D22"targ"
+       "et"$22" : the 'targetname' of the next piece in the rope. This should "
+       "be blank if it's the last piece in the rope."$0D"If a non-rope_piece e"
+       "ntity is targeted, it will attach itself to it."$0D22"targetname"$22" "
+       ": used for the previous piece in the rope to find and link to this pie"
+       "ce of the rope."$0D22"target2"$22" : the targetname of the entity to a"
+       "ttach this piece of the rope to."$0D"Any piece of a rope can be attach"
+       "ed to something and be triggered at any time to detach it."$0D"Trigger"
+       "ing the base of an attached rope will detach all attached points on th"
+       "at rope."$0D22"wigglemove"$22" : the amount of force the random wiggli"
+       "ng has."$0D"Default = 32"$0D22"wiggletime"$22" : number of seconds bet"
+       "ween each time the rope wiggles."$0D"Default = 0.5"$0D"All other setti"
+       "ngs are set in the rope's rope_base entity."
+      bbox = '-16 -16 -16 16 16 16'
+      spawnflags: =
+      {
+        typ = "X1"
+        cap = "WIGGLE"
+      }
+      spawnflags: =
+      {
+        typ = "X2"
+        cap = "ATT_WIGGLE"
+      }
+      t_commonspecifics = !
+      target2: =
+      {
+        txt = "&"
+        hint = ": the targetname of the entity to attach this piece of the rope to."
+            $0D"Any piece of a rope can be attached to something and be triggered at any time to detach it."
+            $0D"Triggering the base of an attached rope will detach all attached points on that rope."
+      }
+      wigglemove: =
+      {
+        txt = "&"
+        hint = ": the amount of force the random wiggling has."
+            $0D"Default = 32"
+      }
+      wiggletime: =
+      {
+        txt = "&"
+        hint = ": number of seconds between each time the rope wiggles."
+            $0D"Default = 0.5"
+      }
+    }
+    func_rope_base:form =
+    {
+      help = "Rope Base - the main control and top end attachment entity for r"
+       "opes"$0D"This entity is the point to where ropes attach their top end."
+       " It's a stationary point entity."$0D"All setting for the whole rope ar"
+       "e specified through this entity."$0D"If you want/need to trigger a rop"
+       "e to do something, then this is the entity to trigger."$0D"Trying to t"
+       "rigger a rope_piece will do nothing."$0D"START_STILL : Specifies that "
+       "the whole rope will be completely stationary untill it is either trigg"
+       "ered, or grabbed."$0D22"targetname"$22" : The name that the rope is tr"
+       "iggered with."$0D22"target"$22" : The 'targetname' of the first rope_p"
+       "iece in the rope."$0D22"piecelength"$22" : The distance between each p"
+       "iece of the rope."$0D"Default = 24"$0D22"piecemodel"$22" : The model t"
+       "o use for the rope pieces."$0D22"ropedampener"$22" : Horizontal veloci"
+       "ty dampener for the rope."$0D"Default = 0.8"$0D22"stiffness"$22" : Mov"
+       "ement restricter on the amount that the rope can flex and bend."$0D"Va"
+       "lid values are from -1 (no restriction) to 1 (tried to be perfectly st"
+       "raight."$0D"The position of the first rope piece determines what direc"
+       "tion the rope is pushed from the base of the rope."$0D"Default = -1"$0D
+       $22"strength"$22" : How strongly a stiff rope goes to position."$0D"Def"
+       "ault = 1;"$0D22"attachmodel"$22" : name of a model to attach onto this"
+       " piece of rope"$0D22"ropeshader"$22" : Name of the shader to use to re"
+       "nder the rope (default is 'ropeshader')"
+      bbox = '-16 -16 -16 16 16 16'
+      spawnflags: =
+      {
+        typ = "X1"
+        cap = "START_STILL"
+      }
+      t_commonspecifics = !
+      piecelength: =
+      {
+        txt = "&"
+        hint = ": The distance between each piece of the rope."
+            $0D"Default = 24"
+      }
+      piecemodel: =
+      {
+        t_modelbrowser = !
+        txt = "&"
+        hint = ": The model to use for the rope pieces."
+      }
+      ropedampener: =
+      {
+        txt = "&"
+        hint = ": Horizontal velocity dampener for the rope."
+            $0D"Default = 0.8"
+      }
+      stiffness: =
+      {
+        txt = "&"
+        hint = ": Movement restricter on the amount that the rope can flex and bend."
+            $0D"Valid values are from -1 (no restriction) to 1 (tried to be perfectly straight."
+            $0D"The position of the first rope piece determines what direction the rope is pushed from the base of the rope."
+            $0D"Default = -1"
+      }
+      strength: =
+      {
+        txt = "&"
+        hint = ": How strongly a stiff rope goes to position."
+            $0D"Default = 1;"
+      }
+      attachmodel: =
+      {
+        t_modelbrowser = !
+        txt = "&"
+        hint = ": name of a model to attach onto this piece of rope"
+      }
+      ropeshader: =
+      {
+        txt = "&"
+        hint = ": Name of the shader to use to render the rope (default is 'ropeshader')"
+      }
+    }
+    script_object:form =
+    {
+      spawnflags: =
+      {
+        typ = "X1"
+        cap = "NOT_SOLID"
+      }
+      t_commonspecifics = !
+    }
+    script_model:form =
+    {
+      bbox = '0 0 0 0 0 0'
+      spawnflags: =
+      {
+        typ = "X1"
+        cap = "NOT_SOLID"
+      }
+      t_commonspecifics = !
+      model: =
+      {
+        t_modelbrowser = !
+        txt = "&"
+        hint = "model to use"
+      }
+    }
+    script_origin:form =
+    {
+      help = "Used as an alternate origin for objects. Bind the object to the "
+       "script_origin"$0D"in order to simulate changing that object's origin."
+      bbox = '-8 -8 -8 8 8 8'
+      t_commonspecifics = !
+    }
+    script_skyorigin:form =
+    {
+      help = "Used to specify the origin of a portal sky"
+      t_commonspecifics = !
+    }
+    func_spawn:form =
+    {
+      help = $22"modelname"$22" The name of the TIKI file you wish to spawn. ("
+       "Required)"$0D22"spawntargetname"$22" This will be the targetname of th"
+       "e spawned model. (default is null)"$0D22"spawntarget"$22" This will be"
+       " the target of the spawned model. (default is null)"$0D22"pickup_threa"
+       "d"$22" passed on to the spawned model"$0D22"key"$22" The item needed t"
+       "o activate this. (default nothing)"$0D22"attackmode"$22" Attacking mod"
+       "e of the spawned actor (default 0)"
+      bbox = '-8 -8 -8 8 8 8'
+      t_commonspecifics = !
+      modelname: =
+      {
+        t_modelbrowser = !
+        txt = "&"
+        hint = "The name of the TIKI file you wish to spawn. (Required)"
+      }
+      spawntargetname: =
+      {
+        txt = "&"
+        hint = "This will be the targetname of the spawned model. (default is null)"
+      }
+      spawntarget: =
+      {
+        txt = "&"
+        hint = "This will be the target of the spawned model. (default is null)"
+      }
+      pickup_thread: =
+      {
+        txt = "&"
+        hint = "passed on to the spawned model"
+      }
+      key: =
+      {
+        txt = "&"
+        hint = "The item needed to activate this. (default nothing)"
+      }
+      attackmode: =
+      {
+        txt = "&"
+        hint = "Attacking mode of the spawned actor (default 0)"
+      }
+    }
+    func_randomspawn:form =
+    {
+      help = "Randomly spawns an entity. The time between spawns is determined"
+       " by min_time and max_time"$0D"The entity can be turned off and on by t"
+       "riggering it"$0D22"modelname"$22" The name of the TIKI file you wish t"
+       "o spawn. (Required)"$0D22"key"$22" The item needed to activate this. ("
+       "default nothing)"$0D22"min_time"$22" The minimum time between spawns ("
+       "default 0.2 seconds)"$0D22"max_time"$22" The maximum time between spaw"
+       "ns (default 1 seconds)"$0D"START_OFF - spawn is off by default"
+      bbox = '-8 -8 -8 8 8 8'
+      spawnflags: =
+      {
+        typ = "X1"
+        cap = "START_OFF"
+      }
+      t_commonspecifics = !
+      modelname: =
+      {
+        t_modelbrowser = !
+        txt = "&"
+        hint = "The name of the TIKI file you wish to spawn. (Required)"
+      }
+      key: =
+      {
+        txt = "&"
+        hint = "The item needed to activate this. (default nothing)"
+      }
+      min_time: =
+      {
+        txt = "&"
+        hint = "The minimum time between spawns (default 0.2 seconds)"
+      }
+      max_time: =
+      {
+        txt = "&"
+        hint = "The maximum time between spawns (default 1 seconds)"
+            $0D"START_OFF - spawn is off by default"
+      }
+    }
+    func_respawn:form =
+    {
+      help = "When the thing that is spawned is killed, this func_respawn will"
+       " get"$0D"triggered."$0D22"modelname"$22" The name of the TIKI file you"
+       " wish to spawn. (Required)"$0D22"key"$22" The item needed to activate "
+       "this. (default nothing)"
+      bbox = '-8 -8 -8 8 8 8'
+      t_commonspecifics = !
+      modelname: =
+      {
+        t_modelbrowser = !
+        txt = "&"
+        hint = "The name of the TIKI file you wish to spawn. (Required)"
+      }
+      key: =
+      {
+        txt = "&"
+        hint = "The item needed to activate this. (default nothing)"
+      }
+    }
+    func_spawnoutofsight:form =
+    {
+      help = "Will only spawn something out of sight of its targets."$0D22"mod"
+       "elname"$22" The name of the TIKI file you wish to spawn. (Required)"$0D
+       $22"spawntargetname"$22" This will be the targetname of the spawned mod"
+       "el. (default is null)"$0D22"spawntarget"$22" This will be the target o"
+       "f the spawned model. (default is null)"$0D22"key"$22" The item needed "
+       "to activate this. (default nothing)"
+      bbox = '-8 -8 -8 8 8 8'
+      t_commonspecifics = !
+      modelname: =
+      {
+        t_modelbrowser = !
+        txt = "&"
+        hint = "The name of the TIKI file you wish to spawn. (Required)"
+      }
+      spawntargetname: =
+      {
+        txt = "&"
+        hint = "This will be the targetname of the spawned model. (default is null)"
+      }
+      spawntarget: =
+      {
+        txt = "&"
+        hint = "This will be the target of the spawned model. (default is null)"
+      }
+      key: =
+      {
+        txt = "&"
+        hint = "The item needed to activate this. (default nothing)"
+      }
+    }
+    func_spawnchain:form =
+    {
+      help = "Tries to spawn something out of the sight of players. If it fail"
+       "s, it will"$0D"trigger its targets."$0D22"modelname"$22" The name of t"
+       "he TIKI file you wish to spawn. (Required)"$0D22"spawntargetname"$22" "
+       "This will be the targetname of the spawned model. (default is null)"$0D
+       $22"spawntarget"$22" This will be the target of the spawned model. (def"
+       "ault is null)"$0D22"key"$22" The item needed to activate this. (defaul"
+       "t nothing)"
+      bbox = '-8 -8 -8 8 8 8'
+      t_commonspecifics = !
+      modelname: =
+      {
+        t_modelbrowser = !
+        txt = "&"
+        hint = "The name of the TIKI file you wish to spawn. (Required)"
+      }
+      spawntargetname: =
+      {
+        txt = "&"
+        hint = "This will be the targetname of the spawned model. (default is null)"
+      }
+      spawntarget: =
+      {
+        txt = "&"
+        hint = "This will be the target of the spawned model. (default is null)"
+      }
+      key: =
+      {
+        txt = "&"
+        hint = "The item needed to activate this. (default nothing)"
+      }
+    }
+    func_fulcrum:form =
+    {
+      help = "This creates a fulcrum that when you stand on it, it will rotate"
+       " due to"$0D"the weight exerted it will start rotating, when not standi"
+       "ng on it, it"$0D"will return to its rest position."$0D22"speed"$22" - "
+       "set the speed at which the fulcrum will operate (default is 48)"$0D22"r"
+       "esetspeed"$22" - speed at whcih fulcrum resets, (default speed * 0.002"
+       ")"$0D22"dampening"$22" - dampen constant (default 0.95)"$0D22"limit"$22
+       " - limit the movement of the fulcrum (default 90 degrees)"$0D22"moveso"
+       "und"$22" - sound to be played while fulcrum is moving"$0D"X_AXIS_ONLY "
+       "- only adjust the X axis"$0D"Y_AXIS_ONLY - only adjust the Y axis"
+      spawnflags: =
+      {
+        typ = "X1"
+        cap = "X_AXIS_ONLY"
+      }
+      spawnflags: =
+      {
+        typ = "X2"
+        cap = "Y_AXIS_ONLY"
+      }
+      t_commonspecifics = !
+      speed: =
+      {
+        txt = "&"
+        hint = "- set the speed at which the fulcrum will operate (default is 48)"
+      }
+      resetspeed: =
+      {
+        txt = "&"
+        hint = "- speed at whcih fulcrum resets, (default speed * 0.002)"
+      }
+      dampening: =
+      {
+        txt = "&"
+        hint = "- dampen constant (default 0.95)"
+      }
+      limit: =
+      {
+        txt = "&"
+        hint = "- limit the movement of the fulcrum (default 90 degrees)"
+      }
+      movesound: =
+      {
+        t_soundbrowser = !
+        txt = "&"
+        hint = "- sound to be played while fulcrum is moving"
+      }
+    }
+    func_runthrough:form =
+    {
+      help = "This is a trigger field that the player can run through and spaw"
+       "n tiki models"$0D"at that position. Used for releasing chaff from gras"
+       "s or butterflys from"$0D"flower gardens"$0D22"speed"$22" - speed at wh"
+       "ich you have to be moving to trigger ( default 100 )"$0D22"delay"$22" "
+       "- time between triggering ( default 0.1 )"$0D22"chance"$22" - chance t"
+       "hat the trigger will spawn something( default 0.5 )"$0D22"lip"$22" - h"
+       "ow far below the surface of the trigger we should spawn these things ("
+       " default 3 )"$0D22"offset"$22" - vector offset oriented along velocity"
+       " vector( default '0 0 0' )"$0D22"spawnmodel"$22" - thing to spawn when"
+       " triggered"
+      t_commonspecifics = !
+      speed: =
+      {
+        txt = "&"
+        hint = "- speed at which you have to be moving to trigger ( default 100 )"
+      }
+      delay: =
+      {
+        txt = "&"
+        hint = "- time between triggering ( default 0.1 )"
+      }
+      chance: =
+      {
+        txt = "&"
+        hint = "- chance that the trigger will spawn something( default 0.5 )"
+      }
+      lip: =
+      {
+        txt = "&"
+        hint = "- how far below the surface of the trigger we should spawn these things ( default 3 )"
+      }
+      offset: =
+      {
+        txt = "&"
+        hint = "- vector offset oriented along velocity vector( default '0 0 0' )"
+      }
+      spawnmodel: =
+      {
+        t_modelbrowser = !
+        txt = "&"
+        hint = "- thing to spawn when triggered"
+      }
+    }
+    func_sinkobject:form =
+    {
+      help = "This creates an object which gradually sinks downward when stepp"
+       "ed on."$0D22"delay"$22" - delay between when object starts reacting to"
+       "wards weight (default 0 seconds)"$0D22"speed"$22" - set the speed at w"
+       "hich sinkobject sinks (default is 50)"$0D22"resetspeed"$22" - speed at"
+       " which sinkobject resets its position, (default speed * 0.1)"$0D22"dam"
+       "pening"$22" - dampening constant to mitigate acceleration (default 0.9"
+       "5)"$0D22"limit"$22" - limit the movement of the sinkobject how far dow"
+       "n it should go (default 1000 units)"$0D22"resetdelay"$22" - time betwe"
+       "en player gets off platform, and platform starts resetting itself."$0D
+       $22"sinksound"$22" - sound to be played while platform is sinking."$0D22
+       "resetsound"$22" - sound to be played while platform is resetting."$0D22
+       "active"$22" - make the sink object active"$0D22"notactive"$22" - make "
+       "the sink object not active"$0D"FALLAWAY - the sink object will progres"
+       "sively fall down faster and faster"$0D"NO_RESET - the sink object will"
+       " not reset, only move downward"
+      spawnflags: =
+      {
+        typ = "X2"
+        cap = "FALLAWAY"
+      }
+      spawnflags: =
+      {
+        typ = "X4"
+        cap = "NO_RESET"
+      }
+      t_commonspecifics = !
+      delay: =
+      {
+        txt = "&"
+        hint = "- delay between when object starts reacting towards weight (default 0 seconds)"
+      }
+      speed: =
+      {
+        txt = "&"
+        hint = "- set the speed at which sinkobject sinks (default is 50)"
+      }
+      resetspeed: =
+      {
+        txt = "&"
+        hint = "- speed at which sinkobject resets its position, (default speed * 0.1)"
+      }
+      dampening: =
+      {
+        txt = "&"
+        hint = "- dampening constant to mitigate acceleration (default 0.95)"
+      }
+      limit: =
+      {
+        txt = "&"
+        hint = "- limit the movement of the sinkobject how far down it should go (default 1000 units)"
+      }
+      resetdelay: =
+      {
+        txt = "&"
+        hint = "- time between player gets off platform, and platform starts resetting itself."
+      }
+      sinksound: =
+      {
+        t_soundbrowser = !
+        txt = "&"
+        hint = "- sound to be played while platform is sinking."
+      }
+      resetsound: =
+      {
+        t_soundbrowser = !
+        txt = "&"
+        hint = "- sound to be played while platform is resetting."
+      }
+      active: =
+      {
+        txt = "&"
+        hint = "- make the sink object active"
+      }
+      notactive: =
+      {
+        txt = "&"
+        hint = "- make the sink object not active"
+      }
+    }
+    trigger_multiple:form =
+    {
+      help = "Variable sized repeatable trigger. Must be targeted at one or mo"
+       "re entities."$0D22"health"$22" if set, the trigger must be killed to a"
+       "ctivate each time."$0D22"delay"$22" if set, the trigger waits some tim"
+       "e after activating before firing."$0D22"thread"$22" name of thread to "
+       "trigger. This can be in a different script file as well"$0D"by using t"
+       "he '::' notation."$0D22"angle"$22" if set, the trigger will only fire "
+       "when someone is facing the"$0D"direction of the angle."$0D22"cone"$22" "
+       "the cone in which a directed trigger can be triggered (default 60 degr"
+       "ees)"$0D22"wait"$22" : Seconds between triggerings. (.2 default)"$0D22
+       "cnt"$22" how many times it can be triggered (infinite default)"$0D22"t"
+       "riggerable"$22" turn trigger on"$0D22"nottriggerable"$22" turn trigger"
+       " off"$0D"If NOT_PLAYERS is set, the trigger does not respond to player"
+       "s"$0D"If MONSTERS is set, the trigger will respond to monsters"$0D"If "
+       "PROJECTILES is set, the trigger will respond to projectiles (rockets, "
+       "grenades, etc.)"$0D22"message"$22" set to text string"
+      spawnflags: =
+      {
+        typ = "X4"
+        cap = "NOT_PLAYERS"
+      }
+      spawnflags: =
+      {
+        typ = "X8"
+        cap = "MONSTERS"
+      }
+      spawnflags: =
+      {
+        typ = "X16"
+        cap = "PROJECTILES"
+      }
+      t_commonspecifics = !
+      health: =
+      {
+        txt = "&"
+        hint = "if set, the trigger must be killed to activate each time."
+      }
+      delay: =
+      {
+        txt = "&"
+        hint = "if set, the trigger waits some time after activating before firing."
+      }
+      thread: =
+      {
+        txt = "&"
+        hint = "name of thread to trigger. This can be in a different script file as well"
+            $0D"by using the '::' notation."
+      }
+      angle: =
+      {
+        txt = "&"
+        hint = "if set, the trigger will only fire when someone is facing the"
+            $0D"direction of the angle."
+      }
+      cone: =
+      {
+        txt = "&"
+        hint = "the cone in which a directed trigger can be triggered (default 60 degrees)"
+      }
+      wait: =
+      {
+        txt = "&"
+        hint = ": Seconds between triggerings. (.2 default)"
+      }
+      cnt: =
+      {
+        txt = "&"
+        hint = "how many times it can be triggered (infinite default)"
+      }
+      triggerable: =
+      {
+        txt = "&"
+        hint = "turn trigger on"
+      }
+      nottriggerable: =
+      {
+        txt = "&"
+        hint = "turn trigger off"
+      }
+      message: =
+      {
+        txt = "&"
+        hint = "set to text string"
+      }
+    }
+    trigger_once:form =
+    {
+      help = "Variable sized trigger. Triggers once, then removes itself."$0D"Y"
+       "ou must set the key 'target' to the name of another object in the"$0D"l"
+       "evel that has a matching"$0D22"health"$22" if set, the trigger must be"
+       " killed to activate it."$0D22"delay"$22" if set, the trigger waits som"
+       "e time after activating before firing."$0D22"targetname"$22". If 'heal"
+       "th' is set, the trigger must be killed to activate."$0D22"thread"$22" "
+       "name of thread to trigger. This can be in a different script file as w"
+       "ell"$0D"by using the '::' notation."$0D22"killtarget"$22" if set, any "
+       "objects that have a matching 'target' will be"$0D"removed when the tri"
+       "gger is fired."$0D22"angle"$22" if set, the trigger will only fire whe"
+       "n someone is facing the"$0D"direction of the angle."$0D22"cone"$22" th"
+       "e cone in which a directed trigger can be triggered (default 60 degree"
+       "s)"$0D22"key"$22" The item needed to activate this. (default nothing)"$0D
+       $22"triggerable"$22" turn trigger on"$0D22"nottriggerable"$22" turn tri"
+       "gger off"$0D"If NOTOUCH is set, trigger will not respond to touch"$0D"I"
+       "f NOT_PLAYERS is set, the trigger does not respond to players"$0D"If M"
+       "ONSTERS is set, the trigger will respond to monsters"$0D"If PROJECTILE"
+       "S is set, the trigger will respond to projectiles (rockets, grenades, "
+       "etc.)"$0D22"message"$22" set to text string"
+      spawnflags: =
+      {
+        typ = "X1"
+        cap = "NOTOUCH"
+      }
+      spawnflags: =
+      {
+        typ = "X4"
+        cap = "NOT_PLAYERS"
+      }
+      spawnflags: =
+      {
+        typ = "X8"
+        cap = "MONSTERS"
+      }
+      spawnflags: =
+      {
+        typ = "X16"
+        cap = "PROJECTILES"
+      }
+      t_commonspecifics = !
+      health: =
+      {
+        txt = "&"
+        hint = "if set, the trigger must be killed to activate it."
+      }
+      delay: =
+      {
+        txt = "&"
+        hint = "if set, the trigger waits some time after activating before firing."
+      }
+      thread: =
+      {
+        txt = "&"
+        hint = "name of thread to trigger. This can be in a different script file as well"
+            $0D"by using the '::' notation."
+      }
+      killtarget: =
+      {
+        txt = "&"
+        hint = "if set, any objects that have a matching 'target' will be"
+            $0D"removed when the trigger is fired."
+      }
+      angle: =
+      {
+        txt = "&"
+        hint = "if set, the trigger will only fire when someone is facing the"
+            $0D"direction of the angle."
+      }
+      cone: =
+      {
+        txt = "&"
+        hint = "the cone in which a directed trigger can be triggered (default 60 degrees)"
+      }
+      key: =
+      {
+        txt = "&"
+        hint = "The item needed to activate this. (default nothing)"
+      }
+      triggerable: =
+      {
+        txt = "&"
+        hint = "turn trigger on"
+      }
+      nottriggerable: =
+      {
+        txt = "&"
+        hint = "turn trigger off"
+      }
+      message: =
+      {
+        txt = "&"
+        hint = "set to text string"
+      }
+    }
+    trigger_relay:form =
+    {
+      help = "This fixed size trigger cannot be touched, it can only be fired "
+       "by other events."$0D"It can contain killtargets, targets, delays, and "
+       "messages."$0D"If NOT_PLAYERS is set, the trigger does not respond to e"
+       "vents triggered by players"$0D"If MONSTERS is set, the trigger will re"
+       "spond to events triggered by monsters"$0D"If PROJECTILES is set, the t"
+       "rigger will respond to events triggered by projectiles (rockets, grena"
+       "des, etc.)"
+      bbox = '-8 -8 -8 8 8 8'
+      spawnflags: =
+      {
+        typ = "X4"
+        cap = "NOT_PLAYERS"
+      }
+      spawnflags: =
+      {
+        typ = "X8"
+        cap = "MONSTERS"
+      }
+      spawnflags: =
+      {
+        typ = "X16"
+        cap = "PROJECTILES"
+      }
+      t_commonspecifics = !
+    }
+    trigger_secret:form =
+    {
+      help = "Secret counter trigger. Automatically sets and increments script"
+       " variables"$0D"level.total_secrets and level.found_secrets."$0D22"mess"
+       "age"$22" set to text string"$0D22"key"$22" The item needed to activate"
+       " this. (default nothing)"$0D22"angle"$22" if set, the trigger will onl"
+       "y fire when someone is facing the"$0D"direction of the angle."$0D22"co"
+       "ne"$22" the cone in which a directed trigger can be triggered (default"
+       " 60 degrees)"$0D22"thread"$22" name of thread to trigger. This can be "
+       "in a different script file as well"$0D"by using the '::' notation. (de"
+       "faults to 'global/universal_script.scr::secret')"$0D22"triggerable"$22
+       " turn trigger on"$0D22"nottriggerable"$22" turn trigger off"$0D"If NOT"
+       "OUCH is set, trigger will not respond to touch"$0D"If NOT_PLAYERS is s"
+       "et, the trigger does not respond to players"$0D"If MONSTERS is set, th"
+       "e trigger will respond to monsters"$0D"If PROJECTILES is set, the trig"
+       "ger will respond to projectiles (rockets, grenades, etc.)"
+      spawnflags: =
+      {
+        typ = "X1"
+        cap = "NOTOUCH"
+      }
+      spawnflags: =
+      {
+        typ = "X4"
+        cap = "NOT_PLAYERS"
+      }
+      spawnflags: =
+      {
+        typ = "X8"
+        cap = "MONSTERS"
+      }
+      spawnflags: =
+      {
+        typ = "X16"
+        cap = "PROJECTILES"
+      }
+      t_commonspecifics = !
+      message: =
+      {
+        txt = "&"
+        hint = "set to text string"
+      }
+      key: =
+      {
+        txt = "&"
+        hint = "The item needed to activate this. (default nothing)"
+      }
+      angle: =
+      {
+        txt = "&"
+        hint = "if set, the trigger will only fire when someone is facing the"
+            $0D"direction of the angle."
+      }
+      cone: =
+      {
+        txt = "&"
+        hint = "the cone in which a directed trigger can be triggered (default 60 degrees)"
+      }
+      thread: =
+      {
+        txt = "&"
+        hint = "name of thread to trigger. This can be in a different script file as well"
+            $0D"by using the '::' notation. (defaults to 'global/universal_script.scr::secret')"
+      }
+      triggerable: =
+      {
+        txt = "&"
+        hint = "turn trigger on"
+      }
+      nottriggerable: =
+      {
+        txt = "&"
+        hint = "turn trigger off"
+      }
+    }
+    trigger_setvariable:form =
+    {
+      help = "Sets a variable specified by 'variable' and 'value'."$0D"Variabl"
+       "e is assumed to be of the 'global' variety unless LEVEL is set."$0D"Va"
+       "riable sized trigger. Triggers once by default."$0D"You must set the k"
+       "ey 'target' to the name of another object in the"$0D"level that has a "
+       "matching"$0D22"variable"$22" - variable to set"$0D22"value"$22" - valu"
+       "e to set in variable, value can also be one of the following reserved"$0D
+       "tokens."$0D"- 'increment' - add one to the variable"$0D"- 'decrement' "
+       "- subtract one from the variable"$0D"- 'toggle' - if 1, then zero. If "
+       "zero then 1."$0D22"health"$22" if set, the trigger must be killed to a"
+       "ctivate it."$0D22"delay"$22" if set, the trigger waits some time after"
+       " activating before firing."$0D22"targetname"$22". If 'health' is set, "
+       "the trigger must be killed to activate."$0D22"thread"$22" name of thre"
+       "ad to trigger. This can be in a different script file as well"$0D"by u"
+       "sing the '::' notation."$0D22"killtarget"$22" if set, any objects that"
+       " have a matching 'target' will be"$0D"removed when the trigger is fire"
+       "d."$0D22"angle"$22" if set, the trigger will only fire when someone is"
+       " facing the"$0D"direction of the angle."$0D22"cone"$22" the cone in wh"
+       "ich a directed trigger can be triggered (default 60 degrees)"$0D22"key"
+       $22" The item needed to activate this. (default nothing)"$0D22"triggera"
+       "ble"$22" turn trigger on"$0D22"nottriggerable"$22" turn trigger off"$0D
+       "If NOTOUCH is set, trigger will not respond to touch"$0D"if LEVEL is s"
+       "et, variable will be a level variable otherwise it will be a game vari"
+       "able"$0D"If NOT_PLAYERS is set, the trigger does not respond to player"
+       "s"$0D"If MONSTERS is set, the trigger will respond to monsters"$0D"If "
+       "PROJECTILES is set, the trigger will respond to projectiles (rockets, "
+       "grenades, etc.)"$0D22"message"$22" set to text string"
+      spawnflags: =
+      {
+        typ = "X1"
+        cap = "NOTOUCH"
+      }
+      spawnflags: =
+      {
+        typ = "X2"
+        cap = "LEVEL"
+      }
+      spawnflags: =
+      {
+        typ = "X4"
+        cap = "NOT_PLAYERS"
+      }
+      spawnflags: =
+      {
+        typ = "X8"
+        cap = "MONSTERS"
+      }
+      spawnflags: =
+      {
+        typ = "X16"
+        cap = "PROJECTILES"
+      }
+      t_commonspecifics = !
+      variable: =
+      {
+        txt = "&"
+        hint = "- variable to set"
+      }
+      value: =
+      {
+        txt = "&"
+        hint = "- value to set in variable, value can also be one of the following reserved"
+            $0D"tokens."
+            $0D"- 'increment' - add one to the variable"
+            $0D"- 'decrement' - subtract one from the variable"
+            $0D"- 'toggle' - if 1, then zero. If zero then 1."
+      }
+      health: =
+      {
+        txt = "&"
+        hint = "if set, the trigger must be killed to activate it."
+      }
+      delay: =
+      {
+        txt = "&"
+        hint = "if set, the trigger waits some time after activating before firing."
+      }
+      thread: =
+      {
+        txt = "&"
+        hint = "name of thread to trigger. This can be in a different script file as well"
+            $0D"by using the '::' notation."
+      }
+      killtarget: =
+      {
+        txt = "&"
+        hint = "if set, any objects that have a matching 'target' will be"
+            $0D"removed when the trigger is fired."
+      }
+      angle: =
+      {
+        txt = "&"
+        hint = "if set, the trigger will only fire when someone is facing the"
+            $0D"direction of the angle."
+      }
+      cone: =
+      {
+        txt = "&"
+        hint = "the cone in which a directed trigger can be triggered (default 60 degrees)"
+      }
+      key: =
+      {
+        txt = "&"
+        hint = "The item needed to activate this. (default nothing)"
+      }
+      triggerable: =
+      {
+        txt = "&"
+        hint = "turn trigger on"
+      }
+      nottriggerable: =
+      {
+        txt = "&"
+        hint = "turn trigger off"
+      }
+      message: =
+      {
+        txt = "&"
+        hint = "set to text string"
+      }
+    }
+    trigger_push:form =
+    {
+      help = "Pushes entities as if they were caught in a heavy wind."$0D22"sp"
+       "eed"$22" indicates the rate that entities are pushed (default 1000)."$0D
+       $22"angle"$22" indicates the direction the wind is blowing (-1 is up, -"
+       "2 is down)"$0D22"key"$22" The item needed to activate this. (default n"
+       "othing)"$0D22"target"$22" if target is set, then a velocity will be ca"
+       "lculated based on speed"$0D22"triggerable"$22" turn trigger on"$0D22"n"
+       "ottriggerable"$22" turn trigger off"$0D"If NOT_PLAYERS is set, the tri"
+       "gger does not push players"$0D"If NOT_MONSTERS is set, the trigger wil"
+       "l not push monsters"$0D"If NOT_PROJECTILES is set, the trigger will no"
+       "t push projectiles (rockets, grenades, etc.)"
+      spawnflags: =
+      {
+        typ = "X4"
+        cap = "NOT_PLAYERS"
+      }
+      spawnflags: =
+      {
+        typ = "X8"
+        cap = "NOT_MONSTERS"
+      }
+      spawnflags: =
+      {
+        typ = "X16"
+        cap = "NOT_PROJECTILES"
+      }
+      t_commonspecifics = !
+      speed: =
+      {
+        txt = "&"
+        hint = "indicates the rate that entities are pushed (default 1000)."
+      }
+      angle: =
+      {
+        txt = "&"
+        hint = "indicates the direction the wind is blowing (-1 is up, -2 is down)"
+      }
+      key: =
+      {
+        txt = "&"
+        hint = "The item needed to activate this. (default nothing)"
+      }
+      triggerable: =
+      {
+        txt = "&"
+        hint = "turn trigger on"
+      }
+      nottriggerable: =
+      {
+        txt = "&"
+        hint = "turn trigger off"
+      }
+    }
+    trigger_pushany:form =
+    {
+      help = "Pushes entities as if they were caught in a heavy wind."$0D22"sp"
+       "eed"$22" indicates the rate that entities are pushed (default 1000)."$0D
+       $22"angles"$22" indicates the direction of the push"$0D22"key"$22" The "
+       "item needed to activate this. (default nothing)"$0D22"target"$22" if t"
+       "arget is set, then a velocity will be calculated based on speed"$0D22"t"
+       "riggerable"$22" turn trigger on"$0D22"nottriggerable"$22" turn trigger"
+       " off"$0D"If NOT_PLAYERS is set, the trigger does not push players"$0D"I"
+       "f NOT_MONSTERS is set, the trigger will not push monsters"$0D"If NOT_P"
+       "ROJECTILES is set, the trigger will not push projectiles (rockets, gre"
+       "nades, etc.)"
+      spawnflags: =
+      {
+        typ = "X4"
+        cap = "NOT_PLAYERS"
+      }
+      spawnflags: =
+      {
+        typ = "X8"
+        cap = "NOT_MONSTERS"
+      }
+      spawnflags: =
+      {
+        typ = "X16"
+        cap = "NOT_PROJECTILES"
+      }
+      t_commonspecifics = !
+      speed: =
+      {
+        txt = "&"
+        hint = "indicates the rate that entities are pushed (default 1000)."
+      }
+      angles: =
+      {
+        txt = "&"
+        hint = "indicates the direction of the push"
+      }
+      key: =
+      {
+        txt = "&"
+        hint = "The item needed to activate this. (default nothing)"
+      }
+      triggerable: =
+      {
+        txt = "&"
+        hint = "turn trigger on"
+      }
+      nottriggerable: =
+      {
+        txt = "&"
+        hint = "turn trigger off"
+      }
+    }
+    sound_speaker:form =
+    {
+      help = "play a sound when it is used"$0D"AMBIENT-ON specifies an ambient"
+       " sound that starts on"$0D"AMBIENT-OFF specifies an ambient sound that "
+       "starts off"$0D"TOGGLE specifies that the speaker toggles on triggering"
+       $0D"if (AMBIENT-?) is not set, then the sound is sent over explicitly t"
+       "his creates more net traffic"$0D22"volume"$22" how loud 0-4 (1 default"
+       " full volume, ambients do not respond to volume)"$0D22"noise"$22" soun"
+       "d to play"$0D22"channel"$22" channel on which to play sound"$0D"(0 aut"
+       "o, 1 weapon, 2 voice, 3 item, 4 body, 8 don't use PHS) (voice is defau"
+       "lt)"$0D22"key"$22" The item needed to activate this. (default nothing)"
+       $0D22"thread"$22" name of thread to trigger. This can be in a different"
+       " script file as well"$0D"by using the '::' notation."$0D"Normal sounds"
+       " play each time the target is used."$0D"Ambient Looped sounds have a v"
+       "olume 1, and the use function toggles it on/off."$0D"If NOT_PLAYERS is"
+       " set, the trigger does not respond to players"$0D"If MONSTERS is set, "
+       "the trigger will respond to monsters"$0D"If PROJECTILES is set, the tr"
+       "igger will respond to projectiles (rockets, grenades, etc.)"
+      bbox = '-8 -8 -8 8 8 8'
+      spawnflags: =
+      {
+        typ = "X1"
+        cap = "AMBIENT-ON"
+      }
+      spawnflags: =
+      {
+        typ = "X2"
+        cap = "AMBIENT-OFF"
+      }
+      spawnflags: =
+      {
+        typ = "X4"
+        cap = "NOT_PLAYERS"
+      }
+      spawnflags: =
+      {
+        typ = "X8"
+        cap = "MONSTERS"
+      }
+      spawnflags: =
+      {
+        typ = "X16"
+        cap = "PROJECTILES"
+      }
+      spawnflags: =
+      {
+        typ = "X32"
+        cap = "TOGGLE"
+      }
+      t_commonspecifics = !
+      volume: =
+      {
+        txt = "&"
+        hint = "how loud 0-4 (1 default full volume, ambients do not respond to volume)"
+      }
+      noise: =
+      {
+        t_soundbrowser = !
+        txt = "&"
+        hint = "sound to play"
+      }
+      channel: =
+      {
+        txt = "&"
+        hint = "channel on which to play sound"
+            $0D"(0 auto, 1 weapon, 2 voice, 3 item, 4 body, 8 don't use PHS) (voice is default)"
+      }
+      key: =
+      {
+        txt = "&"
+        hint = "The item needed to activate this. (default nothing)"
+      }
+      thread: =
+      {
+        txt = "&"
+        hint = "name of thread to trigger. This can be in a different script file as well"
+            $0D"by using the '::' notation."
+      }
+    }
+    sound_randomspeaker:form =
+    {
+      help = "play a sound at random times"$0D22"mindelay"$22" minimum delay b"
+       "etween sound triggers (default 3)"$0D22"maxdelay"$22" maximum delay be"
+       "tween sound triggers (default 10)"$0D22"chance"$22" chance that sound "
+       "will play when fired (default 1)"$0D22"volume"$22" how loud 0-4 (1 def"
+       "ault full volume)"$0D22"noise"$22" sound to play"$0D22"channel"$22" ch"
+       "annel on which to play sound"$0D"(0 auto, 1 weapon, 2 voice, 3 item, 4"
+       " body, 8 don't use PHS) (voice is default)"$0D22"key"$22" The item nee"
+       "ded to activate this. (default nothing)"$0D"Normal sounds play each ti"
+       "me the target is used."$0D"If NOT_PLAYERS is set, the trigger does not"
+       " respond to players"$0D"If MONSTERS is set, the trigger will respond t"
+       "o monsters"$0D"If PROJECTILES is set, the trigger will respond to proj"
+       "ectiles (rockets, grenades, etc.)"
+      bbox = '-8 -8 -8 8 8 8'
+      spawnflags: =
+      {
+        typ = "X4"
+        cap = "NOT_PLAYERS"
+      }
+      spawnflags: =
+      {
+        typ = "X8"
+        cap = "MONSTERS"
+      }
+      spawnflags: =
+      {
+        typ = "X16"
+        cap = "PROJECTILES"
+      }
+      t_commonspecifics = !
+      mindelay: =
+      {
+        txt = "&"
+        hint = "minimum delay between sound triggers (default 3)"
+      }
+      maxdelay: =
+      {
+        txt = "&"
+        hint = "maximum delay between sound triggers (default 10)"
+      }
+      chance: =
+      {
+        txt = "&"
+        hint = "chance that sound will play when fired (default 1)"
+      }
+      volume: =
+      {
+        txt = "&"
+        hint = "how loud 0-4 (1 default full volume)"
+      }
+      noise: =
+      {
+        t_soundbrowser = !
+        txt = "&"
+        hint = "sound to play"
+      }
+      channel: =
+      {
+        txt = "&"
+        hint = "channel on which to play sound"
+            $0D"(0 auto, 1 weapon, 2 voice, 3 item, 4 body, 8 don't use PHS) (voice is default)"
+      }
+      key: =
+      {
+        txt = "&"
+        hint = "The item needed to activate this. (default nothing)"
+      }
+    }
+    trigger_changelevel:form =
+    {
+      help = "When the player touches this, he gets sent to the map listed in "
+       "the 'map' variable."$0D"Unless the NO_INTERMISSION flag is set, the vi"
+       "ew will go to the info_intermission"$0D"spot and display stats."$0D22"s"
+       "pawnspot"$22" name of the spawn location to start at in next map."$0D22
+       "key"$22" The item needed to activate this. (default nothing)"$0D22"thr"
+       "ead"$22" This defaults to 'LevelComplete' and should point to a thread"
+       " that is called just"$0D"before the level ends."$0D22"triggerable"$22" "
+       "turn trigger on"$0D22"nottriggerable"$22" turn trigger off"$0D"If NOT_"
+       "PLAYERS is set, the trigger does not respond to players"$0D"If MONSTER"
+       "S is set, the trigger will respond to monsters"$0D"If PROJECTILES is s"
+       "et, the trigger will respond to projectiles (rockets, grenades, etc.)"
+      spawnflags: =
+      {
+        typ = "X1"
+        cap = "NO_INTERMISSION"
+      }
+      spawnflags: =
+      {
+        typ = "X4"
+        cap = "NOT_PLAYERS"
+      }
+      spawnflags: =
+      {
+        typ = "X8"
+        cap = "MONSTERS"
+      }
+      spawnflags: =
+      {
+        typ = "X16"
+        cap = "PROJECTILES"
+      }
+      t_commonspecifics = !
+      spawnspot: =
+      {
+        txt = "&"
+        hint = "name of the spawn location to start at in next map."
+      }
+      key: =
+      {
+        txt = "&"
+        hint = "The item needed to activate this. (default nothing)"
+      }
+      thread: =
+      {
+        txt = "&"
+        hint = "This defaults to 'LevelComplete' and should point to a thread that is called just"
+            $0D"before the level ends."
+      }
+      triggerable: =
+      {
+        txt = "&"
+        hint = "turn trigger on"
+      }
+      nottriggerable: =
+      {
+        txt = "&"
+        hint = "turn trigger off"
+      }
+      map: =
+      {
+        txt = "&"
+        hint = "map to send the player to"
+      }
+    }
+    trigger_use:form =
+    {
+      help = "Activates targets when 'used' by an entity"$0D22"key"$22" The it"
+       "em needed to activate this. (default nothing)"$0D22"thread"$22" name o"
+       "f thread to trigger. This can be in a different script file as well"$0D
+       "by using the '::' notation."$0D22"triggerable"$22" turn trigger on"$0D
+       $22"nottriggerable"$22" turn trigger off"$0D"If NOT_PLAYERS is set, the"
+       " trigger does not respond to players"$0D"If MONSTERS is set, the trigg"
+       "er will respond to monsters"
+      spawnflags: =
+      {
+        typ = "X1"
+        cap = "VISIBLE"
+      }
+      spawnflags: =
+      {
+        typ = "X4"
+        cap = "NOT_PLAYERS"
+      }
+      spawnflags: =
+      {
+        typ = "X8"
+        cap = "MONSTERS"
+      }
+      t_commonspecifics = !
+      key: =
+      {
+        txt = "&"
+        hint = "The item needed to activate this. (default nothing)"
+      }
+      thread: =
+      {
+        txt = "&"
+        hint = "name of thread to trigger. This can be in a different script file as well"
+            $0D"by using the '::' notation."
+      }
+      triggerable: =
+      {
+        txt = "&"
+        hint = "turn trigger on"
+      }
+      nottriggerable: =
+      {
+        txt = "&"
+        hint = "turn trigger off"
+      }
+    }
+    trigger_useonce:form =
+    {
+      help = "Activates targets when 'used' by an entity, but only once"$0D22"k"
+       "ey"$22" The item needed to activate this. (default nothing)"$0D22"thre"
+       "ad"$22" name of thread to trigger. This can be in a different script f"
+       "ile as well"$0D"by using the '::' notation."$0D22"triggerable"$22" tur"
+       "n trigger on"$0D22"nottriggerable"$22" turn trigger off"$0D"If NOT_PLA"
+       "YERS is set, the trigger does not respond to players"$0D"If MONSTERS i"
+       "s set, the trigger will respond to monsters"
+      spawnflags: =
+      {
+        typ = "X1"
+        cap = "VISIBLE"
+      }
+      spawnflags: =
+      {
+        typ = "X4"
+        cap = "NOT_PLAYERS"
+      }
+      spawnflags: =
+      {
+        typ = "X8"
+        cap = "MONSTERS"
+      }
+      t_commonspecifics = !
+      key: =
+      {
+        txt = "&"
+        hint = "The item needed to activate this. (default nothing)"
+      }
+      thread: =
+      {
+        txt = "&"
+        hint = "name of thread to trigger. This can be in a different script file as well"
+            $0D"by using the '::' notation."
+      }
+      triggerable: =
+      {
+        txt = "&"
+        hint = "turn trigger on"
+      }
+      nottriggerable: =
+      {
+        txt = "&"
+        hint = "turn trigger off"
+      }
+    }
+    trigger_hurt:form =
+    {
+      help = $22"damage"$22" amount of damage to cause. (default 10)"$0D22"key"
+       $22" The item needed to activate this. (default nothing)"$0D22"damagety"
+       "pe"$22" what kind of damage should be given to the player. (default CR"
+       "USH)"$0D22"triggerable"$22" turn trigger on"$0D22"nottriggerable"$22" "
+       "turn trigger off"$0D"If NOT_PLAYERS is set, the trigger does not hurt "
+       "players"$0D"If NOT_MONSTERS is set, the trigger does not hurt monsters"
+       $0D"If PROJECTILES is set, the trigger will hurt projectiles (rockets, "
+       "grenades, etc.)"
+      spawnflags: =
+      {
+        typ = "X4"
+        cap = "NOT_PLAYERS"
+      }
+      spawnflags: =
+      {
+        typ = "X8"
+        cap = "NOT_MONSTERS"
+      }
+      spawnflags: =
+      {
+        typ = "X16"
+        cap = "PROJECTILES"
+      }
+      t_commonspecifics = !
+      damage: =
+      {
+        txt = "&"
+        hint = "amount of damage to cause. (default 10)"
+      }
+      key: =
+      {
+        txt = "&"
+        hint = "The item needed to activate this. (default nothing)"
+      }
+      damagetype: =
+      {
+        txt = "&"
+        hint = "what kind of damage should be given to the player. (default CRUSH)"
+      }
+      triggerable: =
+      {
+        txt = "&"
+        hint = "turn trigger on"
+      }
+      nottriggerable: =
+      {
+        txt = "&"
+        hint = "turn trigger off"
+      }
+    }
+    trigger_damagetargets:form =
+    {
+      help = $22"damage"$22" amount of damage to cause. If no damage is specif"
+       "ied, objects"$0D"are damaged by the current health+1"$0D22"key"$22" Th"
+       "e item needed to activate this. (default nothing)"$0D"if a trigger_dam"
+       "agetargets is shot at and the SOLID flag is set,"$0D"the damage is pas"
+       "sed on to the targets"$0D22"triggerable"$22" turn trigger on"$0D22"not"
+       "triggerable"$22" turn trigger off"$0D"If NOT_PLAYERS is set, the trigg"
+       "er does not hurt players"$0D"If NOT_MONSTERS is set, the trigger does "
+       "not hurt monsters"$0D"If PROJECTILES is set, the trigger will hurt pro"
+       "jectiles (rockets, grenades, etc.)"
+      spawnflags: =
+      {
+        typ = "X1"
+        cap = "SOLID"
+      }
+      spawnflags: =
+      {
+        typ = "X4"
+        cap = "NOT_PLAYERS"
+      }
+      spawnflags: =
+      {
+        typ = "X8"
+        cap = "NOT_MONSTERS"
+      }
+      spawnflags: =
+      {
+        typ = "X16"
+        cap = "PROJECTILES"
+      }
+      t_commonspecifics = !
+      damage: =
+      {
+        txt = "&"
+        hint = "amount of damage to cause. If no damage is specified, objects"
+            $0D"are damaged by the current health+1"
+      }
+      key: =
+      {
+        txt = "&"
+        hint = "The item needed to activate this. (default nothing)"
+      }
+      triggerable: =
+      {
+        txt = "&"
+        hint = "turn trigger on"
+      }
+      nottriggerable: =
+      {
+        txt = "&"
+        hint = "turn trigger off"
+      }
+    }
+    trigger_camerause:form =
+    {
+      help = "Activates 'targeted' camera when 'used'"$0D"If activated, toggle"
+       "s through cameras"$0D22"key"$22" The item needed to activate this. (de"
+       "fault nothing)"$0D22"thread"$22" name of thread to trigger. This can b"
+       "e in a different script file as well"$0D"by using the '::' notation."$0D
+       $22"triggerable"$22" turn trigger on"$0D22"nottriggerable"$22" turn tri"
+       "gger off"$0D"If NOT_PLAYERS is set, the trigger does not respond to pl"
+       "ayers"$0D"If MONSTERS is set, the trigger will respond to monsters"
+      spawnflags: =
+      {
+        typ = "X1"
+        cap = "VISIBLE"
+      }
+      spawnflags: =
+      {
+        typ = "X4"
+        cap = "NOT_PLAYERS"
+      }
+      spawnflags: =
+      {
+        typ = "X8"
+        cap = "MONSTERS"
+      }
+      t_commonspecifics = !
+      key: =
+      {
+        txt = "&"
+        hint = "The item needed to activate this. (default nothing)"
+      }
+      thread: =
+      {
+        txt = "&"
+        hint = "name of thread to trigger. This can be in a different script file as well"
+            $0D"by using the '::' notation."
+      }
+      triggerable: =
+      {
+        txt = "&"
+        hint = "turn trigger on"
+      }
+      nottriggerable: =
+      {
+        txt = "&"
+        hint = "turn trigger off"
+      }
+    }
+    trigger_exit:form =
+    {
+      help = "When the player touches this, an exit icon will be displayed in "
+       "his hud."$0D"This is to inform him that he is near an exit."$0D22"trig"
+       "gerable"$22" turn trigger on"$0D22"nottriggerable"$22" turn trigger of"
+       "f"
+      t_commonspecifics = !
+      triggerable: =
+      {
+        txt = "&"
+        hint = "turn trigger on"
+      }
+      nottriggerable: =
+      {
+        txt = "&"
+        hint = "turn trigger off"
+      }
+    }
+    trigger_music:form =
+    {
+      help = "Variable sized repeatable trigger to change the music mood."$0D22
+       "delay"$22" if set, the trigger waits some time after activating before"
+       " firing."$0D22"current"$22" can be used to set the current mood"$0D22"f"
+       "allback"$22" can be used to set the fallback mood"$0D22"altcurrent"$22
+       " can be used to set the current mood of the opposite face, if multiFac"
+       "eted"$0D22"altfallback"$22" can be used to set the fallback mood of th"
+       "e opposite face, if multiFaceted"$0D22"edgeTriggerable"$22" trigger on"
+       "ly fires when entering a trigger"$0D22"multiFaceted"$22" if 1, then tr"
+       "igger is North/South separate triggerable"$0D"if 2, then trigger East/"
+       "West separate triggerable"$0D22"thread"$22" name of thread to trigger."
+       " This can be in a different script file as well"$0D"by using the '::' "
+       "notation."$0D22"wait"$22" : Seconds between triggerings. (1.0 default)"
+       $0D22"cnt"$22" how many times it can be triggered (infinite default)"$0D
+       $22"oneshot"$22" make this a one time trigger"$0D22"triggerable"$22" tu"
+       "rn trigger on"$0D22"nottriggerable"$22" turn trigger off"$0D"If NOT_PL"
+       "AYERS is set, the trigger does not respond to players"$0D"If MONSTERS "
+       "is set, the trigger will respond to monsters"$0D"If PROJECTILES is set"
+       ", the trigger will respond to projectiles (rockets, grenades, etc.)"$0D
+       "NORMAL, ACTION, SUSPENSE, MYSTERY, and SURPRISE are the moods that can"
+       " be triggered"
+      spawnflags: =
+      {
+        typ = "X1"
+        cap = "NORMAL"
+      }
+      spawnflags: =
+      {
+        typ = "X2"
+        cap = "ACTION"
+      }
+      spawnflags: =
+      {
+        typ = "X4"
+        cap = "NOT_PLAYERS"
+      }
+      spawnflags: =
+      {
+        typ = "X8"
+        cap = "MONSTERS"
+      }
+      spawnflags: =
+      {
+        typ = "X16"
+        cap = "PROJECTILES"
+      }
+      spawnflags: =
+      {
+        typ = "X32"
+        cap = "SUSPENSE"
+      }
+      spawnflags: =
+      {
+        typ = "X64"
+        cap = "MYSTERY"
+      }
+      spawnflags: =
+      {
+        typ = "X128"
+        cap = "SURPRISE"
+      }
+      t_commonspecifics = !
+      delay: =
+      {
+        txt = "&"
+        hint = "if set, the trigger waits some time after activating before firing."
+      }
+      current: =
+      {
+        txt = "&"
+        hint = "can be used to set the current mood"
+      }
+      fallback: =
+      {
+        txt = "&"
+        hint = "can be used to set the fallback mood"
+      }
+      altcurrent: =
+      {
+        txt = "&"
+        hint = "can be used to set the current mood of the opposite face, if multiFaceted"
+      }
+      altfallback: =
+      {
+        txt = "&"
+        hint = "can be used to set the fallback mood of the opposite face, if multiFaceted"
+      }
+      edgeTriggerable: =
+      {
+        txt = "&"
+        hint = "trigger only fires when entering a trigger"
+      }
+      multiFaceted: =
+      {
+        txt = "&"
+        hint = "if 1, then trigger is North/South separate triggerable"
+            $0D"if 2, then trigger East/West separate triggerable"
+      }
+      thread: =
+      {
+        txt = "&"
+        hint = "name of thread to trigger. This can be in a different script file as well"
+            $0D"by using the '::' notation."
+      }
+      wait: =
+      {
+        txt = "&"
+        hint = ": Seconds between triggerings. (1.0 default)"
+      }
+      cnt: =
+      {
+        txt = "&"
+        hint = "how many times it can be triggered (infinite default)"
+      }
+      oneshot: =
+      {
+        txt = "&"
+        hint = "make this a one time trigger"
+      }
+      triggerable: =
+      {
+        txt = "&"
+        hint = "turn trigger on"
+      }
+      nottriggerable: =
+      {
+        txt = "&"
+        hint = "turn trigger off"
+      }
+    }
+    trigger_reverb:form =
+    {
+      help = "Variable sized repeatable trigger to change the reverb level in "
+       "the game"$0D22"delay"$22" if set, the trigger waits some time after ac"
+       "tivating before firing."$0D22"reverbtype"$22" what kind of reverb shou"
+       "ld be used"$0D22"reverblevel"$22" how much of the reverb effect should"
+       " be applied"$0D22"altreverbtype"$22" what kind of reverb should be use"
+       "d"$0D22"altreverblevel"$22" how much of the reverb effect should be ap"
+       "plied"$0D22"edgeTriggerable"$22" trigger only fires when entering a tr"
+       "igger"$0D22"multiFaceted"$22" if 1, then trigger is North/South separa"
+       "te triggerable"$0D"if 2, then trigger East/West separate triggerable"$0D
+       $22"thread"$22" name of thread to trigger. This can be in a different s"
+       "cript file as well"$0D"by using the '::' notation."$0D22"wait"$22" : S"
+       "econds between triggerings. (1.0 default)"$0D22"cnt"$22" how many time"
+       "s it can be triggered (infinite default)"$0D22"oneshot"$22" make this "
+       "a one time trigger"$0D22"triggerable"$22" turn trigger on"$0D22"nottri"
+       "ggerable"$22" turn trigger off"$0D"If NOT_PLAYERS is set, the trigger "
+       "does not respond to players"$0D"If MONSTERS is set, the trigger will r"
+       "espond to monsters"$0D"If PROJECTILES is set, the trigger will respond"
+       " to projectiles (rockets, grenades, etc.)"
+      spawnflags: =
+      {
+        typ = "X4"
+        cap = "NOT_PLAYERS"
+      }
+      spawnflags: =
+      {
+        typ = "X8"
+        cap = "MONSTERS"
+      }
+      spawnflags: =
+      {
+        typ = "X16"
+        cap = "PROJECTILES"
+      }
+      t_commonspecifics = !
+      delay: =
+      {
+        txt = "&"
+        hint = "if set, the trigger waits some time after activating before firing."
+      }
+      reverbtype: =
+      {
+        txt = "&"
+        hint = "what kind of reverb should be used"
+      }
+      reverblevel: =
+      {
+        txt = "&"
+        hint = "how much of the reverb effect should be applied"
+      }
+      altreverbtype: =
+      {
+        txt = "&"
+        hint = "what kind of reverb should be used"
+      }
+      altreverblevel: =
+      {
+        txt = "&"
+        hint = "how much of the reverb effect should be applied"
+      }
+      edgeTriggerable: =
+      {
+        txt = "&"
+        hint = "trigger only fires when entering a trigger"
+      }
+      multiFaceted: =
+      {
+        txt = "&"
+        hint = "if 1, then trigger is North/South separate triggerable"
+            $0D"if 2, then trigger East/West separate triggerable"
+      }
+      thread: =
+      {
+        txt = "&"
+        hint = "name of thread to trigger. This can be in a different script file as well"
+            $0D"by using the '::' notation."
+      }
+      wait: =
+      {
+        txt = "&"
+        hint = ": Seconds between triggerings. (1.0 default)"
+      }
+      cnt: =
+      {
+        txt = "&"
+        hint = "how many times it can be triggered (infinite default)"
+      }
+      oneshot: =
+      {
+        txt = "&"
+        hint = "make this a one time trigger"
+      }
+      triggerable: =
+      {
+        txt = "&"
+        hint = "turn trigger on"
+      }
+      nottriggerable: =
+      {
+        txt = "&"
+        hint = "turn trigger off"
+      }
+    }
+    trigger_pushobject:form =
+    {
+      help = "Special trigger that can only be triggered by a push object."$0D
+       $22"triggername"$22" if set, trigger only responds to objects with a ta"
+       "rgetname the same as triggername."$0D22"cnt"$22" how many times it can"
+       " be triggered (default 1, use -1 for infinite)"
+      t_commonspecifics = !
+      triggername: =
+      {
+        txt = "&"
+        hint = "if set, trigger only responds to objects with a targetname the same as triggername."
+      }
+      cnt: =
+      {
+        txt = "&"
+        hint = "how many times it can be triggered (default 1, use -1 for infinite)"
+      }
+    }
+    trigger_givepowerup:form =
+    {
+      help = "Variable sized repeatable trigger to give a powerup to the playe"
+       "r"$0D22"oneshot"$22" makes this triggerable only once"$0D22"powerupnam"
+       "e"$22" sets the name of the powerup to give to the player"$0D"If NOT_P"
+       "LAYERS is set, the trigger does not respond to players"$0D"If MONSTERS"
+       " is set, the trigger will respond to monsters"
+      spawnflags: =
+      {
+        typ = "X4"
+        cap = "NOT_PLAYERS"
+      }
+      spawnflags: =
+      {
+        typ = "X8"
+        cap = "MONSTERS"
+      }
+      t_commonspecifics = !
+      oneshot: =
+      {
+        txt = "&"
+        hint = "makes this triggerable only once"
+      }
+      powerupname: =
+      {
+        txt = "&"
+        hint = "sets the name of the powerup to give to the player"
+      }
+    }
+    worldspawn:form =
+    {
+      help = "Only used for the world."$0D22"soundtrack"$22" the soundtrack to"
+       " use on the map"$0D22"gravity"$22" 800 is default gravity"$0D22"skipth"
+       "read"$22" thread that is activated to skip this level (if cinematic)"$0D
+       $22"nextmap"$22" map to goto when player exits"$0D22"message"$22" text "
+       "to print at user logon"$0D22"script"$22" script to run on start of map"
+       $0D22"watercolor"$22" view color when underwater"$0D22"wateralpha"$22" "
+       "view alpha when underwater"$0D22"lavacolor"$22" view alpha when in lav"
+       "a"$0D22"lavaalpha"$22" view alpha when in lava"$0D22"farplane_color"$22
+       " color to fade to when the far clip plane is on"$0D22"farplane_cull"$22
+       " whether or not the far plane should cull, default is yes"$0D22"farpla"
+       "ne"$22" distance from the viewer that the far clip plane is"$0D22"ambi"
+       "entlight"$22" ambient lighting to be applied to all entities"$0D22"amb"
+       "ient"$22" ambient lighting to be applied to all entities, use _color t"
+       "o specify color"$0D22"suncolor"$22" color of the sun in the level"$0D22
+       "sunlight"$22" intensity of the sun in the level"$0D22"sundirection"$22
+       " direction of the sun in the level"$0D22"sunflare"$22" worldspace posi"
+       "tion of the sun flare"$0D22"sunflare_inportalsky"$22" whether or not t"
+       "he flare is in the portal sky"$0D22"lightmapdensity"$22" default light"
+       "map density to be used for all surfaces"$0D22"skyalpha"$22" initial va"
+       "lue of the sky's alpha, defaults to 1"
+      spawnflags: =
+      {
+        typ = "X1"
+        cap = "CINEMATIC"
+      }
+      soundtrack: =
+      {
+        t_musicbrowser = !
+        txt = "&"
+        hint = "the soundtrack to use on the map"
+        Typ = "EP"
+        BasePath = "$Game\fakk"
+        CutPath = "$Game\?\music"
+        DefExt = "mus"
+        DirSep = "/"
+        AugPath = "music"
+      }
+      soundtrack: =
+      { typ="C"
+        txt="music"
+        items=
+          "ambient"$0D
+          "bloodaltar"$0D
+          "bloodway"$0D
+          "cave"$0D
+          "cemetery"$0D
+          "cinema"$0D
+          "cliff"$0D
+          "cliff2"$0D
+          "creature"$0D
+          "creep"$0D
+          "default"$0D
+          "end"$0D
+          "fakkhouse"$0D
+          "fogaltar"$0D
+          "fogway"$0D
+          "gith"$0D
+          "gruff"$0D
+          "hmfire"$0D
+          "homes1"$0D
+          "homes2"$0D
+          "homes2evil"$0D
+          "intro"$0D
+          "landers"$0D
+          "oracleway"$0D
+          "otto"$0D
+          "shield"$0D
+          "spad"$0D
+          "swamp1"$0D
+          "swamp2"$0D
+          "swamp2b"$0D
+          "swamp3"$0D
+          "test"$0D
+          "test2"$0D
+          "test3"$0D
+          "test4"$0D
+          "towncenter"$0D
+          "towncenter_evil"$0D
+          "training"$0D
+          "tyler"$0D
+          "ug"$0D
+          "video"$0D
+          "vymish"$0D
+          "wateraltar"$0D
+          "waterway"$0D
+        values=
+          "music/ambient.mus"$0D
+          "music/bloodaltar.mus"$0D
+          "music/bloodway.mus"$0D
+          "music/cave.mus"$0D
+          "music/cemetery.mus"$0D
+          "music/cinema.mus"$0D
+          "music/cliff.mus"$0D
+          "music/cliff2.mus"$0D
+          "music/creature.mus"$0D
+          "music/creep.mus"$0D
+          "music/default.mus"$0D
+          "music/end.mus"$0D
+          "music/fakkhouse.mus"$0D
+          "music/fogaltar.mus"$0D
+          "music/fogway.mus"$0D
+          "music/gith.mus"$0D
+          "music/gruff.mus"$0D
+          "music/hmfire.mus"$0D
+          "music/homes1.mus"$0D
+          "music/homes2.mus"$0D
+          "music/homes2evil.mus"$0D
+          "music/intro.mus"$0D
+          "music/landers.mus"$0D
+          "music/oracleway.mus"$0D
+          "music/otto.mus"$0D
+          "music/shield.mus"$0D
+          "music/spad.mus"$0D
+          "music/swamp1.mus"$0D
+          "music/swamp2.mus"$0D
+          "music/swamp2b.mus"$0D
+          "music/swamp3.mus"$0D
+          "music/test.mus"$0D
+          "music/test2.mus"$0D
+          "music/test3.mus"$0D
+          "music/test4.mus"$0D
+          "music/towncenter.mus"$0D
+          "music/towncenter_evil.mus"$0D
+          "music/training.mus"$0D
+          "music/tyler.mus"$0D
+          "music/ug.mus"$0D
+          "music/video.mus"$0D
+          "music/vymish.mus"$0D
+          "music/wateraltar.mus"$0D
+          "music/waterway.mus"$0D
+      }
+      gravity: =
+      {
+        txt = "&"
+        hint = "800 is default gravity"
+      }
+      skipthread: =
+      {
+        txt = "&"
+        hint = "thread that is activated to skip this level (if cinematic)"
+      }
+      nextmap: =
+      {
+        txt = "&"
+        hint = "map to goto when player exits"
+      }
+      message: =
+      {
+        txt = "&"
+        hint = "text to print at user logon"
+      }
+      script: =
+      {
+        txt = "&"
+        hint = "script to run on start of map"
+      }
+      watercolor: =
+      {
+        txt = "&"
+        Typ = "LN"
+        hint = "view color when underwater"
+      }
+      wateralpha: =
+      {
+        txt = "&"
+        hint = "view alpha when underwater"
+      }
+      lavacolor: =
+      {
+        txt = "&"
+        Typ = "LN"
+        hint = "view alpha when in lava"
+      }
+      lavaalpha: =
+      {
+        txt = "&"
+        hint = "view alpha when in lava"
+      }
+      farplane_color: =
+      {
+        txt = "&"
+        Typ = "LN"
+        hint = "color to fade to when the far clip plane is on"
+      }
+      farplane_cull: =
+      {
+        txt = "&"
+        hint = "whether or not the far plane should cull, default is yes"
+      }
+      farplane: =
+      {
+        txt = "&"
+        hint = "distance from the viewer that the far clip plane is"
+      }
+      ambientlight: =
+      {
+        txt = "&"
+        hint = "ambient lighting to be applied to all entities"
+      }
+      ambient: =
+      {
+        txt = "&"
+        hint = "ambient lighting to be applied to all entities, use _color to specify color"
+      }
+      _color: =
+      {
+        txt = "&"
+        Typ = "LN"
+        hint = "ambient color. (Default is '1 1 1')"
+      }
+      suncolor: =
+      {
+        txt = "&"
+        Typ = "LN"
+        hint = "color of the sun in the level"
+      }
+      sunlight: =
+      {
+        txt = "&"
+        hint = "intensity of the sun in the level"
+      }
+      sundirection: =
+      {
+        txt = "&"
+        hint = "direction of the sun in the level"
+      }
+      sunflare: =
+      {
+        txt = "&"
+        hint = "worldspace position of the sun flare"
+      }
+      sunflare_inportalsky: =
+      {
+        txt = "&"
+        hint = "whether or not the flare is in the portal sky"
+      }
+      lightmapdensity: =
+      {
+        txt = "&"
+        hint = "default lightmap density to be used for all surfaces"
+      }
+      skyalpha: =
+      {
+        txt = "&"
+        hint = "initial value of the sky's alpha, defaults to 1"
+      }
+    }
+  }
+}

@@ -1,0 +1,168 @@
+// The Abandoned Base by John Romero - maps/dm3.way
+// Ways by Gilgamesh
+saved1 -880; saved2 -232; saved3   6.0
+scratch1 31; scratch2 32; scratch3 2; scratch4 0
+saved4 1; wait
+saved1 -949.9; saved2 266.6; saved3 110.0
+scratch1 1; scratch2 3; scratch3 0
+saved4 2; wait
+saved1 -968.0; saved2 751.4; saved3 142.0
+scratch1 4; scratch2 2
+saved4 2; wait
+saved1 -845.3; saved2 880.0
+scratch1 40; scratch2 3
+saved4 2; wait
+saved1 -199.7; saved2 856.3
+scratch1 6; scratch2 40; scratch3 39
+saved4 2; wait
+saved1 120.5; saved2 591.7; saved3  78.0
+scratch1 5; scratch2 39; scratch3 7
+saved4 2; wait
+saved1 481.4; saved2 565.8
+scratch1 6; scratch2 8; scratch3 0
+saved4 2; wait
+saved1 508.4; saved2 313.5
+scratch1 9; scratch2 7
+saved4 2; wait
+saved1 278.7; saved2 180.1
+scratch1 10; scratch2 8; scratch3 108
+saved4 2; wait
+saved1 198.7; saved2 -31.5
+scratch1 11; scratch2 9; scratch3 0
+saved4 2; wait
+saved1 279.6; saved2 -273.3
+scratch1 12; scratch2 10; scratch3 107
+saved4 2; wait
+saved1 484.5; saved2 -334.5
+scratch1 13; scratch2 11; scratch3 0
+saved4 2; wait
+saved1 496.0; saved2 -543.7
+scratch1 12; scratch2 14; scratch3 23
+saved4 2; wait
+saved1 142.5; saved2 -548.4; saved3 174.0
+scratch1 15; scratch2 13; scratch3 0
+saved4 2; wait
+saved1 -219.3; saved2 -534.9
+scratch1 16; scratch2 14
+saved4 2; wait
+saved1 -208.7; saved2 -857.3
+scratch1 17; scratch2 15
+saved4 2; wait
+saved1 344.1; saved2 -866.1; saved3 286.0
+scratch1 18; scratch2 0
+saved4 2; wait
+saved1 349.6; saved2 -550.8
+scratch1 19; scratch2 17
+saved4 2; wait
+saved1  10.8; saved2 -543.2; saved3 350.0
+scratch1 20; scratch2 18
+saved4 2; wait
+saved1 -158.5; saved2 -534.5
+scratch1 21; scratch2 19
+saved4 2; wait
+saved1 -147.7; saved2 -700.7
+scratch1 22; scratch2 20
+saved4 2; wait
+saved1 245.4; saved2 -696.9
+scratch1 21; scratch2 0
+saved4 2; wait
+saved1 485.5; saved2 -859.0; saved3  78.0
+scratch1 13; scratch2 24
+saved4 2; wait
+saved1  41.6; saved2 -863.7; saved3  22.0
+scratch1 23; scratch2 25
+saved4 2; wait
+saved1  22.7; saved2 -568.1; saved3   6.0
+scratch1 106; scratch2 24; scratch3 50; scratch4 26
+saved4 2; wait
+saved1 -342.7; saved2 -577.1
+scratch1 25; scratch2 27; scratch3 0; scratch4 0
+saved4 2; wait
+saved1 -328.7; saved2 -702.0
+scratch1 26; scratch2 28
+saved4 2; wait
+saved1 -633.5; saved2 -716.9
+scratch1 27; scratch2 29
+saved4 2; wait
+saved1 -657.8; saved2 -459.0
+scratch1 28; scratch2 30; scratch3 31
+saved4 2; wait
+saved1 -544.5; saved2 -450.6
+scratch1 29; scratch2 11; scratch3 0
+saved4 10; wait
+saved1 -631.9; saved2 -261.9; saved3   6.0
+scratch2 1
+saved4 2; wait
+saved1 -805.9; saved2 193.8
+scratch1 1; scratch2 33
+saved4 2; wait
+saved1 -811.6; saved2 784.0; saved3   6.0
+scratch1 32; scratch2 34
+saved4 2; wait
+saved1 -563.2; saved2 762.8
+scratch1 33; scratch2 35
+saved4 2; wait
+saved1 -563.9; saved2 369.0
+scratch1 36; scratch2 34
+saved4 2; wait
+saved1 -420.9; saved2 390.9
+scratch1 37; scratch2 35
+saved4 2; wait
+saved1 -411.9; saved2 761.2
+scratch1 38; scratch2 36
+saved4 2; wait
+saved1 -210.8; saved2 766.1; saved3  14.0
+scratch1 39; scratch2 37
+saved4 2; wait
+saved1 -150.7; saved2 525.5; saved3  30.0
+scratch1 6; scratch2 38
+saved4 2; wait
+saved1 -555.7; saved2 812.2; saved3 142.0
+scratch1 5; scratch2 4; scratch3 41
+saved4 2; wait
+saved1 -532.4; saved2 625.3
+scratch1 42; scratch2 0; scratch3 0
+saved4 2; wait
+saved1 -498.0; saved2 447.3
+scratch1 41; scratch2 43
+saved4 2; wait
+saved1 -471.4; saved2 314.3
+scratch1 45; scratch2 0
+saved4 2; wait
+saved1 -464.5; saved2 233.2; saved3 198.0
+scratch1 46
+saved4 2; wait
+saved1 -465.9; saved2 272.0; saved3 166.0
+scratch1 44
+saved4 2; wait
+saved1 -721.7; saved2 212.4; saved3 206.0
+scratch1 47
+saved4 2; wait
+saved1 -727.8; saved2 300.7
+scratch1 48
+saved4 2; wait
+saved1 -850.6; saved2 280.0
+scratch1 49
+saved4 2; wait
+saved1 -798.7; saved2  96.9
+scratch1 2
+saved4 2; wait
+saved1  50.7; saved2 -406.6; saved3 -10.0
+scratch1 25; scratch2 51
+saved4 2; wait
+saved1 -172.0; saved2 -417.4; saved3 -90.0
+scratch1 52; scratch2 50
+saved4 2; wait
+saved1 -165.5; saved2 -205.6; saved3 -154.0
+scratch1 53; scratch2 51
+saved4 2; wait
+saved1 166.3; saved2 -189.3; saved3 -154.0
+scratch1 54; scratch2 52
+saved4 2; wait
+saved1 307.6; saved2 -29.3; saved3 -154.0
+scratch1 55; scratch2 53
+saved4 2; wait
+saved1 617.3; saved2 -22.2; saved3 -146.0
+scratch1 56; scratch2 57; scratch3 54
+saved4 2; wait
+exec maps/dm3.wa2

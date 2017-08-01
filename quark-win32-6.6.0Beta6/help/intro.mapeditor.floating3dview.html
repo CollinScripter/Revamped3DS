@@ -1,0 +1,155 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"  "http://www.w3.org/TR/html4/loose.dtd">
+<html lang="en">
+<head>
+  <title>Floating 3D windows</title>
+  <meta name="Description" content="QuArK Information Database - Page: 1.5.10.&nbsp;Floating 3D windows">
+  <meta name="Keywords" content="QuArK InfoBase Quake Army Knife QRK QKM Python PY Map Editor Hexen Heretic Half-Life Sin Kingpin Soldier-of-Fortune Star-Trek-Voyager Elite-Force">
+  <link rel=stylesheet href="standard.css" type="text/css">
+</head>
+
+<body>
+<a name="__top__"></a>
+<table width="100%" border=0 cellspacing=0>
+  <tr>
+    <td width=213>
+      <a target="_blank" href="http://quark.sourceforge.net/"><img src="quarkicon.png" width=213 height=90 border=0 alt="Go to QuArK Web Site"></a>
+    </td>
+    <td width="70%" align=center>
+      <div class="topheadline">Floating 3D windows</div>
+      <div class="sm">Updated&nbsp;14 Aug 2005</div>
+    </td>
+    <td width="30%" valign=bottom nowrap>
+      Upper&nbsp;levels:<br>-&nbsp;<a href="index.html">QuArK&nbsp;Information&nbsp;Base</a><br>-&nbsp;<a href="intro.html">1.&nbsp;Introduction&nbsp;to&nbsp;QuArK</a><br>-&nbsp;<a href="intro.mapeditor.html">1.5.&nbsp;Map-editor&nbsp;in&nbsp;QuArK</a><br>
+    </td>
+  </tr>
+</table>
+<table width="100%" border=0 cellspacing=0>
+  <tr class="headline">
+    <td width="99%">
+      <p class="headline">&nbsp;1.5.10.&nbsp;Floating 3D windows</p>
+    </td>
+    <td width="1%" align=right nowrap>
+      &nbsp;[&nbsp;<span class="navenable"><a href="intro.mapeditor.maplayout.html">Prev</a></span>&nbsp;-&nbsp;<span class="navenable"><a href="intro.mapeditor.html">Up</a></span>&nbsp;-&nbsp;<span class="navenable"><a href="intro.modeleditor.html">Next</a></span>&nbsp;]&nbsp;
+    </td>
+  </tr>
+</table>
+<table border=0 width="100%" cellspacing=10><tr><td><p>You can create a new floating 3D-window, from the <a href="intro.mapeditor.menu.html#layoutmenu">'Layout menu'</a>,
+or the <a href="intro.mapeditor.toolpalettes.display.html#3dwindows">'3D windows'</a> icons.
+</p>
+</td></tr></table>
+<br>
+
+<table width="100%" border=0 cellspacing=0>
+  <tr class="headline">
+    <td width="100%">
+      <p class="subheadline">&nbsp;Index</p>
+    </td>
+  </tr>
+</table>
+<ul class="index">
+  <li>- <a href="#editor">3D Edit Window</a>&nbsp;<span class="added">(28 Feb 2001)</span>
+  <li>- <a href="#camera">Camera Position</a>&nbsp;<span class="added">(14 Aug 2005)</span>
+</ul>
+<br>
+
+
+<a name="editor"></a>
+  <table width="100%" border=0 cellspacing=0>
+    <tr class="headline">
+      <td>
+        <p class="item">&nbsp;3D Edit Window</p>
+      </td>
+      <td align=right>
+        <font size=-2>Decker&nbsp;-&nbsp;28 Feb 2001</font>
+      </td>
+      <td width="1%" align=right nowrap>
+        &nbsp;&nbsp;[&nbsp;<a href="#__top__">Top</a>&nbsp;]&nbsp;
+      </td>
+    </tr>
+  </table>
+  <table border=0 width="100%" cellspacing=10><tr><td>
+<p><img border=0 align=right src="intro.mapeditor.floating3dview.editor.png">
+In the 3D window, you will be able to move around in the level, almost as if
+you were doing it using <a href="glossary.html#n">NOCLIP</a> in the FPS-game.
+</p><p>To move around, you can use the mouse, or keys, when the mouse is inside the
+3D-window so the window becomes active. The keys you can find and redefine in
+the <a href="intro.configuration.general.html#3dview">'3D View'</a> options.
+</p><p>Another feature of the 3D window is, that you can edit your map in it. You can
+click on a polyhedron, and it will appear selected with wireframes. You can
+move the selection around, just as you would do it on the map-views. Even align
+textures on faces can be done in the 3D window.
+</p>
+  </td></tr></table>
+  <br>
+
+<a name="camera"></a>
+  <table width="100%" border=0 cellspacing=0>
+    <tr class="headline">
+      <td>
+        <p class="item">&nbsp;Camera Position</p>
+      </td>
+      <td align=right>
+        <font size=-2>Decker&nbsp;-&nbsp;14 Aug 2005</font>
+      </td>
+      <td width="1%" align=right nowrap>
+        &nbsp;&nbsp;[&nbsp;<a href="#__top__">Top</a>&nbsp;]&nbsp;
+      </td>
+    </tr>
+  </table>
+  <table border=0 width="100%" cellspacing=10><tr><td>
+<p><img border=0 align=right src="intro.mapeditor.floating3dview.camera.png">
+Once you have created a new 3D-window, a 'eye'-icon will appear in your
+map-views, showing where the camera are positioned in the level, and in what
+direction its pointing.
+</p><p>You can move this camera around, and adjust its direction-handle, just like any
+other entity. However the camera won't be a visible object in the
+<a href="intro.mapeditor.dataforms.html#treeview">'Tree-view (hierarchy-view)'</a>, since it only exist when a 3D-window are
+open.
+</p><p>If you have more than one 3D-window opened, there will also be more 'eye'-icons
+in your map-views. One per 3D-window.
+</p><p>QuArK also has a function to set and store 3D camera views. This feature will
+only work for the <b>Editor's</b> 3D view and not the separate 3D view windows or
+the OpenGL window. To activate and use this function follow the steps below:
+</p><p>1) First, set your view or camera eye to where you want it in the 3D view.
+</p><p>2) In one of the 2D views RMB click on it and a bar will appear that says
+<b>Add position</b>, LMB click the bar and a dialog input window will open that has,
+next to Enter the name:,  <b>Camera Position</b>, put a number behind that so you
+have like <b>Camera Position 1</b> now. There is also a check box below that, <b>local:</b>,
+you can use to put that camera position into a group folder. If you do not have one
+selected then it will make its own folder and you can put all of your camera
+positions in that one folder. Once you have done this just hit your enter key
+to close the dialog window and a <b>Camera position</b> entity will be created in the
+<b>Tree View</b>. You can setup as many positions as you like. Then save your file
+so you do not loose them, but you do not need to close the file.
+</p><p>3) To use those positions, hold down your <b>c key</b> and press your <b>Page Up</b> and
+<b>Page Down</b> keys to move through each one.
+</p><p>4) Now here's the trick, or bug, when you do close that file and reopen it,
+if you try to use the <b>c key</b>, <b>Page Up</b> and <b>Page Down</b> feature,
+you will get an Information message that says <b>You need to set or store a view
+first for this to work</b>. Instead of doing that, which you can also do to reset
+any camera position by using your RMB over it, just close that message, go to
+the <b>Search</b> menu and select <b>Find Camera Positions</b>. This will cause a dialog
+window to open. Next to the <b>Positions</b> title click the down arrow and pick any
+position, then click on the <b>V</b> button below it. This will take you to that 3D view
+position AND reactivate the <b>c</b>,  <b>Page Up</b> and <b>Page Down</b> feature once again
+for as long as you keep that session of QuArK open.
+</p>
+  </td></tr></table>
+  <br>
+
+<br>
+
+<table width="100%" border=0 cellspacing=0>
+  <tr class="headline">
+    <td width="99%" align=center>
+      <p class="sm">
+        Copyright (c) 2009, GNU General Public License by The QuArK (Quake Army Knife) Community - <a target="_blank" href="http://quark.sourceforge.net/">http://quark.sourceforge.net/</a><br>
+      </p>
+    </td>
+    <td width="1%" align=right nowrap>
+      &nbsp;[&nbsp;<span class="navenable"><a href="intro.mapeditor.maplayout.html">Prev</a></span>&nbsp;-&nbsp;<a href="#__top__">Top</a>&nbsp;-&nbsp;<span class="navenable"><a href="intro.modeleditor.html">Next</a></span>&nbsp;]&nbsp;
+    </td>
+  </tr>
+</table>
+</body>
+</html>

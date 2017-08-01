@@ -1,0 +1,799 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"  "http://www.w3.org/TR/html4/loose.dtd">
+<html lang="en">
+<head>
+  <title>GUI Window</title>
+  <meta name="Description" content="QuArK Information Database - Page: 3.7.2.&nbsp;GUI Window">
+  <meta name="Keywords" content="QuArK InfoBase Quake Army Knife QRK QKM Python PY Map Editor Hexen Heretic Half-Life Sin Kingpin Soldier-of-Fortune Star-Trek-Voyager Elite-Force">
+  <link rel=stylesheet href="standard.css" type="text/css">
+</head>
+
+<body>
+<a name="__top__"></a>
+<table width="100%" border=0 cellspacing=0>
+  <tr>
+    <td width=213>
+      <a target="_blank" href="http://quark.sourceforge.net/"><img src="quarkicon.png" width=213 height=90 border=0 alt="Go to QuArK Web Site"></a>
+    </td>
+    <td width="70%" align=center>
+      <div class="topheadline">GUI Window</div>
+      <div class="sm">Updated&nbsp;09 Dec 2008</div>
+    </td>
+    <td width="30%" valign=bottom nowrap>
+      Upper&nbsp;levels:<br>-&nbsp;<a href="index.html">QuArK&nbsp;Information&nbsp;Base</a><br>-&nbsp;<a href="adv.html">3.&nbsp;Advanced&nbsp;customization</a><br>-&nbsp;<a href="adv.quarkpy.html">3.7.&nbsp;QuarkPy</a><br>
+    </td>
+  </tr>
+</table>
+<table width="100%" border=0 cellspacing=0>
+  <tr class="headline">
+    <td width="99%">
+      <p class="headline">&nbsp;3.7.2.&nbsp;GUI Window</p>
+    </td>
+    <td width="1%" align=right nowrap>
+      &nbsp;[&nbsp;<span class="navenable"><a href="adv.quarkpy.organization.html">Prev</a></span>&nbsp;-&nbsp;<span class="navenable"><a href="adv.quarkpy.html">Up</a></span>&nbsp;-&nbsp;<span class="navenable"><a href="adv.duplicators.html">Next</a></span>&nbsp;]&nbsp;
+    </td>
+  </tr>
+</table>
+<table border=0 width="100%" cellspacing=10><tr><td>
+</td></tr></table>
+<br>
+
+<table width="100%" border=0 cellspacing=0>
+  <tr class="headline">
+    <td width="100%">
+      <p class="subheadline">&nbsp;Index</p>
+    </td>
+  </tr>
+</table>
+<ul class="index">
+  <li>- <a href="#windows">GUI Window Basics</a>&nbsp;<span class="added">(02 Mar 2001)</span>
+  <li>- <a href="#dialogs">Dialog Boxes</a>&nbsp;<span class="added">(09 Dec 2008)</span>
+  <li>- <a href="#floatwin">Floating Windows</a>&nbsp;<span class="added">(02 Mar 2001)</span>
+</ul>
+<br>
+
+
+<a name="windows"></a>
+  <table width="100%" border=0 cellspacing=0>
+    <tr class="headline">
+      <td>
+        <p class="item">&nbsp;GUI Window Basics</p>
+      </td>
+      <td align=right>
+        <font size=-2>Tiglari&nbsp;-&nbsp;02 Mar 2001</font>
+      </td>
+      <td width="1%" align=right nowrap>
+        &nbsp;&nbsp;[&nbsp;<a href="#__top__">Top</a>&nbsp;]&nbsp;
+      </td>
+    </tr>
+  </table>
+  <table border=0 width="100%" cellspacing=10><tr><td>
+<p>Since one reason for getting involved in QuArK development
+is to learn something about GUI (Graphical User Interface)
+programming, I thought I'd start at the beginning - if you want
+to learn it, you probably don't know it already.  People with
+GUI experience will want to skip this.
+</p><p>One of the fundamental ideas of GUI programs is 'window'.
+is a region (typically a rectangle) on the screen that is
+looked after by some code. The job of this code is to;
+</p><p><ol>
+<li>draw the window's region, typically in different ways depending on what's going on at the time.
+<li>respond to events that occur when the mouse cursor is in the window's region.
+</ol>
+</p><p>So a 'button' is a little window that draws a picture that
+looks something like a button in an 'up position', but if
+a mouse-button is pressed down while the mouse cursor is in
+the window, the picture will change to that of a button
+in a down position, and some additional code will get
+executed that does whatever pressing the button is supposed
+to accomplish.
+</p><p>These windows are arranged in a vast familial hierarchy:
+an 'application' (main program) has a main window which
+has as 'child windows' all of the other windows that the
+application throws up.  So for example when the application
+is closed, a shut-down message is sent to its children,
+and so on to their children, so if everything is correctly
+coded, all the windows will vanish from the screen.
+Likewise windows can 'delegate' tasks to their parents,
+for example an 'edit window' in a dialog box can delegate
+processing of an ESC or Enter keypress to its parent
+dialog box, to close the dialog and throw away or record
+the results of the dialog.
+</p><p>Happily for the Python coder, Delphi code manages all of the
+details of this, but it's probably good to have at least
+this much of an idea of what's going on under the hood.
+</p>
+  </td></tr></table>
+  <br>
+
+<a name="dialogs"></a>
+  <table width="100%" border=0 cellspacing=0>
+    <tr class="headline">
+      <td>
+        <p class="item">&nbsp;Dialog Boxes</p>
+      </td>
+      <td align=right>
+        <font size=-2>Tiglari&nbsp;-&nbsp;09 Dec 2008</font>
+      </td>
+      <td width="1%" align=right nowrap>
+        &nbsp;&nbsp;[&nbsp;<a href="#__top__">Top</a>&nbsp;]&nbsp;
+      </td>
+    </tr>
+  </table>
+  <table border=0 width="100%" cellspacing=10><tr><td>
+<p><u>Window Structure</u><br>
+Dialog boxes are actually a special kind of 'floating window',
+defined by the class quarkpy.qmacro.dialogbox.  Floating
+windows are child windows of the application that float
+around 'on top of' other windows, can be moved, and often
+resized.  A floating window contains a further kind of
+window, called a 'panel', whose purpose is to contain
+and control the positioning of the windows that do the real
+work, which are called '(screen) controls' (in jargon,
+a QuArK panel is a sort of 'geometry manager').  Dialog
+boxes put one screen control into their panel, an
+extremely powerful creature called a 'dataform', which
+makes automagical links between QObjects and areas of
+the screen (Armin told me once that even he doesn't
+remember everything about how they work).
+</p><p>So the basic structure of a dialog box is:
+</p><div class="doccode"><pre>
+  Floating Window     -&gt;  Main Panel   -&gt;   DataForm
+ (positions the whole   (positions the   (does the real
+       thing)              conrols)          work)
+</pre></div>
+
+<p>(Main Panel because floating windows can have more than
+once panel, as we will see eventually).  The qmacro.dialogbox
+code sets all this up for you, but I think it's good to
+know this much about it at the beginning.
+</p><p><u>Defining a Dialog</u><br>
+So down to the details.  We'll look at the MakeTexMultDlg
+in plugins.maptagside, since it's very simple.  This
+dialog asks for a number which the mapper is going to
+use as a 'multiplier' to know how many times a texture
+should be repeated when it's being wrapped along or around
+a chain of faces.
+</p><p>A dialog is defined as a class, descended from either
+quarkpy.qmacro.dialogbox, or some class descended therefrom (see
+quarkpy.qeditor and quarkpy.dlgclasses for some examples of the
+latter technique).  MakeTexMultDlg is based directly on dialogbox,
+so it starts out like this:
+</p><div class="doccode"><pre>
+class MakeTexMultDlg (quarkpy.qmacro .dialogbox):
+
+    #
+    # dialog layout
+    #
+
+    size = (265, 70)
+    dfsep = 0.2        # separation at 20% between labels and edit boxes
+    dlgflags = FWF_KEEPFOCUS
+</pre></div>
+
+<p>On the first line we see the standard Python syntax for
+defining a class descended from another (the spacing before
+the periods doesn't matter, some coders stick it in; others
+leave it out); then after a comment comes an assortment of
+attributes for the dialog. Size is obvious, 'dfsep' is a
+dataform property.  Dataforms are organized in two columns,
+labels on the left, and input controls on the right. The 'Txt'
+attribute in a :form object says what to put in the label
+column.  Dfsep gives the percentage of the total width of the
+dataform that gets devoted to the label.  Then comes
+'dlgflags', which are ultimately passed on to the floating
+window, so they start with 'FWF_'.  For a list, see
+quarkpy.qutils.py.  If you don't specify any dlgflags, the
+dialogbox code gives you
+</p><div class="doccode"><pre>
+  FWF_KEEPFOCUS | FWF_POPUPCLOSE
+</pre></div>
+
+<p>by default.
+</p><p>Next comes the 'dialog definition', dlgdef:
+</p><div class="doccode"><pre>
+    dlgdef = &quot;&quot;&quot;
+        {
+        Style = &quot;15&quot;
+        Caption = &quot;Texture Wrapping Multiplier&quot;
+
+        mult: =
+        {
+        Txt = &quot;Multiplier&quot;
+        Typ = &quot;EF1&quot;
+        Hint = &quot;Needn't be an integer; if it's 0, no multiplier is set&quot;
+        }
+        close:py = { }
+    }
+    &quot;&quot;&quot;
+</pre></div>
+
+<p>This is just a form, represented in .qrk format.
+The value to be assigned to dlgdef begins with triple double quotes,
+and ends with them too, because it's a multi-line string.
+Note that it can happily contain ordinary solo double quotes.
+A detailed discription of the <a href="adv.intro.html#typ">Typ</a>
+items that it uses is located in the <a href="adv.intro.html#typ">Guide to Typ's</a>
+section of these docs.
+</p><p>A <b>very important</b> thing to know and remember about this is how to use a Python defined variable within this
+tripple double quotes area.
+</p><p>First the variable, which can also be a stored setting, must be defind before and outside of the above area like this:
+<div class="doccode"><pre>
+    NbrOfLines = &quot;10&quot;
+</pre></div>
+Then that variable can be used within the tripple double quotes area like this:
+</p><div class="doccode"><pre>
+    mesh_shader: = {Typ=&quot;M&quot;
+                    Rows = &quot;&quot;&quot; + chr(34) + NbrOfLines + chr(34) + &quot;&quot;&quot;
+                    Scrollbars=&quot;1&quot;
+                    Txt = &quot;mesh shader&quot;
+                    Hint=&quot;Contains the full text of this skin texture's shader, if any.&quot;$0D
+                         &quot;This can be copied to a text file, changed and saved.&quot;
+                   }
+</pre></div>
+The <a href="glossary.html#c">chr(34)</a> items, which is for a single double quote, must be used like this to avoid confusion with the tripple double quotes.
+
+<p>It starts out with a style and a caption; the style is
+a number obtained by adding these flags (from quarkpy.qutils):
+</p><div class="doccode"><pre>
+  # &quot;style&quot; of &quot;:form&quot; objects (convert the numeric value into a string to assign to &quot;style&quot;)
+  GF_GRAY       = 1
+  GF_EXTRASPACE = 2
+  GF_NOICONS    = 4
+  GF_NOBORDER   = 8
+</pre></div>
+
+<p>Then comes one field, a single floating point value called
+mult:, and finally a button, of which more shortly.
+</p><p>There are a number of gotchas for forms:
+</p><p><ol><li>
+     The syntax is full of easy-to-screw up punctuation,
+     and the error-messages tell you what line in the quoted
+     string is wrong, rather than in the file, so you
+     have to do some arithmetic to use the info (so I
+     always start by dlgdefs by taking some other one that's
+     already done as a basis, and modifying it).
+<li>
+     Buttons in forms are a horrible mess.  I don't have
+     a deep enough understanding to know why Armin couldn't
+     find one good implementation, but actually there are
+     three crappy ones (2 by him, 1 by me), that work in
+     different contexts.  This dialog box uses 'PyButtons',
+     which are but into forms by lines like this:
+<span class="doccode">
+     close:py = { }
+</span>
+     (the content of the button is specified later)
+<li>
+      You can't put comments into these triple quote-defined
+      forms, the function that reads them can't strip them
+      out.
+</ol>
+</p><p>Other than buttons, almost everything that works in an
+entity form will work in a dialog box form, and vice versa,
+I think (it would take a long time to test them all!!).
+One other exceptions is checkboxes:  in entity forms,
+you can have Typ = &quot;X4&quot;, say to control the third bit
+position, but in dialog boxes only Typ = &quot;X&quot; works,
+this gives you an variable that's nonzero iff the
+box is checked, zero otherwise.
+</p><p>So you can use most of the Typ types that you understand
+to build dialog box forms, one that's rather useful for
+making a bit of extra horizontal space is a separator like
+this:
+</p><div class="doccode"><pre>
+      sep: = {Typ=&quot;S&quot; Txt=&quot; &quot;}
+</pre></div>
+
+<p>The Txt part has three formats you can use:
+1) Txt=&quot;&quot; gives a horizontal line separator
+2) Txt=&quot; &quot; just separates with a blank area (note the space)
+3) Txt=&quot;Your Label&quot; will print the text in bold lettering
+</p><p>So next comes initialization of the dialog box object:
+</p><div class="doccode"><pre>
+    #
+    # __init__ initialize the object
+    #
+
+    def __init__(self, form, editor):
+
+    #
+    # General initialization of some local values
+    #
+
+        self.editor = editor
+        self.sellist = self .editor .visualselection ()
+</pre></div>
+
+<p>This is the beginning of a Python 'constructor' a function
+that makes an instance of a class (think of a class as a
+template or factory for making objects; you call the
+constructor as a function to make an instance of the object).
+</p><p>In Python, functions that get special treatment tend to start
+and end with double underscores, as here with __init__.
+To make this dialog box, you write:
+</p><div class="doccode"><pre>
+   MakeTexMultDlg(quarkx.clickform, editor)
+</pre></div>
+
+<p>Python then calls the ReplaceTextureDlg class's
+__init__ function to set up the dialog object.  The first
+is by convention 'self', referring to the object (the rule
+is that the first argument is the object; the convention
+is to call it 'self').
+</p><p>The second argument 'form' is meant to be the parent window
+of the dialog, quarkx.clickform sets it to be the last
+window that got clicked in (e.g. the one you clicked in
+to bring up the dialog).  The remaining arguments depend
+solely on what we want the dialog to do, here we're
+just passing 'editor'.
+</p><p>Next comes some real setup code:  we attach the editor and
+its current visualselection() (the stuff that's in funny
+colors due to being selected, not selected faces in a
+selected poly) to the dialog as data members (this allows
+other methods of the dialog class to act on them as desired).
+</p><p>Now comes the crucial step of 'creating the data source':
+</p><div class="doccode"><pre>
+        #
+        # Create and fill the data source
+        #
+
+        src = quarkx.newobj(&quot;:&quot;)   # make it
+        src[&quot;mult&quot;] = 0,           # fill it
+        editor.texmult = self      # attach dialog to editor
+        self.src = src             # attach src to dialog
+</pre></div>
+
+<p>The heart of a dialog box is its DataForm, which connects
+stuff on the screen to a QObject.  src is the QObject
+that the dialogbox will do this for.  So first we make it,
+and then we fill it.
+</p><p>The comma after the 0 is not typo, but a gotcha: EFn Typ's
+expect a Python tuple as their filler, and the comma
+here is how you make a singleton tuple (I had a *lot* of
+trouble before getting straight on that one!).  Finally
+we want the editor to have some way of knowing what
+multiplier we set; this is acheived in this case by
+attaching the dialog to the editor, and then the source
+to the dialog, so that multiplier can be gotten by
+this line elsewhere in maptagside:
+</p><div class="doccode"><pre>
+    multiplier, = editor.texmult.src[&quot;mult&quot;]
+</pre></div>
+
+<p>Note the comma again, for pulling the solo value out of a
+singleton tuple (actually if you're looking at maptagside from
+QuArK511 or earlier, there's something a bit different done, since
+this was my first dialog box and I knew less about what I was
+doing).  editor.texmult.src[&quot;mult&quot;] returns the value of the
+specific &quot;mult&quot; for the src QObject of the editor, and by the
+automagical powers of the dialogbox's dataform, this will be
+whatever you currently have typed in there.
+</p><p>The next step is to call the code from
+quarkpy.qmacro.dialogbox that actually puts all this together
+and makes the stuff:
+</p><div class="doccode"><pre>
+    #
+    # Create the dialog form and the buttons
+    #
+
+        quarkpy.qmacro.dialogbox.__init__(self, form, src,
+        close = quarkpy.qtoolbar.button(
+            self.close,         # method called on push
+            &quot;close this box&quot;,   # hint
+            ico_editor, 0,      # icon source, icon #
+            &quot;Close&quot;))           # caption
+</pre></div>
+
+<p>We're here calling quarkpy.qmacro.dialogbox's own __init__
+function, as an ordinary function, so we pass it's first
+argument as 'self'. So it will set up the dataform, etc,
+attaching more stuff to our dialog box instance.  We also
+pass through the form argument, as well as the src we've
+created.  And finally a list of buttons (here just one).
+The field are explained; for each 'buttonname:py' in the
+Dlgdef, we have to have buttonname = ... passed to the
+initialization.  These equalities here are an aspect of
+Python's very flexible parameter-passing mechanism, which
+I won't explain here.
+</p><p>And finally, we have to define any methods used by the
+dialog; here there's only one, onclose(), which the
+quarkpy.dialogbox code causes to be executed when the
+dialog closes for the purpose of cleaning things up.
+</p><div class="doccode"><pre>
+    def onclose(self, dlg):
+      requestmultiplier.state=qmenu.normal
+      self.editor.texmult = None
+      quarkpy.qmacro.dialogbox(self, close)
+</pre></div>
+
+<p>The onclose() method requires two arguments, the dialog 'self',
+and its floating window 'dlg', and should also call the
+qmacro.dialogbox.onclose method, so that the cleanup organized by
+that occurs.  Here the additional work is done of restoring the
+menu item  to normal, and detaching the dialog from the editor.
+It's a simple example of a 'callback' function; as we'll see,
+the dialog initialization code passes it to the floating window,
+and then when the floating window shuts down, it runs this
+function, 'calling back' into the module that provided it.
+</p><p>But we don't have to define a close() method, since that's
+already taken care of in the qmacro.dialogbox code.
+</p><p>So finally, how do we make this dialog box?  That's done
+by this little code:
+</p><div class="doccode"><pre>
+def WrapMultClick(m):
+  editor = mapeditor()
+  if editor is None: return
+  if requestmultiplier.state==qmenu.checked:
+#    requestmultiplier.state=qmenu.normal
+    editor.texmult.close(None)
+  else:
+    requestmultiplier.state=qmenu.checked
+    MakeTexMultDlg(quarkx.clickform,editor)
+</pre></div>
+
+<p>This is a toggle; requestmultiplier is a menu item, if its
+state is checked, the dialog's close function is called, which
+unchecks the menu item (the earlier version just unchecked the
+menu item but left the dialog floating; if you prefer that
+behavior, move the comment #). But if it's normal (unchecked),
+then it gets checked *and* the dialog is called up.  The menu
+item can be defined after the function that refers to it
+because the function gets called later (when a menu item is
+clicked).
+</p><p>So there's a walk thru a small but complete box (tho a bit
+unusual in its mode of operation).
+</p><p>A few more general points on the dialogs.  First, the dialogbox
+definition sets up two callbacks, whereby things can be made
+to happen when something is done to the window, plus the
+close method:
+</p><div class="doccode"><pre>
+    def datachange(self, df):
+       # called when the data is changed
+
+    def onclose(self, dlg):
+       # called on closing
+
+    def close(self)
+       # effects closing
+</pre></div>
+
+<p>Datachange() doesn't do anything in qmacro.dialogbox, so
+the original doesn't need to be called if you override it,
+but close() and onclose() do do things, so should have their
+originals called.
+</p><p>Second, the dialog boxes are inherently 'modeless'.  That
+means that when you call one, the program doesn't wait for
+you to enter a value before proceeding.  If you want to
+fake modal behavior, by having something happen after you've
+provided some values and closed the box, you have to pass
+the action you want performed as a parameter to the dialog
+box.  The texture positioning dialog in maptexpos.py
+illustrates this and various other advanced techniques.
+</p>
+  </td></tr></table>
+  <br>
+
+<a name="floatwin"></a>
+  <table width="100%" border=0 cellspacing=0>
+    <tr class="headline">
+      <td>
+        <p class="item">&nbsp;Floating Windows</p>
+      </td>
+      <td align=right>
+        <font size=-2>Tiglari&nbsp;-&nbsp;02 Mar 2001</font>
+      </td>
+      <td width="1%" align=right nowrap>
+        &nbsp;&nbsp;[&nbsp;<a href="#__top__">Top</a>&nbsp;]&nbsp;
+      </td>
+    </tr>
+  </table>
+  <table border=0 width="100%" cellspacing=10><tr><td>
+<p>A QuArK dialog box is just a restricted kind of floating
+window; so now it's time to look into the code that
+defines them and see how floating windows work in general.
+</p><p>dialog boxes are defined as a class in quarkpy.qmacro;
+the definition starts out like this:
+</p><div class="doccode"><pre>
+class dialogbox:
+
+    dlgdef = &quot;&quot;
+    size = (300,170)
+    begincolor = None
+    endcolor = None
+    name = None
+    dfsep = 0.6
+    dlgflags = qutils.FWF_KEEPFOCUS | qutils.FWF_POPUPCLOSE
+</pre></div>
+
+<p>Here we're just providing default values for the various
+things that can be defined when a more specific type of
+dialog is created as a subclass.
+</p><p>Now comes the most important method of this class, its
+constructor (which we have already invoked as part of the
+constructor of the texture multiplier dialag):
+</p><div class="doccode"><pre>
+    def __init__(self, form, src, **buttons):
+        name = self.name or self.__class__.__name__
+        closedialogbox(name)
+        f = quarkx.newobj(&quot;Dlg:form&quot;)
+        f.loadtext(self.dlgdef)
+</pre></div>
+
+<p>The first three parameters are self-explanatory (if you've
+read through dialogs.txt), the last is the magic for dealing
+with the buttons, don't worry about it now.  Next we derive
+a name for the box, and close any already opened one with the
+same name (closedialogbox() is defined elsewhere in
+quarkpy.qmacro).  And now something interesting happens;
+we create an actual form object, and then load in whatever
+text has wound up assigned to dlgdef.  loadtext is actually
+one of the methods of QObjects (QuArK internal objects);
+it would not be amiss to look it up in Quarkx.rtf.
+</p><p>And so here's our next chunk of code:
+</p><div class="doccode"><pre>
+        self.f = f
+        for pybtn in f.findallsubitems(&quot;&quot;, ':py'):
+            pybtn[&quot;sendto&quot;] = name
+        self.buttons = buttons
+        dlg = form.newfloating(self.dlgflags, f[&quot;Caption&quot;])
+</pre></div>
+
+<p>The first line simply stores the form we've made as a data
+member of the dialog, the next three are button-processing
+magic, and finally we create our new floating window.
+If you look up newfloating() in quarkx.rtf, you'll see that
+it's a method of window objects (the one that was passed
+as the form argument), which takes as first argument
+a bunch of flags, and second a string to use as a caption.
+f[&quot;Caption&quot;] is just an instance of the syntax whereby
+the value of a specific (&quot;Caption&quot;) of a QObject (f), is
+fetched, so the net result is that whatever we put
+in as value of the Caption specific of the dlgdef gets
+passed to the new floating window as its caption.
+</p><p>Next comes assorted housekeeping.
+</p><div class="doccode"><pre>
+        dialogboxes[name] = dlg
+        dlg.windowrect = self.windowrect()
+        if self.begincolor is not None: dlg.begincolor = self.begincolor
+        if self.endcolor is not None: dlg.endcolor = self.endcolor
+        dlg.onclose = self.onclose
+        dlg.info = self
+        self.dlg = dlg
+        self.src = src
+</pre></div>
+
+<p>dialogboxes is a global variable of quarkpy.qmacros, so this
+registers our current dialog box as one that is open.
+Next we set the dimensions of  the new floating window
+(check the qmacro code for how windowrect() works), and attach
+various further data members to the floating window and the
+dialog box object.  It would be good to look up the things
+attributed to dlg (the floating window) in Quarkx.rtf.
+</p><p>But a warning about some terminological confustion:  windows
+sometimes get called `forms' and are thereby subject to betting
+confuse with :form objects, but these are inherently
+different!
+</p><p>And now some more interesting stuff:
+</p><div class="doccode"><pre>
+        df = dlg.mainpanel.newdataform()
+        self.df = df
+        df.header = 0
+        df.sep = self.dfsep
+</pre></div>
+
+<p> When floating windows are created, they automatically
+ get a panel, which is accessed as `mainpanel'.  And
+ then a panel's newdataform() method will create a new
+ dataform in the panel, the first line gives us the dataform
+ df, a child of the window dlg's main panel.  So we've
+ now built the three-level structure mentioned at the
+ beginning of the dialogs tutorial.  Now we set some
+ dataform attributes; setting the header to 0 supresses
+ the `specific' and `arg' headers that you see at the top
+ of the columns when entity specifics are displayed in
+ the multi-page panel, then the dfsep attribute of the
+ dialog object is applied to the dataform, where it does
+ its real work.
+</p><p> And finally comes the essential setdata method:
+</p><div class="doccode"><pre>
+        df.setdata(src, f)
+</pre></div>
+
+<p>This establishes the connection between the screen and the
+src object we created earlier.  The contents of src are
+displayed in the dataform df, in accordance with the layout
+specified in the form f.  And we conclude with a few more
+details:
+</p><div class="doccode"><pre>
+        df.onchange = self.datachange
+        df.flags = 8   # DF_AUTOFOCUS
+        dlg.show()
+</pre></div>
+
+<p>The onchange method of a dataform is a method that gets
+executed when the data is changed.  So if you want something
+to happen whenever the data is changed, as in the texture
+positioning dialog or the `slider' dialog (mapslide), you
+organize this, for a dialog box, by providing a datachange
+method.  The flags determine aspects of the presentation
+of the dataform, the available ones are:
+</p><div class="doccode"><pre>
+# dataform flags
+DF_LOCAL        = 1    # prevents screen flashes if changes in this box don't affect anything else
+DF_AUTOFOCUS    = 8    # gets focus when mouse cursor enters
+</pre></div>
+
+<p>And finally, the last line makes it show up on the screen;
+in GUI programming, things are normally kept hidden until
+their finished being built, to make things look polished.
+</p><p>So here are the remaining methods:
+</p><div class="doccode"><pre>
+    def datachange(self, df):
+        pass   # abstract
+
+    def onclose(self, dlg):
+        dlg.info = None
+        dlg.onclose = None   # clear refs
+        if self.df is not None:
+            self.df.onchange = None
+            self.df = None
+        self.dlg = None
+        del self.buttons
+
+    def close(self, reserved=None):
+        self.dlg.close()
+</pre></div>
+
+<p>datachange is defined here in a content-free manner so that
+there's something to be assigned as the df's onchange method,
+regardless of whether it's really needed or not.  The
+onclose method sets lots of things to None, in order to
+prevent circular references from causing memory leaks (see
+the discussion in Quarkx.rtf).  You should have noticed
+the lines whereby these are passed as callbacks to the
+floating window and the dataform.  close() on the other
+hand, is not a callback, but calls the floating window's
+own close() method.
+</p><p>Once you understand how dialog boxes are built, you can
+meddle with them in various ways; so in quarkpy.dlgclasses.py
+there is defined placepersistent_dialogbox, which remembers
+where it was last opened (basically by fiddling with
+windowrect()).  And from that is defined LiveEditDlg,
+which is specialized for controlling things that move in
+the views as you change the data.
+</p><p>And dialog boxes are far from being the only kind of
+floating window, the face flags window that is obtained
+for Q2 engine games by RMB|Texture Flags|Flags ...
+is a substantially different one.  Its code is produced
+by the MapLayout.flagsclick method in quarkpy.mapgr.
+</p><p>I won't go over it in detail but just mention a few things.
+This window doesn't just appear for a while and vanish
+when you change the selection, but persists, and fills
+up with appropriate face flag data whenever you select
+something that has faces.
+</p><p>The setup code is bracketted by some bookkeeping that
+makes sure that there's only one face flags window
+open at any one time, and then it gets its form from
+the .qrk files, by code which has the effect that
+the last .qrk to load that defines a TextureFlag form
+is the one whose TextureFlag form gets used (so an
+addon for a game would overrule the basic data for the
+game).  Note that `flist[-1]' designates the last element
+of flist (think of flist as a circular list, first element
+being 0).
+</p><p>Things should look routine until:
+</p><div class="doccode"><pre>
+            df.actionchanging = 596
+</pre></div>
+
+<p>Part of the df magic is that if a dataform changes
+any QObject that comes from a file, this change is
+registered in the undo mechanism, and the actionchanging
+number is the index of the undo string, defined in
+quarkpy.qdictionnary.
+</p><p>So things burble along thru:
+</p><div class="doccode"><pre>
+        self.loadfaceflags(form)
+        ff.show()
+</pre></div>
+
+<p>ff.show()?  Well remember that ff is a floating window, not
+a dialog object, and windows are shown.  ff probably for
+`floating form', because of the window/form terminology
+confusion mentioned earlier.
+</p><p>And we should be able to guess that loadfaceflags is the
+function that's going to load the face data into ff's
+dataform, under the control of the TextureFlags form.
+And if you look at its definition, it's clear that it does
+this, except there's a bit of a surprise at the end:
+</p><div class="doccode"><pre>
+        df.setdata(self.loadtfflist(), form)
+</pre></div>
+
+<p>When you look at loadtfflist(), you find a rather
+complicated function!  Which, in brief, is doing this:
+The faces in the current selection are gathered into a list.
+Then the names of the textures in the list are made to be
+keys for a dictionary, whose values are the textures,
+and each member of the face list flist is replaced by
+a pair with the original member first and its texture
+second.  And that's what's returned to be the first argument
+of setdata.
+</p><p>Which is thereby revealed to be even more subtle than
+suggested so far: it can operate on many objects at once,
+and display in the form default information provided from
+a default object rather than the thing being edited itself.
+</p><p>Here's what it says in <a href="src.quarkx.html">'QuarkX'</a>:
+</p><div class="doccode"><pre>
+setdata(objs) setdata(objs, formobj):
+</pre></div>
+<ul>
+<li>Select the object(s) whose Specifics/Args are to be
+  displayed in the data form. objs can be either a single
+  &quot;&nbsp;objspec&nbsp;&quot; or a list of &quot;&nbsp;objspecs&nbsp;&quot;. An &quot;&nbsp;objspec&nbsp;&quot; i
+  either a single object or a tuple of two objects : the
+  actual object and another one with default values.
+  If a Specific is not found in the object, the data
+  form displays the one from its default value. The
+  optional argument formobj gives a :form Internal object
+  to use.
+</ul>
+
+<p>So for example for a face, if the face doesn't have
+some property but the face's texture specifies a default
+for that property, the default will be shown in the window.
+And, automagically, if you edit the specific, the change
+will be registered undoably in all of the (non-default)
+objects that have been presented to setdata.  Whew.
+</p><p>So, finally, how does the form load with data for a new
+face when the selection changes?  Via this method
+of MapLayout:
+</p><div class="doccode"><pre>
+    def selchange(self):
+        if self.faceflags is not None:
+            self.loadfaceflags()
+        self.mpp.resetpage()
+</pre></div>
+
+<p>To finish off, a bit more about panels.  Panels can contain
+more than one control, by being divided into sections.
+To see how it's done, study panels in Quarkx.rtf, and
+look at plugins/map3viewslayout.py, which is quite well
+commented.  The basic idea is to divide panels into sectons
+with statements like:
+</p><div class="doccode"><pre>
+        self.mainpanel.sections = ((), (0.4,))
+</pre></div>
+
+<p>Which says one column, two rows with the top taking up
+40% of the space, and:
+</p><div class="doccode"><pre>
+        self.ViewXY = self.mainpanel.newmapview()
+        self.ViewXY.section = (0,1)
+</pre></div>
+
+<p>Which creates a map view (another kind of control) in the
+main panel, and then puts it in the first column (there's
+only one) of the lower row.  Then the code goes on to put
+a panel in the upper row, and put two more map views into
+that.
+</p>
+  </td></tr></table>
+  <br>
+
+<br>
+
+<table width="100%" border=0 cellspacing=0>
+  <tr class="headline">
+    <td width="99%" align=center>
+      <p class="sm">
+        Copyright (c) 2009, GNU General Public License by The QuArK (Quake Army Knife) Community - <a target="_blank" href="http://quark.sourceforge.net/">http://quark.sourceforge.net/</a><br>
+      </p>
+    </td>
+    <td width="1%" align=right nowrap>
+      &nbsp;[&nbsp;<span class="navenable"><a href="adv.quarkpy.organization.html">Prev</a></span>&nbsp;-&nbsp;<a href="#__top__">Top</a>&nbsp;-&nbsp;<span class="navenable"><a href="adv.duplicators.html">Next</a></span>&nbsp;]&nbsp;
+    </td>
+  </tr>
+</table>
+</body>
+</html>

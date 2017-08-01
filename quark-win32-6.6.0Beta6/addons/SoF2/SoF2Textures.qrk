@@ -1,0 +1,33 @@
+QQRKSRC1
+// SoF2 textures file for Quark
+
+//$Header: /cvsroot/quark/runtime/addons/SoF2/SoF2Textures.qrk,v 1.2 2008/09/14 12:55:24 danielpharos Exp $
+// ----------- REVISION HISTORY ------------
+//$Log: SoF2Textures.qrk,v $
+//Revision 1.2  2008/09/14 12:55:24  danielpharos
+//Changes to Help system: All forms now have a customizable help-link. Also, added an fallback option to the online infobase docs.
+//
+//Revision 1.1  2008/03/28 19:12:44  cdunde
+//Cleaned up, fixed if needed and brought into sync with all QuArK addons.
+//
+//
+
+{
+  QuArKProtected = "1"
+  Description = "SoF2 Textures"
+
+  Textures.qtx =
+  {
+    Toolbox = "Texture Browser..."
+    Root = "SoF2 Textures.qtxfolder"
+    HTML = "intro.texturebrowser.html"
+
+    SoF2 Textures.qtxfolder =
+    {
+      Raven Textures and Shaders.osfolder =
+      {
+        path = "base"
+      }
+    }
+  }
+}

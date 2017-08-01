@@ -1,0 +1,133 @@
+// The Cistern by Tim Willits - maps/dm5.way
+// Ways by Gilgamesh
+saved1  -6.5; saved2 -371.6; saved3  62.0
+scratch1 3; scratch2 2; scratch3 0; scratch4 0
+saved4 1; wait
+saved1 136.8; saved2 -368.1
+scratch1 1; scratch2 33
+saved4 2; wait
+saved1 -92.3; saved2 -381.9
+scratch2 4
+saved4 2; wait
+saved1 -110.6; saved2 -754.7; saved3  62.0
+scratch1 3; scratch2 26; scratch3 33
+saved4 2; wait
+saved1 -95.7; saved2 315.1
+scratch1 29; scratch2 28; scratch3 6; scratch4 3
+saved4 2; wait
+saved1 -91.6; saved2 481.4
+scratch1 5; scratch2 7; scratch3 0; scratch4 0
+saved4 2; wait
+saved1  88.2; saved2 661.2; saved3 142.0
+scratch1 6; scratch2 8
+saved4 2; wait
+saved1 304.2; saved2 706.8
+scratch1 7; scratch2 11; scratch3 41; scratch4 10
+saved4 2; wait
+saved1 279.5; saved2 204.4
+scratch1 0; scratch2 41; scratch3 0; scratch4 0
+saved4 2; wait
+saved1 278.2; saved2 969.6
+scratch1 8; scratch2 0
+saved4 2; wait
+saved1 455.6; saved2 701.5
+scratch2 12
+saved4 2; wait
+saved1 656.9; saved2 505.3; saved3 238.0
+scratch1 11; scratch2 13; scratch3 14
+saved4 2; wait
+saved1 696.9; saved2 347.5
+scratch1 14; scratch2 39; scratch3 12
+saved4 2; wait
+saved1 841.5; saved2 371.5
+scratch1 13; scratch2 21
+saved4 10; wait
+saved1 -75.5; saved2 380.4
+scratch1 39; scratch2 16; scratch3 6
+saved4 2; wait
+saved1 -102.5; saved2 -200.0
+scratch1 15; scratch2 17; scratch3 38
+saved4 2; wait
+saved1 -101.3; saved2 -778.3
+scratch1 16; scratch2 18; scratch3 33
+saved4 2; wait
+saved1 343.9; saved2 -772.5
+scratch1 17; scratch2 19; scratch3 24; scratch4 25
+saved4 2; wait
+saved1 616.7; saved2 -765.8
+scratch1 0; scratch2 18; scratch3 20; scratch4 43
+saved4 2; wait
+saved1 871.2; saved2 -764.8
+scratch1 21; scratch2 0; scratch3 40; scratch4 0
+saved4 2; wait
+saved1 1081.4; saved2 -765.4
+scratch1 20; scratch2 14; scratch3 0
+saved4 10; wait
+saved1 909.1; saved2 -218.2
+scratch1 0; scratch2 37; scratch3 40
+saved4 2; wait
+saved1 653.6; saved2 -443.3; saved3 158.0
+scratch1 24; scratch2 25; scratch3 0; scratch4 43
+saved4 2; wait
+saved1 383.3; saved2 -447.8; saved3 158.0
+scratch1 26; scratch3 23; scratch4 0
+saved4 2; wait
+saved1 296.8; saved2 -349.4; saved3 150.0
+scratch1 24; scratch2 42; scratch3 26; scratch4 23
+saved4 2; wait
+saved1 315.2; saved2 -755.3; saved3 142.0
+scratch1 4; scratch2 24; scratch3 25; scratch4 0
+saved4 2; wait
+saved1 474.2; saved2 350.9; saved3  14.0
+scratch1 28; scratch2 29; scratch3 0
+saved4 2; wait
+saved1 307.3; saved2 536.4
+scratch1 5; scratch2 27; scratch3 29
+saved4 2; wait
+saved1 291.2; saved2 317.8; saved3 -26.0
+scratch1 27; scratch2 5; scratch3 28; scratch4 30
+saved4 2; wait
+saved1 285.9; saved2  99.7; saved3 -90.0
+scratch1 34; scratch2 29; scratch3 42; scratch4 0
+saved4 2; wait
+saved1 327.5; saved2 -593.8
+scratch1 32; scratch2 42; scratch3 34
+saved4 2; wait
+saved1  47.4; saved2 -588.6
+scratch1 31; scratch2 0; scratch3 0
+saved4 2; wait
+saved1  88.9; saved2 -587.6; saved3  23.9
+scratch1 32
+saved4 2; wait
+saved1 368.4; saved2 -156.1; saved3 -90.0
+scratch1 30; scratch2 42; scratch3 35
+saved4 2; wait
+saved1 576.0; saved2 -80.2; saved3   2.3
+scratch1 36; scratch2 34; scratch3 0
+saved4 2; wait
+saved1 695.8; saved2 -30.8; saved3  14.0
+scratch1 35; scratch2 0
+saved4 2; wait
+saved1 638.0; saved2 -206.0; saved3 238.0
+scratch1 38; scratch2 22; scratch3 23; scratch4 43
+saved4 2; wait
+saved1 282.9; saved2 -218.5
+scratch1 16; scratch2 37; scratch3 24; scratch4 25
+saved4 2; wait
+saved1 272.2; saved2 387.7
+scratch1 13; scratch2 15; scratch3 8; scratch4 9
+saved4 2; wait
+saved1 893.0; saved2 -468.7
+scratch1 20; scratch2 22; scratch3 23; scratch4 0
+saved4 2; wait
+saved1 284.1; saved2 371.4; saved3 142.0
+scratch1 9; scratch2 8; scratch3 5; scratch4 27
+saved4 2; wait
+saved1 306.1; saved2 -324.0; saved3 -78.2
+scratch1 31; scratch2 34; scratch3 30; scratch4 0
+saved4 2; wait
+saved1 628.4; saved2 -601.5; saved3 222.0
+scratch1 19; scratch2 23; scratch3 0
+saved4 2; wait
+saved4 3
+// end waypoint dump

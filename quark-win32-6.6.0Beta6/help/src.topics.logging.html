@@ -1,0 +1,83 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"  "http://www.w3.org/TR/html4/loose.dtd">
+<html lang="en">
+<head>
+  <title>Logging</title>
+  <meta name="Description" content="QuArK Information Database - Page: 4.4.8.&nbsp;Logging">
+  <meta name="Keywords" content="QuArK InfoBase Quake Army Knife QRK QKM Python PY Map Editor Hexen Heretic Half-Life Sin Kingpin Soldier-of-Fortune Star-Trek-Voyager Elite-Force">
+  <link rel=stylesheet href="standard.css" type="text/css">
+</head>
+
+<body>
+<a name="__top__"></a>
+<table width="100%" border=0 cellspacing=0>
+  <tr>
+    <td width=213>
+      <a target="_blank" href="http://quark.sourceforge.net/"><img src="quarkicon.png" width=213 height=90 border=0 alt="Go to QuArK Web Site"></a>
+    </td>
+    <td width="70%" align=center>
+      <div class="topheadline">Logging</div>
+      <div class="sm">Updated&nbsp;08 Oct 2008</div>
+    </td>
+    <td width="30%" valign=bottom nowrap>
+      Upper&nbsp;levels:<br>-&nbsp;<a href="index.html">QuArK&nbsp;Information&nbsp;Base</a><br>-&nbsp;<a href="src.html">4.&nbsp;The&nbsp;Source&nbsp;Code</a><br>-&nbsp;<a href="src.topics.html">4.4.&nbsp;Specific&nbsp;Topics</a><br>
+    </td>
+  </tr>
+</table>
+<table width="100%" border=0 cellspacing=0>
+  <tr class="headline">
+    <td width="99%">
+      <p class="headline">&nbsp;4.4.8.&nbsp;Logging</p>
+    </td>
+    <td width="1%" align=right nowrap>
+      &nbsp;[&nbsp;<span class="navenable"><a href="src.topics.pyversions.html">Prev</a></span>&nbsp;-&nbsp;<span class="navenable"><a href="src.topics.html">Up</a></span>&nbsp;-&nbsp;<span class="navenable"><a href="src.topics.sceneobjects.html">Next</a></span>&nbsp;]&nbsp;
+    </td>
+  </tr>
+</table>
+<table border=0 width="100%" cellspacing=10><tr><td><p><u>From the Delphi code</u>
+</p><p>To output information to the QUARK.LOG, use the Log-call defined in the
+Logging.pas file.  There are several ways it can be called. The first
+parameter is optional and indicates the part of the code trying to log
+an item.  It is of the TLogName type:
+</p><p>TLogName: LOG_DEFAULT, LOG_PASCAL, LOG_PYTHON, LOG_SYS, LOG_DEBUG.
+</p><p>The second, also optional parameter indicated the severity of the item
+to be logged.  All calls to Log with a level equal or lower to the level-
+setting will be logged, the rest will be ignored.  The default logging
+level is 20.  To set the log level, see the information about Environmental
+variables below.<br>
+The rest of the parameters is the information to be logged.  This can be
+either a single string, or a string with format information followed by all
+the variables to put in.  See information about the Format function in
+Delphi.
+</p><p>Internally, QuArK uses aLog to actually output the information to the log
+file.  This procedure should not be called directly.
+</p><p><u>Environmental variables for Logging</u>
+</p><p>QuArK reads several environmental variables to control logging.  These are
+not set via a configuration file, because a problem with the file could
+cause a failure to create a logfile.  Environmental variables can be set in
+the operating system.  The following variables are related to logging and
+can be set:
+</p><p>QUARK_LOG_FILENAME: The name of the file to log to.  This file will be
+cleared when QuArK starts up.<br>
+QUARK_LOG_PATCHNAME: The name of the log of a patcher.  Shouldn't be used
+anymore.<br>
+QUARK_LOG_LEVEL: The log level of QuArK. See above in the 'Delphi code'
+part for a description.
+</p><p>See <a href="src.pas.logging.html">'Logging.pas'</a> for more on logging.
+</p>
+</td></tr></table>
+<br>
+
+<table width="100%" border=0 cellspacing=0>
+  <tr class="headline">
+    <td width="99%" align=center>
+      <p class="sm">
+        Copyright (c) 2009, GNU General Public License by The QuArK (Quake Army Knife) Community - <a target="_blank" href="http://quark.sourceforge.net/">http://quark.sourceforge.net/</a><br>
+      </p>
+    </td>
+    <td width="1%" align=right nowrap>
+      &nbsp;[&nbsp;<span class="navenable"><a href="src.topics.pyversions.html">Prev</a></span>&nbsp;-&nbsp;<a href="#__top__">Top</a>&nbsp;-&nbsp;<span class="navenable"><a href="src.topics.sceneobjects.html">Next</a></span>&nbsp;]&nbsp;
+    </td>
+  </tr>
+</table>
+</body>
+</html>

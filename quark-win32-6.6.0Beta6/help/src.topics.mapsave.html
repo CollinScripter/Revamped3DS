@@ -1,0 +1,93 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"  "http://www.w3.org/TR/html4/loose.dtd">
+<html lang="en">
+<head>
+  <title>Map Saving</title>
+  <meta name="Description" content="QuArK Information Database - Page: 4.4.5.&nbsp;Map Saving">
+  <meta name="Keywords" content="QuArK InfoBase Quake Army Knife QRK QKM Python PY Map Editor Hexen Heretic Half-Life Sin Kingpin Soldier-of-Fortune Star-Trek-Voyager Elite-Force">
+  <link rel=stylesheet href="standard.css" type="text/css">
+</head>
+
+<body>
+<a name="__top__"></a>
+<table width="100%" border=0 cellspacing=0>
+  <tr>
+    <td width=213>
+      <a target="_blank" href="http://quark.sourceforge.net/"><img src="quarkicon.png" width=213 height=90 border=0 alt="Go to QuArK Web Site"></a>
+    </td>
+    <td width="70%" align=center>
+      <div class="topheadline">Map Saving</div>
+      <div class="sm">Updated&nbsp;10 May 2002</div>
+    </td>
+    <td width="30%" valign=bottom nowrap>
+      Upper&nbsp;levels:<br>-&nbsp;<a href="index.html">QuArK&nbsp;Information&nbsp;Base</a><br>-&nbsp;<a href="src.html">4.&nbsp;The&nbsp;Source&nbsp;Code</a><br>-&nbsp;<a href="src.topics.html">4.4.&nbsp;Specific&nbsp;Topics</a><br>
+    </td>
+  </tr>
+</table>
+<table width="100%" border=0 cellspacing=0>
+  <tr class="headline">
+    <td width="99%">
+      <p class="headline">&nbsp;4.4.5.&nbsp;Map Saving</p>
+    </td>
+    <td width="1%" align=right nowrap>
+      &nbsp;[&nbsp;<span class="navenable"><a href="src.topics.mapviewmouse.html">Prev</a></span>&nbsp;-&nbsp;<span class="navenable"><a href="src.topics.html">Up</a></span>&nbsp;-&nbsp;<span class="navenable"><a href="src.topics.mapread.html">Next</a></span>&nbsp;]&nbsp;
+    </td>
+  </tr>
+</table>
+<table border=0 width="100%" cellspacing=10><tr><td><p>Map saving is done by the calling TTMapBrush.SaveAsText
+in QkMapObjects.  This is triggered in slightly different
+ways by the regular build menu (qSaveFile), and the <span class="act">'File -&gt; SaveAs -&gt; *.map'</span>
+menu item/dialog (TQForm1.Save), both in QkMapObjects. there
+is duplication of the code involved in reading the map
+saving config options; the build menu code does it in
+Python (quarkpy.mapquakemenu.writemapfile), the file-menu
+code in delphi (QMap/QMapFile.SaveFile).
+</p>
+
+<p>The relevant object hierarchy is:
+</p><div class="doccode"><pre>
+TTreeMap
+  TTreeMapSpec (can have writeable specifics)
+     TTreeMapGroup (can have sub-polys/beziers)
+        TTreeMapBrush (brush entity)
+     TTreeMapEntity
+        TDuplicator (hmm, also can have sub-stuff)
+  TTexturedTreeMap
+     TFace
+     TBezier
+</pre></div>
+
+<p>TTreeMapBrush writes the worldspawn specifics, contained
+polys, and beziers, and then, at the end, invokes
+TTMapGroup.SaveAsText to write out the brush and point
+entities in the map structure (outside of the scope of the
+worldspawn entities).  To keep things confusing, several
+of the routines pass a Flags parameter, co-named with one
+of the fields of QObject, which keeps track of some
+parameters controlling map-writing.  Groups are for example
+perused for beziers to write only if soIgnoreToBuild is
+set in Flags, and vfIgnoreToBuild is set in ViewFlags,
+which is the TTreeMapGroup property encoding the view/build
+flags in groups in the tree-structure.
+</p><p>Originally, the beziers were collected with ListeEntites
+with the Cat set at [ecBezier], but this caused the
+ignoretobuild flags to be ignored, so currently a special
+ListeBeziers function is used.  Perhaps ListeEntites should
+be reinstated with a Flags argument.
+</p>
+</td></tr></table>
+<br>
+
+<table width="100%" border=0 cellspacing=0>
+  <tr class="headline">
+    <td width="99%" align=center>
+      <p class="sm">
+        Copyright (c) 2009, GNU General Public License by The QuArK (Quake Army Knife) Community - <a target="_blank" href="http://quark.sourceforge.net/">http://quark.sourceforge.net/</a><br>
+      </p>
+    </td>
+    <td width="1%" align=right nowrap>
+      &nbsp;[&nbsp;<span class="navenable"><a href="src.topics.mapviewmouse.html">Prev</a></span>&nbsp;-&nbsp;<a href="#__top__">Top</a>&nbsp;-&nbsp;<span class="navenable"><a href="src.topics.mapread.html">Next</a></span>&nbsp;]&nbsp;
+    </td>
+  </tr>
+</table>
+</body>
+</html>

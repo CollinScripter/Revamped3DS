@@ -1,0 +1,151 @@
+QQRKSRC1
+// This file has been written by QuArK QuArK 6.3snap080601
+// It's the text version of file: UserData Quake 1.qrk
+
+{
+  Description = "Custom configuration file for Genesis3d."
+  MapObjPanel.qrk =
+  {
+    cube: =
+    {
+      new cube:p =
+      {
+        east:f =
+        {
+          v = '64 0 0 64 128 0 64 0 128'
+          tex = "[auto]"
+        }
+        west:f =
+        {
+          v = '-64 0 0 -64 -128 0 -64 0 128'
+          tex = "[auto]"
+        }
+        north:f =
+        {
+          v = '0 64 0 -128 64 0 0 64 128'
+          tex = "[auto]"
+        }
+        south:f =
+        {
+          v = '0 -64 0 128 -64 0 0 -64 128'
+          tex = "[auto]"
+        }
+        up:f =
+        {
+          v = '0 0 64 128 0 64 0 128 64'
+          tex = "[auto]"
+        }
+        down:f =
+        {
+          v = '0 0 -64 128 0 -64 0 -128 -64'
+          tex = "[auto]"
+        }
+      }
+    }
+    light: =
+    {
+      light:e =
+      {
+        light = "300"
+        _color = "1 1 1"
+        angle = "360"
+        origin = "0 0 0"
+      }
+    }
+  }
+  Menu.qrk =
+  {
+    item: =
+    {
+      Txt = "&GO ! (textures+build+Quake)"
+      Shortcut = "Ctrl+R"
+      Textures = "1"
+      RunGame = "1"
+      ExportMapFile = "1"
+      BuildPgm1 = "1"
+      BuildPgm2 = "1"
+      BuildPgm3 = "1"
+    }
+    item: =
+    {
+      Txt = "Quic&kGO ! (no VIS, fast LIGHT)"
+      Shortcut = "Ctrl+K"
+      Textures = "1"
+      RunGame = "1"
+      ExportMapFile = "1"
+      BuildPgm1 = "1"
+      BuildPgm3 = "1"
+      BuildArgs3 = "-fast"
+    }
+    item: =
+    {
+      Txt = "QuickGO on &selection only"
+      Shortcut = "Ctrl+P"
+      SelOnly = "1"
+      Textures = "1"
+      RunGame = "1"
+      ExportMapFile = "1"
+      BuildPgm1 = "1"
+      BuildPgm3 = "1"
+    }
+    item: =
+    {
+      Txt = "-"
+    }
+    item: =
+    {
+      Txt = "&Prepare used textures"
+      Textures = "1"
+    }
+    item: =
+    {
+      Txt = "&Complete rebuild"
+      Pause = "1"
+      Textures = "1"
+      ExportMapFile = "1"
+      BuildPgm1 = "1"
+      BuildPgm2 = "1"
+      BuildPgm3 = "1"
+    }
+    item: =
+    {
+      Txt = "&Run Quake"
+      RunGame = "1"
+    }
+    item: =
+    {
+      Txt = "-"
+    }
+    item: =
+    {
+      Txt = "&QBSP (.bsp file creation)"
+      Pause = "1"
+      ExportMapFile = "1"
+      BuildPgm1 = "1"
+    }
+    item: =
+    {
+      Txt = "&VIS (visibility list)"
+      Pause = "1"
+      BuildPgm2 = "1"
+    }
+    item: =
+    {
+      Txt = "&LIGHT (light projection)"
+      Pause = "1"
+      BuildPgm3 = "1"
+    }
+    item: =
+    {
+      Txt = "-"
+    }
+    item: =
+    {
+      Txt = "QBSP - only &entities"
+      Pause = "1"
+      ExportMapFile = "1"
+      BuildPgm1 = "1"
+      BuildArgs1 = "-onlyents"
+    }
+  }
+}

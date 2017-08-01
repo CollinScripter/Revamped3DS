@@ -1,0 +1,240 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"  "http://www.w3.org/TR/html4/loose.dtd">
+<html lang="en">
+<head>
+  <title>Right Mouse Menus</title>
+  <meta name="Description" content="QuArK Information Database - Page: 3.6.1.6.&nbsp;Right Mouse Menus">
+  <meta name="Keywords" content="QuArK InfoBase Quake Army Knife QRK QKM Python PY Map Editor Hexen Heretic Half-Life Sin Kingpin Soldier-of-Fortune Star-Trek-Voyager Elite-Force">
+  <link rel=stylesheet href="standard.css" type="text/css">
+</head>
+
+<body>
+<a name="__top__"></a>
+<table width="100%" border=0 cellspacing=0>
+  <tr>
+    <td width=213>
+      <a target="_blank" href="http://quark.sourceforge.net/"><img src="quarkicon.png" width=213 height=90 border=0 alt="Go to QuArK Web Site"></a>
+    </td>
+    <td width="70%" align=center>
+      <div class="topheadline">Right Mouse Menus</div>
+      <div class="sm">Updated&nbsp;15 Feb 2001</div>
+    </td>
+    <td width="30%" valign=bottom nowrap>
+      Upper&nbsp;levels:<br>-&nbsp;<a href="index.html">QuArK&nbsp;Information&nbsp;Base</a><br>-&nbsp;<a href="adv.html">3.&nbsp;Advanced&nbsp;customization</a><br>-&nbsp;<a href="adv.plugins.html">3.6.&nbsp;Plug-Ins</a><br>-&nbsp;<a href="adv.plugins.tutorial.html">3.6.1.&nbsp;Plugin&nbsp;Tutorial</a><br>
+    </td>
+  </tr>
+</table>
+<table width="100%" border=0 cellspacing=0>
+  <tr class="headline">
+    <td width="99%">
+      <p class="headline">&nbsp;3.6.1.6.&nbsp;Right Mouse Menus</p>
+    </td>
+    <td width="1%" align=right nowrap>
+      &nbsp;[&nbsp;<span class="navenable"><a href="adv.plugins.tutorial.display.html">Prev</a></span>&nbsp;-&nbsp;<span class="navenable"><a href="adv.plugins.tutorial.html">Up</a></span>&nbsp;-&nbsp;<span class="navenable"><a href="adv.quarkpy.html">Next</a></span>&nbsp;]&nbsp;
+    </td>
+  </tr>
+</table>
+<table border=0 width="100%" cellspacing=10><tr><td><p>Our commands work, but the interface is clunky because we have to select
+our sides, and then cruise up to the command menu (or remember a
+hot key, which are in limited supply) to get the effect.
+A popular strategy to make things easier is to put commands on
+a `speed menu', or RMB menu, which is brought up by clicking
+the right mouse button when the cursor is over the object
+we want to act on.
+</p>
+</td></tr></table>
+<br>
+
+<table width="100%" border=0 cellspacing=0>
+  <tr class="headline">
+    <td width="100%">
+      <p class="subheadline">&nbsp;Index</p>
+    </td>
+  </tr>
+</table>
+<ul class="index">
+  <li>- <a href="#basic">Basics</a>&nbsp;<span class="added">(15 Feb 2001)</span>
+  <li>- <a href="#elaborate">Elaborations</a>&nbsp;<span class="added">(15 Feb 2001)</span>
+</ul>
+<br>
+
+
+<a name="basic"></a>
+  <table width="100%" border=0 cellspacing=0>
+    <tr class="headline">
+      <td>
+        <p class="item">&nbsp;Basics</p>
+      </td>
+      <td align=right>
+        <font size=-2>tiglari&nbsp;-&nbsp;15 Feb 2001</font>
+      </td>
+      <td width="1%" align=right nowrap>
+        &nbsp;&nbsp;[&nbsp;<a href="#__top__">Top</a>&nbsp;]&nbsp;
+      </td>
+    </tr>
+  </table>
+  <table border=0 width="100%" cellspacing=10><tr><td>
+<p>Once again we will be redefining a method (the one that produces
+the speed menus), but the technique is different again because
+of the way the relevant classes are set up.  Speed menus are
+handled by methods associated with various kinds of classes
+descended from EntityManager, defined in the quarkpy file
+mapentities.py.  These classes have no instances, which will
+lead to a bit of black magic later on.  The class for faces is
+FaceType
+</p><p>What we'll be doing is defining a new menu function for
+FaceType, which will add our new stuff onto the right mouse menu
+for faces.  What stuff? Well, always, a Tag Side command, but if
+a side is tagged, we will also want a Glue to Tagged command,
+and for a final flourish, let's say that if the face we're
+looking at is the original one, the only option we want is to
+Clear the tag.
+</p><p>Here is a basic format for adding things to the face menu:
+<div class="doccode"><pre>
+def tagmenu(o, editor, oldfacemenu = quarkpy.mapentities.FaceType.menu.im_func):
+    &quot;the new right-mouse for sides&quot;
+    menu = oldfacemenu(o, editor)
+    &lt;add stuff to menu&gt;
+    return menu
+</pre></div>
+<div class="doccode"><pre>
+quarkpy.mapentities.FaceType.menu = tagmenu
+</pre></div>
+The `im_func' and the end of the `def' line is the black magic;
+it is needed to refer to
+a method of a class with no instances.
+</p><p>Now to add stuff to the menu we could in fact just add the menu
+items we already have, getting something like this:
+<div class="doccode"><pre>
+def tagmenu(o, editor, oldfacemenu = quarkpy.mapentities.FaceType.menu.im_func):
+    &quot;the new right-mouse for sides&quot;
+    menu = oldfacemenu(o, editor)
+    menu = [mentagside, menglueside, menclearside]+menu
+    return menu
+</pre></div>
+These menu-building functions take two arguments, the
+object they're called by RMB-ing on, and the editor.  And
+we pass the older form of the menu function, which this one
+replaces, as a default parameter.
+</p>
+  </td></tr></table>
+  <br>
+
+<a name="elaborate"></a>
+  <table width="100%" border=0 cellspacing=0>
+    <tr class="headline">
+      <td>
+        <p class="item">&nbsp;Elaborations</p>
+      </td>
+      <td align=right>
+        <font size=-2>tiglari&nbsp;-&nbsp;15 Feb 2001</font>
+      </td>
+      <td width="1%" align=right nowrap>
+        &nbsp;&nbsp;[&nbsp;<a href="#__top__">Top</a>&nbsp;]&nbsp;
+      </td>
+    </tr>
+  </table>
+  <table border=0 width="100%" cellspacing=10><tr><td>
+<p>The above works, except that we've lost the disablers.  We could
+arrange things so that the RMB items used the same disablers
+as the command items, but the actual conditions are a bit
+different.  For example on the RMB, the selected item is
+guaranteed to be a single face, since we're putting these
+items on the face menu.  So we can use much simpler disablers
+and revise our menu function to, say, this:
+<div class="doccode"><pre>
+def tagmenu(o, editor, oldfacemenu = quarkpy.mapentities.FaceType.menu.im_func):
+    &quot;the new right-mouse for sides&quot;
+    menu = oldfacemenu(o, editor)
+    menglueside.state = mentagside.state = mencleartag.state = qmenu.normal
+    tagged = gettagged(editor)
+    if tagged is None:
+        menglueside.state = mencleartag.state = qmenu.disabled
+    elif tagged==o:
+        mentagside.state = menglueside.state = qmenu.disabled
+    menu = [mentagside, menglueside, mencleartag]+menu
+    return menu
+</pre></div>
+&nbsp;<tt>maptagside4.py</tt>&nbsp; contains the final version of this
+stuff so far.
+</p><p>Here we're using menu items and click functions defined outside
+menu functions, but there is another approach that's possible
+if you don't want to also use the menu item on the main menu
+or a toolbar.  If we define the click function inside the
+menu function, we can use the default argument mechanism
+to pass the editor and the face operated on, so that for
+example the menu function might start out like this:
+<div class="doccode"><pre>
+def tagmenu(o, editor, oldfacemenu = quarkpy.mapentities.FaceType.menu.im_func):
+    &quot;the new right-mouse for sides&quot;
+    menu = oldfacemenu(o, editor)
+</pre></div>
+<div class="doccode"><pre>
+    def tagSideClick(m, face=o, editor=editor):
+        editor.tagging = Tagging()
+        editor.tagging.tagged = face
+        editor.invalidateviews()
+</pre></div>
+This technique is used in `curvemenu' in plugins\mb2curves.py,
+and elsewhere.
+</p><p>A final point is that the disabler calculations are sometimes
+quite complex, and produce results that are useful for the
+actual operation.  This happens for example with the
+texture-wrapping commands in the real maptagside.py.  These
+results can be passed thru to the click function either
+with the default argument mechanism:
+<div class="doccode"><pre>
+    usefulInfo = complicatedFunction(o, editor)
+</pre></div>
+<div class="doccode"><pre>
+    def complexClick(m,o=o, editor=editor,usefulInfo=usefulInfo)
+        ...
+</pre></div>
+<div class="doccode"><pre>
+    menuItem = qmenu.item('Complicated Function',complexClick)
+    if usefulInfo is None:
+        menuItem.state=qmenu.disabled
+</pre></div>
+or else by attaching thing them directly to the menu item:
+<div class="doccode"><pre>
+    ...
+    menuItem = qmenu.item('Complicated Function',complexClick)
+    menuItem.usefulInfo = complicatedFunction(o, editor)
+    if isefulInfo is None:
+        menuItem.state=qmenu.disabled
+    else:
+        menuitem.usefulInfo=usefulInfo
+</pre></div>
+If the latter technique is used, the click function can be
+defined outside of the menu function definition:
+<div class="doccode"><pre>
+def compexClick(m):
+    editor=madeditor()
+    if editor is None: return
+    usefulInfo = m.usefulInfo
+    ...
+</pre></div>
+Even tho the click function only gets one (non-default)
+argument, the menu item that was clicked on to launch
+it, this imposes no practical limitation on the amount
+of information that can be passed thru it, since there's
+no limit on what can be attached to that argument
+</p>
+  </td></tr></table>
+  <br>
+
+<br>
+
+<table width="100%" border=0 cellspacing=0>
+  <tr class="headline">
+    <td width="99%" align=center>
+      <p class="sm">
+        Copyright (c) 2009, GNU General Public License by The QuArK (Quake Army Knife) Community - <a target="_blank" href="http://quark.sourceforge.net/">http://quark.sourceforge.net/</a><br>
+      </p>
+    </td>
+    <td width="1%" align=right nowrap>
+      &nbsp;[&nbsp;<span class="navenable"><a href="adv.plugins.tutorial.display.html">Prev</a></span>&nbsp;-&nbsp;<a href="#__top__">Top</a>&nbsp;-&nbsp;<span class="navenable"><a href="adv.quarkpy.html">Next</a></span>&nbsp;]&nbsp;
+    </td>
+  </tr>
+</table>
+</body>
+</html>

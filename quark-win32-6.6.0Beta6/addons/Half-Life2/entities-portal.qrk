@@ -1,0 +1,1119 @@
+QQRKSRC1
+// This file has been written by QuArK QuArK 6.6 Beta
+// It's the text version of file: entities-portal.qrk
+
+// Portal Entities 2008/09/20 Who Gives A Dam
+
+{
+  Description = "Portal Entities"
+  Toolbox Folders.qtx =
+  {
+    Toolbox = "New map items..."
+    Root = "Portal Entities.qtxfolder"
+    Portal Entities.qtxfolder =
+    {
+      ;desc = "Created from portal.fgd"
+      env_* entities.qtxfolder =
+      {
+        env_lightrail_endpoint:e =
+        {
+          origin = "0 0 0"
+          ;desc = "Special effects for the endpoints of the lightrail."
+          small_fx_scale = "1"
+          large_fx_scale = "1"
+        }
+        env_portal_credits:e =
+        {
+          origin = "0 0 0"
+          ;desc = "An entity to control the rolling credits for portal."
+        }
+        env_portal_path_track:e =
+        {
+          origin = "0 0 0"
+          ;desc = "An entity used to build paths for other entities to follow."
+           " Each path_track is a node on the path, each holding the name of t"
+           "he next path_track in the path."
+          Track_beam_scale = "0"
+          End_point_scale = "0"
+          End_point_fadeout = "0"
+          End_point_fadein = "0"
+          speed = "0"
+          radius = "0"
+          orientationtype = "1"
+        }
+      }
+      func_* entities.qtxfolder =
+      {
+        func_liquidportal:b =
+        {
+          ;incl = "defpoly"
+          ;desc = "A space that fills with portal liquid and teleports entitie"
+           "s when done filling"
+          FillTime = "10"
+        }
+        func_noportal_volume:b =
+        {
+          ;incl = "defpoly"
+          ;desc = "A region in which no portal can be placed"
+        }
+        func_portal_bumper:b =
+        {
+          ;incl = "defpoly"
+          ;desc = "A region that portals trace to fit outside of but can be pl"
+           "ace on"
+        }
+        func_portal_detector:b =
+        {
+          ;incl = "defpoly"
+          ;desc = "A region that fires an output if a portal is placed in it"
+          LinkageGroupID = "0"
+        }
+        func_portal_orientation:b =
+        {
+          ;incl = "defpoly"
+          ;desc = "Adjusts a portal's rotation to match a specified angle. The"
+           " 'Bottom' of the portal points in the specified diretion."
+          AnglesToFace = "0 0 0"
+          MatchLinkedAngles = "0"
+        }
+        func_weight_button:b =
+        {
+          ;incl = "defpoly"
+          ;desc = "A button which activates after a specified amount of weight"
+           " is applied"
+        }
+      }
+      info_* entities.qtxfolder =
+      {
+        info_lighting_relative:e =
+        {
+          origin = "0 0 0"
+        }
+      }
+      npc_* entities.qtxfolder =
+      {
+        npc_portal_turret_floor:e =
+        {
+          origin = "0 0 0"
+          ;desc = "Combine (Portal) Floor Turret"
+          DamageForce = "1"
+        }
+        npc_portal_turret_ground:e =
+        {
+          origin = "0 0 0"
+          ;desc = "Combine (Portal) ground turret"
+          ConeOfFire = "60"
+        }
+        npc_rocket_turret:e =
+        {
+          origin = "0 0 0"
+          ;desc = "Aims a rocket at a target."
+        }
+        npc_security_camera:e =
+        {
+          origin = "0 0 0"
+          ;desc = "Security Camera"
+          spawnflags = "32"
+        }
+      }
+      point_* entities.qtxfolder =
+      {
+        point_energy_ball_launcher:e =
+        {
+          origin = "0 0 0"
+          ;desc = "Launches energy balls."
+          BallLifetime = "12"
+          MinLifeAfterPortal = "6"
+        }
+      }
+      prop_* entities.qtxfolder =
+      {
+        prop_glados_core:e =
+        {
+          origin = "0 0 0"
+          ;desc = "Core of GlaDOS computer."
+          CoreType = "1"
+          DelayBetweenLines = "0.4"
+        }
+        prop_portal:e =
+        {
+          origin = "0 0 0"
+          ;desc = "A portal"
+          Activated = "1"
+          PortalTwo = "0"
+          LinkageGroupID = "0"
+        }
+        prop_portal_stats_display:e =
+        {
+          origin = "0 0 0"
+          ;desc = "Portal Stats Display"
+        }
+        prop_telescopic_arm:e =
+        {
+          origin = "0 0 0"
+          ;desc = "Telescopic Arm"
+        }
+      }
+      trigger_* entities.qtxfolder =
+      {
+        trigger_portal_cleanser:b =
+        {
+          ;incl = "defpoly"
+          ;desc = "A trigger volume that disolves any entities that touch it a"
+           "nd fizzles active portals when the player touches it."
+        }
+      }
+      vgui_* entities.qtxfolder =
+      {
+        vgui_neurotoxin_countdown:e =
+        {
+          origin = "0 0 0"
+          ;desc = "Neurotoxin Countdown"
+          width = "256"
+          height = "128"
+        }
+      }
+      weapon_* entities.qtxfolder =
+      {
+        weapon_portalgun:e =
+        {
+          origin = "0 0 0"
+          ;desc = "Portalgun"
+          CanFirePortal1 = "1"
+          CanFirePortal2 = "1"
+        }
+      }
+    }
+  }
+  Entity Forms.fctx =
+  {
+    t_point_energy_ball_launcher:incl =
+    {
+      t_CombineBallSpawners = "!"
+      t_Parentname = "!"
+      t_Targetname = "!"
+      BallLifetime: =
+      {
+        txt = "&"
+        hint = "Ball Lifetime"
+      }
+      MinLifeAfterPortal: =
+      {
+        txt = "&"
+        hint = "Min life after portal transition"
+      }
+      input#LaunchBall: =
+      {
+        txt = "&"
+        hint = "Launch a ball from the spawner."
+      }
+      output#OnPostSpawnBall: =
+      {
+        txt = "&"
+        hint = "Fired after the ball has spawned."
+      }
+    }
+    point_energy_ball_launcher:form =
+    {
+      t_point_energy_ball_launcher = "!"
+    }
+    t_npc_rocket_turret:incl =
+    {
+      t_Parentname = "!"
+      t_Targetname = "!"
+      t_Angles = "!"
+      spawnflags: =
+      {
+        txt = "&"
+        typ = "X1"
+        cap = "Disabled"
+      }
+      input#Toggle: =
+      {
+        txt = "&"
+        hint = "Toggles activity."
+      }
+      input#Enable: =
+      {
+        txt = "&"
+        hint = "Enables activity."
+      }
+      input#Disable: =
+      {
+        txt = "&"
+        hint = "Disables activity."
+      }
+      input#SetTarget: =
+      {
+        txt = "&"
+        hint = "Sets the target for this turret to attack."
+      }
+      input#Destroy: =
+      {
+        txt = "&"
+        hint = "Sets this turret to it's destroyed state."
+      }
+      output#OnFoundTarget: =
+      {
+        txt = "&"
+        hint = "Fired when the rocket turret finds an unobstructed target."
+      }
+      output#OnLostTarget: =
+      {
+        txt = "&"
+        hint = "Fired when turret's target is blocked."
+      }
+      output#OnDeath: =
+      {
+        txt = "&"
+        hint = "Fired after this turret finishes it's destroy think and begins"
+         " it's death think."
+      }
+    }
+    npc_rocket_turret:form =
+    {
+      t_npc_rocket_turret = "!"
+    }
+    t_env_portal_path_track:incl =
+    {
+      t_Targetname = "!"
+      t_Parentname = "!"
+      t_Angles = "!"
+      spawnflags: =
+      {
+        txt = "&"
+        typ = "X1"
+        cap = "Disabled"
+      }
+      spawnflags: =
+      {
+        txt = "&"
+        typ = "X2"
+        cap = "Fire once"
+      }
+      spawnflags: =
+      {
+        txt = "&"
+        typ = "X4"
+        cap = "Branch Reverse"
+      }
+      spawnflags: =
+      {
+        txt = "&"
+        typ = "X8"
+        cap = "Disable train"
+      }
+      spawnflags: =
+      {
+        txt = "&"
+        typ = "X16"
+        cap = "Teleport to THIS path track"
+      }
+      Track_beam_scale: =
+      {
+        txt = "&"
+        hint = "Scale Track FX"
+      }
+      End_point_scale: =
+      {
+        txt = "&"
+        hint = "Scale Endpoint FX"
+      }
+      End_point_fadeout: =
+      {
+        txt = "&"
+        hint = "Fade Out Endpoint"
+      }
+      End_point_fadein: =
+      {
+        txt = "&"
+        hint = "Fade In Endpoint"
+      }
+      target: =
+      {
+        txt = "&"
+        hint = "Next Stop Target"
+      }
+      altpath: =
+      {
+        txt = "&"
+        hint = "Branch Path"
+      }
+      speed: =
+      {
+        txt = "&"
+        hint = "New Train Speed"
+      }
+      radius: =
+      {
+        txt = "&"
+        hint = "Path radius"
+      }
+      orientationtype: =
+      {
+        txt = "&"
+        hint = "Orientation Type"
+        typ = "C"
+        items = "No change"$0D"Face direction of motion"$0D"Face this path_tra"
+         "ck's angles"
+        values = "0"$0D"1"$0D"2"
+      }
+      input#ToggleAlternatePath: =
+      {
+        txt = "&"
+        hint = "Cause the track to toggle to/from its alternate path."
+      }
+      input#EnableAlternatePath: =
+      {
+        txt = "&"
+        hint = "Enable the alternate path of the track."
+      }
+      input#DisableAlternatePath: =
+      {
+        txt = "&"
+        hint = "Disable the alternate path of the track."
+      }
+      input#TogglePath: =
+      {
+        txt = "&"
+        hint = "Cause the track to toggle on/off/"
+      }
+      input#EnablePath: =
+      {
+        txt = "&"
+        hint = "Enable the track."
+      }
+      input#DisablePath: =
+      {
+        txt = "&"
+        hint = "Disable the track."
+      }
+      input#ActivateTrackFX: =
+      {
+        txt = "&"
+        hint = "Turn on the track's fx beam"
+      }
+      input#ActivateEndPointFX: =
+      {
+        txt = "&"
+        hint = "Turn on the endpoint's fx"
+      }
+      input#DeactivateTrackFX: =
+      {
+        txt = "&"
+        hint = "Turn off the track's fx beam"
+      }
+      input#DeactivateEndPointFX: =
+      {
+        txt = "&"
+        hint = "Turn off the endpoint's fx"
+      }
+      output#OnPass: =
+      {
+        txt = "&"
+        hint = "Fired when any entity following this path passes this path_tra"
+         "ck node."
+      }
+    }
+    env_portal_path_track:form =
+    {
+      t_env_portal_path_track = "!"
+    }
+    t_trigger_portal_cleanser:incl =
+    {
+      t_Trigger = "!"
+      t_Targetname = "!"
+      output#OnDissolve: =
+      {
+        txt = "&"
+        hint = "Fired whenever an entity is dissolved."
+      }
+      output#OnFizzle: =
+      {
+        txt = "&"
+        hint = "Fired whenever an portals are fizzled."
+      }
+      output#OnDissolveBox: =
+      {
+        txt = "&"
+        hint = "This cleanser disolved an entity with targetname=Box."
+      }
+    }
+    trigger_portal_cleanser:form =
+    {
+      t_trigger_portal_cleanser = "!"
+    }
+    t_func_portal_orientation:incl =
+    {
+      t_Targetname = "!"
+      t_Parentname = "!"
+      t_EnableDisable = "!"
+      AnglesToFace: =
+      {
+        txt = "&"
+        hint = "Angles to face"
+      }
+      MatchLinkedAngles: =
+      {
+        txt = "&"
+        hint = "Match linked angles."
+        typ = "C"
+        items = "False"$0D"True"
+        values = "0"$0D"1"
+      }
+    }
+    func_portal_orientation:form =
+    {
+      t_func_portal_orientation = "!"
+    }
+    t_func_weight_button:incl =
+    {
+      t_Targetname = "!"
+      WeightToActivate: =
+      {
+        txt = "&"
+        hint = "Amount of weight required before this button activates."
+      }
+      output#OnPressed: =
+      {
+        txt = "&"
+        hint = "Fired when the button is touching enough weight."
+      }
+      output#OnReleased: =
+      {
+        txt = "&"
+        hint = "Fired when the button was pressed, but weight was removed."
+      }
+    }
+    func_weight_button:form =
+    {
+      t_func_weight_button = "!"
+    }
+    t_func_noportal_volume:incl =
+    {
+      t_Targetname = "!"
+      t_Parentname = "!"
+      input#Deactivate: =
+      {
+        txt = "&"
+        hint = "Turn off blocking functionality"
+      }
+      input#Activate: =
+      {
+        txt = "&"
+        hint = "Turn on blocking functionality"
+      }
+      input#Toggle: =
+      {
+        txt = "&"
+        hint = "Toggle blocking functionality"
+      }
+      spawnflags: =
+      {
+        txt = "&"
+        typ = "X1"
+        cap = "Start inactive"
+      }
+    }
+    func_noportal_volume:form =
+    {
+      t_func_noportal_volume = "!"
+    }
+    t_func_portal_bumper:incl =
+    {
+      t_Targetname = "!"
+      t_Parentname = "!"
+      input#Deactivate: =
+      {
+        txt = "&"
+        hint = "Turn off bumping functionality"
+      }
+      input#Activate: =
+      {
+        txt = "&"
+        hint = "Turn on bumping functionality"
+      }
+      input#Toggle: =
+      {
+        txt = "&"
+        hint = "Toggle bumping functionality"
+      }
+      spawnflags: =
+      {
+        txt = "&"
+        typ = "X1"
+        cap = "Start inactive"
+      }
+    }
+    func_portal_bumper:form =
+    {
+      t_func_portal_bumper = "!"
+    }
+    t_func_portal_detector:incl =
+    {
+      t_Targetname = "!"
+      t_Parentname = "!"
+      input#Disable: =
+      {
+        txt = "&"
+        hint = "Turn off detecting functionality"
+      }
+      input#Enable: =
+      {
+        txt = "&"
+        hint = "Turn on detecting functionality"
+      }
+      input#Toggle: =
+      {
+        txt = "&"
+        hint = "Toggle detecting functionality"
+      }
+      output#OnStartTouchPortal1: =
+      {
+        txt = "&"
+        hint = "Fired when portal 1 is placed intersecting the portal detector"
+         "."
+      }
+      output#OnStartTouchPortal2: =
+      {
+        txt = "&"
+        hint = "Fired when portal 2 is placed intersecting the portal detector"
+         "."
+      }
+      output#OnStartTouchLinkedPortal: =
+      {
+        txt = "&"
+        hint = "Fired when linked portal is placed intersecting the portal det"
+         "ector."
+      }
+      output#OnStartTouchBothLinkedPortals: =
+      {
+        txt = "&"
+        hint = "Fired when both of a pair of portals is placed intersecting th"
+         "e portal detector."
+      }
+      spawnflags: =
+      {
+        txt = "&"
+        typ = "X1"
+        cap = "Start inactive"
+      }
+      LinkageGroupID: =
+      {
+        txt = "&"
+        hint = "Portal pair ID that it detects"
+      }
+    }
+    func_portal_detector:form =
+    {
+      t_func_portal_detector = "!"
+    }
+    t_func_liquidportal:incl =
+    {
+      t_Origin = "!"
+      t_Angles = "!"
+      InitialLinkedPortal: =
+      {
+        txt = "&"
+        hint = "Linked liquid portal."
+      }
+      FillTime: =
+      {
+        txt = "&"
+        hint = "Fill Time (sec)"
+      }
+      input#SetLinkedLiquidPortal: =
+      {
+        txt = "&"
+        hint = "The liquid portal this should link to. Will update linked port"
+         "al to point back."
+      }
+      input#SetFillTime: =
+      {
+        txt = "&"
+        hint = "How long the area takes to fill."
+      }
+      input#StartFilling: =
+      {
+        txt = "&"
+        hint = "Start filling NOW. Entities teleport when finished."
+      }
+      input#AddActivatorToTeleportList: =
+      {
+        txt = "&"
+        hint = "Add the activator entity to the list of entities to teleport w"
+         "hen filling is finished."
+      }
+      input#RemoveActivatorFromTeleportList: =
+      {
+        txt = "&"
+        hint = "Remove the activator entity from the list of entities to telep"
+         "ort when filling is finished."
+      }
+    }
+    func_liquidportal:form =
+    {
+      t_func_liquidportal = "!"
+    }
+    t_prop_portal:incl =
+    {
+      t_Targetname = "!"
+      t_Angles = "!"
+      Activated: =
+      {
+        txt = "&"
+        hint = "Start Activated"
+        typ = "C"
+        items = "Inactive"$0D"Active"
+        values = "0"$0D"1"
+      }
+      PortalTwo: =
+      {
+        txt = "&"
+        hint = "Portal Number"
+        typ = "C"
+        items = "Portal 1"$0D"Portal 2"
+        values = "0"$0D"1"
+      }
+      LinkageGroupID: =
+      {
+        txt = "&"
+        hint = "Portal pair ID that it belongs to"
+      }
+      input#SetName: =
+      {
+        txt = "&"
+        hint = "Naming your portals is fun"
+      }
+      input#SetActivatedState: =
+      {
+        txt = "&"
+        hint = "An inactive portal will not be drawn and will not teleport ent"
+         "ites"
+      }
+      input#Fizzle: =
+      {
+        txt = "&"
+        hint = "Makes a cool visual fizzle and properly shuts down the portal"
+      }
+      input#NewLocation: =
+      {
+        txt = "&"
+        hint = "Sets this portals location and angles. This expects 6 floats w"
+         "ith space delimiters, the format is 'x y z pitch yaw roll'"
+      }
+      output#OnPlacedSuccessfully: =
+      {
+        txt = "&"
+        hint = "When a portal is placed without failure, this output is fired."
+      }
+    }
+    prop_portal:form =
+    {
+      t_prop_portal = "!"
+    }
+    t_weapon_portalgun:incl =
+    {
+      t_Weapon = "!"
+      t_Targetname = "!"
+      t_Parentname = "!"
+      CanFirePortal1: =
+      {
+        txt = "&"
+        hint = "Can Fire Portal 1"
+        typ = "C"
+        items = "No"$0D"Yes"
+        values = "0"$0D"1"
+      }
+      CanFirePortal2: =
+      {
+        txt = "&"
+        hint = "Can Fire Portal 2"
+        typ = "C"
+        items = "No"$0D"Yes"
+        values = "0"$0D"1"
+      }
+      input#ChargePortal1: =
+      {
+        txt = "&"
+        hint = "Does charge up effect for mounted portalgun."
+      }
+      input#ChargePortal2: =
+      {
+        txt = "&"
+        hint = "Does charge up effect for mounted portalgun."
+      }
+      input#FirePortal1: =
+      {
+        txt = "&"
+        hint = "Projects portal 1 onto a wall in the facing direction of the g"
+         "un."
+      }
+      input#FirePortal2: =
+      {
+        txt = "&"
+        hint = "Projects portal 2 onto a wall in the facing direction of the g"
+         "un."
+      }
+      input#FirePortalDirection1: =
+      {
+        txt = "&"
+        hint = "Fires portal 1 in the specified direction."
+      }
+      input#FirePortalDirection2: =
+      {
+        txt = "&"
+        hint = "Fires portal 1 in the specified direction."
+      }
+      output#OnFiredPortal1: =
+      {
+        txt = "&"
+        hint = "Fires when the first (blue) portal is fired."
+      }
+      output#OnFiredPortal2: =
+      {
+        txt = "&"
+        hint = "Fires when the second (red) portal is fired."
+      }
+    }
+    weapon_portalgun:form =
+    {
+      t_weapon_portalgun = "!"
+    }
+    t_npc_portal_turret_ground:incl =
+    {
+      t_npc_turret_ground = "!"
+      ConeOfFire: =
+      {
+        txt = "&"
+        hint = "Cone of Fire"
+      }
+    }
+    npc_portal_turret_ground:form =
+    {
+      t_npc_portal_turret_ground = "!"
+    }
+    t_prop_glados_core:incl =
+    {
+      t_BasePropPhysics = "!"
+      CoreType: =
+      {
+        txt = "&"
+        hint = "Core Personality"
+        typ = "C"
+        items = "Curious"$0D"Aggressive"$0D"Crazy"$0D"None"
+        values = "0"$0D"1"$0D"2"$0D"3"
+      }
+      DelayBetweenLines: =
+      {
+        txt = "&"
+        hint = "Pause (in secs) between VO Lines."
+      }
+      input#Panic: =
+      {
+        txt = "&"
+        hint = "Core is near death, panic."
+      }
+      input#StartTalking: =
+      {
+        txt = "&"
+        hint = "Start playing lines, play looking animations."
+      }
+      output#OnPlayerPickup: =
+      {
+        txt = "&"
+        hint = "Player picked up core."
+      }
+    }
+    prop_glados_core:form =
+    {
+      t_prop_glados_core = "!"
+    }
+    t_npc_portal_turret_floor:incl =
+    {
+      t_npc_turret_floor = "!"
+      DamageForce: =
+      {
+        txt = "&"
+        hint = "Damage pushes player"
+        typ = "C"
+        items = "No"$0D"Yes"
+        values = "0"$0D"1"
+      }
+      input#FireBullet: =
+      {
+        txt = "&"
+        hint = "Causes the turret to instantly fire at the specified entity."
+      }
+    }
+    npc_portal_turret_floor:form =
+    {
+      t_npc_portal_turret_floor = "!"
+    }
+    t_npc_security_camera:incl =
+    {
+      t_Targetname = "!"
+      t_Angles = "!"
+      t_Studiomodel = "!"
+      spawnflags: =
+      {
+        txt = "&"
+        typ = "X32"
+        cap = "Autostart"
+      }
+      input#Enable: =
+      {
+        txt = "&"
+        hint = "If closed, open."
+      }
+      input#Disable: =
+      {
+        txt = "&"
+        hint = "If open, close."
+      }
+      input#Toggle: =
+      {
+        txt = "&"
+        hint = "Toggle - If open, close. If closed, open."
+      }
+      input#Ragdoll: =
+      {
+        txt = "&"
+        hint = "Disable and fall off the wall."
+      }
+      output#OnDeploy: =
+      {
+        txt = "&"
+        hint = "Camera is becoming active and dangerous."
+      }
+      output#OnRetire: =
+      {
+        txt = "&"
+        hint = "Camera is becoming inactive and harmless."
+      }
+    }
+    npc_security_camera:form =
+    {
+      t_npc_security_camera = "!"
+    }
+    t_prop_telescopic_arm:incl =
+    {
+      t_Targetname = "!"
+      t_Angles = "!"
+      t_Studiomodel = "!"
+      input#Enable: =
+      {
+        txt = "&"
+        hint = "Enable Thumper"
+      }
+      input#Disable: =
+      {
+        txt = "&"
+        hint = "Disable Thumper"
+      }
+      input#SetTarget: =
+      {
+        txt = "&"
+        hint = "Set the entity to target."
+      }
+      input#TargetPlayer: =
+      {
+        txt = "&"
+        hint = "Set the player as the entity to target."
+      }
+      output#OnFoundTarget: =
+      {
+        txt = "&"
+        hint = "Arm has direct LOS to target entity."
+      }
+      output#OnLostTarget: =
+      {
+        txt = "&"
+        hint = "Arm has lost direct LOS to target entity."
+      }
+    }
+    prop_telescopic_arm:form =
+    {
+      t_prop_telescopic_arm = "!"
+    }
+    t_prop_portal_stats_display:incl =
+    {
+      t_Targetname = "!"
+      t_Angles = "!"
+      t_Parentname = "!"
+      t_Global = "!"
+      input#Enable: =
+      {
+        txt = "&"
+        hint = "Turn on and display the current stats"
+      }
+      input#Disable: =
+      {
+        txt = "&"
+        hint = "Turn off stats display"
+      }
+      input#UpdateStats: =
+      {
+        txt = "&"
+        hint = "Updates the stats to the player's current level stats"
+      }
+      input#ResetPlayerStats: =
+      {
+        txt = "&"
+        hint = "Resets the curret level stats of the player"
+      }
+      output#OnMetPortalObjective: =
+      {
+        txt = "&"
+        hint = "Fired when enabled and player met the number of portal placeme"
+         "nts."
+      }
+      output#OnMetStepsObjective: =
+      {
+        txt = "&"
+        hint = "Fired when enabled and player met the number of foot steps."
+      }
+      output#OnMetSecondsObjective: =
+      {
+        txt = "&"
+        hint = "Fired when enabled and player met the number of seconds."
+      }
+      output#OnFailedAllObjectives: =
+      {
+        txt = "&"
+        hint = "Fired when enabled and player met no objectives."
+      }
+    }
+    prop_portal_stats_display:form =
+    {
+      t_prop_portal_stats_display = "!"
+    }
+    t_vgui_neurotoxin_countdown:incl =
+    {
+      t_Targetname = "!"
+      t_Angles = "!"
+      t_Parentname = "!"
+      width: =
+      {
+        txt = "&"
+        hint = "Panel width"
+      }
+      height: =
+      {
+        txt = "&"
+        hint = "Panel height"
+      }
+      input#Enable: =
+      {
+        txt = "&"
+        hint = "Make slideshow visible."
+      }
+      input#Disable: =
+      {
+        txt = "&"
+        hint = "Make slideshow invisible."
+      }
+    }
+    vgui_neurotoxin_countdown:form =
+    {
+      t_vgui_neurotoxin_countdown = "!"
+    }
+    t_env_lightrail_endpoint:incl =
+    {
+      t_Angles = "!"
+      t_Targetname = "!"
+      t_Parentname = "!"
+      spawnflags: =
+      {
+        txt = "&"
+        typ = "X1"
+        cap = "Start On (w/ Small FX)"
+      }
+      small_fx_scale: =
+      {
+        txt = "&"
+        hint = "Scale Small FX"
+      }
+      large_fx_scale: =
+      {
+        txt = "&"
+        hint = "Scale Large FX"
+      }
+      input#StartCharge: =
+      {
+        txt = "&"
+        hint = "Start charging the endpoint from the small to large state over"
+         " a specified amount of seconds."
+      }
+      input#StartSmallFX: =
+      {
+        txt = "&"
+        hint = "Start discharging particles at the small effects state over sp"
+         "ecified number of seconds."
+      }
+      input#StartLargeFX: =
+      {
+        txt = "&"
+        hint = "Start discharging particles at the large effects state over sp"
+         "ecified number of seconds."
+      }
+      input#Stop: =
+      {
+        txt = "&"
+        hint = "Stops the effect at any point."
+      }
+    }
+    env_lightrail_endpoint:form =
+    {
+      t_env_lightrail_endpoint = "!"
+    }
+    t_env_portal_credits:incl =
+    {
+      bbox = '-8 -8 -8 8 8 8'
+      t_Targetname = "!"
+      input#RollCredits: =
+      {
+        txt = "&"
+        hint = "Start the intro credits rolling."
+      }
+      input#RollOutroCredits: =
+      {
+        txt = "&"
+        hint = "Start the outro credits rolling."
+      }
+      input#ShowLogo: =
+      {
+        txt = "&"
+        hint = "Show the HL2 logo."
+      }
+      input#RollPortalOutroCredits: =
+      {
+        txt = "&"
+        hint = "Start the Portal greenscreen outro credits."
+      }
+      output#OnCreditsDone: =
+      {
+        txt = "&"
+        hint = "Fired when the credits having finished rolling."
+      }
+    }
+    env_portal_credits:form =
+    {
+      t_env_portal_credits = "!"
+    }
+    t_info_lighting_relative:incl =
+    {
+      t_Targetname = "!"
+      t_Parentname = "!"
+      LightingLandmark: =
+      {
+        txt = "&"
+        hint = "Lighting Landmark"
+      }
+    }
+    info_lighting_relative:form =
+    {
+      t_info_lighting_relative = "!"
+    }
+  }
+}

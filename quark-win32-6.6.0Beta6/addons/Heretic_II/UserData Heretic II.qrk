@@ -1,0 +1,188 @@
+QQRKSRC1
+// This file has been written by QuArK Version 5.2
+// It's the text version of file: UserData Heretic II.qrk
+
+//$Header: /cvsroot/quark/runtime/addons/Heretic_II/UserData\040Heretic\040II.qrk,v 1.8 2008/05/21 18:15:01 cdunde Exp $
+// ----------- REVISION HISTORY ------------
+//$Log: UserData\040Heretic\040II.qrk,v $
+//Revision 1.8  2008/05/21 18:15:01  cdunde
+//To add and\or activate Half-Life 2 functions: (all original code by Alexander)
+//1) to create extra Specifics setting handles for func_useableladder function (point0 & point1)
+//      func_breakable_glass and func_breakable_surf functions
+//      (lowerleft, upperleft, lowerright and upperright)
+//2) to draw special light entity lines for functions like light_spot that have the Specifics
+//      (angles, _cone, spotlightwidth and\or _inner_cone)
+//3) face displacement. Commented out at this time. believe bezier type code should be used instead.
+//
+//Revision 1.7  2008/05/14 20:37:43  cdunde
+//Fixed basic lighting in all games and a few other small typo errors.
+//
+//Revision 1.6  2008/03/25 06:43:12  cdunde
+//To standardize UserData files as much as possible based on their game engine type.
+//Moved entities out of them which were duplicated in their game Data files, should NEVER be allowed!
+//Changed all hard coded texturing to either auto or includes, also should NEVER be allowed.
+//
+//Revision 1.5  2005/10/15 01:00:29  cdunde
+//To reinstate headers and history
+//
+//Revision 1.2  2001/03/20 21:57:59  decker_dk
+//Added log-header / misc.
+//
+
+{
+  Description = "Custom configuration file for Heretic II."
+  MapObjPanel.qrk =
+  {
+    cube: =
+    {
+      new cube:p =
+      {
+        east:f =
+        {
+          v = '64 0 0 64 128 0 64 0 128'
+          tex = "[auto]"
+        }
+        west:f =
+        {
+          v = '-64 0 0 -64 -128 0 -64 0 128'
+          tex = "[auto]"
+        }
+        north:f =
+        {
+          v = '0 64 0 -128 64 0 0 64 128'
+          tex = "[auto]"
+        }
+        south:f =
+        {
+          v = '0 -64 0 128 -64 0 0 -64 128'
+          tex = "[auto]"
+        }
+        up:f =
+        {
+          v = '0 0 64 128 0 64 0 128 64'
+          tex = "[auto]"
+        }
+        down:f =
+        {
+          v = '0 0 -64 128 0 -64 0 -128 -64'
+          tex = "[auto]"
+        }
+      }
+    }
+    light: =
+    {
+      light:e =
+      {
+        light = "300"
+        _color = "1 1 1"
+        angles = "0 0 0"
+        origin = "0 0 0"
+      }
+    }
+  }
+  Menu.qrk =
+  {
+    item: =
+    {
+      Txt = "&GO ! (textures+build+Heretic II)"
+      Shortcut = "Ctrl+R"
+      Textures = "1"
+      RunGame = "1"
+      ExportMapFile = "1"
+      BuildPgm1 = "1"
+      BuildPgm2 = "1"
+      BuildPgm3 = "1"
+    }
+    item: =
+    {
+      Txt = "Quic&kGO ! (fast QVIS and QRAD)"
+      Shortcut = "Ctrl+K"
+      Textures = "1"
+      RunGame = "1"
+      ExportMapFile = "1"
+      BuildPgm1 = "1"
+      BuildPgm2 = "1"
+      BuildArgs2 = "-fast"
+      BuildPgm3 = "1"
+      BuildArgs3 = "-fast"
+    }
+    item: =
+    {
+      Txt = "&Fastest (full bright)"
+      Shortcut = "Ctrl+F"
+      Textures = "1"
+      RunGame = "1"
+      ExportMapFile = "1"
+      BuildPgm1 = "1"
+    }
+    item: =
+    {
+      Txt = "Fastest on &selection only"
+      Shortcut = "Ctrl+P"
+      SelOnly = "1"
+      Textures = "1"
+      RunGame = "1"
+      ExportMapFile = "1"
+      BuildPgm1 = "1"
+    }
+    item: =
+    {
+      Txt = "-"
+    }
+    item: =
+    {
+      Txt = "&Prepare used textures"
+      Textures = "1"
+    }
+    item: =
+    {
+      Txt = "&Complete rebuild"
+      Pause = "1"
+      Textures = "1"
+      ExportMapFile = "1"
+      BuildPgm1 = "1"
+      BuildPgm2 = "1"
+      BuildPgm3 = "1"
+    }
+    item: =
+    {
+      Txt = "&Run Heretic II"
+      RunGame = "1"
+    }
+    item: =
+    {
+      Txt = "-"
+    }
+    item: =
+    {
+      Txt = "&QBSP3 (.bsp file creation)"
+      Pause = "1"
+      ExportMapFile = "1"
+      BuildPgm1 = "1"
+    }
+    item: =
+    {
+      Txt = "&QVIS3 (visibility list)"
+      Pause = "1"
+      BuildPgm2 = "1"
+    }
+    item: =
+    {
+      Txt = "&QRAD3 (light projection)"
+      Pause = "1"
+      BuildPgm3 = "1"
+    }
+    item: =
+    {
+      Txt = "-"
+    }
+    item: =
+    {
+      Txt = "QBSP - only &entities"
+      Pause = "1"
+      ExportMapFile = "1"
+      BuildPgm1 = "1"
+      BuildArgs1 = "-onlyents"
+    }
+  }
+}

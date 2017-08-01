@@ -1,0 +1,333 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"  "http://www.w3.org/TR/html4/loose.dtd">
+<html lang="en">
+<head>
+  <title>Quake-2</title>
+  <meta name="Description" content="QuArK Information Database - Page: 2.6.4.&nbsp;Quake-2">
+  <meta name="Keywords" content="QuArK InfoBase Quake Army Knife QRK QKM Python PY Map Editor Hexen Heretic Half-Life Sin Kingpin Soldier-of-Fortune Star-Trek-Voyager Elite-Force">
+  <link rel=stylesheet href="standard.css" type="text/css">
+</head>
+
+<body>
+<a name="__top__"></a>
+<table width="100%" border=0 cellspacing=0>
+  <tr>
+    <td width=213>
+      <a target="_blank" href="http://quark.sourceforge.net/"><img src="quarkicon.png" width=213 height=90 border=0 alt="Go to QuArK Web Site"></a>
+    </td>
+    <td width="70%" align=center>
+      <div class="topheadline">Quake-2</div>
+      <div class="sm">Updated&nbsp;26 Jan 2009</div>
+    </td>
+    <td width="30%" valign=bottom nowrap>
+      Upper&nbsp;levels:<br>-&nbsp;<a href="index.html">QuArK&nbsp;Information&nbsp;Base</a><br>-&nbsp;<a href="maped.html">2.&nbsp;Map&nbsp;editing</a><br>-&nbsp;<a href="maped.games.html">2.6.&nbsp;FAQs&nbsp;for&nbsp;each&nbsp;supported&nbsp;g...</a><br>
+    </td>
+  </tr>
+</table>
+<table width="100%" border=0 cellspacing=0>
+  <tr class="headline">
+    <td width="99%">
+      <p class="headline">&nbsp;2.6.4.&nbsp;Quake-2</p>
+    </td>
+    <td width="1%" align=right nowrap>
+      &nbsp;[&nbsp;<span class="navenable"><a href="maped.games.hexen2.html">Prev</a></span>&nbsp;-&nbsp;<span class="navenable"><a href="maped.games.html">Up</a></span>&nbsp;-&nbsp;<span class="navenable"><a href="maped.games.heretic2.html">Next</a></span>&nbsp;]&nbsp;
+    </td>
+  </tr>
+</table>
+<table border=0 width="100%" cellspacing=10><tr><td><p>If you have any questions, problems or find solutions regarding this topic, please post them in the
+<a href="http://quark.planetquake.gamespy.com/forums/">QuArK forum/mailing-list</a>.
+</p>
+</td></tr></table>
+<br>
+
+<table width="100%" border=0 cellspacing=0>
+  <tr class="headline">
+    <td width="100%">
+      <p class="subheadline">&nbsp;Index</p>
+    </td>
+  </tr>
+</table>
+<ul class="index">
+  <li>- <a href="#adding_custom_models">Adding custom models</a>&nbsp;<span class="added">(26 Jan 2009)</span>
+  <li>- <a href="#func_areaportal">Func_areaportal entities</a>&nbsp;<span class="added">(15 Feb 2001)</span>
+  <li>- <a href="#turret_breach">Turret entities</a>&nbsp;<span class="added">(15 Feb 2001)</span>
+  <li>- <a href="#turret_breach_2">Turret combined with other entities</a>&nbsp;<span class="added">(15 Feb 2001)</span>
+  <li>- <a href="#spotlights">Spotlights</a>&nbsp;<span class="added">(15 Feb 2001)</span>
+  <li>- <a href="#doors_with_keys">Security-/locked doors with keys</a>&nbsp;<span class="added">(15 Feb 2001)</span>
+  <li>- <a href="#framerates">Framerates</a>&nbsp;<span class="added">(15 Feb 2001)</span>
+</ul>
+<br>
+
+
+<a name="adding_custom_models"></a>
+  <table width="100%" border=0 cellspacing=0>
+    <tr class="headline">
+      <td>
+        <p class="item">&nbsp;Adding custom models</p>
+      </td>
+      <td align=right>
+        <font size=-2>cdunde&nbsp;-&nbsp;26 Jan 2009</font>
+      </td>
+      <td width="1%" align=right nowrap>
+        &nbsp;&nbsp;[&nbsp;<a href="#__top__">Top</a>&nbsp;]&nbsp;
+      </td>
+    </tr>
+  </table>
+  <table border=0 width="100%" cellspacing=10><tr><td>
+<p><b>Question:</b><br>
+I have my own custom md2 models I would like to add and use in QuArK and Quake 2. How would I do that?
+</p><p><b>Answer:</b><br>
+I do nothing but map for Q2, the original version was fairly limited compared to what has been made available with Lazarus for added entity features.
+</p><p>Not to long ago I did some updating to it to work better with QuArK. If you have a recent version of QuArK 6.4alpha you may already have it in the addons\Quake_2 folder (it should be dated about 5-9-03).
+If so, you just need to register it in QuArK.
+</p><p>To do that start QuArK and click on Options -&gt; Configuration -&gt; Quake2 -&gt; Installed Add-ons. This will show all the addons available.
+</p><p>Click on Q2_Lazarus.qrk, click OK then close all the window popups.
+</p><p>Then in QuArK's main menu, click on Toolboxes -&gt; New map items, there you will see listings for Quake2 Entities and Entities for QuArK_Lazarus. You can use either one as Lazarus updates the original as well. Look under model_*entities (in the Lazarus listing) for what you need. I believe I put in some flyover help tags as well.
+</p><p>1)   With Lazarus you can use md2 models that you export out of MilkShape, That's your first step.
+</p><p>2)   Next, go to <a href="http://groups.yahoo.com/group/quark/files/ENTITY%20ADDONS/">this link</a> on this site to download the QuArK Lazarus v3 zip file and extract it to your QuArK folder. General instructions on how to set your models up come with it.
+</p><p>3)   Now go to the <a href="http://planetquake.com/lazarus/">Lazarus site on planetquake</a> and download it from there. This is a very good page to download for off line viewing as it gives detailed descriptions of Quake2 features, entities and how to use them. I believe instruction on how to install Lazarus for Q2 comes with it. The real difference is its gamex86.dll file that has all the added features built into it. Quake2 comes with it's own gamex86.dll file for the original features of the game, so you might want to rename it (like ORGgamex86.dll) if you want to save it.
+</p><p>Basically, once you have done these 3 steps, you're pretty well set to go. Just play with the misc_actor and model_spawn entities that you use to insert your custom models with and get a feel on how they work.
+</p>
+  </td></tr></table>
+  <br>
+
+<a name="func_areaportal"></a>
+  <table width="100%" border=0 cellspacing=0>
+    <tr class="headline">
+      <td>
+        <p class="item">&nbsp;Func_areaportal entities</p>
+      </td>
+      <td align=right>
+        <font size=-2>Robert van der Schoot&nbsp;-&nbsp;15 Feb 2001</font>
+      </td>
+      <td width="1%" align=right nowrap>
+        &nbsp;&nbsp;[&nbsp;<a href="#__top__">Top</a>&nbsp;]&nbsp;
+      </td>
+    </tr>
+  </table>
+  <table border=0 width="100%" cellspacing=10><tr><td>
+<p><b>Question:</b><br>
+I know that that is some kind of a barrier for Quake-2 used by the map-designer (me) to tell
+Quake-2 to ignore anything that is behind it, so that the framerate will not suffer from parts of the map that are not
+essential yet, but will be taken into account (and therefore use precious processing power) by Quake-2 if this func_areaportal
+is not used. But how do i place it?
+</p><p><b>Answer:</b><br>
+Quake-2 tends to (re)draw the whole map during gameplay all the time, even the (numerous) parts
+of it that are not visible to the player (yet). This of course puts a lot of &quot;stress&quot; on your system (pc), resulting in a
+slower gameplay, more than necessary.
+</p><p>The func_areaportal entity tells Quake-2 to ignore anything that's behind the brush belonging to the func_areaportal.
+</p><p>This brush can be resized just like all the others and should be placed in a way that it covers the passage that you want to
+&quot;close off&quot; completely. Putting the brush of the func_areaportal in the same place as the brush of, for example, the func_door
+that you use to close off the corridor visibly (from the player's point of view) is the only wise choice of positioning.
+</p><p>Take care not to make it visible for the player; making it a little &quot;thinner&quot; than the door-brush prevents that. Making it
+wider and/or higher than the door-brush is not bad (most of the times).
+</p><p>You can use the func_areaportal in conjunction with any &quot;passage-covering-entity&quot; like; func_train, func_plat,
+func_explosive, etc.
+</p><p>Make sure that the TARGET specific of the entity you chose as a &quot;passage-blocker&quot; is pointing to the TARGETNAME specific of
+the func_areaportal. This will make the brush of the func_areaportal dissapear when the entity (func_door for instance) gets
+triggered (and reappear if the door slams shut again. Nifty).
+</p><p>Don't just give the passage-blocking-entity and the func_areaportal the same TARGETNAME. It will result in a func_areaportal
+that DOES dissapear when you trigger (for example) the button that opens the door, but that DOES NOT reappear automatically
+when the door slams shut again. Even worse, it will reappear when you open the door once again, showing its ugly black looks to
+the confused player.
+</p><p>You can of course check the &quot;relationship&quot; between the trigger-entity, the passage-blocking-entity and the func_areaportal
+by selecting one of them in QuArK.
+</p>
+  </td></tr></table>
+  <br>
+
+<a name="turret_breach"></a>
+  <table width="100%" border=0 cellspacing=0>
+    <tr class="headline">
+      <td>
+        <p class="item">&nbsp;Turret entities</p>
+      </td>
+      <td align=right>
+        <font size=-2>Armin Rigo&nbsp;-&nbsp;15 Feb 2001</font>
+      </td>
+      <td width="1%" align=right nowrap>
+        &nbsp;&nbsp;[&nbsp;<a href="#__top__">Top</a>&nbsp;]&nbsp;
+      </td>
+    </tr>
+  </table>
+  <table border=0 width="100%" cellspacing=10><tr><td>
+<p><b>Question:</b><br>
+I am working on a huge turret.
+</p><p><b>Answer:</b><br>
+Turrets are a bit hard to design.
+</p><p>The turret_base and turret_breach must have the same &quot;team&quot; specific.
+<br>
+The turret_driver's &quot;target&quot; must match the turret_breach's &quot;targetname&quot;.
+<br>
+The turret_breach's &quot;target&quot; must match the &quot;target&quot; of yet another entity, &quot;info_notnull&quot;.
+</p><p>You must design and place all three turret_xxx entities as if the turret where looking to the direction 0 (east). If you want
+the turret to begin facing another direction, you must set it in the &quot;angle&quot;
+specific of both turret_breach and turret_base (not in turret_driver).
+</p><p>Finally, place the &quot;info_notnull&quot; entity at the point from which rockets are
+to be thrown. Unlike the other entities, it seems that you must place this one
+at the correct position for the turret's starting angle, not for the angle 0.
+I mean, you must place it at the place where it WOULD BE if the turret already
+rotated to its starting angle.
+</p>
+  </td></tr></table>
+  <br>
+
+<a name="turret_breach_2"></a>
+  <table width="100%" border=0 cellspacing=0>
+    <tr class="headline">
+      <td>
+        <p class="item">&nbsp;Turret combined with other entities</p>
+      </td>
+      <td align=right>
+        <font size=-2>Armin Rigo&nbsp;-&nbsp;15 Feb 2001</font>
+      </td>
+      <td width="1%" align=right nowrap>
+        &nbsp;&nbsp;[&nbsp;<a href="#__top__">Top</a>&nbsp;]&nbsp;
+      </td>
+    </tr>
+  </table>
+  <table border=0 width="100%" cellspacing=10><tr><td>
+<p><b>Question:</b><br>
+Can I use other entities in conjunction with this turret?
+</p><p><b>Answer:</b><br>
+I don't think so. Maybe you can try putting other monsters over the
+rotating objects; but they would still behave as normal monsters. I think
+the turret_driver cannot be changed into something else. I don't think
+you can have other func_xxx objects work together with the turret at all.
+</p>
+  </td></tr></table>
+  <br>
+
+<a name="spotlights"></a>
+  <table width="100%" border=0 cellspacing=0>
+    <tr class="headline">
+      <td>
+        <p class="item">&nbsp;Spotlights</p>
+      </td>
+      <td align=right>
+        <font size=-2>&nbsp;-&nbsp;15 Feb 2001</font>
+      </td>
+      <td width="1%" align=right nowrap>
+        &nbsp;&nbsp;[&nbsp;<a href="#__top__">Top</a>&nbsp;]&nbsp;
+      </td>
+    </tr>
+  </table>
+  <table border=0 width="100%" cellspacing=10><tr><td>
+<p><b>Question:</b><br>
+When creating a spotlight, using the &quot;info_null&quot; entity,
+it is possible to set a &quot;cone&quot;-value in the specifics of the light_entity
+as well as in the specifics of the info_null-entity?
+</p><p><b>Answer:</b><br>
+It seems that only the light's &quot;_cone&quot; works. It must be a mistake to
+have a &quot;_cone&quot; field in the info_null.
+</p><p>For your question; yes, this is the size of the cone of light that is emitted when the light's
+&quot;target&quot; points to an &quot;info_null&quot; entity. The light is emitted in the direction
+of the &quot;info_null&quot; entity. The &quot;_cone&quot; field is the angle, in degrees.
+</p>
+  </td></tr></table>
+  <br>
+
+<a name="doors_with_keys"></a>
+  <table width="100%" border=0 cellspacing=0>
+    <tr class="headline">
+      <td>
+        <p class="item">&nbsp;Security-/locked doors with keys</p>
+      </td>
+      <td align=right>
+        <font size=-2>&nbsp;-&nbsp;15 Feb 2001</font>
+      </td>
+      <td width="1%" align=right nowrap>
+        &nbsp;&nbsp;[&nbsp;<a href="#__top__">Top</a>&nbsp;]&nbsp;
+      </td>
+    </tr>
+  </table>
+  <table border=0 width="100%" cellspacing=10><tr><td>
+<p><b>Question:</b><br>
+How do I use keys and doors in Quake-2?
+</p><p><b>Answer:</b><br>
+The keys are the &quot;key_<i>xxx</i>&nbsp;&quot; entities.
+Countrary to the good old Quake-1,
+you cannot simply tell a door it must not open unless the player carries
+some key.
+</p><p>The entity that knows whether the player carries a key or not
+is &quot;trigger_key&quot;. This entity is a 'relay trigger', which means that it
+must be fired by something else, and it will then fire its own targets
+if the triggering player carries the correct key.
+</p><p>You can use it between a button and a door, for example. When the button is pressed, it doesn't
+directly fire the door, but the trigger_key, which in turn fires the door
+if the player has the correct key.
+</p><p>If you don't want a button, you can
+replace it with a trigger_multiple just in front of the door, so that the
+door opens when the player approaches.
+</p>
+  </td></tr></table>
+  <br>
+
+<a name="framerates"></a>
+  <table width="100%" border=0 cellspacing=0>
+    <tr class="headline">
+      <td>
+        <p class="item">&nbsp;Framerates</p>
+      </td>
+      <td align=right>
+        <font size=-2>&nbsp;-&nbsp;15 Feb 2001</font>
+      </td>
+      <td width="1%" align=right nowrap>
+        &nbsp;&nbsp;[&nbsp;<a href="#__top__">Top</a>&nbsp;]&nbsp;
+      </td>
+    </tr>
+  </table>
+  <table border=0 width="100%" cellspacing=10><tr><td>
+<p><b>Question:</b><br>
+How do I measure the &quot;framerate&quot;,
+i.e. how fast my maps are displayed by Quake-2?
+</p><p><b>Answer:</b><br>
+[explanation from Robert]<br>
+... use the following Quake-2 console-command, or you might find yourself
+spending loads of time making a visually stunning map, only to find out
+that it cannot be played for another 5 years until Intel and their competitors
+invent a processor that can speed this level up to a playable framerate.
+</p><p>While playing your map in Quake-2, go and stand in the spot that you would like
+to &quot;check&quot; and pull down the console with the tilde (~) key. Then type
+&nbsp;<tt>timerefresh</tt>&nbsp;
+ and hit the enter-key.
+</p><p>The computer will now draw 180 frames
+while making a 360 degree pirouette with the &quot;camera&quot; and will measure
+the time which it needs to do that in seconds. Dividing 180 through the
+number of seconds of course leads to the desired value. The &quot;Frames Per
+Second&quot; or shortly &quot;fps&quot;. This value should preferably NOT be lower as
+24 to 30 (which is considered to be the number of frames that the human
+eye can &quot;read&quot; in a second)
+<br> ...
+</p><p>[explanation from Decker]<br>
+... however the
+&nbsp;<tt>timerefresh</tt>&nbsp;
+ command, isn't the best way to determine
+framerates, since that only gives a value on the spot where its executed.
+</p><p>To get a
+more precise fps-value, you must record a demo, running around everywhere in
+your level, and then playback the demo with
+&nbsp;<tt>timedemo 1</tt>&nbsp;
+ enabled.
+</p><p>This will give an
+overall fps-value of your entire level, and not just in one spot
+<br> ...
+</p>
+  </td></tr></table>
+  <br>
+
+<br>
+
+<table width="100%" border=0 cellspacing=0>
+  <tr class="headline">
+    <td width="99%" align=center>
+      <p class="sm">
+        Copyright (c) 2009, GNU General Public License by The QuArK (Quake Army Knife) Community - <a target="_blank" href="http://quark.sourceforge.net/">http://quark.sourceforge.net/</a><br>
+      </p>
+    </td>
+    <td width="1%" align=right nowrap>
+      &nbsp;[&nbsp;<span class="navenable"><a href="maped.games.hexen2.html">Prev</a></span>&nbsp;-&nbsp;<a href="#__top__">Top</a>&nbsp;-&nbsp;<span class="navenable"><a href="maped.games.heretic2.html">Next</a></span>&nbsp;]&nbsp;
+    </td>
+  </tr>
+</table>
+</body>
+</html>

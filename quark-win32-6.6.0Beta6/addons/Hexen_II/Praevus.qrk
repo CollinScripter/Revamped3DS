@@ -1,0 +1,6132 @@
+QQRKSRC1
+// This file has been written by QuArK Version 5.0.b5
+// It's the text version of file: Praevus.qrk
+// Portal of Praevus add-on by tiglari@hexenworld.com
+//   to be added on to datah2.qrk (data file for Hexen II)
+//
+// The Textures need to be further subsorted into wall, floor/ceiling,
+//  button, etc; if you want to do this please do, it's not rocket
+//  science!
+
+{
+  QuArKProtected = "1"
+  Description = "Portal of Praevus Data"
+
+  praevus directory infos.qctx =
+  {
+    Game = "Hexen II"
+    SourceDir = "PORTALS"
+    //GameDir = "fortress"
+  }
+
+  Textures.qtx =
+  {
+    ToolBox = "Texture Browser..."
+    Root = "Praevus.qtxfolder"
+    HTML = "intro.texturebrowser.html"
+
+    Praevus.qtxfolder =
+    {
+      Medieval2.wad =
+      {
+        *lava000.wl =
+        {
+          s = "PORTALS"
+          b = "monsters"
+        }
+        *lowlight.wl =
+        {
+          s = "PORTALS"
+          b = "keep1"
+        }
+        *rtex078.wl =
+        {
+          s = "PORTALS"
+          b = "keep5"
+        }
+        *skulls.wl =
+        {
+          s = "PORTALS"
+          b = "keep1"
+        }
+        +0cros0.wl =
+        {
+          s = "PORTALS"
+          b = "keep2"
+        }
+        +0oil03.wl =
+        {
+          s = "PORTALS"
+          b = "keep1"
+        }
+        +0rtex6.wl =
+        {
+          s = "PORTALS"
+          b = "keep1"
+        }
+        +0rune1.wl =
+        {
+          s = "PORTALS"
+          b = "keep1"
+        }
+        +0skbt0.wl =
+        {
+          s = "PORTALS"
+          b = "keep1"
+        }
+        +1oil03.wl =
+        {
+          s = "PORTALS"
+          b = "keep1"
+        }
+        +1rtex6.wl =
+        {
+          s = "PORTALS"
+          b = "keep1"
+        }
+        +1rune1.wl =
+        {
+          s = "PORTALS"
+          b = "keep1"
+        }
+        +2oil03.wl =
+        {
+          s = "PORTALS"
+          b = "keep1"
+        }
+        +2rtex6.wl =
+        {
+          s = "PORTALS"
+          b = "keep1"
+        }
+        +2rune1.wl =
+        {
+          s = "PORTALS"
+          b = "keep1"
+        }
+        +3oil03.wl =
+        {
+          s = "PORTALS"
+          b = "keep1"
+        }
+        +3rtex6.wl =
+        {
+          s = "PORTALS"
+          b = "keep1"
+        }
+        +3rune1.wl =
+        {
+          s = "PORTALS"
+          b = "keep1"
+        }
+        +4rtex6.wl =
+        {
+          s = "PORTALS"
+          b = "keep1"
+        }
+        +4rune1.wl =
+        {
+          s = "PORTALS"
+          b = "keep1"
+        }
+        +5rtex6.wl =
+        {
+          s = "PORTALS"
+          b = "keep1"
+        }
+        +acros0.wl =
+        {
+          s = "PORTALS"
+          b = "keep2"
+        }
+        +askbt0.wl =
+        {
+          s = "PORTALS"
+          b = "keep1"
+        }
+        celt1.wl =
+        {
+          s = "PORTALS"
+          b = "keep5"
+        }
+        celt2.wl =
+        {
+          s = "PORTALS"
+          b = "keep1"
+        }
+        celtbrown.wl =
+        {
+          s = "PORTALS"
+          b = "keep1"
+        }
+        clip.wl =
+        {
+          s = "PORTALS"
+          b = "keep1"
+        }
+        eviltex.wl =
+        {
+          s = "PORTALS"
+          b = "thomas"
+        }
+        marble.wl =
+        {
+          s = "PORTALS"
+          b = "keep5"
+        }
+        origin.wl =
+        {
+          s = "PORTALS"
+          b = "keep1"
+        }
+        rosearch.wl =
+        {
+          s = "PORTALS"
+          b = "keep2"
+        }
+        rtex001.wl =
+        {
+          s = "PORTALS"
+          b = "keep2"
+        }
+        rtex003.wl =
+        {
+          s = "PORTALS"
+          b = "keep2"
+        }
+        rtex004.wl =
+        {
+          s = "PORTALS"
+          b = "keep1"
+        }
+        rtex005.wl =
+        {
+          s = "PORTALS"
+          b = "keep2"
+        }
+        rtex006.wl =
+        {
+          s = "PORTALS"
+          b = "keep1"
+        }
+        rtex008.wl =
+        {
+          s = "PORTALS"
+          b = "keep1"
+        }
+        rtex009.wl =
+        {
+          s = "PORTALS"
+          b = "keep1"
+        }
+        rtex010.wl =
+        {
+          s = "PORTALS"
+          b = "keep4"
+        }
+        rtex011.wl =
+        {
+          s = "PORTALS"
+          b = "keep2"
+        }
+        rtex012.wl =
+        {
+          s = "PORTALS"
+          b = "keep5"
+        }
+        rtex014.wl =
+        {
+          s = "PORTALS"
+          b = "keep1"
+        }
+        rtex018.wl =
+        {
+          s = "PORTALS"
+          b = "keep1"
+        }
+        rtex019.wl =
+        {
+          s = "PORTALS"
+          b = "keep2"
+        }
+        rtex020.wl =
+        {
+          s = "PORTALS"
+          b = "keep5"
+        }
+        rtex021.wl =
+        {
+          s = "PORTALS"
+          b = "keep3"
+        }
+        rtex022.wl =
+        {
+          s = "PORTALS"
+          b = "keep3"
+        }
+        rtex028.wl =
+        {
+          s = "PORTALS"
+          b = "keep1"
+        }
+        rtex029.wl =
+        {
+          s = "PORTALS"
+          b = "keep1"
+        }
+        rtex030.wl =
+        {
+          s = "PORTALS"
+          b = "keep3"
+        }
+        rtex031.wl =
+        {
+          s = "PORTALS"
+          b = "keep1"
+        }
+        rtex034.wl =
+        {
+          s = "PORTALS"
+          b = "keep2"
+        }
+        rtex038.wl =
+        {
+          s = "PORTALS"
+          b = "keep1"
+        }
+        rtex039.wl =
+        {
+          s = "PORTALS"
+          b = "keep4"
+        }
+        rtex040.wl =
+        {
+          s = "PORTALS"
+          b = "keep2"
+        }
+        rtex041.wl =
+        {
+          s = "PORTALS"
+          b = "keep1"
+        }
+        rtex042.wl =
+        {
+          s = "PORTALS"
+          b = "keep3"
+        }
+        rtex043.wl =
+        {
+          s = "PORTALS"
+          b = "keep1"
+        }
+        rtex047.wl =
+        {
+          s = "PORTALS"
+          b = "keep4"
+        }
+        rtex052.wl =
+        {
+          s = "PORTALS"
+          b = "keep3"
+        }
+        rtex053.wl =
+        {
+          s = "PORTALS"
+          b = "keep5"
+        }
+        rtex054.wl =
+        {
+          s = "PORTALS"
+          b = "keep1"
+        }
+        rtex058.wl =
+        {
+          s = "PORTALS"
+          b = "keep4"
+        }
+        rtex059.wl =
+        {
+          s = "PORTALS"
+          b = "keep1"
+        }
+        rtex066.wl =
+        {
+          s = "PORTALS"
+          b = "keep1"
+        }
+        rtex068.wl =
+        {
+          s = "PORTALS"
+          b = "keep5"
+        }
+        rtex072.wl =
+        {
+          s = "PORTALS"
+          b = "keep1"
+        }
+        rtex073.wl =
+        {
+          s = "PORTALS"
+          b = "keep1"
+        }
+        rtex074.wl =
+        {
+          s = "PORTALS"
+          b = "keep4"
+        }
+        rtex075.wl =
+        {
+          s = "PORTALS"
+          b = "keep5"
+        }
+        rtex081.wl =
+        {
+          s = "PORTALS"
+          b = "keep3"
+        }
+        rtex082.wl =
+        {
+          s = "PORTALS"
+          b = "keep3"
+        }
+        rtex083.wl =
+        {
+          s = "PORTALS"
+          b = "keep1"
+        }
+        rtex085.wl =
+        {
+          s = "PORTALS"
+          b = "keep3"
+        }
+        rtex086.wl =
+        {
+          s = "PORTALS"
+          b = "keep1"
+        }
+        rtex087.wl =
+        {
+          s = "PORTALS"
+          b = "keep1"
+        }
+        rtex088.wl =
+        {
+          s = "PORTALS"
+          b = "keep3"
+        }
+        rtex089.wl =
+        {
+          s = "PORTALS"
+          b = "keep2"
+        }
+        rtex090.wl =
+        {
+          s = "PORTALS"
+          b = "keep2"
+        }
+        rtex091.wl =
+        {
+          s = "PORTALS"
+          b = "keep4"
+        }
+        rtex092.wl =
+        {
+          s = "PORTALS"
+          b = "keep1"
+        }
+        rtex094.wl =
+        {
+          s = "PORTALS"
+          b = "keep2"
+        }
+        rtex095.wl =
+        {
+          s = "PORTALS"
+          b = "keep1"
+        }
+        rtex096.wl =
+        {
+          s = "PORTALS"
+          b = "keep1"
+        }
+        rtex099.wl =
+        {
+          s = "PORTALS"
+          b = "keep1"
+        }
+        rtex102.wl =
+        {
+          s = "PORTALS"
+          b = "keep1"
+        }
+        rtex103.wl =
+        {
+          s = "PORTALS"
+          b = "keep1"
+        }
+        rtex104.wl =
+        {
+          s = "PORTALS"
+          b = "keep1"
+        }
+        rtex105.wl =
+        {
+          s = "PORTALS"
+          b = "keep1"
+        }
+        rtex106.wl =
+        {
+          s = "PORTALS"
+          b = "keep3"
+        }
+        rtex107.wl =
+        {
+          s = "PORTALS"
+          b = "keep1"
+        }
+        rtex108.wl =
+        {
+          s = "PORTALS"
+          b = "keep2"
+        }
+        rtex109.wl =
+        {
+          s = "PORTALS"
+          b = "keep3"
+        }
+        rtex110.wl =
+        {
+          s = "PORTALS"
+          b = "keep4"
+        }
+        rtex112.wl =
+        {
+          s = "PORTALS"
+          b = "keep3"
+        }
+        rtex113.wl =
+        {
+          s = "PORTALS"
+          b = "keep1"
+        }
+        rtex114.wl =
+        {
+          s = "PORTALS"
+          b = "keep1"
+        }
+        rtex116.wl =
+        {
+          s = "PORTALS"
+          b = "keep3"
+        }
+        rtex117.wl =
+        {
+          s = "PORTALS"
+          b = "keep3"
+        }
+        rtex120.wl =
+        {
+          s = "PORTALS"
+          b = "keep1"
+        }
+        rtex121.wl =
+        {
+          s = "PORTALS"
+          b = "keep1"
+        }
+        rtex122.wl =
+        {
+          s = "PORTALS"
+          b = "keep4"
+        }
+        rtex123.wl =
+        {
+          s = "PORTALS"
+          b = "thomas"
+        }
+        rtex124.wl =
+        {
+          s = "PORTALS"
+          b = "keep3"
+        }
+        rtex125.wl =
+        {
+          s = "PORTALS"
+          b = "thomas"
+        }
+        rtex126.wl =
+        {
+          s = "PORTALS"
+          b = "thomas"
+        }
+        rtex127.wl =
+        {
+          s = "PORTALS"
+          b = "keep2"
+        }
+        rtex131.wl =
+        {
+          s = "PORTALS"
+          b = "thomas"
+        }
+        rtex133.wl =
+        {
+          s = "PORTALS"
+          b = "keep4"
+        }
+        rtex135.wl =
+        {
+          s = "PORTALS"
+          b = "thomas"
+        }
+        rtex137.wl =
+        {
+          s = "PORTALS"
+          b = "keep4"
+        }
+        rtex146.wl =
+        {
+          s = "PORTALS"
+          b = "keep2"
+        }
+        rtex147.wl =
+        {
+          s = "PORTALS"
+          b = "keep2"
+        }
+        rtex148.wl =
+        {
+          s = "PORTALS"
+          b = "keep2"
+        }
+        rtex149.wl =
+        {
+          s = "PORTALS"
+          b = "keep3"
+        }
+        rtex150.wl =
+        {
+          s = "PORTALS"
+          b = "keep3"
+        }
+        rtex152.wl =
+        {
+          s = "PORTALS"
+          b = "keep2"
+        }
+        rtex154.wl =
+        {
+          s = "PORTALS"
+          b = "keep2"
+        }
+        rtex156.wl =
+        {
+          s = "PORTALS"
+          b = "keep1"
+        }
+        rtex158.wl =
+        {
+          s = "PORTALS"
+          b = "keep3"
+        }
+        rtex160.wl =
+        {
+          s = "PORTALS"
+          b = "keep1"
+        }
+        rtex161.wl =
+        {
+          s = "PORTALS"
+          b = "keep5"
+        }
+        rtex162.wl =
+        {
+          s = "PORTALS"
+          b = "keep2"
+        }
+        rtex164.wl =
+        {
+          s = "PORTALS"
+          b = "keep1"
+        }
+        rtex165.wl =
+        {
+          s = "PORTALS"
+          b = "keep1"
+        }
+        rtex166.wl =
+        {
+          s = "PORTALS"
+          b = "keep2"
+        }
+        rtex172.wl =
+        {
+          s = "PORTALS"
+          b = "keep2"
+        }
+        rtex173.wl =
+        {
+          s = "PORTALS"
+          b = "keep1"
+        }
+        rtex175.wl =
+        {
+          s = "PORTALS"
+          b = "thomas"
+        }
+        rtex176.wl =
+        {
+          s = "PORTALS"
+          b = "keep2"
+        }
+        rtex177.wl =
+        {
+          s = "PORTALS"
+          b = "keep2"
+        }
+        rtex178.wl =
+        {
+          s = "PORTALS"
+          b = "keep2"
+        }
+        rtex179.wl =
+        {
+          s = "PORTALS"
+          b = "keep2"
+        }
+        rtex180.wl =
+        {
+          s = "PORTALS"
+          b = "keep2"
+        }
+        rtex181.wl =
+        {
+          s = "PORTALS"
+          b = "keep1"
+        }
+        rtex182.wl =
+        {
+          s = "PORTALS"
+          b = "keep2"
+        }
+        rtex183.wl =
+        {
+          s = "PORTALS"
+          b = "keep3"
+        }
+        rtex184.wl =
+        {
+          s = "PORTALS"
+          b = "keep2"
+        }
+        rtex185.wl =
+        {
+          s = "PORTALS"
+          b = "keep3"
+        }
+        rtex186.wl =
+        {
+          s = "PORTALS"
+          b = "keep2"
+        }
+        rtex187.wl =
+        {
+          s = "PORTALS"
+          b = "keep4"
+        }
+        rtex191.wl =
+        {
+          s = "PORTALS"
+          b = "keep2"
+        }
+        rtex199.wl =
+        {
+          s = "PORTALS"
+          b = "keep1"
+        }
+        rtex202.wl =
+        {
+          s = "PORTALS"
+          b = "keep1"
+        }
+        rtex203.wl =
+        {
+          s = "PORTALS"
+          b = "keep2"
+        }
+        rtex204.wl =
+        {
+          s = "PORTALS"
+          b = "keep1"
+        }
+        rtex205.wl =
+        {
+          s = "PORTALS"
+          b = "keep2"
+        }
+        rtex206.wl =
+        {
+          s = "PORTALS"
+          b = "keep2"
+        }
+        rtex207.wl =
+        {
+          s = "PORTALS"
+          b = "keep1"
+        }
+        rtex210.wl =
+        {
+          s = "PORTALS"
+          b = "keep2"
+        }
+        rtex211.wl =
+        {
+          s = "PORTALS"
+          b = "keep2"
+        }
+        rtex214.wl =
+        {
+          s = "PORTALS"
+          b = "keep2"
+        }
+        rtex221.wl =
+        {
+          s = "PORTALS"
+          b = "keep2"
+        }
+        rtex222.wl =
+        {
+          s = "PORTALS"
+          b = "keep2"
+        }
+        rtex223.wl =
+        {
+          s = "PORTALS"
+          b = "keep2"
+        }
+        rtex224.wl =
+        {
+          s = "PORTALS"
+          b = "keep1"
+        }
+        rtex225.wl =
+        {
+          s = "PORTALS"
+          b = "keep1"
+        }
+        rtex228.wl =
+        {
+          s = "PORTALS"
+          b = "keep2"
+        }
+        rtex230.wl =
+        {
+          s = "PORTALS"
+          b = "keep1"
+        }
+        rtex233.wl =
+        {
+          s = "PORTALS"
+          b = "keep2"
+        }
+        rtex237.wl =
+        {
+          s = "PORTALS"
+          b = "keep4"
+        }
+        rtex239.wl =
+        {
+          s = "PORTALS"
+          b = "keep4"
+        }
+        rtex242.wl =
+        {
+          s = "PORTALS"
+          b = "keep2"
+        }
+        rtex243.wl =
+        {
+          s = "PORTALS"
+          b = "keep3"
+        }
+        rtex246.wl =
+        {
+          s = "PORTALS"
+          b = "keep2"
+        }
+        rtex248.wl =
+        {
+          s = "PORTALS"
+          b = "keep2"
+        }
+        rtex249.wl =
+        {
+          s = "PORTALS"
+          b = "keep2"
+        }
+        rtex250.wl =
+        {
+          s = "PORTALS"
+          b = "keep2"
+        }
+        rtex251.wl =
+        {
+          s = "PORTALS"
+          b = "keep2"
+        }
+        rtex335.wl =
+        {
+          s = "PORTALS"
+          b = "keep1"
+        }
+        rtex336.wl =
+        {
+          s = "PORTALS"
+          b = "keep1"
+        }
+        rtex339.wl =
+        {
+          s = "PORTALS"
+          b = "keep4"
+        }
+        rtex341.wl =
+        {
+          s = "PORTALS"
+          b = "keep2"
+        }
+        rtex342.wl =
+        {
+          s = "PORTALS"
+          b = "keep1"
+        }
+        rtex343.wl =
+        {
+          s = "PORTALS"
+          b = "keep5"
+        }
+        rtex352.wl =
+        {
+          s = "PORTALS"
+          b = "keep4"
+        }
+        rtex353.wl =
+        {
+          s = "PORTALS"
+          b = "keep4"
+        }
+        rtex354.wl =
+        {
+          s = "PORTALS"
+          b = "keep4"
+        }
+        rtex355.wl =
+        {
+          s = "PORTALS"
+          b = "keep1"
+        }
+        rtex357.wl =
+        {
+          s = "PORTALS"
+          b = "keep2"
+        }
+        rtex358.wl =
+        {
+          s = "PORTALS"
+          b = "keep1"
+        }
+        rtex359.wl =
+        {
+          s = "PORTALS"
+          b = "thomas"
+        }
+        rtex360.wl =
+        {
+          s = "PORTALS"
+          b = "keep5"
+        }
+        rtex361.wl =
+        {
+          s = "PORTALS"
+          b = "keep2"
+        }
+        rtex362.wl =
+        {
+          s = "PORTALS"
+          b = "keep4"
+        }
+        rtex367.wl =
+        {
+          s = "PORTALS"
+          b = "keep1"
+        }
+        rtex376.wl =
+        {
+          s = "PORTALS"
+          b = "keep2"
+        }
+        rtex388.wl =
+        {
+          s = "PORTALS"
+          b = "thomas"
+        }
+        rtex394.wl =
+        {
+          s = "PORTALS"
+          b = "keep2"
+        }
+        rtex395.wl =
+        {
+          s = "PORTALS"
+          b = "keep1"
+        }
+        rtex412.wl =
+        {
+          s = "PORTALS"
+          b = "keep1"
+        }
+        rtex413.wl =
+        {
+          s = "PORTALS"
+          b = "keep2"
+        }
+        rtex415.wl =
+        {
+          s = "PORTALS"
+          b = "keep3"
+        }
+        rtex417.wl =
+        {
+          s = "PORTALS"
+          b = "keep1"
+        }
+        rtex418.wl =
+        {
+          s = "PORTALS"
+          b = "keep3"
+        }
+        rtex419.wl =
+        {
+          s = "PORTALS"
+          b = "keep1"
+        }
+        rtex420.wl =
+        {
+          s = "PORTALS"
+          b = "keep1"
+        }
+        rtex427.wl =
+        {
+          s = "PORTALS"
+          b = "keep5"
+        }
+        rtex429.wl =
+        {
+          s = "PORTALS"
+          b = "keep2"
+        }
+        rtex430.wl =
+        {
+          s = "PORTALS"
+          b = "thomas"
+        }
+        rtex431.wl =
+        {
+          s = "PORTALS"
+          b = "keep1"
+        }
+        rtex432.wl =
+        {
+          s = "PORTALS"
+          b = "keep2"
+        }
+        rtex433.wl =
+        {
+          s = "PORTALS"
+          b = "keep3"
+        }
+        rtex435.wl =
+        {
+          s = "PORTALS"
+          b = "keep4"
+        }
+        rtex437.wl =
+        {
+          s = "PORTALS"
+          b = "keep1"
+        }
+        rtex438.wl =
+        {
+          s = "PORTALS"
+          b = "keep4"
+        }
+        rtex439.wl =
+        {
+          s = "PORTALS"
+          b = "keep2"
+        }
+        rtex440.wl =
+        {
+          s = "PORTALS"
+          b = "keep2"
+        }
+        rtex441.wl =
+        {
+          s = "PORTALS"
+          b = "keep2"
+        }
+        rtex442.wl =
+        {
+          s = "PORTALS"
+          b = "keep4"
+        }
+        rtex443.wl =
+        {
+          s = "PORTALS"
+          b = "keep4"
+        }
+        rtex444.wl =
+        {
+          s = "PORTALS"
+          b = "keep2"
+        }
+        rtex445.wl =
+        {
+          s = "PORTALS"
+          b = "keep4"
+        }
+        rtex446.wl =
+        {
+          s = "PORTALS"
+          b = "keep4"
+        }
+        rtex447.wl =
+        {
+          s = "PORTALS"
+          b = "keep3"
+        }
+        rtex450.wl =
+        {
+          s = "PORTALS"
+          b = "keep1"
+        }
+        rtex451.wl =
+        {
+          s = "PORTALS"
+          b = "keep4"
+        }
+        rtex452.wl =
+        {
+          s = "PORTALS"
+          b = "thomas"
+        }
+        rtex454.wl =
+        {
+          s = "PORTALS"
+          b = "keep2"
+        }
+        rtex455.wl =
+        {
+          s = "PORTALS"
+          b = "thomas"
+        }
+        rtex456.wl =
+        {
+          s = "PORTALS"
+          b = "thomas"
+        }
+        rtex457.wl =
+        {
+          s = "PORTALS"
+          b = "keep1"
+        }
+        rtex458.wl =
+        {
+          s = "PORTALS"
+          b = "keep1"
+        }
+        rtex459.wl =
+        {
+          s = "PORTALS"
+          b = "thomas"
+        }
+        rtex460.wl =
+        {
+          s = "PORTALS"
+          b = "keep1"
+        }
+        rtex461.wl =
+        {
+          s = "PORTALS"
+          b = "keep1"
+        }
+        rtex462.wl =
+        {
+          s = "PORTALS"
+          b = "keep2"
+        }
+        rtex463.wl =
+        {
+          s = "PORTALS"
+          b = "keep1"
+        }
+        rtex464.wl =
+        {
+          s = "PORTALS"
+          b = "keep2"
+        }
+        rtex469.wl =
+        {
+          s = "PORTALS"
+          b = "keep2"
+        }
+        rtex474.wl =
+        {
+          s = "PORTALS"
+          b = "keep2"
+        }
+        rtex476.wl =
+        {
+          s = "PORTALS"
+          b = "keep2"
+        }
+        rtex477.wl =
+        {
+          s = "PORTALS"
+          b = "keep2"
+        }
+        rtex479.wl =
+        {
+          s = "PORTALS"
+          b = "keep2"
+        }
+        rtex481.wl =
+        {
+          s = "PORTALS"
+          b = "keep5"
+        }
+        rtex485.wl =
+        {
+          s = "PORTALS"
+          b = "keep1"
+        }
+        rtex488.wl =
+        {
+          s = "PORTALS"
+          b = "keep1"
+        }
+        rtex490.wl =
+        {
+          s = "PORTALS"
+          b = "keep5"
+        }
+        rtex491.wl =
+        {
+          s = "PORTALS"
+          b = "keep1"
+        }
+        rtex492.wl =
+        {
+          s = "PORTALS"
+          b = "keep1"
+        }
+        rtex493.wl =
+        {
+          s = "PORTALS"
+          b = "keep1"
+        }
+        rtex495.wl =
+        {
+          s = "PORTALS"
+          b = "keep1"
+        }
+        rtex496.wl =
+        {
+          s = "PORTALS"
+          b = "keep1"
+        }
+        rtex498.wl =
+        {
+          s = "PORTALS"
+          b = "thomas"
+        }
+        rtex499.wl =
+        {
+          s = "PORTALS"
+          b = "keep3"
+        }
+        rtex500.wl =
+        {
+          s = "PORTALS"
+          b = "keep2"
+        }
+        rtex502.wl =
+        {
+          s = "PORTALS"
+          b = "keep2"
+        }
+        rtex503.wl =
+        {
+          s = "PORTALS"
+          b = "keep2"
+        }
+        rtex506.wl =
+        {
+          s = "PORTALS"
+          b = "keep2"
+        }
+        rtex508.wl =
+        {
+          s = "PORTALS"
+          b = "keep2"
+        }
+        rtex513.wl =
+        {
+          s = "PORTALS"
+          b = "thomas"
+        }
+        rtex515.wl =
+        {
+          s = "PORTALS"
+          b = "keep2"
+        }
+        rtex516.wl =
+        {
+          s = "PORTALS"
+          b = "thomas"
+        }
+        rtex517.wl =
+        {
+          s = "PORTALS"
+          b = "thomas"
+        }
+        rtex518.wl =
+        {
+          s = "PORTALS"
+          b = "thomas"
+        }
+        rtex519.wl =
+        {
+          s = "PORTALS"
+          b = "thomas"
+        }
+        rtex520.wl =
+        {
+          s = "PORTALS"
+          b = "thomas"
+        }
+        sky000.wl =
+        {
+          s = "PORTALS"
+          b = "thomas"
+        }
+        sky001.wl =
+        {
+          s = "PORTALS"
+          b = "keep1"
+        }
+        thronetex1.wl =
+        {
+          s = "PORTALS"
+          b = "keep4"
+        }
+        trimtex.wl =
+        {
+          s = "PORTALS"
+          b = "keep1"
+        }
+      }
+      Tibetan.wad =
+      {
+        +0rtex4.wl =
+        {
+          s = "PORTALS"
+          b = "tibet1"
+        }
+        +0rtex5.wl =
+        {
+          s = "PORTALS"
+          b = "tibet1"
+        }
+        +0swit0.wl =
+        {
+          s = "PORTALS"
+          b = "tibet2"
+        }
+        +0swit1.wl =
+        {
+          s = "PORTALS"
+          b = "tibet4"
+        }
+        +0swit2.wl =
+        {
+          s = "PORTALS"
+          b = "tibet4"
+        }
+        +0swit3.wl =
+        {
+          s = "PORTALS"
+          b = "tibet4"
+        }
+        +0swit4.wl =
+        {
+          s = "PORTALS"
+          b = "tibet4"
+        }
+        +0swit5.wl =
+        {
+          s = "PORTALS"
+          b = "tibet4"
+        }
+        +0swit6.wl =
+        {
+          s = "PORTALS"
+          b = "tibet4"
+        }
+        +1rtex4.wl =
+        {
+          s = "PORTALS"
+          b = "tibet1"
+        }
+        +1rtex5.wl =
+        {
+          s = "PORTALS"
+          b = "tibet1"
+        }
+        +2rtex4.wl =
+        {
+          s = "PORTALS"
+          b = "tibet1"
+        }
+        +2rtex5.wl =
+        {
+          s = "PORTALS"
+          b = "tibet1"
+        }
+        +3rtex4.wl =
+        {
+          s = "PORTALS"
+          b = "tibet1"
+        }
+        +3rtex5.wl =
+        {
+          s = "PORTALS"
+          b = "tibet1"
+        }
+        +4rtex4.wl =
+        {
+          s = "PORTALS"
+          b = "tibet1"
+        }
+        +4rtex5.wl =
+        {
+          s = "PORTALS"
+          b = "tibet1"
+        }
+        +5rtex5.wl =
+        {
+          s = "PORTALS"
+          b = "tibet1"
+        }
+        +aswit0.wl =
+        {
+          s = "PORTALS"
+          b = "tibet2"
+        }
+        +aswit1.wl =
+        {
+          s = "PORTALS"
+          b = "tibet4"
+        }
+        +aswit2.wl =
+        {
+          s = "PORTALS"
+          b = "tibet4"
+        }
+        +aswit3.wl =
+        {
+          s = "PORTALS"
+          b = "tibet4"
+        }
+        +aswit4.wl =
+        {
+          s = "PORTALS"
+          b = "tibet4"
+        }
+        +aswit5.wl =
+        {
+          s = "PORTALS"
+          b = "tibet4"
+        }
+        +aswit6.wl =
+        {
+          s = "PORTALS"
+          b = "tibet4"
+        }
+        rpal238.wl =
+        {
+          s = "PORTALS"
+          b = "tibet3"
+        }
+        rpal239.wl =
+        {
+          s = "PORTALS"
+          b = "tibet4"
+        }
+        rpal240.wl =
+        {
+          s = "PORTALS"
+          b = "tibet2"
+        }
+        rpal241.wl =
+        {
+          s = "PORTALS"
+          b = "tibet2"
+        }
+        rpal243.wl =
+        {
+          s = "PORTALS"
+          b = "tibet4"
+        }
+        rpal244.wl =
+        {
+          s = "PORTALS"
+          b = "tibet5"
+        }
+        rpal246.wl =
+        {
+          s = "PORTALS"
+          b = "tibet4"
+        }
+        rpal273.wl =
+        {
+          s = "PORTALS"
+          b = "tibet2"
+        }
+        rpal274.wl =
+        {
+          s = "PORTALS"
+          b = "tibet8"
+        }
+        rpal276.wl =
+        {
+          s = "PORTALS"
+          b = "tibet8"
+        }
+        rpal277.wl =
+        {
+          s = "PORTALS"
+          b = "tibet1"
+        }
+        rpal280.wl =
+        {
+          s = "PORTALS"
+          b = "tibet2"
+        }
+        rpal281.wl =
+        {
+          s = "PORTALS"
+          b = "tibet8"
+        }
+        rpal282.wl =
+        {
+          s = "PORTALS"
+          b = "tibet8"
+        }
+        rpal291.wl =
+        {
+          s = "PORTALS"
+          b = "tibet8"
+        }
+        rpal292.wl =
+        {
+          s = "PORTALS"
+          b = "tibet2"
+        }
+        rpal293.wl =
+        {
+          s = "PORTALS"
+          b = "tibet8"
+        }
+        rpal300.wl =
+        {
+          s = "PORTALS"
+          b = "tibet8"
+        }
+        rpal301.wl =
+        {
+          s = "PORTALS"
+          b = "tibet7"
+        }
+        rpal304.wl =
+        {
+          s = "PORTALS"
+          b = "tibet1"
+        }
+        rpal305.wl =
+        {
+          s = "PORTALS"
+          b = "tibet8"
+        }
+        rpal306.wl =
+        {
+          s = "PORTALS"
+          b = "tibet8"
+        }
+        rpal308.wl =
+        {
+          s = "PORTALS"
+          b = "tibet7"
+        }
+        rpal309.wl =
+        {
+          s = "PORTALS"
+          b = "tibet8"
+        }
+        rpal310.wl =
+        {
+          s = "PORTALS"
+          b = "tibet8"
+        }
+        rpal311.wl =
+        {
+          s = "PORTALS"
+          b = "tibet8"
+        }
+        rpal312.wl =
+        {
+          s = "PORTALS"
+          b = "tibet10"
+        }
+        rpal314.wl =
+        {
+          s = "PORTALS"
+          b = "tibet8"
+        }
+        rpal315.wl =
+        {
+          s = "PORTALS"
+          b = "tibet8"
+        }
+        rpal316.wl =
+        {
+          s = "PORTALS"
+          b = "tibet9"
+        }
+        rpal317.wl =
+        {
+          s = "PORTALS"
+          b = "tibet8"
+        }
+        rpal318.wl =
+        {
+          s = "PORTALS"
+          b = "tibet2"
+        }
+        rpal319.wl =
+        {
+          s = "PORTALS"
+          b = "tibet8"
+        }
+        rpal320.wl =
+        {
+          s = "PORTALS"
+          b = "tibet8"
+        }
+        rpal321.wl =
+        {
+          s = "PORTALS"
+          b = "tibet8"
+        }
+        rpal323.wl =
+        {
+          s = "PORTALS"
+          b = "tibet8"
+        }
+        rpal324.wl =
+        {
+          s = "PORTALS"
+          b = "tibet8"
+        }
+        rpal325.wl =
+        {
+          s = "PORTALS"
+          b = "tibet8"
+        }
+        rpal326.wl =
+        {
+          s = "PORTALS"
+          b = "tibet8"
+        }
+        rpal328.wl =
+        {
+          s = "PORTALS"
+          b = "tibet7"
+        }
+        rpal329.wl =
+        {
+          s = "PORTALS"
+          b = "tibet8"
+        }
+        rpal331.wl =
+        {
+          s = "PORTALS"
+          b = "tibet8"
+        }
+        rpal332.wl =
+        {
+          s = "PORTALS"
+          b = "tibet8"
+        }
+        rpal333.wl =
+        {
+          s = "PORTALS"
+          b = "tibet8"
+        }
+        rpal334.wl =
+        {
+          s = "PORTALS"
+          b = "tibet8"
+        }
+        rpal335.wl =
+        {
+          s = "PORTALS"
+          b = "tibet8"
+        }
+        rpal356.wl =
+        {
+          s = "PORTALS"
+          b = "tibet8"
+        }
+        rpal358.wl =
+        {
+          s = "PORTALS"
+          b = "tibet7"
+        }
+        rpal359.wl =
+        {
+          s = "PORTALS"
+          b = "tibet2"
+        }
+        rpal360.wl =
+        {
+          s = "PORTALS"
+          b = "tibet7"
+        }
+        rpal362.wl =
+        {
+          s = "PORTALS"
+          b = "tibet7"
+        }
+        rpal363.wl =
+        {
+          s = "PORTALS"
+          b = "tibet7"
+        }
+        rpal364.wl =
+        {
+          s = "PORTALS"
+          b = "tibet8"
+        }
+        rpal365.wl =
+        {
+          s = "PORTALS"
+          b = "tibet8"
+        }
+        rpal366.wl =
+        {
+          s = "PORTALS"
+          b = "tibet8"
+        }
+        ttex001.wl =
+        {
+          s = "PORTALS"
+          b = "tibet3"
+        }
+        ttex002.wl =
+        {
+          s = "PORTALS"
+          b = "tibet6"
+        }
+        ttex003.wl =
+        {
+          s = "PORTALS"
+          b = "tibet1"
+        }
+        ttex004.wl =
+        {
+          s = "PORTALS"
+          b = "tibet1"
+        }
+        ttex005.wl =
+        {
+          s = "PORTALS"
+          b = "tibet6"
+        }
+        ttex006.wl =
+        {
+          s = "PORTALS"
+          b = "tibet1"
+        }
+        ttex008.wl =
+        {
+          s = "PORTALS"
+          b = "tibet3"
+        }
+        ttex009.wl =
+        {
+          s = "PORTALS"
+          b = "tibet1"
+        }
+        ttex010.wl =
+        {
+          s = "PORTALS"
+          b = "tibet2"
+        }
+        ttex012.wl =
+        {
+          s = "PORTALS"
+          b = "tibet1"
+        }
+        ttex013.wl =
+        {
+          s = "PORTALS"
+          b = "tibet1"
+        }
+        ttex014.wl =
+        {
+          s = "PORTALS"
+          b = "tibet1"
+        }
+        ttex016.wl =
+        {
+          s = "PORTALS"
+          b = "tibet1"
+        }
+        ttex017.wl =
+        {
+          s = "PORTALS"
+          b = "tibet3"
+        }
+        ttex018.wl =
+        {
+          s = "PORTALS"
+          b = "tibet1"
+        }
+        ttex019.wl =
+        {
+          s = "PORTALS"
+          b = "tibet1"
+        }
+        ttex020.wl =
+        {
+          s = "PORTALS"
+          b = "tibet1"
+        }
+        ttex021.wl =
+        {
+          s = "PORTALS"
+          b = "tibet1"
+        }
+        ttex022.wl =
+        {
+          s = "PORTALS"
+          b = "tibet2"
+        }
+        ttex023.wl =
+        {
+          s = "PORTALS"
+          b = "tibet1"
+        }
+        ttex024.wl =
+        {
+          s = "PORTALS"
+          b = "tibet1"
+        }
+        ttex025.wl =
+        {
+          s = "PORTALS"
+          b = "tibet6"
+        }
+        ttex026.wl =
+        {
+          s = "PORTALS"
+          b = "tibet1"
+        }
+        ttex027.wl =
+        {
+          s = "PORTALS"
+          b = "tibet2"
+        }
+        ttex028.wl =
+        {
+          s = "PORTALS"
+          b = "tibet2"
+        }
+        ttex029.wl =
+        {
+          s = "PORTALS"
+          b = "tibet6"
+        }
+        ttex030.wl =
+        {
+          s = "PORTALS"
+          b = "tibet6"
+        }
+        ttex031.wl =
+        {
+          s = "PORTALS"
+          b = "tibet6"
+        }
+        ttex032.wl =
+        {
+          s = "PORTALS"
+          b = "tibet3"
+        }
+        ttex033.wl =
+        {
+          s = "PORTALS"
+          b = "tibet2"
+        }
+        ttex035.wl =
+        {
+          s = "PORTALS"
+          b = "tibet2"
+        }
+        ttex037.wl =
+        {
+          s = "PORTALS"
+          b = "tibet1"
+        }
+        ttex038.wl =
+        {
+          s = "PORTALS"
+          b = "tibet1"
+        }
+        ttex039.wl =
+        {
+          s = "PORTALS"
+          b = "tibet1"
+        }
+        ttex040.wl =
+        {
+          s = "PORTALS"
+          b = "tibet2"
+        }
+        ttex041.wl =
+        {
+          s = "PORTALS"
+          b = "tibet6"
+        }
+        ttex042.wl =
+        {
+          s = "PORTALS"
+          b = "tibet2"
+        }
+        ttex043.wl =
+        {
+          s = "PORTALS"
+          b = "tibet1"
+        }
+        ttex044.wl =
+        {
+          s = "PORTALS"
+          b = "tibet1"
+        }
+        ttex045.wl =
+        {
+          s = "PORTALS"
+          b = "tibet6"
+        }
+        ttex046.wl =
+        {
+          s = "PORTALS"
+          b = "tibet1"
+        }
+        ttex048.wl =
+        {
+          s = "PORTALS"
+          b = "tibet1"
+        }
+        ttex049.wl =
+        {
+          s = "PORTALS"
+          b = "tibet2"
+        }
+        ttex050.wl =
+        {
+          s = "PORTALS"
+          b = "tibet2"
+        }
+        ttex051.wl =
+        {
+          s = "PORTALS"
+          b = "tibet1"
+        }
+        ttex052.wl =
+        {
+          s = "PORTALS"
+          b = "tibet2"
+        }
+        ttex053.wl =
+        {
+          s = "PORTALS"
+          b = "tibet2"
+        }
+        ttex054.wl =
+        {
+          s = "PORTALS"
+          b = "tibet2"
+        }
+        ttex055.wl =
+        {
+          s = "PORTALS"
+          b = "tibet2"
+        }
+        ttex056.wl =
+        {
+          s = "PORTALS"
+          b = "tibet3"
+        }
+        ttex057.wl =
+        {
+          s = "PORTALS"
+          b = "tibet1"
+        }
+        ttex059.wl =
+        {
+          s = "PORTALS"
+          b = "tibet1"
+        }
+        ttex060.wl =
+        {
+          s = "PORTALS"
+          b = "tibet2"
+        }
+        ttex061.wl =
+        {
+          s = "PORTALS"
+          b = "tibet2"
+        }
+        ttex062.wl =
+        {
+          s = "PORTALS"
+          b = "tibet2"
+        }
+        ttex063.wl =
+        {
+          s = "PORTALS"
+          b = "tibet1"
+        }
+        ttex064.wl =
+        {
+          s = "PORTALS"
+          b = "tibet3"
+        }
+        ttex065.wl =
+        {
+          s = "PORTALS"
+          b = "tibet1"
+        }
+        ttex066.wl =
+        {
+          s = "PORTALS"
+          b = "tibet1"
+        }
+        ttex067.wl =
+        {
+          s = "PORTALS"
+          b = "tibet2"
+        }
+        ttex068.wl =
+        {
+          s = "PORTALS"
+          b = "tibet1"
+        }
+        ttex069.wl =
+        {
+          s = "PORTALS"
+          b = "tibet2"
+        }
+        ttex070.wl =
+        {
+          s = "PORTALS"
+          b = "tibet1"
+        }
+        ttex071.wl =
+        {
+          s = "PORTALS"
+          b = "tibet2"
+        }
+        ttex072.wl =
+        {
+          s = "PORTALS"
+          b = "tibet2"
+        }
+        ttex073.wl =
+        {
+          s = "PORTALS"
+          b = "tibet7"
+        }
+        ttex074.wl =
+        {
+          s = "PORTALS"
+          b = "tibet6"
+        }
+        ttex075.wl =
+        {
+          s = "PORTALS"
+          b = "tibet8"
+        }
+        ttex078.wl =
+        {
+          s = "PORTALS"
+          b = "tibet3"
+        }
+        ttex079.wl =
+        {
+          s = "PORTALS"
+          b = "tibet1"
+        }
+        ttex080.wl =
+        {
+          s = "PORTALS"
+          b = "tibet1"
+        }
+        ttex085.wl =
+        {
+          s = "PORTALS"
+          b = "tibet1"
+        }
+        ttex086.wl =
+        {
+          s = "PORTALS"
+          b = "tibet1"
+        }
+        ttex087.wl =
+        {
+          s = "PORTALS"
+          b = "tibet1"
+        }
+        ttex088.wl =
+        {
+          s = "PORTALS"
+          b = "tibet1"
+        }
+        ttex089.wl =
+        {
+          s = "PORTALS"
+          b = "tibet1"
+        }
+        ttex090.wl =
+        {
+          s = "PORTALS"
+          b = "tibet3"
+        }
+        ttex096.wl =
+        {
+          s = "PORTALS"
+          b = "tibet1"
+        }
+        ttex097.wl =
+        {
+          s = "PORTALS"
+          b = "tibet2"
+        }
+        ttex098.wl =
+        {
+          s = "PORTALS"
+          b = "tibet1"
+        }
+        ttex099.wl =
+        {
+          s = "PORTALS"
+          b = "tibet3"
+        }
+        ttex100.wl =
+        {
+          s = "PORTALS"
+          b = "tibet2"
+        }
+        ttex101.wl =
+        {
+          s = "PORTALS"
+          b = "tibet8"
+        }
+        ttex103.wl =
+        {
+          s = "PORTALS"
+          b = "tibet4"
+        }
+        ttex105.wl =
+        {
+          s = "PORTALS"
+          b = "tibet2"
+        }
+        ttex107.wl =
+        {
+          s = "PORTALS"
+          b = "tibet1"
+        }
+        ttex108.wl =
+        {
+          s = "PORTALS"
+          b = "tibet2"
+        }
+        ttex109.wl =
+        {
+          s = "PORTALS"
+          b = "tibet6"
+        }
+        ttex111.wl =
+        {
+          s = "PORTALS"
+          b = "tibet3"
+        }
+        ttex112.wl =
+        {
+          s = "PORTALS"
+          b = "tibet2"
+        }
+        ttex113.wl =
+        {
+          s = "PORTALS"
+          b = "tibet1"
+        }
+        ttex114.wl =
+        {
+          s = "PORTALS"
+          b = "tibet2"
+        }
+        ttex115.wl =
+        {
+          s = "PORTALS"
+          b = "tibet1"
+        }
+        ttex116.wl =
+        {
+          s = "PORTALS"
+          b = "tibet3"
+        }
+        ttex117.wl =
+        {
+          s = "PORTALS"
+          b = "tibet1"
+        }
+        ttex118.wl =
+        {
+          s = "PORTALS"
+          b = "tibet2"
+        }
+        ttex119.wl =
+        {
+          s = "PORTALS"
+          b = "tibet2"
+        }
+        ttex121.wl =
+        {
+          s = "PORTALS"
+          b = "tibet2"
+        }
+        ttex122.wl =
+        {
+          s = "PORTALS"
+          b = "tibet1"
+        }
+        ttex123.wl =
+        {
+          s = "PORTALS"
+          b = "tibet1"
+        }
+        ttex124.wl =
+        {
+          s = "PORTALS"
+          b = "tibet1"
+        }
+        ttex126.wl =
+        {
+          s = "PORTALS"
+          b = "tibet2"
+        }
+        ttex130.wl =
+        {
+          s = "PORTALS"
+          b = "tibet1"
+        }
+        ttex132.wl =
+        {
+          s = "PORTALS"
+          b = "tibet6"
+        }
+        ttex133.wl =
+        {
+          s = "PORTALS"
+          b = "tibet1"
+        }
+        ttex134.wl =
+        {
+          s = "PORTALS"
+          b = "tibet1"
+        }
+        ttex135.wl =
+        {
+          s = "PORTALS"
+          b = "tibet1"
+        }
+        ttex136.wl =
+        {
+          s = "PORTALS"
+          b = "tibet1"
+        }
+        ttex137.wl =
+        {
+          s = "PORTALS"
+          b = "tibet1"
+        }
+        ttex138.wl =
+        {
+          s = "PORTALS"
+          b = "tibet2"
+        }
+        ttex139.wl =
+        {
+          s = "PORTALS"
+          b = "tibet2"
+        }
+        ttex140.wl =
+        {
+          s = "PORTALS"
+          b = "tibet1"
+        }
+        ttex141.wl =
+        {
+          s = "PORTALS"
+          b = "tibet2"
+        }
+        ttex142.wl =
+        {
+          s = "PORTALS"
+          b = "tibet2"
+        }
+        ttex143.wl =
+        {
+          s = "PORTALS"
+          b = "tibet7"
+        }
+        ttex144.wl =
+        {
+          s = "PORTALS"
+          b = "tibet1"
+        }
+        ttex145.wl =
+        {
+          s = "PORTALS"
+          b = "tibet2"
+        }
+        ttex146.wl =
+        {
+          s = "PORTALS"
+          b = "tibet2"
+        }
+        ttex149.wl =
+        {
+          s = "PORTALS"
+          b = "tibet1"
+        }
+        ttex150.wl =
+        {
+          s = "PORTALS"
+          b = "tibet3"
+        }
+        ttex151.wl =
+        {
+          s = "PORTALS"
+          b = "tibet3"
+        }
+        ttex152.wl =
+        {
+          s = "PORTALS"
+          b = "tibet3"
+        }
+        ttex153.wl =
+        {
+          s = "PORTALS"
+          b = "tibet1"
+        }
+        ttex154.wl =
+        {
+          s = "PORTALS"
+          b = "tibet2"
+        }
+        ttex156.wl =
+        {
+          s = "PORTALS"
+          b = "tibet2"
+        }
+        ttex158.wl =
+        {
+          s = "PORTALS"
+          b = "tibet1"
+        }
+        ttex159.wl =
+        {
+          s = "PORTALS"
+          b = "tibet1"
+        }
+        ttex161.wl =
+        {
+          s = "PORTALS"
+          b = "tibet1"
+        }
+        ttex162.wl =
+        {
+          s = "PORTALS"
+          b = "tibet6"
+        }
+        ttex163.wl =
+        {
+          s = "PORTALS"
+          b = "tibet2"
+        }
+        ttex164.wl =
+        {
+          s = "PORTALS"
+          b = "tibet6"
+        }
+        ttex167.wl =
+        {
+          s = "PORTALS"
+          b = "tibet1"
+        }
+        ttex168.wl =
+        {
+          s = "PORTALS"
+          b = "tibet1"
+        }
+        ttex170.wl =
+        {
+          s = "PORTALS"
+          b = "tibet2"
+        }
+        ttex171.wl =
+        {
+          s = "PORTALS"
+          b = "tibet1"
+        }
+        ttex172.wl =
+        {
+          s = "PORTALS"
+          b = "tibet6"
+        }
+        ttex174.wl =
+        {
+          s = "PORTALS"
+          b = "tibet1"
+        }
+        ttex175.wl =
+        {
+          s = "PORTALS"
+          b = "tibet1"
+        }
+        ttex177.wl =
+        {
+          s = "PORTALS"
+          b = "tibet1"
+        }
+        ttex179.wl =
+        {
+          s = "PORTALS"
+          b = "tibet7"
+        }
+        ttex185.wl =
+        {
+          s = "PORTALS"
+          b = "tibet5"
+        }
+        ttex188.wl =
+        {
+          s = "PORTALS"
+          b = "tibet1"
+        }
+        ttex192.wl =
+        {
+          s = "PORTALS"
+          b = "tibet1"
+        }
+        ttex195.wl =
+        {
+          s = "PORTALS"
+          b = "tibet7"
+        }
+        ttex198.wl =
+        {
+          s = "PORTALS"
+          b = "tibet7"
+        }
+        ttex199.wl =
+        {
+          s = "PORTALS"
+          b = "tibet2"
+        }
+        ttex200.wl =
+        {
+          s = "PORTALS"
+          b = "tibet7"
+        }
+        ttex201.wl =
+        {
+          s = "PORTALS"
+          b = "tibet1"
+        }
+        ttex202.wl =
+        {
+          s = "PORTALS"
+          b = "tibet6"
+        }
+        ttex203.wl =
+        {
+          s = "PORTALS"
+          b = "tibet4"
+        }
+        ttex204.wl =
+        {
+          s = "PORTALS"
+          b = "tibet7"
+        }
+        ttex206.wl =
+        {
+          s = "PORTALS"
+          b = "tibet3"
+        }
+        ttex207.wl =
+        {
+          s = "PORTALS"
+          b = "tibet3"
+        }
+        ttex208.wl =
+        {
+          s = "PORTALS"
+          b = "tibet3"
+        }
+        ttex209.wl =
+        {
+          s = "PORTALS"
+          b = "tibet1"
+        }
+        ttex210.wl =
+        {
+          s = "PORTALS"
+          b = "tibet1"
+        }
+        ttex211.wl =
+        {
+          s = "PORTALS"
+          b = "tibet1"
+        }
+        ttex212.wl =
+        {
+          s = "PORTALS"
+          b = "tibet2"
+        }
+        ttex215.wl =
+        {
+          s = "PORTALS"
+          b = "tibet2"
+        }
+        ttex217.wl =
+        {
+          s = "PORTALS"
+          b = "tibet1"
+        }
+        ttex218.wl =
+        {
+          s = "PORTALS"
+          b = "tibet1"
+        }
+        ttex220.wl =
+        {
+          s = "PORTALS"
+          b = "tibet1"
+        }
+        ttex221.wl =
+        {
+          s = "PORTALS"
+          b = "tibet1"
+        }
+        ttex222.wl =
+        {
+          s = "PORTALS"
+          b = "tibet3"
+        }
+        ttex223.wl =
+        {
+          s = "PORTALS"
+          b = "tibet3"
+        }
+        ttex224.wl =
+        {
+          s = "PORTALS"
+          b = "tibet1"
+        }
+        ttex225.wl =
+        {
+          s = "PORTALS"
+          b = "tibet6"
+        }
+        ttex226.wl =
+        {
+          s = "PORTALS"
+          b = "tibet4"
+        }
+        ttex227.wl =
+        {
+          s = "PORTALS"
+          b = "tibet1"
+        }
+        ttex228.wl =
+        {
+          s = "PORTALS"
+          b = "tibet3"
+        }
+        ttex229.wl =
+        {
+          s = "PORTALS"
+          b = "tibet3"
+        }
+        ttex230.wl =
+        {
+          s = "PORTALS"
+          b = "tibet1"
+        }
+        ttex235.wl =
+        {
+          s = "PORTALS"
+          b = "tibet7"
+        }
+        ttex236.wl =
+        {
+          s = "PORTALS"
+          b = "tibet6"
+        }
+        ttex245.wl =
+        {
+          s = "PORTALS"
+          b = "tibet1"
+        }
+        ttex247.wl =
+        {
+          s = "PORTALS"
+          b = "tibet2"
+        }
+        ttex248.wl =
+        {
+          s = "PORTALS"
+          b = "tibet1"
+        }
+        ttex249.wl =
+        {
+          s = "PORTALS"
+          b = "tibet1"
+        }
+        ttex250.wl =
+        {
+          s = "PORTALS"
+          b = "tibet1"
+        }
+        ttex251.wl =
+        {
+          s = "PORTALS"
+          b = "tibet2"
+        }
+        ttex255.wl =
+        {
+          s = "PORTALS"
+          b = "tibet1"
+        }
+        ttex256.wl =
+        {
+          s = "PORTALS"
+          b = "tibet1"
+        }
+        ttex257.wl =
+        {
+          s = "PORTALS"
+          b = "tibet1"
+        }
+        ttex258.wl =
+        {
+          s = "PORTALS"
+          b = "tibet1"
+        }
+        ttex259.wl =
+        {
+          s = "PORTALS"
+          b = "tibet1"
+        }
+        ttex260.wl =
+        {
+          s = "PORTALS"
+          b = "tibet1"
+        }
+        ttex261.wl =
+        {
+          s = "PORTALS"
+          b = "tibet7"
+        }
+        ttex262.wl =
+        {
+          s = "PORTALS"
+          b = "tibet1"
+        }
+        ttex263.wl =
+        {
+          s = "PORTALS"
+          b = "tibet7"
+        }
+        ttex264.wl =
+        {
+          s = "PORTALS"
+          b = "tibet1"
+        }
+        ttex267.wl =
+        {
+          s = "PORTALS"
+          b = "tibet10"
+        }
+        ttex268.wl =
+        {
+          s = "PORTALS"
+          b = "tibet5"
+        }
+        ttex269.wl =
+        {
+          s = "PORTALS"
+          b = "tibet1"
+        }
+        ttex270.wl =
+        {
+          s = "PORTALS"
+          b = "tibet1"
+        }
+        ttex271.wl =
+        {
+          s = "PORTALS"
+          b = "tibet8"
+        }
+        ttex272.wl =
+        {
+          s = "PORTALS"
+          b = "tibet8"
+        }
+        ttex275.wl =
+        {
+          s = "PORTALS"
+          b = "tibet1"
+        }
+        ttex283.wl =
+        {
+          s = "PORTALS"
+          b = "tibet2"
+        }
+        ttex285.wl =
+        {
+          s = "PORTALS"
+          b = "tibet2"
+        }
+        ttex349.wl =
+        {
+          s = "PORTALS"
+          b = "tibet5"
+        }
+        ttex351.wl =
+        {
+          s = "PORTALS"
+          b = "tibet7"
+        }
+        ttex352.wl =
+        {
+          s = "PORTALS"
+          b = "tibet7"
+        }
+        ttex353.wl =
+        {
+          s = "PORTALS"
+          b = "tibet2"
+        }
+        ttex367.wl =
+        {
+          s = "PORTALS"
+          b = "tibet5"
+        }
+        ttex368.wl =
+        {
+          s = "PORTALS"
+          b = "tibet5"
+        }
+        ttex369.wl =
+        {
+          s = "PORTALS"
+          b = "tibet7"
+        }
+        ttex371.wl =
+        {
+          s = "PORTALS"
+          b = "tibet5"
+        }
+        ttex372.wl =
+        {
+          s = "PORTALS"
+          b = "tibet5"
+        }
+        ttex373.wl =
+        {
+          s = "PORTALS"
+          b = "tibet1"
+        }
+        ttex374.wl =
+        {
+          s = "PORTALS"
+          b = "tibet5"
+        }
+        ttex375.wl =
+        {
+          s = "PORTALS"
+          b = "tibet5"
+        }
+        ttex376.wl =
+        {
+          s = "PORTALS"
+          b = "tibet5"
+        }
+        ttex377.wl =
+        {
+          s = "PORTALS"
+          b = "tibet2"
+        }
+        ttex378.wl =
+        {
+          s = "PORTALS"
+          b = "tibet5"
+        }
+        ttex379.wl =
+        {
+          s = "PORTALS"
+          b = "tibet5"
+        }
+        ttex380.wl =
+        {
+          s = "PORTALS"
+          b = "tibet9"
+        }
+        ttex381.wl =
+        {
+          s = "PORTALS"
+          b = "tibet7"
+        }
+        ttex382.wl =
+        {
+          s = "PORTALS"
+          b = "tibet7"
+        }
+        ttex384.wl =
+        {
+          s = "PORTALS"
+          b = "tibet8"
+        }
+        ttex385.wl =
+        {
+          s = "PORTALS"
+          b = "tibet5"
+        }
+        ttex386.wl =
+        {
+          s = "PORTALS"
+          b = "tibet7"
+        }
+        ttex387.wl =
+        {
+          s = "PORTALS"
+          b = "tibet8"
+        }
+        ttex388.wl =
+        {
+          s = "PORTALS"
+          b = "tibet8"
+        }
+        ttex389.wl =
+        {
+          s = "PORTALS"
+          b = "tibet8"
+        }
+        ttex390.wl =
+        {
+          s = "PORTALS"
+          b = "tibet8"
+        }
+        ttex391.wl =
+        {
+          s = "PORTALS"
+          b = "tibet8"
+        }
+        ttex392.wl =
+        {
+          s = "PORTALS"
+          b = "tibet8"
+        }
+      }
+    }
+  }
+  NewEntities.qtx =
+  {
+    ToolBox = "New map items..."
+    Root = "Praevus Entities.qtxfolder"
+    Praevus Entities.qtxfolder =
+    {// BEGIN NEW ENTITIES
+
+     Active Brushes.qtxfolder = {
+       func_train_mp:b = 
+       {
+         ;desc = "Hexen 2 MISSION PACK version Trains"
+         target = ""
+         targetname = ""
+         ;incl = "defpoly"
+       }
+     }
+
+     Lights.qtxfolder = {
+       light_burner:e = 
+       {
+         origin = "0 0 0"
+         ;desc = "A brazier"
+       }
+       light_candle:e = 
+       {
+         origin = "0 0 0"
+         ;desc = "Default light value is 300"
+       }
+       light_lantern:e = 
+       {
+         origin = "0 0 0"
+         ;desc = "A castle lantern that hangs on the wall"
+       }
+       light_newfire:e = 
+       {
+         origin = "0 0 0"
+         ;desc = "Large yellow flame"
+         light = ""
+       }
+       light_palace_torch:e = 
+       {
+         origin = "0 0 0"
+         ;desc = "A palatial wall torch of some sort"
+         angle = ""
+       }
+     }
+     Sounds & Environment.qtxfolder = {
+       air_bubbles:e = 
+       {
+         origin = "0 0 0"
+         ;desc = "'cnt' - How many bubbles"
+         cnt = ""
+         targetname = ""
+         wait = ""
+       }
+       fx_friction_change:b = 
+       {
+         ;desc = "ONLY WORKS ON PLAYERS"
+         ;incl = "defpoly"
+       }
+       weather_snow:b = 
+       {
+         ;desc = "MG"
+         ;incl = "defpoly"
+       }
+     }
+     Traps & Gadgets.qtxfolder = {
+       obj_shiva:e = 
+       {
+         origin = "0 0 0"
+         ;desc = "4 armed lady with hip action"
+         abslight = ""
+         angle = ""
+         scale = ""
+         targetname = ""
+       }
+       obj_talking_door:e = 
+       {
+         origin = "0 0 0"
+         ;desc = "Talking door animation"
+         angle = ""
+         targetname = ""
+       }
+     }
+     Triggers & Buttons.qtxfolder = {
+       buddha_trigger_endgame:e = 
+       {
+         origin = "0 0 0"
+         ;desc = "The Buddga's teleport locations"
+         targetname = ""
+       }
+       trigger_deathtouch:b = 
+       {
+         ;desc = "Kills anything that has a matching targetname and touches it."
+         ;incl = "defpoly"
+       }
+       trigger_hub_intermission:e = 
+       {
+         origin = "0 0 0"
+         ;desc = "Triggers the background and text to come up when going into the"
+         map = ""
+         target = ""
+         targetname = ""
+       }
+       trigger_objective:e = 
+       {
+         origin = "0 0 0"
+         ;desc = "Trigger Objective"
+         frags = ""
+         targetname = ""
+       }
+       trigger_setskill:b = 
+       {
+         ;desc = "sets skill level to the value of 'noise'."
+         noise = ""
+         ;incl = "defpoly"
+       }
+       trigger_stop:e = 
+       {
+         origin = "0 0 0"
+         ;desc = "Stops its target that is moving or rotating"
+         target = ""
+         targetname = ""
+       }
+     }
+     Monsters.qtxfolder = {
+       func_monsterspawn_spot_mp:e = 
+       {
+         origin = "0 0 0"
+         ;desc = "All this does is mark where to spawn monsters for a spawn spot."
+         aflag = ""
+         angle = ""
+         dflags = ""
+         spawnername = ""
+       }
+       func_monsterspawner_mp:e = 
+       {
+         origin = "0 0 0"
+         ;desc = "If something is blocking the spawnspot, this will telefrag it as long as it's not a living entity (flags2&FL_ALIVE)"
+         angle = ""
+         cnt = ""
+       }
+       monster_archer_ice:e = 
+       {
+         origin = "0 0 0"
+         ;desc = "The Archer monster with snow booties"
+       }
+       monster_buddha:e = 
+       {
+         origin = "0 0 0"
+         ;desc = "The Big Baddie"
+         angle = ""
+         netname = ""
+         target = ""
+         targetname = ""
+       }
+       teleport_buddha:e = 
+       {
+         origin = "0 0 0"
+         ;desc = "The Buddga's teleport locations"
+         cnt = ""
+       }
+       monster_eidolon_weakling:e = 
+       {
+         origin = "0 0 0"
+         ;desc = "Not quite the big bad ugly boss guy"
+         angle = ""
+         targetname = ""
+       }
+       monster_pentacles:e = 
+       {
+         origin = "0 0 0"
+         ;desc = "All sides must be at least 8 away from the walls"
+       }
+       monster_weresnowleopard:e = 
+       {
+         origin = "0 0 0"
+         ;desc = "WereCat with snow leopard skin"
+       }
+       monster_weretiger:e = 
+       {
+         origin = "0 0 0"
+         ;desc = "WereCat with Siberian Tiger skin"
+         angle = ""
+       }
+       monster_yakman:e = 
+       {
+         origin = "0 0 0"
+         ;desc = "The Yakman Cometh... and the Yakman taketh away..."
+       }
+     }
+     Grisly Stuff.qtxfolder = {
+       obj_skeleton:e = 
+       {
+         origin = "0 0 0"
+         ;desc = "A skeleton laying face up, arms crossed"
+       }
+       obj_skeleton_throne:e = 
+       {
+         origin = "0 0 0"
+         ;desc = "Frickin' kick-ass Skeletal King on his Throne O' Bones!"
+         angle = ""
+         targetname = ""
+       }
+     }
+     Outdoor Stuff.qtxfolder = {
+       obj_snow_corner:e = 
+       {
+         origin = "0 0 0"
+         ;desc = "A corner pile of snow, faces south-east if using an angle of 0"
+       }
+       obj_snow_pile:e = 
+       {
+         origin = "0 0 0"
+         ;desc = "pile of snow"
+       }
+       obj_snow_wall:e = 
+       {
+         origin = "0 0 0"
+         ;desc = "A wide wall of now of snow, faces east if using an angle of 0"
+         angle = ""
+       }
+       obj_stalagmite1:e = 
+       {
+         origin = "0 0 0"
+         ;desc = "A tall, thin stalagmite or stalactite"
+         abslight = ""
+         angles = ""
+       }
+       obj_stalagmite2:e = 
+       {
+         origin = "0 0 0"
+         ;desc = "A thicker stalagmite or stalactite"
+         abslight = ""
+         angles = ""
+       }
+     }
+     Misc Stuff.qtxfolder = {
+       obj_book_o_the_dead:e = 
+       {
+         origin = "0 0 0"
+         ;desc = "Book O' The Dead"
+         angles = ""
+         health = ""
+         scale = ""
+       }
+       obj_chinese_kite_lamp:e = 
+       {
+         origin = "0 0 0"
+         ;desc = "Hnaging chinese kite lamp or something"
+       }
+       obj_chinese_sign:e = 
+       {
+         origin = "0 0 0"
+         ;desc = "Hanging chinese sign or something"
+         scale = ""
+       }
+     }
+     Statues.qtxfolder = {
+       obj_demon_statue:e = 
+       {
+         origin = "0 0 0"
+         ;desc = "demoness statue?"
+         angle = ""
+       }
+       obj_samurai:e = 
+       {
+         origin = "0 0 0"
+         ;desc = "sam the statue"
+         angle = ""
+       }
+       obj_statue_dragon_lion:e = 
+       {
+         origin = "0 0 0"
+         ;desc = "Statue of a dragon lion?"
+         angle = ""
+         cnt_h_boost = ""
+       }
+     }
+     Misc.qtxfolder = {
+       NATE_9000:e = 
+       {
+         origin = "0 0 0"
+         ;desc = "Nefariously Anal Test Entity"
+         angle = ""
+       }
+     }
+
+
+     // END NEW ENTITIES
+    }
+  }
+
+  Entity forms.qctx =
+  {  // BEGIN ENTITY FORMS
+
+    NATE_9000:form =
+    {
+     Help = "Nefariously Anal Test Entity"
+     bbox = '-33 -33 -0 33 33 115'
+     angle: =
+        {Txt = "&" Hint = "the direction it starts out pointing"
+       }
+    }
+    air_bubbles:form =
+    {
+     Help = "'cnt' - How many bubbles"
+     bbox = '-8 -8 -8 8 8 8'
+     cnt: =
+        {Txt = "&" Hint = "counting things"
+       }
+     targetname: =
+        {Txt = "&" Hint = "is triggered if entity with matching target fires, or deleted if entity with matching killtarget fires."
+       }
+     wait: =
+        {Txt = "&" Hint = "time before re-triggerable"
+       }
+    }
+    buddha_trigger_endgame:form =
+    {
+     Help = "Triggers endgame text and screen"
+     bbox = '-16 -16 0 16 16 50'
+     targetname: =
+        {Txt = "&" Hint = "is triggered if entity with matching target fires, or deleted if entity with matching killtarget fires."
+       }
+    }
+    camera_remote:form =
+    {
+     Help = "A camera which the player becomes when triggered. "
+     bbox = '-8 -8 -8 8 8 8'
+     targetname: =
+        {Txt = "&" Hint = "camera starts running when triggered"
+       }
+     target: =
+        {Txt = "&" Hint = "targets a target_null to aim at "
+       }
+     wait: =
+        {Txt = "&" Hint = "how long camera runs & player is frozen; default = 3."
+       }
+     netname: =
+        {Txt = "&" Hint = "shared with moving object (e.g. train), which camera" $0D " attaches itself to and moves along with."
+       }
+     angles_x: =
+        {Txt = "&" Hint = "downward pitch (degrees; instead of target)"
+       }
+     angles_y: =
+        {Txt = "&" Hint = "rightward yaw (degrees; instead of target)"
+       }
+    }
+    containment:form =
+    {
+     Help = "No help yet, peer into the Eye of Horus."
+     greenmana: =
+        {Txt = "&" Hint = "green mana; Arg = amount"
+       }
+     bluemana: =
+        {Txt = "&" Hint = "blue mana; Arg = amount"
+       }
+     cnt_torch: =
+        {Txt = "&" Hint = "torch; Arg = amount (recommend 1)"
+       }
+     cnt_h_boost: =
+        {Txt = "&" Hint = "ordinary health boost; Arg = amount (recommend 1)"
+       }
+     cnt_sh_boost: =
+        {Txt = "&" Hint = "mystic urn; Arg = amount (recommend 1)"
+       }
+     cnt_mana_boost: =
+        {Txt = "&" Hint = "krater of might; Arg = amount (recommend 1)"
+       }
+     cnt_teleport: =
+        {Txt = "&" Hint = "chaos device; Arg = amount (recommend 1)"
+       }
+     cnt_tome: =
+        {Txt = "&" Hint = "tomes of power; Arg = amount (recommend 1)"
+       }
+     cnt_summon: =
+        {Txt = "&" Hint = "stone of summoning; Arg = amount (recommend 1)"
+       }
+     cnt_invisibility: =
+        {Txt = "&" Hint = "invisibility; Arg = amount (recommend 1)"
+       }
+     cnt_glyph: =
+        {Txt = "&" Hint = "glyph of the ancients; Arg = amount (recommend 1)"
+       }
+     cnt_haste: =
+        {Txt = "&" Hint = "boots of speed; Arg = amount (recommend 1)"
+       }
+     cnt_blast: =
+        {Txt = "&" Hint = "disc of repulsion; Arg = amount (recommend 1)"
+       }
+     cnt_polymorpth: =
+        {Txt = "&" Hint = "seal of the ovinimancer; Arg = amount (recommend 1)"
+       }
+     cnt_cubeofforce: =
+        {Txt = "&" Hint = "cube of force; actually effective in PoP" $0D "  Arg = amount (recommend 1)"
+       }
+     cnt_invincibility: =
+        {Txt = "&" Hint = "icon of the defender; Arg = amount (recommend 1)"
+       }
+    }
+    door_trigger:form =
+    {
+     Help = "No help yet, peer into the Eye of Horus."
+     targetname: =
+        {Txt = "&" Hint = "if specified, door opens when triggered"
+       }
+     target: =
+        {Txt = "&" Hint = "entity triggered when door opens"
+       }
+     closetarget: =
+        {Txt = "&" Hint = "entity triggered when door closes"
+       }
+     killtarget: =
+        {Txt = "&" Hint = "entity removed when door opens"
+       }
+    }
+    func_door:form =
+    {
+     Help = "NOTE: Doors can now be activated and deactivated with the appropriate triggers."
+     angle: =
+        {Txt = "&" Hint = "direction it moves on opening; -1 up, -2 down."
+       }
+     soundtype: =
+        {Txt = "&" Hint = "sound it makes"
+      Typ="C"
+      Items="0) silent" $0D "1) metal swinging" $0D "2) stone sliding" $0D "3) big wood swing" $0D "4) wood swinging" $0D "5) big wood sliding" $0D "6) drawbridge" $0D "7) rotating walksway" $0D "8) big metal sliding" $0D "9) pendulum singing"
+      values="0" $0D "1" $0D "2" $0D "3" $0D "4" $0D "5" $0D "6" $0D "7" $0D "8" $0D "9"
+       }
+     wait: =
+        {Txt = "&" Hint = "time to reclose, default=3, -1 = never return"
+       }
+     abslight: =
+        {Txt = "&" Hint = "inherent glow, value between 0 and 1"
+       }
+     dmg: =
+        {Txt = "&" Hint = "damage inflicted on player who blocks motion"
+       }
+     health: =
+        {Txt = "&" Hint = "if specified, door can be activate by damage"
+       }
+     speed: =
+        {Txt = "&" Hint = "speed of movement, default = 100"
+       }
+     delay: =
+        {Txt = "&" Hint = "delay before door opens"
+       }
+     message: =
+        {Txt = "&" Hint = "# of message displayed on triggered or shot door that hasn't been opened." $0D "  (use #message to give text instead of number))"
+       }
+    more: = {
+      Typ="B"
+      Txt="triggering"
+      Cap="Push"
+      Form="door_trigger:form"
+      Hint="specifics for triggering with doors"
+    }
+    more: = {
+      Typ="B"
+      Txt="puzzles"
+      Cap="Push"
+      Form="puzzles:form"
+      Hint="specifics for puzzle-doors"
+    }
+     lip: =
+        {Txt = "&" Hint = "amount left over after movement along some dimension of object, default = 4"
+       }
+     level: =
+        {Txt = "&" Hint = "distance door moves; default=size in dir. of move. - lip"
+       }
+     spawnflags: = 
+       {Txt="&"
+        Typ="X1"
+        Cap="START_OPEN"
+        Hint="starts in post-movement position, & operates in reverse"}
+     spawnflags: = 
+       {Txt="&"
+        Typ="X2"
+        Cap="REVERSE"
+        Hint="offsets angle by 180 deg. (for linked doors)"}
+     spawnflags: = 
+       {Txt="&"
+        Typ="X4"
+        Cap="DOOR_DONT_LINK"
+        Hint="don't link to any other touching door"}
+     spawnflags: = 
+       {Txt="&"
+        Typ="X8"
+        Cap="TOGGLE"
+        Hint="needs trigger for closing as well as opening"}
+     spawnflags: = 
+       {Txt="&"
+        Typ="X16"
+        Cap="SLIDE"
+        Hint="? prolly obsolete"}
+     spawnflags: = 
+       {Txt="&"
+        Typ="X32"
+        Cap="NORMAL_MOVE"
+        Hint="constant rather than accelerating movement"}
+     spawnflags: = 
+       {Txt="&"
+        Typ="X64"
+        Cap="REMOVE_PP"
+        Hint="for puzzle_doors, takes puzzle_piece off player"}
+     spawnflags: = 
+       {Txt="&"
+        Typ="X128"
+        Cap="NO_PP"
+        Hint="won't open if player has puzzle_pieces."}
+    }
+    func_door_rotating:form =
+    {
+     Help = "NOTE: Doors can now be activated and deactivated with the appropriate triggers."
+     flags: =
+        {Txt = "&" Hint = "angle door opens to (if 0 or undefined, door won't open!)"
+       }
+     soundtype: =
+        {Txt = "&" Hint = "sound it makes"
+      Typ="C"
+      Items="0) silent" $0D "1) metal swinging" $0D "2) stone sliding" $0D "3) big wood swing" $0D "4) wood swinging" $0D "5) big wood sliding" $0D "6) drawbridge" $0D "7) rotating walksway" $0D "8) big metal sliding" $0D "9) pendulum singing"
+      values="0" $0D "1" $0D "2" $0D "3" $0D "4" $0D "5" $0D "6" $0D "7" $0D "8" $0D "9"
+       }
+     wait: =
+        {Txt = "&" Hint = "time to reclose, default=3, -1 = never return"
+       }
+     abslight: =
+        {Txt = "&" Hint = "inherent glow, value between 0 and 1"
+       }
+     dmg: =
+        {Txt = "&" Hint = "damage inflicted on player who blocks motion"
+       }
+     health: =
+        {Txt = "&" Hint = "if specified, door can be activate by damage"
+       }
+     speed: =
+        {Txt = "&" Hint = "speed of movement, default = 100"
+       }
+     delay: =
+        {Txt = "&" Hint = "delay before door opens"
+       }
+     message: =
+        {Txt = "&" Hint = "# of message displayed on triggered or shot door that hasn't been opened." $0D "  (use #message to give text instead of number))"
+       }
+    more: = {
+      Typ="B"
+      Txt="triggering"
+      Cap="Push"
+      Form="door_trigger:form"
+      Hint="specifics for triggering with doors"
+    }
+    more: = {
+      Typ="B"
+      Txt="puzzles"
+      Cap="Push"
+      Form="puzzles:form"
+      Hint="specifics for puzzle-doors"
+    }
+     flags2: =
+        {Txt = "&" Hint = "damage when touched (doesn't work with ordinary doors, sigh)"
+       }
+     angle: =
+        {Txt = "&" Hint = "rotates orientation of door; can be used with X-AXIS/Y-AXIS spawnflags" $0D " to make trapdoors at various angles"
+       }
+     spawnflags: = 
+       {Txt="&"
+        Typ="X1"
+        Cap="START_OPEN"
+        Hint="starts in post-movement position, & operates in reverse"}
+     spawnflags: = 
+       {Txt="&"
+        Typ="X2"
+        Cap="REVERSE"
+        Hint="offsets angle by 180 deg. (for linked doors)"}
+     spawnflags: = 
+       {Txt="&"
+        Typ="X4"
+        Cap="DOOR_DONT_LINK"
+        Hint="don't link to any other touching door"}
+     spawnflags: = 
+       {Txt="&"
+        Typ="X8"
+        Cap="REMOVE_PP"
+        Hint="for puzzle_doors, takes puzzle_piece off player"}
+     spawnflags: = 
+       {Txt="&"
+        Typ="X16"
+        Cap="NO_PP"
+        Hint="won't open if player has puzzle_pieces."}
+     spawnflags: = 
+       {Txt="&"
+        Typ="X32"
+        Cap="TOGGLE"
+        Hint="needs trigger for closing as well as opening"}
+     spawnflags: = 
+       {Txt="&"
+        Typ="X64"
+        Cap="X_AXIS"
+        Hint="door revolves around X_AXIS (trapdoor; can appear with angle key)"}
+     spawnflags: = 
+       {Txt="&"
+        Typ="X128"
+        Cap="Y_AXIS"
+        Hint="door revolves around Y_AXIS (trapdoor; can appear with angle key)"}
+    }
+    func_monsterspawn_spot_mp:form =
+    {
+     Help = "All this does is mark where to spawn monsters for a spawn spot."
+     bbox = '-16 -16 0 16 16 56'
+     aflag: =
+        {Txt = "&" Hint = "position in generation cycle, Required"
+       }
+     angle: =
+        {Txt = "&" Hint = "direction spawned monster faces "
+       }
+     dflags: =
+        {Txt = "&" Hint = "`if dflags is set to 1, the spawner will wait its wait value every time it fails to spawn a monster'" $0D "  So it is written in ai.hc.  If you can interpret this, please containt tiglari@hexenworld.com"
+       }
+     spawnername: =
+        {Txt = "&" Hint = "shared with func_monsterspawner_mp"
+       }
+     spawnflags: = 
+       {Txt="&"
+        Typ="X1"
+        Cap="ICE_ARCHER"
+        Hint="No hint yet"}
+     spawnflags: = 
+       {Txt="&"
+        Typ="X2"
+        Cap="ICE_IMP"
+        Hint="No hint yet"}
+     spawnflags: = 
+       {Txt="&"
+        Typ="X4"
+        Cap="SNOW_LEOPARD"
+        Hint="No hint yet"}
+     spawnflags: = 
+       {Txt="&"
+        Typ="X8"
+        Cap="WERETOGER"
+        Hint="No hint yet"}
+     spawnflags: = 
+       {Txt="&"
+        Typ="X16"
+        Cap="YAKMAN"
+        Hint="No hint yet"}
+     spawnflags: = 
+       {Txt="&"
+        Typ="X32"
+        Cap="ONDEATH"
+        Hint="No hint yet"}
+     spawnflags: = 
+       {Txt="&"
+        Typ="X64"
+        Cap="QUIET"
+        Hint="No hint yet"}
+     spawnflags: = 
+       {Txt="&"
+        Typ="X128"
+        Cap="TRIGGERONLY"
+        Hint="No hint yet"}
+     cnt: =
+        {Txt = "&" Hint = "probably best  not used"
+       }
+     wait: =
+        {Txt = "&" Hint = "time till next spawning, don't use with TRIGGERONLY spawnflag"
+       }
+    }
+    func_monsterspawner_mp:form =
+    {
+     Help = "If something is blocking the spawnspot, this will telefrag it as long as it's not a living entity (flags2&FL_ALIVE)"
+     bbox = '-16 -16 0 16 16 56'
+     angle: =
+        {Txt = "&" Hint = "direction spawned monsters start out facing"
+       }
+     cnt: =
+        {Txt = "&" Hint = "number of monsters to spawn, default = 17"
+       }
+     dflags: =
+        {Txt = "&" Hint = "`if dflags is set to 1, the spawner will wait its wait value every time it fails to spawn a monster'" $0D "  So it is written in ai.hc.  If you can interpret this, please containt tiglari@hexenworld.com"
+       }
+     spawnername: =
+        {Txt = "&" Hint = "shared with func_monsterspawner_mp"
+       }
+     spawnflags: = 
+       {Txt="&"
+        Typ="X1"
+        Cap="ICE_ARCHER"
+        Hint="No hint yet"}
+     spawnflags: = 
+       {Txt="&"
+        Typ="X2"
+        Cap="ICE_IMP"
+        Hint="No hint yet"}
+     spawnflags: = 
+       {Txt="&"
+        Typ="X4"
+        Cap="SNOW_LEOPARD"
+        Hint="No hint yet"}
+     spawnflags: = 
+       {Txt="&"
+        Typ="X8"
+        Cap="WERETOGER"
+        Hint="No hint yet"}
+     spawnflags: = 
+       {Txt="&"
+        Typ="X16"
+        Cap="YAKMAN"
+        Hint="No hint yet"}
+     spawnflags: = 
+       {Txt="&"
+        Typ="X32"
+        Cap="ONDEATH"
+        Hint="No hint yet"}
+     spawnflags: = 
+       {Txt="&"
+        Typ="X64"
+        Cap="QUIET"
+        Hint="No hint yet"}
+     spawnflags: = 
+       {Txt="&"
+        Typ="X128"
+        Cap="TRIGGERONLY"
+        Hint="No hint yet"}
+     targetname: =
+        {Txt = "&" Hint = "monster spawns when triggered (otherwise at start of level)"
+       }
+     wait: =
+        {Txt = "&" Hint = "time before next monster is triggered.  Doesn't go well with TRIGGERONLY spawnflag"
+       }
+     frags: =
+        {Txt = "&" Hint = "appears frequently with value 1, function unknown, co-occurs with target"
+       }
+     target: =
+        {Txt = "&" Hint = "is triggered when spawner spawns monster, seems to co-occur with frags = 1."
+       }
+    }
+    func_train_mp:form =
+    {
+     Help = "Hexen 2 MISSION PACK version Trains"
+     target: =
+        {Txt = "&" Hint = "targets path_corner that train starts out at"
+       }
+     targetname: =
+        {Txt = "&" Hint = "start/stop toggle (if undefined, train runs continuously)"
+       }
+     abslight: =
+        {Txt = "&" Hint = "inherent glow, value between 0 and 1"
+       }
+     dmg: =
+        {Txt = "&" Hint = "damage train does when blocked, default = 2"
+       }
+     soundtype: =
+        {Txt = "&" Hint = "sound it makes"
+      Typ="C"
+      Items="0) silent" $0D "1) ratchet" $0D "2) pullies" $0D "3) sliding" $0D "4) normal ?" $0D "5) medieval ?" $0D "6) guillotine ?" $0D "7) chain ?" $0D "8) rolling boulder" $0D "9) spinnin prayer wheel"
+      values="0" $0D "1" $0D "2" $0D "3" $0D "4" $0D "5" $0D "6" $0D "7" $0D "8" $0D "9"
+       }
+     level: =
+        {Txt = "&" Hint = "value of 1 keeps sound from attenuating with distance"
+       }
+     speed: =
+        {Txt = "&" Hint = "speed of movement, default = 100" $0D "(overridden by speed of path_corner)"
+       }
+     thingtype: =
+        {Txt = "&" Hint = "determines noise and deathstyle, default = 0 (patterned glass)"
+      Typ="C"
+      Items="0) glass (default)" $0D "1) stone" $0D "2) wood" $0D "3) metal" $0D "4) flesh" $0D "5) fire" $0D "6) clay" $0D "7) leaves" $0D "8) hay" $0D "9) brownstone" $0D "10) cloth" $0D "11) wood-leaf" $0D "12) wood-metal" $0D "13) wood-stone" $0D "14) metal-stone" $0D "15) metal-cloth" $0D "16) webs" $0D "17) glass" $0D "18) ice" $0D "19) clearglass" $0D "20) redglass"
+      values="0" $0D "1" $0D "2" $0D "3" $0D "4" $0D "5" $0D "6" $0D "7" $0D "8" $0D "9" $0D "10" $0D "11" $0D "12" $0D "13" $0D "14" $0D "15" $0D "16" $0D "17" $0D "18" $0D "19" $0D "20"
+       }
+     health: =
+        {Txt = "&" Hint = "if specified, makes it destructible with given value."
+       }
+     wait: =
+        {Txt = "&" Hint = "waiting time at path_corner"
+       }
+     weaponmodel: =
+        {Txt = "&" Hint = "name of model that appears instead of brush"
+       }
+     pausetime: =
+        {Txt = "&" Hint = "value is a number, time till train explodes" $0D "after arrival at a path_corner with wait-value of 02."
+       }
+     netname: =
+        {Txt = "&" Hint = "shared with following camera_remote"
+       }
+     angles: =
+        {Txt = "&" Hint = "Y Z X (mangle) rotation of model associated with the train."
+       }
+     angle: =
+        {Txt = "&" Hint = "rotates a model associated with the train around the Z axis"
+       }
+     spawnflags: = 
+       {Txt="&"
+        Typ="X1"
+        Cap="INVISIBLE"
+        Hint="No hint yet"}
+     spawnflags: = 
+       {Txt="&"
+        Typ="X2"
+        Cap="TOGGLE"
+        Hint="stop at each path_corner, wait till re-triggered"}
+     spawnflags: = 
+       {Txt="&"
+        Typ="X4"
+        Cap="RETURN"
+        Hint="seems to do nothing"}
+     spawnflags: = 
+       {Txt="&"
+        Typ="X8"
+        Cap="TRANSLUCENT"
+        Hint="train is translucent"}
+     spawnflags: = 
+       {Txt="&"
+        Typ="X16"
+        Cap="SLOPE"
+        Hint="tends to point direction motion"}
+     spawnflags: = 
+       {Txt="&"
+        Typ="X32"
+        Cap="ANGLEMATCH"
+        Hint="train's model (if any) changes orientation with train"}
+     spawnflags: = 
+       {Txt="&"
+        Typ="X64"
+        Cap="USE_ORIGIN"
+        Hint="place train w.r.t. origin rather than sw botton corenr"}
+     spawnflags: = 
+       {Txt="&"
+        Typ="X128"
+        Cap="ANGLEWAIT"
+        Hint="rotates at path_corners, then moves on."}
+    }
+    func_wall:form =
+    {
+     Help = "This is just a solid wall if not inhibitted"
+     abslight: =
+        {Txt = "&" Hint = "inherent glow, value between 0 and 1"
+       }
+     angle: =
+        {Txt = "&" Hint = "the direction it starts out pointing"
+       }
+     spawnflags: = 
+       {Txt="&"
+        Typ="X1"
+        Cap="TRANSLUCENT"
+        Hint="makes it translucent"}
+     targetname: =
+        {Txt = "&" Hint = "is triggered if entity with matching target fires, or deleted if entity with matching killtarget fires."
+       }
+    }
+    fx_friction_change:form =
+    {
+     Help = "ONLY WORKS ON PLAYERS"
+     friction: =
+        {Txt = "&" Hint = ".25 makes nice ice."
+       }
+    }
+    info_null:form =
+    {
+     Help = "Used as a positional target for spotlights, etc."
+     bbox = '-4 -4 -4 4 4 4'
+     spawnflags: = 
+       {Txt="&"
+        Typ="X1"
+        Cap="DON"
+        Hint="'T REMOVE info_null is not removed when map starts"}
+     targetname: =
+        {Txt = "&" Hint = "is triggered if entity with matching target fires, or deleted if entity with matching killtarget fires."
+       }
+    }
+    info_player_coop:point:form =
+    {
+     Help = "No help yet, peer into the Eye of Horus."
+     angle: =
+        {Txt = "&" Hint = "the direction it starts out pointing"
+       }
+     map: =
+        {Txt = "&" Hint = "name of map to go to on triggering or death of bearer."
+       }
+     playerclass: =
+        {Txt = "&" Hint = "no hint yet"
+       }
+	spawnflags: = {Txt="&" Typ="X1" Cap = "1"}
+	spawnflags: = {Txt="&" Typ="X2" Cap = "2"}
+	spawnflags: = {Txt="&" Typ="X4" Cap = "4"}
+	spawnflags: = {Txt="&" Typ="X8" Cap = "8"}
+	spawnflags: = {Txt="&" Typ="X16" Cap = "16"}
+	spawnflags: = {Txt="&" Typ="X32" Cap = "32"}
+	spawnflags: = {Txt="&" Typ="X64" Cap = "64"}
+	spawnflags: = {Txt="&" Typ="X128" Cap = "128"}
+
+     target: =
+        {Txt = "&" Hint = "object with matching targetname is triggered."
+       }
+     targetname: =
+        {Txt = "&" Hint = "is triggered if entity with matching target fires, or deleted if entity with matching killtarget fires."
+       }
+    }
+    info_player_start:form =
+    {
+     Help = "The normal starting point for a level."
+     bbox = '-16 -16 0 16 16 56'
+     targetname: =
+        {Txt = "&" Hint = "is triggered if entity with matching target fires, or deleted if entity with matching killtarget fires."
+       }
+    }
+    light_burner:form =
+    {
+     Help = "A brazier"
+     bbox = '-16 -18 -52 16 18 0'
+	 mdl = "models/burner.mdl"
+     angle: =
+        {Txt = "&" Hint = "the direction it starts out pointing"
+       }
+     light: =
+        {Txt = "&" Hint = "intensity, default = 200 (pretty dim, max = 800)"
+       }
+     health: =
+        {Txt = "&" Hint = "how hard to break"
+       }
+     dmg: =
+        {Txt = "&" Hint = "damage it does; default = .2, requires HURT spawnflat"
+       }
+     targetname: =
+        {Txt = "&" Hint = "goes on/off when triggered"
+       }
+     style: =
+        {Txt = "&" Hint = "0 default, 1 fast flicker, 2 steady fade in and out, 3 erratic flicker" $0D " 32-63 for linking banks of lights.  Trigger should share style-value."
+       }
+     spawnflags: = 
+       {Txt="&"
+        Typ="X1"
+        Cap="STARTLOW"
+        Hint="light starts off"}
+     spawnflags: = 
+       {Txt="&"
+        Typ="X2"
+        Cap="HURT"
+        Hint="damages touching player"}
+    }
+    light_candle:form =
+    {
+     Help = "Default light value is 300"
+     bbox = '-7 -7 -15 7 7 31'
+	 mdl = "models/candle.mdl"
+     angle: =
+        {Txt = "&" Hint = "the direction it starts out pointing"
+       }
+     light: =
+        {Txt = "&" Hint = "intensity, default = 200 (pretty dim, max = 800)"
+       }
+     health: =
+        {Txt = "&" Hint = "how hard to break"
+       }
+     dmg: =
+        {Txt = "&" Hint = "damage it does; default = .2, requires HURT spawnflat"
+       }
+     targetname: =
+        {Txt = "&" Hint = "goes on/off when triggered"
+       }
+     style: =
+        {Txt = "&" Hint = "0 default, 1 fast flicker, 2 steady fade in and out, 3 erratic flicker" $0D " 32-63 for linking banks of lights.  Trigger should share style-value."
+       }
+     spawnflags: = 
+       {Txt="&"
+        Typ="X1"
+        Cap="STARTLOW"
+        Hint="light starts off"}
+     spawnflags: = 
+       {Txt="&"
+        Typ="X2"
+        Cap="HURT"
+        Hint="damages touching player"}
+    }
+    light_flame_large_yellow:form =
+    {
+     Help = "Large yellow flame"
+     bbox = '-10 -10 -13 10 10 41'
+     angle: =
+        {Txt = "&" Hint = "the direction it starts out pointing"
+       }
+     light: =
+        {Txt = "&" Hint = "intensity, default = 200 (pretty dim, max = 800)"
+       }
+     health: =
+        {Txt = "&" Hint = "how hard to break"
+       }
+     dmg: =
+        {Txt = "&" Hint = "damage it does; default = .2, requires HURT spawnflat"
+       }
+     targetname: =
+        {Txt = "&" Hint = "goes on/off when triggered"
+       }
+     style: =
+        {Txt = "&" Hint = "0 default, 1 fast flicker, 2 steady fade in and out, 3 erratic flicker" $0D " 32-63 for linking banks of lights.  Trigger should share style-value."
+       }
+     spawnflags: = 
+       {Txt="&"
+        Typ="X1"
+        Cap="STARTLOW"
+        Hint="light starts off"}
+     spawnflags: = 
+       {Txt="&"
+        Typ="X2"
+        Cap="HURT"
+        Hint="damages touching player"}
+    }
+    light_flame_small_yellow:form =
+    {
+     Help = "Small yellow flame ball"
+     bbox = '-8 -8 -8 8 8 8'
+     angle: =
+        {Txt = "&" Hint = "the direction it starts out pointing"
+       }
+     light: =
+        {Txt = "&" Hint = "intensity, default = 200 (pretty dim, max = 800)"
+       }
+     health: =
+        {Txt = "&" Hint = "how hard to break"
+       }
+     dmg: =
+        {Txt = "&" Hint = "damage it does; default = .2, requires HURT spawnflat"
+       }
+     targetname: =
+        {Txt = "&" Hint = "goes on/off when triggered"
+       }
+     style: =
+        {Txt = "&" Hint = "0 default, 1 fast flicker, 2 steady fade in and out, 3 erratic flicker" $0D " 32-63 for linking banks of lights.  Trigger should share style-value."
+       }
+     spawnflags: = 
+       {Txt="&"
+        Typ="X1"
+        Cap="STARTLOW"
+        Hint="light starts off"}
+     spawnflags: = 
+       {Txt="&"
+        Typ="X2"
+        Cap="HURT"
+        Hint="damages touching player"}
+    }
+    light_lantern:form =
+    {
+     Help = "A castle lantern that hangs on the wall"
+     bbox = '-11 -11 -41 11 11 5'
+	 mdl = "models/lantern.mdl"
+     angle: =
+        {Txt = "&" Hint = "the direction it starts out pointing"
+       }
+     light: =
+        {Txt = "&" Hint = "intensity, default = 200 (pretty dim, max = 800)"
+       }
+     health: =
+        {Txt = "&" Hint = "how hard to break"
+       }
+     targetname: =
+        {Txt = "&" Hint = "goes on/off when triggered"
+       }
+     style: =
+        {Txt = "&" Hint = "0 default, 1 fast flicker, 2 steady fade in and out, 3 erratic flicker" $0D " 32-63 for linking banks of lights.  Trigger should share style-value."
+       }
+     spawnflags: = 
+       {Txt="&"
+        Typ="X1"
+        Cap="STARTLOW"
+        Hint="light starts off"}
+    }
+    light_newfire:form =
+    {
+     Help = "Large yellow flame"
+     bbox = '-10 -10 -13 10 10 41'
+	 mdl = "models/newfire.mdl"
+     angle: =
+        {Txt = "&" Hint = "the direction it starts out pointing"
+       }
+     light: =
+        {Txt = "&" Hint = "intensity, default = 200 (pretty dim, max = 800)"
+       }
+     health: =
+        {Txt = "&" Hint = "how hard to break"
+       }
+     dmg: =
+        {Txt = "&" Hint = "damage it does; default = .2, requires HURT spawnflat"
+       }
+     targetname: =
+        {Txt = "&" Hint = "goes on/off when triggered"
+       }
+     style: =
+        {Txt = "&" Hint = "0 default, 1 fast flicker, 2 steady fade in and out, 3 erratic flicker" $0D " 32-63 for linking banks of lights.  Trigger should share style-value."
+       }
+     spawnflags: = 
+       {Txt="&"
+        Typ="X1"
+        Cap="STARTLOW"
+        Hint="light starts off"}
+     spawnflags: = 
+       {Txt="&"
+        Typ="X2"
+        Cap="HURT"
+        Hint="damages touching player"}
+    }
+    light_palace_torch:form =
+    {
+     Help = "A palatial wall torch of some sort"
+     bbox = '-19 -19 0 19 19 35'
+	 mdl = "models/palight.mdl"
+     angle: =
+        {Txt = "&" Hint = "the direction it starts out pointing"
+       }
+     light: =
+        {Txt = "&" Hint = "intensity, default = 200 (pretty dim, max = 800)"
+       }
+     health: =
+        {Txt = "&" Hint = "how hard to break"
+       }
+     dmg: =
+        {Txt = "&" Hint = "damage it does; default = .2, requires HURT spawnflat"
+       }
+     targetname: =
+        {Txt = "&" Hint = "goes on/off when triggered"
+       }
+     style: =
+        {Txt = "&" Hint = "0 default, 1 fast flicker, 2 steady fade in and out, 3 erratic flicker" $0D " 32-63 for linking banks of lights.  Trigger should share style-value."
+       }
+     spawnflags: = 
+       {Txt="&"
+        Typ="X1"
+        Cap="STARTLOW"
+        Hint="light starts off"}
+     spawnflags: = 
+       {Txt="&"
+        Typ="X2"
+        Cap="HURT"
+        Hint="damages touching player"}
+    }
+    monster_archer:form =
+    {
+     Help = "The Archer Knight monster"
+     bbox = '-16 -16 0 16 16 50'
+     angle: =
+        {Txt = "&" Hint = "direction monster starts out facing"
+       }
+     spawnflags: = 
+       {Txt="&"
+        Typ="X1"
+        Cap="AMBUSH"
+        Hint="supposedly, monster only wakes up on sight of player, not other aroused monster " $0D " sometimes seems to work for me, sometimes not."}
+     spawnflags: = 
+       {Txt="&"
+        Typ="X2"
+        Cap="STUCK"
+        Hint="makes some monsters stand in position (golems stuck, archers shooting) until triggered"}
+     spawnflags: = 
+       {Txt="&"
+        Typ="X64"
+        Cap="FROZEN"
+        Hint="monster starts frozen, trigger to thaw."}
+     health: =
+        {Txt = "&" Hint = "how hard to kill (archer=80, horsehack=325 default)"
+       }
+    more: = {
+      Typ="B"
+      Txt="containment"
+      Cap="Push"
+      Form="containment:form"
+      Hint="specifics for monsters to contain things"
+    }
+    more: = {
+      Typ="B"
+      Txt="triggering"
+      Cap="Push"
+      Form="monster_triggers:form"
+      Hint="specs for monsters to trigger and be triggered"
+    }
+    }
+    monster_archer_ice:form =
+    {
+     Help = "The Archer monster with snow booties"
+     bbox = '-16 -16 0 16 16 50'
+	 mdl = "models/archer2.mdl"
+     angle: =
+        {Txt = "&" Hint = "direction monster starts out facing"
+       }
+     spawnflags: = 
+       {Txt="&"
+        Typ="X1"
+        Cap="AMBUSH"
+        Hint="supposedly, monster only wakes up on sight of player, not other aroused monster " $0D " sometimes seems to work for me, sometimes not."}
+     spawnflags: = 
+       {Txt="&"
+        Typ="X2"
+        Cap="STUCK"
+        Hint="makes some monsters stand in position (golems stuck, archers shooting) until triggered"}
+     spawnflags: = 
+       {Txt="&"
+        Typ="X64"
+        Cap="FROZEN"
+        Hint="monster starts frozen, trigger to thaw."}
+     health: =
+        {Txt = "&" Hint = "how hard to kill (archer=80, horsehack=325 default)"
+       }
+    more: = {
+      Typ="B"
+      Txt="containment"
+      Cap="Push"
+      Form="containment:form"
+      Hint="specifics for monsters to contain things"
+    }
+    more: = {
+      Typ="B"
+      Txt="triggering"
+      Cap="Push"
+      Form="monster_triggers:form"
+      Hint="specs for monsters to trigger and be triggered"
+    }
+    }
+    monster_archer_lord:form =
+    {
+     Help = "The Archer Lord monster"
+     bbox = '-16 -16 0 16 16 50'
+     angle: =
+        {Txt = "&" Hint = "direction monster starts out facing"
+       }
+     spawnflags: = 
+       {Txt="&"
+        Typ="X1"
+        Cap="AMBUSH"
+        Hint="supposedly, monster only wakes up on sight of player, not other aroused monster " $0D " sometimes seems to work for me, sometimes not."}
+     spawnflags: = 
+       {Txt="&"
+        Typ="X2"
+        Cap="STUCK"
+        Hint="makes some monsters stand in position (golems stuck, archers shooting) until triggered"}
+     spawnflags: = 
+       {Txt="&"
+        Typ="X64"
+        Cap="FROZEN"
+        Hint="monster starts frozen, trigger to thaw."}
+     health: =
+        {Txt = "&" Hint = "how hard to kill (archer=80, horsehack=325 default)"
+       }
+    more: = {
+      Typ="B"
+      Txt="containment"
+      Cap="Push"
+      Form="containment:form"
+      Hint="specifics for monsters to contain things"
+    }
+    more: = {
+      Typ="B"
+      Txt="triggering"
+      Cap="Push"
+      Form="monster_triggers:form"
+      Hint="specs for monsters to trigger and be triggered"
+    }
+    }
+    monster_buddha:form =
+    {
+     Help = "The Big Baddie"
+     bbox = '-16 -16 0 16 16 50'
+	 mdl = "models/pravus.mdl"
+     angle: =
+        {Txt = "&" Hint = "the direction it starts out pointing"
+       }
+     netname: =
+        {Txt = "&" Hint = "linking things."
+       }
+     target: =
+        {Txt = "&" Hint = "object with matching targetname is triggered."
+       }
+     targetname: =
+        {Txt = "&" Hint = "is triggered if entity with matching target fires, or deleted if entity with matching killtarget fires."
+       }
+    }
+    monster_eidolon_weakling:form =
+    {
+     Help = "Not quite the big bad ugly boss guy"
+     bbox = '-100 -100 0 100 100 666'
+     angle: =
+        {Txt = "&" Hint = "the direction it starts out pointing"
+       }
+     targetname: =
+        {Txt = "&" Hint = "activates on first triggering, drops dead on second"
+       }
+    }
+    monster_fallen_angel:form =
+    {
+     Help = "New item for QuakeEd"
+     bbox = '-14 -14 -41 14 14 23'
+     angle: =
+        {Txt = "&" Hint = "direction monster starts out facing"
+       }
+     spawnflags: = 
+       {Txt="&"
+        Typ="X1"
+        Cap="AMBUSH"
+        Hint="supposedly, monster only wakes up on sight of player, not other aroused monster " $0D " sometimes seems to work for me, sometimes not."}
+     spawnflags: = 
+       {Txt="&"
+        Typ="X2"
+        Cap="STUCK"
+        Hint="makes some monsters stand in position (golems stuck, archers shooting) until triggered"}
+     spawnflags: = 
+       {Txt="&"
+        Typ="X64"
+        Cap="FROZEN"
+        Hint="monster starts frozen, trigger to thaw."}
+     health: =
+        {Txt = "&" Hint = "how hard to kill (archer=80, horsehack=325 default)"
+       }
+    more: = {
+      Typ="B"
+      Txt="containment"
+      Cap="Push"
+      Form="containment:form"
+      Hint="specifics for monsters to contain things"
+    }
+    more: = {
+      Typ="B"
+      Txt="triggering"
+      Cap="Push"
+      Form="monster_triggers:form"
+      Hint="specs for monsters to trigger and be triggered"
+    }
+    }
+    monster_fallen_angel_lord:form =
+    {
+     Help = "New item for QuakeEd"
+     bbox = '-14 -14 -41 14 14 23'
+     angle: =
+        {Txt = "&" Hint = "direction monster starts out facing"
+       }
+     spawnflags: = 
+       {Txt="&"
+        Typ="X1"
+        Cap="AMBUSH"
+        Hint="supposedly, monster only wakes up on sight of player, not other aroused monster " $0D " sometimes seems to work for me, sometimes not."}
+     spawnflags: = 
+       {Txt="&"
+        Typ="X2"
+        Cap="STUCK"
+        Hint="makes some monsters stand in position (golems stuck, archers shooting) until triggered"}
+     spawnflags: = 
+       {Txt="&"
+        Typ="X64"
+        Cap="FROZEN"
+        Hint="monster starts frozen, trigger to thaw."}
+     health: =
+        {Txt = "&" Hint = "how hard to kill (archer=80, horsehack=325 default)"
+       }
+    more: = {
+      Typ="B"
+      Txt="containment"
+      Cap="Push"
+      Form="containment:form"
+      Hint="specifics for monsters to contain things"
+    }
+    more: = {
+      Typ="B"
+      Txt="triggering"
+      Cap="Push"
+      Form="monster_triggers:form"
+      Hint="specs for monsters to trigger and be triggered"
+    }
+    }
+    monster_fish:form =
+    {
+     Help = "Ambient Fish"
+     bbox = '-16 -16 -8 16 16 8'
+     angle: =
+        {Txt = "&" Hint = "direction monster starts out facing"
+       }
+     spawnflags: = 
+       {Txt="&"
+        Typ="X1"
+        Cap="AMBUSH"
+        Hint="supposedly, monster only wakes up on sight of player, not other aroused monster " $0D " sometimes seems to work for me, sometimes not."}
+     spawnflags: = 
+       {Txt="&"
+        Typ="X2"
+        Cap="STUCK"
+        Hint="makes some monsters stand in position (golems stuck, archers shooting) until triggered"}
+     spawnflags: = 
+       {Txt="&"
+        Typ="X64"
+        Cap="FROZEN"
+        Hint="monster starts frozen, trigger to thaw."}
+     health: =
+        {Txt = "&" Hint = "how hard to kill (archer=80, horsehack=325 default)"
+       }
+    more: = {
+      Typ="B"
+      Txt="containment"
+      Cap="Push"
+      Form="containment:form"
+      Hint="specifics for monsters to contain things"
+    }
+    more: = {
+      Typ="B"
+      Txt="triggering"
+      Cap="Push"
+      Form="monster_triggers:form"
+      Hint="specs for monsters to trigger and be triggered"
+    }
+    }
+    monster_golem_bronze:form =
+    {
+     Help = "Bronze Golem."
+     bbox = '-64 -64 0 64 64 194'
+     angle: =
+        {Txt = "&" Hint = "direction monster starts out facing"
+       }
+     spawnflags: = 
+       {Txt="&"
+        Typ="X1"
+        Cap="AMBUSH"
+        Hint="supposedly, monster only wakes up on sight of player, not other aroused monster " $0D " sometimes seems to work for me, sometimes not."}
+     spawnflags: = 
+       {Txt="&"
+        Typ="X2"
+        Cap="STUCK"
+        Hint="makes some monsters stand in position (golems stuck, archers shooting) until triggered"}
+     spawnflags: = 
+       {Txt="&"
+        Typ="X64"
+        Cap="FROZEN"
+        Hint="monster starts frozen, trigger to thaw."}
+     health: =
+        {Txt = "&" Hint = "how hard to kill (archer=80, horsehack=325 default)"
+       }
+    more: = {
+      Typ="B"
+      Txt="containment"
+      Cap="Push"
+      Form="containment:form"
+      Hint="specifics for monsters to contain things"
+    }
+    more: = {
+      Typ="B"
+      Txt="triggering"
+      Cap="Push"
+      Form="monster_triggers:form"
+      Hint="specs for monsters to trigger and be triggered"
+    }
+    }
+    monster_golem_iron:form =
+    {
+     Help = "Iron Golem."
+     bbox = '-55 -55 0 55 55 120'
+     angle: =
+        {Txt = "&" Hint = "direction monster starts out facing"
+       }
+     spawnflags: = 
+       {Txt="&"
+        Typ="X1"
+        Cap="AMBUSH"
+        Hint="supposedly, monster only wakes up on sight of player, not other aroused monster " $0D " sometimes seems to work for me, sometimes not."}
+     spawnflags: = 
+       {Txt="&"
+        Typ="X2"
+        Cap="STUCK"
+        Hint="makes some monsters stand in position (golems stuck, archers shooting) until triggered"}
+     spawnflags: = 
+       {Txt="&"
+        Typ="X64"
+        Cap="FROZEN"
+        Hint="monster starts frozen, trigger to thaw."}
+     health: =
+        {Txt = "&" Hint = "how hard to kill (archer=80, horsehack=325 default)"
+       }
+    more: = {
+      Typ="B"
+      Txt="containment"
+      Cap="Push"
+      Form="containment:form"
+      Hint="specifics for monsters to contain things"
+    }
+    more: = {
+      Typ="B"
+      Txt="triggering"
+      Cap="Push"
+      Form="monster_triggers:form"
+      Hint="specs for monsters to trigger and be triggered"
+    }
+    }
+    monster_golem_stone:form =
+    {
+     Help = "Stone Golem."
+     bbox = '-32 -32 0 32 32 88'
+     angle: =
+        {Txt = "&" Hint = "direction monster starts out facing"
+       }
+     spawnflags: = 
+       {Txt="&"
+        Typ="X1"
+        Cap="AMBUSH"
+        Hint="supposedly, monster only wakes up on sight of player, not other aroused monster " $0D " sometimes seems to work for me, sometimes not."}
+     spawnflags: = 
+       {Txt="&"
+        Typ="X2"
+        Cap="STUCK"
+        Hint="makes some monsters stand in position (golems stuck, archers shooting) until triggered"}
+     spawnflags: = 
+       {Txt="&"
+        Typ="X64"
+        Cap="FROZEN"
+        Hint="monster starts frozen, trigger to thaw."}
+     health: =
+        {Txt = "&" Hint = "how hard to kill (archer=80, horsehack=325 default)"
+       }
+    more: = {
+      Typ="B"
+      Txt="containment"
+      Cap="Push"
+      Form="containment:form"
+      Hint="specifics for monsters to contain things"
+    }
+    more: = {
+      Typ="B"
+      Txt="triggering"
+      Cap="Push"
+      Form="monster_triggers:form"
+      Hint="specs for monsters to trigger and be triggered"
+    }
+    }
+    monster_hydra:form =
+    {
+     Help = "New item for QuakeEd"
+     bbox = '-40 -40 -42 40 40 42'
+     angle: =
+        {Txt = "&" Hint = "direction monster starts out facing"
+       }
+     spawnflags: = 
+       {Txt="&"
+        Typ="X1"
+        Cap="AMBUSH"
+        Hint="supposedly, monster only wakes up on sight of player, not other aroused monster " $0D " sometimes seems to work for me, sometimes not."}
+     spawnflags: = 
+       {Txt="&"
+        Typ="X2"
+        Cap="STUCK"
+        Hint="makes some monsters stand in position (golems stuck, archers shooting) until triggered"}
+     spawnflags: = 
+       {Txt="&"
+        Typ="X64"
+        Cap="FROZEN"
+        Hint="monster starts frozen, trigger to thaw."}
+     health: =
+        {Txt = "&" Hint = "how hard to kill (archer=80, horsehack=325 default)"
+       }
+    more: = {
+      Typ="B"
+      Txt="containment"
+      Cap="Push"
+      Form="containment:form"
+      Hint="specifics for monsters to contain things"
+    }
+    more: = {
+      Typ="B"
+      Txt="triggering"
+      Cap="Push"
+      Form="monster_triggers:form"
+      Hint="specs for monsters to trigger and be triggered"
+    }
+    }
+    monster_imp_fire:form =
+    {
+     Help = "Grunt monster - common.  Shoots a fireball. Can only be killed by defrosting it."
+     bbox = '-16 -16 0 16 16 55'
+     angle: =
+        {Txt = "&" Hint = "direction monster starts out facing"
+       }
+     health: =
+        {Txt = "&" Hint = "how hard to kill (archer=80, horsehack=325 default)"
+       }
+    more: = {
+      Typ="B"
+      Txt="containment"
+      Cap="Push"
+      Form="containment:form"
+      Hint="specifics for monsters to contain things"
+    }
+    more: = {
+      Typ="B"
+      Txt="triggering"
+      Cap="Push"
+      Form="monster_triggers:form"
+      Hint="specs for monsters to trigger and be triggered"
+    }
+     wait: =
+        {Txt = "&" Hint = "-1 value makes it indestructible decoration"
+       }
+     spawnflags: = 
+       {Txt="&"
+        Typ="X1"
+        Cap="AMBUSH"
+        Hint="monster only wakes up on sight of player, not other aroused monster"}
+     spawnflags: = 
+       {Txt="&"
+        Typ="X16"
+        Cap="GARGOYLE"
+        Hint="a statue until attacked or inspected"}
+     spawnflags: = 
+       {Txt="&"
+        Typ="X64"
+        Cap="FROZEN"
+        Hint="monster starts frozen, trigger to thaw."}
+    }
+    monster_imp_ice:form =
+    {
+     Help = "Grunt monster - common.  Shoots multiple ice shards. Can only be killed by defrosting it."
+     bbox = '-16 -16 0 16 16 55'
+     angle: =
+        {Txt = "&" Hint = "direction monster starts out facing"
+       }
+     spawnflags: = 
+       {Txt="&"
+        Typ="X1"
+        Cap="AMBUSH"
+        Hint="monster only wakes up on sight of player, not other aroused monster"}
+     spawnflags: = 
+       {Txt="&"
+        Typ="X16"
+        Cap="GARGOYLE"
+        Hint="a statue until attacked or inspected"}
+     spawnflags: = 
+       {Txt="&"
+        Typ="X64"
+        Cap="FROZEN"
+        Hint="monster starts frozen, trigger to thaw."}
+     health: =
+        {Txt = "&" Hint = "how hard to kill (archer=80, horsehack=325 default)"
+       }
+    more: = {
+      Typ="B"
+      Txt="containment"
+      Cap="Push"
+      Form="containment:form"
+      Hint="specifics for monsters to contain things"
+    }
+    more: = {
+      Typ="B"
+      Txt="triggering"
+      Cap="Push"
+      Form="monster_triggers:form"
+      Hint="specs for monsters to trigger and be triggered"
+    }
+     wait: =
+        {Txt = "&" Hint = "-1 value makes it indestructible decoration"
+       }
+     spawnflags: = 
+       {Txt="&"
+        Typ="X1"
+        Cap="AMBUSH"
+        Hint="monster only wakes up on sight of player, not other aroused monster"}
+     spawnflags: = 
+       {Txt="&"
+        Typ="X16"
+        Cap="GARGOYLE"
+        Hint="a statue until attacked or inspected"}
+     spawnflags: = 
+       {Txt="&"
+        Typ="X64"
+        Cap="FROZEN"
+        Hint="monster starts frozen, trigger to thaw."}
+    }
+    monster_medusa_green:form =
+    {
+     Help = "The medusa monster with its nasty sharp pointy teeth"
+     bbox = '-16 -16 0 16 16 56'
+     angle: =
+        {Txt = "&" Hint = "direction monster starts out facing"
+       }
+     spawnflags: = 
+       {Txt="&"
+        Typ="X1"
+        Cap="AMBUSH"
+        Hint="supposedly, monster only wakes up on sight of player, not other aroused monster " $0D " sometimes seems to work for me, sometimes not."}
+     spawnflags: = 
+       {Txt="&"
+        Typ="X2"
+        Cap="STUCK"
+        Hint="makes some monsters stand in position (golems stuck, archers shooting) until triggered"}
+     spawnflags: = 
+       {Txt="&"
+        Typ="X64"
+        Cap="FROZEN"
+        Hint="monster starts frozen, trigger to thaw."}
+     health: =
+        {Txt = "&" Hint = "how hard to kill (archer=80, horsehack=325 default)"
+       }
+    more: = {
+      Typ="B"
+      Txt="containment"
+      Cap="Push"
+      Form="containment:form"
+      Hint="specifics for monsters to contain things"
+    }
+    more: = {
+      Typ="B"
+      Txt="triggering"
+      Cap="Push"
+      Form="monster_triggers:form"
+      Hint="specs for monsters to trigger and be triggered"
+    }
+    }
+    monster_mummy:form =
+    {
+     Help = "No, it's not Keith Richards or Bob Dylan."
+     bbox = '-16 -16 0 16 16 50'
+     angle: =
+        {Txt = "&" Hint = "direction monster starts out facing"
+       }
+     spawnflags: = 
+       {Txt="&"
+        Typ="X1"
+        Cap="AMBUSH"
+        Hint="supposedly, monster only wakes up on sight of player, not other aroused monster " $0D " sometimes seems to work for me, sometimes not."}
+     spawnflags: = 
+       {Txt="&"
+        Typ="X2"
+        Cap="STUCK"
+        Hint="makes some monsters stand in position (golems stuck, archers shooting) until triggered"}
+     spawnflags: = 
+       {Txt="&"
+        Typ="X64"
+        Cap="FROZEN"
+        Hint="monster starts frozen, trigger to thaw."}
+     health: =
+        {Txt = "&" Hint = "how hard to kill (archer=80, horsehack=325 default)"
+       }
+    more: = {
+      Typ="B"
+      Txt="containment"
+      Cap="Push"
+      Form="containment:form"
+      Hint="specifics for monsters to contain things"
+    }
+    more: = {
+      Typ="B"
+      Txt="triggering"
+      Cap="Push"
+      Form="monster_triggers:form"
+      Hint="specs for monsters to trigger and be triggered"
+    }
+    }
+    monster_mummy_lord:form =
+    {
+     Help = "He's big, he's bad, he's wrapped in moldy bandages - he's the mummy."
+     bbox = '-16 -16 0 16 16 50'
+     angle: =
+        {Txt = "&" Hint = "direction monster starts out facing"
+       }
+     spawnflags: = 
+       {Txt="&"
+        Typ="X1"
+        Cap="AMBUSH"
+        Hint="supposedly, monster only wakes up on sight of player, not other aroused monster " $0D " sometimes seems to work for me, sometimes not."}
+     spawnflags: = 
+       {Txt="&"
+        Typ="X2"
+        Cap="STUCK"
+        Hint="makes some monsters stand in position (golems stuck, archers shooting) until triggered"}
+     spawnflags: = 
+       {Txt="&"
+        Typ="X64"
+        Cap="FROZEN"
+        Hint="monster starts frozen, trigger to thaw."}
+     health: =
+        {Txt = "&" Hint = "how hard to kill (archer=80, horsehack=325 default)"
+       }
+    more: = {
+      Typ="B"
+      Txt="containment"
+      Cap="Push"
+      Form="containment:form"
+      Hint="specifics for monsters to contain things"
+    }
+    more: = {
+      Typ="B"
+      Txt="triggering"
+      Cap="Push"
+      Form="monster_triggers:form"
+      Hint="specs for monsters to trigger and be triggered"
+    }
+    }
+    monster_pentacles:form =
+    {
+     Help = "All sides must be at least 8 away from the walls"
+     bbox = '-8 -8 -8 8 8 8'
+     angle: =
+        {Txt = "&" Hint = "direction monster starts out facing"
+       }
+     health: =
+        {Txt = "&" Hint = "how hard to kill (archer=80, horsehack=325 default)"
+       }
+    more: = {
+      Typ="B"
+      Txt="containment"
+      Cap="Push"
+      Form="containment:form"
+      Hint="specifics for monsters to contain things"
+    }
+    more: = {
+      Typ="B"
+      Txt="triggering"
+      Cap="Push"
+      Form="monster_triggers:form"
+      Hint="specs for monsters to trigger and be triggered"
+    }
+     skin: =
+        {Txt = "&" Hint = "skin displayed by model"
+      Typ="C"
+      Items="0) rocky brown (default)" $0D "1) snowy white"
+      values="0" $0D "1"
+       }
+    }
+    monster_scorpion_black:form =
+    {
+     Help = "Black scorpion."
+     bbox = '-10 -10 0 10 10 64'
+     angle: =
+        {Txt = "&" Hint = "direction monster starts out facing"
+       }
+     spawnflags: = 
+       {Txt="&"
+        Typ="X1"
+        Cap="AMBUSH"
+        Hint="supposedly, monster only wakes up on sight of player, not other aroused monster " $0D " sometimes seems to work for me, sometimes not."}
+     spawnflags: = 
+       {Txt="&"
+        Typ="X2"
+        Cap="STUCK"
+        Hint="makes some monsters stand in position (golems stuck, archers shooting) until triggered"}
+     spawnflags: = 
+       {Txt="&"
+        Typ="X64"
+        Cap="FROZEN"
+        Hint="monster starts frozen, trigger to thaw."}
+     health: =
+        {Txt = "&" Hint = "how hard to kill (archer=80, horsehack=325 default)"
+       }
+    more: = {
+      Typ="B"
+      Txt="containment"
+      Cap="Push"
+      Form="containment:form"
+      Hint="specifics for monsters to contain things"
+    }
+    more: = {
+      Typ="B"
+      Txt="triggering"
+      Cap="Push"
+      Form="monster_triggers:form"
+      Hint="specs for monsters to trigger and be triggered"
+    }
+    }
+    monster_scorpion_yellow:form =
+    {
+     Help = "Yellow scorpion."
+     bbox = '-10 -10 0 10 10 64'
+     angle: =
+        {Txt = "&" Hint = "direction monster starts out facing"
+       }
+     spawnflags: = 
+       {Txt="&"
+        Typ="X1"
+        Cap="AMBUSH"
+        Hint="supposedly, monster only wakes up on sight of player, not other aroused monster " $0D " sometimes seems to work for me, sometimes not."}
+     spawnflags: = 
+       {Txt="&"
+        Typ="X2"
+        Cap="STUCK"
+        Hint="makes some monsters stand in position (golems stuck, archers shooting) until triggered"}
+     spawnflags: = 
+       {Txt="&"
+        Typ="X64"
+        Cap="FROZEN"
+        Hint="monster starts frozen, trigger to thaw."}
+     health: =
+        {Txt = "&" Hint = "how hard to kill (archer=80, horsehack=325 default)"
+       }
+    more: = {
+      Typ="B"
+      Txt="containment"
+      Cap="Push"
+      Form="containment:form"
+      Hint="specifics for monsters to contain things"
+    }
+    more: = {
+      Typ="B"
+      Txt="triggering"
+      Cap="Push"
+      Form="monster_triggers:form"
+      Hint="specs for monsters to trigger and be triggered"
+    }
+    }
+    monster_skull_wizard:form =
+    {
+     Help = "A skull wizard"
+     bbox = '-24 -24 0 24 24 64'
+     angle: =
+        {Txt = "&" Hint = "direction monster starts out facing"
+       }
+     spawnflags: = 
+       {Txt="&"
+        Typ="X1"
+        Cap="AMBUSH"
+        Hint="supposedly, monster only wakes up on sight of player, not other aroused monster " $0D " sometimes seems to work for me, sometimes not."}
+     spawnflags: = 
+       {Txt="&"
+        Typ="X2"
+        Cap="STUCK"
+        Hint="makes some monsters stand in position (golems stuck, archers shooting) until triggered"}
+     spawnflags: = 
+       {Txt="&"
+        Typ="X64"
+        Cap="FROZEN"
+        Hint="monster starts frozen, trigger to thaw."}
+     health: =
+        {Txt = "&" Hint = "how hard to kill (archer=80, horsehack=325 default)"
+       }
+    more: = {
+      Typ="B"
+      Txt="containment"
+      Cap="Push"
+      Form="containment:form"
+      Hint="specifics for monsters to contain things"
+    }
+    more: = {
+      Typ="B"
+      Txt="triggering"
+      Cap="Push"
+      Form="monster_triggers:form"
+      Hint="specs for monsters to trigger and be triggered"
+    }
+    }
+    monster_skull_wizard_lord:form =
+    {
+     Help = "A skull wizard lord"
+     bbox = '-24 -24 0 24 24 64'
+     angle: =
+        {Txt = "&" Hint = "direction monster starts out facing"
+       }
+     spawnflags: = 
+       {Txt="&"
+        Typ="X1"
+        Cap="AMBUSH"
+        Hint="supposedly, monster only wakes up on sight of player, not other aroused monster " $0D " sometimes seems to work for me, sometimes not."}
+     spawnflags: = 
+       {Txt="&"
+        Typ="X2"
+        Cap="STUCK"
+        Hint="makes some monsters stand in position (golems stuck, archers shooting) until triggered"}
+     spawnflags: = 
+       {Txt="&"
+        Typ="X64"
+        Cap="FROZEN"
+        Hint="monster starts frozen, trigger to thaw."}
+     health: =
+        {Txt = "&" Hint = "how hard to kill (archer=80, horsehack=325 default)"
+       }
+    more: = {
+      Typ="B"
+      Txt="containment"
+      Cap="Push"
+      Form="containment:form"
+      Hint="specifics for monsters to contain things"
+    }
+    more: = {
+      Typ="B"
+      Txt="triggering"
+      Cap="Push"
+      Form="monster_triggers:form"
+      Hint="specs for monsters to trigger and be triggered"
+    }
+    }
+    monster_spider_red_large:form =
+    {
+     Help = "Large red spider."
+     bbox = '-16 -16 0 16 16 26'
+     angle: =
+        {Txt = "&" Hint = "direction monster starts out facing"
+       }
+     health: =
+        {Txt = "&" Hint = "how hard to kill (archer=80, horsehack=325 default)"
+       }
+    more: = {
+      Typ="B"
+      Txt="containment"
+      Cap="Push"
+      Form="containment:form"
+      Hint="specifics for monsters to contain things"
+    }
+    more: = {
+      Typ="B"
+      Txt="triggering"
+      Cap="Push"
+      Form="monster_triggers:form"
+      Hint="specs for monsters to trigger and be triggered"
+    }
+     spawnflags: = 
+       {Txt="&"
+        Typ="X1"
+        Cap="AMBUSH"
+        Hint="monster only wakes up on sight of player, not other aroused monster"}
+     spawnflags: = 
+       {Txt="&"
+        Typ="X32"
+        Cap="ONWALL"
+        Hint="spider starts out the wall, should be placed at least 8 pixels away"}
+     spawnflags: = 
+       {Txt="&"
+        Typ="X64"
+        Cap="FROZEN"
+        Hint="monster starts frozen, trigger to thaw."}
+    }
+    monster_spider_red_small:form =
+    {
+     Help = "Small red spider."
+     bbox = '-12 -12 0 12 12 16'
+     angle: =
+        {Txt = "&" Hint = "direction monster starts out facing"
+       }
+     health: =
+        {Txt = "&" Hint = "how hard to kill (archer=80, horsehack=325 default)"
+       }
+    more: = {
+      Typ="B"
+      Txt="containment"
+      Cap="Push"
+      Form="containment:form"
+      Hint="specifics for monsters to contain things"
+    }
+    more: = {
+      Typ="B"
+      Txt="triggering"
+      Cap="Push"
+      Form="monster_triggers:form"
+      Hint="specs for monsters to trigger and be triggered"
+    }
+     spawnflags: = 
+       {Txt="&"
+        Typ="X1"
+        Cap="AMBUSH"
+        Hint="monster only wakes up on sight of player, not other aroused monster"}
+     spawnflags: = 
+       {Txt="&"
+        Typ="X32"
+        Cap="ONWALL"
+        Hint="spider starts out the wall, should be placed at least 8 pixels away"}
+     spawnflags: = 
+       {Txt="&"
+        Typ="X64"
+        Cap="FROZEN"
+        Hint="monster starts frozen, trigger to thaw."}
+    }
+    monster_spider_yellow_large:form =
+    {
+     Help = "Large yellow spider."
+     bbox = '-16 -16 0 16 16 26'
+     angle: =
+        {Txt = "&" Hint = "direction monster starts out facing"
+       }
+     health: =
+        {Txt = "&" Hint = "how hard to kill (archer=80, horsehack=325 default)"
+       }
+    more: = {
+      Typ="B"
+      Txt="containment"
+      Cap="Push"
+      Form="containment:form"
+      Hint="specifics for monsters to contain things"
+    }
+    more: = {
+      Typ="B"
+      Txt="triggering"
+      Cap="Push"
+      Form="monster_triggers:form"
+      Hint="specs for monsters to trigger and be triggered"
+    }
+     spawnflags: = 
+       {Txt="&"
+        Typ="X1"
+        Cap="AMBUSH"
+        Hint="monster only wakes up on sight of player, not other aroused monster"}
+     spawnflags: = 
+       {Txt="&"
+        Typ="X32"
+        Cap="ONWALL"
+        Hint="spider starts out the wall, should be placed at least 8 pixels away"}
+     spawnflags: = 
+       {Txt="&"
+        Typ="X64"
+        Cap="FROZEN"
+        Hint="monster starts frozen, trigger to thaw."}
+    }
+    monster_spider_yellow_small:form =
+    {
+     Help = "Small yellow spider."
+     bbox = '-12 -12 0 12 12 16'
+     angle: =
+        {Txt = "&" Hint = "direction monster starts out facing"
+       }
+     health: =
+        {Txt = "&" Hint = "how hard to kill (archer=80, horsehack=325 default)"
+       }
+    more: = {
+      Typ="B"
+      Txt="containment"
+      Cap="Push"
+      Form="containment:form"
+      Hint="specifics for monsters to contain things"
+    }
+    more: = {
+      Typ="B"
+      Txt="triggering"
+      Cap="Push"
+      Form="monster_triggers:form"
+      Hint="specs for monsters to trigger and be triggered"
+    }
+     spawnflags: = 
+       {Txt="&"
+        Typ="X1"
+        Cap="AMBUSH"
+        Hint="monster only wakes up on sight of player, not other aroused monster"}
+     spawnflags: = 
+       {Txt="&"
+        Typ="X32"
+        Cap="ONWALL"
+        Hint="spider starts out the wall, should be placed at least 8 pixels away"}
+     spawnflags: = 
+       {Txt="&"
+        Typ="X64"
+        Cap="FROZEN"
+        Hint="monster starts frozen, trigger to thaw."}
+    }
+    monster_triggers:form =
+    {
+     Help = "No help yet, peer into the Eye of Horus."
+     target: =
+        {Txt = "&" Hint = "triggered when monster dies"
+       }
+     targetname: =
+        {Txt = "&" Hint = "monster wakes up when triggered (unfreezes if frozen;" $0D "disappears if killtargetted)"
+       }
+     killtarget: =
+        {Txt = "&" Hint = "targetted entity vanishes when monster is killed" $0D "  Not sure that this is good for anything, but there it is anyway..."
+       }
+     netname: =
+        {Txt = "&" Hint = "useable with trigger_check and maybe some others"
+       }
+    }
+    monster_werejaguar:form =
+    {
+     Help = "WereCat with jaguar skin"
+     bbox = '-16 -16 0 16 16 56'
+     angle: =
+        {Txt = "&" Hint = "direction monster starts out facing"
+       }
+     spawnflags: = 
+       {Txt="&"
+        Typ="X1"
+        Cap="AMBUSH"
+        Hint="supposedly, monster only wakes up on sight of player, not other aroused monster " $0D " sometimes seems to work for me, sometimes not."}
+     spawnflags: = 
+       {Txt="&"
+        Typ="X2"
+        Cap="STUCK"
+        Hint="makes some monsters stand in position (golems stuck, archers shooting) until triggered"}
+     spawnflags: = 
+       {Txt="&"
+        Typ="X64"
+        Cap="FROZEN"
+        Hint="monster starts frozen, trigger to thaw."}
+     health: =
+        {Txt = "&" Hint = "how hard to kill (archer=80, horsehack=325 default)"
+       }
+    more: = {
+      Typ="B"
+      Txt="containment"
+      Cap="Push"
+      Form="containment:form"
+      Hint="specifics for monsters to contain things"
+    }
+    more: = {
+      Typ="B"
+      Txt="triggering"
+      Cap="Push"
+      Form="monster_triggers:form"
+      Hint="specs for monsters to trigger and be triggered"
+    }
+    }
+    monster_werepanther:form =
+    {
+     Help = "WereCat with panther skin"
+     bbox = '-16 -16 0 16 16 56'
+     angle: =
+        {Txt = "&" Hint = "direction monster starts out facing"
+       }
+     spawnflags: = 
+       {Txt="&"
+        Typ="X1"
+        Cap="AMBUSH"
+        Hint="supposedly, monster only wakes up on sight of player, not other aroused monster " $0D " sometimes seems to work for me, sometimes not."}
+     spawnflags: = 
+       {Txt="&"
+        Typ="X2"
+        Cap="STUCK"
+        Hint="makes some monsters stand in position (golems stuck, archers shooting) until triggered"}
+     spawnflags: = 
+       {Txt="&"
+        Typ="X64"
+        Cap="FROZEN"
+        Hint="monster starts frozen, trigger to thaw."}
+     health: =
+        {Txt = "&" Hint = "how hard to kill (archer=80, horsehack=325 default)"
+       }
+    more: = {
+      Typ="B"
+      Txt="containment"
+      Cap="Push"
+      Form="containment:form"
+      Hint="specifics for monsters to contain things"
+    }
+    more: = {
+      Typ="B"
+      Txt="triggering"
+      Cap="Push"
+      Form="monster_triggers:form"
+      Hint="specs for monsters to trigger and be triggered"
+    }
+    }
+    monster_weresnowleopard:form =
+    {
+     Help = "WereCat with snow leopard skin"
+     bbox = '-16 -16 0 16 16 56'
+	 mdl = "models/snowleopard.mdl"
+     angle: =
+        {Txt = "&" Hint = "direction monster starts out facing"
+       }
+     spawnflags: = 
+       {Txt="&"
+        Typ="X1"
+        Cap="AMBUSH"
+        Hint="supposedly, monster only wakes up on sight of player, not other aroused monster " $0D " sometimes seems to work for me, sometimes not."}
+     spawnflags: = 
+       {Txt="&"
+        Typ="X2"
+        Cap="STUCK"
+        Hint="makes some monsters stand in position (golems stuck, archers shooting) until triggered"}
+     spawnflags: = 
+       {Txt="&"
+        Typ="X64"
+        Cap="FROZEN"
+        Hint="monster starts frozen, trigger to thaw."}
+     health: =
+        {Txt = "&" Hint = "how hard to kill (archer=80, horsehack=325 default)"
+       }
+    more: = {
+      Typ="B"
+      Txt="containment"
+      Cap="Push"
+      Form="containment:form"
+      Hint="specifics for monsters to contain things"
+    }
+    more: = {
+      Typ="B"
+      Txt="triggering"
+      Cap="Push"
+      Form="monster_triggers:form"
+      Hint="specs for monsters to trigger and be triggered"
+    }
+    }
+    monster_weretiger:form =
+    {
+     Help = "WereCat with Siberian Tiger skin"
+     bbox = '-16 -16 0 16 16 56'
+	 mdl = "models/snowleopard.mdl"
+     angle: =
+        {Txt = "&" Hint = "direction monster starts out facing"
+       }
+     spawnflags: = 
+       {Txt="&"
+        Typ="X1"
+        Cap="AMBUSH"
+        Hint="supposedly, monster only wakes up on sight of player, not other aroused monster " $0D " sometimes seems to work for me, sometimes not."}
+     spawnflags: = 
+       {Txt="&"
+        Typ="X2"
+        Cap="STUCK"
+        Hint="makes some monsters stand in position (golems stuck, archers shooting) until triggered"}
+     spawnflags: = 
+       {Txt="&"
+        Typ="X64"
+        Cap="FROZEN"
+        Hint="monster starts frozen, trigger to thaw."}
+     health: =
+        {Txt = "&" Hint = "how hard to kill (archer=80, horsehack=325 default)"
+       }
+    more: = {
+      Typ="B"
+      Txt="containment"
+      Cap="Push"
+      Form="containment:form"
+      Hint="specifics for monsters to contain things"
+    }
+    more: = {
+      Typ="B"
+      Txt="triggering"
+      Cap="Push"
+      Form="monster_triggers:form"
+      Hint="specs for monsters to trigger and be triggered"
+    }
+    }
+    monster_yakman:form =
+    {
+     Help = "The Yakman Cometh... and the Yakman taketh away..."
+     bbox = '-28 -28 0 28 28 80'
+	 mdl = "models/yakman.mdl"
+     angle: =
+        {Txt = "&" Hint = "direction monster starts out facing"
+       }
+     health: =
+        {Txt = "&" Hint = "how hard to kill (archer=80, horsehack=325 default)"
+       }
+    more: = {
+      Typ="B"
+      Txt="containment"
+      Cap="Push"
+      Form="containment:form"
+      Hint="specifics for monsters to contain things"
+    }
+    more: = {
+      Typ="B"
+      Txt="triggering"
+      Cap="Push"
+      Form="monster_triggers:form"
+      Hint="specs for monsters to trigger and be triggered"
+    }
+     skin: =
+        {Txt = "&" Hint = "0 likes ice, 3 to charge, 2 in between"
+      Typ="C"
+      Items="0) white" $0D "1) brown" $0D "3) black"
+      values="0" $0D "1" $0D "2"
+       }
+    }
+    obj_book_o_the_dead:form =
+    {
+     Help = "Book O' The Dead"
+     bbox = '-10 -10 0 10 10 4'
+     angles: =
+        {Txt = "&" Hint = "orientation: 25 -270 0 in game"
+       }
+     health: =
+        {Txt = "&" Hint = "lots o' 9's in game, dunno why"
+       }
+     scale: =
+        {Txt = "&" Hint = "size scaling, 2.2 in game"
+       }
+    more: = {
+      Typ="B"
+      Txt="containment"
+      Cap="Push"
+      Form="containment:form"
+      Hint="specifics for objects to contain things"
+    }
+    more: = {
+      Typ="B"
+      Txt="triggering"
+      Cap="Push"
+      Form="object_triggers:form"
+      Hint="specifics for objects to trigger and be triggered"
+    }
+    }
+    obj_catapult2:form =
+    {
+     Help = "not_usable - can't be used, stuck in the up position"
+     bbox = '-150 -150 0 150 150 28'
+     angle: =
+        {Txt = "&" Hint = "the direction it starts out pointing"
+       }
+     health: =
+        {Txt = "&" Hint = "default = 1000"
+       }
+     speed: =
+        {Txt = "&" Hint = "supposedly launch speed, default = 300, not sure if works"
+       }
+     targetname: =
+        {Txt = "&" Hint = "targettable for remote fiting"
+       }
+     thingtype: =
+        {Txt = "&" Hint = "determines noise and deathstyle, default = 0 (patterned glass)"
+      Typ="C"
+      Items="0) glass (default)" $0D "1) stone" $0D "2) wood" $0D "3) metal" $0D "4) flesh" $0D "5) fire" $0D "6) clay" $0D "7) leaves" $0D "8) hay" $0D "9) brownstone" $0D "10) cloth" $0D "11) wood-leaf" $0D "12) wood-metal" $0D "13) wood-stone" $0D "14) metal-stone" $0D "15) metal-cloth" $0D "16) webs" $0D "17) glass" $0D "18) ice" $0D "19) clearglass" $0D "20) redglass"
+      values="0" $0D "1" $0D "2" $0D "3" $0D "4" $0D "5" $0D "6" $0D "7" $0D "8" $0D "9" $0D "10" $0D "11" $0D "12" $0D "13" $0D "14" $0D "15" $0D "16" $0D "17" $0D "18" $0D "19" $0D "20"
+       }
+     wait: =
+        {Txt = "&" Hint = "time to reset, default = 3"
+       }
+     spawnflags: = 
+       {Txt="&"
+        Typ="X1"
+        Cap="NOT_USEABLE"
+        Hint="stuck in up position."}
+    more: = {
+      Typ="B"
+      Txt="containment"
+      Cap="Push"
+      Form="containment:form"
+      Hint="specifics for objects to contain things"
+    }
+    more: = {
+      Typ="B"
+      Txt="triggering"
+      Cap="Push"
+      Form="object_triggers:form"
+      Hint="specifics for objects to trigger and be triggered"
+    }
+    }
+    obj_chinese_kite_lamp:form =
+    {
+     Help = "Hnaging chinese kite lamp or something"
+     bbox = '-22 -22 -120 22 22 0'
+	 mdl = "models/ch-kite.mdl"
+     angle: =
+        {Txt = "&" Hint = "the direction it starts out pointing"
+       }
+     abslight: =
+        {Txt = "&" Hint = "inherent glow, value between 0 and 1"
+       }
+     health: =
+        {Txt = "&" Hint = "how much damage needed to kill."
+       }
+     scale: =
+        {Txt = "&" Hint = "multiplier for size; values between .5 and 2.5 seem to work."
+       }
+    more: = {
+      Typ="B"
+      Txt="containment"
+      Cap="Push"
+      Form="containment:form"
+      Hint="specifics for objects to contain things"
+    }
+    more: = {
+      Typ="B"
+      Txt="triggering"
+      Cap="Push"
+      Form="object_triggers:form"
+      Hint="specifics for objects to trigger and be triggered"
+    }
+    }
+    obj_chinese_sign:form =
+    {
+     Help = "Hanging chinese sign or something"
+     bbox = '-48 -48 -66 48 48 0'
+	 mdl = "models/ch-hang.mdl"
+     angle: =
+        {Txt = "&" Hint = "the direction it starts out pointing"
+       }
+     abslight: =
+        {Txt = "&" Hint = "inherent glow, value between 0 and 1"
+       }
+     health: =
+        {Txt = "&" Hint = "how much damage needed to kill."
+       }
+     scale: =
+        {Txt = "&" Hint = "multiplier for size; values between .5 and 2.5 seem to work."
+       }
+    more: = {
+      Typ="B"
+      Txt="containment"
+      Cap="Push"
+      Form="containment:form"
+      Hint="specifics for objects to contain things"
+    }
+    more: = {
+      Typ="B"
+      Txt="triggering"
+      Cap="Push"
+      Form="object_triggers:form"
+      Hint="specifics for objects to trigger and be triggered"
+    }
+    }
+    obj_demon_statue:form =
+    {
+     Help = "demoness statue?"
+     bbox = '-16 -16 0 16 16 44'
+	 mdl = "models/demstat.mdl"
+     angle: =
+        {Txt = "&" Hint = "the direction it starts out pointing"
+       }
+     abslight: =
+        {Txt = "&" Hint = "inherent glow, value between 0 and 1"
+       }
+     health: =
+        {Txt = "&" Hint = "how much damage needed to kill."
+       }
+     scale: =
+        {Txt = "&" Hint = "multiplier for size; values between .5 and 2.5 seem to work."
+       }
+    more: = {
+      Typ="B"
+      Txt="containment"
+      Cap="Push"
+      Form="containment:form"
+      Hint="specifics for objects to contain things"
+    }
+    more: = {
+      Typ="B"
+      Txt="triggering"
+      Cap="Push"
+      Form="object_triggers:form"
+      Hint="specifics for objects to trigger and be triggered"
+    }
+    }
+    obj_samurai:form =
+    {
+     Help = "sam the statue"
+     bbox = '-32 -32 0 32 32 72'
+	 mdl = "models/samurai.mdl"
+     angle: =
+        {Txt = "&" Hint = "the direction it starts out pointing"
+       }
+     abslight: =
+        {Txt = "&" Hint = "inherent glow, value between 0 and 1"
+       }
+     health: =
+        {Txt = "&" Hint = "how much damage needed to kill."
+       }
+     scale: =
+        {Txt = "&" Hint = "multiplier for size; values between .5 and 2.5 seem to work."
+       }
+    more: = {
+      Typ="B"
+      Txt="containment"
+      Cap="Push"
+      Form="containment:form"
+      Hint="specifics for objects to contain things"
+    }
+    more: = {
+      Typ="B"
+      Txt="triggering"
+      Cap="Push"
+      Form="object_triggers:form"
+      Hint="specifics for objects to trigger and be triggered"
+    }
+    }
+    obj_shiva:form =
+    {
+     Help = "4 armed lady with hip action"
+     bbox = '-32 -32 0 32 32 72'
+	 mdl = "models/4arm.mdl"
+     angle: =
+        {Txt = "&" Hint = "the direction it starts out pointing"
+       }
+     targetname: =
+        {Txt = "&" Hint = "trigger to make him dance!"
+       }
+     abslight: =
+        {Txt = "&" Hint = "inherent glow, value between 0 and 1"
+       }
+     health: =
+        {Txt = "&" Hint = "how much damage needed to kill."
+       }
+     scale: =
+        {Txt = "&" Hint = "multiplier for size; values between .5 and 2.5 seem to work."
+       }
+    more: = {
+      Typ="B"
+      Txt="containment"
+      Cap="Push"
+      Form="containment:form"
+      Hint="specifics for objects to contain things"
+    }
+    more: = {
+      Typ="B"
+      Txt="triggering"
+      Cap="Push"
+      Form="object_triggers:form"
+      Hint="specifics for objects to trigger and be triggered"
+    }
+    }
+    obj_skeleton:form =
+    {
+     Help = "A skeleton laying face up, arms crossed"
+     bbox = '-37 -12 0 37 12 11'
+	 mdl = "models/skeleton.mdl"
+     angle: =
+        {Txt = "&" Hint = "the direction it starts out pointing"
+       }
+     abslight: =
+        {Txt = "&" Hint = "inherent glow, value between 0 and 1"
+       }
+     health: =
+        {Txt = "&" Hint = "how much damage needed to kill."
+       }
+     scale: =
+        {Txt = "&" Hint = "multiplier for size; values between .5 and 2.5 seem to work."
+       }
+    more: = {
+      Typ="B"
+      Txt="containment"
+      Cap="Push"
+      Form="containment:form"
+      Hint="specifics for objects to contain things"
+    }
+    more: = {
+      Typ="B"
+      Txt="triggering"
+      Cap="Push"
+      Form="object_triggers:form"
+      Hint="specifics for objects to trigger and be triggered"
+    }
+    }
+    obj_skeleton_throne:form =
+    {
+     Help = "Frickin' kick-ass Skeletal King on his Throne O' Bones!"
+     bbox = '-33 -33 -0 33 33 115'
+	 mdl = "models/sk-throne.mdl"
+     angle: =
+        {Txt = "&" Hint = "the direction it starts out pointing"
+       }
+     targetname: =
+        {Txt = "&" Hint = "not sure what targetting this does!"
+       }
+     abslight: =
+        {Txt = "&" Hint = "inherent glow, value between 0 and 1"
+       }
+     health: =
+        {Txt = "&" Hint = "how much damage needed to kill."
+       }
+     scale: =
+        {Txt = "&" Hint = "multiplier for size; values between .5 and 2.5 seem to work."
+       }
+    more: = {
+      Typ="B"
+      Txt="containment"
+      Cap="Push"
+      Form="containment:form"
+      Hint="specifics for objects to contain things"
+    }
+    more: = {
+      Typ="B"
+      Txt="triggering"
+      Cap="Push"
+      Form="object_triggers:form"
+      Hint="specifics for objects to trigger and be triggered"
+    }
+    }
+    obj_snow_corner:form =
+    {
+     Help = "A corner pile of snow, faces south-east if using an angle of 0"
+     bbox = '-41 -55 0 41 55 65'
+	 mdl = "models/snowcrnr.mdl"
+     angle: =
+        {Txt = "&" Hint = "the direction it starts out pointing"
+       }
+     abslight: =
+        {Txt = "&" Hint = "inherent glow, value between 0 and 1"
+       }
+     health: =
+        {Txt = "&" Hint = "how much damage needed to kill."
+       }
+     scale: =
+        {Txt = "&" Hint = "multiplier for size; values between .5 and 2.5 seem to work."
+       }
+    more: = {
+      Typ="B"
+      Txt="containment"
+      Cap="Push"
+      Form="containment:form"
+      Hint="specifics for objects to contain things"
+    }
+    more: = {
+      Typ="B"
+      Txt="triggering"
+      Cap="Push"
+      Form="object_triggers:form"
+      Hint="specifics for objects to trigger and be triggered"
+    }
+    }
+    obj_snow_pile:form =
+    {
+     Help = "pile of snow"
+     bbox = '-52 -52 0 52 52 16'
+	 mdl = "models/snowpile.mdl"
+     angle: =
+        {Txt = "&" Hint = "the direction it starts out pointing"
+       }
+     abslight: =
+        {Txt = "&" Hint = "inherent glow, value between 0 and 1"
+       }
+     health: =
+        {Txt = "&" Hint = "how much damage needed to kill."
+       }
+     scale: =
+        {Txt = "&" Hint = "multiplier for size; values between .5 and 2.5 seem to work."
+       }
+    more: = {
+      Typ="B"
+      Txt="containment"
+      Cap="Push"
+      Form="containment:form"
+      Hint="specifics for objects to contain things"
+    }
+    more: = {
+      Typ="B"
+      Txt="triggering"
+      Cap="Push"
+      Form="object_triggers:form"
+      Hint="specifics for objects to trigger and be triggered"
+    }
+    }
+    obj_snow_wall:form =
+    {
+     Help = "A wide wall of now of snow, faces east if using an angle of 0"
+     bbox = '-83 -83 0 83 83 45'
+	 mdl = "models/snowwall.mdl"
+     angle: =
+        {Txt = "&" Hint = "the direction it starts out pointing"
+       }
+     abslight: =
+        {Txt = "&" Hint = "inherent glow, value between 0 and 1"
+       }
+     health: =
+        {Txt = "&" Hint = "how much damage needed to kill."
+       }
+     scale: =
+        {Txt = "&" Hint = "multiplier for size; values between .5 and 2.5 seem to work."
+       }
+    more: = {
+      Typ="B"
+      Txt="containment"
+      Cap="Push"
+      Form="containment:form"
+      Hint="specifics for objects to contain things"
+    }
+    more: = {
+      Typ="B"
+      Txt="triggering"
+      Cap="Push"
+      Form="object_triggers:form"
+      Hint="specifics for objects to trigger and be triggered"
+    }
+    }
+    obj_stalagmite1:form =
+    {
+     Help = "A tall, thin stalagmite or stalactite"
+     bbox = '-10 -10 -17 10 10 17'
+	 mdl = "models/stlgmt1.mdl"
+     angles: =
+        {Txt = "&" Hint = "typical values are 180 0 0 or 0 0 180"
+       }
+     abslight: =
+        {Txt = "&" Hint = "inherent glow, value between 0 and 1"
+       }
+     health: =
+        {Txt = "&" Hint = "how much damage needed to kill."
+       }
+     scale: =
+        {Txt = "&" Hint = "multiplier for size; values between .5 and 2.5 seem to work."
+       }
+    more: = {
+      Typ="B"
+      Txt="containment"
+      Cap="Push"
+      Form="containment:form"
+      Hint="specifics for objects to contain things"
+    }
+    more: = {
+      Typ="B"
+      Txt="triggering"
+      Cap="Push"
+      Form="object_triggers:form"
+      Hint="specifics for objects to trigger and be triggered"
+    }
+    }
+    obj_stalagmite2:form =
+    {
+     Help = "A thicker stalagmite or stalactite"
+     bbox = '-24 -24 -21 24 24 21'
+	 mdl = "models/stlgmt2.mdl"
+     angles: =
+        {Txt = "&" Hint = "typical values are 180 0 0 or 0 0 180"
+       }
+     abslight: =
+        {Txt = "&" Hint = "inherent glow, value between 0 and 1"
+       }
+     health: =
+        {Txt = "&" Hint = "how much damage needed to kill."
+       }
+     scale: =
+        {Txt = "&" Hint = "multiplier for size; values between .5 and 2.5 seem to work."
+       }
+    more: = {
+      Typ="B"
+      Txt="containment"
+      Cap="Push"
+      Form="containment:form"
+      Hint="specifics for objects to contain things"
+    }
+    more: = {
+      Typ="B"
+      Txt="triggering"
+      Cap="Push"
+      Form="object_triggers:form"
+      Hint="specifics for objects to trigger and be triggered"
+    }
+    }
+    obj_statue_dragon_lion:form =
+    {
+     Help = "Statue of a dragon lion?"
+     bbox = '-25 -25 0 25 25 62'
+	 mdl = "models/draglion.mdl"
+     angle: =
+        {Txt = "&" Hint = "the direction it starts out pointing"
+       }
+     abslight: =
+        {Txt = "&" Hint = "inherent glow, value between 0 and 1"
+       }
+     health: =
+        {Txt = "&" Hint = "how much damage needed to kill."
+       }
+     scale: =
+        {Txt = "&" Hint = "multiplier for size; values between .5 and 2.5 seem to work."
+       }
+    more: = {
+      Typ="B"
+      Txt="containment"
+      Cap="Push"
+      Form="containment:form"
+      Hint="specifics for objects to contain things"
+    }
+    more: = {
+      Typ="B"
+      Txt="triggering"
+      Cap="Push"
+      Form="object_triggers:form"
+      Hint="specifics for objects to trigger and be triggered"
+    }
+    }
+    obj_talking_door:form =
+    {
+     Help = "Talking door animation"
+     bbox = '-16 -16 -10 16 16 10'
+     angle: =
+        {Txt = "&" Hint = "the direction it starts out pointing"
+       }
+     targetname: =
+        {Txt = "&" Hint = " trigger for talking head and spiel"
+       }
+     abslight: =
+        {Txt = "&" Hint = "inherent glow, value between 0 and 1"
+       }
+     health: =
+        {Txt = "&" Hint = "how much damage needed to kill."
+       }
+     scale: =
+        {Txt = "&" Hint = "multiplier for size; values between .5 and 2.5 seem to work."
+       }
+    more: = {
+      Typ="B"
+      Txt="containment"
+      Cap="Push"
+      Form="containment:form"
+      Hint="specifics for objects to contain things"
+    }
+    more: = {
+      Typ="B"
+      Txt="triggering"
+      Cap="Push"
+      Form="object_triggers:form"
+      Hint="specifics for objects to trigger and be triggered"
+    }
+    }
+    object_triggers:form =
+    {
+     Help = "No help yet, peer into the Eye of Horus."
+     target: =
+        {Txt = "&" Hint = "triggered when object is destroyed"
+       }
+     targetname: =
+        {Txt = "&" Hint = "object breaks when triggered" $0D "(or just disappears if killtargetted)"
+       }
+     killtarget: =
+        {Txt = "&" Hint = "targetted entity vanishes when object breaks"
+       }
+     netname: =
+        {Txt = "&" Hint = "useable with trigger_check and maybe some others"
+       }
+    }
+    plaque:form =
+    {
+     Help = "A plaque on the wall a player can read"
+     message: =
+        {Txt = "&" Hint = "value is a number, of message.  Use #message for custom messages."
+       }
+     abslight: =
+        {Txt = "&" Hint = "inherent glow, value between 0 and 1"
+       }
+     targetname: =
+        {Txt = "&" Hint = "targetted by trigger_activate to make readable if DEACTIVATED spawnflag is set"
+       }
+     spawnflags: = 
+       {Txt="&"
+        Typ="X1"
+        Cap="INVISIBLE"
+        Hint="brush can't be seen"}
+     spawnflags: = 
+       {Txt="&"
+        Typ="X2"
+        Cap="DEACTIVATED"
+        Hint="must be activated by a trigger_activate in order to display."}
+     spawnflags: = 
+       {Txt="&"
+        Typ="X4"
+        Cap="NOLINEOFSIGHT"
+        Hint="messages appears regardless of direction player is facing"}
+     spawnflags: = 
+       {Txt="&"
+        Typ="X8"
+        Cap="NOTSOLID"
+        Hint="plassable-thru (but no msg displayed unless NOLINEOFSIGHT is also set)"}
+    }
+    player_sheep:form =
+    {
+     Help = "A sheep player model"
+     bbox = '-8 -8 -0 8 8 32'
+     angle: =
+        {Txt = "&" Hint = "the direction it starts out pointing"
+       }
+     message: =
+        {Txt = "&" Hint = "displayed when sheep killed (usually)"
+       }
+     spawnflags: = 
+       {Txt="&"
+        Typ="X1"
+        Cap="STATIONARY"
+        Hint="doesn't wander"}
+    more: = {
+      Typ="B"
+      Txt="containment"
+      Cap="Push"
+      Form="containment:form"
+      Hint="specifics for sheep to contain things"
+    }
+    }
+    puzzles:form =
+    {
+     Help = "No help yet, peer into the Eye of Horus."
+     puzzle_piece_1: =
+        {Txt = "&" Hint = "value should be name of required piece (5 letters)"
+       }
+     puzzle_piece_2: =
+        {Txt = "&" Hint = "value should be name of required piece (5 letters)"
+       }
+     puzzle_piece_3: =
+        {Txt = "&" Hint = "value should be name of required piece (5 letters)"
+       }
+     puzzle_piece_4: =
+        {Txt = "&" Hint = "value should be name of required piece (5 letters)"
+       }
+     no_puzzle_msg: =
+        {Txt = "&" Hint = "message # if piece lacking; or put #in front of key and give actual text"
+       }
+    }
+    teleport_buddha:form =
+    {
+     Help = "The Buddha's teleport locations"
+     bbox = '-16 -16 0 16 16 50'
+     cnt: =
+        {Txt = "&" Hint = "dunno what this does yet"
+       }
+    }
+    trigger_check:form =
+    {
+     Help = "Checks to see if its child entities are active, and if they are, it triggers"
+     netname: =
+        {Txt = "&" Hint = "shared with triggers it checks"
+       }
+     target: =
+        {Txt = "&" Hint = "object with matching targetname is triggered."
+       }
+     targetname: =
+        {Txt = "&" Hint = "does its checking when triggered"
+       }
+     failtarget: =
+        {Txt = "&" Hint = "triggered if check fails"
+       }
+     wait: =
+        {Txt = "&" Hint = "supposedly how long to wait before checking again;" $0D " haven't gotten this to work"
+       }
+    }
+    trigger_deathtouch:form =
+    {
+     Help = "Kills anything that has a matching targetname and touches it."
+     spawnflags: = 
+       {Txt="&"
+        Typ="X1"
+        Cap="NOTOUCH"
+        Hint="seems useless"}
+     spawnflags: = 
+       {Txt="&"
+        Typ="X2"
+        Cap="ANY_PLAYER"
+        Hint="kills player, but apparently nothing else"}
+     spawnflags: = 
+       {Txt="&"
+        Typ="X4"
+        Cap="GIB"
+        Hint="victim gibbed"}
+     spawnflags: = 
+       {Txt="&"
+        Typ="X8"
+        Cap="INACTIVE"
+        Hint="needs to be activated"}
+     target: =
+        {Txt = "&" Hint = "entity with matching targetname is killed upon touching the trigger," $0D "unless ANY_PLAYER spawnflag is set (then any touching player is killed)."
+       }
+     targetname: =
+        {Txt = "&" Hint = "trigger is activated when fired, if INACTIVE spawnflag is set"
+       }
+    }
+    trigger_hub_intermission:form =
+    {
+     Help = "Triggers the background and text to come up when going into the"
+     bbox = '-8 -8 -8 8 8 8'
+     map: =
+        {Txt = "&" Hint = "map name to warp to"
+       }
+     target: =
+        {Txt = "&" Hint = "targets player start to warp to"
+       }
+     targetname: =
+        {Txt = "&" Hint = "is triggered if entity with matching target fires, or deleted if entity with matching killtarget fires."
+       }
+    }
+    trigger_hurt:form =
+    {
+     Help = "Any object touching this will be hurt"
+     dmg: =
+        {Txt = "&" Hint = "damage per second, 5 apparent min, default 16"
+       }
+     level: =
+        {Txt = "&" Hint = "min. health level to leave player with"
+       }
+     wait: =
+        {Txt = "&" Hint = "time between inflictions"
+       }
+     targetname: =
+        {Txt = "&" Hint = "for activation (requires INACTIVE spawnflag)"
+       }
+     spawnflags: = 
+       {Txt="&"
+        Typ="X1"
+        Cap="PLAYER_ONLY"
+        Hint="No hint yet"}
+     spawnflags: = 
+       {Txt="&"
+        Typ="X2"
+        Cap="MONSTER_ONLY"
+        Hint="No hint yet"}
+     spawnflags: = 
+       {Txt="&"
+        Typ="X8"
+        Cap="INACTIVE"
+        Hint="No hint yet"}
+    }
+    trigger_monsterjump:form =
+    {
+     Help = "Walking monsters that touch this will jump in the direction of the trigger's angle"
+     angle: =
+        {Txt = "&" Hint = "direction of jump"
+       }
+     speed: =
+        {Txt = "&" Hint = "horizontal speed of jump"
+       }
+     height: =
+        {Txt = "&" Hint = "supposedly upward speed, untested"
+       }
+     wait: =
+        {Txt = "&" Hint = "appears with -1 in Eidolon, dunno what it means"
+       }
+     target: =
+        {Txt = "&" Hint = "targetted entity fires when triggered"
+       }
+     targetname: =
+        {Txt = "&" Hint = "for activation (requires DEACTIVATED spawnflag)"
+       }
+     spawnflags: = 
+       {Txt="&"
+        Typ="X1"
+        Cap="DEACTIVATED"
+        Hint="needs to be activated by a trigger_activate"}
+    }
+    trigger_objective:form =
+    {
+     Help = "Trigger Objective"
+     bbox = '-8 -8 -8 8 8 8'
+     frags: =
+        {Txt = "&" Hint = "a number 0-63, indicating the objective on the objectives list"
+       }
+     targetname: =
+        {Txt = "&" Hint = "is triggered if entity with matching target fires, or deleted if entity with matching killtarget fires."
+       }
+     spawnflags: = 
+       {Txt="&"
+        Typ="X1"
+        Cap="FORCE_ON"
+        Hint="dunno what it does"}
+     spawnflags: = 
+       {Txt="&"
+        Typ="X2"
+        Cap="FORCE_OFF"
+        Hint="dunno what it does (duuh..."}
+     target: =
+        {Txt = "&" Hint = "triggers its target when fired (a trigger_deactivate in tibet1)"
+       }
+    }
+    trigger_quake:form =
+    {
+     Help = "Earthquake effect"
+     bbox = '-10 -10 -10 10 10 10'
+     targetname: =
+        {Txt = "&" Hint = "is triggered if entity with matching target fires, or deleted if entity with matching killtarget fires."
+       }
+     lifespan: =
+        {Txt = "&" Hint = "how long it lasts, default = 2, computed from triggering"
+       }
+     target: =
+        {Txt = "&" Hint = "object with matching targetname is triggered."
+       }
+     wait: =
+        {Txt = "&" Hint = "time until start, default = 1, -1 for immediate, ignored by lifespan"
+       }
+     angle: =
+        {Txt = "&" Hint = "direction player must be facing to set it off."
+       }
+    }
+    trigger_setskill:form =
+    {
+     Help = "sets skill level to the value of 'noise'."
+     noise: =
+        {Txt = "&" Hint = "number 0-4 for skill level 4=nightmare"
+       }
+    }
+    trigger_stop:form =
+    {
+     Help = "Stops its target that is moving or rotating"
+     bbox = '-8 -8 -8 8 8 8'
+     target: =
+        {Txt = "&" Hint = "targets train, rotating_brush, etc. to be stopped"
+       }
+     targetname: =
+        {Txt = "&" Hint = "is triggered if entity with matching target fires, or deleted if entity with matching killtarget fires."
+       }
+     spawnflags: = 
+       {Txt="&"
+        Typ="X1"
+        Cap="NOTOUCH"
+        Hint="No hint yet"}
+    }
+    weather_snow:form =
+    {
+     Help = "MG"
+     counter: =
+        {Txt = "&" Hint = "flakes/sec, default=100"
+       }
+     angles: =
+        {Txt = "&" Hint = "not sure about this one, looks fine without it"
+       }
+     anglespeed: =
+        {Txt = "&" Hint = "lateral movement speed, default=125"
+       }
+     movedir: =
+        {Txt = "&" Hint = "triple controlling blow direction, see the Eye of Horus"
+       }
+     speed: =
+        {Txt = "&" Hint = "fallspeed, default=200 (300 might chug up yer puter)"
+       }
+     veer: =
+        {Txt = "&" Hint = "not sure about this one, looks fine without it"
+       }
+     spawnflags: = 
+       {Txt="&"
+        Typ="X1"
+        Cap="FLUFFY"
+        Hint="all largish flakes"}
+     spawnflags: = 
+       {Txt="&"
+        Typ="X2"
+        Cap="MIXED"
+        Hint="mixed sizes"}
+     spawnflags: = 
+       {Txt="&"
+        Typ="X4"
+        Cap="HALF_BRIGHT"
+        Hint="darker snow"}
+     spawnflags: = 
+       {Txt="&"
+        Typ="X8"
+        Cap="NO_MELT"
+        Hint="flakes vanish instantlh"}
+     spawnflags: = 
+       {Txt="&"
+        Typ="X16"
+        Cap="IN_BOUNDS"
+        Hint="don't escape spawning brush"}
+     spawnflags: = 
+       {Txt="&"
+        Typ="X32"
+        Cap="NO_TRANS"
+        Hint="not translucent"}
+    }
+    worldspawn:form =
+    {
+     Help = "Only used for the world entity."
+     wad: =
+        {Txt = "&" Hint = "path to texture wad."
+       }
+     CD: =
+        {Txt = "&" Hint = "track to play"
+       }
+     MIDI: =
+        {Txt = "&" Hint = "file to play"
+       }
+     angle: =
+        {Txt = "&" Hint = "the direction it starts out pointing"
+       }
+     message: =
+        {Txt = "&" Hint = "value is a number, of message.  Use #message for custom messages."
+       }
+     midi: =
+        {Txt = "&" Hint = "no hint yet"
+       }
+     netname: =
+        {Txt = "&" Hint = "name of map, as appears in savegame menu, etc."
+       }
+     worldtype: =
+        {Txt = "&" Hint = "determines features of some objects"
+      Typ="C"
+      Items="0) medieval (default)" $0D "1) meso-american" $0D "2) egyption" $0D "3) roman"
+      values="0" $0D "1" $0D "2" $0D "3"
+       }
+     spawnflags: = 
+       {Txt="&"
+        Typ="X1"
+        Cap="POP"
+        Hint="activates mission-pack behavior for some entities"}
+    }
+
+
+
+  }  // END ENTITY FORMS
+}

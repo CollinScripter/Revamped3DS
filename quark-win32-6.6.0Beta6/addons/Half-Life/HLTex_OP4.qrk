@@ -1,0 +1,870 @@
+QQRKSRC1
+{
+  QuArKProtected = "1"
+  Description = "HL Textures - Opposing Force"
+
+//
+// Opposing Force
+//
+  OP4Textures.qtx =
+  {
+    ToolBox = "Texture Browser..."
+    Root = "Opposing Force Textures.qtxfolder"
+    HTML = "intro.texturebrowser.html"
+
+    // Raw definition of WAD3 files
+    t_op4_DECALS:incl = { s = "gearbox" d = "DECALS" h = "C" }
+    t_op4_OPFOR:incl = { s = "gearbox" d = "OPFOR" h = "C" }
+    t_op4_OP4CTF:incl = { s = "gearbox" d = "OP4CTF" h = "C" }
+
+    Opposing Force Textures.qtxfolder =
+    {
+      Decals Folder.qtxfolder =
+      {
+        Numbers.txlist =
+        {
+          {64#0.wl = {t_op4_DECALS=!}
+          {64#1.wl = {t_op4_DECALS=!}
+          {64#2.wl = {t_op4_DECALS=!}
+          {64#3.wl = {t_op4_DECALS=!}
+          {64#4.wl = {t_op4_DECALS=!}
+          {64#5.wl = {t_op4_DECALS=!}
+          {64#6.wl = {t_op4_DECALS=!}
+          {64#7.wl = {t_op4_DECALS=!}
+          {64#8.wl = {t_op4_DECALS=!}
+          {64#9.wl = {t_op4_DECALS=!}
+          {large#s-.wl = {t_op4_DECALS=!}
+          {large#s0.wl = {t_op4_DECALS=!}
+          {large#s1.wl = {t_op4_DECALS=!}
+          {large#s2.wl = {t_op4_DECALS=!}
+          {large#s3.wl = {t_op4_DECALS=!}
+          {large#s4.wl = {t_op4_DECALS=!}
+          {large#s5.wl = {t_op4_DECALS=!}
+          {large#s6.wl = {t_op4_DECALS=!}
+          {large#s7.wl = {t_op4_DECALS=!}
+          {large#s8.wl = {t_op4_DECALS=!}
+          {large#s9.wl = {t_op4_DECALS=!}
+          {med#s0.wl = {t_op4_DECALS=!}
+          {med#s1.wl = {t_op4_DECALS=!}
+          {med#s2.wl = {t_op4_DECALS=!}
+          {med#s3.wl = {t_op4_DECALS=!}
+          {med#s4.wl = {t_op4_DECALS=!}
+          {med#s5.wl = {t_op4_DECALS=!}
+          {med#s6.wl = {t_op4_DECALS=!}
+          {med#s7.wl = {t_op4_DECALS=!}
+          {med#s8.wl = {t_op4_DECALS=!}
+          {med#s9.wl = {t_op4_DECALS=!}
+          {small#s0.wl = {t_op4_DECALS=!}
+          {small#s1.wl = {t_op4_DECALS=!}
+          {small#s2.wl = {t_op4_DECALS=!}
+          {small#s3.wl = {t_op4_DECALS=!}
+          {small#s4.wl = {t_op4_DECALS=!}
+          {small#s5.wl = {t_op4_DECALS=!}
+          {small#s6.wl = {t_op4_DECALS=!}
+          {small#s7.wl = {t_op4_DECALS=!}
+          {small#s8.wl = {t_op4_DECALS=!}
+          {small#s9.wl = {t_op4_DECALS=!}
+        }
+        Letters.txlist =
+        {
+          {capsa.wl = {t_op4_DECALS=!}
+          {capsb.wl = {t_op4_DECALS=!}
+          {capsc.wl = {t_op4_DECALS=!}
+          {capsd.wl = {t_op4_DECALS=!}
+          {capse.wl = {t_op4_DECALS=!}
+          {capsf.wl = {t_op4_DECALS=!}
+          {capsg.wl = {t_op4_DECALS=!}
+          {capsh.wl = {t_op4_DECALS=!}
+          {capsi.wl = {t_op4_DECALS=!}
+          {capsj.wl = {t_op4_DECALS=!}
+          {capsk.wl = {t_op4_DECALS=!}
+          {capsl.wl = {t_op4_DECALS=!}
+          {capsm.wl = {t_op4_DECALS=!}
+          {capsn.wl = {t_op4_DECALS=!}
+          {capso.wl = {t_op4_DECALS=!}
+          {capsp.wl = {t_op4_DECALS=!}
+          {capsq.wl = {t_op4_DECALS=!}
+          {capsr.wl = {t_op4_DECALS=!}
+          {capss.wl = {t_op4_DECALS=!}
+          {capst.wl = {t_op4_DECALS=!}
+          {capsu.wl = {t_op4_DECALS=!}
+          {capsv.wl = {t_op4_DECALS=!}
+          {capsw.wl = {t_op4_DECALS=!}
+          {capsx.wl = {t_op4_DECALS=!}
+          {capsy.wl = {t_op4_DECALS=!}
+          {capsz.wl = {t_op4_DECALS=!}
+        }
+        Arrows.txlist =
+        {
+          {arrow2a.wl = {t_op4_DECALS=!}
+          {arrow2b.wl = {t_op4_DECALS=!}
+          {arrow2c.wl = {t_op4_DECALS=!}
+          {arrow2d.wl = {t_op4_DECALS=!}
+          {arrow_l.wl = {t_op4_DECALS=!}
+          {arrow_r.wl = {t_op4_DECALS=!}
+          {turn1a.wl = {t_op4_DECALS=!}
+          {turn1b.wl = {t_op4_DECALS=!}
+          {turn1c.wl = {t_op4_DECALS=!}
+          {turn1d.wl = {t_op4_DECALS=!}
+          {turn2a.wl = {t_op4_DECALS=!}
+          {turn2b.wl = {t_op4_DECALS=!}
+          {turn2c.wl = {t_op4_DECALS=!}
+          {turn2d.wl = {t_op4_DECALS=!}
+        }
+        Blood.txlist =
+        {
+          {bigblood1.wl = {t_op4_DECALS=!}
+          {bigblood2.wl = {t_op4_DECALS=!}
+          {blood1.wl = {t_op4_DECALS=!}
+          {blood2.wl = {t_op4_DECALS=!}
+          {blood3.wl = {t_op4_DECALS=!}
+          {blood4.wl = {t_op4_DECALS=!}
+          {blood5.wl = {t_op4_DECALS=!}
+          {blood6.wl = {t_op4_DECALS=!}
+          {blood7.wl = {t_op4_DECALS=!}
+          {blood8.wl = {t_op4_DECALS=!}
+          {bloodhand1.wl = {t_op4_DECALS=!}
+          {bloodhand2.wl = {t_op4_DECALS=!}
+          {bloodhand3.wl = {t_op4_DECALS=!}
+          {bloodhand4.wl = {t_op4_DECALS=!}
+          {bloodhand5.wl = {t_op4_DECALS=!}
+          {bloodhand6.wl = {t_op4_DECALS=!}
+          {foot_l.wl = {t_op4_DECALS=!}
+          {foot_r.wl = {t_op4_DECALS=!}
+          {hand1.wl = {t_op4_DECALS=!}
+        }
+        Signs.txlist =
+        {
+          {n_bahl.wl = {t_op4_DECALS=!}
+          {n_deup.wl = {t_op4_DECALS=!}
+          {n_faul.wl = {t_op4_DECALS=!}
+          {n_heir.wl = {t_op4_DECALS=!}
+          {n_mart.wl = {t_op4_DECALS=!}
+          {n_mert.wl = {t_op4_DECALS=!}
+          {n_mont.wl = {t_op4_DECALS=!}
+          {n_pitc.wl = {t_op4_DECALS=!}
+          {n_shep.wl = {t_op4_DECALS=!}
+          {n_ward.wl = {t_op4_DECALS=!}
+          {handi.wl = {t_op4_DECALS=!}
+          {247.wl = {t_op4_DECALS=!}
+          {ammo.wl = {t_op4_DECALS=!}
+          {biohaz.wl = {t_op4_DECALS=!}
+          {break.wl = {t_op4_DECALS=!}
+          {c1a1b.wl = {t_op4_DECALS=!}
+          {c1a3_grn1.wl = {t_op4_DECALS=!}
+          {c1a3_org1.wl = {t_op4_DECALS=!}
+          {c1a3_org2.wl = {t_op4_DECALS=!}
+          {c1a3_org3.wl = {t_op4_DECALS=!}
+          {c1a3_red1.wl = {t_op4_DECALS=!}
+          {c1a3_red2.wl = {t_op4_DECALS=!}
+          {c1a3_red3.wl = {t_op4_DECALS=!}
+          {c2a2_a.wl = {t_op4_DECALS=!}
+          {c2a2_b.wl = {t_op4_DECALS=!}
+          {c2a5g.wl = {t_op4_DECALS=!}
+          {crouch.wl = {t_op4_DECALS=!}
+          {explos.wl = {t_op4_DECALS=!}
+          {graf001.wl = {t_op4_DECALS=!}
+          {graf002.wl = {t_op4_DECALS=!}
+          {graf003.wl = {t_op4_DECALS=!}
+          {graf004.wl = {t_op4_DECALS=!}
+          {graf005.wl = {t_op4_DECALS=!}
+          {target.wl = {t_op4_DECALS=!}
+          {target2.wl = {t_op4_DECALS=!}
+          {lambda01.wl = {t_op4_DECALS=!}
+          {lambda02.wl = {t_op4_DECALS=!}
+          {lambda03.wl = {t_op4_DECALS=!}
+          {lambda04.wl = {t_op4_DECALS=!}
+          {lambda05.wl = {t_op4_DECALS=!}
+          {lambda06.wl = {t_op4_DECALS=!}
+          {marker.wl = {t_op4_DECALS=!}
+          {pstripe1.wl = {t_op4_DECALS=!}
+          {pstripe2.wl = {t_op4_DECALS=!}
+          {pstripe3.wl = {t_op4_DECALS=!}
+          {pstripe4.wl = {t_op4_DECALS=!}
+          {littleman.wl = {t_op4_DECALS=!}
+          {moustache.wl = {t_op4_DECALS=!}
+        }
+        Shoots.txlist =
+        {
+          {bproof1.wl = {t_op4_DECALS=!}
+          {bigshot1.wl = {t_op4_DECALS=!}
+          {bigshot2.wl = {t_op4_DECALS=!}
+          {bigshot3.wl = {t_op4_DECALS=!}
+          {bigshot4.wl = {t_op4_DECALS=!}
+          {bigshot5.wl = {t_op4_DECALS=!}
+          {gaussshot1.wl = {t_op4_DECALS=!}
+          {scorch1.wl = {t_op4_DECALS=!}
+          {scorch2.wl = {t_op4_DECALS=!}
+          {scorch3.wl = {t_op4_DECALS=!}
+          {shot1.wl = {t_op4_DECALS=!}
+          {shot2.wl = {t_op4_DECALS=!}
+          {shot3.wl = {t_op4_DECALS=!}
+          {shot4.wl = {t_op4_DECALS=!}
+          {shot5.wl = {t_op4_DECALS=!}
+          {smscorch1.wl = {t_op4_DECALS=!}
+          {smscorch2.wl = {t_op4_DECALS=!}
+          {smscorch3.wl = {t_op4_DECALS=!}
+          {ofscorch1.wl = {t_op4_DECALS=!}
+          {ofscorch2.wl = {t_op4_DECALS=!}
+          {ofscorch3.wl = {t_op4_DECALS=!}
+          {ofscorch4.wl = {t_op4_DECALS=!}
+          {ofscorch5.wl = {t_op4_DECALS=!}
+          {ofscorch6.wl = {t_op4_DECALS=!}
+          {ofsmscorch1.wl = {t_op4_DECALS=!}
+          {ofsmscorch2.wl = {t_op4_DECALS=!}
+          {ofsmscorch3.wl = {t_op4_DECALS=!}
+        }
+        Cracks.txlist =
+        {
+          {break1.wl = {t_op4_DECALS=!}
+          {break2.wl = {t_op4_DECALS=!}
+          {break3.wl = {t_op4_DECALS=!}
+          {crack1.wl = {t_op4_DECALS=!}
+          {crack2.wl = {t_op4_DECALS=!}
+          {crack3.wl = {t_op4_DECALS=!}
+          {crack4.wl = {t_op4_DECALS=!}
+          {fault01.wl = {t_op4_DECALS=!}
+          {fault02.wl = {t_op4_DECALS=!}
+          {fault03.wl = {t_op4_DECALS=!}
+          {fault04.wl = {t_op4_DECALS=!}
+          {fault05.wl = {t_op4_DECALS=!}
+          {fault06.wl = {t_op4_DECALS=!}
+        }
+        Alien.txlist =
+        {
+          {gargstomp.wl = {t_op4_DECALS=!}
+          {mommablob.wl = {t_op4_DECALS=!}
+          {spit1.wl = {t_op4_DECALS=!}
+          {spit2.wl = {t_op4_DECALS=!}
+          {spr_splt3.wl = {t_op4_DECALS=!}
+          {spr_splt2.wl = {t_op4_DECALS=!}
+          {spr_splt1.wl = {t_op4_DECALS=!}
+          {yblood1.wl = {t_op4_DECALS=!}
+          {yblood2.wl = {t_op4_DECALS=!}
+          {yblood3.wl = {t_op4_DECALS=!}
+          {yblood4.wl = {t_op4_DECALS=!}
+          {yblood5.wl = {t_op4_DECALS=!}
+          {yblood6.wl = {t_op4_DECALS=!}
+        }
+        Misc.txlist =
+        {
+          reflect1.wl = {t_op4_DECALS=!}
+          {dent1.wl = {t_op4_DECALS=!}
+          {dent2.wl = {t_op4_DECALS=!}
+          {dent3.wl = {t_op4_DECALS=!}
+          {dent4.wl = {t_op4_DECALS=!}
+          {dent5.wl = {t_op4_DECALS=!}
+          {dent6.wl = {t_op4_DECALS=!}
+          {ding1.wl = {t_op4_DECALS=!}
+          {ding10.wl = {t_op4_DECALS=!}
+          {ding11.wl = {t_op4_DECALS=!}
+          {ding2.wl = {t_op4_DECALS=!}
+          {ding3.wl = {t_op4_DECALS=!}
+          {ding4.wl = {t_op4_DECALS=!}
+          {ding5.wl = {t_op4_DECALS=!}
+          {ding6.wl = {t_op4_DECALS=!}
+          {ding7.wl = {t_op4_DECALS=!}
+          {ding8.wl = {t_op4_DECALS=!}
+          {ding9.wl = {t_op4_DECALS=!}
+          {drip2.wl = {t_op4_DECALS=!}
+          {drip3.wl = {t_op4_DECALS=!}
+          {drip4.wl = {t_op4_DECALS=!}
+          {drips1.wl = {t_op4_DECALS=!}
+          {lime001.wl = {t_op4_DECALS=!}
+          {lime002.wl = {t_op4_DECALS=!}
+          {lime003.wl = {t_op4_DECALS=!}
+          {lime004.wl = {t_op4_DECALS=!}
+          {moss001.wl = {t_op4_DECALS=!}
+          {moss002.wl = {t_op4_DECALS=!}
+          {moss003.wl = {t_op4_DECALS=!}
+          {moss004.wl = {t_op4_DECALS=!}
+          {oil1.wl = {t_op4_DECALS=!}
+          {oil2.wl = {t_op4_DECALS=!}
+          {rotatescrape.wl = {t_op4_DECALS=!}
+          {rust001.wl = {t_op4_DECALS=!}
+          {rust002.wl = {t_op4_DECALS=!}
+          {rust003.wl = {t_op4_DECALS=!}
+          {rust004.wl = {t_op4_DECALS=!}
+          {stripeh.wl = {t_op4_DECALS=!}
+          {stripev.wl = {t_op4_DECALS=!}
+          {tire1.wl = {t_op4_DECALS=!}
+          {tire2.wl = {t_op4_DECALS=!}
+          {water1.wl = {t_op4_DECALS=!}
+          {water2.wl = {t_op4_DECALS=!}
+          {water3.wl = {t_op4_DECALS=!}
+        }
+      }
+      OpFor Folder.qtxfolder =
+      {
+        Extra.txlist =
+        {
+          AAA_1.wl = {t_op4_OPFOR=!}
+          AAA_2.wl = {t_op4_OPFOR=!}
+          AAA_3.wl = {t_op4_OPFOR=!}
+          AAA_HURT.wl = {t_op4_OPFOR=!}
+          AAA_MULTI.wl = {t_op4_OPFOR=!}
+          AAA_ONCE.wl = {t_op4_OPFOR=!}
+          AAA_PUSH.wl = {t_op4_OPFOR=!}
+          AAA_PUSH2.wl = {t_op4_OPFOR=!}
+          AAA_WALL.wl = {t_op4_OPFOR=!}
+          AAA_TRIGGER.wl = {t_op4_OPFOR=!}
+//          HINT.wl = {t_op4_OPFOR=!}
+        }
+        BootCamp.txlist =
+        {
+          BOOT_DIRT_01.wl = {t_op4_OPFOR=!}
+          BOOT_GRASS_01.wl = {t_op4_OPFOR=!}
+          BOOT_GRASS_02.wl = {t_op4_OPFOR=!}
+          BOOT_GRASS_03.wl = {t_op4_OPFOR=!}
+          BOOT_GRASS_04.wl = {t_op4_OPFOR=!}
+          BOOT_GRASS_05.wl = {t_op4_OPFOR=!}
+          BOOT_GRASS_06.wl = {t_op4_OPFOR=!}
+          DIRT_01.wl = {t_op4_OPFOR=!}
+          GRND_01.wl = {t_op4_OPFOR=!}
+          GRND_02.wl = {t_op4_OPFOR=!}
+          ROPE.wl = {t_op4_OPFOR=!}
+          ROPE_NET_01.wl = {t_op4_OPFOR=!}
+          ROPE_NET_02.wl = {t_op4_OPFOR=!}
+          WALL_BOOT_DMG.wl = {t_op4_OPFOR=!}
+        }
+        Furniture.txlist =
+        {
+          BEDDING.wl = {t_op4_OPFOR=!}
+          DRAWER_METAL.wl = {t_op4_OPFOR=!}
+          SNACK_MACH_01.wl = {t_op4_OPFOR=!}
+          SNACK_MACH_02.wl = {t_op4_OPFOR=!}
+          SNACK_MACH_03.wl = {t_op4_OPFOR=!}
+          TABLE_01.wl = {t_op4_OPFOR=!}
+          TABLE_02.wl = {t_op4_OPFOR=!}
+          TENT_SPHINK.wl = {t_op4_OPFOR=!}
+          WORKBENCH.wl = {t_op4_OPFOR=!}
+        }
+        Lab.txlist =
+        {
+          +0WALL_GRN_CMP.wl = {t_op4_OPFOR=!}
+          +1WALL_GRN_CMP.wl = {t_op4_OPFOR=!}
+          +2WALL_GRN_CMP.wl = {t_op4_OPFOR=!}
+          -0BLUEWALL_PAN1.wl = {t_op4_OPFOR=!}
+          -0BLUEWALL_PAN2.wl = {t_op4_OPFOR=!}
+          CAT_FRONT.wl = {t_op4_OPFOR=!}
+          CAT_INSIDE.wl = {t_op4_OPFOR=!}
+          CAT_SIDE.wl = {t_op4_OPFOR=!}
+          CAT_SIDE_02.wl = {t_op4_OPFOR=!}
+          WALL_GRN01.wl = {t_op4_OPFOR=!}
+          WALL_GRN02.wl = {t_op4_OPFOR=!}
+          WALL_GRN02_BRK.wl = {t_op4_OPFOR=!}
+          WALL_GRN03.wl = {t_op4_OPFOR=!}
+          WALL_GRN03_BRK.wl = {t_op4_OPFOR=!}
+          WALL_GRN04.wl = {t_op4_OPFOR=!}
+          WALL_GRN05.wl = {t_op4_OPFOR=!}
+          WALL_GRN06.wl = {t_op4_OPFOR=!}
+          SIGN_CONT_1.wl = {t_op4_OPFOR=!}
+        }
+        Vehicles.txlist =
+        {
+          BLK_TRK_AXLE.wl = {t_op4_OPFOR=!}
+          BLK_TRK_BED.wl = {t_op4_OPFOR=!}
+          BLK_TRK_BUMPER.wl = {t_op4_OPFOR=!}
+          BLK_TRK_CABACK.wl = {t_op4_OPFOR=!}
+          BLK_TRK_CANVAS.wl = {t_op4_OPFOR=!}
+          BLK_TRK_DASH.wl = {t_op4_OPFOR=!}
+          BLK_TRK_DOOR.wl = {t_op4_OPFOR=!}
+          BLK_TRK_FENDER.wl = {t_op4_OPFOR=!}
+          BLK_TRK_GRILLE.wl = {t_op4_OPFOR=!}
+          BLK_TRK_HOOD.wl = {t_op4_OPFOR=!}
+          BLK_TRK_INDOOR.wl = {t_op4_OPFOR=!}
+          BLK_TRK_PIPE.wl = {t_op4_OPFOR=!}
+          BLK_TRK_RIM.wl = {t_op4_OPFOR=!}
+          BLK_TRK_SEAT.wl = {t_op4_OPFOR=!}
+          BLK_TRK_SHOCKS.wl = {t_op4_OPFOR=!}
+          BLK_TRK_SIDE.wl = {t_op4_OPFOR=!}
+          BLK_TRK_TIRE.wl = {t_op4_OPFOR=!}
+          BLK_TRK_TREAD.wl = {t_op4_OPFOR=!}
+          TIRE_01.wl = {t_op4_OPFOR=!}
+          TIRE_02.wl = {t_op4_OPFOR=!}
+          TIRE_03.wl = {t_op4_OPFOR=!}
+        }
+        Crates.txlist =
+        {
+          BXTOP_N_BAHL.wl = {t_op4_OPFOR=!}
+          BXTOP_N_DEUP.wl = {t_op4_OPFOR=!}
+          BXTOP_N_FAUL.wl = {t_op4_OPFOR=!}
+          BXTOP_N_HEIR.wl = {t_op4_OPFOR=!}
+          BXTOP_N_MART.wl = {t_op4_OPFOR=!}
+          BXTOP_N_MERT.wl = {t_op4_OPFOR=!}
+          BXTOP_N_MONT.wl = {t_op4_OPFOR=!}
+          BXTOP_N_PITC.wl = {t_op4_OPFOR=!}
+          BXTOP_N_SHEP.wl = {t_op4_OPFOR=!}
+          BXTOP_N_WARD.wl = {t_op4_OPFOR=!}
+          CRATE_01.wl = {t_op4_OPFOR=!}
+          CRATE_02.wl = {t_op4_OPFOR=!}
+          CRATE_04.wl = {t_op4_OPFOR=!}
+          CRATE_05.wl = {t_op4_OPFOR=!}
+          CRATE_06.wl = {t_op4_OPFOR=!}
+          CRATE_07.wl = {t_op4_OPFOR=!}
+          CRATE_08.wl = {t_op4_OPFOR=!}
+          CRATE_09.wl = {t_op4_OPFOR=!}
+          CRATE_UNBRK_01.wl = {t_op4_OPFOR=!}
+          CRATE_UNBRK_02.wl = {t_op4_OPFOR=!}
+          CRATE_UNBRK_03.wl = {t_op4_OPFOR=!}
+          CRATE_UNBRK_04.wl = {t_op4_OPFOR=!}
+          CRATE_UNBRK_05.wl = {t_op4_OPFOR=!}
+          CRATE_WD_01.wl = {t_op4_OPFOR=!}
+          CRATE_WD_02.wl = {t_op4_OPFOR=!}
+          CRATE_WD_03.wl = {t_op4_OPFOR=!}
+          CRATE_WD_04.wl = {t_op4_OPFOR=!}
+          +0PCV.wl = {t_op4_OPFOR=!}
+          +APCV.wl = {t_op4_OPFOR=!}
+          PCV_XCRATE.wl = {t_op4_OPFOR=!}
+          XCRATE_EXP_01.wl = {t_op4_OPFOR=!}
+          XCRATE_EXP_02.wl = {t_op4_OPFOR=!}
+          XCRATE_EXP_03.wl = {t_op4_OPFOR=!}
+        }
+        Rechargers.txlist =
+        {
+          +0CIV_RECHARGE.wl = {t_op4_OPFOR=!}
+          +ACIV_RECHARGE.wl = {t_op4_OPFOR=!}
+          CIV_EDGE.wl = {t_op4_OPFOR=!}
+          CIV_RECHARGER.wl = {t_op4_OPFOR=!}
+          PCV_HANGER.wl = {t_op4_OPFOR=!}
+          PCV_HANG_02.wl = {t_op4_OPFOR=!}
+          PCV_HANG_03.wl = {t_op4_OPFOR=!}
+          PCV_HANG_04.wl = {t_op4_OPFOR=!}
+          PCV_HANG_05.wl = {t_op4_OPFOR=!}
+          PCV_HANG_06.wl = {t_op4_OPFOR=!}
+        }
+        Switches.txlist =
+        {
+          +0SGN_MESSAGE.wl = {t_op4_OPFOR=!}
+          +1SGN_MESSAGE.wl = {t_op4_OPFOR=!}
+          +2SGN_MESSAGE.wl = {t_op4_OPFOR=!}
+          +3SGN_MESSAGE.wl = {t_op4_OPFOR=!}
+          +ASGN_MESSAGE.wl = {t_op4_OPFOR=!}
+          +0SIGN_GEARBOX.wl = {t_op4_OPFOR=!}
+          +ASIGN_GEARBOX.wl = {t_op4_OPFOR=!}
+          +0SIGN_VALVE.wl = {t_op4_OPFOR=!}
+          +ASIGN_VALVE.wl = {t_op4_OPFOR=!}
+          +0SIGN_VENT.wl = {t_op4_OPFOR=!}
+          +ASIGN_VENT.wl = {t_op4_OPFOR=!}
+          BTTN_BRK_01.wl = {t_op4_OPFOR=!}
+          BTTN_GEARBOX.wl = {t_op4_OPFOR=!}
+          BTTN_WASTE.wl = {t_op4_OPFOR=!}
+        }
+        Signs.txlist =
+        {
+          SIGN_ACCESS_01.wl = {t_op4_OPFOR=!}
+          SIGN_ACCESS_02.wl = {t_op4_OPFOR=!}
+          SIGN_ACCESS_03.wl = {t_op4_OPFOR=!}
+          SIGN_ACCESS_04.wl = {t_op4_OPFOR=!}
+          SIGN_ACCESS_05.wl = {t_op4_OPFOR=!}
+          SIGN_ACCESS_06.wl = {t_op4_OPFOR=!}
+          SIGN_ACCESS_07.wl = {t_op4_OPFOR=!}
+          SIGN_ADV_TRAIN.wl = {t_op4_OPFOR=!}
+          SIGN_AIRLOCK.wl = {t_op4_OPFOR=!}
+          SIGN_ARMORY.wl = {t_op4_OPFOR=!}
+          SIGN_BASIC.wl = {t_op4_OPFOR=!}
+          SIGN_BDRC.wl = {t_op4_OPFOR=!}
+          SIGN_BDRC_02.wl = {t_op4_OPFOR=!}
+          SIGN_BIODOME.wl = {t_op4_OPFOR=!}
+          SIGN_BIO_ACCESS.wl = {t_op4_OPFOR=!}
+          SIGN_BIO_CONT.wl = {t_op4_OPFOR=!}
+          SIGN_BIO_CULT.wl = {t_op4_OPFOR=!}
+          SIGN_BIO_DRAIN.wl = {t_op4_OPFOR=!}
+          SIGN_BIO_OB_01.wl = {t_op4_OPFOR=!}
+          SIGN_BIO_OB_02.wl = {t_op4_OPFOR=!}
+          SIGN_BIO_OB_03.wl = {t_op4_OPFOR=!}
+          SIGN_BIO_TEST.wl = {t_op4_OPFOR=!}
+          SIGN_BRIDGE_OFF.wl = {t_op4_OPFOR=!}
+          +0SIGN_BRIDGE.wl = {t_op4_OPFOR=!}
+          +ASIGN_BRIDGE.wl = {t_op4_OPFOR=!}
+          SIGN_CLNSUIT.wl = {t_op4_OPFOR=!}
+          SIGN_DANGER_01.wl = {t_op4_OPFOR=!}
+          SIGN_DEPOSIT.wl = {t_op4_OPFOR=!}
+          SIGN_DIRECT_01.wl = {t_op4_OPFOR=!}
+          SIGN_DIRECT_02.wl = {t_op4_OPFOR=!}
+          SIGN_DRILL.wl = {t_op4_OPFOR=!}
+          SIGN_ELV_LEFT.wl = {t_op4_OPFOR=!}
+          SIGN_ELV_RIGHT.wl = {t_op4_OPFOR=!}
+          SIGN_ELV_RT_01.wl = {t_op4_OPFOR=!}
+          SIGN_EMPLOYEE.wl = {t_op4_OPFOR=!}
+          SIGN_FLAMMABLE.wl = {t_op4_OPFOR=!}
+          SIGN_FLUSH.wl = {t_op4_OPFOR=!}
+          SIGN_FLUSH_01.wl = {t_op4_OPFOR=!}
+          SIGN_GAMMA.wl = {t_op4_OPFOR=!}
+          SIGN_GBOX.wl = {t_op4_OPFOR=!}
+          SIGN_GEN_Y.wl = {t_op4_OPFOR=!}
+          SIGN_H2O_LABS.wl = {t_op4_OPFOR=!}
+          SIGN_HANDI.wl = {t_op4_OPFOR=!}
+          SIGN_HAZMAT.wl = {t_op4_OPFOR=!}
+          SIGN_HEAD.wl = {t_op4_OPFOR=!}
+          SIGN_INFIRMARY.wl = {t_op4_OPFOR=!}
+          SIGN_INTAKE.wl = {t_op4_OPFOR=!}
+          SIGN_LAMTRAN.wl = {t_op4_OPFOR=!}
+          SIGN_LIVE_FIRE.wl = {t_op4_OPFOR=!}
+          SIGN_LOADER.wl = {t_op4_OPFOR=!}
+          SIGN_MIRROR.wl = {t_op4_OPFOR=!}
+          SIGN_NVISION.wl = {t_op4_OPFOR=!}
+          SIGN_OUTAKE.wl = {t_op4_OPFOR=!}
+          SIGN_OUT_A_OR.wl = {t_op4_OPFOR=!}
+          SIGN_OVERFLOW.wl = {t_op4_OPFOR=!}
+          SIGN_OVERIDE.wl = {t_op4_OPFOR=!}
+          SIGN_PCV_EQUIP.wl = {t_op4_OPFOR=!}
+          SIGN_PISTOL.wl = {t_op4_OPFOR=!}
+          SIGN_PRESS.wl = {t_op4_OPFOR=!}
+          SIGN_PUMP_AX.wl = {t_op4_OPFOR=!}
+          SIGN_RADIATION.wl = {t_op4_OPFOR=!}
+          SIGN_ROPE.wl = {t_op4_OPFOR=!}
+          SIGN_SNIPE_01.wl = {t_op4_OPFOR=!}
+          SIGN_SNIPE_02.wl = {t_op4_OPFOR=!}
+          SIGN_SPILLS.wl = {t_op4_OPFOR=!}
+          SIGN_SQUAD.wl = {t_op4_OPFOR=!}
+          SIGN_START.wl = {t_op4_OPFOR=!}
+          SIGN_STEAM.wl = {t_op4_OPFOR=!}
+          SIGN_STORAGE04.wl = {t_op4_OPFOR=!}
+          SIGN_STR_02.wl = {t_op4_OPFOR=!}
+          SIGN_STR_03.wl = {t_op4_OPFOR=!}
+          SIGN_TAC_OP.wl = {t_op4_OPFOR=!}
+          SIGN_TEST_FLAME.wl = {t_op4_OPFOR=!}
+          TARGET.wl = {t_op4_OPFOR=!}
+          TARGET_25.wl = {t_op4_OPFOR=!}
+          TARGET_50.wl = {t_op4_OPFOR=!}
+          TARGET_75.wl = {t_op4_OPFOR=!}
+          C2A5_SIGN2.wl = {t_op4_OPFOR=!}
+        }
+        Ornament.txlist =
+        {
+          +0COMP_A.wl = {t_op4_OPFOR=!}
+          +ACOMP_A.wl = {t_op4_OPFOR=!}
+          COMP_01.wl = {t_op4_OPFOR=!}
+          COMP_02.wl = {t_op4_OPFOR=!}
+          EYE_CHART.wl = {t_op4_OPFOR=!}
+          GLASS_MEASURE.wl = {t_op4_OPFOR=!}
+          GORDON_01.wl = {t_op4_OPFOR=!}
+          PIC_01.wl = {t_op4_OPFOR=!}
+          PIC_02.wl = {t_op4_OPFOR=!}
+          PIC_03.wl = {t_op4_OPFOR=!}
+          SCREEN_01.wl = {t_op4_OPFOR=!}
+          XRAY_ZOMB.wl = {t_op4_OPFOR=!}
+          DISPLACER_01.wl = {t_op4_OPFOR=!}
+          DISPLACER_02.wl = {t_op4_OPFOR=!}
+          PANEL_01.wl = {t_op4_OPFOR=!}
+          NAMEPLATE_JONES.wl = {t_op4_OPFOR=!}
+          NAMEPLATE_REAR.wl = {t_op4_OPFOR=!}
+        }
+        Liquids.txlist =
+        {
+          !BOSS_B.wl = {t_op4_OPFOR=!}
+          !FLOOR_ROB.wl = {t_op4_OPFOR=!}
+        }
+        Rails(2D).txlist =
+        {
+          {GATE_01.wl = {t_op4_OPFOR=!}
+          {GRATE_01.wl = {t_op4_OPFOR=!}
+          {GRATE_02.wl = {t_op4_OPFOR=!}
+          {GRATE_03.wl = {t_op4_OPFOR=!}
+          {GRATE_04.wl = {t_op4_OPFOR=!}
+          {JNG_TREE_01.wl = {t_op4_OPFOR=!}
+          {PALLET_01.wl = {t_op4_OPFOR=!}
+          {PLANT__01.wl = {t_op4_OPFOR=!}
+          {RACK_BACK.wl = {t_op4_OPFOR=!}
+          {RACK_SIDE.wl = {t_op4_OPFOR=!}
+          {RAILING_01.wl = {t_op4_OPFOR=!}
+          {RAILING_02.wl = {t_op4_OPFOR=!}
+          {RAILING_03.wl = {t_op4_OPFOR=!}
+          {RAILING_04.wl = {t_op4_OPFOR=!}
+          {ROPE_NET.wl = {t_op4_OPFOR=!}
+          {ROPE_NET_02.wl = {t_op4_OPFOR=!}
+          {SHRUB_01.wl = {t_op4_OPFOR=!}
+          {SNACK_MACH.wl = {t_op4_OPFOR=!}
+        }
+        Xeno.txlist =
+        {
+          +0XENO_WALL_A.wl = {t_op4_OPFOR=!}
+          +1XENO_WALL_A.wl = {t_op4_OPFOR=!}
+          +2XENO_WALL_A.wl = {t_op4_OPFOR=!}
+          XENO_BOSSBACK.wl = {t_op4_OPFOR=!}
+          XENO_GRAPPLE.wl = {t_op4_OPFOR=!}
+          XENO_GRAPPLE_02.wl = {t_op4_OPFOR=!}
+          XENO_GRAPPLE_03.wl = {t_op4_OPFOR=!}
+          XENO_GRAPPLE_04.wl = {t_op4_OPFOR=!}
+          XENO_GRAPPLE_05.wl = {t_op4_OPFOR=!}
+          XENO_GRAPPLE_06.wl = {t_op4_OPFOR=!}
+          XENO_GRAPPLE_07.wl = {t_op4_OPFOR=!}
+          XENO_TILE_01.wl = {t_op4_OPFOR=!}
+          XENO_WACK_01.wl = {t_op4_OPFOR=!}
+          XENO_WACK_02.wl = {t_op4_OPFOR=!}
+          XENO_WALL_01.wl = {t_op4_OPFOR=!}
+          XENO_WALL_02.wl = {t_op4_OPFOR=!}
+          XENO_WALL_03.wl = {t_op4_OPFOR=!}
+          XENO_WALL_04.wl = {t_op4_OPFOR=!}
+          XENO_WALL_05.wl = {t_op4_OPFOR=!}
+        }
+        Unsorted.txlist =
+        {
+          +0CAT_FRONT.wl = {t_op4_OPFOR=!}
+          +0TELE_A.wl = {t_op4_OPFOR=!}
+          +0TELE_B.wl = {t_op4_OPFOR=!}
+          +1CAT_FRONT.wl = {t_op4_OPFOR=!}
+          +1TELE_A.wl = {t_op4_OPFOR=!}
+          +1TELE_B.wl = {t_op4_OPFOR=!}
+          +2TELE_A.wl = {t_op4_OPFOR=!}
+          +2TELE_B.wl = {t_op4_OPFOR=!}
+          +3TELE_A.wl = {t_op4_OPFOR=!}
+          +3TELE_B.wl = {t_op4_OPFOR=!}
+          +4TELE_A.wl = {t_op4_OPFOR=!}
+          +4TELE_B.wl = {t_op4_OPFOR=!}
+          18WHL_FLOOR.wl = {t_op4_OPFOR=!}
+          18WHL_INSIDE.wl = {t_op4_OPFOR=!}
+          18WHL_OUTSIDE.wl = {t_op4_OPFOR=!}
+          BOARD_WINDOW.wl = {t_op4_OPFOR=!}
+          BOSS_LASER_01.wl = {t_op4_OPFOR=!}
+          BOSS_LASER_02.wl = {t_op4_OPFOR=!}
+          BRN_CEILING.wl = {t_op4_OPFOR=!}
+          CAUTION_STRIPE.wl = {t_op4_OPFOR=!}
+          CEIL_TILE_DMG.wl = {t_op4_OPFOR=!}
+          DOOR_BIG_01.wl = {t_op4_OPFOR=!}
+          DOOR_BIG_02.wl = {t_op4_OPFOR=!}
+          DOOR_GARAGE.wl = {t_op4_OPFOR=!}
+          DOOR_GARAGE_02.wl = {t_op4_OPFOR=!}
+          DOOR_GREEN.wl = {t_op4_OPFOR=!}
+          DOOR_GREEN_02.wl = {t_op4_OPFOR=!}
+          DOOR_MTL_01.wl = {t_op4_OPFOR=!}
+          DOOR_RUSTY.wl = {t_op4_OPFOR=!}
+          DOOR_SPLIT_01.wl = {t_op4_OPFOR=!}
+          DOOR_SUB_01.wl = {t_op4_OPFOR=!}
+          DOOR_SUB_02.wl = {t_op4_OPFOR=!}
+          DOOR_SUB_03.wl = {t_op4_OPFOR=!}
+          DOOR_TUNL.wl = {t_op4_OPFOR=!}
+          DOOR_WINDOW_01.wl = {t_op4_OPFOR=!}
+          FANBLADE.wl = {t_op4_OPFOR=!}
+          H2OTANK_FRONT.wl = {t_op4_OPFOR=!}
+          H2OTANK_SIDE.wl = {t_op4_OPFOR=!}
+          H2OTANK_TOP.wl = {t_op4_OPFOR=!}
+          JNG_TREE_TRUNK.wl = {t_op4_OPFOR=!}
+          LIGHT_BLUE.wl = {t_op4_OPFOR=!}
+          LIGHT_YELLOW.wl = {t_op4_OPFOR=!}
+          MANHOLE_COVER.wl = {t_op4_OPFOR=!}
+          METALWALL_01.wl = {t_op4_OPFOR=!}
+          METAL_A_01.wl = {t_op4_OPFOR=!}
+          METAL_A_02.wl = {t_op4_OPFOR=!}
+          METAL_A_03.wl = {t_op4_OPFOR=!}
+          METAL_A_04.wl = {t_op4_OPFOR=!}
+          METAL_PATCH.wl = {t_op4_OPFOR=!}
+          METAL_STRIPE.wl = {t_op4_OPFOR=!}
+          MORTAR_CNTRL.wl = {t_op4_OPFOR=!}
+          OSPREY_WING.wl = {t_op4_OPFOR=!}
+          PALLET_02.wl = {t_op4_OPFOR=!}
+          PLANT__02.wl = {t_op4_OPFOR=!}
+          RADIOACTIVE.wl = {t_op4_OPFOR=!}
+          SCROLL_WTR_GRN.wl = {t_op4_OPFOR=!}
+          SILO2_PAN2.wl = {t_op4_OPFOR=!}
+          SILO2_WALL3.wl = {t_op4_OPFOR=!}
+          TNNL_W5.wl = {t_op4_OPFOR=!}
+          TOOLS.wl = {t_op4_OPFOR=!}
+          TUBE_01.wl = {t_op4_OPFOR=!}
+          WALL_GREEN.wl = {t_op4_OPFOR=!}
+          WALL_GRN_MTL_01.wl = {t_op4_OPFOR=!}
+          WALL_GRY_01.wl = {t_op4_OPFOR=!}
+          WIRE_BLACK.wl = {t_op4_OPFOR=!}
+          WIRE_BLUE.wl = {t_op4_OPFOR=!}
+          WIRE_RED.wl = {t_op4_OPFOR=!}
+          {SPORESPLAT_01.wl = {t_op4_OPFOR=!}
+        }
+      }
+      OP4CTF.txlist =
+      {
+        !C2A54C.wl = {t_op4_OP4CTF=!}
+        +0pcv_unit.wl = {t_op4_OP4CTF=!}
+        +apcv_unit.wl = {t_op4_OP4CTF=!}
+        0button1.wl = {t_op4_OP4CTF=!}
+        0genpipe1.wl = {t_op4_OP4CTF=!}
+        1out_w3.wl = {t_op4_OP4CTF=!}
+        3light1.wl = {t_op4_OP4CTF=!}
+        aelev_up.wl = {t_op4_OP4CTF=!}
+        border_grn_01.wl = {t_op4_OP4CTF=!}
+        border_org_01.wl = {t_op4_OP4CTF=!}
+        box_snw_01.wl = {t_op4_OP4CTF=!}
+        box_snw_02.wl = {t_op4_OP4CTF=!}
+        box_snw_03.wl = {t_op4_OP4CTF=!}
+        box_snw_04.wl = {t_op4_OP4CTF=!}
+        box_snw_05.wl = {t_op4_OP4CTF=!}
+        caution_grn_01.wl = {t_op4_OP4CTF=!}
+        caution_grn_02.wl = {t_op4_OP4CTF=!}
+        caution_org_02.wl = {t_op4_OP4CTF=!}
+        caution_org_01.wl = {t_op4_OP4CTF=!}
+        conc_strp_01.wl = {t_op4_OP4CTF=!}
+        conc_strp_02.wl = {t_op4_OP4CTF=!}
+        conc_strp_03.wl = {t_op4_OP4CTF=!}
+        conc_strp_04.wl = {t_op4_OP4CTF=!}
+        conc_strp_05.wl = {t_op4_OP4CTF=!}
+        conc_top_01.wl = {t_op4_OP4CTF=!}
+        conc_top_02.wl = {t_op4_OP4CTF=!}
+        conc_wall_01.wl = {t_op4_OP4CTF=!}
+        conc_wall_02.wl = {t_op4_OP4CTF=!}
+        conc_wall_03.wl = {t_op4_OP4CTF=!}
+        conc_wall_04.wl = {t_op4_OP4CTF=!}
+        conc_wall_05.wl = {t_op4_OP4CTF=!}
+        conc_wall_06.wl = {t_op4_OP4CTF=!}
+        conc_wall_07.wl = {t_op4_OP4CTF=!}
+        conc_wall_08.wl = {t_op4_OP4CTF=!}
+        conc_wall_09.wl = {t_op4_OP4CTF=!}
+        concrete_01.wl = {t_op4_OP4CTF=!}
+        concrete_02.wl = {t_op4_OP4CTF=!}
+        concrete_gen_01.wl = {t_op4_OP4CTF=!}
+        concrete_grn_04.wl = {t_op4_OP4CTF=!}
+        concrete_grn_05.wl = {t_op4_OP4CTF=!}
+        concrete_grn_06.wl = {t_op4_OP4CTF=!}
+        concrete_grn_01.wl = {t_op4_OP4CTF=!}
+        concrete_grn_02.wl = {t_op4_OP4CTF=!}
+        concrete_grn_03.wl = {t_op4_OP4CTF=!}
+        concrete_grn_10.wl = {t_op4_OP4CTF=!}
+        concrete_grn_11.wl = {t_op4_OP4CTF=!}
+        concrete_grn_12.wl = {t_op4_OP4CTF=!}
+        concrete_grn_07.wl = {t_op4_OP4CTF=!}
+        concrete_grn_08.wl = {t_op4_OP4CTF=!}
+        concrete_grn_09.wl = {t_op4_OP4CTF=!}
+        concrete_org_08.wl = {t_op4_OP4CTF=!}
+        concrete_org_07.wl = {t_op4_OP4CTF=!}
+        concrete_org_09.wl = {t_op4_OP4CTF=!}
+        concrete_org_11.wl = {t_op4_OP4CTF=!}
+        concrete_org_10.wl = {t_op4_OP4CTF=!}
+        concrete_org_06.wl = {t_op4_OP4CTF=!}
+        concrete_org_02.wl = {t_op4_OP4CTF=!}
+        concrete_org_01.wl = {t_op4_OP4CTF=!}
+        concrete_org_03.wl = {t_op4_OP4CTF=!}
+        concrete_org_05.wl = {t_op4_OP4CTF=!}
+        concrete_org_04.wl = {t_op4_OP4CTF=!}
+        concrete_org_12.wl = {t_op4_OP4CTF=!}
+        crate_grn_01.wl = {t_op4_OP4CTF=!}
+        crate_grn_02.wl = {t_op4_OP4CTF=!}
+        crate_grn_03.wl = {t_op4_OP4CTF=!}
+        crate_grn_04.wl = {t_op4_OP4CTF=!}
+        crate_org_01.wl = {t_op4_OP4CTF=!}
+        crate_org_02.wl = {t_op4_OP4CTF=!}
+        crate_org_03.wl = {t_op4_OP4CTF=!}
+        crate_org_04.wl = {t_op4_OP4CTF=!}
+        door_grn_01.wl = {t_op4_OP4CTF=!}
+        door_grn_02.wl = {t_op4_OP4CTF=!}
+        door_grn_03.wl = {t_op4_OP4CTF=!}
+        door_grn_04.wl = {t_op4_OP4CTF=!}
+        door_grn_05.wl = {t_op4_OP4CTF=!}
+        door_grn_06.wl = {t_op4_OP4CTF=!}
+        door_grn_07.wl = {t_op4_OP4CTF=!}
+        door_grn_08.wl = {t_op4_OP4CTF=!}
+        door_org_01.wl = {t_op4_OP4CTF=!}
+        door_org_02.wl = {t_op4_OP4CTF=!}
+        door_org_03.wl = {t_op4_OP4CTF=!}
+        door_org_04.wl = {t_op4_OP4CTF=!}
+        door_org_05.wl = {t_op4_OP4CTF=!}
+        door_org_06.wl = {t_op4_OP4CTF=!}
+        door_org_07.wl = {t_op4_OP4CTF=!}
+        door_org_08.wl = {t_op4_OP4CTF=!}
+        jungle_floor_02.wl = {t_op4_OP4CTF=!}
+        jungle_strip.wl = {t_op4_OP4CTF=!}
+        jungle_strip_01.wl = {t_op4_OP4CTF=!}
+        jungle_wall_05.wl = {t_op4_OP4CTF=!}
+        jungle_wall_04.wl = {t_op4_OP4CTF=!}
+        jungle_wall_03.wl = {t_op4_OP4CTF=!}
+        lgeneric86.wl = {t_op4_OP4CTF=!}
+        lgeneric86r.wl = {t_op4_OP4CTF=!}
+        light2a.wl = {t_op4_OP4CTF=!}
+        light4a.wl = {t_op4_OP4CTF=!}
+        light6a.wl = {t_op4_OP4CTF=!}
+        light_green.wl = {t_op4_OP4CTF=!}
+        light_orange.wl = {t_op4_OP4CTF=!}
+        mtl_snw_a_01.wl = {t_op4_OP4CTF=!}
+        mtlwall_brn_01.wl = {t_op4_OP4CTF=!}
+        mtlwall_grn_01.wl = {t_op4_OP4CTF=!}
+        mtlwall_grn_02.wl = {t_op4_OP4CTF=!}
+        mtlwall_gry_01.wl = {t_op4_OP4CTF=!}
+        mtlwall_org_02.wl = {t_op4_OP4CTF=!}
+        mtlwall_org_01.wl = {t_op4_OP4CTF=!}
+        pcv_edge_01.wl = {t_op4_OP4CTF=!}
+        pillar_concrete.wl = {t_op4_OP4CTF=!}
+        pillar_ladder.wl = {t_op4_OP4CTF=!}
+        pipe_grn_01.wl = {t_op4_OP4CTF=!}
+        pipe_grn_02.wl = {t_op4_OP4CTF=!}
+        pipe_org_01.wl = {t_op4_OP4CTF=!}
+        pipe_org_02.wl = {t_op4_OP4CTF=!}
+        rock_brn_01.wl = {t_op4_OP4CTF=!}
+        rock_brn_01a.wl = {t_op4_OP4CTF=!}
+        rock_crunchy_01.wl = {t_op4_OP4CTF=!}
+        rock_sandy_02.wl = {t_op4_OP4CTF=!}
+        rock_sandy_05.wl = {t_op4_OP4CTF=!}
+        rock_snowy_01.wl = {t_op4_OP4CTF=!}
+        rock_snowy_02.wl = {t_op4_OP4CTF=!}
+        rock_unwtr_01.wl = {t_op4_OP4CTF=!}
+        rock_unwtr_02.wl = {t_op4_OP4CTF=!}
+        rocky_grass_01.wl = {t_op4_OP4CTF=!}
+        sand_01.wl = {t_op4_OP4CTF=!}
+        sand_strip.wl = {t_op4_OP4CTF=!}
+        sand_strip_01.wl = {t_op4_OP4CTF=!}
+        sign_arrow_01.wl = {t_op4_OP4CTF=!}
+        sign_arrow_02.wl = {t_op4_OP4CTF=!}
+        sign_arrow_03.wl = {t_op4_OP4CTF=!}
+        sign_arrow_04.wl = {t_op4_OP4CTF=!}
+        sign_arrow_05.wl = {t_op4_OP4CTF=!}
+        sign_bd_grn.wl = {t_op4_OP4CTF=!}
+        sign_bd_orng.wl = {t_op4_OP4CTF=!}
+        sign_biodrn_grn.wl = {t_op4_OP4CTF=!}
+        sign_biodrn_orn.wl = {t_op4_OP4CTF=!}
+        sign_crate_01.wl = {t_op4_OP4CTF=!}
+        sign_grn_01.wl = {t_op4_OP4CTF=!}
+        sign_grn_02.wl = {t_op4_OP4CTF=!}
+        sign_grn_03.wl = {t_op4_OP4CTF=!}
+        sign_grn_lft_03.wl = {t_op4_OP4CTF=!}
+        sign_grn_lft_01.wl = {t_op4_OP4CTF=!}
+        sign_grn_lft_02.wl = {t_op4_OP4CTF=!}
+        sign_grn_rt_03.wl = {t_op4_OP4CTF=!}
+        sign_grn_rt_01.wl = {t_op4_OP4CTF=!}
+        sign_grn_rt_02.wl = {t_op4_OP4CTF=!}
+        sign_mortar_grn.wl = {t_op4_OP4CTF=!}
+        sign_mortar_org.wl = {t_op4_OP4CTF=!}
+        sign_obs_grn.wl = {t_op4_OP4CTF=!}
+        sign_obs_orng.wl = {t_op4_OP4CTF=!}
+        sign_org_01.wl = {t_op4_OP4CTF=!}
+        sign_org_02.wl = {t_op4_OP4CTF=!}
+        sign_org_03.wl = {t_op4_OP4CTF=!}
+        sign_org_lft_01.wl = {t_op4_OP4CTF=!}
+        sign_org_lft_02.wl = {t_op4_OP4CTF=!}
+        sign_org_lft_03.wl = {t_op4_OP4CTF=!}
+        sign_org_rt_03.wl = {t_op4_OP4CTF=!}
+        sign_org_rt_02.wl = {t_op4_OP4CTF=!}
+        sign_org_rt_01.wl = {t_op4_OP4CTF=!}
+        sign_pipe_01.wl = {t_op4_OP4CTF=!}
+        sign_vent_grn.wl = {t_op4_OP4CTF=!}
+        sign_vent_org.wl = {t_op4_OP4CTF=!}
+        snow_01.wl = {t_op4_OP4CTF=!}
+        snow_02.wl = {t_op4_OP4CTF=!}
+        snow_03.wl = {t_op4_OP4CTF=!}
+        snow_flr_01.wl = {t_op4_OP4CTF=!}
+        snow_flr_02.wl = {t_op4_OP4CTF=!}
+        snow_wall_01.wl = {t_op4_OP4CTF=!}
+        snow_wall_02.wl = {t_op4_OP4CTF=!}
+        snow_wall_03.wl = {t_op4_OP4CTF=!}
+        snow_wall_04.wl = {t_op4_OP4CTF=!}
+        snow_wall_gn_02.wl = {t_op4_OP4CTF=!}
+        snow_wall_og_02.wl = {t_op4_OP4CTF=!}
+        trrm_wood2a.wl = {t_op4_OP4CTF=!}
+        wall_grn_end.wl = {t_op4_OP4CTF=!}
+        wall_grn_end_02.wl = {t_op4_OP4CTF=!}
+        wall_grn_end_01.wl = {t_op4_OP4CTF=!}
+        wall_org_end_01.wl = {t_op4_OP4CTF=!}
+        wall_org_end_02.wl = {t_op4_OP4CTF=!}
+        wall_org_end_03.wl = {t_op4_OP4CTF=!}
+        wall_pipe_g_01.wl = {t_op4_OP4CTF=!}
+        wall_pipe_g_02.wl = {t_op4_OP4CTF=!}
+        wall_pipe_g_03.wl = {t_op4_OP4CTF=!}
+        wall_pipe_o_03.wl = {t_op4_OP4CTF=!}
+        wall_pipe_o_02.wl = {t_op4_OP4CTF=!}
+        wall_pipe_o_01.wl = {t_op4_OP4CTF=!}
+        xeno_grapple_os.wl = {t_op4_OP4CTF=!}
+        xeno_grapple_gs.wl = {t_op4_OP4CTF=!}
+        xeno_grapple_7g.wl = {t_op4_OP4CTF=!}
+        xeno_grapple_7o.wl = {t_op4_OP4CTF=!}
+        {jungle_can_02.wl = {t_op4_OP4CTF=!}
+        {jungle_can_01.wl = {t_op4_OP4CTF=!}
+      }
+    }
+  }
+}

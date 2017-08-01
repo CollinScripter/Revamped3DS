@@ -1,0 +1,1693 @@
+QQRKSRC1
+// This file has been written by QuArK QuArK 6.6 Beta
+// It's the text version of file: Q3_SG_textures.qrk
+
+// Quake 3 SmokinGuns textures file for Quark.
+// This stand alone game site is http://forum.smokin-guns.org/
+
+//$Header: /cvsroot/quark/runtime/addons/Quake_3/Q3_SG_textures.qrk,v 1.1 2012/04/20 22:55:23 cdunde Exp $
+// ----------- REVISION HISTORY ------------
+//$Log: Q3_SG_textures.qrk,v $
+//Revision 1.1  2012/04/20 22:55:23  cdunde
+//Added Entities and Textures add-ons for Quake 3 Smoking Guns stand alone game.
+//
+//
+
+{
+  Description = "Addon for smokinguns"
+  Game Context.qctx =
+  {
+    Game = "Quake 3"
+  }
+  Textures.qtx =
+  {
+    ToolBox = "Texture Browser..."
+    Root = "SmokinGuns Textures.qtxfolder"
+    SmokinGuns Textures.qtxfolder =
+    {
+      joekarimat1.pk3.qtxfolder =
+      {
+        joekari.shader.txlist =
+        {
+          joekari_sky/alamosky.wl =          { a = "smokinguns" b = "joekari.shader" }
+          joekari_sky/alamosky_nosun.wl =          { a = "smokinguns" b = "joekari.shader" }
+          joekari_sky/grass_sky.wl =          { a = "smokinguns" b = "joekari.shader" }
+          joekari_sky/env_demo.wl =          { a = "smokinguns" b = "joekari.shader" }
+          joekari_cloth/cloth_alamo1_phong.wl =          { a = "smokinguns" b = "joekari.shader" }
+          joekari_cloth/cloth_alamo3_phong.wl =          { a = "smokinguns" b = "joekari.shader" }
+          joekari_cloth/cloth_rope1_phong.wl =          { a = "smokinguns" b = "joekari.shader" }
+          joekari_stone/stone_alamosaic1_phong.wl =          { a = "smokinguns" b = "joekari.shader" }
+          joekari_grass/grass_alamo1_phong.wl =          { a = "smokinguns" b = "joekari.shader" }
+          joekari_stone/stone_alamo1_phong.wl =          { a = "smokinguns" b = "joekari.shader" }
+          joekari_wood/wood_tree1_phong.wl =          { a = "smokinguns" b = "joekari.shader" }
+          joekari_stone/stone_moche_phong.wl =          { a = "smokinguns" b = "joekari.shader" }
+          joekari_cloth/cloth_alamocurtain1.wl =          { a = "smokinguns" b = "joekari.shader" }
+          joekari_metal/metal_chain1.wl =          { a = "smokinguns" b = "joekari.shader" }
+          joekari_wood/wood_wheel1_trans.wl =          { a = "smokinguns" b = "joekari.shader" }
+          joekari_wood/wood_fence1a.wl =          { a = "smokinguns" b = "joekari.shader" }
+          joekari_wood/wood_ladder1a.wl =          { a = "smokinguns" b = "joekari.shader" }
+          joekari_wood/wood_ladder1b.wl =          { a = "smokinguns" b = "joekari.shader" }
+          joekari_glass/glass_simpleglass1.wl =          { a = "smokinguns" b = "joekari.shader" }
+          joekari_glass/glass_simpleglass2_nocull.wl =          { a = "smokinguns" b = "joekari.shader" }
+          joekari_glass/glass_simpleglass2_nocull_darker.wl =          { a = "smokinguns" b = "joekari.shader" }
+          joekari_glass/glass_stained1.wl =          { a = "smokinguns" b = "joekari.shader" }
+          joekari_metal/metal_simplegold1.wl =          { a = "smokinguns" b = "joekari.shader" }
+          joekari_metal/metal_simplegold1_darker.wl =          { a = "smokinguns" b = "joekari.shader" }
+          joekari_glass/glass_simpleceramic1.wl =          { a = "smokinguns" b = "joekari.shader" }
+          joekari_glass/glass_simpleceramic1_darker.wl =          { a = "smokinguns" b = "joekari.shader" }
+          joekari_metal/metal_simplecopper1.wl =          { a = "smokinguns" b = "joekari.shader" }
+          joekari_metal/metal_simplecopper1_darker.wl =          { a = "smokinguns" b = "joekari.shader" }
+          joekari_misc/simplewax1.wl =          { a = "smokinguns" b = "joekari.shader" }
+          joekari_glass/glass_lamp1.wl =          { a = "smokinguns" b = "joekari.shader" }
+          joekari_glass/glass_lamp1_brighter.wl =          { a = "smokinguns" b = "joekari.shader" }
+          joekari_water/water_alamo1.wl =          { a = "smokinguns" b = "joekari.shader" }
+          joekari_water/water_alamo1_f.wl =          { a = "smokinguns" b = "joekari.shader" }
+          joekari_sfx/flame_lq.wl =          { a = "smokinguns" b = "joekari.shader" }
+          joekari_grass/grass_jkdemo1.wl =          { a = "smokinguns" b = "joekari.shader" }
+          joekari_grass/grass_jkdemo1_dph1.wl =          { a = "smokinguns" b = "joekari.shader" }
+          joekari_grass/grass_jkdemo1_dph2.wl =          { a = "smokinguns" b = "joekari.shader" }
+          joekari_grass/grass_jkdemo1_dph3.wl =          { a = "smokinguns" b = "joekari.shader" }
+          joekari_grass/grass_jkdemo1_dph4.wl =          { a = "smokinguns" b = "joekari.shader" }
+          joekari_plant/plant_breli1.wl =          { a = "smokinguns" b = "joekari.shader" }
+          joekari_plant/plant_breli1_as.wl =          { a = "smokinguns" b = "joekari.shader" }
+          joekari_plant/plant_breli2.wl =          { a = "smokinguns" b = "joekari.shader" }
+          joekari_plant/plant_palm1.wl =          { a = "smokinguns" b = "joekari.shader" }
+          joekari_transition/dirt_alamo2_to_grass_alamo1.wl =          { a = "smokinguns" b = "joekari.shader" }
+          joekari_animal/eagle1.wl =          { a = "smokinguns" b = "joekari.shader" }
+          joekari_cloth/cloth_alamobook1b_nolightmap.wl =          { a = "smokinguns" b = "joekari.shader" }
+          joekari_metal/metal_doorhandle1.wl =          { a = "smokinguns" b = "joekari.shader" }
+          joekari_cloth/cloth_wagon_cover1a.wl =          { a = "smokinguns" b = "joekari.shader" }
+          joekari_cloth/cloth_alamo1.wl =          { a = "smokinguns" b = "joekari.shader" }
+          joekari_misc/metal_ashtray1.wl =          { a = "smokinguns" b = "joekari.shader" }
+          joekari_picture/cloth_alamo_wanted1.wl =          { a = "smokinguns" b = "joekari.shader" }
+          joekari_wood/wood_wheel1_notrans.wl =          { a = "smokinguns" b = "joekari.shader" }
+          joekari_stone/stone_alamowall2c_fake.wl =          { a = "smokinguns" b = "joekari.shader" }
+          joekari_dirt/dirt_alamo1.wl =          { a = "smokinguns" b = "joekari.shader" }
+          joekari_wood/wood_js_wall.wl =          { a = "smokinguns" b = "joekari.shader" }
+          joekari_wood/wood_breli_wood1.wl =          { a = "smokinguns" b = "joekari.shader" }
+          joekari_wood/wood_planks1.wl =          { a = "smokinguns" b = "joekari.shader" }
+          joekari_stone/stone_alamowall1.wl =          { a = "smokinguns" b = "joekari.shader" }
+          joekari_stone/stone_alamowall2abis.wl =          { a = "smokinguns" b = "joekari.shader" }
+          joekari_stone/stone_alamowall2b.wl =          { a = "smokinguns" b = "joekari.shader" }
+          joekari_stone/stone_alamofloor2.wl =          { a = "smokinguns" b = "joekari.shader" }
+          joekari_stone/stone_alamosaic1.wl =          { a = "smokinguns" b = "joekari.shader" }
+          joekari_grass/grass_alamo2.wl =          { a = "smokinguns" b = "joekari.shader" }
+          joekari_stone/stone_alamowall2a.wl =          { a = "smokinguns" b = "joekari.shader" }
+          joekari_stone/stone_alamowall2c.wl =          { a = "smokinguns" b = "joekari.shader" }
+          joekari_q3map/hintskip.wl =          { a = "smokinguns" b = "joekari.shader" }
+          joekari_q3map/subtlehint.wl =          { a = "smokinguns" b = "joekari.shader" }
+          joekari_q3map/alpha_000.wl =          { a = "smokinguns" b = "joekari.shader" }
+          joekari_q3map/alpha_025.wl =          { a = "smokinguns" b = "joekari.shader" }
+          joekari_q3map/alpha_050.wl =          { a = "smokinguns" b = "joekari.shader" }
+          joekari_q3map/alpha_075.wl =          { a = "smokinguns" b = "joekari.shader" }
+          joekari_q3map/alpha_100.wl =          { a = "smokinguns" b = "joekari.shader" }
+          joekari_q3map/shadowcaster_100.wl =          { a = "smokinguns" b = "joekari.shader" }
+          joekari_q3map/wood_clip.wl =          { a = "smokinguns" b = "joekari.shader" }
+          joekari_q3map/grass_clip.wl =          { a = "smokinguns" b = "joekari.shader" }
+          joekari_q3map/auto_playerclip.wl =          { a = "smokinguns" b = "joekari.shader" }
+          joekari_q3map/auto_playerclip_test.wl =          { a = "smokinguns" b = "joekari.shader" }
+          joekari_q3map/donotenter_botclip.wl =          { a = "smokinguns" b = "joekari.shader" }
+          joekari_q3map/rgb_1_0_0.wl =          { a = "smokinguns" b = "joekari.shader" }
+          joekari_q3map/rgb_0_1_0.wl =          { a = "smokinguns" b = "joekari.shader" }
+          joekari_q3map/rgb_0_0_1.wl =          { a = "smokinguns" b = "joekari.shader" }
+          wq3_stone/stone_rock5_wqt2.wl =          { a = "smokinguns" b = "joekari.shader" }
+          wq3_cloth/cloth_coach_wqt2.wl =          { a = "smokinguns" b = "joekari.shader" }
+          joekari_q3map/test_shader.wl =          { a = "smokinguns" b = "joekari.shader" }
+          joekari_sfx/portal.wl =          { a = "smokinguns" b = "joekari.shader" }
+        }
+        joekari_animal.txlist =
+        {
+          joekari_animal/eagle1.wl =          {  a = "smokinguns" }
+        }
+        joekari_cloth.txlist =
+        {
+          joekari_cloth/cloth_alamo1.wl =          {  a = "smokinguns" }
+          joekari_cloth/cloth_alamo2a.wl =          {  a = "smokinguns" }
+          joekari_cloth/cloth_alamo2b.wl =          {  a = "smokinguns" }
+          joekari_cloth/cloth_alamo3.wl =          {  a = "smokinguns" }
+          joekari_cloth/cloth_alamobook1a.wl =          {  a = "smokinguns" }
+          joekari_cloth/cloth_alamobook1b.wl =          {  a = "smokinguns" }
+          joekari_cloth/cloth_alamocarpet1.wl =          {  a = "smokinguns" }
+          joekari_cloth/cloth_alamocarpet2.wl =          {  a = "smokinguns" }
+          joekari_cloth/cloth_alamocurtain1.wl =          {  a = "smokinguns" }
+          joekari_cloth/cloth_cover1.wl =          {  a = "smokinguns" }
+          joekari_cloth/cloth_cushion1.wl =          {  a = "smokinguns" }
+          joekari_cloth/cloth_mattress1.wl =          {  a = "smokinguns" }
+          joekari_cloth/cloth_rope1.wl =          {  a = "smokinguns" }
+          joekari_cloth/cloth_wagon_cover1a.wl =          {  a = "smokinguns" }
+          joekari_cloth/cloth_wallpaper1.wl =          {  a = "smokinguns" }
+        }
+        joekari_color.txlist =
+        {
+          joekari_color/black.wl =          {  a = "smokinguns" }
+          joekari_color/copper.wl =          {  a = "smokinguns" }
+          joekari_color/dark_blue_green.wl =          {  a = "smokinguns" }
+          joekari_color/gold.wl =          {  a = "smokinguns" }
+          joekari_color/gray.wl =          {  a = "smokinguns" }
+          joekari_color/gray_blue.wl =          {  a = "smokinguns" }
+          joekari_color/white_yellow.wl =          {  a = "smokinguns" }
+        }
+        joekari_dirt.txlist =
+        {
+          joekari_dirt/dirt_alamo1.wl =          {  a = "smokinguns" }
+          joekari_dirt/dirt_alamo2.wl =          {  a = "smokinguns" }
+        }
+        joekari_glass.txlist =
+        {
+          joekari_glass/glass_alamowindow1.wl =          {  a = "smokinguns" }
+          joekari_glass/glass_lamp1.wl =          {  a = "smokinguns" }
+          joekari_glass/glass_simpleceramic1.wl =          {  a = "smokinguns" }
+          joekari_glass/glass_simpleglass2_nocull.wl =          {  a = "smokinguns" }
+          joekari_glass/glass_whiskey1.wl =          {  a = "smokinguns" }
+          joekari_glass/reflect1.wl =          {  a = "smokinguns" }
+        }
+        joekari_grass.txlist =
+        {
+          joekari_grass/grass_alamo1.wl =          {  a = "smokinguns" }
+          joekari_grass/grass_alamo2.wl =          {  a = "smokinguns" }
+          joekari_grass/grass_drygrass1.wl =          {  a = "smokinguns" }
+          joekari_grass/grass_drygrass2.wl =          {  a = "smokinguns" }
+          joekari_grass/grass_jkdemo1-1.wl =          {  a = "smokinguns" }
+          joekari_grass/grass_jkdemo1-2.wl =          {  a = "smokinguns" }
+          joekari_grass/grass_jkdemo1-3.wl =          {  a = "smokinguns" }
+          joekari_grass/grass_jkdemo1-4.wl =          {  a = "smokinguns" }
+          joekari_grass/grass_jkdemo1-5.wl =          {  a = "smokinguns" }
+        }
+        joekari_metal.txlist =
+        {
+          joekari_metal/metal_alamo1.wl =          {  a = "smokinguns" }
+          joekari_metal/metal_breli_metal1.wl =          {  a = "smokinguns" }
+          joekari_metal/metal_chain1.wl =          {  a = "smokinguns" }
+          joekari_metal/metal_chain2.wl =          {  a = "smokinguns" }
+          joekari_metal/metal_doorhandle1.wl =          {  a = "smokinguns" }
+          joekari_metal/metal_filling1a.wl =          {  a = "smokinguns" }
+          joekari_metal/metal_safe1.wl =          {  a = "smokinguns" }
+          joekari_metal/metal_simplegold1.wl =          {  a = "smokinguns" }
+        }
+        joekari_misc.txlist =
+        {
+          joekari_misc/cigar1.wl =          {  a = "smokinguns" }
+          joekari_misc/food_multi1.wl =          {  a = "smokinguns" }
+          joekari_misc/food_multi2.wl =          {  a = "smokinguns" }
+          joekari_misc/metal_ashtray1.wl =          {  a = "smokinguns" }
+          joekari_misc/metal_horseshoe1.wl =          {  a = "smokinguns" }
+          joekari_misc/metal_knife1.wl =          {  a = "smokinguns" }
+          joekari_misc/paper_whiskey1.wl =          {  a = "smokinguns" }
+          joekari_misc/simplewax1.wl =          {  a = "smokinguns" }
+        }
+        joekari_picture.txlist =
+        {
+          joekari_picture/book1.wl =          {  a = "smokinguns" }
+          joekari_picture/cloth_alamodaily1.wl =          {  a = "smokinguns" }
+          joekari_picture/cloth_alamopicture1.wl =          {  a = "smokinguns" }
+          joekari_picture/cloth_alamo_wanted1.wl =          {  a = "smokinguns" }
+          joekari_picture/cloth_midge_molotov1.wl =          {  a = "smokinguns" }
+        }
+        joekari_plant.txlist =
+        {
+          joekari_plant/plant_breli1.wl =          {  a = "smokinguns" }
+          joekari_plant/plant_breli2.wl =          {  a = "smokinguns" }
+          joekari_plant/plant_cactus1.wl =          {  a = "smokinguns" }
+          joekari_plant/plant_palm1.wl =          {  a = "smokinguns" }
+        }
+        joekari_q3map.txlist =
+        {
+          joekari_q3map/shadow_100.wl =          {  a = "smokinguns" }
+        }
+        joekari_sfx.txlist =
+        {
+          joekari_sfx/flame_lq.wl =          {  a = "smokinguns" }
+          joekari_sfx/flame_lq1.wl =          {  a = "smokinguns" }
+          joekari_sfx/flame_lq2.wl =          {  a = "smokinguns" }
+          joekari_sfx/flame_lq3.wl =          {  a = "smokinguns" }
+          joekari_sfx/flame_lq4.wl =          {  a = "smokinguns" }
+          joekari_sfx/flame_lq5.wl =          {  a = "smokinguns" }
+          joekari_sfx/portal.wl =          {  a = "smokinguns" }
+          joekari_sfx/portal_surface.wl =          {  a = "smokinguns" }
+        }
+        joekari_sky.txlist =
+        {
+          joekari_sky/alamosky_bk.wl =          {  a = "smokinguns" }
+          joekari_sky/alamosky_dn.wl =          {  a = "smokinguns" }
+          joekari_sky/alamosky_ft.wl =          {  a = "smokinguns" }
+          joekari_sky/alamosky_lf.wl =          {  a = "smokinguns" }
+          joekari_sky/alamosky_nosun.wl =          {  a = "smokinguns" }
+          joekari_sky/alamosky_rt.wl =          {  a = "smokinguns" }
+          joekari_sky/alamosky_up.wl =          {  a = "smokinguns" }
+          joekari_sky/grass_sky_bk.wl =          {  a = "smokinguns" }
+          joekari_sky/grass_sky_dn.wl =          {  a = "smokinguns" }
+          joekari_sky/grass_sky_ft.wl =          {  a = "smokinguns" }
+          joekari_sky/grass_sky_lf.wl =          {  a = "smokinguns" }
+          joekari_sky/grass_sky_rt.wl =          {  a = "smokinguns" }
+          joekari_sky/grass_sky_up.wl =          {  a = "smokinguns" }
+        }
+        joekari_stone.txlist =
+        {
+          joekari_stone/stone_alamo1.wl =          {  a = "smokinguns" }
+          joekari_stone/stone_alamofloor1.wl =          {  a = "smokinguns" }
+          joekari_stone/stone_alamofloor2.wl =          {  a = "smokinguns" }
+          joekari_stone/stone_alamofloor3.wl =          {  a = "smokinguns" }
+          joekari_stone/stone_alamofloor4.wl =          {  a = "smokinguns" }
+          joekari_stone/stone_alamofloor5.wl =          {  a = "smokinguns" }
+          joekari_stone/stone_alamoroof1.wl =          {  a = "smokinguns" }
+          joekari_stone/stone_alamosaic1.wl =          {  a = "smokinguns" }
+          joekari_stone/stone_alamowall1.wl =          {  a = "smokinguns" }
+          joekari_stone/stone_alamowall2a.wl =          {  a = "smokinguns" }
+          joekari_stone/stone_alamowall2abis.wl =          {  a = "smokinguns" }
+          joekari_stone/stone_alamowall2b.wl =          {  a = "smokinguns" }
+          joekari_stone/stone_alamowall2c.wl =          {  a = "smokinguns" }
+          joekari_stone/stone_filling1.wl =          {  a = "smokinguns" }
+        }
+        joekari_transition.txlist =
+        {
+          joekari_transition/sand_2grass1.wl =          {  a = "smokinguns" }
+        }
+        joekari_water.txlist =
+        {
+          joekari_water/water_alamo1.wl =          {  a = "smokinguns" }
+          joekari_water/water_alamo1-r1.wl =          {  a = "smokinguns" }
+          joekari_water/water_alamo1-r2.wl =          {  a = "smokinguns" }
+        }
+        joekari_wood.txlist =
+        {
+          joekari_wood/wood_alamo1a.wl =          {  a = "smokinguns" }
+          joekari_wood/wood_alamo1b.wl =          {  a = "smokinguns" }
+          joekari_wood/wood_alamo2a.wl =          {  a = "smokinguns" }
+          joekari_wood/wood_alamo2b.wl =          {  a = "smokinguns" }
+          joekari_wood/wood_alamo2c.wl =          {  a = "smokinguns" }
+          joekari_wood/wood_alamo2d.wl =          {  a = "smokinguns" }
+          joekari_wood/wood_alamo3.wl =          {  a = "smokinguns" }
+          joekari_wood/wood_alamo4a.wl =          {  a = "smokinguns" }
+          joekari_wood/wood_alamo4b.wl =          {  a = "smokinguns" }
+          joekari_wood/wood_alamo5.wl =          {  a = "smokinguns" }
+          joekari_wood/wood_alamo6.wl =          {  a = "smokinguns" }
+          joekari_wood/wood_alamo7.wl =          {  a = "smokinguns" }
+          joekari_wood/wood_alamo8.wl =          {  a = "smokinguns" }
+          joekari_wood/wood_alamodoor1.wl =          {  a = "smokinguns" }
+          joekari_wood/wood_alamodoor1_nh.wl =          {  a = "smokinguns" }
+          joekari_wood/wood_alamodoor2.wl =          {  a = "smokinguns" }
+          joekari_wood/wood_alamodoor3a.wl =          {  a = "smokinguns" }
+          joekari_wood/wood_alamodoor3b.wl =          {  a = "smokinguns" }
+          joekari_wood/wood_alamo_bk_insign.wl =          {  a = "smokinguns" }
+          joekari_wood/wood_alamo_insign.wl =          {  a = "smokinguns" }
+          joekari_wood/wood_bark1.wl =          {  a = "smokinguns" }
+          joekari_wood/wood_breli_bark1.wl =          {  a = "smokinguns" }
+          joekari_wood/wood_breli_wall1.wl =          {  a = "smokinguns" }
+          joekari_wood/wood_breli_wood1.wl =          {  a = "smokinguns" }
+          joekari_wood/wood_cork1.wl =          {  a = "smokinguns" }
+          joekari_wood/wood_crate1a.wl =          {  a = "smokinguns" }
+          joekari_wood/wood_crate1b.wl =          {  a = "smokinguns" }
+          joekari_wood/wood_fence1a.wl =          {  a = "smokinguns" }
+          joekari_wood/wood_filling1a.wl =          {  a = "smokinguns" }
+          joekari_wood/wood_furniture1a.wl =          {  a = "smokinguns" }
+          joekari_wood/wood_furniture1b.wl =          {  a = "smokinguns" }
+          joekari_wood/wood_js_lats.wl =          {  a = "smokinguns" }
+          joekari_wood/wood_js_wall.wl =          {  a = "smokinguns" }
+          joekari_wood/wood_ladder1a.wl =          {  a = "smokinguns" }
+          joekari_wood/wood_ladder1b.wl =          {  a = "smokinguns" }
+          joekari_wood/wood_lats1.wl =          {  a = "smokinguns" }
+          joekari_wood/wood_ornament1.wl =          {  a = "smokinguns" }
+          joekari_wood/wood_phab_barrel1.wl =          {  a = "smokinguns" }
+          joekari_wood/wood_planks1.wl =          {  a = "smokinguns" }
+          joekari_wood/wood_planks2.wl =          {  a = "smokinguns" }
+          joekari_wood/wood_saloon_insign.wl =          {  a = "smokinguns" }
+          joekari_wood/wood_wagon1.wl =          {  a = "smokinguns" }
+          joekari_wood/wood_wheel1_edge.wl =          {  a = "smokinguns" }
+          joekari_wood/wood_wheel1_trans.wl =          {  a = "smokinguns" }
+        }
+      }
+      ringsctf10.pk3.qtxfolder =
+      {
+        ringsctf09.shader.txlist =
+        {
+          mapobjects/sg/gate/nchevlight.wl =  { a = "smokinguns"  b = "ringsctf09.shader" }
+          sgcanims/evfront2.wl =  { a = "smokinguns"  b = "ringsctf09.shader" }
+          sgcanims/evback.wl =  { a = "smokinguns"  b = "ringsctf09.shader" }
+          sgcanims/dial.wl =  { a = "smokinguns"  b = "ringsctf09.shader" }
+          sg_travel/part1.wl =  { a = "smokinguns"  b = "ringsctf09.shader" }
+          sg_travel/stars1.wl =  { a = "smokinguns"  b = "ringsctf09.shader" }
+          sg_travel/slider.wl =  { a = "smokinguns"  b = "ringsctf09.shader" }
+          sg_travel/singflare.wl =  { a = "smokinguns"  b = "ringsctf09.shader" }
+          sgcanims/hyper.wl =  { a = "smokinguns"  b = "ringsctf09.shader" }
+          sggoauld/shieldgenlight.wl =  { a = "smokinguns"  b = "ringsctf09.shader" }
+          old_torch/vertwood.wl =  { a = "smokinguns"  b = "ringsctf09.shader" }
+          old_torch/metal.wl =  { a = "smokinguns"  b = "ringsctf09.shader" }
+          old_torch/basic.wl =  { a = "smokinguns"  b = "ringsctf09.shader" }
+          sfx/beam_blue.wl =  { a = "smokinguns"  b = "ringsctf09.shader" }
+          mapobjects/globe/clear_flash_globe.wl =  { a = "smokinguns"  b = "ringsctf09.shader" }
+          mapobjects/globe/gold_flash_globe.wl =  { a = "smokinguns"  b = "ringsctf09.shader" }
+          mapobjects/globe/clear_globe.wl =  { a = "smokinguns"  b = "ringsctf09.shader" }
+          mapobjects/globe/gold_globe.wl =  { a = "smokinguns"  b = "ringsctf09.shader" }
+          models\mapobjects\egypt\apis.wl =  { a = "smokinguns"  b = "ringsctf09.shader" }
+          models\mapobjects\egypt\lapis.wl =  { a = "smokinguns"  b = "ringsctf09.shader" }
+          models\mapobjects\egypt\anubishead.wl =  { a = "smokinguns"  b = "ringsctf09.shader" }
+          models\mapobjects\egypt\hawk.wl =  { a = "smokinguns"  b = "ringsctf09.shader" }
+          models\mapobjects\egypt\storchgold.wl =  { a = "smokinguns"  b = "ringsctf09.shader" }
+          models\mapobjects\egypt\gold.wl =  { a = "smokinguns"  b = "ringsctf09.shader" }
+          models\mapobjects\egypt\crown1.wl =  { a = "smokinguns"  b = "ringsctf09.shader" }
+          models\mapobjects\egypt\crown2.wl =  { a = "smokinguns"  b = "ringsctf09.shader" }
+          models\mapobjects\egypt\cobragold.wl =  { a = "smokinguns"  b = "ringsctf09.shader" }
+          models\mapobjects\egypt\skull.wl =  { a = "smokinguns"  b = "ringsctf09.shader" }
+          models\mapobjects\egypt\ragoldX.wl =  { a = "smokinguns"  b = "ringsctf09.shader" }
+          models\mapobjects\egypt\eyeX.wl =  { a = "smokinguns"  b = "ringsctf09.shader" }
+          models\mapobjects\egypt\snakeskinX.wl =  { a = "smokinguns"  b = "ringsctf09.shader" }
+          models\mapobjects\egypt\cobraeyes.wl =  { a = "smokinguns"  b = "ringsctf09.shader" }
+          models\mapobjects\egypt\snakeeyes.wl =  { a = "smokinguns"  b = "ringsctf09.shader" }
+          models\mapobjects\egypt\cobraflame3.wl =  { a = "smokinguns"  b = "ringsctf09.shader" }
+          models\mapobjects\egypt\cobraflame2.wl =  { a = "smokinguns"  b = "ringsctf09.shader" }
+          models\mapobjects\egypt\cobraflame2a.wl =  { a = "smokinguns"  b = "ringsctf09.shader" }
+          models\mapobjects\egypt\cobraflame.wl =  { a = "smokinguns"  b = "ringsctf09.shader" }
+          models\mapobjects\egypt\flame1sidelight.wl =  { a = "smokinguns"  b = "ringsctf09.shader" }
+          models\mapobjects\egypt\cobraskin2.wl =  { a = "smokinguns"  b = "ringsctf09.shader" }
+          models\mapobjects\egypt\bapholampbfx.wl =  { a = "smokinguns"  b = "ringsctf09.shader" }
+          models\mapobjects\egypt\bapholampyfx.wl =  { a = "smokinguns"  b = "ringsctf09.shader" }
+          models\mapobjects\egypt\hawksun.wl =  { a = "smokinguns"  b = "ringsctf09.shader" }
+          sfx/portal3_sfx.wl =  { a = "smokinguns"  b = "ringsctf09.shader" }
+        }
+        base_light.txlist =
+        {
+          base_light/wsupprt1_12.wl =          {  a = "smokinguns" }
+        }
+        base_wall.txlist =
+        {
+          base_wall/atech2_c.wl =          {  a = "smokinguns" }
+          base_wall/bluemetalsupport2.wl =          {  a = "smokinguns" }
+        }
+        borg.txlist =
+        {
+          borg/blight.wl =          {  a = "smokinguns" }
+          borg/borgfloorsm.wl =          {  a = "smokinguns" }
+        }
+        egypt.txlist =
+        {
+          egypt/032-02b.wl =          {  a = "smokinguns" }
+          egypt/064-03b.wl =          {  a = "smokinguns" }
+          egypt/128-04b.wl =          {  a = "smokinguns" }
+          egypt/256-04b.wl =          {  a = "smokinguns" }
+          egypt/black.wl =          {  a = "smokinguns" }
+          egypt/block01b.wl =          {  a = "smokinguns" }
+          egypt/block03b.wl =          {  a = "smokinguns" }
+          egypt/block08d.wl =          {  a = "smokinguns" }
+          egypt/block10b.wl =          {  a = "smokinguns" }
+          egypt/goldmetal.wl =          {  a = "smokinguns" }
+          egypt/insetbrick.wl =          {  a = "smokinguns" }
+          egypt/s064-05b.wl =          {  a = "smokinguns" }
+          egypt/stone03b.wl =          {  a = "smokinguns" }
+          egypt/stone08d.wl =          {  a = "smokinguns" }
+          egypt/stone10d.wl =          {  a = "smokinguns" }
+          egypt/stonewalls.wl =          {  a = "smokinguns" }
+          egypt/stone_exterior.wl =          {  a = "smokinguns" }
+          egypt/tringfloor.wl =          {  a = "smokinguns" }
+        }
+        matrix_lobby.txlist =
+        {
+          matrix_lobby/vaultmetal.wl =          {  a = "smokinguns" }
+        }
+        old_torch.txlist =
+        {
+          old_torch/basic.wl =          {  a = "smokinguns" }
+          old_torch/metal.wl =          {  a = "smokinguns" }
+          old_torch/vertwood.wl =          {  a = "smokinguns" }
+        }
+        sgcanims.txlist =
+        {
+          sgcanims/dial1s1.wl =          {  a = "smokinguns" }
+          sgcanims/dial1s2.wl =          {  a = "smokinguns" }
+          sgcanims/dial1s3.wl =          {  a = "smokinguns" }
+          sgcanims/dial1s4.wl =          {  a = "smokinguns" }
+          sgcanims/evback.wl =          {  a = "smokinguns" }
+          sgcanims/evfront2.wl =          {  a = "smokinguns" }
+          sgcanims/evfront4.wl =          {  a = "smokinguns" }
+          sgcanims/evfront6.wl =          {  a = "smokinguns" }
+          sgcanims/evfront8.wl =          {  a = "smokinguns" }
+        }
+        sgrings.txlist =
+        {
+          sgrings/beam.wl =          {  a = "smokinguns" }
+          sgrings/beam.wl =          {  a = "smokinguns" }
+          sgrings/dust.wl =          {  a = "smokinguns" }
+          sgrings/gold1.wl =          {  a = "smokinguns" }
+          sgrings/transport.wl =          {  a = "smokinguns" }
+          sgrings/tringfloor.wl =          {  a = "smokinguns" }
+          sgrings/white.wl =          {  a = "smokinguns" }
+        }
+        sg_travel.txlist =
+        {
+          sg_travel/part1.wl =          {  a = "smokinguns" }
+          sg_travel/singflare.wl =          {  a = "smokinguns" }
+          sg_travel/slider.wl =          {  a = "smokinguns" }
+          sg_travel/stars1.wl =          {  a = "smokinguns" }
+        }
+      }
+      sg_textures0.pk3.qtxfolder =
+      {
+        common.txlist =
+        {
+          common/antiportal.wl =          {  a = "smokinguns" }
+          common/areaportal.wl =          {  a = "smokinguns" }
+          common/botclip.wl =          {  a = "smokinguns" }
+          common/caulk.wl =          {  a = "smokinguns" }
+          common/clip.wl =          {  a = "smokinguns" }
+          common/clusterportal.wl =          {  a = "smokinguns" }
+          common/cushion.wl =          {  a = "smokinguns" }
+          common/donotenter.wl =          {  a = "smokinguns" }
+          common/hint.wl =          {  a = "smokinguns" }
+          common/hintskip.wl =          {  a = "smokinguns" }
+          common/invisible.wl =          {  a = "smokinguns" }
+          common/ladder.wl =          {  a = "smokinguns" }
+          common/lightgrid.wl =          {  a = "smokinguns" }
+          common/metalclip.wl =          {  a = "smokinguns" }
+          common/missileclip.wl =          {  a = "smokinguns" }
+          common/nodraw.wl =          {  a = "smokinguns" }
+          common/nodrawnonsolid.wl =          {  a = "smokinguns" }
+          common/nodrop.wl =          {  a = "smokinguns" }
+          common/nolightmap.wl =          {  a = "smokinguns" }
+          common/origin.wl =          {  a = "smokinguns" }
+          common/qer_mirror.wl =          {  a = "smokinguns" }
+          common/qer_portal.wl =          {  a = "smokinguns" }
+          common/schein.wl =          {  a = "smokinguns" }
+          common/skip.wl =          {  a = "smokinguns" }
+          common/slick.wl =          {  a = "smokinguns" }
+          common/terrain.wl =          {  a = "smokinguns" }
+          common/trans.wl =          {  a = "smokinguns" }
+          common/trigger.wl =          {  a = "smokinguns" }
+          common/weapclip.wl =          {  a = "smokinguns" }
+          common/white.wl =          {  a = "smokinguns" }
+        }
+        effects.txlist =
+        {
+          effects/sg_tinfx.wl =          {  a = "smokinguns" }
+          effects/sg_tinfx2.wl =          {  a = "smokinguns" }
+          effects/sg_tinfx3.wl =          {  a = "smokinguns" }
+          effects/tinfx.wl =          {  a = "smokinguns" }
+          effects/wq_envmapgold.wl =          {  a = "smokinguns" }
+          effects/wq_tinfx.wl =          {  a = "smokinguns" }
+        }
+        liquids.txlist =
+        {
+          liquids/pool3d_3e.wl =          {  a = "smokinguns" }
+          liquids/pool3d_5e.wl =          {  a = "smokinguns" }
+        }
+        sg_alphamap.txlist =
+        {
+          sg_alphamap/alpha_0.wl =          {  a = "smokinguns" }
+          sg_alphamap/alpha_000.wl =          {  a = "smokinguns" }
+          sg_alphamap/alpha_025.wl =          {  a = "smokinguns" }
+          sg_alphamap/alpha_050.wl =          {  a = "smokinguns" }
+          sg_alphamap/alpha_075.wl =          {  a = "smokinguns" }
+          sg_alphamap/alpha_085.wl =          {  a = "smokinguns" }
+          sg_alphamap/alpha_100.wl =          {  a = "smokinguns" }
+        }
+        sg_blend.txlist =
+        {
+          sg_blend/dirt_to_grass.wl =          {  a = "smokinguns" }
+          sg_blend/dirt_to_metal.wl =          {  a = "smokinguns" }
+          sg_blend/dirt_to_sand.wl =          {  a = "smokinguns" }
+          sg_blend/dirt_to_snow.wl =          {  a = "smokinguns" }
+          sg_blend/dirt_to_stone.wl =          {  a = "smokinguns" }
+          sg_blend/dirt_to_wood.wl =          {  a = "smokinguns" }
+          sg_blend/grass_rock_blend.wl =          {  a = "smokinguns" }
+          sg_blend/grass_to_metal.wl =          {  a = "smokinguns" }
+          sg_blend/grass_to_sand.wl =          {  a = "smokinguns" }
+          sg_blend/grass_to_snow.wl =          {  a = "smokinguns" }
+          sg_blend/grass_to_stone.wl =          {  a = "smokinguns" }
+          sg_blend/grass_to_wood.wl =          {  a = "smokinguns" }
+          sg_blend/gravel_rock_blend.wl =          {  a = "smokinguns" }
+          sg_blend/sand_ter_grass001_dirt001_blend.wl =          {  a = "smokinguns" }
+          sg_blend/sand_ter_grass001_sand006_blend.wl =          {  a = "smokinguns" }
+          sg_blend/sand_ter_stone001_sand002_blend.wl =          {  a = "smokinguns" }
+          sg_blend/sand_to_metal.wl =          {  a = "smokinguns" }
+          sg_blend/sand_to_snow.wl =          {  a = "smokinguns" }
+          sg_blend/sand_to_wood.wl =          {  a = "smokinguns" }
+          sg_blend/snow_to_metal.wl =          {  a = "smokinguns" }
+          sg_blend/stone_to_metal.wl =          {  a = "smokinguns" }
+          sg_blend/stone_to_sand.wl =          {  a = "smokinguns" }
+          sg_blend/stone_to_snow.wl =          {  a = "smokinguns" }
+          sg_blend/stone_to_wood.wl =          {  a = "smokinguns" }
+          sg_blend/wood_to_metal.wl =          {  a = "smokinguns" }
+          sg_blend/wood_to_snow.wl =          {  a = "smokinguns" }
+        }
+        sg_cloth.txlist =
+        {
+          sg_cloth/cloth_backwater.wl =          {  a = "smokinguns" }
+          sg_cloth/cloth_bed.wl =          {  a = "smokinguns" }
+          sg_cloth/cloth_carpet.wl =          {  a = "smokinguns" }
+          sg_cloth/cloth_carpet1.wl =          {  a = "smokinguns" }
+          sg_cloth/cloth_carpet1b.wl =          {  a = "smokinguns" }
+          sg_cloth/cloth_carpet2.wl =          {  a = "smokinguns" }
+          sg_cloth/cloth_carpet3.wl =          {  a = "smokinguns" }
+          sg_cloth/cloth_carpet3b.wl =          {  a = "smokinguns" }
+          sg_cloth/cloth_carpet4.wl =          {  a = "smokinguns" }
+          sg_cloth/cloth_carpet5.wl =          {  a = "smokinguns" }
+          sg_cloth/cloth_coach.wl =          {  a = "smokinguns" }
+          sg_cloth/cloth_coacharmy.wl =          {  a = "smokinguns" }
+          sg_cloth/cloth_coachdoctor.wl =          {  a = "smokinguns" }
+          sg_cloth/cloth_coachfargo.wl =          {  a = "smokinguns" }
+          sg_cloth/cloth_flag_44.wl =          {  a = "smokinguns" }
+          sg_cloth/cloth_green.wl =          {  a = "smokinguns" }
+          sg_cloth/cloth_jacket1.wl =          {  a = "smokinguns" }
+          sg_cloth/cloth_jacket2.wl =          {  a = "smokinguns" }
+          sg_cloth/cloth_jacket3.wl =          {  a = "smokinguns" }
+          sg_cloth/cloth_pardner.wl =          {  a = "smokinguns" }
+          sg_cloth/cloth_poster1.wl =          {  a = "smokinguns" }
+          sg_cloth/cloth_poster2.wl =          {  a = "smokinguns" }
+          sg_cloth/cloth_poster3.wl =          {  a = "smokinguns" }
+          sg_cloth/cloth_poster4.wl =          {  a = "smokinguns" }
+          sg_cloth/cloth_poster5.wl =          {  a = "smokinguns" }
+          sg_cloth/cloth_poster6.wl =          {  a = "smokinguns" }
+          sg_cloth/cloth_poster7.wl =          {  a = "smokinguns" }
+          sg_cloth/cloth_red.wl =          {  a = "smokinguns" }
+          sg_cloth/cloth_rope001.wl =          {  a = "smokinguns" }
+          sg_cloth/cloth_seat.wl =          {  a = "smokinguns" }
+          sg_cloth/cloth_smooth_leather.wl =          {  a = "smokinguns" }
+          sg_cloth/cloth_wallpaper1.wl =          {  a = "smokinguns" }
+          sg_cloth/cloth_wallpaper1b.wl =          {  a = "smokinguns" }
+          sg_cloth/cloth_wallpaper1c.wl =          {  a = "smokinguns" }
+          sg_cloth/cloth_wallpaper1d.wl =          {  a = "smokinguns" }
+          sg_cloth/cloth_wallpaper1e.wl =          {  a = "smokinguns" }
+          sg_cloth/cloth_wallpaper2.wl =          {  a = "smokinguns" }
+          sg_cloth/cloth_wallpaper3.wl =          {  a = "smokinguns" }
+        }
+        sg_dirt.txlist =
+        {
+          sg_dirt/dirt_brown1.wl =          {  a = "smokinguns" }
+          sg_dirt/dirt_brown2.wl =          {  a = "smokinguns" }
+          sg_dirt/dirt_brown3.wl =          {  a = "smokinguns" }
+          sg_dirt/dirt_brown4.wl =          {  a = "smokinguns" }
+          sg_dirt/dirt_brown5.wl =          {  a = "smokinguns" }
+          sg_dirt/dirt_coal1.wl =          {  a = "smokinguns" }
+          sg_dirt/dirt_dirt001_alpha.wl =          {  a = "smokinguns" }
+          sg_dirt/dirt_erosion1.wl =          {  a = "smokinguns" }
+          sg_dirt/dirt_erosion1b.wl =          {  a = "smokinguns" }
+          sg_dirt/dirt_erosion2.wl =          {  a = "smokinguns" }
+          sg_dirt/dirt_erosion3.wl =          {  a = "smokinguns" }
+          sg_dirt/dirt_erosion3b.wl =          {  a = "smokinguns" }
+          sg_dirt/dirt_floor8.wl =          {  a = "smokinguns" }
+          sg_dirt/dirt_mc1.wl =          {  a = "smokinguns" }
+          sg_dirt/dirt_mud_cracks.wl =          {  a = "smokinguns" }
+          sg_dirt/dirt_pattern1a.wl =          {  a = "smokinguns" }
+          sg_dirt/dirt_pattern1b.wl =          {  a = "smokinguns" }
+          sg_dirt/dirt_Rockwall5.wl =          {  a = "smokinguns" }
+          sg_dirt/dirt_santacruzwall.wl =          {  a = "smokinguns" }
+          sg_dirt/dirt_stone1.wl =          {  a = "smokinguns" }
+          sg_dirt/dirt_Stonewall6.wl =          {  a = "smokinguns" }
+          sg_dirt/dirt_Wall1.wl =          {  a = "smokinguns" }
+          sg_dirt/dirt_wall2.wl =          {  a = "smokinguns" }
+          sg_dirt/dirt_wall2b.wl =          {  a = "smokinguns" }
+          sg_dirt/dirt_wall3.wl =          {  a = "smokinguns" }
+          sg_dirt/dirt_wall3b.wl =          {  a = "smokinguns" }
+          sg_dirt/dirt_wall3c.wl =          {  a = "smokinguns" }
+          sg_dirt/dirt_wall3d.wl =          {  a = "smokinguns" }
+          sg_dirt/dirt_wall3e.wl =          {  a = "smokinguns" }
+          sg_dirt/dirt_wall3f.wl =          {  a = "smokinguns" }
+          sg_dirt/dirt_wall4a.wl =          {  a = "smokinguns" }
+          sg_dirt/dirt_wall4b.wl =          {  a = "smokinguns" }
+          sg_dirt/dirt_wall4bx.wl =          {  a = "smokinguns" }
+          sg_dirt/dirt_wall4c.wl =          {  a = "smokinguns" }
+          sg_dirt/dirt_wall5a.wl =          {  a = "smokinguns" }
+          sg_dirt/dirt_wall5b.wl =          {  a = "smokinguns" }
+          sg_dirt/dirt_wall5c.wl =          {  a = "smokinguns" }
+          sg_dirt/dirt_wall5d.wl =          {  a = "smokinguns" }
+          sg_dirt/dirt_wall5dx.wl =          {  a = "smokinguns" }
+          sg_dirt/dirt_wall6.wl =          {  a = "smokinguns" }
+          sg_dirt/dirt_wall7.wl =          {  a = "smokinguns" }
+        }
+        sg_glass.txlist =
+        {
+          sg_glass/glass_factory.wl =          {  a = "smokinguns" }
+          sg_glass/glass_glass.wl =          {  a = "smokinguns" }
+          sg_glass/glass_glasstex.wl =          {  a = "smokinguns" }
+          sg_glass/glass_lamp.wl =          {  a = "smokinguns" }
+          sg_glass/glass_lamp.blend.wl =          {  a = "smokinguns" }
+          sg_glass/glass_lightemitting_yellowwhite.wl =          {  a = "smokinguns" }
+          sg_glass/glass_trans.wl =          {  a = "smokinguns" }
+        }
+        sg_grass.txlist =
+        {
+          sg_grass/grass_drygrass1.wl =          {  a = "smokinguns" }
+          sg_grass/grass_drygrass2.wl =          {  a = "smokinguns" }
+          sg_grass/grass_drygrass2b.wl =          {  a = "smokinguns" }
+          sg_grass/grass_grass001.wl =          {  a = "smokinguns" }
+          sg_grass/grass_grass001_alpha.wl =          {  a = "smokinguns" }
+          sg_grass/grass_grass1.wl =          {  a = "smokinguns" }
+          sg_grass/grass_grass11.wl =          {  a = "smokinguns" }
+          sg_grass/grass_grass2.wl =          {  a = "smokinguns" }
+          sg_grass/grass_grass3.wl =          {  a = "smokinguns" }
+          sg_grass/grass_lake.wl =          {  a = "smokinguns" }
+          sg_grass/grass_lake1.wl =          {  a = "smokinguns" }
+          sg_grass/grass_Leaf1.wl =          {  a = "smokinguns" }
+          sg_grass/grass_mc1.wl =          {  a = "smokinguns" }
+          sg_grass/grass_mc2.wl =          {  a = "smokinguns" }
+          sg_grass/grass_mc3.wl =          {  a = "smokinguns" }
+          sg_grass/grass_plants.wl =          {  a = "smokinguns" }
+          sg_grass/grass_Tree6.wl =          {  a = "smokinguns" }
+          sg_grass/grass_wallwplanttop.wl =          {  a = "smokinguns" }
+          sg_grass/grass_wheat.wl =          {  a = "smokinguns" }
+          sg_grass/grass_wheat2.wl =          {  a = "smokinguns" }
+          sg_grass/sand_Sand3grass.wl =          {  a = "smokinguns" }
+          sg_grass/sand_Sand3grasswheels.wl =          {  a = "smokinguns" }
+          sg_grass/sand_Sand3grasswheelsstart.wl =          {  a = "smokinguns" }
+        }
+        sg_metal.txlist =
+        {
+          sg_metal/flagpole.wl =          {  a = "smokinguns" }
+          sg_metal/metal_bigwheel.wl =          {  a = "smokinguns" }
+          sg_metal/metal_boilerfront.wl =          {  a = "smokinguns" }
+          sg_metal/metal_cartwheel.wl =          {  a = "smokinguns" }
+          sg_metal/metal_chain.wl =          {  a = "smokinguns" }
+          sg_metal/metal_copper.wl =          {  a = "smokinguns" }
+          sg_metal/metal_diam_plate.wl =          {  a = "smokinguns" }
+          sg_metal/metal_door1.wl =          {  a = "smokinguns" }
+          sg_metal/metal_door2.wl =          {  a = "smokinguns" }
+          sg_metal/metal_fence2.wl =          {  a = "smokinguns" }
+          sg_metal/metal_gold.wl =          {  a = "smokinguns" }
+          sg_metal/metal_grid.wl =          {  a = "smokinguns" }
+          sg_metal/metal_jailbars.wl =          {  a = "smokinguns" }
+          sg_metal/metal_lighter.wl =          {  a = "smokinguns" }
+          sg_metal/metal_mat1.wl =          {  a = "smokinguns" }
+          sg_metal/metal_mat2.wl =          {  a = "smokinguns" }
+          sg_metal/metal_mat2rusty.wl =          {  a = "smokinguns" }
+          sg_metal/metal_mat3.wl =          {  a = "smokinguns" }
+          sg_metal/metal_mat3dirty.wl =          {  a = "smokinguns" }
+          sg_metal/metal_mat4.wl =          {  a = "smokinguns" }
+          sg_metal/metal_mat5.wl =          {  a = "smokinguns" }
+          sg_metal/metal_metal004.wl =          {  a = "smokinguns" }
+          sg_metal/metal_rusty1.wl =          {  a = "smokinguns" }
+          sg_metal/metal_rusty2.wl =          {  a = "smokinguns" }
+          sg_metal/metal_rustybarrel1.wl =          {  a = "smokinguns" }
+          sg_metal/metal_shinymetal.wl =          {  a = "smokinguns" }
+          sg_metal/metal_train1.wl =          {  a = "smokinguns" }
+          sg_metal/metal_train1a.wl =          {  a = "smokinguns" }
+          sg_metal/metal_train1b.wl =          {  a = "smokinguns" }
+          sg_metal/metal_train1c.wl =          {  a = "smokinguns" }
+          sg_metal/metal_train2.wl =          {  a = "smokinguns" }
+          sg_metal/metal_train3.wl =          {  a = "smokinguns" }
+          sg_metal/metal_train4.wl =          {  a = "smokinguns" }
+          sg_metal/metal_train5.wl =          {  a = "smokinguns" }
+          sg_metal/metal_train5gold.wl =          {  a = "smokinguns" }
+          sg_metal/metal_trainfront.wl =          {  a = "smokinguns" }
+          sg_metal/metal_trainNumber.wl =          {  a = "smokinguns" }
+          sg_metal/metal_trainroof.wl =          {  a = "smokinguns" }
+          sg_metal/metal_traintrucks.wl =          {  a = "smokinguns" }
+          sg_metal/metal_trainwheel.wl =          {  a = "smokinguns" }
+          sg_metal/metal_trainwheel2.wl =          {  a = "smokinguns" }
+          sg_metal/trainwheel.wl =          {  a = "smokinguns" }
+        }
+        sg_other.txlist =
+        {
+          sg_other/art1.wl =          {  a = "smokinguns" }
+          sg_other/art10.wl =          {  a = "smokinguns" }
+          sg_other/art11.wl =          {  a = "smokinguns" }
+          sg_other/art12.wl =          {  a = "smokinguns" }
+          sg_other/art13.wl =          {  a = "smokinguns" }
+          sg_other/art14.wl =          {  a = "smokinguns" }
+          sg_other/art15.wl =          {  a = "smokinguns" }
+          sg_other/art16.wl =          {  a = "smokinguns" }
+          sg_other/art17.wl =          {  a = "smokinguns" }
+          sg_other/art18.wl =          {  a = "smokinguns" }
+          sg_other/art19.wl =          {  a = "smokinguns" }
+          sg_other/art2.wl =          {  a = "smokinguns" }
+          sg_other/art20.wl =          {  a = "smokinguns" }
+          sg_other/art21.wl =          {  a = "smokinguns" }
+          sg_other/art22.wl =          {  a = "smokinguns" }
+          sg_other/art3.wl =          {  a = "smokinguns" }
+          sg_other/art4.wl =          {  a = "smokinguns" }
+          sg_other/art5.wl =          {  a = "smokinguns" }
+          sg_other/art6.wl =          {  a = "smokinguns" }
+          sg_other/art7.wl =          {  a = "smokinguns" }
+          sg_other/art8.wl =          {  a = "smokinguns" }
+          sg_other/art9.wl =          {  a = "smokinguns" }
+          sg_other/black.wl =          {  a = "smokinguns" }
+          sg_other/food2.wl =          {  a = "smokinguns" }
+          sg_other/food3.wl =          {  a = "smokinguns" }
+          sg_other/food4.wl =          {  a = "smokinguns" }
+          sg_other/food5.wl =          {  a = "smokinguns" }
+          sg_other/lampion1.wl =          {  a = "smokinguns" }
+          sg_other/lampion2.wl =          {  a = "smokinguns" }
+          sg_other/lampion3.wl =          {  a = "smokinguns" }
+          sg_other/lampion4.wl =          {  a = "smokinguns" }
+          sg_other/lampion5.wl =          {  a = "smokinguns" }
+          sg_other/misc_web1.wl =          {  a = "smokinguns" }
+          sg_other/misc_web2.wl =          {  a = "smokinguns" }
+          sg_other/paper1.wl =          {  a = "smokinguns" }
+          sg_other/paper2.wl =          {  a = "smokinguns" }
+          sg_other/paper3.wl =          {  a = "smokinguns" }
+          sg_other/piano.wl =          {  a = "smokinguns" }
+        }
+        sg_pictures.txlist =
+        {
+          sg_pictures/cloth_backwater.wl =          {  a = "smokinguns" }
+          sg_pictures/cloth_breliwanted.wl =          {  a = "smokinguns" }
+          sg_pictures/cloth_breliwanted2.wl =          {  a = "smokinguns" }
+          sg_pictures/cloth_chicowanted.wl =          {  a = "smokinguns" }
+          sg_pictures/cloth_lethalwanted.wl =          {  a = "smokinguns" }
+          sg_pictures/cloth_redwanted.wl =          {  a = "smokinguns" }
+          sg_pictures/girly.wl =          {  a = "smokinguns" }
+          sg_pictures/pnt1.wl =          {  a = "smokinguns" }
+          sg_pictures/pnt2.wl =          {  a = "smokinguns" }
+          sg_pictures/wood_map.wl =          {  a = "smokinguns" }
+          sg_pictures/wood_map_america.wl =          {  a = "smokinguns" }
+        }
+        sg_plant.txlist =
+        {
+          sg_plant/plant_cactus.wl =          {  a = "smokinguns" }
+          sg_plant/plant_cactus2.wl =          {  a = "smokinguns" }
+          sg_plant/plant_cactusbgrnd.wl =          {  a = "smokinguns" }
+          sg_plant/plant_conifer1.wl =          {  a = "smokinguns" }
+          sg_plant/plant_dryplant1.wl =          {  a = "smokinguns" }
+          sg_plant/plant_dryplant2.wl =          {  a = "smokinguns" }
+          sg_plant/plant_fern.wl =          {  a = "smokinguns" }
+          sg_plant/plant_flower1.wl =          {  a = "smokinguns" }
+          sg_plant/plant_flower2.wl =          {  a = "smokinguns" }
+          sg_plant/plant_forest1.wl =          {  a = "smokinguns" }
+          sg_plant/plant_forest12.wl =          {  a = "smokinguns" }
+          sg_plant/plant_green1.wl =          {  a = "smokinguns" }
+          sg_plant/plant_leave01a.wl =          {  a = "smokinguns" }
+          sg_plant/plant_leave01b.wl =          {  a = "smokinguns" }
+          sg_plant/plant_leave01d.wl =          {  a = "smokinguns" }
+          sg_plant/plant_mixed.wl =          {  a = "smokinguns" }
+          sg_plant/plant_orange.wl =          {  a = "smokinguns" }
+          sg_plant/plant_orange_brown.wl =          {  a = "smokinguns" }
+          sg_plant/plant_palm1.wl =          {  a = "smokinguns" }
+          sg_plant/plant_palm2.wl =          {  a = "smokinguns" }
+          sg_plant/plant_palm3.wl =          {  a = "smokinguns" }
+          sg_plant/plant_pinebranch.wl =          {  a = "smokinguns" }
+          sg_plant/plant_red.wl =          {  a = "smokinguns" }
+          sg_plant/plant_rope.wl =          {  a = "smokinguns" }
+          sg_plant/plant_thicket1.wl =          {  a = "smokinguns" }
+          sg_plant/plant_thicket2.wl =          {  a = "smokinguns" }
+          sg_plant/plant_tree1.wl =          {  a = "smokinguns" }
+          sg_plant/plant_tree1b.wl =          {  a = "smokinguns" }
+          sg_plant/plant_tree_leaves.wl =          {  a = "smokinguns" }
+          sg_plant/plant_vine01.wl =          {  a = "smokinguns" }
+          sg_plant/plant_vine02.wl =          {  a = "smokinguns" }
+          sg_plant/plant_vine03.wl =          {  a = "smokinguns" }
+          sg_plant/plant_vine04.wl =          {  a = "smokinguns" }
+          sg_plant/plant_vine05.wl =          {  a = "smokinguns" }
+          sg_plant/plant_vine06.wl =          {  a = "smokinguns" }
+          sg_plant/plant_violet.wl =          {  a = "smokinguns" }
+          sg_plant/plant_yellow.wl =          {  a = "smokinguns" }
+          sg_plant/rope.wl =          {  a = "smokinguns" }
+        }
+        sg_sand.txlist =
+        {
+          sg_sand/sand_desert1.wl =          {  a = "smokinguns" }
+          sg_sand/sand_desert1ers.wl =          {  a = "smokinguns" }
+          sg_sand/sand_desert1street.wl =          {  a = "smokinguns" }
+          sg_sand/sand_desert2.wl =          {  a = "smokinguns" }
+          sg_sand/sand_desert2ers.wl =          {  a = "smokinguns" }
+          sg_sand/sand_elpaso.wl =          {  a = "smokinguns" }
+          sg_sand/sand_elpaso1.wl =          {  a = "smokinguns" }
+          sg_sand/sand_elpaso3.wl =          {  a = "smokinguns" }
+          sg_sand/sand_erosion4a.wl =          {  a = "smokinguns" }
+          sg_sand/sand_erosion4b.wl =          {  a = "smokinguns" }
+          sg_sand/sand_erosion4c.wl =          {  a = "smokinguns" }
+          sg_sand/sand_erosion4d.wl =          {  a = "smokinguns" }
+          sg_sand/sand_ground1.wl =          {  a = "smokinguns" }
+          sg_sand/sand_ground1b.wl =          {  a = "smokinguns" }
+          sg_sand/sand_ground1c.wl =          {  a = "smokinguns" }
+          sg_sand/sand_ground1d.wl =          {  a = "smokinguns" }
+          sg_sand/sand_ground1e.wl =          {  a = "smokinguns" }
+          sg_sand/sand_sand001.wl =          {  a = "smokinguns" }
+          sg_sand/sand_sand004_alpha.wl =          {  a = "smokinguns" }
+          sg_sand/sand_sand005.wl =          {  a = "smokinguns" }
+          sg_sand/sand_sand006_alpha.wl =          {  a = "smokinguns" }
+          sg_sand/sand_Sand1.wl =          {  a = "smokinguns" }
+          sg_sand/sand_Sand1b.wl =          {  a = "smokinguns" }
+          sg_sand/sand_Sand1c.wl =          {  a = "smokinguns" }
+          sg_sand/sand_Sand1d.wl =          {  a = "smokinguns" }
+          sg_sand/sand_Sand1e.wl =          {  a = "smokinguns" }
+          sg_sand/sand_sand2a.wl =          {  a = "smokinguns" }
+          sg_sand/sand_sand2asmall.wl =          {  a = "smokinguns" }
+          sg_sand/sand_sand2b.wl =          {  a = "smokinguns" }
+          sg_sand/sand_sand2c.wl =          {  a = "smokinguns" }
+          sg_sand/sand_Sand3.wl =          {  a = "smokinguns" }
+          sg_sand/sand_Sand3grass.wl =          {  a = "smokinguns" }
+          sg_sand/sand_Sand3grassjunction.wl =          {  a = "smokinguns" }
+          sg_sand/sand_Sand3grasswheels.wl =          {  a = "smokinguns" }
+          sg_sand/sand_Sand3grasswheelsstart.wl =          {  a = "smokinguns" }
+          sg_sand/sand_Sand3wheels.wl =          {  a = "smokinguns" }
+          sg_sand/sand_Sand3wheelsstart.wl =          {  a = "smokinguns" }
+          sg_sand/sand_Sand3_moving.wl =          {  a = "smokinguns" }
+          sg_sand/sand_Sand4a.wl =          {  a = "smokinguns" }
+          sg_sand/sand_sand4b.wl =          {  a = "smokinguns" }
+          sg_sand/sand_Sand4c.wl =          {  a = "smokinguns" }
+          sg_sand/sand_terrain1.wl =          {  a = "smokinguns" }
+        }
+        sg_sfx.txlist =
+        {
+          sg_sfx/beam_light.wl =          {  a = "smokinguns" }
+          sg_sfx/black.wl =          {  a = "smokinguns" }
+          sg_sfx/black.white.wl =          {  a = "smokinguns" }
+          sg_sfx/cloth_music.wl =          {  a = "smokinguns" }
+          sg_sfx/flame1.wl =          {  a = "smokinguns" }
+          sg_sfx/flame2.wl =          {  a = "smokinguns" }
+          sg_sfx/flame3.wl =          {  a = "smokinguns" }
+          sg_sfx/flame4.wl =          {  a = "smokinguns" }
+          sg_sfx/flame5.wl =          {  a = "smokinguns" }
+          sg_sfx/flame6.wl =          {  a = "smokinguns" }
+          sg_sfx/flame7.wl =          {  a = "smokinguns" }
+          sg_sfx/flame8.wl =          {  a = "smokinguns" }
+          sg_sfx/flameball.wl =          {  a = "smokinguns" }
+          sg_sfx/flare.wl =          {  a = "smokinguns" }
+          sg_sfx/fog_grey.wl =          {  a = "smokinguns" }
+          sg_sfx/lightyellow.wl =          {  a = "smokinguns" }
+          sg_sfx/lwhite.wl =          {  a = "smokinguns" }
+          sg_sfx/misc_web1.wl =          {  a = "smokinguns" }
+          sg_sfx/misc_web2.wl =          {  a = "smokinguns" }
+          sg_sfx/player_piano.wl =          {  a = "smokinguns" }
+          sg_sfx/train_ywhite.wl =          {  a = "smokinguns" }
+          sg_sfx/water_foam1.wl =          {  a = "smokinguns" }
+          sg_sfx/water_foam2.wl =          {  a = "smokinguns" }
+          sg_sfx/water_foam3.wl =          {  a = "smokinguns" }
+          sg_sfx/water_foam4.wl =          {  a = "smokinguns" }
+          sg_sfx/water_foam5.wl =          {  a = "smokinguns" }
+          sg_sfx/water_foam6.wl =          {  a = "smokinguns" }
+          sg_sfx/water_foam7.wl =          {  a = "smokinguns" }
+          sg_sfx/water_foam8.wl =          {  a = "smokinguns" }
+          sg_sfx/white.wl =          {  a = "smokinguns" }
+          sg_sfx/wood1burnt.wl =          {  a = "smokinguns" }
+          sg_sfx/wood1glow.wl =          {  a = "smokinguns" }
+          sg_sfx/wood1toplit.wl =          {  a = "smokinguns" }
+          sg_sfx/wood1topout.wl =          {  a = "smokinguns" }
+          sg_sfx/xr25exh1.wl =          {  a = "smokinguns" }
+          sg_sfx/yellow.wl =          {  a = "smokinguns" }
+          sg_sfx/ywhite.wl =          {  a = "smokinguns" }
+        }
+        sg_sky.txlist =
+        {
+          sg_sky/clouds.wl =          {  a = "smokinguns" }
+          sg_sky/dragonclouds.wl =          {  a = "smokinguns" }
+          sg_sky/dragonmoon.wl =          {  a = "smokinguns" }
+          sg_sky/dragonmoon-clouds.wl =          {  a = "smokinguns" }
+          sg_sky/sky1.wl =          {  a = "smokinguns" }
+        }
+        sg_snow.txlist =
+        {
+          sg_snow/snow_sno1.wl =          {  a = "smokinguns" }
+          sg_snow/snow_sno2.wl =          {  a = "smokinguns" }
+          sg_snow/snow_sno3.wl =          {  a = "smokinguns" }
+          sg_snow/snow_snowall1.wl =          {  a = "smokinguns" }
+          sg_snow/snow_snowall1b.wl =          {  a = "smokinguns" }
+        }
+        sg_stone.txlist =
+        {
+          sg_stone/stone_bigstone.wl =          {  a = "smokinguns" }
+          sg_stone/stone_bricks1.wl =          {  a = "smokinguns" }
+          sg_stone/stone_bricks2.wl =          {  a = "smokinguns" }
+          sg_stone/stone_concrete001.wl =          {  a = "smokinguns" }
+          sg_stone/stone_cray_rock07.wl =          {  a = "smokinguns" }
+          sg_stone/stone_decoceilling.wl =          {  a = "smokinguns" }
+          sg_stone/stone_Decoside.wl =          {  a = "smokinguns" }
+          sg_stone/stone_dirt1a.wl =          {  a = "smokinguns" }
+          sg_stone/stone_dirt1b.wl =          {  a = "smokinguns" }
+          sg_stone/stone_dra_hardrock1_1.wl =          {  a = "smokinguns" }
+          sg_stone/stone_dra_hillrock1_1.wl =          {  a = "smokinguns" }
+          sg_stone/stone_floor1.wl =          {  a = "smokinguns" }
+          sg_stone/stone_grave.wl =          {  a = "smokinguns" }
+          sg_stone/stone_grave2.wl =          {  a = "smokinguns" }
+          sg_stone/stone_grave3.wl =          {  a = "smokinguns" }
+          sg_stone/stone_ground1a.wl =          {  a = "smokinguns" }
+          sg_stone/stone_ground1b.wl =          {  a = "smokinguns" }
+          sg_stone/stone_ground1c.wl =          {  a = "smokinguns" }
+          sg_stone/stone_ground1d.wl =          {  a = "smokinguns" }
+          sg_stone/stone_kell_brock512.wl =          {  a = "smokinguns" }
+          sg_stone/stone_kell_pebb128.wl =          {  a = "smokinguns" }
+          sg_stone/stone_lake_bottom.wl =          {  a = "smokinguns" }
+          sg_stone/stone_marble1.wl =          {  a = "smokinguns" }
+          sg_stone/stone_marble2.wl =          {  a = "smokinguns" }
+          sg_stone/stone_marble20.wl =          {  a = "smokinguns" }
+          sg_stone/stone_marble2b.wl =          {  a = "smokinguns" }
+          sg_stone/stone_marble37.wl =          {  a = "smokinguns" }
+          sg_stone/stone_mc1.wl =          {  a = "smokinguns" }
+          sg_stone/stone_mc2.wl =          {  a = "smokinguns" }
+          sg_stone/stone_mc3.wl =          {  a = "smokinguns" }
+          sg_stone/stone_old1.wl =          {  a = "smokinguns" }
+          sg_stone/stone_old2.wl =          {  a = "smokinguns" }
+          sg_stone/stone_old3.wl =          {  a = "smokinguns" }
+          sg_stone/stone_old4.wl =          {  a = "smokinguns" }
+          sg_stone/stone_oldbrick2.wl =          {  a = "smokinguns" }
+          sg_stone/stone_rock2.wl =          {  a = "smokinguns" }
+          sg_stone/stone_rock2b.wl =          {  a = "smokinguns" }
+          sg_stone/stone_rock3.wl =          {  a = "smokinguns" }
+          sg_stone/stone_rock4a.wl =          {  a = "smokinguns" }
+          sg_stone/stone_rock4b.wl =          {  a = "smokinguns" }
+          sg_stone/stone_rock4c.wl =          {  a = "smokinguns" }
+          sg_stone/stone_rock4d.wl =          {  a = "smokinguns" }
+          sg_stone/stone_rock4e.wl =          {  a = "smokinguns" }
+          sg_stone/stone_rock5.wl =          {  a = "smokinguns" }
+          sg_stone/stone_rock5b.wl =          {  a = "smokinguns" }
+          sg_stone/stone_rock6.wl =          {  a = "smokinguns" }
+          sg_stone/stone_rockwall.wl =          {  a = "smokinguns" }
+          sg_stone/stone_Rockwall10.wl =          {  a = "smokinguns" }
+          sg_stone/stone_Rockwall10b.wl =          {  a = "smokinguns" }
+          sg_stone/stone_Rockwall10c.wl =          {  a = "smokinguns" }
+          sg_stone/stone_Rockwall11.wl =          {  a = "smokinguns" }
+          sg_stone/stone_Rockwall2.wl =          {  a = "smokinguns" }
+          sg_stone/stone_Rockwall2b.wl =          {  a = "smokinguns" }
+          sg_stone/stone_Rockwall3.wl =          {  a = "smokinguns" }
+          sg_stone/stone_Rockwall4.wl =          {  a = "smokinguns" }
+          sg_stone/stone_Rockwall6.wl =          {  a = "smokinguns" }
+          sg_stone/stone_Rockwall7.wl =          {  a = "smokinguns" }
+          sg_stone/stone_Rockwall8.wl =          {  a = "smokinguns" }
+          sg_stone/stone_Rockwall8b.wl =          {  a = "smokinguns" }
+          sg_stone/stone_Rockwall8c.wl =          {  a = "smokinguns" }
+          sg_stone/stone_Rockwall8d.wl =          {  a = "smokinguns" }
+          sg_stone/stone_Rockwall9.wl =          {  a = "smokinguns" }
+          sg_stone/stone_Roof2.wl =          {  a = "smokinguns" }
+          sg_stone/stone_Roof2b.wl =          {  a = "smokinguns" }
+          sg_stone/stone_Roof2c.wl =          {  a = "smokinguns" }
+          sg_stone/stone_Roof2d.wl =          {  a = "smokinguns" }
+          sg_stone/stone_Roof2e.wl =          {  a = "smokinguns" }
+          sg_stone/stone_Roof2f.wl =          {  a = "smokinguns" }
+          sg_stone/stone_Roof2g.wl =          {  a = "smokinguns" }
+          sg_stone/stone_stone001_alpha.wl =          {  a = "smokinguns" }
+          sg_stone/stone_Stones1.wl =          {  a = "smokinguns" }
+          sg_stone/stone_stones2.wl =          {  a = "smokinguns" }
+          sg_stone/stone_stones2b.wl =          {  a = "smokinguns" }
+          sg_stone/stone_stones2c.wl =          {  a = "smokinguns" }
+          sg_stone/stone_stones2d.wl =          {  a = "smokinguns" }
+          sg_stone/stone_Stones3.wl =          {  a = "smokinguns" }
+          sg_stone/stone_Stones3b.wl =          {  a = "smokinguns" }
+          sg_stone/stone_stones4.wl =          {  a = "smokinguns" }
+          sg_stone/stone_stones4b.wl =          {  a = "smokinguns" }
+          sg_stone/stone_stonewall.wl =          {  a = "smokinguns" }
+          sg_stone/stone_stonewall2.wl =          {  a = "smokinguns" }
+          sg_stone/stone_stonewall3.wl =          {  a = "smokinguns" }
+          sg_stone/stone_Stonewall4.wl =          {  a = "smokinguns" }
+          sg_stone/stone_Stonewall5.wl =          {  a = "smokinguns" }
+          sg_stone/stone_stonewall6.wl =          {  a = "smokinguns" }
+          sg_stone/stone_Stonewall7.wl =          {  a = "smokinguns" }
+          sg_stone/stone_Stonewall7b.wl =          {  a = "smokinguns" }
+          sg_stone/stone_Stonewall8.wl =          {  a = "smokinguns" }
+          sg_stone/stone_stonewall9.wl =          {  a = "smokinguns" }
+          sg_stone/stone_wall5.wl =          {  a = "smokinguns" }
+          sg_stone/stone_wall6.wl =          {  a = "smokinguns" }
+          sg_stone/stone_wallwplant.wl =          {  a = "smokinguns" }
+        }
+        sg_water.txlist =
+        {
+          sg_water/nodrawwater.wl =          {  a = "smokinguns" }
+          sg_water/water_lakewater.wl =          {  a = "smokinguns" }
+          sg_water/water_river.wl =          {  a = "smokinguns" }
+          sg_water/water_test1.wl =          {  a = "smokinguns" }
+          sg_water/water_test2.wl =          {  a = "smokinguns" }
+          sg_water/water_test3.wl =          {  a = "smokinguns" }
+          sg_water/water_test4.wl =          {  a = "smokinguns" }
+          sg_water/water_water001.wl =          {  a = "smokinguns" }
+          sg_water/water_Water1.wl =          {  a = "smokinguns" }
+          sg_water/water_Water2.wl =          {  a = "smokinguns" }
+          sg_water/water_Water2b.wl =          {  a = "smokinguns" }
+          sg_water/water_water3.wl =          {  a = "smokinguns" }
+          sg_water/water_water4.wl =          {  a = "smokinguns" }
+          sg_water/water_water5.wl =          {  a = "smokinguns" }
+          sg_water/water_waterfall1.wl =          {  a = "smokinguns" }
+          sg_water/water_waterfall2.wl =          {  a = "smokinguns" }
+          sg_water/water_waterfallt1.wl =          {  a = "smokinguns" }
+          sg_water/water_waterfallt2.wl =          {  a = "smokinguns" }
+        }
+        sg_wood1.txlist =
+        {
+          sg_wood1/wood_bank.wl =          {  a = "smokinguns" }
+          sg_wood1/wood_barn.wl =          {  a = "smokinguns" }
+          sg_wood1/wood_barrelside.wl =          {  a = "smokinguns" }
+          sg_wood1/wood_barrelside2.wl =          {  a = "smokinguns" }
+          sg_wood1/wood_books1.wl =          {  a = "smokinguns" }
+          sg_wood1/wood_cantina1.wl =          {  a = "smokinguns" }
+          sg_wood1/wood_cantina2.wl =          {  a = "smokinguns" }
+          sg_wood1/wood_casketz.wl =          {  a = "smokinguns" }
+          sg_wood1/wood_coach1.wl =          {  a = "smokinguns" }
+          sg_wood1/wood_coach2.wl =          {  a = "smokinguns" }
+          sg_wood1/wood_crate.wl =          {  a = "smokinguns" }
+          sg_wood1/wood_crate1.wl =          {  a = "smokinguns" }
+          sg_wood1/wood_crate1b.wl =          {  a = "smokinguns" }
+          sg_wood1/wood_crate1c.wl =          {  a = "smokinguns" }
+          sg_wood1/wood_crate2.wl =          {  a = "smokinguns" }
+          sg_wood1/wood_crate2b.wl =          {  a = "smokinguns" }
+          sg_wood1/wood_crate2c.wl =          {  a = "smokinguns" }
+          sg_wood1/wood_crate3.wl =          {  a = "smokinguns" }
+          sg_wood1/wood_crate3b.wl =          {  a = "smokinguns" }
+          sg_wood1/wood_crateb.wl =          {  a = "smokinguns" }
+          sg_wood1/wood_cratec.wl =          {  a = "smokinguns" }
+          sg_wood1/wood_cratelong.wl =          {  a = "smokinguns" }
+          sg_wood1/wood_Danger.wl =          {  a = "smokinguns" }
+          sg_wood1/wood_door10.wl =          {  a = "smokinguns" }
+          sg_wood1/wood_door10b.wl =          {  a = "smokinguns" }
+          sg_wood1/wood_door11.wl =          {  a = "smokinguns" }
+          sg_wood1/wood_door11b.wl =          {  a = "smokinguns" }
+          sg_wood1/wood_door12.wl =          {  a = "smokinguns" }
+          sg_wood1/wood_door13.wl =          {  a = "smokinguns" }
+          sg_wood1/wood_door14.wl =          {  a = "smokinguns" }
+          sg_wood1/wood_door14b.wl =          {  a = "smokinguns" }
+          sg_wood1/wood_door14c.wl =          {  a = "smokinguns" }
+          sg_wood1/wood_door15.wl =          {  a = "smokinguns" }
+          sg_wood1/wood_door16.wl =          {  a = "smokinguns" }
+          sg_wood1/wood_door17.wl =          {  a = "smokinguns" }
+          sg_wood1/wood_Door1b.wl =          {  a = "smokinguns" }
+          sg_wood1/wood_Door2b.wl =          {  a = "smokinguns" }
+          sg_wood1/wood_Door3.wl =          {  a = "smokinguns" }
+          sg_wood1/wood_Door4.wl =          {  a = "smokinguns" }
+          sg_wood1/wood_Door5.wl =          {  a = "smokinguns" }
+          sg_wood1/wood_door6.wl =          {  a = "smokinguns" }
+          sg_wood1/wood_door7.wl =          {  a = "smokinguns" }
+          sg_wood1/wood_door8.wl =          {  a = "smokinguns" }
+          sg_wood1/wood_door9.wl =          {  a = "smokinguns" }
+          sg_wood1/wood_doorsaloon1.wl =          {  a = "smokinguns" }
+          sg_wood1/wood_doorsaloon1b.wl =          {  a = "smokinguns" }
+          sg_wood1/wood_fence1.wl =          {  a = "smokinguns" }
+          sg_wood1/wood_fence1b.wl =          {  a = "smokinguns" }
+          sg_wood1/wood_fence1c.wl =          {  a = "smokinguns" }
+          sg_wood1/wood_fence3.wl =          {  a = "smokinguns" }
+          sg_wood1/wood_fence3b.wl =          {  a = "smokinguns" }
+          sg_wood1/wood_fence3c.wl =          {  a = "smokinguns" }
+          sg_wood1/wood_fence3d.wl =          {  a = "smokinguns" }
+          sg_wood1/wood_fence3e.wl =          {  a = "smokinguns" }
+          sg_wood1/wood_fencegold.wl =          {  a = "smokinguns" }
+          sg_wood1/wood_filling8.wl =          {  a = "smokinguns" }
+          sg_wood1/wood_filling9.wl =          {  a = "smokinguns" }
+          sg_wood1/wood_food1.wl =          {  a = "smokinguns" }
+          sg_wood1/wood_frontwood.wl =          {  a = "smokinguns" }
+          sg_wood1/wood_furniture1.wl =          {  a = "smokinguns" }
+          sg_wood1/wood_gibwood.wl =          {  a = "smokinguns" }
+          sg_wood1/wood_Hotel.wl =          {  a = "smokinguns" }
+          sg_wood1/wood_knifewood1.wl =          {  a = "smokinguns" }
+          sg_wood1/wood_ladder1.wl =          {  a = "smokinguns" }
+          sg_wood1/wood_ladder1b.wl =          {  a = "smokinguns" }
+          sg_wood1/wood_ladder1c.wl =          {  a = "smokinguns" }
+          sg_wood1/wood_post.wl =          {  a = "smokinguns" }
+          sg_wood1/wood_pot.wl =          {  a = "smokinguns" }
+          sg_wood1/wood_Rails.wl =          {  a = "smokinguns" }
+          sg_wood1/wood_Roof1.wl =          {  a = "smokinguns" }
+          sg_wood1/wood_Roof1b.wl =          {  a = "smokinguns" }
+          sg_wood1/wood_Roof1c.wl =          {  a = "smokinguns" }
+          sg_wood1/wood_Roof1d.wl =          {  a = "smokinguns" }
+          sg_wood1/wood_Roof1e.wl =          {  a = "smokinguns" }
+          sg_wood1/wood_Roof1f.wl =          {  a = "smokinguns" }
+          sg_wood1/wood_Roof1g.wl =          {  a = "smokinguns" }
+          sg_wood1/wood_Saloon1.wl =          {  a = "smokinguns" }
+          sg_wood1/wood_saloon2.wl =          {  a = "smokinguns" }
+          sg_wood1/wood_shelf1.wl =          {  a = "smokinguns" }
+          sg_wood1/wood_shelf2.wl =          {  a = "smokinguns" }
+          sg_wood1/wood_shelf2b.wl =          {  a = "smokinguns" }
+          sg_wood1/wood_sheriff.wl =          {  a = "smokinguns" }
+          sg_wood1/wood_sheriff2.wl =          {  a = "smokinguns" }
+          sg_wood1/wood_Station1.wl =          {  a = "smokinguns" }
+          sg_wood1/wood_station2.wl =          {  a = "smokinguns" }
+          sg_wood1/wood_strawground.wl =          {  a = "smokinguns" }
+          sg_wood1/wood_tank.wl =          {  a = "smokinguns" }
+          sg_wood1/wood_tienda.wl =          {  a = "smokinguns" }
+          sg_wood1/wood_tnt_sign.wl =          {  a = "smokinguns" }
+          sg_wood1/wood_tobacco.wl =          {  a = "smokinguns" }
+          sg_wood1/wood_trainad1.wl =          {  a = "smokinguns" }
+          sg_wood1/wood_trainad2.wl =          {  a = "smokinguns" }
+          sg_wood1/wood_trainad3.wl =          {  a = "smokinguns" }
+          sg_wood1/wood_tree1.wl =          {  a = "smokinguns" }
+          sg_wood1/wood_tree2.wl =          {  a = "smokinguns" }
+          sg_wood1/wood_tree3.wl =          {  a = "smokinguns" }
+          sg_wood1/wood_tree4.wl =          {  a = "smokinguns" }
+          sg_wood1/wood_tree5.wl =          {  a = "smokinguns" }
+          sg_wood1/wood_treebark.wl =          {  a = "smokinguns" }
+          sg_wood1/wood_treebark2.wl =          {  a = "smokinguns" }
+          sg_wood1/wood_treebark2_vertex.wl =          {  a = "smokinguns" }
+          sg_wood1/wood_treestump.wl =          {  a = "smokinguns" }
+          sg_wood1/wood_treetropic.wl =          {  a = "smokinguns" }
+          sg_wood1/wood_wood33.wl =          {  a = "smokinguns" }
+          sg_wood1/wood_wood33a.wl =          {  a = "smokinguns" }
+          sg_wood1/wood_wood33b.wl =          {  a = "smokinguns" }
+          sg_wood1/wood_wood33c.wl =          {  a = "smokinguns" }
+          sg_wood1/wood_wood34.wl =          {  a = "smokinguns" }
+        }
+        sg_wood2.txlist =
+        {
+          sg_wood2/wood_1stfloor.wl =          {  a = "smokinguns" }
+          sg_wood2/wood_2ndfloor.wl =          {  a = "smokinguns" }
+          sg_wood2/wood_3rdfloor.wl =          {  a = "smokinguns" }
+          sg_wood2/wood_4thfloor.wl =          {  a = "smokinguns" }
+          sg_wood2/wood_aft.wl =          {  a = "smokinguns" }
+          sg_wood2/wood_arrowa.wl =          {  a = "smokinguns" }
+          sg_wood2/wood_arrowl.wl =          {  a = "smokinguns" }
+          sg_wood2/wood_arrowr.wl =          {  a = "smokinguns" }
+          sg_wood2/wood_bank2.wl =          {  a = "smokinguns" }
+          sg_wood2/wood_bankelpaso.wl =          {  a = "smokinguns" }
+          sg_wood2/wood_boiler.wl =          {  a = "smokinguns" }
+          sg_wood2/wood_coach2basic.wl =          {  a = "smokinguns" }
+          sg_wood2/wood_coach2struct.wl =          {  a = "smokinguns" }
+          sg_wood2/wood_coach2struct2.wl =          {  a = "smokinguns" }
+          sg_wood2/wood_coach2struct3.wl =          {  a = "smokinguns" }
+          sg_wood2/wood_coach2struct4.wl =          {  a = "smokinguns" }
+          sg_wood2/wood_coachbasic.wl =          {  a = "smokinguns" }
+          sg_wood2/wood_coachstruct.wl =          {  a = "smokinguns" }
+          sg_wood2/wood_coachstruct2.wl =          {  a = "smokinguns" }
+          sg_wood2/wood_coachstruct3.wl =          {  a = "smokinguns" }
+          sg_wood2/wood_coachstruct4.wl =          {  a = "smokinguns" }
+          sg_wood2/wood_diningroom.wl =          {  a = "smokinguns" }
+          sg_wood2/wood_diningroom2.wl =          {  a = "smokinguns" }
+          sg_wood2/wood_door1.wl =          {  a = "smokinguns" }
+          sg_wood2/wood_door2.wl =          {  a = "smokinguns" }
+          sg_wood2/wood_drygoods.wl =          {  a = "smokinguns" }
+          sg_wood2/wood_dryhotel.wl =          {  a = "smokinguns" }
+          sg_wood2/wood_elpaso.wl =          {  a = "smokinguns" }
+          sg_wood2/wood_engineroom.wl =          {  a = "smokinguns" }
+          sg_wood2/wood_filling1.wl =          {  a = "smokinguns" }
+          sg_wood2/wood_filling2.wl =          {  a = "smokinguns" }
+          sg_wood2/wood_filling3.wl =          {  a = "smokinguns" }
+          sg_wood2/wood_filling4.wl =          {  a = "smokinguns" }
+          sg_wood2/wood_filling5.wl =          {  a = "smokinguns" }
+          sg_wood2/wood_filling6.wl =          {  a = "smokinguns" }
+          sg_wood2/wood_filling7.wl =          {  a = "smokinguns" }
+          sg_wood2/wood_fore.wl =          {  a = "smokinguns" }
+          sg_wood2/wood_foyer.wl =          {  a = "smokinguns" }
+          sg_wood2/wood_genstore.wl =          {  a = "smokinguns" }
+          sg_wood2/wood_genstore2.wl =          {  a = "smokinguns" }
+          sg_wood2/wood_guest.wl =          {  a = "smokinguns" }
+          sg_wood2/wood_hotelelpaso.wl =          {  a = "smokinguns" }
+          sg_wood2/wood_keepout.wl =          {  a = "smokinguns" }
+          sg_wood2/wood_kitchen.wl =          {  a = "smokinguns" }
+          sg_wood2/wood_laundry.wl =          {  a = "smokinguns" }
+          sg_wood2/wood_lawyer.wl =          {  a = "smokinguns" }
+          sg_wood2/wood_library.wl =          {  a = "smokinguns" }
+          sg_wood2/wood_lounge.wl =          {  a = "smokinguns" }
+          sg_wood2/wood_medical.wl =          {  a = "smokinguns" }
+          sg_wood2/wood_planks1.wl =          {  a = "smokinguns" }
+          sg_wood2/wood_planks1b.wl =          {  a = "smokinguns" }
+          sg_wood2/wood_planks1c.wl =          {  a = "smokinguns" }
+          sg_wood2/wood_planks1d.wl =          {  a = "smokinguns" }
+          sg_wood2/wood_planks2.wl =          {  a = "smokinguns" }
+          sg_wood2/wood_planks3.wl =          {  a = "smokinguns" }
+          sg_wood2/wood_planks4.wl =          {  a = "smokinguns" }
+          sg_wood2/wood_planks5.wl =          {  a = "smokinguns" }
+          sg_wood2/wood_planks5b.wl =          {  a = "smokinguns" }
+          sg_wood2/wood_planks5c.wl =          {  a = "smokinguns" }
+          sg_wood2/wood_port.wl =          {  a = "smokinguns" }
+          sg_wood2/wood_safe.wl =          {  a = "smokinguns" }
+          sg_wood2/wood_spikes.wl =          {  a = "smokinguns" }
+          sg_wood2/wood_staffonly.wl =          {  a = "smokinguns" }
+          sg_wood2/wood_staffquarters.wl =          {  a = "smokinguns" }
+          sg_wood2/wood_starboard.wl =          {  a = "smokinguns" }
+          sg_wood2/wood_storage.wl =          {  a = "smokinguns" }
+          sg_wood2/wood_storage2.wl =          {  a = "smokinguns" }
+          sg_wood2/wood_thruway.wl =          {  a = "smokinguns" }
+          sg_wood2/wood_tresor-front.wl =          {  a = "smokinguns" }
+          sg_wood2/wood_tresor-side.wl =          {  a = "smokinguns" }
+          sg_wood2/wood_window1.wl =          {  a = "smokinguns" }
+          sg_wood2/wood_window10.wl =          {  a = "smokinguns" }
+          sg_wood2/wood_window11.wl =          {  a = "smokinguns" }
+          sg_wood2/wood_window11b.wl =          {  a = "smokinguns" }
+          sg_wood2/wood_window12.wl =          {  a = "smokinguns" }
+          sg_wood2/wood_window2.wl =          {  a = "smokinguns" }
+          sg_wood2/wood_window3.wl =          {  a = "smokinguns" }
+          sg_wood2/wood_window33.wl =          {  a = "smokinguns" }
+          sg_wood2/wood_window3b.wl =          {  a = "smokinguns" }
+          sg_wood2/wood_window3c.wl =          {  a = "smokinguns" }
+          sg_wood2/wood_window3d.wl =          {  a = "smokinguns" }
+          sg_wood2/wood_window3d.blend.wl =          {  a = "smokinguns" }
+          sg_wood2/wood_window4.wl =          {  a = "smokinguns" }
+          sg_wood2/wood_window5.wl =          {  a = "smokinguns" }
+          sg_wood2/wood_window5b.wl =          {  a = "smokinguns" }
+          sg_wood2/wood_window5c.wl =          {  a = "smokinguns" }
+          sg_wood2/wood_window6.wl =          {  a = "smokinguns" }
+          sg_wood2/wood_window6b.wl =          {  a = "smokinguns" }
+          sg_wood2/wood_window6c.wl =          {  a = "smokinguns" }
+          sg_wood2/wood_window7.wl =          {  a = "smokinguns" }
+          sg_wood2/wood_window8.wl =          {  a = "smokinguns" }
+          sg_wood2/wood_window9.wl =          {  a = "smokinguns" }
+          sg_wood2/wood_window9b.wl =          {  a = "smokinguns" }
+          sg_wood2/wood_wood1.wl =          {  a = "smokinguns" }
+          sg_wood2/wood_wood12.wl =          {  a = "smokinguns" }
+          sg_wood2/wood_wood13.wl =          {  a = "smokinguns" }
+          sg_wood2/wood_wood13b.wl =          {  a = "smokinguns" }
+          sg_wood2/wood_wood14.wl =          {  a = "smokinguns" }
+          sg_wood2/wood_wood15.wl =          {  a = "smokinguns" }
+          sg_wood2/wood_wood16.wl =          {  a = "smokinguns" }
+          sg_wood2/wood_wood17.wl =          {  a = "smokinguns" }
+          sg_wood2/wood_wood17b.wl =          {  a = "smokinguns" }
+          sg_wood2/wood_wood18.wl =          {  a = "smokinguns" }
+          sg_wood2/wood_wood18b.wl =          {  a = "smokinguns" }
+          sg_wood2/wood_wood18c.wl =          {  a = "smokinguns" }
+          sg_wood2/wood_wood19.wl =          {  a = "smokinguns" }
+          sg_wood2/wood_wood2.wl =          {  a = "smokinguns" }
+          sg_wood2/wood_wood20.wl =          {  a = "smokinguns" }
+          sg_wood2/wood_wood21.wl =          {  a = "smokinguns" }
+          sg_wood2/wood_wood21b.wl =          {  a = "smokinguns" }
+          sg_wood2/wood_wood21c.wl =          {  a = "smokinguns" }
+          sg_wood2/wood_wood21d.wl =          {  a = "smokinguns" }
+          sg_wood2/wood_wood22.wl =          {  a = "smokinguns" }
+          sg_wood2/wood_wood22b.wl =          {  a = "smokinguns" }
+          sg_wood2/wood_wood23.wl =          {  a = "smokinguns" }
+          sg_wood2/wood_wood24.wl =          {  a = "smokinguns" }
+          sg_wood2/wood_wood24b.wl =          {  a = "smokinguns" }
+          sg_wood2/wood_wood25.wl =          {  a = "smokinguns" }
+          sg_wood2/wood_wood25b.wl =          {  a = "smokinguns" }
+          sg_wood2/wood_wood25c.wl =          {  a = "smokinguns" }
+          sg_wood2/wood_wood25d.wl =          {  a = "smokinguns" }
+          sg_wood2/wood_wood26.wl =          {  a = "smokinguns" }
+          sg_wood2/wood_wood27.wl =          {  a = "smokinguns" }
+          sg_wood2/wood_wood28.wl =          {  a = "smokinguns" }
+          sg_wood2/wood_wood28b.wl =          {  a = "smokinguns" }
+          sg_wood2/wood_wood28c.wl =          {  a = "smokinguns" }
+          sg_wood2/wood_wood29.wl =          {  a = "smokinguns" }
+          sg_wood2/wood_wood29b.wl =          {  a = "smokinguns" }
+          sg_wood2/wood_wood29c.wl =          {  a = "smokinguns" }
+          sg_wood2/wood_wood2b.wl =          {  a = "smokinguns" }
+          sg_wood2/wood_wood3.wl =          {  a = "smokinguns" }
+          sg_wood2/wood_wood30.wl =          {  a = "smokinguns" }
+          sg_wood2/wood_wood31.wl =          {  a = "smokinguns" }
+          sg_wood2/wood_wood32.wl =          {  a = "smokinguns" }
+          sg_wood2/wood_wood32b.wl =          {  a = "smokinguns" }
+          sg_wood2/wood_wood32c.wl =          {  a = "smokinguns" }
+          sg_wood2/wood_wood32d.wl =          {  a = "smokinguns" }
+          sg_wood2/wood_wood3b.wl =          {  a = "smokinguns" }
+          sg_wood2/wood_wood4.wl =          {  a = "smokinguns" }
+          sg_wood2/wood_wood4b.wl =          {  a = "smokinguns" }
+          sg_wood2/wood_wood5.wl =          {  a = "smokinguns" }
+          sg_wood2/wood_wood6.wl =          {  a = "smokinguns" }
+          sg_wood2/wood_wood7.wl =          {  a = "smokinguns" }
+          sg_wood2/wood_woodpile1.wl =          {  a = "smokinguns" }
+          sg_wood2/wood_woodpile2.wl =          {  a = "smokinguns" }
+        }
+        sg_wood3.txlist =
+        {
+          sg_wood3/red_graf.wl =          {  a = "smokinguns" }
+          sg_wood3/wood_backwaterstationfares.wl =          {  a = "smokinguns" }
+          sg_wood3/wood_bark.wl =          {  a = "smokinguns" }
+          sg_wood3/wood_bark001.wl =          {  a = "smokinguns" }
+          sg_wood3/wood_bark002.wl =          {  a = "smokinguns" }
+          sg_wood3/wood_bottleshelf.wl =          {  a = "smokinguns" }
+          sg_wood3/wood_filling8aged.wl =          {  a = "smokinguns" }
+          sg_wood3/wood_horseshoemaker2.wl =          {  a = "smokinguns" }
+          sg_wood3/wood_logs.wl =          {  a = "smokinguns" }
+          sg_wood3/wood_noname.wl =          {  a = "smokinguns" }
+          sg_wood3/wood_noname2.wl =          {  a = "smokinguns" }
+          sg_wood3/wood_noname3.wl =          {  a = "smokinguns" }
+          sg_wood3/wood_roof.wl =          {  a = "smokinguns" }
+          sg_wood3/wood_roof001.wl =          {  a = "smokinguns" }
+          sg_wood3/wood_roof001_edge.wl =          {  a = "smokinguns" }
+          sg_wood3/wood_roof002.wl =          {  a = "smokinguns" }
+          sg_wood3/wood_roof002_edge.wl =          {  a = "smokinguns" }
+          sg_wood3/wood_roof003.wl =          {  a = "smokinguns" }
+          sg_wood3/wood_roof2.wl =          {  a = "smokinguns" }
+          sg_wood3/wood_saloon001.wl =          {  a = "smokinguns" }
+          sg_wood3/wood_saloon002.wl =          {  a = "smokinguns" }
+          sg_wood3/wood_signbackground.wl =          {  a = "smokinguns" }
+          sg_wood3/wood_signclosed.wl =          {  a = "smokinguns" }
+          sg_wood3/wood_signopen.wl =          {  a = "smokinguns" }
+          sg_wood3/wood_stump.wl =          {  a = "smokinguns" }
+          sg_wood3/wood_train1a.wl =          {  a = "smokinguns" }
+          sg_wood3/wood_train1b.wl =          {  a = "smokinguns" }
+          sg_wood3/wood_trainad1a.wl =          {  a = "smokinguns" }
+          sg_wood3/wood_tree_stump.wl =          {  a = "smokinguns" }
+          sg_wood3/wood_watermill.wl =          {  a = "smokinguns" }
+          sg_wood3/wood_westernhats.wl =          {  a = "smokinguns" }
+          sg_wood3/wood_wood001.wl =          {  a = "smokinguns" }
+          sg_wood3/wood_wood002.wl =          {  a = "smokinguns" }
+          sg_wood3/wood_wood003.wl =          {  a = "smokinguns" }
+          sg_wood3/wood_wood004.wl =          {  a = "smokinguns" }
+          sg_wood3/wood_wood005.wl =          {  a = "smokinguns" }
+          sg_wood3/wood_wood006.wl =          {  a = "smokinguns" }
+          sg_wood3/wood_wood007.wl =          {  a = "smokinguns" }
+          sg_wood3/wood_wood008.wl =          {  a = "smokinguns" }
+          sg_wood3/wood_wood009.wl =          {  a = "smokinguns" }
+          sg_wood3/wood_wood010.wl =          {  a = "smokinguns" }
+          sg_wood3/wood_wood011.wl =          {  a = "smokinguns" }
+          sg_wood3/wood_wood012.wl =          {  a = "smokinguns" }
+          sg_wood3/wood_wood1burnt.wl =          {  a = "smokinguns" }
+          sg_wood3/wood_wood1toplit.wl =          {  a = "smokinguns" }
+        }
+      }
+    }
+  }
+
+
+  Textures.qtx =
+  {
+    ToolBox = "Texture Browser..."
+    Root = "SmokinGuns Shaders.qtxfolder"
+    SmokinGuns Shaders.qtxfolder =
+    {
+
+      base_light.shader.txlist =
+      {
+         base_light/proto_light_2k.wl = { a = "smokinguns" b = "base_light.shader" }
+      }
+      common.shader.txlist =
+      {
+         common/areaportal.wl     = { a = "smokinguns" b = "common.shader" }
+         common/caulk.wl          = { a = "smokinguns" b = "common.shader" }
+         common/clip.wl           = { a = "smokinguns" b = "common.shader" }
+         common/clusterportal.wl  = { a = "smokinguns" b = "common.shader" }
+         common/cushion.wl        = { a = "smokinguns" b = "common.shader" }
+         common/donotenter.wl     = { a = "smokinguns" b = "common.shader" }
+         common/full_clip.wl      = { a = "smokinguns" b = "common.shader" }
+         common/hint.wl           = { a = "smokinguns" b = "common.shader" }
+         common/skip.wl           = { a = "smokinguns" b = "common.shader" }
+         common/antiportal.wl     = { a = "smokinguns" b = "common.shader" }
+         common/invisible.wl      = { a = "smokinguns" b = "common.shader" }
+         common/ladder.wl         = { a = "smokinguns" b = "common.shader" }
+         common/mirror1.wl        = { a = "smokinguns" b = "common.shader" }
+         common/mirror2.wl        = { a = "smokinguns" b = "common.shader" }
+         common/missileclip.wl    = { a = "smokinguns" b = "common.shader" }
+         common/nodraw.wl         = { a = "smokinguns" b = "common.shader" }
+         common/nodrawnonsolid.wl = { a = "smokinguns" b = "common.shader" }
+         common/nodrop.wl         = { a = "smokinguns" b = "common.shader" }
+         common/noimpact.wl       = { a = "smokinguns" b = "common.shader" }
+         common/nolightmap.wl     = { a = "smokinguns" b = "common.shader" }
+         common/origin.wl         = { a = "smokinguns" b = "common.shader" }
+         common/portal.wl         = { a = "smokinguns" b = "common.shader" }
+         common/slick.wl          = { a = "smokinguns" b = "common.shader" }
+         common/terrain.wl        = { a = "smokinguns" b = "common.shader" }
+         common/terrain2.wl       = { a = "smokinguns" b = "common.shader" }
+         common/timportal.wl      = { a = "smokinguns" b = "common.shader" }
+         common/trigger.wl        = { a = "smokinguns" b = "common.shader" }
+         common/weapclip.wl       = { a = "smokinguns" b = "common.shader" }
+         common/metalclip.wl      = { a = "smokinguns" b = "common.shader" }
+         common/botclip.wl        = { a = "smokinguns" b = "common.shader" }
+         common/lightgrid.wl      = { a = "smokinguns" b = "common.shader" }
+      }
+      liquid.shader.txlist =
+      {
+         liquids/clear_ripple2.wl = { a = "smokinguns" b = "liquid.shader" }
+      }
+      sfx.shader.txlist =
+      {
+         sfx/blocks17g_jumpad.wl = { a = "smokinguns" b = "sfx.shader" }
+      }
+
+
+
+      sg.shader.txlist =
+      {
+         sg_blend/sand_sand003_grass001_blend.wl     = { a = "smokinguns" b = "sg.shader" }
+         sg_blend/sand_sand001_grass001_blend.wl     = { a = "smokinguns" b = "sg.shader" }
+         sg_blend/sand_sand003_rock002_blend.wl      = { a = "smokinguns" b = "sg.shader" }
+         sg_blend/sand_ter_grass001_sand006_blend.wl = { a = "smokinguns" b = "sg.shader" }
+         sg_blend/sand_ter_grass001_dirt001_blend.wl = { a = "smokinguns" b = "sg.shader" }
+         sg_blend/sand_ter_stone001_sand002_blend.wl = { a = "smokinguns" b = "sg.shader" }
+
+         sg_blend/grass_dirt.wl                      = { a = "smokinguns" b = "sg.shader" }
+         sg_blend/snow_to_dirt.wl                    = { a = "smokinguns" b = "sg.shader" }
+         sg_blend/stone_to_sand1.wl                  = { a = "smokinguns" b = "sg.shader" }
+         sg_blend/stone_to_sand2.wl                  = { a = "smokinguns" b = "sg.shader" }
+         sg_blend/dirt_to_stone.wl                   = { a = "smokinguns" b = "sg.shader" }
+         sg_blend/dirt_to_grass.wl                   = { a = "smokinguns" b = "sg.shader" }
+         sg_blend/grass_to_stone.wl                  = { a = "smokinguns" b = "sg.shader" }
+         sg_blend/dirt_to_sand.wl                    = { a = "smokinguns" b = "sg.shader" }
+         sg_blend/dirt_to_sand2.wl                   = { a = "smokinguns" b = "sg.shader" }
+         wq_lake/terrain/gravel_rock_blend.wl        = { a = "smokinguns" b = "sg.shader" }
+         sg_blend/grass_rock_blend.wl                = { a = "smokinguns" b = "sg.shader" }
+         sg_sand/sand_ground1_phong.wl               = { a = "smokinguns" b = "sg.shader" }
+         sg_grass/grass_drygrass2_phong.wl           = { a = "smokinguns" b = "sg.shader" }
+         sg_stone/stone_rock5_phong.wl               = { a = "smokinguns" b = "sg.shader" }
+         sg_plant/plant_cactus_phong.wl              = { a = "smokinguns" b = "sg.shader" }
+         sg_grass/grass_lake.wl                      = { a = "smokinguns" b = "sg.shader" }
+         sg_stone/stone_lake_wall.wl                 = { a = "smokinguns" b = "sg.shader" }
+         sg_stone/stone_boulder.wl                   = { a = "smokinguns" b = "sg.shader" }
+         sg_wood3/wood_bark001.wl                    = { a = "smokinguns" b = "sg.shader" }
+         sg_wood3/wood_bark002.wl                    = { a = "smokinguns" b = "sg.shader" }
+         sg_stone/stone_rock002.wl                   = { a = "smokinguns" b = "sg.shader" }
+         sg_stone/stone_rock003.wl                   = { a = "smokinguns" b = "sg.shader" }
+         sg_stone/stone_concrete001.wl               = { a = "smokinguns" b = "sg.shader" }
+         sg_sand/sand_sand001.wl                     = { a = "smokinguns" b = "sg.shader" }
+         sg_sand/sand_sand005.wl                     = { a = "smokinguns" b = "sg.shader" }
+         sg_stone/stone_mc1.wl                       = { a = "smokinguns" b = "sg.shader" }
+         sg_stone/stone_mc2.wl                       = { a = "smokinguns" b = "sg.shader" }
+         sg_dirt/dirt_mc1.wl                         = { a = "smokinguns" b = "sg.shader" }
+         sg_grass/grass_mc1.wl                       = { a = "smokinguns" b = "sg.shader" }
+         sg_grass/grass_mc2.wl                       = { a = "smokinguns" b = "sg.shader" }
+         sg_grass/grass_mc3.wl                       = { a = "smokinguns" b = "sg.shader" }
+         sg_metal/metal_mat3dirty_cb.wl              = { a = "smokinguns" b = "sg.shader" }
+         sg_wood2/wood_wood17_cb.wl                  = { a = "smokinguns" b = "sg.shader" }
+         sg_sand/sand_desert2_phong.wl               = { a = "smokinguns" b = "sg.shader" }
+         sg_grass/grass_phong.wl                     = { a = "smokinguns" b = "sg.shader" }
+         sg_snow/snow_phong.wl                       = { a = "smokinguns" b = "sg.shader" }
+         sg_stone/kell_brock512.wl                   = { a = "smokinguns" b = "sg.shader" }
+         sg_stone/cray_rock_07.wl                    = { a = "smokinguns" b = "sg.shader" }
+         sg_stone/hard_rock.wl                       = { a = "smokinguns" b = "sg.shader" }
+         sg_stone/hill_rock.wl                       = { a = "smokinguns" b = "sg.shader" }
+
+
+// *********************************************************
+// *** PLANT SHADERS ***************************************
+// *********************************************************
+// *** Some plant images are based on ICI content  
+// *** and have been modified or created by sig11 & L3th4l.
+
+         sg_wood1/wood_treebark2.wl                  = { a = "smokinguns" b = "sg.shader" }
+         sg_plant/plant_pinebranch_wind.wl           = { a = "smokinguns" b = "sg.shader" }
+         sg_plant/plant_pinebranch_back_wind.wl      = { a = "smokinguns" b = "sg.shader" }
+         sg_plant/plant_pinebranch_nowind.wl         = { a = "smokinguns" b = "sg.shader" }
+         sg_plant/plant_pinebranch_back_nowind.wl    = { a = "smokinguns" b = "sg.shader" }
+
+
+// --- start of insertion by Joe Kari ---
+// shaders for pinetree1.md3
+         sg_plant/plant_pinebranch.wl                = { a = "smokinguns" b = "sg.shader" }
+         sg_wood1/wood_treebark2_vertex.wl           = { a = "smokinguns" b = "sg.shader" }
+// --- end of insertion
+
+         sg_plant/plant_mixed.wl                     = { a = "smokinguns" b = "sg.shader" }
+         sg_plant/plant_orange.wl                    = { a = "smokinguns" b = "sg.shader" }
+         sg_plant/plant_orange_brown.wl              = { a = "smokinguns" b = "sg.shader" }
+         sg_plant/plant_red.wl                       = { a = "smokinguns" b = "sg.shader" }
+         sg_plant/plant_yellow.wl                    = { a = "smokinguns" b = "sg.shader" }
+         sg_plant/plant_violet.wl                    = { a = "smokinguns" b = "sg.shader" }
+         sg_plant/plant_rope.wl                      = { a = "smokinguns" b = "sg.shader" }
+         sg_plant/plant_fern.wl                      = { a = "smokinguns" b = "sg.shader" }
+         sg_plant/plant_leave01a.wl                  = { a = "smokinguns" b = "sg.shader" }
+         sg_plant/plant_leave01b.wl                  = { a = "smokinguns" b = "sg.shader" }
+         sg_plant/plant_leave01d.wl                  = { a = "smokinguns" b = "sg.shader" }
+         sg_plant/plant_vine01.wl                    = { a = "smokinguns" b = "sg.shader" }
+         sg_plant/plant_vine01_back.wl               = { a = "smokinguns" b = "sg.shader" }
+         sg_plant/plant_vine02.wl                    = { a = "smokinguns" b = "sg.shader" }
+         sg_plant/plant_vine02_back.wl               = { a = "smokinguns" b = "sg.shader" }
+         sg_plant/plant_vine03.wl                    = { a = "smokinguns" b = "sg.shader" }
+         sg_plant/plant_vine03_back.wl               = { a = "smokinguns" b = "sg.shader" }
+         sg_plant/plant_vine04.wl                    = { a = "smokinguns" b = "sg.shader" }
+         sg_plant/plant_vine04_back.wl               = { a = "smokinguns" b = "sg.shader" }
+         sg_plant/plant_vine05.wl                    = { a = "smokinguns" b = "sg.shader" }
+         sg_plant/plant_vine05_back.wl               = { a = "smokinguns" b = "sg.shader" }
+         sg_plant/plant_vine06.wl                    = { a = "smokinguns" b = "sg.shader" }
+         sg_plant/plant_vine06_back.wl               = { a = "smokinguns" b = "sg.shader" }
+         sg_plant/bush_leaves.wl                     = { a = "smokinguns" b = "sg.shader" }
+         sg_plant/bush_leaves_back.wl                = { a = "smokinguns" b = "sg.shader" }
+         sg_plant/plant_tree_leaves.wl               = { a = "smokinguns" b = "sg.shader" }
+         sg_plant/plant_tree_leaves_back.wl          = { a = "smokinguns" b = "sg.shader" }
+
+
+// *********************************************************
+// *** SG's SPECIAL EFFECTS SHADERS ************************
+// *********************************************************
+// Various shaders for special objects
+// *Scrolling Texture Shaders for train by L3th4l*
+
+         sg_stone/kell_pebb128.wl                    = { a = "smokinguns" b = "sg.shader" }
+         sg_dirt/sand_scroll.wl                      = { a = "smokinguns" b = "sg.shader" }
+         sg_metal/metal_copper.wl                    = { a = "smokinguns" b = "sg.shader" }
+         sg_metal/metal_trainwheel2.wl               = { a = "smokinguns" b = "sg.shader" }
+         sg_metal/metal_traintrucks.wl               = { a = "smokinguns" b = "sg.shader" }
+         sg_sfx/train_ywhite.wl                      = { a = "smokinguns" b = "sg.shader" }
+         sg_glass/train_glass_nolight.wl             = { a = "smokinguns" b = "sg.shader" }
+         sg_wood2/wood_window_glow.wl                = { a = "smokinguns" b = "sg.shader" }
+         sg_wood2/wood_window3c_glow.wl              = { a = "smokinguns" b = "sg.shader" }
+         sg_glass/glass_clear.wl                     = { a = "smokinguns" b = "sg.shader" }
+         sg_glass/clear_glass_darker.wl              = { a = "smokinguns" b = "sg.shader" }
+         sg_glass/glass_glass.wl                     = { a = "smokinguns" b = "sg.shader" }
+         western/glass2.wl                           = { a = "smokinguns" b = "sg.shader" }
+         sg_glass/glass_nolight.wl                   = { a = "smokinguns" b = "sg.shader" }
+         sg_glass/glass_nolight2.wl                  = { a = "smokinguns" b = "sg.shader" }
+         western/clear_glass.wl                      = { a = "smokinguns" b = "sg.shader" }
+         sg_wood2/wood_window_noglow.wl              = { a = "smokinguns" b = "sg.shader" }
+         sg_sfx/lwhite.wl                            = { a = "smokinguns" b = "sg.shader" }
+         sg_sfx/lightyellow_darker.wl                = { a = "smokinguns" b = "sg.shader" }
+         sg_metal/metal_chain.wl                     = { a = "smokinguns" b = "sg.shader" }
+         sg_shader/sfx/record_rotating.wl            = { a = "smokinguns" b = "sg.shader" }
+         sg_other/lampion1.wl                        = { a = "smokinguns" b = "sg.shader" }
+         sg_other/lampion2.wl                        = { a = "smokinguns" b = "sg.shader" }
+         sg_other/lampion3.wl                        = { a = "smokinguns" b = "sg.shader" }
+         sg_other/lampion4.wl                        = { a = "smokinguns" b = "sg.shader" }
+         sg_other/lampion5.wl                        = { a = "smokinguns" b = "sg.shader" }
+         sg_glass/glass_lightemitting_yellowwhite.wl  = { a = "smokinguns" b = "sg.shader" }
+         sg_sfx/player_piano.wl                      = { a = "smokinguns" b = "sg.shader" }
+         sg_sfx/train_ywhite.wl                      = { a = "smokinguns" b = "sg.shader" }
+         sg_sfx/ywhite2.wl                           = { a = "smokinguns" b = "sg.shader" }
+         sg_sfx/beam_sun.wl                          = { a = "smokinguns" b = "sg.shader" }
+         sg_plant/plant_forest_moving.wl             = { a = "smokinguns" b = "sg.shader" }
+         sg_other/misc_web1.wl                       = { a = "smokinguns" b = "sg.shader" }
+         sg_other/misc_web2.wl                       = { a = "smokinguns" b = "sg.shader" }
+         sg_other/cloth_music.wl                     = { a = "smokinguns" b = "sg.shader" }
+         sg_glass/glass_boclamp.wl                   = { a = "smokinguns" b = "sg.shader" }
+         sg_sfx/yellowlight.wl                       = { a = "smokinguns" b = "sg.shader" }
+         sg_sfx/blackgradient.wl                     = { a = "smokinguns" b = "sg.shader" }
+
+// ****** Wanted Posters ******
+
+         sg_pictures/cloth_breliwanted.wl            = { a = "smokinguns" b = "sg.shader" }
+         sg_pictures/cloth_backwater.wl              = { a = "smokinguns" b = "sg.shader" }
+         sg_pictures/cloth_chicowanted.wl            = { a = "smokinguns" b = "sg.shader" }
+         sg_pictures/cloth_redwanted.wl              = { a = "smokinguns" b = "sg.shader" }
+         sg_pictures/cloth_breliwanted2.wl           = { a = "smokinguns" b = "sg.shader" }
+         sg_pictures/cloth_lethalwanted.wl           = { a = "smokinguns" b = "sg.shader" }
+
+         sg_water/water_water001.wl                  = { a = "smokinguns" b = "sg.shader" }
+         sg_water/lake_water.wl                      = { a = "smokinguns" b = "sg.shader" }
+         sg_water/water_lakewater_nomove.wl          = { a = "smokinguns" b = "sg.shader" }
+         sg_water/water_river1.wl                    = { a = "smokinguns" b = "sg.shader" }
+         sg_water/nodraw_water.wl                    = { a = "smokinguns" b = "sg.shader" }
+         sg_water/water_river.wl                     = { a = "smokinguns" b = "sg.shader" }
+         sg_water/water_river2.wl                    = { a = "smokinguns" b = "sg.shader" }
+         sg_sfx/water_foam.wl                        = { a = "smokinguns" b = "sg.shader" }
+         sg_water/water_spoon.wl                     = { a = "smokinguns" b = "sg.shader" }
+         sg_water/water_water4.wl                    = { a = "smokinguns" b = "sg.shader" }
+         sg_water/water_water4b.wl                   = { a = "smokinguns" b = "sg.shader" }
+         sg_water/water_waterfall1.wl                = { a = "smokinguns" b = "sg.shader" }
+
+         sg_sfx/sgfire.wl                            = { a = "smokinguns" b = "sg.shader" }
+         sg_sfx/flame8.wl                            = { a = "smokinguns" b = "sg.shader" }
+         sg_sfx/flame1.wl                            = { a = "smokinguns" b = "sg.shader" }
+         sg_sfx/wood1toplit.wl                       = { a = "smokinguns" b = "sg.shader" }
+         sg_sfx/wood1topout.wl                       = { a = "smokinguns" b = "sg.shader" }
+         sg_sky/sundownsky.wl                        = { a = "smokinguns" b = "sg.shader" }
+         sg_sky/desertsky.wl                         = { a = "smokinguns" b = "sg.shader" }
+         sg_sky/drydesertsky.wl                      = { a = "smokinguns" b = "sg.shader" }
+         sg_sky/desertsky2.wl                        = { a = "smokinguns" b = "sg.shader" }
+         sg_sky/mexsky.wl                            = { a = "smokinguns" b = "sg.shader" }
+         sg_sky/valley_skybox.wl                     = { a = "smokinguns" b = "sg.shader" }
+         sg_sky/valley2_skybox.wl                    = { a = "smokinguns" b = "sg.shader" }
+         sg_sky/wald.wl                              = { a = "smokinguns" b = "sg.shader" }
+         sg_sky/silvercitysky.wl                     = { a = "smokinguns" b = "sg.shader" }
+         sg_sky/dasky1.wl                            = { a = "smokinguns" b = "sg.shader" }
+         sg_sky/danight.wl                           = { a = "smokinguns" b = "sg.shader" }
+         sg_sky/rocksky.wl                           = { a = "smokinguns" b = "sg.shader" }
+         sg_sky/nrock.wl                             = { a = "smokinguns" b = "sg.shader" }
+         sg_sky/nightsky.wl                          = { a = "smokinguns" b = "sg.shader" }
+         sg_sky/nightskyb.wl                         = { a = "smokinguns" b = "sg.shader" }
+         sg_sky/lethal_night.wl                      = { a = "smokinguns" b = "sg.shader" }
+         sg_sky/rocksky2.wl                          = { a = "smokinguns" b = "sg.shader" }
+
+         sg_duelsky/du_sundownsky.wl                 = { a = "smokinguns" b = "sg.shader" }
+         sg_duelsky/du_desertsky.wl                  = { a = "smokinguns" b = "sg.shader" }
+         sg_duelsky/du_drydesertsky.wl               = { a = "smokinguns" b = "sg.shader" }
+         sg_duelsky/du_desertsky2.wl                 = { a = "smokinguns" b = "sg.shader" }
+         sg_duelsky/du_mexsky.wl                     = { a = "smokinguns" b = "sg.shader" }
+         sg_duelsky/du_wald.wl                       = { a = "smokinguns" b = "sg.shader" }
+         sg_duelsky/du_silvercitysky.wl              = { a = "smokinguns" b = "sg.shader" }
+         sg_duelsky/du_rocksky.wl                    = { a = "smokinguns" b = "sg.shader" }
+
+         sg_sky/bleak-outlook512.wl                  = { a = "smokinguns" b = "sg.shader" }
+         sg_sky/bone-chill512.wl                     = { a = "smokinguns" b = "sg.shader" }
+         sg_sky/cliffedge512.wl                      = { a = "smokinguns" b = "sg.shader" }
+         sg_sky/devils_advocate512.wl                = { a = "smokinguns" b = "sg.shader" }
+         sg_sky/fire-storm.wl                        = { a = "smokinguns" b = "sg.shader" }
+         sg_sky/frost-bite512.wl                     = { a = "smokinguns" b = "sg.shader" }
+         sg_sky/sb-desert512.wl                      = { a = "smokinguns" b = "sg.shader" }
+         sg_sky/sorbin512.wl                         = { a = "smokinguns" b = "sg.shader" }
+         sg_sky/winter-solstice512.wl                = { a = "smokinguns" b = "sg.shader" }
+
+         sg_skymaps/dawnfort.wl                      = { a = "smokinguns" b = "sg.shader" }
+         sg_skymaps/newtown.wl                       = { a = "smokinguns" b = "sg.shader" }
+
+         sg_alphamap/alpha_0.wl                      = { a = "smokinguns" b = "sg.shader" }
+         sg_alphamap/alpha_000.wl                    = { a = "smokinguns" b = "sg.shader" }
+         sg_alphamap/alpha_025.wl                    = { a = "smokinguns" b = "sg.shader" }
+         sg_alphamap/alpha_050.wl                    = { a = "smokinguns" b = "sg.shader" }
+         sg_alphamap/alpha_075.wl                    = { a = "smokinguns" b = "sg.shader" }
+         sg_alphamap/alpha_085.wl                    = { a = "smokinguns" b = "sg.shader" }
+         sg_alphamap/alpha_100.wl                    = { a = "smokinguns" b = "sg.shader" }
+
+         sg_cloth/cloth_jacket2.wl                   = { a = "smokinguns" b = "sg.shader" }
+         sg_cloth/cloth_jacket3.wl                   = { a = "smokinguns" b = "sg.shader" }
+
+         sg_glass/glass_factory.wl                   = { a = "smokinguns" b = "sg.shader" }
+         sg_glass/glass_nolight2x.wl                 = { a = "smokinguns" b = "sg.shader" }
+         sg_glass/glass_trans.wl                     = { a = "smokinguns" b = "sg.shader" }
+         sg_grass/grass_wheat.wl                     = { a = "smokinguns" b = "sg.shader" }
+         sg_grass/grass_wheat2.wl                    = { a = "smokinguns" b = "sg.shader" }
+
+         sg_metal/metal_bigwheel.wl                  = { a = "smokinguns" b = "sg.shader" }
+         sg_metal/metal_cartwheel.wl                 = { a = "smokinguns" b = "sg.shader" }
+         sg_metal/metal_fence2.wl                    = { a = "smokinguns" b = "sg.shader" }
+         sg_metal/metal_grid.wl                      = { a = "smokinguns" b = "sg.shader" }
+         sg_metal/metal_jailbars.wl                  = { a = "smokinguns" b = "sg.shader" }
+         sg_metal/metal_trainfront.wl                = { a = "smokinguns" b = "sg.shader" }
+         sg_metal/metal_trainwheel.wl                = { a = "smokinguns" b = "sg.shader" }
+         sg_metal/metal_trainwheel_rotating.wl       = { a = "smokinguns" b = "sg.shader" }
+         sg_metal/metal_shinymetal.wl                = { a = "smokinguns" b = "sg.shader" }
+         sg_metal/metal_gold.wl                      = { a = "smokinguns" b = "sg.shader" }
+
+         western/tresure_metal.wl                    = { a = "smokinguns" b = "sg.shader" }
+
+         sg_plant/Plant_cactusbgrnd.wl               = { a = "smokinguns" b = "sg.shader" }
+         sg_plant/plant_conifer1.wl                  = { a = "smokinguns" b = "sg.shader" }
+         sg_plant/plant_dryplant1.wl                 = { a = "smokinguns" b = "sg.shader" }
+         sg_plant/plant_dryplant2.wl                 = { a = "smokinguns" b = "sg.shader" }
+         sg_plant/plant_flower1.wl                   = { a = "smokinguns" b = "sg.shader" }
+         sg_plant/plant_flower2.wl                   = { a = "smokinguns" b = "sg.shader" }
+         sg_plant/plant_palm1.wl                     = { a = "smokinguns" b = "sg.shader" }
+         sg_plant/plant_palm2.wl                     = { a = "smokinguns" b = "sg.shader" }
+         sg_plant/plant_palm3.wl                     = { a = "smokinguns" b = "sg.shader" }
+         sg_plant/plant_thicket1.wl                  = { a = "smokinguns" b = "sg.shader" }
+         sg_plant/plant_tree1.wl                     = { a = "smokinguns" b = "sg.shader" }
+         sg_plant/plant_tree1b.wl                    = { a = "smokinguns" b = "sg.shader" }
+
+         sg_sand/sand_desert1.wl                     = { a = "smokinguns" b = "sg.shader" }
+         sg_sand/sand_desert1ers.wl                  = { a = "smokinguns" b = "sg.shader" }
+         sg_sand/sand_desert1street.wl               = { a = "smokinguns" b = "sg.shader" }
+         sg_sand/sand_desert2.wl                     = { a = "smokinguns" b = "sg.shader" }
+         sg_sand/sand_desert2ers.wl                  = { a = "smokinguns" b = "sg.shader" }
+         sg_sand/sand_erosion4d.wl                   = { a = "smokinguns" b = "sg.shader" }
+         sg_sand/sand_moving.wl                      = { a = "smokinguns" b = "sg.shader" }
+         sg_sand/sand_sand3_moving.wl                = { a = "smokinguns" b = "sg.shader" }
+         sg_sand/sand_terrain1.wl                    = { a = "smokinguns" b = "sg.shader" }
+
+         sg_sfx/flare1.wl                            = { a = "smokinguns" b = "sg.shader" }
+         sg_sfx/ywhite.wl                            = { a = "smokinguns" b = "sg.shader" }
+
+         sg_stone/stone_marble1.wl                   = { a = "smokinguns" b = "sg.shader" }
+         sg_stone/stone_marble2.wl                   = { a = "smokinguns" b = "sg.shader" }
+
+         sg_sand/sand_terra2_0.wl                    = { a = "smokinguns" b = "sg.shader" }
+         sg_sand/sand_terra2_1.wl                    = { a = "smokinguns" b = "sg.shader" }
+         sg_sand/sand_terra2_2.wl                    = { a = "smokinguns" b = "sg.shader" }
+         sg_sand/sand_terra2_0to1.wl                 = { a = "smokinguns" b = "sg.shader" }
+         sg_sand/sand_terra2_0to2.wl                 = { a = "smokinguns" b = "sg.shader" }
+         sg_sand/sand_terra2_1to2.wl                 = { a = "smokinguns" b = "sg.shader" }
+         sg_sand/sand_terra1_0.wl                    = { a = "smokinguns" b = "sg.shader" }
+         sg_sand/sand_terra1_1.wl                    = { a = "smokinguns" b = "sg.shader" }
+         sg_sand/sand_terra1_2.wl                    = { a = "smokinguns" b = "sg.shader" }
+         sg_sand/sand_terra1_0to1.wl                 = { a = "smokinguns" b = "sg.shader" }
+         sg_sand/sand_terra1_0to2.wl                 = { a = "smokinguns" b = "sg.shader" }
+         sg_sand/sand_terra1_1to2.wl                 = { a = "smokinguns" b = "sg.shader" }
+
+         sg_stone/stone_marble2b.wl                  = { a = "smokinguns" b = "sg.shader" }
+
+         sg_water/water_water1.wl                    = { a = "smokinguns" b = "sg.shader" }
+         sg_water/water_water2.wl                    = { a = "smokinguns" b = "sg.shader" }
+         sg_water/water_water3.wl                    = { a = "smokinguns" b = "sg.shader" }
+         sg_water/waterfall2.wl                      = { a = "smokinguns" b = "sg.shader" }
+
+         sg_wood1/wood_ladder1c.wl                   = { a = "smokinguns" b = "sg.shader" }
+         sg_wood1/wood_fence1.wl                     = { a = "smokinguns" b = "sg.shader" }
+         sg_wood1/wood_fence1b.wl                    = { a = "smokinguns" b = "sg.shader" }
+         sg_wood1/wood_fence1c.wl                    = { a = "smokinguns" b = "sg.shader" }
+         sg_wood1/wood_fence3.wl                     = { a = "smokinguns" b = "sg.shader" }
+         sg_wood1/wood_fence3b.wl                    = { a = "smokinguns" b = "sg.shader" }
+         sg_wood1/wood_fence3c.wl                    = { a = "smokinguns" b = "sg.shader" }
+         sg_wood1/wood_fence3d.wl                    = { a = "smokinguns" b = "sg.shader" }
+         sg_wood1/wood_fence3e.wl                    = { a = "smokinguns" b = "sg.shader" }
+         sg_wood1/wood_fencegold.wl                  = { a = "smokinguns" b = "sg.shader" }
+         sg_wood1/wood_ladder1.wl                    = { a = "smokinguns" b = "sg.shader" }
+         sg_wood1/wood_ladder1b.wl                   = { a = "smokinguns" b = "sg.shader" }
+         sg_wood1/wood_rails.wl                      = { a = "smokinguns" b = "sg.shader" }
+
+         sg_wood2/wood_spikes.wl                     = { a = "smokinguns" b = "sg.shader" }
+
+         sg_plant/plant_thicket2.wl                  = { a = "smokinguns" b = "sg.shader" }
+
+         sg_glass/glass_glass2.wl                    = { a = "smokinguns" b = "sg.shader" }
+         sg_glass/glass_lamp.wl                      = { a = "smokinguns" b = "sg.shader" }
+     }
+
+
+
+    }
+  }
+}

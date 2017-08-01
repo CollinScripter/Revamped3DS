@@ -1,0 +1,641 @@
+<HTML>
+<HEAD>
+   <TITLE>RGB Hexadecimal to Decimal Converter</TITLE>
+</HEAD>
+<BODY TEXT="#FFFFFF" LINK="#367A89" VLINK="#367A89" onload="showHex('000000')">
+<CENTER>
+   <TABLE border="0" cellpadding="12">
+      <TR>
+         <TD align="center"><FONT face="Verdana,Arial,Helvetica,sans-serif" size="4"><B>RGB 
+         Hexadecimal / Decimal Converter</B></FONT>
+            <FORM name="converter">
+               <TABLE border="0" cellpadding="0" cellspacing="0" width="400">
+                  <TR>
+                     <TD BGCOLOR="#888888">
+               <TABLE border="0" cellpadding="6" cellspacing="1" width="400">
+                  <TR>
+                     <TD BGCOLOR="#000000" ALIGN="CENTER" WIDTH="33%"><FONT face="Verdana,Arial,Helvetica,sans-serif"><U>
+                        <B>RGB Channel</B></FONT></TD>
+                     <TD BGCOLOR="#000000" ALIGN="CENTER" WIDTH="33%"><FONT face="Verdana,Arial,Helvetica,sans-serif"><U>
+                        <B>Hexadecimal</B></FONT></TD>
+                     <TD BGCOLOR="#000000" ALIGN="CENTER" WIDTH="33%"><FONT face="Verdana,Arial,Helvetica,sans-serif"><U>
+                        <B>Decimal</B></FONT></TD>
+                  </TR>
+                  <TR>
+                     <TD BGCOLOR="#000000" ALIGN="CENTER" VALIGN="TOP" NOWRAP><B>
+                        <INPUT type="button" onClick="reduceVal('R')" value="  -  ">
+                        &nbsp;&nbsp;&nbsp;&nbsp; <FONT face="Arial,Helvetica,sans-serif" color="#FF0000">Red</FONT> 
+                        &nbsp;&nbsp;&nbsp;&nbsp;
+                        <INPUT type="button" onClick="increaseVal('R')" value=" + ">
+                        </B></TD>
+                     <TD BGCOLOR="#000000" ALIGN="CENTER">
+                        <INPUT type="text" name="hexR" size="5" maxlength="2">
+                     </TD>
+                     <TD BGCOLOR="#000000" ALIGN="CENTER">
+                        <INPUT type="text" name="decR" size="5" maxlength="3">
+                     </TD>
+                  </TR>
+                  <TR>
+                     <TD BGCOLOR="#000000" ALIGN="CENTER" VALIGN="TOP" NOWRAP><B>
+                        <INPUT type="button" onClick="reduceVal('G')" value="  -  ">
+                        &nbsp;&nbsp; <FONT face="Arial,Helvetica,sans-serif" color="#00FF00">Green</FONT> 
+                        &nbsp;&nbsp;
+                        <INPUT type="button" onClick="increaseVal('G')" value=" + ">
+                        </B></TD>
+                     <TD BGCOLOR="#000000" ALIGN="CENTER">
+                        <INPUT type="text" name="hexG" size="5" maxlength="2">
+                     </TD>
+                     <TD BGCOLOR="#000000" ALIGN="CENTER">
+                        <INPUT type="text" name="decG" size="5" maxlength="3">
+                     </TD>
+                  </TR>
+                  <TR>
+                     <TD BGCOLOR="#000000" ALIGN="CENTER" VALIGN="TOP" NOWRAP><B>
+                        <INPUT type="button" onClick="reduceVal('B')" value="  -  ">
+                        &nbsp;&nbsp;&nbsp;&nbsp; <FONT face="Arial,Helvetica,sans-serif" color="#0000FF">Blue</FONT> 
+                        &nbsp;&nbsp;&nbsp;
+                        <INPUT type="button" onClick="increaseVal('B')" value=" + ">
+                        </B></TD>
+                     <TD BGCOLOR="#000000" ALIGN="CENTER">
+                        <INPUT type="text" name="hexB" size="5" maxlength="2">
+                     </TD>
+                     <TD BGCOLOR="#000000" ALIGN="CENTER">
+                        <INPUT type="text" name="decB" size="5" maxlength="3">
+                     </TD>
+                  </TR>
+                  <TR>
+                     <TD BGCOLOR="#000000" ALIGN="CENTER" VALIGN="TOP" NOWRAP><B>
+                        <INPUT type="button" onClick="reduceVal('R');reduceVal('G');reduceVal('B');" value="  -  ">
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <FONT face="Arial,Helvetica,sans-serif" color="#FFFFFF">All</FONT> 
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        <INPUT type="button" onClick="increaseVal('R');increaseVal('G');increaseVal('B');" value=" + ">
+                        </B></TD>
+                     <TD BGCOLOR="#000000" ALIGN="CENTER">
+                        <INPUT type="button" value="  Display  " onclick="convert2Dec(document.converter.hexR.value,document.converter.hexG.value,document.converter.hexB.value,'')">
+                     </TD>
+                     <TD BGCOLOR="#000000" ALIGN="CENTER">
+                        <INPUT type="button" value="  Display  " onclick="convert2Hex(document.converter.decR.value,document.converter.decG.value,document.converter.decB.value,'')">
+                     </TD>
+                  </TR>
+                  <TR>
+                     <TD BGCOLOR="#000000" ALIGN="CENTER" colspan="3"><FONT face="Arial,Helvetica,sans-serif" size="1">Enter 
+                     a hexadecimal (00 - FF) number in each of the hexadecimal boxes, or a decimal (0 - 
+                     255) number in each of the decimal boxes, and click the respective <B>Convert</B> 
+                     button to convert the values and display the color on the backdrop.</FONT></TD>
+                  </TR>
+                  <TR>
+                     <TD BGCOLOR="#000000" ALIGN="CENTER"><FONT face="Arial,Helvetica,sans-serif" color="#FFFFFF"><B>
+                     Hex String:</B></FONT></TD>
+                     <TD BGCOLOR="#000000" ALIGN="CENTER"><FONT size="4"><B># </B></FONT>
+                        <INPUT type="text" name="hexString" size="6" maxlength="6">
+                     </TD>
+                     <TD BGCOLOR="#000000" ALIGN="CENTER">
+                        <INPUT type="button" value="  Display   " onclick="showHex(document.converter.hexString.value)">
+                     </TD>
+                  </TR>
+                  <TR>
+                     <TD BGCOLOR="#000000" ALIGN="CENTER"><FONT face="Arial,Helvetica,sans-serif" color="#FFFFFF"><B>
+                     Named Color:</B></FONT></TD>
+                     <TD BGCOLOR="#000000" ALIGN="CENTER" COLSPAN="2">
+                     <SELECT NAME="names" onChange="showHex(this.value)">
+                     <OPTION VALUE="000000">
+                     <OPTION VALUE="F0F8FF">aliceblue
+                     <OPTION VALUE="FAEBD7">antiquewhite
+                     <OPTION VALUE="00FFFF">aqua
+                     <OPTION VALUE="7FFFD4">aquamarine
+                     <OPTION VALUE="F0FFFF">azure
+                     <OPTION VALUE="F5F5DC">beige
+                     <OPTION VALUE="FFE4C4">bisque
+                     <OPTION VALUE="000000">black
+                     <OPTION VALUE="FFEBCD">blanched almond
+                     <OPTION VALUE="0000FF">blue
+                     <OPTION VALUE="8A2BE2">blueviolet
+                     <OPTION VALUE="A52A2A">brown
+                     <OPTION VALUE="DEB887">burlywood
+                     <OPTION VALUE="5F9EA0">cadetblue
+                     <OPTION VALUE="7FFF00">chartreuse
+                     <OPTION VALUE="D2691E">chocolate
+                     <OPTION VALUE="FF7F50">coral
+                     <OPTION VALUE="6495ED">cornflowerblue
+                     <OPTION VALUE="FFF8DC">cornsilk
+                     <OPTION VALUE="DC143C">crimson
+                     <OPTION VALUE="00008B">darkblue
+                     <OPTION VALUE="008B8B">darkcyan
+                     <OPTION VALUE="B8860B">darkgoldenrod
+                     <OPTION VALUE="A9A9A9">darkgray
+                     <OPTION VALUE="006400">darkgreen
+                     <OPTION VALUE="BDB76B">darkkhaki
+                     <OPTION VALUE="8B008B">darkmagenta
+                     <OPTION VALUE="556B2F">darkolivegreen
+                     <OPTION VALUE="FF8C00">darkorange
+                     <OPTION VALUE="9932CC">darkorchid
+                     <OPTION VALUE="8B0000">darkred
+                     <OPTION VALUE="E9967A">darksalmon
+                     <OPTION VALUE="8FBC8F">darkseagreen
+                     <OPTION VALUE="483D8B">darkslateblue
+                     <OPTION VALUE="2F4F4F">darkslategray
+                     <OPTION VALUE="00CED1">darkturquoise
+                     <OPTION VALUE="9400D3">darkviolet
+                     <OPTION VALUE="FF1493">deeppink
+                     <OPTION VALUE="00BFFF">deepskyblue
+                     <OPTION VALUE="696969">dimgray
+                     <OPTION VALUE="1E90FF">dodgerblue
+                     <OPTION VALUE="B22222">firebrick
+                     <OPTION VALUE="FFFAF0">floralwhite
+                     <OPTION VALUE="228B22">forestgreen
+                     <OPTION VALUE="FF00FF">fuchsia
+                     <OPTION VALUE="DCDCDC">gainsboro
+                     <OPTION VALUE="F8F8FF">ghostwhite
+                     <OPTION VALUE="FFD700">gold
+                     <OPTION VALUE="DAA520">goldenrod
+                     <OPTION VALUE="FAFAD2">goldenrodyellow
+                     <OPTION VALUE="808080">gray
+                     <OPTION VALUE="008000">green
+                     <OPTION VALUE="ADFF2F">greenyellow
+                     <OPTION VALUE="F0FFF0">honeydew
+                     <OPTION VALUE="FF69B4">hotpink
+                     <OPTION VALUE="CD5C5C">indianred
+                     <OPTION VALUE="4B0082">indigo
+                     <OPTION VALUE="FFFFF0">ivory
+                     <OPTION VALUE="F0E68C">khaki
+                     <OPTION VALUE="E6E6FA">lavender
+                     <OPTION VALUE="FFF0FF">lavenderblush
+                     <OPTION VALUE="7CFC00">lawngreen
+                     <OPTION VALUE="FFFACD">lemonchiffon
+                     <OPTION VALUE="ADD8E6">lightblue
+                     <OPTION VALUE="F08080">lightcoral
+                     <OPTION VALUE="E0FFFF">lightcyan
+                     <OPTION VALUE="90EE90">lightgreen
+                     <OPTION VALUE="D3D3D3">lightgrey
+                     <OPTION VALUE="FFB6C1">lightpink
+                     <OPTION VALUE="FFA07A">lightsalmon
+                     <OPTION VALUE="20B2AA">lightseagreen
+                     <OPTION VALUE="87CEFA">lightskyblue
+                     <OPTION VALUE="778899">lightslategrey
+                     <OPTION VALUE="B0C4DE">lightsteelblue
+                     <OPTION VALUE="FFFFE0">lightyellow
+                     <OPTION VALUE="00FF00">lime
+                     <OPTION VALUE="32CD32">limegreen
+                     <OPTION VALUE="FAF0E6">linen
+                     <OPTION VALUE="800000">maroon
+                     <OPTION VALUE="66CDAA">medium aquamarine
+                     <OPTION VALUE="3CB371">medium seagreen
+                     <OPTION VALUE="7B68EE">medium slateblue
+                     <OPTION VALUE="00FA9A">medium springgreen
+                     <OPTION VALUE="48D1CC">medium turquoise
+                     <OPTION VALUE="C71585">medium violetred
+                     <OPTION VALUE="0000CD">mediumblue
+                     <OPTION VALUE="BA55D3">mediumorchid
+                     <OPTION VALUE="9370DB">mediumpurple
+                     <OPTION VALUE="191970">midnightblue
+                     <OPTION VALUE="F5FFFA">mintcream
+                     <OPTION VALUE="FFE4E1">mistyrose
+                     <OPTION VALUE="FFE4B5">moccasin
+                     <OPTION VALUE="FFDEAD">navajowhite
+                     <OPTION VALUE="000080">navy
+                     <OPTION VALUE="FDF5E6">oldlace
+                     <OPTION VALUE="808000">olive
+                     <OPTION VALUE="6B8E23">olivedrab
+                     <OPTION VALUE="FFA500">orange
+                     <OPTION VALUE="FF4500">orangered
+                     <OPTION VALUE="DA70D6">orchid
+                     <OPTION VALUE="EEE8AA">palegoldenrod
+                     <OPTION VALUE="98FB98">palegreen
+                     <OPTION VALUE="AFEEEE">paleturquoise
+                     <OPTION VALUE="DB7093">palevioletred
+                     <OPTION VALUE="FFEFD5">papayawhip
+                     <OPTION VALUE="FFDAB9">peachpuff
+                     <OPTION VALUE="CD853F">peru
+                     <OPTION VALUE="FFC0CB">pink
+                     <OPTION VALUE="DDA0DD">plum
+                     <OPTION VALUE="B0E0E6">powderblue
+                     <OPTION VALUE="800080">purple
+                     <OPTION VALUE="FF0000">red
+                     <OPTION VALUE="BC8F8F">rosybrown
+                     <OPTION VALUE="4169E1">royalblue
+                     <OPTION VALUE="8B4513">saddlebrown
+                     <OPTION VALUE="FA8072">salmon
+                     <OPTION VALUE="F4A460">sandybrown
+                     <OPTION VALUE="2E8B57">seagreen
+                     <OPTION VALUE="FFF5EE">seashell
+                     <OPTION VALUE="A0522D">sienna
+                     <OPTION VALUE="C0C0C0">silver
+                     <OPTION VALUE="87CEEB">skyblue
+                     <OPTION VALUE="6A5ACD">slateblue
+                     <OPTION VALUE="708090">slategray
+                     <OPTION VALUE="FFFAFA">snow
+                     <OPTION VALUE="00FF7F">springgreen
+                     <OPTION VALUE="4682B4">steelblue
+                     <OPTION VALUE="D2B48C">tan
+                     <OPTION VALUE="008080">teal
+                     <OPTION VALUE="FF6347">tomato
+                     <OPTION VALUE="40E0D0">turquoise
+                     <OPTION VALUE="EE82EE">violet
+                     <OPTION VALUE="F5DEB3">wheat
+                     <OPTION VALUE="D8BFD8">whistle
+                     <OPTION VALUE="FFFFFF">white
+                     <OPTION VALUE="F5F5F5">whitesmoke
+                     <OPTION VALUE="FFFF00">yellow
+                     <OPTION VALUE="9ACD32">yellowgreen
+                     </SELECT>
+                     </TD>
+                  </TR>
+                  <TR>
+                     <TD BGCOLOR="#000000" ALIGN="CENTER" colspan="3"><FONT face="Arial,Helvetica,sans-serif" size="1">Enter 
+                     a hexadecimal string (000000 - FFFFFF) in the box to display its color and 
+                     decimal values.  Alternatively, click a color on the grid below to start:</FONT></TD>
+                  </TR>
+                  <TR>
+                     <TD BGCOLOR="#000000" COLSPAN="3" ALIGN="CENTER">
+                     <A HREF="colorgrid.map"><IMG SRC="colorgrid.gif" WIDTH="292" HEIGHT="196" BORDER="0" ALT="" USEMAP="#map_colorgrid" ISMAP></A>
+                     </TD>
+                  </TR>
+               </TABLE>
+               </TD>
+            </TR>
+         </TABLE>
+         </TD>
+      </TR>
+   </TABLE>
+</CENTER>
+</FORM>
+<MAP NAME="map_colorgrid">
+   <!--- Row 1 --->
+   <AREA COORDS="2,2,18,18" HREF="javascript:showHex('330000')">
+   <AREA COORDS="18,2,34,18" HREF="javascript:showHex('333300')">
+   <AREA COORDS="34,2,50,18" HREF="javascript:showHex('336600')">
+   <AREA COORDS="50,2,66,18" HREF="javascript:showHex('339900')">
+   <AREA COORDS="66,2,82,18" HREF="javascript:showHex('33CC00')">
+   <AREA COORDS="82,2,98,18" HREF="javascript:showHex('33FF00')">
+   <AREA COORDS="98,2,114,18" HREF="javascript:showHex('66FF00')">
+   <AREA COORDS="114,2,130,18" HREF="javascript:showHex('66CC00')">
+   <AREA COORDS="130,2,146,18" HREF="javascript:showHex('669900')">
+   <AREA COORDS="146,2,162,18" HREF="javascript:showHex('666600')">
+   <AREA COORDS="162,2,178,18" HREF="javascript:showHex('663300')">
+   <AREA COORDS="178,2,194,18" HREF="javascript:showHex('660000')">
+   <AREA COORDS="194,2,210,18" HREF="javascript:showHex('FF0000')">
+   <AREA COORDS="210,2,226,18" HREF="javascript:showHex('FF3300')">
+   <AREA COORDS="226,2,242,18" HREF="javascript:showHex('FF6600')">
+   <AREA COORDS="242,2,258,18" HREF="javascript:showHex('FF9900')">
+   <AREA COORDS="258,2,274,18" HREF="javascript:showHex('FFCC00')">
+   <AREA COORDS="274,2,290,18" HREF="javascript:showHex('FFFF00')">
+   <!--- Row 2 --->
+   <AREA COORDS="2,18,18,34" HREF="javascript:showHex('330033')">
+   <AREA COORDS="18,18,34,34" HREF="javascript:showHex('333333')">
+   <AREA COORDS="34,18,50,34" HREF="javascript:showHex('336633')">
+   <AREA COORDS="50,18,66,34" HREF="javascript:showHex('339933')">
+   <AREA COORDS="66,18,82,34" HREF="javascript:showHex('33CC33')">
+   <AREA COORDS="82,18,98,34" HREF="javascript:showHex('33FF33')">
+   <AREA COORDS="98,18,114,34" HREF="javascript:showHex('66FF33')">
+   <AREA COORDS="114,18,130,34" HREF="javascript:showHex('66CC33')">
+   <AREA COORDS="130,18,146,34" HREF="javascript:showHex('669933')">
+   <AREA COORDS="146,18,162,34" HREF="javascript:showHex('666633')">
+   <AREA COORDS="162,18,178,34" HREF="javascript:showHex('663333')">
+   <AREA COORDS="178,18,194,34" HREF="javascript:showHex('660033')">
+   <AREA COORDS="194,18,210,34" HREF="javascript:showHex('FF0033')">
+   <AREA COORDS="210,18,226,34" HREF="javascript:showHex('FF3333')">
+   <AREA COORDS="226,18,242,34" HREF="javascript:showHex('FF6633')">
+   <AREA COORDS="242,18,258,34" HREF="javascript:showHex('FF9933')">
+   <AREA COORDS="258,18,274,34" HREF="javascript:showHex('FFCC33')">
+   <AREA COORDS="274,18,290,34" HREF="javascript:showHex('FFFF33')">
+   <!--- Row 3 --->
+   <AREA COORDS="2,34,18,50" HREF="javascript:showHex('330066')">
+   <AREA COORDS="18,34,34,50" HREF="javascript:showHex('333366')">
+   <AREA COORDS="34,34,50,50" HREF="javascript:showHex('336666')">
+   <AREA COORDS="50,34,66,50" HREF="javascript:showHex('339966')">
+   <AREA COORDS="66,34,82,50" HREF="javascript:showHex('33CC66')">
+   <AREA COORDS="82,34,98,50" HREF="javascript:showHex('33FF66')">
+   <AREA COORDS="98,34,114,50" HREF="javascript:showHex('66FF66')">
+   <AREA COORDS="114,34,130,50" HREF="javascript:showHex('66CC66')">
+   <AREA COORDS="130,34,146,50" HREF="javascript:showHex('669966')">
+   <AREA COORDS="146,34,162,50" HREF="javascript:showHex('666666')">
+   <AREA COORDS="162,34,178,50" HREF="javascript:showHex('663366')">
+   <AREA COORDS="178,34,194,50" HREF="javascript:showHex('660066')">
+   <AREA COORDS="194,34,210,50" HREF="javascript:showHex('FF0066')">
+   <AREA COORDS="210,34,226,50" HREF="javascript:showHex('FF3366')">
+   <AREA COORDS="226,34,242,50" HREF="javascript:showHex('FF6666')">
+   <AREA COORDS="242,34,258,50" HREF="javascript:showHex('FF9966')">
+   <AREA COORDS="258,34,274,50" HREF="javascript:showHex('FFCC66')">
+   <AREA COORDS="274,34,290,50" HREF="javascript:showHex('FFFF66')">
+   <!--- Row 4 --->
+   <AREA COORDS="2,50,18,66" HREF="javascript:showHex('330099')">
+   <AREA COORDS="18,50,34,66" HREF="javascript:showHex('333399')">
+   <AREA COORDS="34,50,50,66" HREF="javascript:showHex('336699')">
+   <AREA COORDS="50,50,66,66" HREF="javascript:showHex('339999')">
+   <AREA COORDS="66,50,82,66" HREF="javascript:showHex('33CC99')">
+   <AREA COORDS="82,50,98,66" HREF="javascript:showHex('33FF99')">
+   <AREA COORDS="98,50,114,66" HREF="javascript:showHex('66FF99')">
+   <AREA COORDS="114,50,130,66" HREF="javascript:showHex('66CC99')">
+   <AREA COORDS="130,50,146,66" HREF="javascript:showHex('669999')">
+   <AREA COORDS="146,50,162,66" HREF="javascript:showHex('666699')">
+   <AREA COORDS="162,50,178,66" HREF="javascript:showHex('663399')">
+   <AREA COORDS="178,50,194,66" HREF="javascript:showHex('660099')">
+   <AREA COORDS="194,50,210,66" HREF="javascript:showHex('FF0099')">
+   <AREA COORDS="210,50,226,66" HREF="javascript:showHex('FF3399')">
+   <AREA COORDS="226,50,242,66" HREF="javascript:showHex('FF6699')">
+   <AREA COORDS="242,50,258,66" HREF="javascript:showHex('FF9999')">
+   <AREA COORDS="258,50,274,66" HREF="javascript:showHex('FFCC99')">
+   <AREA COORDS="274,50,290,66" HREF="javascript:showHex('FFFF99')">
+   <!--- Row 5 --->
+   <AREA COORDS="2,66,18,82" HREF="javascript:showHex('3300CC')">
+   <AREA COORDS="18,66,34,82" HREF="javascript:showHex('3333CC')">
+   <AREA COORDS="34,66,50,82" HREF="javascript:showHex('3366CC')">
+   <AREA COORDS="50,66,66,82" HREF="javascript:showHex('3399CC')">
+   <AREA COORDS="66,66,82,82" HREF="javascript:showHex('33CCCC')">
+   <AREA COORDS="82,66,98,82" HREF="javascript:showHex('33FFCC')">
+   <AREA COORDS="98,66,114,82" HREF="javascript:showHex('66FFCC')">
+   <AREA COORDS="114,66,130,82" HREF="javascript:showHex('66CCCC')">
+   <AREA COORDS="130,66,146,82" HREF="javascript:showHex('6699CC')">
+   <AREA COORDS="146,66,162,82" HREF="javascript:showHex('6666CC')">
+   <AREA COORDS="162,66,178,82" HREF="javascript:showHex('6633CC')">
+   <AREA COORDS="178,66,194,82" HREF="javascript:showHex('6600CC')">
+   <AREA COORDS="194,66,210,82" HREF="javascript:showHex('FF00CC')">
+   <AREA COORDS="210,66,226,82" HREF="javascript:showHex('FF33CC')">
+   <AREA COORDS="226,66,242,82" HREF="javascript:showHex('FF66CC')">
+   <AREA COORDS="242,66,258,82" HREF="javascript:showHex('FF99CC')">
+   <AREA COORDS="258,66,274,82" HREF="javascript:showHex('FFCCCC')">
+   <AREA COORDS="274,66,290,82" HREF="javascript:showHex('FFFFCC')">
+   <!--- Row 6 --->
+   <AREA COORDS="2,82,18,98" HREF="javascript:showHex('3300FF')">
+   <AREA COORDS="18,82,34,98" HREF="javascript:showHex('3333FF')">
+   <AREA COORDS="34,82,50,98" HREF="javascript:showHex('3366FF')">
+   <AREA COORDS="50,82,66,98" HREF="javascript:showHex('3399FF')">
+   <AREA COORDS="66,82,82,98" HREF="javascript:showHex('33CCFF')">
+   <AREA COORDS="82,82,98,98" HREF="javascript:showHex('33FFFF')">
+   <AREA COORDS="98,82,114,98" HREF="javascript:showHex('66FFFF')">
+   <AREA COORDS="114,82,130,98" HREF="javascript:showHex('66CCFF')">
+   <AREA COORDS="130,82,146,98" HREF="javascript:showHex('6699FF')">
+   <AREA COORDS="146,82,162,98" HREF="javascript:showHex('6666FF')">
+   <AREA COORDS="162,82,178,98" HREF="javascript:showHex('6633FF')">
+   <AREA COORDS="178,82,194,98" HREF="javascript:showHex('6600FF')">
+   <AREA COORDS="194,82,210,98" HREF="javascript:showHex('FF00FF')">
+   <AREA COORDS="210,82,226,98" HREF="javascript:showHex('FF33FF')">
+   <AREA COORDS="226,82,242,98" HREF="javascript:showHex('FF66FF')">
+   <AREA COORDS="242,82,258,98" HREF="javascript:showHex('FF99FF')">
+   <AREA COORDS="258,82,274,98" HREF="javascript:showHex('FFCCFF')">
+   <AREA COORDS="274,82,290,98" HREF="javascript:showHex('FFFFFF')">
+   <!--- Row 7 --->
+   <AREA COORDS="2,98,18,114" HREF="javascript:showHex('0000FF')">
+   <AREA COORDS="18,98,34,114" HREF="javascript:showHex('0033FF')">
+   <AREA COORDS="34,98,50,114" HREF="javascript:showHex('0066FF')">
+   <AREA COORDS="50,98,66,114" HREF="javascript:showHex('0099FF')">
+   <AREA COORDS="66,98,82,114" HREF="javascript:showHex('00CCFF')">
+   <AREA COORDS="82,98,98,114" HREF="javascript:showHex('00FFFF')">
+   <AREA COORDS="98,98,114,114" HREF="javascript:showHex('99FFFF')">
+   <AREA COORDS="114,98,130,114" HREF="javascript:showHex('99CCFF')">
+   <AREA COORDS="130,98,146,114" HREF="javascript:showHex('9999FF')">
+   <AREA COORDS="146,98,162,114" HREF="javascript:showHex('9966FF')">
+   <AREA COORDS="162,98,178,114" HREF="javascript:showHex('9933FF')">
+   <AREA COORDS="178,98,194,114" HREF="javascript:showHex('9900FF')">
+   <AREA COORDS="194,98,210,114" HREF="javascript:showHex('CC00FF')">
+   <AREA COORDS="210,98,226,114" HREF="javascript:showHex('CC33FF')">
+   <AREA COORDS="226,98,242,114" HREF="javascript:showHex('CC66FF')">
+   <AREA COORDS="242,98,258,114" HREF="javascript:showHex('CC99FF')">
+   <AREA COORDS="258,98,274,114" HREF="javascript:showHex('CCCCFF')">
+   <AREA COORDS="274,98,290,114" HREF="javascript:showHex('CCFFFF')">
+   <!--- Row 8 --->
+   <AREA COORDS="2,114,18,130" HREF="javascript:showHex('0000CC')">
+   <AREA COORDS="18,114,34,130" HREF="javascript:showHex('0033CC')">
+   <AREA COORDS="34,114,50,130" HREF="javascript:showHex('0066CC')">
+   <AREA COORDS="50,114,66,130" HREF="javascript:showHex('0099CC')">
+   <AREA COORDS="66,114,82,130" HREF="javascript:showHex('00CCCC')">
+   <AREA COORDS="82,114,98,130" HREF="javascript:showHex('00FFCC')">
+   <AREA COORDS="98,114,114,130" HREF="javascript:showHex('99FFCC')">
+   <AREA COORDS="114,114,130,130" HREF="javascript:showHex('99CCCC')">
+   <AREA COORDS="130,114,146,130" HREF="javascript:showHex('9999CC')">
+   <AREA COORDS="146,114,162,130" HREF="javascript:showHex('9966CC')">
+   <AREA COORDS="162,114,178,130" HREF="javascript:showHex('9933CC')">
+   <AREA COORDS="178,114,194,130" HREF="javascript:showHex('9900CC')">
+   <AREA COORDS="194,114,210,130" HREF="javascript:showHex('CC00CC')">
+   <AREA COORDS="210,114,226,130" HREF="javascript:showHex('CC33CC')">
+   <AREA COORDS="226,114,242,130" HREF="javascript:showHex('CC66CC')">
+   <AREA COORDS="242,114,258,130" HREF="javascript:showHex('CC99CC')">
+   <AREA COORDS="258,114,274,130" HREF="javascript:showHex('CCCCCC')">
+   <AREA COORDS="274,114,290,130" HREF="javascript:showHex('CCFFCC')">
+   <!--- Row 9 --->
+   <AREA COORDS="2,130,18,146" HREF="javascript:showHex('000099')">
+   <AREA COORDS="18,130,34,146" HREF="javascript:showHex('003399')">
+   <AREA COORDS="34,130,50,146" HREF="javascript:showHex('006699')">
+   <AREA COORDS="50,130,66,146" HREF="javascript:showHex('009999')">
+   <AREA COORDS="66,130,82,146" HREF="javascript:showHex('00CC99')">
+   <AREA COORDS="82,130,98,146" HREF="javascript:showHex('00FF99')">
+   <AREA COORDS="98,130,114,146" HREF="javascript:showHex('99FF99')">
+   <AREA COORDS="114,130,130,146" HREF="javascript:showHex('99CC99')">
+   <AREA COORDS="130,130,146,146" HREF="javascript:showHex('999999')">
+   <AREA COORDS="146,130,162,146" HREF="javascript:showHex('996699')">
+   <AREA COORDS="162,130,178,146" HREF="javascript:showHex('993399')">
+   <AREA COORDS="178,130,194,146" HREF="javascript:showHex('990099')">
+   <AREA COORDS="194,130,210,146" HREF="javascript:showHex('CC0099')">
+   <AREA COORDS="210,130,226,146" HREF="javascript:showHex('CC3399')">
+   <AREA COORDS="226,130,242,146" HREF="javascript:showHex('CC6699')">
+   <AREA COORDS="242,130,258,146" HREF="javascript:showHex('CC9999')">
+   <AREA COORDS="258,130,274,146" HREF="javascript:showHex('CCCC99')">
+   <AREA COORDS="274,130,290,146" HREF="javascript:showHex('CCFF99')">
+   <!--- Row 10 --->
+   <AREA COORDS="2,146,18,162" HREF="javascript:showHex('000066')">
+   <AREA COORDS="18,146,34,162" HREF="javascript:showHex('003366')">
+   <AREA COORDS="34,146,50,162" HREF="javascript:showHex('006666')">
+   <AREA COORDS="50,146,66,162" HREF="javascript:showHex('009966')">
+   <AREA COORDS="66,146,82,162" HREF="javascript:showHex('00CC66')">
+   <AREA COORDS="82,146,98,162" HREF="javascript:showHex('00FF66')">
+   <AREA COORDS="98,146,114,162" HREF="javascript:showHex('99FF66')">
+   <AREA COORDS="114,146,130,162" HREF="javascript:showHex('99CC66')">
+   <AREA COORDS="130,146,146,162" HREF="javascript:showHex('999966')">
+   <AREA COORDS="146,146,162,162" HREF="javascript:showHex('996666')">
+   <AREA COORDS="162,146,178,162" HREF="javascript:showHex('993366')">
+   <AREA COORDS="178,146,194,162" HREF="javascript:showHex('990066')">
+   <AREA COORDS="194,146,210,162" HREF="javascript:showHex('CC0066')">
+   <AREA COORDS="210,146,226,162" HREF="javascript:showHex('CC3366')">
+   <AREA COORDS="226,146,242,162" HREF="javascript:showHex('CC6666')">
+   <AREA COORDS="242,146,258,162" HREF="javascript:showHex('CC9966')">
+   <AREA COORDS="258,146,274,162" HREF="javascript:showHex('CCCC66')">
+   <AREA COORDS="274,146,290,162" HREF="javascript:showHex('CCFF66')">
+   <!--- Row 11 --->
+   <AREA COORDS="2,162,18,178" HREF="javascript:showHex('000033')">
+   <AREA COORDS="18,162,34,178" HREF="javascript:showHex('003333')">
+   <AREA COORDS="34,162,50,178" HREF="javascript:showHex('006633')">
+   <AREA COORDS="50,162,66,178" HREF="javascript:showHex('009933')">
+   <AREA COORDS="66,162,82,178" HREF="javascript:showHex('00CC33')">
+   <AREA COORDS="82,162,98,178" HREF="javascript:showHex('00FF33')">
+   <AREA COORDS="98,162,114,178" HREF="javascript:showHex('99FF33')">
+   <AREA COORDS="114,162,130,178" HREF="javascript:showHex('99CC33')">
+   <AREA COORDS="130,162,146,178" HREF="javascript:showHex('999933')">
+   <AREA COORDS="146,162,162,178" HREF="javascript:showHex('996633')">
+   <AREA COORDS="162,162,178,178" HREF="javascript:showHex('993333')">
+   <AREA COORDS="178,162,194,178" HREF="javascript:showHex('990033')">
+   <AREA COORDS="194,162,210,178" HREF="javascript:showHex('CC0033')">
+   <AREA COORDS="210,162,226,178" HREF="javascript:showHex('CC3333')">
+   <AREA COORDS="226,162,242,178" HREF="javascript:showHex('CC6633')">
+   <AREA COORDS="242,162,258,178" HREF="javascript:showHex('CC9933')">
+   <AREA COORDS="258,162,274,178" HREF="javascript:showHex('CCCC33')">
+   <AREA COORDS="274,162,290,178" HREF="javascript:showHex('CCFF33')">
+   <!--- Row 12 --->
+   <AREA COORDS="2,178,18,194" HREF="javascript:showHex('000000')">
+   <AREA COORDS="18,178,34,194" HREF="javascript:showHex('003300')">
+   <AREA COORDS="34,178,50,194" HREF="javascript:showHex('006600')">
+   <AREA COORDS="50,178,66,194" HREF="javascript:showHex('009900')">
+   <AREA COORDS="66,178,82,194" HREF="javascript:showHex('00CC00')">
+   <AREA COORDS="82,178,98,194" HREF="javascript:showHex('00FF00')">
+   <AREA COORDS="98,178,114,194" HREF="javascript:showHex('99FF00')">
+   <AREA COORDS="114,178,130,194" HREF="javascript:showHex('99CC00')">
+   <AREA COORDS="130,178,146,194" HREF="javascript:showHex('999900')">
+   <AREA COORDS="146,178,162,194" HREF="javascript:showHex('996600')">
+   <AREA COORDS="162,178,178,194" HREF="javascript:showHex('993300')">
+   <AREA COORDS="178,178,194,194" HREF="javascript:showHex('990000')">
+   <AREA COORDS="194,178,210,194" HREF="javascript:showHex('CC0000')">
+   <AREA COORDS="210,178,226,194" HREF="javascript:showHex('CC3300')">
+   <AREA COORDS="226,178,242,194" HREF="javascript:showHex('CC6600')">
+   <AREA COORDS="242,178,258,194" HREF="javascript:showHex('CC9900')">
+   <AREA COORDS="258,178,274,194" HREF="javascript:showHex('CCCC00')">
+   <AREA COORDS="274,178,290,194" HREF="javascript:showHex('CCFF00')">
+</MAP>
+</BODY>
+</HTML>
+
+<SCRIPT language="JavaScript">
+<!--
+function convert2Dec(numR,numG,numB,doneString) {      
+   if ( (!numR || !numG || !numB ) && (!doneString) ) {
+      alert("Please enter values in all boxes...");
+      return false;
+   }
+   numR = numR.toUpperCase();
+   numG = numG.toUpperCase();
+   numB = numB.toUpperCase();
+   decRval = hex2dec(numR)
+   decGval = hex2dec(numG);
+   decBval = hex2dec(numB);
+   if ( (decRval == "BAD") || (decGval == "BAD") || (decBval == "BAD") ) {
+      return false;
+   }
+   else {
+      document.converter.decR.value = decRval;
+      document.converter.decG.value = decGval;
+      document.converter.decB.value = decBval;
+      document.converter.hexR.value = numR;
+      document.converter.hexG.value = numG;
+      document.converter.hexB.value = numB;
+      //document.converter.dec.value = parseInt(hexNum,16);
+      hexStringOut =  "" + numR + numG + numB;
+      hexStringOut.toUpperCase();
+      document.bgColor = "#" + hexStringOut;
+      document.converter.hexString.value = hexStringOut;  
+   }
+   convert2Hex(decRval,decGval,decBval,"DONE");
+   //return true;
+   if (document.converter.names.value != document.converter.hexString.value) {
+      document.converter.names.selectedIndex = 0;
+   }
+
+}
+function hex2dec(theHex) {
+   if ( (theHex.charAt(0) > "F") || (theHex.charAt(1) > "F") ) {
+      alert("Hexadecimal (00-FF) only, please...");
+      return "BAD";
+   }
+   var retDec  = parseInt(theHex,16);
+   return retDec;
+}
+function fixHex(theDec) { 
+   var hNum = new Array("0","1","2","3","4","5","6","7","8","9","A","B","C","D","E","F");
+   var retHex = hNum[theDec];
+   return retHex;
+}
+function dec2hex(theDec) {
+   for (var k=0;k<theDec.length;k++) {
+      var thisChar = theDec.charAt(k);
+      if ( (thisChar < "0") || (thisChar > "9") ) {
+         alert("Decimal (0-255) only, please...");
+         return "BAD";
+      }
+   }
+   var leftNum;
+   var rightNum;
+   var leftNumS;
+   var rightNumS;
+   var retNum;
+   if (theDec > 255) {
+      alert("Not over 255, please...");
+      return "BAD";
+   }
+   else {
+      leftNum = Math.floor(theDec / 16);
+      leftNumS = fixHex(leftNum);
+      rightNum = theDec%16;
+      rightNumS = fixHex(rightNum);
+      retNum = leftNumS + rightNumS;
+   }
+   return retNum;
+}
+function convert2Hex(numR,numG,numB,doneString) {      
+   if ( (!numR || !numG || !numB ) && (!doneString) ) {
+      alert("Please enter values in all boxes...");
+      return false;
+   }
+   hexRval = dec2hex(numR);
+   hexGval = dec2hex(numG);
+   hexBval = dec2hex(numB);
+   if ( (hexRval == "BAD") || (hexGval == "BAD") || (hexBval == "BAD") ) {
+      return false;
+   }
+   else {
+      document.converter.hexR.value = dec2hex(numR);
+      document.converter.hexG.value = dec2hex(numG);
+      document.converter.hexB.value = dec2hex(numB);
+      hexStringOut =  "" + hexRval + hexGval + hexBval;
+      hexStringOut = hexStringOut.toUpperCase();
+      document.bgColor = "#" + hexStringOut;
+      document.converter.hexString.value = hexStringOut;  
+   }
+   //return true;
+}
+function showHex(hexStringIn) {
+   if (hexStringIn.length != 6) {
+      alert ('Enter a six character hexadecimal string only, please!');
+      return false;
+   }
+
+   hexRval = "" + hexStringIn.charAt(0) + hexStringIn.charAt(1);
+   hexGval = "" + hexStringIn.charAt(2) + hexStringIn.charAt(3);
+   hexBval = "" + hexStringIn.charAt(4) + hexStringIn.charAt(5);
+   
+   convert2Dec(hexRval,hexGval,hexBval,"DONE");
+   convert2Hex(decRval,decGval,decBval,"DONE");
+   //document.converter.hexR.value = hexRval;
+   //document.converter.hexG.value = hexGval;
+   //document.converter.hexB.value = hexBval;
+   //return true;
+}
+function reduceVal(theType) {
+   decRval = document.converter.decR.value;
+   decGval = document.converter.decG.value;
+   decBval = document.converter.decB.value;
+   eval ("newNum = dec" + theType + "val - 8");
+   if (newNum < 0) {
+      newNum = 0;
+   }
+   eval ("dec" + theType + "val = newNum");
+   document.converter.decR.value = decRval;
+   document.converter.decG.value = decGval;
+   document.converter.decB.value = decBval;
+   convert2Hex(decRval,decGval,decBval,"DONE");
+   convert2Dec(hexRval,hexGval,hexBval,"DONE");
+}
+function increaseVal(theType) {
+   decRval = document.converter.decR.value;
+   decGval = document.converter.decG.value;
+   decBval = document.converter.decB.value;
+   eval ("newNum = dec" + theType + "val - -8");
+   if (newNum > 255) {
+      newNum = 255;
+   }
+   eval ("dec" + theType + "val = newNum");
+   document.converter.decR.value = decRval;
+   document.converter.decG.value = decGval;
+   document.converter.decB.value = decBval;
+   convert2Hex(decRval,decGval,decBval,"DONE");
+   convert2Dec(hexRval,hexGval,hexBval,"DONE");
+}
+
+// -->
+</SCRIPT>

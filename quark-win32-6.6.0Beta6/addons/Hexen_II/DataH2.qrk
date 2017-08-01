@@ -1,0 +1,182 @@
+QQRKSRC1
+// Configuration file for Hexen II
+
+//    This file contains :
+//
+//    * List of Hexen II entities
+//      By: Tiglari <tiglari@hexenworld.com>
+//        Not really done (never well be), but prolly good enough
+//        to be worth critizing!
+//      Models added by: Robert <andjr@intekom.co.za>
+//
+//    * List of Hexen II textures
+//      Originally by: Tiglari <tiglari@hexenworld.com>
+//      Sorted by: Dariusz Emilianowicz <fathoom@quake.org.pl>
+//      For an alternate sorting by Scott <cierski@home.com>,
+//       download texh2scott.zip.
+//
+//    Thanks, Tiglari and Scott.   - Armin -
+//
+//    Nov 17 1998: some omissions restored by tiglari
+//
+//    See comments in file Defaults.qrk.
+
+//$Header: /cvsroot/quark/runtime/addons/Hexen_II/DataH2.qrk,v 1.9 2008/05/14 20:38:39 cdunde Exp $
+// ----------- REVISION HISTORY ------------
+//$Log: DataH2.qrk,v $
+//Revision 1.9  2008/05/14 20:38:39  cdunde
+//Fixed basic lighting in all games and a few other small typo errors.
+//
+//Revision 1.8  2008/03/28 19:08:14  cdunde
+//Cleaned up, fixed if needed and brought into sync with all QuArK addons.
+//
+//Revision 1.7  2008/02/27 00:18:16  danielpharos
+//Fix the contextual help files not being found anymore
+//
+//Revision 1.6  2005/10/15 01:00:27  cdunde
+//To reinstate headers and history
+//
+//Revision 1.3  2005/06/17 01:36:53  cdunde
+//made correction pointed out by Bengt Jardrup
+//
+//Revision 1.2  2001/03/20 21:57:40  decker_dk
+//Added log-header / misc.
+//
+
+{
+  QuArKProtected = "1"
+  Description = "Base Hexen II data"
+
+  Hexen II setup.qctx =
+  {
+    Game = "Hexen II"
+    HTML = "index.html"
+    SFSkills = '4096 8192 16384 32768 65536 131072'   // must be 4 to 6 values : easy/medium/hard/deathm.[/coop/single]
+    CreateFiles: =
+    {
+      Hexen.rc =
+      {
+        Data =
+               "// This file has been created by QuArK - Quake Army Knife"
+         $0D$0A"//"
+         $0D$0A"// For more info about QuArK please see the home page at :"
+         $0D$0A"//"
+         $0D$0A"//      http://www.planetquake.com/quark"
+         $0D$0A"//"
+         $0D$0A"//"
+         $0D$0A"//                                   -- Armin Rigo"
+         $0D$0A
+         $0D$0A"developer 0"
+         $0D$0A"exec default.cfg"
+         $0D$0A"exec config.cfg"
+         $0D$0A"exec autoexec.cfg"
+         $0D$0A"echo"
+         $0D$0A"echo "$22" "$80$81$81$81$81$82" Quake Army Knife 5 "$80$81$81$81$81$82$22
+         $0D$0A"echo"
+         $0D$0A"exec quark.cfg"
+         $0D$0A"stuffcmds"
+         $0D$0A
+      }
+    }
+  }
+
+  NewFiles.qtx =
+  {
+    ToolBox = "New files..."
+    Root = "Hexen II file types.qtxfolder"
+    Hexen II file types.qtxfolder =
+    {
+      Texture Wad.wad = { }
+      HexenC.hc = { }
+    }
+  }
+  walltex:incl =
+  {
+    tex = "rtex388"
+  }
+  floortex:incl =
+  {
+    tex = "rtex215"
+  }
+  ceiltex:incl =
+  {
+    tex = "sky001"
+  }
+  NewMap:incl =
+  {
+    Game = "Hexen II"
+    Root = "worldspawn:b"
+    worldspawn:b =
+    {
+      Border walls:g =
+      {
+        East wall:p =
+        {
+          west:f =  { v = '256 0 272 256 -128 272 256 0 400'       walltex = ! }
+          east:f =  { v = '272 0 272 272 128 272 272 0 400'        walltex = ! }
+          south:f = { v = '432 -192 272 560 -192 272 432 -192 400' walltex = ! }
+          north:f = { v = '432 192 272 304 192 272 432 192 400'    walltex = ! }
+          down:f =  { v = '432 0 -96 560 0 -96 432 -128 -96'       walltex = ! }
+          up:f =    { v = '432 0 96 560 0 96 432 128 96'           walltex = ! }
+        }
+        West wall:p =
+        {
+          west:f =  { v = '-272 0 272 -272 -128 272 -272 0 400'    walltex = ! }
+          east:f =  { v = '-256 0 272 -256 128 272 -256 0 400'     walltex = ! }
+          south:f = { v = '432 -192 272 560 -192 272 432 -192 400' walltex = ! }
+          north:f = { v = '432 192 272 304 192 272 432 192 400'    walltex = ! }
+          down:f =  { v = '432 0 -96 560 0 -96 432 -128 -96'       walltex = ! }
+          up:f =    { v = '432 0 96 560 0 96 432 128 96'           walltex = ! }
+        }
+        North wall:p =
+        {
+          west:f =  { v = '-256 0 272 -256 -128 272 -256 0 400'    walltex = ! }
+          east:f =  { v = '256 0 272 256 128 272 256 0 400'        walltex = ! }
+          south:f = { v = '432 192 272 560 192 272 432 192 400'    walltex = ! }
+          north:f = { v = '432 208 272 304 208 272 432 208 400'    walltex = ! }
+          down:f =  { v = '432 0 -96 560 0 -96 432 -128 -96'       walltex = ! }
+          up:f =    { v = '432 0 96 560 0 96 432 128 96'           walltex = ! }
+        }
+        South wall:p =
+        {
+          west:f =  { v = '-256 0 272 -256 -128 272 -256 0 400'    walltex = ! }
+          east:f =  { v = '256 0 272 256 128 272 256 0 400'        walltex = ! }
+          south:f = { v = '432 -208 272 560 -208 272 432 -208 400' walltex = ! }
+          north:f = { v = '432 -192 272 304 -192 272 432 -192 400' walltex = ! }
+          down:f =  { v = '432 0 -96 560 0 -96 432 -128 -96'       walltex = ! }
+          up:f =    { v = '432 0 96 560 0 96 432 128 96'           walltex = ! }
+        }
+        Sky:p =
+        {
+          west:f =  { v = '-256 0 272 -256 -128 272 -256 0 400'    ceiltex = ! }
+          east:f =  { v = '256 0 272 256 128 272 256 0 400'        ceiltex = ! }
+          south:f = { v = '432 -192 272 560 -192 272 432 -192 400' ceiltex = ! }
+          north:f = { v = '432 192 272 304 192 272 432 192 400'    ceiltex = ! }
+          down:f =  { v = '432 0 96 560 0 96 432 -128 96'          ceiltex = ! }
+          up:f =    { v = '432 0 112 560 0 112 432 128 112'        ceiltex = ! }
+        }
+        Floor:p =
+        {
+          west:f =  { v = '-256 0 272 -256 -128 272 -256 0 400'    floortex = ! }
+          east:f =  { v = '256 0 272 256 128 272 256 0 400'        floortex = ! }
+          south:f = { v = '432 -192 272 560 -192 272 432 -192 400' floortex = ! }
+          north:f = { v = '432 192 272 304 192 272 432 192 400'    floortex = ! }
+          down:f =  { v = '432 0 -112 560 0 -112 432 -128 -112'    floortex = ! }
+          up:f =    { v = '432 0 -96 560 0 -96 432 128 -96'        floortex = ! }
+        }
+      }
+      info_player_start:e =
+      {
+        origin = "-144 0 -72"
+        angle = "360"
+      }
+      light:e =
+      {
+        light = "300"
+        _color = "1 1 1"
+        angle = "360"
+        origin = "0 0 0"
+      }
+    }
+  }
+}

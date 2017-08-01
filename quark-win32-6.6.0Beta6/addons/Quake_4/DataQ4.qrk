@@ -1,0 +1,429 @@
+QQRKSRC1
+// This file has been written by QuArK QuArK 6.5 alpha
+// It's the text version of file: DataQ4.qrk
+
+//$Header: /cvsroot/quark/runtime/addons/Quake_4/DataQ4.qrk,v 1.15 2008/05/14 20:38:40 cdunde Exp $
+// ----------- REVISION HISTORY ------------
+//$Log: DataQ4.qrk,v $
+//Revision 1.15  2008/05/14 20:38:40  cdunde
+//Fixed basic lighting in all games and a few other small typo errors.
+//
+//Revision 1.14  2008/03/28 19:10:43  cdunde
+//Cleaned up, fixed if needed and brought into sync with all QuArK addons.
+//
+//Revision 1.13  2008/02/27 00:27:05  danielpharos
+//Fix the contextual help files not being found anymore
+//
+//Revision 1.12  2007/12/26 06:02:03  cdunde
+//Setup of a full beizer library with over 30 prefab beizer to work with for games that can use beziers.
+//
+//Revision 1.11  2007/12/14 21:48:03  cdunde
+//Added many new beizer shapes and functions developed by our friends in Russia,
+//the Shine team, Nazar and vodkins.
+//
+//Revision 1.10  2007/04/04 16:05:40  danielpharos
+//Added a missing form, renamed targetname to name and added model for brushables.
+//
+//Revision 1.9  2007/03/29 15:27:29  danielpharos
+//All triggers and funcs can now hold brushes.
+//
+//Revision 1.8  2006/10/23 00:52:58  cdunde
+//Final update to add all Help and Hint data as well as
+//entity Specifics missed during its creation.
+//
+//Revision 1.7  2006/10/12 07:14:04  cdunde
+//To arrange entities in alphabetical order.
+//
+//Revision 1.6  2006/10/12 07:06:39  cdunde
+//To add .md3 model display support and start file version log.
+//
+//
+
+
+{
+  QuArKProtected = "1"
+  Description = "Base Quake 4 data"
+  Default forms.qctx =
+  {
+    t_aas_e:incl =
+    {
+      allowFlyReachabilities = "0"
+      allowSwimReachabilities = "0"
+      gravity = "0 0 -1050"
+      maxBarrierHeight = "32"
+      maxFallHeight = "64"
+      maxStepHeight = "18"
+      maxWaterJumpHeight = "20"
+      minFloorCos = "0.6999999881"
+      playerFlood = "0"
+      tt_barrierJump = "100"
+      tt_startCrouching = "100"
+      tt_startWalkOffLedge = "100"
+      tt_waterJump = "100"
+      usePatches = "0"
+      writeBrushMap = "0"
+      origin = "0 0 0"
+    }
+    t_ammo_e:incl =
+    {
+      inv_item = "4"
+      size = "32 32 32"
+      origin = "0 0 0"
+      snd_respawn = "sound_item_respawn"
+    }
+    t_cinematic_e:incl =
+    {
+      blend_in = "0"
+      cycle = "1"
+      pose_frame = "1"
+      sound_bone = "origin"
+      wait = "-1"
+      origin = "0 0 0"
+    }
+    t_cinematic2_e:incl =
+    {
+      cycle = "1"
+      inherited = "func_animate"
+      wait = "-1"
+      origin = "0 0 0"
+    }
+    dup arenafilemaker:form =
+    {
+      help = "put one in your map to create a .arena script automatically"
+      bots: =
+      {
+        Txt = "&"
+        Hint = "bots that are default for this map"
+      }
+      longname: =
+      {
+        Txt = "&"
+        Hint = "This name will be shown in Doom 3"
+      }
+      fraglimit: =
+      {
+        Txt = "&"
+        Typ = "EF1"
+        Hint = "default fraglimit for map"
+      }
+      type: =
+      {
+        Txt = "&"
+        Hint = "ffa tourney etc."
+      }
+    }
+  }
+  Quake 4 setup.qctx =
+  {
+    Game = "Quake 4"
+    HTML = "index.html"
+    Palette = $0000000F0F0F1F1F1F2F2F2F3F3F3F4B4B4B5B5B5B6B6B6B7B7B7B8B8B8B9B9B
+     $9BABABABBBBBBBCBCBCBDBDBDBEBEBEB634B235B431F533F1F4F3B1B47371B3F2F173B2B
+     $173327132F23132B1F13271B0F23170F1B130B170F0B130F070F0B075F5F6F5B5B675B53
+     $5F574F5B534B534F474B473F433F3B3B3B3737332F2F2F2B2B2727272323231B1B1B1717
+     $171313138F77537B6343735B3B674F2FCF974BA77B3B8B672F6F5327EB9F27CB8B23AF77
+     $1F93631B774F175B3B0F3F270B231707A73B2B9F2F23972B1B8B27137F1F0F73170B6717
+     $075713004B0F00430F003B0F00330B002B0B00230B001B07001307007B5F4B7357436B53
+     $3F674F3B5F4737574333533F2F4B372B4333273F2F2337271B2F2317271B131F170F170F
+     $0B0F0B076F3B175F3717532F17432B17372313271B0F1B130B0F0B07B35B4FBF7B6FCB9B
+     $93D7BBB7CBD7DFB3C7D39FB7C387A7B77397A75B879B47778B2F677F17536F134B670F43
+     $5B0B3F5307374B072F3F072733001F2B00171F000F1300070B0000008B5757834F4F7B47
+     $477343436B3B3B6333335B2F2F572B2B4B23233F1F1F331B1B2B13131F0F0F130B0B0B07
+     $07000000979F7B8F9773878B6B7F8363777B5F7373576B6B4F6363475B5B434F4F3B4343
+     $3337372B2F2F2323231B1717130F0F0B9F4B3F9343378B3B2F7F3727772F236B2B1B6323
+     $17571F134F1B0F43170B37130B2B0F071F0B071707000B0000000000777BCF6F73C3676B
+     $B76363A75B5B9B53578F4B4F7F4747733F3F673737572F2F4B27273F231F2F1B1723130F
+     $170B07079BAB7B8F9F6F8797637B8B5773834B6777435F6F3B5767334B5B273F4F1B3743
+     $132F3B0B232F071B23001317000B0F0000FF0023E70F3FD31B53BB275FA72F5F8F335F7B
+     $33FFFFFFFFFFD3FFFFA7FFFF7FFFFF53FFFF27FFEB1FFFD717FFBF0FFFAB07FF9300EF7F
+     $00E36B00D35700C74700B73B00AB2B009B1F008F17007F0F007307005F00004700002F00
+     $001B0000EF00003737FFFF00000000FF2B2B231B1B1713130FEB977FC373539F57337B3F
+     $1BEBD3C7C7AB9BA78B77876B579F5B53
+    ShaderFiles: =
+    {
+      scripts/shaderlist.txt =
+      {
+        Data =
+            "// Created by QuArK"$0D0A
+            "// All shaders are extracted to a single file called 'quark.shader'"$0D0A
+            "quark"$0D0A
+      }
+      scripts/shaderlist.txt =
+      {    // 2nd case: if there is no shader in the map
+        Data =
+            "// Created by QuArK"$0D0A
+            "// No shader in this map"$0D0A
+      }
+    }
+    TextureFlags:form =   // a form for setting flags on polyhedron faces
+    {
+      Style = "5"
+      Reset: =
+      {
+        Cap = "Reset to default"
+        Typ = "B"
+        Hint = "Reset all flags to the texture's default"
+        Delete: =
+        {
+          Flags = ""      // this button deletes these Specifics
+          Contents = ""
+          Value = ""
+        }
+      }
+      Contents: =
+      {
+        Cap = "detail"
+        Typ = "X134217728"
+        Hint = "for small, detail brushes that compiler can ignore"
+      }
+    }
+  }
+  NewFiles.qtx =
+  {
+    ToolBox = "New files..."
+    Root = "Quake 4 file types.qtxfolder"
+    Quake 4 file types.qtxfolder =
+    {
+      Pk4.pk4 = { }
+    }
+  }
+  walltex:incl =
+  {
+    tex = "rock/rock05a_to_rock05i"
+  }
+  floortex:incl =
+  {
+    tex = "rock/rock05a_to_rock05i"
+  }
+  ceiltex:incl =
+  {
+    tex = "rock/rock05a_to_rock05i"
+  }
+  caulktex:incl =
+  {
+    tex = "common/caulk"
+  }
+  NewMap:incl =
+  {
+    Game = "Quake 4"
+    Root = "worldspawn:b"
+    worldspawn:b =
+    {
+      farplane_cull = "1"
+      Border walls:g =
+      {
+        East wall:p =
+        {
+          west:f =
+          {
+            v = '256 -80 -96 256 -208 -96 256 -80 32'
+            walltex = !
+          }
+          east:f =
+          {
+            v = '272 0 272 272 128 272 272 0 400'
+            caulktex = !
+          }
+          south:f =
+          {
+            v = '432 -192 272 560 -192 272 432 -192 400'
+            caulktex = !
+          }
+          north:f =
+          {
+            v = '432 192 272 304 192 272 432 192 400'
+            caulktex = !
+          }
+          down:f =
+          {
+            v = '432 0 -96 560 0 -96 432 -128 -96'
+            caulktex = !
+          }
+          up:f =
+          {
+            v = '432 0 96 560 0 96 432 128 96'
+            caulktex = !
+          }
+        }
+        West wall:p =
+        {
+          west:f =
+          {
+            v = '-272 0 272 -272 -128 272 -272 0 400'
+            caulktex = !
+          }
+          east:f =
+          {
+            v = '-256 -192 -96 -256 -64 -96 -256 -192 32'
+            walltex = !
+          }
+          south:f =
+          {
+            v = '432 -192 272 560 -192 272 432 -192 400'
+            caulktex = !
+          }
+          north:f =
+          {
+            v = '432 192 272 304 192 272 432 192 400'
+            caulktex = !
+          }
+          down:f =
+          {
+            v = '432 0 -96 560 0 -96 432 -128 -96'
+            caulktex = !
+          }
+          up:f =
+          {
+            v = '432 0 96 560 0 96 432 128 96'
+            caulktex = !
+          }
+        }
+        North wall:p =
+        {
+          west:f =
+          {
+            v = '-256 0 272 -256 -128 272 -256 0 400'
+            caulktex = !
+          }
+          east:f =
+          {
+            v = '256 0 272 256 128 272 256 0 400'
+            caulktex = !
+          }
+          south:f =
+          {
+            v = '-256 192 -96 -128 192 -96 -256 192 32'
+            walltex = !
+          }
+          north:f =
+          {
+            v = '432 208 272 304 208 272 432 208 400'
+            caulktex = !
+          }
+          down:f =
+          {
+            v = '432 0 -96 560 0 -96 432 -128 -96'
+            caulktex = !
+          }
+          up:f =
+          {
+            v = '432 0 96 560 0 96 432 128 96'
+            caulktex = !
+          }
+        }
+        South wall:p =
+        {
+          west:f =
+          {
+            v = '-256 0 272 -256 -128 272 -256 0 400'
+            caulktex = !
+          }
+          east:f =
+          {
+            v = '256 0 272 256 128 272 256 0 400'
+            caulktex = !
+          }
+          south:f =
+          {
+            v = '432 -208 272 560 -208 272 432 -208 400'
+            caulktex = !
+          }
+          north:f =
+          {
+            v = '0 -192 -96 -128 -192 -96 0 -192 32'
+            walltex = !
+          }
+          down:f =
+          {
+            v = '432 0 -96 560 0 -96 432 -128 -96'
+            caulktex = !
+          }
+          up:f =
+          {
+            v = '432 0 96 560 0 96 432 128 96'
+            caulktex = !
+          }
+        }
+        Sky:p =
+        {
+          west:f =
+          {
+            v = '-256 0 272 -256 -128 272 -256 0 400'
+            caulktex = !
+          }
+          east:f =
+          {
+            v = '256 0 272 256 128 272 256 0 400'
+            caulktex = !
+          }
+          south:f =
+          {
+            v = '432 -192 272 560 -192 272 432 -192 400'
+            caulktex = !
+          }
+          north:f =
+          {
+            v = '432 192 272 304 192 272 432 192 400'
+            caulktex = !
+          }
+          down:f =
+          {
+            v = '432 0 96 560 0 96 432 -128 96'
+            ceiltex = !
+          }
+          up:f =
+          {
+            v = '432 0 112 560 0 112 432 128 112'
+            caulktex = !
+          }
+        }
+        Floor:p =
+        {
+          west:f =
+          {
+            v = '-256 0 272 -256 -128 272 -256 0 400'
+            caulktex = !
+          }
+          east:f =
+          {
+            v = '256 0 272 256 128 272 256 0 400'
+            caulktex = !
+          }
+          south:f =
+          {
+            v = '432 -192 272 560 -192 272 432 -192 400'
+            caulktex = !
+          }
+          north:f =
+          {
+            v = '432 192 272 304 192 272 432 192 400'
+            caulktex = !
+          }
+          down:f =
+          {
+            v = '432 0 -112 560 0 -112 432 -128 -112'
+            caulktex = !
+          }
+          up:f =
+          {
+            v = '432 0 -96 560 0 -96 432 128 -96'
+            floortex = !
+          }
+        }
+      }
+      info_player_start:e =
+      {
+        origin = "-144 0 -64"
+        angle = "360"
+      }
+      light:e =
+      {
+        name = "renameme"
+        light = "300"
+        _color = "1 1 1"
+        angle = "360"
+        origin = "0 0 0"
+      }
+    }
+  }
+}

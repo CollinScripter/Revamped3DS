@@ -1,0 +1,2384 @@
+QQRKSRC1
+// Quake 4 Materials file for Quark
+
+//$Header: /cvsroot/quark/runtime/addons/Quake_4/Q4Materials.qrk,v 1.4 2008/09/14 12:55:28 danielpharos Exp $
+// ----------- REVISION HISTORY ------------
+//$Log: Q4Materials.qrk,v $
+//Revision 1.4  2008/09/14 12:55:28  danielpharos
+//Changes to Help system: All forms now have a customizable help-link. Also, added an fallback option to the online infobase docs.
+//
+//Revision 1.3  2008/04/19 00:48:56  cdunde
+//Made changes to sort material lists, cleanup dead ones and improved missing ones.
+//
+//Revision 1.2  2008/04/16 22:25:22  cdunde
+//Updated processing for Quake 4 type shaders.
+//
+//Revision 1.1  2008/03/28 19:10:38  cdunde
+//Cleaned up, fixed if needed and brought into sync with all QuArK addons.
+//
+//
+
+{
+  QuArKProtected = "1"
+  Description = "Quake 4 Materials"
+
+  Materials.qtx =
+  {
+    Toolbox = "Texture Browser..."
+    Root = "Quake 4 Materials.qtxfolder"
+    HTML = "intro.texturebrowser.html"
+
+    t_q4basematerials_banners:incl      = { a="q4base" b="banners.mtr" }
+    t_q4basematerials_canyon:incl       = { a="q4base" b="canyon.mtr" }
+    t_q4basematerials_command_ship:incl = { a="q4base" b="command_ship.mtr" }
+    t_q4basematerials_consoles:incl     = { a="q4base" b="consoles.mtr" }
+    t_q4basematerials_core:incl         = { a="q4base" b="core.mtr" }
+    t_q4basematerials_decals:incl       = { a="q4base" b="decals.mtr" }
+    t_q4basematerials_decals_ofs:incl   = { a="q4base" b="decals_ofs.mtr" }
+    t_q4basematerials_flares:incl       = { a="q4base" b="flares.mtr" }
+    t_q4basematerials_fluids:incl       = { a="q4base" b="fluids.mtr" }
+ //   t_q4basematerials_gfx:incl          = { a="q4base" b="gfx.mtr" }
+    t_q4basematerials_glass:incl        = { a="q4base" b="glass.mtr" }
+    t_q4basematerials_gui:incl          = { a="q4base" b="gui.mtr" }
+ //   t_q4basematerials_holo_guis:incl    = { a="q4base" b="holo_guis.mtr" }
+    t_q4basematerials_hub:incl          = { a="q4base" b="hub.mtr" }
+    t_q4basematerials_idtemp:incl       = { a="q4base" b="idtemp.mtr" }
+    t_q4basematerials_invisible:incl    = { a="q4base" b="invisible.mtr" }
+    t_q4basematerials_marine_guis:incl  = { a="q4base" b="marine_guis.mtr" }
+    t_q4basematerials_medlab:incl       = { a="q4base" b="medlab.mtr" }
+    t_q4basematerials_mptextures:incl   = { a="q4base" b="mptextures.mtr" }
+    t_q4basematerials_multiplayer:incl  = { a="q4base" b="multiplayer.mtr" }
+    t_q4basematerials_rock:incl         = { a="q4base" b="rock.mtr" }
+    t_q4basematerials_skies:incl        = { a="q4base" b="skies.mtr" }
+    t_q4basematerials_stroyent:incl     = { a="q4base" b="stroyent.mtr" }
+    t_q4basematerials_temp_guis:incl    = { a="q4base" b="temp_guis.mtr" }
+    t_q4basematerials_terminal:incl     = { a="q4base" b="terminal.mtr" }
+    t_q4basematerials_test:incl         = { a="q4base" b="test.mtr" }
+    t_q4basematerials_tram:incl         = { a="q4base" b="tram.mtr" }
+    t_q4basematerials_common:incl   = { a="q4base" b="common/common.mtr" }
+    t_q4basematerials_common_floors:incl = { a="q4base" b="common/common_floors.mtr" }
+    t_q4basematerials_common_lights:incl = { a="q4base" b="common/common_lights.mtr" }
+    t_q4basematerials_common_misc:incl = { a="q4base" b="common/common_misc.mtr" }
+    t_q4basematerials_common_trims:incl = { a="q4base" b="common/common_trims.mtr" }
+    t_q4basematerials_common_walls:incl = { a="q4base" b="common/common_walls.mtr" }
+    t_q4basematerials_e_decals:incl = { a="q4base" b="effects/e_decals.mtr" }
+    t_q4basematerials_effects_test:incl     = { a="q4base" b="effects/test.mtr" }
+
+    Quake 4 Materials.qtxfolder =
+    {
+      banners.txlist =
+      {
+        banners/1_short.wl    = { t_q4basematerials_banners=! }
+        banners/1_short_shadow.wl    = { t_q4basematerials_banners=! }
+        banners/1_tall.wl    = { t_q4basematerials_banners=! }
+        banners/1_tall_ripped.wl    = { t_q4basematerials_banners=! }
+        banners/1_tall_ripped_shadow.wl    = { t_q4basematerials_banners=! }
+        banners/1_tall_shadow.wl    = { t_q4basematerials_banners=! }
+        banners/2_short.wl    = { t_q4basematerials_banners=! }
+        banners/2_short_shadow.wl    = { t_q4basematerials_banners=! }
+        banners/2_tall.wl    = { t_q4basematerials_banners=! }
+        banners/2_tall_ripped.wl    = { t_q4basematerials_banners=! }
+        banners/2_tall_ripped_shadow.wl    = { t_q4basematerials_banners=! }
+        banners/2_tall_shadow.wl    = { t_q4basematerials_banners=! }
+        banners/3_short.wl    = { t_q4basematerials_banners=! }
+        banners/3_short_shadow.wl    = { t_q4basematerials_banners=! }
+        banners/3_tall.wl    = { t_q4basematerials_banners=! }
+        banners/3_tall_ripped.wl    = { t_q4basematerials_banners=! }
+        banners/3_tall_ripped_shadow.wl    = { t_q4basematerials_banners=! }
+        banners/3_tall_shadow.wl    = { t_q4basematerials_banners=! }
+        banners/4_short.wl    = { t_q4basematerials_banners=! }
+        banners/4_short_shadow.wl    = { t_q4basematerials_banners=! }
+        banners/4_tall.wl    = { t_q4basematerials_banners=! }
+        banners/4_tall_ripped.wl    = { t_q4basematerials_banners=! }
+        banners/4_tall_ripped_shadow.wl    = { t_q4basematerials_banners=! }
+        banners/4_tall_shadow.wl    = { t_q4basematerials_banners=! }
+        banners/side1.wl    = { t_q4basematerials_banners=! }
+        banners/side1_ripped.wl    = { t_q4basematerials_banners=! }
+      }
+      canyon.txlist =
+      {
+        canyon/antenna_sprite.wl    = { t_q4basematerials_canyon=! }
+        canyon/antenna_sprite_twosided.wl    = { t_q4basematerials_canyon=! }
+        canyon/can_Antennalight_01.wl    = { t_q4basematerials_canyon=! }
+        canyon/can_Dirt_02.wl    = { t_q4basematerials_canyon=! }
+        canyon/can_Window_01.wl    = { a="q4base" n="canyon/can_Window_01_d" }
+        canyon/can_blinklight_01.wl    = { t_q4basematerials_canyon=! }
+        canyon/can_buttress_front_bot.wl    = { a="q4base" n="canyon/can_buttress_front_bot_d" }
+        canyon/can_buttress_front_top.wl    = { a="q4base" n="canyon/can_buttress_front_top_d" }
+        canyon/can_buttress_front_topbrown.wl    = { a="q4base" n="canyon/can_buttress_front_topbrown_d" }
+        canyon/can_buttress_side.wl    = { a="q4base" n="canyon/can_buttress_side_d" }
+        canyon/can_buttress_sidebrown.wl    = { a="q4base" n="canyon/can_buttress_sidebrown_d" }
+        canyon/can_fakegate_door.wl    = { a="q4base" n="canyon/can_fakegate_door_d" }
+        canyon/can_gate_door.wl    = { a="q4base" n="canyon/can_gate_door_d" }
+        canyon/can_gatehalf_01.wl    = { a="q4base" n="canyon/can_gatehalf_01_d" }
+        canyon/can_gatehalf_01brown.wl    = { a="q4base" n="canyon/can_gatehalf_01brown_d" }
+        canyon/can_ledge_Upper_01.wl    = { a="q4base" n="canyon/can_ledge_Upper_01_d" }
+        canyon/can_ledge_Upper_01brown.wl    = { a="q4base" n="canyon/can_ledge_Upper_01brown_d" }
+        canyon/can_ledge_lower_01.wl    = { a="q4base" n="canyon/can_ledge_lower_01_d" }
+        canyon/can_ledge_lower_01brown.wl    = { a="q4base" n="canyon/can_ledge_lower_01brown_d" }
+        canyon/can_midwall_02.wl    = { a="q4base" n="canyon/can_midwall_02_d" }
+        canyon/can_pipe_01.wl    = { t_q4basematerials_canyon=! }
+        canyon/can_plate_01.wl    = { a="q4base" n="canyon/can_plate_01_d" }
+        canyon/can_plate_01brown.wl    = { a="q4base" n="canyon/can_plate_01brown_d" }
+        canyon/can_plate_02.wl    = { a="q4base" n="canyon/can_plate_02_d" }
+        canyon/can_plate_02brown.wl    = { a="q4base" n="canyon/can_plate_02brown_d" }
+        canyon/can_techtrench_01.wl    = { a="q4base" n="canyon/can_techtrench_01_d" }
+        canyon/can_topwall_01brown.wl    = { a="q4base" n="canyon/can_topwall_01brown_d" }
+        canyon/can_topwall_02.wl    = { a="q4base" n="canyon/can_topwall_02_d" }
+        canyon/can_topwall_03brown.wl    = { a="q4base" n="canyon/can_topwall_03brown_d" }
+        canyon/crate_a_front.wl    = { a="q4base" n="canyon/crate_a_front_d" }
+        canyon/crate_a_top.wl    = { a="q4base" n="canyon/crate_a_top_d" }
+  //      canyon/crate_b_side.wl    = { a="q4base" n="canyon/crate_b_side_d" }
+        canyon/crate_b_top.wl    = { a="q4base" n="canyon/crate_b_top_d" }
+        canyon/door_2_smolder.wl    = { t_q4basematerials_canyon=! }
+        canyon/door_rim_female.wl    = { a="q4base" n="canyon/door_rim_female_d" }
+        canyon/door_rim_male.wl    = { a="q4base" n="canyon/door_rim_male_d" }
+        canyon/door_rim_plain.wl    = { a="q4base" n="canyon/door_rim_plain_d" }
+        canyon/gate_door_downsize.wl    = { t_q4basematerials_canyon=! }
+  //      canyon/gate_door_small.wl    = { t_q4basematerials_canyon=! }
+        canyon/grate_01.wl    = { a="q4base" n="canyon/grate_01_d" }
+  //      canyon/pipe_wall1.wl    = { a="q4base" n="canyon/pipe_wall1_d" }
+        canyon/support_1.wl    = { a="q4base" n="canyon/support_1_d" }
+        canyon/support_1brown.wl    = { a="q4base" n="canyon/support_1brown_d" }
+      }
+      command_ship.txlist =
+      {
+        command_ship/box1_side_handle.wl    = { t_q4basematerials_command_ship=! }
+        command_ship/box1_side_handle2.wl    = { t_q4basematerials_command_ship=! }
+        command_ship/box1_side_no_handle.wl    = { t_q4basematerials_command_ship=! }
+        command_ship/box1_top_bottom.wl    = { t_q4basematerials_command_ship=! }
+        command_ship/box2_side_handle.wl    = { t_q4basematerials_command_ship=! }
+        command_ship/box2_side_handle2.wl    = { t_q4basematerials_command_ship=! }
+        command_ship/box2_side_no_handle.wl    = { t_q4basematerials_command_ship=! }
+        command_ship/box2_top_bottom.wl    = { t_q4basematerials_command_ship=! }
+        command_ship/box3_side_handle.wl    = { t_q4basematerials_command_ship=! }
+        command_ship/box3_side_handle2.wl    = { t_q4basematerials_command_ship=! }
+        command_ship/box3_side_no_handle.wl    = { t_q4basematerials_command_ship=! }
+        command_ship/box3_top_bottom.wl    = { t_q4basematerials_command_ship=! }
+        command_ship/box4_side_handle.wl    = { t_q4basematerials_command_ship=! }
+        command_ship/box4_side_handle2.wl    = { t_q4basematerials_command_ship=! }
+        command_ship/box4_side_no_handle.wl    = { t_q4basematerials_command_ship=! }
+        command_ship/box4_top_bottom.wl    = { t_q4basematerials_command_ship=! }
+        command_ship/box5_side_handle.wl    = { t_q4basematerials_command_ship=! }
+        command_ship/box5_side_handle2.wl    = { t_q4basematerials_command_ship=! }
+        command_ship/box5_side_no_handle.wl    = { t_q4basematerials_command_ship=! }
+        command_ship/box5_top_bottom.wl    = { t_q4basematerials_command_ship=! }
+        command_ship/c_flr2.wl    = { a="q4base" n="command_ship/c_flr2_d" }
+        command_ship/c_flr4.wl    = { a="q4base" n="command_ship/c_flr4_d" }
+        command_ship/c_flr7.wl    = { a="q4base" n="command_ship/c_flr7_d" }
+        command_ship/cs_floor1_1.wl    = { a="q4base" n="command_ship/cs_floor1_1_d" }
+        command_ship/cs_floor2_1.wl    = { a="q4base" n="command_ship/cs_floor2_1_d" }
+        command_ship/cs_floor3_1.wl    = { a="q4base" n="command_ship/cs_floor3_1_d" }
+        command_ship/cs_floorplate1c.wl    = { a="q4base" n="command_ship/cs_floorplate1c_d" }
+        command_ship/cs_pipecrud.wl    = { a="q4base" n="command_ship/cs_pipecrud_d" }
+        command_ship/cs_pipediamond.wl    = { a="q4base" n="command_ship/cs_pipediamond_d" }
+        command_ship/cs_pipediamond_01.wl    = { t_q4basematerials_command_ship=! }
+        command_ship/cs_pipediamond_02.wl    = { t_q4basematerials_command_ship=! }
+        command_ship/cs_pipediamond_03.wl    = { t_q4basematerials_command_ship=! }
+        command_ship/cs_pipehexigon.wl    = { a="q4base" n="command_ship/cs_pipehexigon_d" }
+        command_ship/cs_pipehexigon_01.wl    = { t_q4basematerials_command_ship=! }
+        command_ship/cs_pipehexigon_02.wl    = { t_q4basematerials_command_ship=! }
+        command_ship/cs_pipehexigon_03.wl    = { t_q4basematerials_command_ship=! }
+        command_ship/cs_pipetech.wl    = { a="q4base" n="command_ship/cs_pipetech_d" }
+        command_ship/cs_pipetech_01.wl    = { t_q4basematerials_command_ship=! }
+        command_ship/cs_pipetech_02.wl    = { t_q4basematerials_command_ship=! }
+        command_ship/cs_pipetech_03.wl    = { t_q4basematerials_command_ship=! }
+        command_ship/cs_prisonpipecapt.wl    = { a="q4base" n="command_ship/cs_prisonpipecapt_d" }
+        command_ship/cs_railing01a.wl    = { a="q4base" n="command_ship/cs_railing01a_d" }
+        command_ship/cs_railing01b.wl    = { a="q4base" n="command_ship/cs_railing01b_d" }
+  //      command_ship/cs_railing01d.wl    = { a="q4base" n="command_ship/cs_railing01d_d" }
+        command_ship/cs_railing01e.wl    = { a="q4base" n="command_ship/cs_railing01e_d" }
+        command_ship/cs_warning.wl    = { a="q4base" n="command_ship/cs_warning_d" }
+        command_ship/csa_cieling1.wl    = { a="q4base" n="command_ship/csa_cieling1_d" }
+        command_ship/csa_cieling1a.wl    = { a="q4base" n="command_ship/csa_cieling1a_d" }
+        command_ship/csa_cieling1a_med.wl    = { a="q4base" n="command_ship/csa_cieling1a_med_d" }
+        command_ship/csa_cieling1b.wl    = { a="q4base" n="command_ship/csa_cieling1b_d" }
+        command_ship/csa_cieling2.wl    = { a="q4base" n="command_ship/csa_cieling2_d" }
+        command_ship/csa_cieling3.wl    = { a="q4base" n="command_ship/csa_cieling3_d" }
+        command_ship/csa_floor1.wl    = { a="q4base" n="command_ship/csa_floor1_d" }
+        command_ship/csa_floor1b.wl    = { a="q4base" n="command_ship/csa_floor1b_d" }
+        command_ship/csa_floor1b_med.wl    = { a="q4base" n="command_ship/csa_floor1b_med_d" }
+        command_ship/csa_flrtrim_01.wl    = { a="q4base" n="command_ship/csa_flrtrim_01_d" }
+        command_ship/csa_flrtrim_01_med.wl    = { a="q4base" n="command_ship/csa_flrtrim_01_med_d" }
+        command_ship/csa_flrtrim_03.wl    = { a="q4base" n="command_ship/csa_flrtrim_03_d" }
+        command_ship/csa_flrtrim_03_med.wl    = { a="q4base" n="command_ship/csa_flrtrim_03_med_d" }
+        command_ship/csa_flrtrim_04.wl    = { a="q4base" n="command_ship/csa_flrtrim_04_d" }
+        command_ship/csa_flrtrim_04b.wl    = { a="q4base" n="command_ship/csa_flrtrim_04b_d" }
+        command_ship/csa_flrtrim_04stripe.wl    = { t_q4basematerials_command_ship=! }
+        command_ship/csa_flrtrim_05.wl    = { a="q4base" n="command_ship/csa_flrtrim_05_d" }
+        command_ship/csa_flrtrim_05b.wl    = { a="q4base" n="command_ship/csa_flrtrim_05b_d" }
+        command_ship/csa_flrtrim_06.wl    = { a="q4base" n="command_ship/csa_flrtrim_06_d" }
+        command_ship/csa_flrtrim_06_b.wl    = { t_q4basematerials_command_ship=! }
+        command_ship/csa_flrtrim_06_c.wl    = { t_q4basematerials_command_ship=! }
+        command_ship/csa_flrtrim_06b.wl    = { a="q4base" n="command_ship/csa_flrtrim_06b_d" }
+        command_ship/csa_trim1.wl    = { a="q4base" n="command_ship/csa_trim1_d" }
+        command_ship/csa_trim2.wl    = { a="q4base" n="command_ship/csa_trim2_d" }
+        command_ship/csa_trim3.wl    = { a="q4base" n="command_ship/csa_trim3_d" }
+        command_ship/csa_trim3b.wl    = { a="q4base" n="command_ship/csa_trim3b_d" }
+        command_ship/csa_trim3c.wl    = { a="q4base" n="command_ship/csa_trim3c_d" }
+        command_ship/csa_trim3c_1.wl    = { t_q4basematerials_command_ship=! }
+        command_ship/csa_trim3d.wl    = { a="q4base" n="command_ship/csa_trim3d_d" }
+        command_ship/csa_trim3d_med.wl    = { a="q4base" n="command_ship/csa_trim3d_med_d" }
+        command_ship/csa_trim3e.wl    = { a="q4base" n="command_ship/csa_trim3e_d" }
+        command_ship/csa_trim3e_med.wl    = { a="q4base" n="command_ship/csa_trim3e_med_d" }
+        command_ship/csa_trim3f.wl    = { a="q4base" n="command_ship/csa_trim3f_d" }
+        command_ship/csa_trim3f_med.wl    = { a="q4base" n="command_ship/csa_trim3f_med_d" }
+        command_ship/csa_trim4.wl    = { a="q4base" n="command_ship/csa_trim4_d" }
+        command_ship/csa_trim5.wl    = { a="q4base" n="command_ship/csa_trim5_d" }
+        command_ship/csa_trim5_med.wl    = { a="q4base" n="command_ship/csa_trim5_med_d" }
+        command_ship/csa_trim5b.wl    = { a="q4base" n="command_ship/csa_trim5b_d" }
+        command_ship/csa_trim5b_1.wl    = { a="q4base" n="command_ship/csa_trim5b_1_d" }
+        command_ship/csa_trim5b_1_med.wl    = { a="q4base" n="command_ship/csa_trim5b_1_med_d" }
+        command_ship/csa_trim5b_2.wl    = { a="q4base" n="command_ship/csa_trim5b_2_d" }
+        command_ship/csa_trim5b_2_med.wl    = { a="q4base" n="command_ship/csa_trim5b_2_med_d" }
+        command_ship/csa_trim5b_3.wl    = { a="q4base" n="command_ship/csa_trim5b_3_d" }
+        command_ship/csa_trim5b_3_med.wl    = { a="q4base" n="command_ship/csa_trim5b_3_med_d" }
+        command_ship/csa_trim5b_med.wl    = { a="q4base" n="command_ship/csa_trim5b_med_d" }
+        command_ship/csa_trim5c.wl    = { a="q4base" n="command_ship/csa_trim5c_d" }
+        command_ship/csa_trim5c_med.wl    = { a="q4base" n="command_ship/csa_trim5c_med_d" }
+        command_ship/csa_trim5d.wl    = { a="q4base" n="command_ship/csa_trim5d_d" }
+        command_ship/csa_trim5d_med.wl    = { a="q4base" n="command_ship/csa_trim5d_med_d" }
+        command_ship/csa_trim5e.wl    = { a="q4base" n="command_ship/csa_trim5e_d" }
+        command_ship/csa_trim5e_1.wl    = { a="q4base" n="command_ship/csa_trim5e_1_d" }
+        command_ship/csa_trim5e_1_med.wl    = { a="q4base" n="command_ship/csa_trim5e_1_med_d" }
+        command_ship/csa_trim5e_2.wl    = { a="q4base" n="command_ship/csa_trim5e_2_d" }
+        command_ship/csa_trim5e_2_med.wl    = { a="q4base" n="command_ship/csa_trim5e_2_med_d" }
+        command_ship/csa_trim5e_med.wl    = { a="q4base" n="command_ship/csa_trim5e_med_d" }
+        command_ship/csa_trim5f.wl    = { a="q4base" n="command_ship/csa_trim5f_d" }
+        command_ship/csa_trim5f_med.wl    = { a="q4base" n="command_ship/csa_trim5f_med_d" }
+        command_ship/csa_trim6.wl    = { a="q4base" n="command_ship/csa_trim6_d" }
+        command_ship/csa_trim6b.wl    = { a="q4base" n="command_ship/csa_trim6b_d" }
+        command_ship/csa_trim6b_med.wl    = { a="q4base" n="command_ship/csa_trim6b_med_d" }
+        command_ship/csa_trim7.wl    = { a="q4base" n="command_ship/csa_trim7_d" }
+        command_ship/csa_trim7_med.wl    = { a="q4base" n="command_ship/csa_trim7_med_d" }
+        command_ship/csa_trim8.wl    = { a="q4base" n="command_ship/csa_trim8_d" }
+        command_ship/csa_trim8a.wl    = { a="q4base" n="command_ship/csa_trim8a_d" }
+        command_ship/csa_trim8a_med.wl    = { a="q4base" n="command_ship/csa_trim8a_med_d" }
+        command_ship/csa_trim9.wl    = { a="q4base" n="command_ship/csa_trim9_d" }
+        command_ship/csa_trim9_med.wl    = { a="q4base" n="command_ship/csa_trim9_med_d" }
+        command_ship/csa_wall13.wl    = { a="q4base" n="command_ship/csa_wall13_d" }
+        command_ship/csa_wall13b.wl    = { a="q4base" n="command_ship/csa_wall13b_d" }
+        command_ship/csa_wall13c.wl    = { t_q4basematerials_command_ship=! }
+        command_ship/csa_wall15.wl    = { a="q4base" n="command_ship/csa_wall15_d" }
+        command_ship/csa_wall16.wl    = { a="q4base" n="command_ship/csa_wall16_d" }
+        command_ship/csa_wall16_med.wl    = { a="q4base" n="command_ship/csa_wall16_med_d" }
+        command_ship/csa_wall16b.wl    = { a="q4base" n="command_ship/csa_wall16b_d" }
+        command_ship/csa_wall17.wl    = { a="q4base" n="command_ship/csa_wall17_d" }
+        command_ship/csa_wall18.wl    = { a="q4base" n="command_ship/csa_wall18_d" }
+        command_ship/csa_wall18_med.wl    = { a="q4base" n="command_ship/csa_wall18_med_d" }
+        command_ship/csa_wall18a.wl    = { a="q4base" n="command_ship/csa_wall18a_d" }
+        command_ship/csa_wall19a.wl    = { a="q4base" n="command_ship/csa_wall19a_d" }
+        command_ship/csa_wall19a_mar.wl    = { a="q4base" n="command_ship/csa_wall19a_mar_d" }
+        command_ship/csa_wall19b.wl    = { a="q4base" n="command_ship/csa_wall19b_d" }
+        command_ship/csa_wall19b_mar.wl    = { a="q4base" n="command_ship/csa_wall19b_mar_d" }
+        command_ship/csa_wall19c.wl    = { a="q4base" n="command_ship/csa_wall19c_d" }
+        command_ship/csa_wall19c_mar.wl    = { a="q4base" n="command_ship/csa_wall19c_mar_d" }
+        command_ship/csa_wall4.wl    = { a="q4base" n="command_ship/csa_wall4_d" }
+        command_ship/csa_wall4b.wl    = { t_q4basematerials_command_ship=! }
+  //      command_ship/csa_wall5_med.wl    = { a="q4base" n="command_ship/csa_wall5_med_d" }
+        command_ship/cswall_01.wl    = { a="q4base" n="command_ship/cswall_01_d" }
+        command_ship/cswall_01_med.wl    = { a="q4base" n="command_ship/cswall_01_med_d" }
+        command_ship/cswall_01b.wl    = { a="q4base" n="command_ship/cswall_01b_d" }
+        command_ship/hflr1.wl    = { a="q4base" n="command_ship/hflr1_d" }
+        command_ship/hflr1a.wl    = { a="q4base" n="command_ship/hflr1a_d" }
+        command_ship/mcc_Girder32_01.wl    = { a="q4base" n="command_ship/mcc_Girder32_01_d" }
+  //      command_ship/mcc_Girder32_01_alpha2side.wl    = { a="q4base" n="command_ship/mcc_Girder32_01_alpha2side_d" }
+        command_ship/mcc_basegreen.wl    = { a="q4base" n="command_ship/mcc_basegreen_d" }
+  //      command_ship/mcc_ceiling128_01.wl    = { a="q4base" n="command_ship/mcc_ceiling128_01_d" }
+  //      command_ship/mcc_ceiling128_01_alpha.wl    = { a="q4base" n="command_ship/mcc_ceiling128_01_alpha_d" }
+        command_ship/mcc_floornew2.wl    = { a="q4base" n="command_ship/mcc_floornew2_d" }
+        command_ship/mcc_floornew3_alpha.wl    = { a="q4base" n="command_ship/mcc_floornew3_alpha_d" }
+  //      command_ship/mcc_floornew3_alpha_2side.wl    = { a="q4base" n="command_ship/mcc_floornew3_alpha_2side_d" }
+        command_ship/mcc_floornew3_alpha_med.wl    = { t_q4basematerials_command_ship=! }
+        command_ship/mcc_floornew3_var.wl    = { t_q4basematerials_command_ship=! }
+        command_ship/mcc_flrhalf_02.wl    = { a="q4base" n="command_ship/mcc_flrhalf_02_d" }
+        command_ship/mcc_flrtrim64_02.wl    = { a="q4base" n="command_ship/mcc_flrtrim64_02_d" }
+  //      command_ship/mcc_frame1_2side.wl    = { a="q4base" n="command_ship/mcc_frame1_2side_d" }
+  //      command_ship/mcc_frame3_2side.wl    = { a="q4base" n="command_ship/mcc_frame3_2side_d" }
+  //      command_ship/mcc_girder32_01_alpha.wl    = { a="q4base" n="command_ship/mcc_girder32_01_alpha_d" }
+        command_ship/mcc_grating128_02a.wl    = { a="q4base" n="command_ship/mcc_grating128_02a_d" }
+  //      command_ship/mcc_hhalf_06.wl    = { a="q4base" n="command_ship/mcc_hhalf_06_d" }
+  //      command_ship/mcc_htrim_02.wl    = { a="q4base" n="command_ship/mcc_htrim_02_d" }
+        command_ship/mcc_quarter_03.wl    = { a="q4base" n="command_ship/mcc_quarter_03_d" }
+  //      command_ship/mcc_text_gui.wl    = { t_q4basematerials_command_ship=! }
+  //      command_ship/mcc_trimnew_2.wl    = { a="q4base" n="command_ship/mcc_trimnew_2_d" }
+  //      command_ship/mcc_trimnew_3.wl    = { a="q4base" n="command_ship/mcc_trimnew_3_d" }
+  //      command_ship/mcc_vhalf32_01.wl    = { a="q4base" n="command_ship/mcc_vhalf32_01_d" }
+        command_ship/medflr1_med.wl    = { a="q4base" n="command_ship/medflr1_med_d" }
+        command_ship/medflr2.wl    = { a="q4base" n="command_ship/medflr2_d" }
+        command_ship/medflr2_med.wl    = { a="q4base" n="command_ship/medflr2_med_d" }
+        command_ship/medflr3.wl    = { a="q4base" n="command_ship/medflr3_d" }
+        command_ship/medflr3_med.wl    = { a="q4base" n="command_ship/medflr3_med_d" }
+  //      command_ship/pipes_alpha2side.wl    = { a="q4base" n="command_ship/pipes_alpha2side_d" }
+  //      command_ship/pipes_bend_alpha2side.wl    = { a="q4base" n="command_ship/pipes_bend_alpha2side_d" }
+  //      command_ship/pipes_corner_2_alpha2side.wl    = { a="q4base" n="command_ship/pipes_corner_2_alpha2side_d" }
+  //      command_ship/pipes_corner_alpha2side.wl    = { a="q4base" n="command_ship/pipes_corner_alpha2side_d" }
+      }
+      consoles.txlist =
+      {
+        consoles/conmonitorback1b.wl    = { a="q4base" n="consoles/conmonitorback1b_d" }
+        consoles/conmonitorback1c.wl    = { a="q4base" n="consoles/conmonitorback1c_d" }
+        consoles/conmonitorback1d.wl    = { a="q4base" n="consoles/conmonitorback1d_d" }
+        consoles/conmonitorback1e.wl    = { a="q4base" n="consoles/conmonitorback1e_d" }
+        consoles/conmonitorback1f.wl    = { a="q4base" n="consoles/conmonitorback1f_d" }
+        consoles/conmonitorback1g.wl    = { a="q4base" n="consoles/conmonitorback1g_d" }
+        consoles/conmonitorxl1b.wl    = { a="q4base" n="consoles/conmonitorxl1b_d" }
+        consoles/conmonitorxl1b_glow.wl    = { t_q4basematerials_consoles=! }
+        consoles/conmonitorxl1c.wl    = { a="q4base" n="consoles/conmonitorxl1c_d" }
+        consoles/conmonitorxl1d.wl    = { a="q4base" n="consoles/conmonitorxl1d_d" }
+        consoles/conmonitorxl1e.wl    = { t_q4basematerials_consoles=! }
+        consoles/console1b.wl    = { a="q4base" n="consoles/console1b_d" }
+        consoles/console1c.wl    = { a="q4base" n="consoles/console1c_d" }
+  //      consoles/console1d.wl    = { a="q4base" n="consoles/console1d_d" }
+        consoles/console1e.wl    = { t_q4basematerials_consoles=! }
+        consoles/console2b.wl    = { a="q4base" n="consoles/console2b_d" }
+        consoles/console2b_glow.wl    = { t_q4basematerials_consoles=! }
+        consoles/console2c.wl    = { a="q4base" n="consoles/console2c_d" }
+        consoles/console2e.wl    = { t_q4basematerials_consoles=! }
+        consoles/console3b.wl    = { a="q4base" n="consoles/console3b_d" }
+        consoles/console3c.wl    = { a="q4base" n="consoles/console3c_d" }
+        consoles/console3d.wl    = { a="q4base" n="consoles/console3d_d" }
+        consoles/console3e.wl    = { t_q4basematerials_consoles=! }
+        consoles/console4b.wl    = { a="q4base" n="consoles/console4b_d" }
+        consoles/console4c.wl    = { a="q4base" n="consoles/console4c_d" }
+  //      consoles/console4d.wl    = { a="q4base" n="consoles/console4d_d" }
+        consoles/console4e.wl    = { t_q4basematerials_consoles=! }
+        consoles/console5b.wl    = { a="q4base" n="consoles/console5b_d" }
+        consoles/console5c.wl    = { a="q4base" n="consoles/console5c_d" }
+        consoles/console5d.wl    = { a="q4base" n="consoles/console5d_d" }
+        consoles/console5e.wl    = { a="q4base" n="consoles/console5e_d" }
+        consoles/console6b.wl    = { a="q4base" n="consoles/console6b_d" }
+        consoles/console6c.wl    = { a="q4base" n="consoles/console6c_d" }
+        consoles/console6e.wl    = { t_q4basematerials_consoles=! }
+        consoles/console7c.wl    = { a="q4base" n="consoles/console7c_d" }
+        consoles/console7d.wl    = { a="q4base" n="consoles/console7d_d" }
+        consoles/console7e.wl    = { a="q4base" n="consoles/console7e_d" }
+        consoles/console7f.wl    = { a="q4base" n="consoles/console7f_d" }
+        consoles/console7g.wl    = { a="q4base" n="consoles/console7g_d" }
+        consoles/console8b.wl    = { a="q4base" n="consoles/console8b_d" }
+        consoles/console8c.wl    = { a="q4base" n="consoles/console8c_d" }
+        consoles/console8d.wl    = { a="q4base" n="consoles/console8d_d" }
+        consoles/console8e.wl    = { a="q4base" n="consoles/console8e_d" }
+      }
+      core.txlist =
+      {
+        core/core_hex_spectrum_7.wl    = { t_q4basematerials_core=! }
+        core/core_hex_streamer.wl    = { t_q4basematerials_core=! }
+        core/core_hexfx.wl    = { t_q4basematerials_core=! }
+        core/cpu1_1.wl    = { t_q4basematerials_core=! }
+        core/cpu1_1_spectrum_8.wl    = { t_q4basematerials_core=! }
+        core/flare_16.wl    = { t_q4basematerials_core=! }
+        core/flare_4.wl    = { t_q4basematerials_core=! }
+        core/flare_8.wl    = { t_q4basematerials_core=! }
+        core/flareblue_16.wl    = { t_q4basematerials_core=! }
+        core/flareblue_8.wl    = { t_q4basematerials_core=! }
+        core/flareorange_16.wl    = { t_q4basematerials_core=! }
+        core/flareorange_4.wl    = { t_q4basematerials_core=! }
+        core/floor1_1.wl    = { a="q4base" n="core/floor1_1_d" }
+        core/floor1_2.wl    = { a="q4base" n="core/floor1_2_d" }
+        core/floor2_1.wl    = { a="q4base" n="core/floor2_1_d" }
+        core/floor2_2.wl    = { a="q4base" n="core/floor2_2_d" }
+        core/floor2_3.wl    = { a="q4base" n="core/floor2_3_d" }
+        core/floor3_1_onesided.wl    = { t_q4basematerials_core=! }
+        core/floor3_1_twosided.wl    = { t_q4basematerials_core=! }
+        core/floortrim1_1.wl    = { a="q4base" n="core/floortrim1_1_d" }
+        core/floortrim1_2.wl    = { t_q4basematerials_core=! }
+        core/fluid_core.wl    = { t_q4basematerials_core=! }
+        core/sc2_floorplate1a.wl    = { a="q4base" n="core/sc2_floorplate1a_d" }
+        core/sc2_floorplate1c.wl    = { a="q4base" n="core/sc2_floorplate1c_d" }
+        core/sc2_floorrun1.wl    = { a="q4base" n="core/sc2_floorrun1_d" }
+        core/sc2_girder1.wl    = { a="q4base" n="core/sc2_girder1_d" }
+        core/sc2_girder2.wl    = { a="q4base" n="core/sc2_girder2_d" }
+        core/sc2_panel1a.wl    = { a="q4base" n="core/sc2_panel1a_d" }
+        core/sc2_panel1b.wl    = { a="q4base" n="core/sc2_panel1b_d" }
+        core/sc2_panel1c.wl    = { a="q4base" n="core/sc2_panel1c_d" }
+        core/sc_basepanel1.wl    = { a="q4base" n="core/sc_basepanel1_d" }
+        core/sc_basepanel2.wl    = { a="q4base" n="core/sc_basepanel2_d" }
+        core/sc_basepanel2b.wl    = { a="q4base" n="core/sc_basepanel2b_d" }
+        core/sc_basepanel2c.wl    = { a="q4base" n="core/sc_basepanel2c_d" }
+        core/sc_basepanel4.wl    = { a="q4base" n="core/sc_basepanel4_d" }
+        core/sc_basepanel5.wl    = { a="q4base" n="core/sc_basepanel5_d" }
+        core/sc_basepanel8.wl    = { a="q4base" n="core/sc_basepanel8_d" }
+        core/sc_basepanel9.wl    = { a="q4base" n="core/sc_basepanel9_d" }
+        core/sc_bigtube_00.wl    = { a="q4base" n="core/sc_bigtube_00_d" }
+        core/sc_bigtube_00a.wl    = { t_q4basematerials_core=! }
+        core/sc_bigtube_02.wl    = { a="q4base" n="core/sc_bigtube_02_d" }
+        core/sc_eggshell128.wl    = { t_q4basematerials_core=! }
+        core/sc_floor1.wl    = { a="q4base" n="core/sc_floor1_d" }
+        core/sc_grey.wl    = { t_q4basematerials_core=! }
+        core/sc_light1.wl    = { a="q4base" n="core/sc_light1_d" }
+        core/sc_light3.wl    = { t_q4basematerials_core=! }
+        core/sc_longtrim.wl    = { t_q4basematerials_core=! }
+  //      core/sc_longtrim_white.wl    = { t_q4basematerials_core=! }
+        core/sc_outerwallbottom_1.wl    = { a="q4base" n="core/sc_outerwallbottom_1_d" }
+        core/sc_outerwalltop_1.wl    = { a="q4base" n="core/sc_outerwalltop_1_d" }
+        core/sc_outerwalltrim_1.wl    = { a="q4base" n="core/sc_outerwalltrim_1_d" }
+        core/sc_outerwalltrim_2.wl    = { a="q4base" n="core/sc_outerwalltrim_2_d" }
+        core/sc_outerwalltrim_3.wl    = { a="q4base" n="core/sc_outerwalltrim_3_d" }
+        core/sc_outerwalltrim_4.wl    = { a="q4base" n="core/sc_outerwalltrim_4_d" }
+        core/sc_outerwallverticalstack_1.wl    = { a="q4base" n="core/sc_outerwallverticalstack_1_d" }
+        core/sc_railgrey.wl    = { a="q4base" n="core/sc_railgrey_d" }
+        core/sc_railgrey_nonsolid.wl    = { t_q4basematerials_core=! }
+        core/sc_squarepanel1.wl    = { a="q4base" n="core/sc_squarepanel1_d" }
+        core/sc_squarepanel1a.wl    = { a="q4base" n="core/sc_squarepanel1a_d" }
+        core/sc_squarepanel2.wl    = { a="q4base" n="core/sc_squarepanel2_d" }
+        core/sc_step1.wl    = { a="q4base" n="core/sc_step1_d" }
+        core/sc_trim1.wl    = { a="q4base" n="core/sc_trim1_d" }
+        core/sc_vertpanel1.wl    = { a="q4base" n="core/sc_vertpanel1_d" }
+        core/sc_vertpanel10.wl    = { a="q4base" n="core/sc_vertpanel10_d" }
+        core/sc_vertpanel5.wl    = { a="q4base" n="core/sc_vertpanel5_d" }
+        core/sc_vertpanel6.wl    = { a="q4base" n="core/sc_vertpanel6_d" }
+        core/sc_vertpanel6plain.wl    = { a="q4base" n="core/sc_vertpanel6plain_d" }
+        core/sc_vertpanel9.wl    = { a="q4base" n="core/sc_vertpanel9_d" }
+        core/sc_vertpipe1.wl    = { a="q4base" n="core/sc_vertpipe1_d" }
+        core/sc_vertpipe1a.wl    = { a="q4base" n="core/sc_vertpipe1a_d" }
+        core/sc_vertpipe1b.wl    = { t_q4basematerials_core=! }
+        core/sc_vertpipe2.wl    = { t_q4basematerials_core=! }
+        core/sc_wall1.wl    = { a="q4base" n="core/sc_wall1_d" }
+        core/sc_wall2.wl    = { a="q4base" n="core/sc_wall2_d" }
+        core/sc_wall3.wl    = { a="q4base" n="core/sc_wall3_d" }
+        core/sc_wall4.wl    = { a="q4base" n="core/sc_wall4_d" }
+        core/sc_wall5.wl    = { a="q4base" n="core/sc_wall5_d" }
+        core/sc_wallpanel1.wl    = { a="q4base" n="core/sc_wallpanel1_d" }
+        core/sc_wallpanel1b.wl    = { a="q4base" n="core/sc_wallpanel1b_d" }
+        core/sc_wallpanel2.wl    = { a="q4base" n="core/sc_wallpanel2_d" }
+        core/sc_wallpanel3.wl    = { a="q4base" n="core/sc_wallpanel3_d" }
+        core/sc_wallsection_01.wl    = { a="q4base" n="core/sc_wallsection_01_d" }
+        core/sc_wallsection_01a.wl    = { a="q4base" n="core/sc_wallsection_01a_d" }
+        core/sc_wallsection_02.wl    = { a="q4base" n="core/sc_wallsection_02_d" }
+        core/sc_wallsection_04.wl    = { a="q4base" n="core/sc_wallsection_04_d" }
+        core/sc_wallsection_07.wl    = { a="q4base" n="core/sc_wallsection_07_d" }
+        core/sc_wallsection_08closed.wl    = { a="q4base" n="core/sc_wallsection_08closed_d" }
+        core/sc_warning.wl    = { a="q4base" n="core/sc_warning_d" }
+        core/step1_1.wl    = { t_q4basematerials_core=! }
+        core/step1_2.wl    = { a="q4base" n="core/step1_2_d" }
+        core/techfloor1_1.wl    = { t_q4basematerials_core=! }
+        core/techpipe1_1.wl    = { t_q4basematerials_core=! }
+        core/techpipe1_1_blue.wl    = { t_q4basematerials_core=! }
+        core/techpipe1_1_red.wl    = { t_q4basematerials_core=! }
+        core/techpipe1_2.wl    = { t_q4basematerials_core=! }
+        core/towerglass.wl    = { t_q4basematerials_core=! }
+        core/trim1_1.wl    = { a="q4base" n="core/trim1_1_d" }
+        core/trim1_2.wl    = { a="q4base" n="core/trim1_2_d" }
+        core/trim1_2a.wl    = { a="q4base" n="core/trim1_2a_d" }
+        core/trim1_3.wl    = { a="q4base" n="core/trim1_3_d" }
+        core/trim2_1.wl    = { a="q4base" n="core/trim2_1_d" }
+        core/trim2_2.wl    = { a="q4base" n="core/trim2_2_d" }
+      }
+      decals.txlist =
+      {
+  //      decals/BlobShadow.wl    = { t_q4basematerials_decals=! }
+        decals/_grungemaps/damage1.wl    = { t_q4basematerials_decals=! }
+        decals/_grungemaps/dust1.wl    = { t_q4basematerials_decals=! }
+        decals/_grungemaps/dust1_end.wl    = { t_q4basematerials_decals=! }
+        decals/_grungemaps/dust1_tile.wl    = { t_q4basematerials_decals=! }
+        decals/_grungemaps/grunge1.wl    = { t_q4basematerials_decals=! }
+        decals/_grungemaps/grunge10.wl    = { t_q4basematerials_decals=! }
+  //      decals/_grungemaps/grunge11.wl    = { t_q4basematerials_decals=! }
+        decals/_grungemaps/grunge12.wl    = { t_q4basematerials_decals=! }
+        decals/_grungemaps/grunge13.wl    = { t_q4basematerials_decals=! }
+        decals/_grungemaps/grunge14.wl    = { t_q4basematerials_decals=! }
+        decals/_grungemaps/grunge17.wl    = { t_q4basematerials_decals=! }
+  //      decals/_grungemaps/grunge18.wl    = { t_q4basematerials_decals=! }
+        decals/_grungemaps/grunge2.wl    = { t_q4basematerials_decals=! }
+        decals/_grungemaps/grunge3.wl    = { t_q4basematerials_decals=! }
+        decals/_grungemaps/grunge5.wl    = { t_q4basematerials_decals=! }
+        decals/_grungemaps/grunge6.wl    = { t_q4basematerials_decals=! }
+        decals/_grungemaps/grunge7.wl    = { t_q4basematerials_decals=! }
+        decals/_grungemaps/grunge8.wl    = { t_q4basematerials_decals=! }
+  //      decals/_grungemaps/grunge9.wl    = { t_q4basematerials_decals=! }
+        decals/_grungemaps/grunge_scratches1.wl    = { t_q4basematerials_decals=! }
+        decals/_grungemaps/grunge_stroyent1.wl    = { t_q4basematerials_decals=! }
+        decals/_grungemaps/grunge_stroyent2.wl    = { t_q4basematerials_decals=! }
+        decals/_grungemaps/scorch.wl    = { t_q4basematerials_decals=! }
+        decals/_grungemaps/stain01bwet.wl    = { t_q4basematerials_decals=! }
+        decals/_marine/airlock1.wl    = { t_q4basematerials_decals=! }
+        decals/_marine/alphabet_darken.wl    = { t_q4basematerials_decals=! }
+        decals/_marine/alphabet_lighten.wl    = { t_q4basematerials_decals=! }
+  //      decals/_marine/arrow1.wl    = { t_q4basematerials_decals=! }
+  //      decals/_marine/arrow2.wl    = { t_q4basematerials_decals=! }
+        decals/_marine/arrows1.wl    = { t_q4basematerials_decals=! }
+        decals/_marine/arrows2.wl    = { t_q4basematerials_decals=! }
+        decals/_marine/biohazard.wl    = { t_q4basematerials_decals=! }
+  //      decals/_marine/caution.wl    = { t_q4basematerials_decals=! }
+        decals/_marine/caution_flammable2.wl    = { t_q4basematerials_decals=! }
+        decals/_marine/caution_flammable3.wl    = { t_q4basematerials_decals=! }
+        decals/_marine/caution_hazwaste.wl    = { t_q4basematerials_decals=! }
+  //      decals/_marine/caution_machinery.wl    = { t_q4basematerials_decals=! }
+        decals/_marine/caution_munitions.wl    = { t_q4basematerials_decals=! }
+  //      decals/_marine/caution_radioactive2.wl    = { t_q4basematerials_decals=! }
+        decals/_marine/caution_voltage2.wl    = { t_q4basematerials_decals=! }
+        decals/_marine/cautionarrow.wl    = { t_q4basematerials_decals=! }
+        decals/_marine/cautionstrip.wl    = { t_q4basematerials_decals=! }
+        decals/_marine/cautiontag.wl    = { t_q4basematerials_decals=! }
+        decals/_marine/corner.wl    = { t_q4basematerials_decals=! }
+        decals/_marine/fireextinguisher.wl    = { t_q4basematerials_decals=! }
+        decals/_marine/firstaid.wl    = { t_q4basematerials_decals=! }
+        decals/_marine/liftup.wl    = { t_q4basematerials_decals=! }
+        decals/_marine/line1.wl    = { t_q4basematerials_decals=! }
+        decals/_marine/line2.wl    = { t_q4basematerials_decals=! }
+        decals/_marine/logo_color128.wl    = { t_q4basematerials_decals=! }
+        decals/_marine/logo_color64.wl    = { t_q4basematerials_decals=! }
+        decals/_marine/medical.wl    = { t_q4basematerials_decals=! }
+        decals/_marine/misctext1.wl    = { t_q4basematerials_decals=! }
+        decals/_marine/misctext2.wl    = { t_q4basematerials_decals=! }
+        decals/_marine/mp_arrow.wl    = { t_q4basematerials_decals=! }
+        decals/_marine/mp_flag.wl    = { t_q4basematerials_decals=! }
+        decals/_marine/mp_logo.wl    = { t_q4basematerials_decals=! }
+        decals/_marine/numbers1.tga.wl    = { t_q4basematerials_decals=! }
+        decals/_marine/numbers2.tga.wl    = { t_q4basematerials_decals=! }
+        decals/_marine/numbers3.tga.wl    = { t_q4basematerials_decals=! }
+        decals/_marine/numbers4.tga.wl    = { t_q4basematerials_decals=! }
+        decals/_marine/pulldown.wl    = { t_q4basematerials_decals=! }
+        decals/_marine/restrictedarea.wl    = { t_q4basematerials_decals=! }
+        decals/_marine/rotate.wl    = { t_q4basematerials_decals=! }
+        decals/_marine/shutoff_valve.wl    = { t_q4basematerials_decals=! }
+        decals/_marine/sign_deck04_lf.wl    = { t_q4basematerials_decals=! }
+        decals/_marine/sign_deck04_rt.wl    = { t_q4basematerials_decals=! }
+        decals/_marine/step.wl    = { t_q4basematerials_decals=! }
+        decals/_marine/unitlogo_color64.wl    = { t_q4basematerials_decals=! }
+        decals/_strogg/military6.wl    = { t_q4basematerials_decals=! }
+        decals/_strogg/misctext1.wl    = { t_q4basematerials_decals=! }
+        decals/_strogg/misctext3.wl    = { t_q4basematerials_decals=! }
+        decals/_strogg/misctext5.wl    = { t_q4basematerials_decals=! }
+        decals/_strogg/misctext6.wl    = { t_q4basematerials_decals=! }
+        decals/_strogg/misctext7.wl    = { t_q4basematerials_decals=! }
+        decals/_strogg/mp_arrow.wl    = { t_q4basematerials_decals=! }
+        decals/_strogg/mp_flag.wl    = { t_q4basematerials_decals=! }
+        decals/_strogg/mp_logo.wl    = { t_q4basematerials_decals=! }
+        decals/_strogg/scslogo.wl    = { t_q4basematerials_decals=! }
+        decals/blasterscorch.wl    = { t_q4basematerials_decals=! }
+        decals/blasterscorch_strip.wl    = { t_q4basematerials_decals=! }
+        decals/bloodspray.wl    = { t_q4basematerials_decals=! }
+        decals/bloodspread2.wl    = { t_q4basematerials_decals=! }
+        decals/glasscrack1.wl    = { t_q4basematerials_decals=! }
+        decals/glasscrack1_near.wl    = { t_q4basematerials_decals=! }
+        decals/glasscrack2.wl    = { t_q4basematerials_decals=! }
+        decals/glasscrack2_near.wl    = { t_q4basematerials_decals=! }
+        decals/goospread2.wl    = { t_q4basematerials_decals=! }
+        decals/military_logo.wl    = { t_q4basematerials_decals=! }
+        decals/mp_arrows.wl    = { t_q4basematerials_decals=! }
+  //      decals/painted_concrete.wl    = { t_q4basematerials_decals=! }
+  //      decals/painted_concrete_strip.wl    = { t_q4basematerials_decals=! }
+        decals/scorch1.wl    = { t_q4basematerials_decals=! }
+        decals/skid_begin.wl    = { t_q4basematerials_decals=! }
+        decals/skid_end.wl    = { t_q4basematerials_decals=! }
+        decals/skid_tile.wl    = { t_q4basematerials_decals=! }
+        decals/slime.wl    = { t_q4basematerials_decals=! }
+        decals/toxinDamage.wl    = { t_q4basematerials_decals=! }
+        decals/tunnel.wl    = { t_q4basematerials_decals=! }
+        decals/tunnelvision.wl    = { t_q4basematerials_decals=! }
+        decals/wallbullets1.wl    = { t_q4basematerials_decals=! }
+        decals/wallbullets2.wl    = { t_q4basematerials_decals=! }
+        decals/wallbullets3.wl    = { t_q4basematerials_decals=! }
+        decals/wallbullets4.wl    = { t_q4basematerials_decals=! }
+      }
+      decals_ofs.txlist =
+      {
+        decals/blood_drip1.wl    = { t_q4basematerials_decals_ofs=! }
+        decals/dsplat11.wl    = { t_q4basematerials_decals_ofs=! }
+        decals/dsplat2.wl    = { t_q4basematerials_decals_ofs=! }
+        decals/dsplat5.wl    = { t_q4basematerials_decals_ofs=! }
+        decals/dsplat7.wl    = { t_q4basematerials_decals_ofs=! }
+        decals/genericdamage.wl    = { t_q4basematerials_decals_ofs=! }
+        decals/hurt02.wl    = { t_q4basematerials_decals_ofs=! }
+        decals/splat1.wl    = { t_q4basematerials_decals_ofs=! }
+        decals/splat10.wl    = { t_q4basematerials_decals_ofs=! }
+        decals/splat11.wl    = { t_q4basematerials_decals_ofs=! }
+        decals/splat12.wl    = { t_q4basematerials_decals_ofs=! }
+        decals/splat13.wl    = { t_q4basematerials_decals_ofs=! }
+        decals/splat14.wl    = { t_q4basematerials_decals_ofs=! }
+        decals/splat14_far.wl    = { t_q4basematerials_decals_ofs=! }
+        decals/splat15.wl    = { t_q4basematerials_decals_ofs=! }
+        decals/splat16.wl    = { t_q4basematerials_decals_ofs=! }
+        decals/splat2.wl    = { t_q4basematerials_decals_ofs=! }
+        decals/splat2_fade.wl    = { t_q4basematerials_decals_ofs=! }
+        decals/splat2_fadelong.wl    = { t_q4basematerials_decals_ofs=! }
+        decals/splat2_far.wl    = { t_q4basematerials_decals_ofs=! }
+        decals/splat3.wl    = { t_q4basematerials_decals_ofs=! }
+        decals/splat4.wl    = { t_q4basematerials_decals_ofs=! }
+        decals/splat5.wl    = { t_q4basematerials_decals_ofs=! }
+        decals/splat6.wl    = { t_q4basematerials_decals_ofs=! }
+        decals/splat6_far.wl    = { t_q4basematerials_decals_ofs=! }
+        decals/splat7.wl    = { t_q4basematerials_decals_ofs=! }
+        decals/splat8.wl    = { t_q4basematerials_decals_ofs=! }
+        decals/splat9.wl    = { t_q4basematerials_decals_ofs=! }
+      }
+      flares.txlist =
+      {
+        flares/SoundFlare.wl    = { t_q4basematerials_flares=! }
+        flares/flare_12_red.wl    = { t_q4basematerials_flares=! }
+        flares/flare_12_yellow.wl    = { t_q4basematerials_flares=! }
+        flares/flare_16.wl    = { t_q4basematerials_flares=! }
+        flares/flare_24.wl    = { t_q4basematerials_flares=! }
+        flares/flare_32.wl    = { t_q4basematerials_flares=! }
+        flares/flare_4.wl    = { t_q4basematerials_flares=! }
+        flares/flare_8.wl    = { t_q4basematerials_flares=! }
+        flares/flare_8_global_crossfade.wl    = { t_q4basematerials_flares=! }
+        flares/flare_8_global_startoff.wl    = { t_q4basematerials_flares=! }
+        flares/flare_8_global_starton.wl    = { t_q4basematerials_flares=! }
+        flares/flare_8_mcc.wl    = { t_q4basematerials_flares=! }
+        flares/flare_sizeable.wl    = { t_q4basematerials_flares=! }
+        flares/introship_flare1.wl    = { t_q4basematerials_flares=! }
+        flares/introship_flare10.wl    = { t_q4basematerials_flares=! }
+        flares/introship_flare2.wl    = { t_q4basematerials_flares=! }
+        flares/introship_flare3.wl    = { t_q4basematerials_flares=! }
+        flares/introship_flare4.wl    = { t_q4basematerials_flares=! }
+        flares/introship_flare5.wl    = { t_q4basematerials_flares=! }
+        flares/introship_flare6.wl    = { t_q4basematerials_flares=! }
+        flares/introship_flare7.wl    = { t_q4basematerials_flares=! }
+        flares/introship_flare8.wl    = { t_q4basematerials_flares=! }
+        flares/introship_flare9.wl    = { t_q4basematerials_flares=! }
+        flares/locklight_rectangle.wl    = { t_q4basematerials_flares=! }
+        flares/mp_flagpole1.wl    = { t_q4basematerials_flares=! }
+        flares/mp_flagpole2.wl    = { t_q4basematerials_flares=! }
+        flares/mp_flagpole3.wl    = { t_q4basematerials_flares=! }
+      }
+      fluids.txlist =
+      {
+        fluids/bloodpool.wl    = { t_q4basematerials_fluids=! }
+        fluids/bloodpump.wl    = { t_q4basematerials_fluids=! }
+        fluids/recomp_fizz.wl    = { t_q4basematerials_fluids=! }
+      }
+  //    gfx.txlist =
+  //    {
+  //      REGION.wl    = { t_q4basematerials_gfx=! }
+  //    }
+      glass.txlist =
+      {
+        glass/acid_glass2.wl    = { t_q4basematerials_glass=! }
+        glass/acidgun.wl    = { t_q4basematerials_glass=! }
+        glass/anderson_ofc.wl    = { t_q4basematerials_glass=! }
+  //      glass/black.wl    = { t_q4basematerials_glass=! }
+        glass/black_cracked.wl    = { t_q4basematerials_glass=! }
+        glass/clean_core.wl    = { t_q4basematerials_glass=! }
+        glass/clean_core2.wl    = { t_q4basematerials_glass=! }
+        glass/clean_dispersal_dull.wl    = { t_q4basematerials_glass=! }
+        glass/clean_medlabs.wl    = { t_q4basematerials_glass=! }
+        glass/clean_terminal02.wl    = { t_q4basematerials_glass=! }
+        glass/clean_terminal3.wl    = { t_q4basematerials_glass=! }
+        glass/cracked.wl    = { t_q4basematerials_glass=! }
+        glass/dirty2.wl    = { t_q4basematerials_glass=! }
+        glass/dirty_3.wl    = { t_q4basematerials_glass=! }
+        glass/dirty_6_fattybreak.wl    = { t_q4basematerials_glass=! }
+  //      glass/forcefield.wl    = { t_q4basematerials_glass=! }
+        glass/glass1_cracked.wl    = { t_q4basematerials_glass=! }
+        glass/marineglass1.wl    = { t_q4basematerials_glass=! }
+        glass/marineglass2.wl    = { t_q4basematerials_glass=! }
+        glass/marineglass3.wl    = { t_q4basematerials_glass=! }
+        glass/marineglass4.wl    = { t_q4basematerials_glass=! }
+        glass/marineglass4a.wl    = { t_q4basematerials_glass=! }
+        glass/marineglass5.wl    = { t_q4basematerials_glass=! }
+        glass/marineglass6.wl    = { t_q4basematerials_glass=! }
+        glass/marineglass9.wl    = { t_q4basematerials_glass=! }
+        glass/outdoorglass1.wl    = { t_q4basematerials_glass=! }
+        glass/outdoorglass1_solid.wl    = { t_q4basematerials_glass=! }
+        glass/patternglass1.wl    = { t_q4basematerials_glass=! }
+        glass/patternglass1_dirt.wl    = { t_q4basematerials_glass=! }
+        glass/patternglass2.wl    = { t_q4basematerials_glass=! }
+        glass/patternglass3.wl    = { t_q4basematerials_glass=! }
+        glass/patternglass3a.wl    = { t_q4basematerials_glass=! }
+        glass/patternglass4.wl    = { t_q4basematerials_glass=! }
+        glass/patternglass4_dirt.wl    = { t_q4basematerials_glass=! }
+        glass/patternglass5.wl    = { t_q4basematerials_glass=! }
+        glass/patternglass5_dirt.wl    = { t_q4basematerials_glass=! }
+        glass/patternglass6.wl    = { t_q4basematerials_glass=! }
+        glass/patternglass7.wl    = { t_q4basematerials_glass=! }
+        glass/patternglass7_dirt.wl    = { t_q4basematerials_glass=! }
+  //      glass/patternglass7_tube.wl    = { t_q4basematerials_glass=! }
+        glass/patternglass9.wl    = { t_q4basematerials_glass=! }
+        glass/patternglass9dirt.wl    = { t_q4basematerials_glass=! }
+  //      glass/patternglass9dirt_melt.wl    = { t_q4basematerials_glass=! }
+        glass/putra_glass.wl    = { t_q4basematerials_glass=! }
+        glass/terminal2.wl    = { t_q4basematerials_glass=! }
+        glass/terminal2a.wl    = { t_q4basematerials_glass=! }
+        glass/tramglass.wl    = { t_q4basematerials_glass=! }
+      }
+      gui.txlist =
+      {
+        cameraView1.wl    = { t_q4basematerials_gui=! }
+      }
+  //    holo_guis.txlist =
+  //    {
+  //      holo_guis/strogg_1_v.wl    = { t_q4basematerials_holo_guis=! }
+  //      holo_guis/strogg_2_h.wl    = { t_q4basematerials_holo_guis=! }
+  //      holo_guis/strogg_3_v.wl    = { t_q4basematerials_holo_guis=! }
+  //      holo_guis/strogg_4_v.wl    = { t_q4basematerials_holo_guis=! }
+  //      holo_guis/strogg_5_h.wl    = { t_q4basematerials_holo_guis=! }
+  //      holo_guis/strogg_6_h.wl    = { t_q4basematerials_holo_guis=! }
+  //      holo_guis/strogg_7_h.wl    = { t_q4basematerials_holo_guis=! }
+  //    }
+      hub.txlist =
+      {
+        hub/cpu1_1.wl    = { t_q4basematerials_hub=! }
+        hub/flare_4.wl    = { t_q4basematerials_hub=! }
+        hub/flare_8.wl    = { t_q4basematerials_hub=! }
+        hub/flare_mini_blue.wl    = { t_q4basematerials_hub=! }
+        hub/flareblue_4.wl    = { t_q4basematerials_hub=! }
+        hub/flareblue_8.wl    = { t_q4basematerials_hub=! }
+        hub/flareorange_16.wl    = { t_q4basematerials_hub=! }
+        hub/flareorange_8.wl    = { t_q4basematerials_hub=! }
+        hub/floor1_1.wl    = { a="q4base" n="hub/floor1_1_d" }
+  //      hub/floor1_2.wl    = { a="q4base" n="hub/floor1_2_d" }
+        hub/floor2_1.wl    = { a="q4base" n="hub/floor2_1_d" }
+        hub/floor3_1_onesided.wl    = { t_q4basematerials_hub=! }
+        hub/floor3_1_twosided.wl    = { t_q4basematerials_hub=! }
+        hub/floortrim1_1.wl    = { a="q4base" n="hub/floortrim1_1_d" }
+        hub/floortrim1_2.wl    = { t_q4basematerials_hub=! }
+        hub/fluid_blue_bubble.wl    = { t_q4basematerials_hub=! }
+        hub/sh2_floorrun1.wl    = { a="q4base" n="hub/sh2_floorrun1_d" }
+        hub/sh2_floorrun2.wl    = { a="q4base" n="hub/sh2_floorrun2_d" }
+        hub/sh2_panel1a.wl    = { a="q4base" n="hub/sh2_panel1a_d" }
+        hub/sh2_panel1b.wl    = { a="q4base" n="hub/sh2_panel1b_d" }
+        hub/sh2_panel1c.wl    = { a="q4base" n="hub/sh2_panel1c_d" }
+        hub/sh_basepanel1.wl    = { a="q4base" n="hub/sh_basepanel1_d" }
+        hub/sh_basepanel10.wl    = { a="q4base" n="hub/sh_basepanel10_d" }
+        hub/sh_basepanel2a.wl    = { a="q4base" n="hub/sh_basepanel2a_d" }
+        hub/sh_basepanel2c.wl    = { a="q4base" n="hub/sh_basepanel2c_d" }
+        hub/sh_basepanel5.wl    = { a="q4base" n="hub/sh_basepanel5_d" }
+        hub/sh_basepanel6.wl    = { a="q4base" n="hub/sh_basepanel6_d" }
+        hub/sh_basepanel7.wl    = { a="q4base" n="hub/sh_basepanel7_d" }
+        hub/sh_basepanel8.wl    = { a="q4base" n="hub/sh_basepanel8_d" }
+        hub/sh_basepanel9.wl    = { a="q4base" n="hub/sh_basepanel9_d" }
+        hub/sh_bigtube_00.wl    = { a="q4base" n="hub/sh_bigtube_00_d" }
+        hub/sh_bigtube_02.wl    = { a="q4base" n="hub/sh_bigtube_02_d" }
+        hub/sh_cpu32_side.wl    = { a="q4base" n="hub/sh_cpu32_side_d" }
+        hub/sh_floormat1.wl    = { a="q4base" n="hub/sh_floormat1_d" }
+        hub/sh_grate_01.wl    = { t_q4basematerials_hub=! }
+        hub/sh_light1.wl    = { a="q4base" n="hub/sh_light1_d" }
+        hub/sh_light2.wl    = { a="q4base" n="hub/sh_light2_d" }
+        hub/sh_longtrim.wl    = { t_q4basematerials_hub=! }
+        hub/sh_outerwalltop_1.wl    = { a="q4base" n="hub/sh_outerwalltop_1_d" }
+        hub/sh_outerwalltrim_1.wl    = { a="q4base" n="hub/sh_outerwalltrim_1_d" }
+        hub/sh_outerwalltrim_2.wl    = { a="q4base" n="hub/sh_outerwalltrim_2_d" }
+        hub/sh_outerwalltrim_4.wl    = { a="q4base" n="hub/sh_outerwalltrim_4_d" }
+        hub/sh_outerwallverticalstack_1.wl    = { a="q4base" n="hub/sh_outerwallverticalstack_1_d" }
+        hub/sh_squarepanel1.wl    = { a="q4base" n="hub/sh_squarepanel1_d" }
+        hub/sh_squarepanel1a.wl    = { a="q4base" n="hub/sh_squarepanel1a_d" }
+        hub/sh_squarepanel3.wl    = { a="q4base" n="hub/sh_squarepanel3_d" }
+        hub/sh_step1.wl    = { a="q4base" n="hub/sh_step1_d" }
+        hub/sh_trim1.wl    = { a="q4base" n="hub/sh_trim1_d" }
+        hub/sh_vertpanel1.wl    = { a="q4base" n="hub/sh_vertpanel1_d" }
+        hub/sh_vertpanel10.wl    = { a="q4base" n="hub/sh_vertpanel10_d" }
+        hub/sh_vertpanel2.wl    = { a="q4base" n="hub/sh_vertpanel2_d" }
+        hub/sh_vertpanel3.wl    = { a="q4base" n="hub/sh_vertpanel3_d" }
+        hub/sh_vertpanel4.wl    = { a="q4base" n="hub/sh_vertpanel4_d" }
+        hub/sh_vertpanel5.wl    = { a="q4base" n="hub/sh_vertpanel5_d" }
+        hub/sh_vertpanel6.wl    = { a="q4base" n="hub/sh_vertpanel6_d" }
+        hub/sh_vertpanel7a.wl    = { a="q4base" n="hub/sh_vertpanel7a_d" }
+        hub/sh_vertpanel9.wl    = { a="q4base" n="hub/sh_vertpanel9_d" }
+        hub/sh_vertpipe1b.wl    = { t_q4basematerials_hub=! }
+        hub/sh_vertpipe1b_nowshadows.wl    = { t_q4basematerials_hub=! }
+        hub/sh_vertpipe1c.wl    = { t_q4basematerials_hub=! }
+        hub/sh_vertpipe2.wl    = { t_q4basematerials_hub=! }
+        hub/sh_wall1.wl    = { a="q4base" n="hub/sh_wall1_d" }
+        hub/sh_wall2.wl    = { a="q4base" n="hub/sh_wall2_d" }
+        hub/sh_wall3.wl    = { a="q4base" n="hub/sh_wall3_d" }
+        hub/sh_wall4.wl    = { a="q4base" n="hub/sh_wall4_d" }
+        hub/sh_wall5.wl    = { a="q4base" n="hub/sh_wall5_d" }
+        hub/sh_wall6.wl    = { a="q4base" n="hub/sh_wall6_d" }
+        hub/sh_wallpanel1.wl    = { a="q4base" n="hub/sh_wallpanel1_d" }
+        hub/sh_wallpanel1a.wl    = { a="q4base" n="hub/sh_wallpanel1a_d" }
+        hub/sh_wallpanel1b.wl    = { a="q4base" n="hub/sh_wallpanel1b_d" }
+        hub/sh_wallsection_01a.wl    = { a="q4base" n="hub/sh_wallsection_01a_d" }
+  //      hub/sh_wallsection_01a_glow.wl    = { a="q4base" n="hub/sh_wallsection_01a_glow_d" }
+        hub/sh_wallsection_02.wl    = { a="q4base" n="hub/sh_wallsection_02_d" }
+        hub/sh_wallsection_07.wl    = { a="q4base" n="hub/sh_wallsection_07_d" }
+        hub/sh_wallsection_08.wl    = { a="q4base" n="hub/sh_wallsection_08_d" }
+        hub/step1_1.wl    = { t_q4basematerials_hub=! }
+        hub/step1_2.wl    = { a="q4base" n="hub/step1_2_d" }
+        hub/techfloor1_1.wl    = { t_q4basematerials_hub=! }
+        hub/techpipe1_1.wl    = { t_q4basematerials_hub=! }
+        hub/techpipe1_1_hazard.wl    = { t_q4basematerials_hub=! }
+        hub/trim1_1.wl    = { a="q4base" n="hub/trim1_1_d" }
+        hub/trim1_2.wl    = { a="q4base" n="hub/trim1_2_d" }
+        hub/trim1_2a.wl    = { a="q4base" n="hub/trim1_2a_d" }
+        hub/trim1_3.wl    = { a="q4base" n="hub/trim1_3_d" }
+        hub/trim2_1.wl    = { a="q4base" n="hub/trim2_1_d" }
+        hub/trim2_2.wl    = { a="q4base" n="hub/trim2_2_d" }
+      }
+      idtemp.txlist =
+      {
+        decals/dirtblast.wl    = { t_q4basematerials_idtemp=! }
+        decals/dirty_frame.wl    = { t_q4basematerials_idtemp=! }
+        decals/drophose.wl    = { t_q4basematerials_idtemp=! }
+        decals/glass_on_floor.wl    = { t_q4basematerials_idtemp=! }
+        decals/hangingwires.wl    = { t_q4basematerials_idtemp=! }
+        decals/hangingwires2sided.wl    = { t_q4basematerials_idtemp=! }
+        decals/hangingwires_shadow.wl    = { t_q4basematerials_idtemp=! }
+        decals/sdirt10.wl    = { t_q4basematerials_idtemp=! }
+        decals/sdirt10a.wl    = { t_q4basematerials_idtemp=! }
+        decals/sdirt11.wl    = { t_q4basematerials_idtemp=! }
+        decals/sdirt11a.wl    = { t_q4basematerials_idtemp=! }
+        decals/sdirt12.wl    = { t_q4basematerials_idtemp=! }
+        decals/sdirt2.wl    = { t_q4basematerials_idtemp=! }
+        decals/sdirt6.wl    = { t_q4basematerials_idtemp=! }
+        decals/sdirt7.wl    = { t_q4basematerials_idtemp=! }
+        decals/sdirt8.wl    = { t_q4basematerials_idtemp=! }
+        decals/skid.wl    = { t_q4basematerials_idtemp=! }
+        decals/skid_turn.wl    = { t_q4basematerials_idtemp=! }
+        decals/stain01b.wl    = { t_q4basematerials_idtemp=! }
+        decals/stain01bwet.wl    = { t_q4basematerials_idtemp=! }
+        decals/stain03.wl    = { t_q4basematerials_idtemp=! }
+        decals/stainwall.wl    = { t_q4basematerials_idtemp=! }
+        decals/stainwallfade.wl    = { t_q4basematerials_idtemp=! }
+        decals/wirejumble.wl    = { t_q4basematerials_idtemp=! }
+        glass/breakyglass3_nvp.wl    = { t_q4basematerials_idtemp=! }
+        glass/glass1.wl    = { t_q4basematerials_idtemp=! }
+      }
+      invisible.txlist =
+      {
+        common/caulk.wl    = { t_q4basematerials_invisible=! }
+        common/clip.wl    = { t_q4basematerials_invisible=! }
+        common/clip_moveable.wl    = { t_q4basematerials_invisible=! }
+        common/collision.wl    = { t_q4basematerials_invisible=! }
+        common/collision_glass.wl    = { t_q4basematerials_invisible=! }
+        common/conveyor.wl    = { t_q4basematerials_invisible=! }
+        common/cushion.wl    = { t_q4basematerials_invisible=! }
+        common/entityGui.wl    = { t_q4basematerials_invisible=! }
+        common/entityGui2.wl    = { t_q4basematerials_invisible=! }
+        common/entityGui3.wl    = { t_q4basematerials_invisible=! }
+        common/entityGui4.wl    = { t_q4basematerials_invisible=! }
+        common/entityGui5.wl    = { t_q4basematerials_invisible=! }
+        common/entityGui6.wl    = { t_q4basematerials_invisible=! }
+        common/fly_clip.wl    = { t_q4basematerials_invisible=! }
+        common/full_clip.wl    = { t_q4basematerials_invisible=! }
+        common/itemnodrop.wl    = { t_q4basematerials_invisible=! }
+        common/ladder.wl    = { t_q4basematerials_invisible=! }
+        common/largeshot_clip.wl    = { t_q4basematerials_invisible=! }
+        common/mirror.wl    = { t_q4basematerials_invisible=! }
+        common/monster_clip.wl    = { t_q4basematerials_invisible=! }
+        common/monster_full_clip.wl    = { t_q4basematerials_invisible=! }
+        common/moveable_clip.wl    = { t_q4basematerials_invisible=! }
+        common/nodraw.wl    = { t_q4basematerials_invisible=! }
+        common/nodrawsolid.wl    = { t_q4basematerials_invisible=! }
+        common/noimpact.wl    = { t_q4basematerials_invisible=! }
+        common/particle.wl    = { t_q4basematerials_invisible=! }
+        common/player_clip.wl    = { t_q4basematerials_invisible=! }
+        common/shadow.wl    = { t_q4basematerials_invisible=! }
+        common/shadow2.wl    = { t_q4basematerials_invisible=! }
+        common/shadowcollision.wl    = { t_q4basematerials_invisible=! }
+        common/shot_clip.wl    = { t_q4basematerials_invisible=! }
+        common/skycaulk.wl    = { t_q4basematerials_invisible=! }
+        common/slick.wl    = { t_q4basematerials_invisible=! }
+        common/speaker.wl    = { t_q4basematerials_invisible=! }
+        common/trigair.wl    = { t_q4basematerials_invisible=! }
+        common/trigentityname.wl    = { t_q4basematerials_invisible=! }
+        common/trigentityname_once.wl    = { t_q4basematerials_invisible=! }
+        common/trigfade.wl    = { t_q4basematerials_invisible=! }
+        common/trigger.wl    = { t_q4basematerials_invisible=! }
+        common/triggui.wl    = { t_q4basematerials_invisible=! }
+        common/trighurt.wl    = { t_q4basematerials_invisible=! }
+        common/trigmulti.wl    = { t_q4basematerials_invisible=! }
+        common/trigonce.wl    = { t_q4basematerials_invisible=! }
+        common/trigrelay.wl    = { t_q4basematerials_invisible=! }
+        common/trigshotclip.wl    = { t_q4basematerials_invisible=! }
+        common/trigtimer.wl    = { t_q4basematerials_invisible=! }
+        common/vehicle_clip.wl    = { t_q4basematerials_invisible=! }
+        editor/aasobstacle.wl    = { t_q4basematerials_invisible=! }
+        editor/aassolid.wl    = { t_q4basematerials_invisible=! }
+        editor/notacticalfeatures.wl    = { t_q4basematerials_invisible=! }
+        editor/visportal.wl    = { t_q4basematerials_invisible=! }
+        editor/visportal_distance_100_200.wl    = { t_q4basematerials_invisible=! }
+        editor/visportal_distance_128_256.wl    = { t_q4basematerials_invisible=! }
+        editor/visportal_distance_192_384.wl    = { t_q4basematerials_invisible=! }
+        editor/visportal_distance_256_512.wl    = { t_q4basematerials_invisible=! }
+        editor/visportal_distance_320_640.wl    = { t_q4basematerials_invisible=! }
+        editor/visportal_distance_512_768.wl    = { t_q4basematerials_invisible=! }
+      }
+      marine_guis.txlist =
+      {
+        holo_guis/marine/holo_sign1.wl    = { t_q4basematerials_marine_guis=! }
+        holo_guis/marine/mcc_holobase.wl    = { t_q4basematerials_marine_guis=! }
+        holo_guis/marine/mcc_holoblack.wl    = { t_q4basematerials_marine_guis=! }
+        holo_guis/marine/mcc_holomap.wl    = { t_q4basematerials_marine_guis=! }
+      }
+      medlab.txlist =
+      {
+        medlabs/TmedTrim_02_b.wl    = { a="q4base" n="medlabs/TmedTrim_02_b_d" }
+        medlabs/TmedTrim_02_b_ut.wl    = { t_q4basematerials_medlab=! }
+        medlabs/blue_wall.wl    = { a="q4base" n="medlabs/blue_wall_d" }
+        medlabs/cap_lg.wl    = { a="q4base" n="medlabs/cap_lg_d" }
+        medlabs/chad_panel_2b.wl    = { a="q4base" n="medlabs/chad_panel_2b_d" }
+        medlabs/chad_panel_3b.wl    = { a="q4base" n="medlabs/chad_panel_3b_d" }
+        medlabs/chad_panel_4b.wl    = { a="q4base" n="medlabs/chad_panel_4b_d" }
+        medlabs/chad_panel_5.wl    = { a="q4base" n="medlabs/chad_panel_5_d" }
+        medlabs/chad_panel_5_ut.wl    = { t_q4basematerials_medlab=! }
+        medlabs/chad_panel_5rim.wl    = { a="q4base" n="medlabs/chad_panel_5rim_d" }
+        medlabs/chad_panel_5rim_ut.wl    = { t_q4basematerials_medlab=! }
+        medlabs/chad_panel_6.wl    = { a="q4base" n="medlabs/chad_panel_6_d" }
+        medlabs/chad_panel_7.wl    = { a="q4base" n="medlabs/chad_panel_7_d" }
+        medlabs/chad_panel_7b.wl    = { a="q4base" n="medlabs/chad_panel_7b_d" }
+  //      medlabs/chad_pipe_2.wl    = { a="q4base" n="medlabs/chad_pipe_2_d" }
+  //      medlabs/chicklite.wl    = { t_q4basematerials_medlab=! }
+        medlabs/conv_model_tiles2.wl    = { a="q4base" n="medlabs/conv_model_tiles2_d" }
+        medlabs/conv_model_tiles2_ut.wl    = { t_q4basematerials_medlab=! }
+        medlabs/doorglow.wl    = { t_q4basematerials_medlab=! }
+        medlabs/elevator_floor.wl    = { a="q4base" n="medlabs/elevator_floor_d" }
+        medlabs/elevator_trim1.wl    = { t_q4basematerials_medlab=! }
+        medlabs/elevator_wall.wl    = { t_q4basematerials_medlab=! }
+        medlabs/flare_lblue.wl    = { t_q4basematerials_medlab=! }
+        medlabs/flare_lblue_tiny.wl    = { t_q4basematerials_medlab=! }
+        medlabs/flare_mini_green.wl    = { t_q4basematerials_medlab=! }
+        medlabs/flare_mini_lightgreen.wl    = { t_q4basematerials_medlab=! }
+        medlabs/flare_mini_orange.wl    = { t_q4basematerials_medlab=! }
+        medlabs/flare_mini_red.wl    = { t_q4basematerials_medlab=! }
+  //      medlabs/fluid_green_bubble_slow.wl    = { t_q4basematerials_medlab=! }
+  //      medlabs/fluid_orange_bubble.wl    = { t_q4basematerials_medlab=! }
+  //      medlabs/fluid_orange_bubble_slow.wl    = { t_q4basematerials_medlab=! }
+        medlabs/gore_floor_medlabs.wl    = { t_q4basematerials_medlab=! }
+        medlabs/greymetal.wl    = { a="q4base" n="medlabs/greymetal_d" }
+        medlabs/greymetal2.wl    = { a="q4base" n="medlabs/greymetal2_d" }
+        medlabs/greymetal2_noshadows.wl    = { t_q4basematerials_medlab=! }
+        medlabs/mdl_CeilingTrim_01.wl    = { a="q4base" n="medlabs/mdl_CeilingTrim_01_d" }
+        medlabs/mdl_CeilingTrim_01_ut.wl    = { t_q4basematerials_medlab=! }
+        medlabs/mdl_Ceiling_01.wl    = { a="q4base" n="medlabs/mdl_Ceiling_01_d" }
+        medlabs/mdl_Ceiling_02.wl    = { a="q4base" n="medlabs/mdl_Ceiling_02_d" }
+        medlabs/mdl_Ceiling_02_ut.wl    = { t_q4basematerials_medlab=! }
+        medlabs/mdl_FloorTrim_01.wl    = { a="q4base" n="medlabs/mdl_FloorTrim_01_d" }
+        medlabs/mdl_Floor_01.wl    = { a="q4base" n="medlabs/mdl_Floor_01_d" }
+        medlabs/mdl_Floor_02.wl    = { a="q4base" n="medlabs/mdl_Floor_02_d" }
+        medlabs/mdl_Floor_03.wl    = { a="q4base" n="medlabs/mdl_Floor_03_d" }
+        medlabs/mdl_pipes1.wl    = { a="q4base" n="medlabs/mdl_pipes1_d" }
+        medlabs/mdl_pipes4.wl    = { a="q4base" n="medlabs/mdl_pipes4_d" }
+        medlabs/mdl_wall1.wl    = { a="q4base" n="medlabs/mdl_wall1_d" }
+  //      medlabs/mdl_wall2.wl    = { a="q4base" n="medlabs/mdl_wall2_d" }
+        medlabs/mdl_wall3.wl    = { a="q4base" n="medlabs/mdl_wall3_d" }
+        medlabs/mdl_wall4.wl    = { a="q4base" n="medlabs/mdl_wall4_d" }
+  //      medlabs/mdl_walltrim1.wl    = { a="q4base" n="medlabs/mdl_walltrim1_d" }
+        medlabs/mdl_walltrim2.wl    = { a="q4base" n="medlabs/mdl_walltrim2_d" }
+        medlabs/mdl_walltrim3.wl    = { a="q4base" n="medlabs/mdl_walltrim3_d" }
+        medlabs/mdl_walltrim3_ut.wl    = { t_q4basematerials_medlab=! }
+        medlabs/mdl_walltrim5.wl    = { a="q4base" n="medlabs/mdl_walltrim5_d" }
+        medlabs/mdl_walltrim6.wl    = { a="q4base" n="medlabs/mdl_walltrim6_d" }
+        medlabs/mdl_walltrim7.wl    = { a="q4base" n="medlabs/mdl_walltrim7_d" }
+        medlabs/mdl_walltrim8.wl    = { a="q4base" n="medlabs/mdl_walltrim8_d" }
+        medlabs/med1_ceiling1.wl    = { a="q4base" n="medlabs/med1_ceiling1_d" }
+        medlabs/med1_floor1.wl    = { a="q4base" n="medlabs/med1_floor1_d" }
+        medlabs/med1_trim1.wl    = { a="q4base" n="medlabs/med1_trim1_d" }
+        medlabs/med1_trim2.wl    = { a="q4base" n="medlabs/med1_trim2_d" }
+        medlabs/med1_trim3.wl    = { a="q4base" n="medlabs/med1_trim3_d" }
+  //      medlabs/med1_wall1.wl    = { a="q4base" n="medlabs/med1_wall1_d" }
+  //      medlabs/med1_wall1J.wl    = { a="q4base" n="medlabs/med1_wall1J_d" }
+  //      medlabs/med1_wall1b.wl    = { a="q4base" n="medlabs/med1_wall1b_d" }
+  //      medlabs/med1_wall1c.wl    = { a="q4base" n="medlabs/med1_wall1c_d" }
+  //      medlabs/med1_wall1f.wl    = { a="q4base" n="medlabs/med1_wall1f_d" }
+        medlabs/med1_wall1g.wl    = { a="q4base" n="medlabs/med1_wall1g_d" }
+        medlabs/med1_wall1g_ut.wl    = { t_q4basematerials_medlab=! }
+        medlabs/med1_wall1h.wl    = { a="q4base" n="medlabs/med1_wall1h_d" }
+  //      medlabs/med1_wall2.wl    = { a="q4base" n="medlabs/med1_wall2_d" }
+        medlabs/med2_ceiling1.wl    = { a="q4base" n="medlabs/med2_ceiling1_d" }
+        medlabs/med2_ceiling1_ut.wl    = { t_q4basematerials_medlab=! }
+        medlabs/med2_trim1.wl    = { a="q4base" n="medlabs/med2_trim1_d" }
+        medlabs/med2_trim2.wl    = { a="q4base" n="medlabs/med2_trim2_d" }
+        medlabs/med2_trim3.wl    = { a="q4base" n="medlabs/med2_trim3_d" }
+        medlabs/med2_wall1.wl    = { a="q4base" n="medlabs/med2_wall1_d" }
+        medlabs/med2_wall2.wl    = { a="q4base" n="medlabs/med2_wall2_d" }
+        medlabs/med2_wall2_ut.wl    = { t_q4basematerials_medlab=! }
+        medlabs/med2_wall3.wl    = { a="q4base" n="medlabs/med2_wall3_d" }
+        medlabs/med2_wall4.wl    = { a="q4base" n="medlabs/med2_wall4_d" }
+        medlabs/med2_wall4_ut.wl    = { t_q4basematerials_medlab=! }
+        medlabs/med2_wall5.wl    = { a="q4base" n="medlabs/med2_wall5_d" }
+        medlabs/med3_ceiling1.wl    = { a="q4base" n="medlabs/med3_ceiling1_d" }
+        medlabs/med3_ceiling1_ut.wl    = { t_q4basematerials_medlab=! }
+        medlabs/med3_floor1.wl    = { a="q4base" n="medlabs/med3_floor1_d" }
+        medlabs/med3_trim1.wl    = { a="q4base" n="medlabs/med3_trim1_d" }
+        medlabs/med3_trim2.wl    = { a="q4base" n="medlabs/med3_trim2_d" }
+  //      medlabs/med3_trim3.wl    = { a="q4base" n="medlabs/med3_trim3_d" }
+        medlabs/med3_wall1.wl    = { a="q4base" n="medlabs/med3_wall1_d" }
+  //      medlabs/med3_wall2.wl    = { a="q4base" n="medlabs/med3_wall2_d" }
+  //      medlabs/med3_wall3.wl    = { a="q4base" n="medlabs/med3_wall3_d" }
+        medlabs/med3_wall4.wl    = { a="q4base" n="medlabs/med3_wall4_d" }
+  //      medlabs/med3_wall5.wl    = { a="q4base" n="medlabs/med3_wall5_d" }
+        medlabs/med4_ceiling1.wl    = { a="q4base" n="medlabs/med4_ceiling1_d" }
+        medlabs/med4_ceiling1_ut.wl    = { t_q4basematerials_medlab=! }
+        medlabs/med4_ceiling2.wl    = { a="q4base" n="medlabs/med4_ceiling2_d" }
+        medlabs/med4_trim1.wl    = { a="q4base" n="medlabs/med4_trim1_d" }
+        medlabs/med4_trim2.wl    = { a="q4base" n="medlabs/med4_trim2_d" }
+        medlabs/med4_trim3.wl    = { a="q4base" n="medlabs/med4_trim3_d" }
+        medlabs/med4_wall1.wl    = { a="q4base" n="medlabs/med4_wall1_d" }
+        medlabs/med4_wall1_ut.wl    = { t_q4basematerials_medlab=! }
+  //      medlabs/med4_wall2.wl    = { a="q4base" n="medlabs/med4_wall2_d" }
+  //      medlabs/med4_wall3.wl    = { a="q4base" n="medlabs/med4_wall3_d" }
+        medlabs/med4_wall4.wl    = { a="q4base" n="medlabs/med4_wall4_d" }
+        medlabs/med_miscpanel_01.wl    = { a="q4base" n="medlabs/med_miscpanel_01_d" }
+        medlabs/med_miscpanel_02.wl    = { a="q4base" n="medlabs/med_miscpanel_02_d" }
+        medlabs/med_miscpanel_03.wl    = { a="q4base" n="medlabs/med_miscpanel_03_d" }
+        medlabs/med_miscpanel_04.wl    = { a="q4base" n="medlabs/med_miscpanel_04_d" }
+        medlabs/med_miscpanel_05.wl    = { a="q4base" n="medlabs/med_miscpanel_05_d" }
+        medlabs/med_miscpanel_06.wl    = { a="q4base" n="medlabs/med_miscpanel_06_d" }
+        medlabs/med_miscpanel_09.wl    = { a="q4base" n="medlabs/med_miscpanel_09_d" }
+        medlabs/med_miscpanel_1.wl    = { a="q4base" n="medlabs/med_miscpanel_1_d" }
+        medlabs/med_miscpanel_10.wl    = { a="q4base" n="medlabs/med_miscpanel_10_d" }
+  //      medlabs/med_miscpanel_11.wl    = { a="q4base" n="medlabs/med_miscpanel_11_d" }
+        medlabs/med_miscpanel_1_ut.wl    = { t_q4basematerials_medlab=! }
+        medlabs/med_miscpanel_2.wl    = { a="q4base" n="medlabs/med_miscpanel_2_d" }
+        medlabs/med_miscpanel_3.wl    = { a="q4base" n="medlabs/med_miscpanel_3_d" }
+        medlabs/med_miscpanel_3_ut.wl    = { t_q4basematerials_medlab=! }
+        medlabs/med_miscpanel_4.wl    = { a="q4base" n="medlabs/med_miscpanel_4_d" }
+        medlabs/med_miscpanel_5.wl    = { a="q4base" n="medlabs/med_miscpanel_5_d" }
+        medlabs/med_miscpanel_5_ut.wl    = { t_q4basematerials_medlab=! }
+        medlabs/med_miscpanel_6.wl    = { a="q4base" n="medlabs/med_miscpanel_6_d" }
+        medlabs/med_miscpanel_7.wl    = { a="q4base" n="medlabs/med_miscpanel_7_d" }
+        medlabs/med_miscpanel_7_ut.wl    = { t_q4basematerials_medlab=! }
+        medlabs/medbeam.wl    = { a="q4base" n="medlabs/medbeam_d" }
+        medlabs/medbeam_ut.wl    = { t_q4basematerials_medlab=! }
+        medlabs/medglass.wl    = { t_q4basematerials_medlab=! }
+        medlabs/medpipecap.wl    = { a="q4base" n="medlabs/medpipecap_d" }
+        medlabs/medsteptop.wl    = { a="q4base" n="medlabs/medsteptop_d" }
+        medlabs/medtile01.wl    = { t_q4basematerials_medlab=! }
+        medlabs/pipe_ribbed.wl    = { a="q4base" n="medlabs/pipe_ribbed_d" }
+        medlabs/pipe_ribbed2.wl    = { a="q4base" n="medlabs/pipe_ribbed2_d" }
+        medlabs/pipe_ribbed_nonsolid.wl    = { t_q4basematerials_medlab=! }
+        medlabs/pipe_ribbed_ut.wl    = { t_q4basematerials_medlab=! }
+        medlabs/ren_64_floor_1.wl    = { a="q4base" n="medlabs/ren_64_floor_1_d" }
+        medlabs/ren_64_floor_2.wl    = { a="q4base" n="medlabs/ren_64_floor_2_d" }
+        medlabs/ren_floor_trim_1.wl    = { a="q4base" n="medlabs/ren_floor_trim_1_d" }
+        medlabs/ren_floor_trim_1_ut.wl    = { t_q4basematerials_medlab=! }
+        medlabs/ren_floor_trim_2.wl    = { a="q4base" n="medlabs/ren_floor_trim_2_d" }
+        medlabs/roof_track_p.wl    = { a="q4base" n="medlabs/roof_track_p_d" }
+        medlabs/rpanel_2_p.wl    = { a="q4base" n="medlabs/rpanel_2_p_d" }
+        medlabs/rpanel_3_p.wl    = { a="q4base" n="medlabs/rpanel_3_p_d" }
+        medlabs/rpanel_4a.wl    = { t_q4basematerials_medlab=! }
+        medlabs/sflpanel4a.wl    = { t_q4basematerials_medlab=! }
+        medlabs/steptrim.wl    = { a="q4base" n="medlabs/steptrim_d" }
+        medlabs/stetile1green.wl    = { t_q4basematerials_medlab=! }
+        medlabs/stetilepygrip4.wl    = { t_q4basematerials_medlab=! }
+  //      medlabs/tmed4floor_1.wl    = { a="q4base" n="medlabs/tmed4floor_1_d" }
+        medlabs/tmedtrim_131.wl    = { a="q4base" n="medlabs/tmedtrim_131_d" }
+        medlabs/tmedtrim_133.wl    = { a="q4base" n="medlabs/tmedtrim_133_d" }
+        medlabs/tmedwall_1010.wl    = { a="q4base" n="medlabs/tmedwall_1010_d" }
+        medlabs/tmedwall_1010_ut.wl    = { t_q4basematerials_medlab=! }
+        medlabs/tmedwall_102.wl    = { a="q4base" n="medlabs/tmedwall_102_d" }
+        medlabs/tmedwall_102_ut.wl    = { t_q4basematerials_medlab=! }
+        medlabs/tmedwall_107.wl    = { a="q4base" n="medlabs/tmedwall_107_d" }
+  //      medlabs/tmedwall_108.wl    = { a="q4base" n="medlabs/tmedwall_108_d" }
+  //      medlabs/tmedwall_109.wl    = { a="q4base" n="medlabs/tmedwall_109_d" }
+        medlabs/tmedwall_122.wl    = { a="q4base" n="medlabs/tmedwall_122_d" }
+  //      medlabs/tmedwall_131.wl    = { a="q4base" n="medlabs/tmedwall_131_d" }
+  //      medlabs/tmedwall_132.wl    = { a="q4base" n="medlabs/tmedwall_132_d" }
+        medlabs/tmedwall_132b.wl    = { a="q4base" n="medlabs/tmedwall_132b_d" }
+        medlabs/tmedwall_133.wl    = { a="q4base" n="medlabs/tmedwall_133_d" }
+  //      medlabs/tr_walltrim_02a.wl    = { a="q4base" n="medlabs/tr_walltrim_02a_d" }
+        medlabs/tr_walltrim_03a.wl    = { a="q4base" n="medlabs/tr_walltrim_03a_d" }
+        medlabs/tr_walltrim_06.wl    = { a="q4base" n="medlabs/tr_walltrim_06_d" }
+        medlabs/tubearmsplatform_beamside.wl    = { t_q4basematerials_medlab=! }
+        medlabs/tubearmsplatform_beamtopbottom.wl    = { t_q4basematerials_medlab=! }
+        medlabs/tubearmsplatform_fastener.wl    = { t_q4basematerials_medlab=! }
+        medlabs/tubearmsplatform_platformtopbottom.wl    = { t_q4basematerials_medlab=! }
+        medlabs/tubearmsplatform_platformtrim.wl    = { t_q4basematerials_medlab=! }
+        medlabs/vol_lblue_112.wl    = { t_q4basematerials_medlab=! }
+        medlabs/vol_lblue_128.wl    = { t_q4basematerials_medlab=! }
+        medlabs/vol_lblue_32.wl    = { t_q4basematerials_medlab=! }
+        medlabs/vol_lblue_48.wl    = { t_q4basematerials_medlab=! }
+        medlabs/vol_lblue_64.wl    = { t_q4basematerials_medlab=! }
+        medlabs/vol_lblue_96.wl    = { t_q4basematerials_medlab=! }
+        medlabs/vol_lgreen_32.wl    = { t_q4basematerials_medlab=! }
+        medlabs/vol_lgreen_48.wl    = { t_q4basematerials_medlab=! }
+        medlabs/vol_lgreen_64.wl    = { t_q4basematerials_medlab=! }
+        medlabs/vol_lgreen_80.wl    = { t_q4basematerials_medlab=! }
+        medlabs/vol_orange_32.wl    = { t_q4basematerials_medlab=! }
+        medlabs/vol_orange_48.wl    = { t_q4basematerials_medlab=! }
+        medlabs/vol_orange_64.wl    = { t_q4basematerials_medlab=! }
+        medlabs/wall01_redo.wl    = { a="q4base" n="medlabs/wall01_redo_d" }
+        medlabs/wall1.wl    = { a="q4base" n="medlabs/wall1_d" }
+      }
+      mptextures.txlist =
+      {
+  //      mpceiling1.wl    = { a="q4base" n="mpceiling1_d" }
+  //      mpfloor1.wl    = { a="q4base" n="mpfloor1_d" }
+  //      mpfloor2.wl    = { a="q4base" n="mpfloor2_d" }
+        mptextures/ctf5_crusher.wl    = { t_q4basematerials_mptextures=! }
+  //      mptextures/floor2_char.wl    = { t_q4basematerials_mptextures=! }
+        mptextures/floor2_new.wl    = { t_q4basematerials_mptextures=! }
+        mptextures/mp_a.wl    = { t_q4basematerials_mptextures=! }
+        mptextures/mp_b.wl    = { t_q4basematerials_mptextures=! }
+        mptextures/mp_b_g.wl    = { t_q4basematerials_mptextures=! }
+        mptextures/mp_b_g_marine.wl    = { t_q4basematerials_mptextures=! }
+        mptextures/mp_b_g_strogg.wl    = { t_q4basematerials_mptextures=! }
+        mptextures/mp_c.wl    = { t_q4basematerials_mptextures=! }
+        mptextures/mp_c_g.wl    = { t_q4basematerials_mptextures=! }
+        mptextures/mp_c_g_marine.wl    = { t_q4basematerials_mptextures=! }
+        mptextures/mp_c_g_strogg.wl    = { t_q4basematerials_mptextures=! }
+        mptextures/mp_d.wl    = { t_q4basematerials_mptextures=! }
+        mptextures/mp_d_g.wl    = { t_q4basematerials_mptextures=! }
+        mptextures/mp_d_g_marine.wl    = { t_q4basematerials_mptextures=! }
+        mptextures/mp_d_g_strogg.wl    = { t_q4basematerials_mptextures=! }
+        mptextures/mp_d_stroy.wl    = { t_q4basematerials_mptextures=! }
+        mptextures/mp_e.wl    = { t_q4basematerials_mptextures=! }
+        mptextures/mp_e_g.wl    = { t_q4basematerials_mptextures=! }
+        mptextures/mp_e_g_marine.wl    = { t_q4basematerials_mptextures=! }
+        mptextures/mp_e_g_strogg.wl    = { t_q4basematerials_mptextures=! }
+        mptextures/mp_f.wl    = { t_q4basematerials_mptextures=! }
+        mptextures/mp_f_ba.wl    = { t_q4basematerials_mptextures=! }
+        mptextures/mp_f_ba_g.wl    = { t_q4basematerials_mptextures=! }
+        mptextures/mp_f_g.wl    = { t_q4basematerials_mptextures=! }
+        mptextures/mp_f_g_marine.wl    = { t_q4basematerials_mptextures=! }
+        mptextures/mp_f_g_red.wl    = { t_q4basematerials_mptextures=! }
+        mptextures/mp_f_g_strogg.wl    = { t_q4basematerials_mptextures=! }
+        mptextures/mp_g.wl    = { t_q4basematerials_mptextures=! }
+        mptextures/mp_g_ba.wl    = { t_q4basematerials_mptextures=! }
+        mptextures/mp_g_new.wl    = { t_q4basematerials_mptextures=! }
+        mptextures/mp_h.wl    = { t_q4basematerials_mptextures=! }
+        mptextures/mp_h_g.wl    = { t_q4basematerials_mptextures=! }
+        mptextures/mp_h_g_marine.wl    = { t_q4basematerials_mptextures=! }
+        mptextures/mp_h_g_strogg.wl    = { t_q4basematerials_mptextures=! }
+        mptextures/mp_i.wl    = { t_q4basematerials_mptextures=! }
+        mptextures/mp_i_ba.wl    = { t_q4basematerials_mptextures=! }
+        mptextures/mp_i_g.wl    = { t_q4basematerials_mptextures=! }
+        mptextures/mp_i_g_marine.wl    = { t_q4basematerials_mptextures=! }
+        mptextures/mp_i_g_strogg.wl    = { t_q4basematerials_mptextures=! }
+        mptextures/mp_i_stroy.wl    = { t_q4basematerials_mptextures=! }
+        mptextures/mp_j.wl    = { t_q4basematerials_mptextures=! }
+        mptextures/mp_k.wl    = { t_q4basematerials_mptextures=! }
+  //      mptextures/mp_linepulse.wl    = { t_q4basematerials_mptextures=! }
+  //      mptextures/mptexture_a2.wl    = { t_q4basematerials_mptextures=! }
+        mptextures/mptexture_a3.wl    = { t_q4basematerials_mptextures=! }
+  //      mptextures/mptexture_b2.wl    = { t_q4basematerials_mptextures=! }
+        mptextures/mptexture_b3.wl    = { t_q4basematerials_mptextures=! }
+  //      mptextures/mptexture_c2.wl    = { t_q4basematerials_mptextures=! }
+        mptextures/mptexture_c2_ba.wl    = { t_q4basematerials_mptextures=! }
+  //      mptextures/mptexture_c3.wl    = { t_q4basematerials_mptextures=! }
+        mptextures/mptexture_d2.wl    = { t_q4basematerials_mptextures=! }
+        mptextures/mptexture_d3.wl    = { t_q4basematerials_mptextures=! }
+  //      mptextures/mptexture_e2.wl    = { t_q4basematerials_mptextures=! }
+        mptextures/mptexture_e3.wl    = { t_q4basematerials_mptextures=! }
+  //      mptextures/mptexture_f2.wl    = { t_q4basematerials_mptextures=! }
+        mptextures/mptexture_f2_ba.wl    = { t_q4basematerials_mptextures=! }
+  //      mptextures/mptexture_f2_stroy.wl    = { t_q4basematerials_mptextures=! }
+        mptextures/mptexture_f3.wl    = { t_q4basematerials_mptextures=! }
+        mptextures/mptexture_g2.wl    = { t_q4basematerials_mptextures=! }
+  //      mptextures/mptexture_g3.wl    = { t_q4basematerials_mptextures=! }
+        mptextures/mptexture_g3_ba.wl    = { t_q4basematerials_mptextures=! }
+        mptextures/mptexture_g3_new.wl    = { t_q4basematerials_mptextures=! }
+        mptextures/mptexture_h2.wl    = { t_q4basematerials_mptextures=! }
+        mptextures/mptexture_h2_g.wl    = { t_q4basematerials_mptextures=! }
+        mptextures/mptexture_h2_g_marine.wl    = { t_q4basematerials_mptextures=! }
+        mptextures/mptexture_h2_g_strogg.wl    = { t_q4basematerials_mptextures=! }
+  //      mptextures/mptexture_h3.wl    = { t_q4basematerials_mptextures=! }
+        mptextures/mptexture_i2.wl    = { t_q4basematerials_mptextures=! }
+        mptextures/mptexture_i3.wl    = { t_q4basematerials_mptextures=! }
+        mptextures/mptexture_j2.wl    = { t_q4basematerials_mptextures=! }
+        mptextures/mptexture_k2.wl    = { t_q4basematerials_mptextures=! }
+        mptextures/mptexture_k2_ba.wl    = { t_q4basematerials_mptextures=! }
+        mptextures/mptexture_k2_g.wl    = { t_q4basematerials_mptextures=! }
+        mptextures/mptexture_k2_g_marine.wl    = { t_q4basematerials_mptextures=! }
+        mptextures/mptexture_k2_g_strogg.wl    = { t_q4basematerials_mptextures=! }
+        mptextures/trim_h1_ba.wl    = { t_q4basematerials_mptextures=! }
+        mptextures/trim_h1_char.wl    = { t_q4basematerials_mptextures=! }
+        mptextures/trim_h1_stroy.wl    = { t_q4basematerials_mptextures=! }
+  //      mptextures/trim_h2_char_g.wl    = { t_q4basematerials_mptextures=! }
+  //      mptextures/trim_h2_char_marine.wl    = { t_q4basematerials_mptextures=! }
+  //      mptextures/trim_h2_char_strogg.wl    = { t_q4basematerials_mptextures=! }
+        mptextures/trim_h3.wl    = { t_q4basematerials_mptextures=! }
+  //      mptextures/trim_h3_ba.wl    = { t_q4basematerials_mptextures=! }
+  //      mptextures/trim_h3_ba_2.wl    = { t_q4basematerials_mptextures=! }
+        mptextures/trim_h3_marine.wl    = { t_q4basematerials_mptextures=! }
+        mptextures/trim_h3_strogg.wl    = { t_q4basematerials_mptextures=! }
+        mptextures/trim_h6_blue_pulse.wl    = { t_q4basematerials_mptextures=! }
+        mptextures/trim_h6_char_g.wl    = { t_q4basematerials_mptextures=! }
+        mptextures/trim_h6_char_marine.wl    = { t_q4basematerials_mptextures=! }
+        mptextures/trim_h6_char_strogg.wl    = { t_q4basematerials_mptextures=! }
+        mptextures/trim_h6_glow.wl    = { t_q4basematerials_mptextures=! }
+        mptextures/trim_h6_marine.wl    = { t_q4basematerials_mptextures=! }
+        mptextures/trim_h6_strogg.wl    = { t_q4basematerials_mptextures=! }
+        mptextures/trim_h7_ba.wl    = { t_q4basematerials_mptextures=! }
+        mptextures/trim_h7_stroy.wl    = { t_q4basematerials_mptextures=! }
+        mptextures/trim_h8_ba.wl    = { t_q4basematerials_mptextures=! }
+        mptextures/trim_h9_char_g.wl    = { t_q4basematerials_mptextures=! }
+        mptextures/trim_h9_char_marine.wl    = { t_q4basematerials_mptextures=! }
+        mptextures/trim_h9_char_strogg.wl    = { t_q4basematerials_mptextures=! }
+  //      mptextures/trim_h9_marine.wl    = { t_q4basematerials_mptextures=! }
+  //      mptextures/trim_h9_strogg.wl    = { t_q4basematerials_mptextures=! }
+        mptextures/trim_v1.wl    = { t_q4basematerials_mptextures=! }
+        mptextures/trim_v1_char.wl    = { t_q4basematerials_mptextures=! }
+        mptextures/trim_v1_char_marine.wl    = { t_q4basematerials_mptextures=! }
+        mptextures/trim_v1_char_strogg.wl    = { t_q4basematerials_mptextures=! }
+        mptextures/trim_v1_marine.wl    = { t_q4basematerials_mptextures=! }
+        mptextures/trim_v1_strogg.wl    = { t_q4basematerials_mptextures=! }
+        mptextures/trim_v2_char.wl    = { t_q4basematerials_mptextures=! }
+        mptextures/vertical_1_ba.wl    = { t_q4basematerials_mptextures=! }
+        mptextures/vertical_1_stroy.wl    = { t_q4basematerials_mptextures=! }
+        mptextures/vertical_5_ba.wl    = { t_q4basematerials_mptextures=! }
+        mptextures/vertical_5_char.wl    = { t_q4basematerials_mptextures=! }
+        mptextures/vertical_5_new.wl    = { t_q4basematerials_mptextures=! }
+        mptextures/vertical_5_new_grn.wl    = { t_q4basematerials_mptextures=! }
+        mptextures/vertical_5_stroy.wl    = { t_q4basematerials_mptextures=! }
+        mptextures/vertical_6_char.wl    = { t_q4basematerials_mptextures=! }
+        mptextures/vertical_7_char.wl    = { t_q4basematerials_mptextures=! }
+        mptextures/wall1_7_char.wl    = { t_q4basematerials_mptextures=! }
+        mptextures/wall1_stroy.wl    = { t_q4basematerials_mptextures=! }
+        mptextures/wall6_stroy.wl    = { t_q4basematerials_mptextures=! }
+        mptextures/wall6_stroy_char.wl    = { t_q4basematerials_mptextures=! }
+  //      mptrim_h1.wl    = { a="q4base" n="mptrim_h1_d" }
+  //      mptrim_h2.wl    = { a="q4base" n="mptrim_h2_d" }
+  //      mptrim_h4.wl    = { a="q4base" n="mptrim_h4_d" }
+  //      mptrim_h5.wl    = { a="q4base" n="mptrim_h5_d" }
+  //      mptrim_h7.wl    = { a="q4base" n="mptrim_h7_d" }
+  //      mptrim_h8.wl    = { a="q4base" n="mptrim_h8_d" }
+  //      mptrim_v2.wl    = { a="q4base" n="mptrim_v2_d" }
+  //      mpvertical_1.wl    = { a="q4base" n="mpvertical_1_d" }
+  //      mpvertical_2.wl    = { a="q4base" n="mpvertical_2_d" }
+  //      mpvertical_3.wl    = { a="q4base" n="mpvertical_3_d" }
+  //      mpvertical_4.wl    = { a="q4base" n="mpvertical_4_d" }
+  //      mpvertical_5.wl    = { a="q4base" n="mpvertical_5_d" }
+  //      mpvertical_6.wl    = { a="q4base" n="mpvertical_6_d" }
+  //      mpvertical_7.wl    = { a="q4base" n="mpvertical_7_d" }
+  //      mpvertical_8.wl    = { a="q4base" n="mpvertical_8_d" }
+  //      mpvertical_9.wl    = { a="q4base" n="mpvertical_9_d" }
+  //      mpwall1.wl    = { a="q4base" n="mpwall1_d" }
+  //      mpwall2.wl    = { a="q4base" n="mpwall2_d" }
+  //      mpwall3.wl    = { a="q4base" n="mpwall3_d" }
+  //      mpwall4.wl    = { a="q4base" n="mpwall4_d" }
+  //      mpwall5.wl    = { a="q4base" n="mpwall5_d" }
+  //      mpwall6.wl    = { a="q4base" n="mpwall6_d" }
+      }
+      multiplayer.txlist =
+      {
+        mp/awards/assist.wl    = { t_q4basematerials_multiplayer=! }
+        mp/awards/capture.wl    = { t_q4basematerials_multiplayer=! }
+        mp/awards/combo_kill.wl    = { t_q4basematerials_multiplayer=! }
+        mp/awards/defense.wl    = { t_q4basematerials_multiplayer=! }
+        mp/awards/excellent.wl    = { t_q4basematerials_multiplayer=! }
+        mp/awards/holy_shit.wl    = { t_q4basematerials_multiplayer=! }
+        mp/awards/humiliation.wl    = { t_q4basematerials_multiplayer=! }
+        mp/awards/impressive.wl    = { t_q4basematerials_multiplayer=! }
+        mp/awards/rampage.wl    = { t_q4basematerials_multiplayer=! }
+  //      mp/ctf_flag.wl    = { t_q4basematerials_multiplayer=! }
+        mp/ctf_marine_flag.wl    = { t_q4basematerials_multiplayer=! }
+  //      mp/ctf_marine_flag_disp.wl    = { t_q4basematerials_multiplayer=! }
+        mp/ctf_marine_flag_world.wl    = { t_q4basematerials_multiplayer=! }
+        mp/ctf_neutral_flag.wl    = { t_q4basematerials_multiplayer=! }
+        mp/ctf_strogg_flag.wl    = { t_q4basematerials_multiplayer=! }
+  //      mp/ctf_strogg_flag_disp.wl    = { t_q4basematerials_multiplayer=! }
+        mp/ctf_strogg_flag_world.wl    = { t_q4basematerials_multiplayer=! }
+        mp/invisibility_player.wl    = { t_q4basematerials_multiplayer=! }
+        mp/invisibility_player2.wl    = { t_q4basematerials_multiplayer=! }
+        mp/invisibility_player3.wl    = { t_q4basematerials_multiplayer=! }
+        mp/marine_icon.wl    = { t_q4basematerials_multiplayer=! }
+        mp/strogg_icon.wl    = { t_q4basematerials_multiplayer=! }
+        mptextures/lagometer.wl    = { t_q4basematerials_multiplayer=! }
+      }
+      rock.txlist =
+      {
+        rock/concrete_to_rock.wl    = { t_q4basematerials_rock=! }
+        rock/medlabs_rock_vista_a.wl    = { t_q4basematerials_rock=! }
+  //      rock/medlabs_rock_vista_b.wl    = { t_q4basematerials_rock=! }
+        rock/medlabs_rock_vista_blend.wl    = { t_q4basematerials_rock=! }
+  //      rock/q4dm2_blend.wl    = { t_q4basematerials_rock=! }
+  //      rock/q4dm2_ground.wl    = { t_q4basematerials_rock=! }
+  //      rock/q4dm2_wall.wl    = { t_q4basematerials_rock=! }
+        rock/roadway2.wl    = { a="q4base" n="rock/roadway2_d" }
+        rock/rock05.wl    = { a="q4base" n="rock/rock05_d" }
+  //      rock/rock05D.wl    = { a="q4base" n="rock/rock05D_d" }
+        rock/rock05a.wl    = { a="q4base" n="rock/rock05a_d" }
+        rock/rock05a_to_rock05i.wl    = { t_q4basematerials_rock=! }
+        rock/rock05b.wl    = { t_q4basematerials_rock=! }
+        rock/rock05b_noshadows.wl    = { t_q4basematerials_rock=! }
+        rock/rock05b_rock05g.wl    = { t_q4basematerials_rock=! }
+        rock/rock05c.wl    = { t_q4basematerials_rock=! }
+        rock/rock05e.wl    = { a="q4base" n="rock/rock05e_d" }
+        rock/rock05i.wl    = { a="q4base" n="rock/rock05i_d" }
+        rock/rock05i_to_sand.wl    = { t_q4basematerials_rock=! }
+        rock/rock_05_rock_05c.wl    = { t_q4basematerials_rock=! }
+        rock/sand01.wl    = { t_q4basematerials_rock=! }
+        rock/sand01_to_burnt.wl    = { t_q4basematerials_rock=! }
+        rock/sand01_to_sharprock01_brown.wl    = { t_q4basematerials_rock=! }
+        rock/sand01_to_skysand2.wl    = { t_q4basematerials_rock=! }
+        rock/sand01_to_smolder.wl    = { t_q4basematerials_rock=! }
+        rock/sand01_to_strata01.wl    = { t_q4basematerials_rock=! }
+        rock/sharprock.wl    = { t_q4basematerials_rock=! }
+        rock/sharprock01_brown.wl    = { t_q4basematerials_rock=! }
+        rock/sharprock01_brown_to_smoothrock01.wl    = { t_q4basematerials_rock=! }
+        rock/sharprock01_brown_to_strata01.wl    = { t_q4basematerials_rock=! }
+        rock/sharprock_to_rock05i.wl    = { t_q4basematerials_rock=! }
+        rock/sharprock_to_sand.wl    = { t_q4basematerials_rock=! }
+        rock/skysand1.wl    = { t_q4basematerials_rock=! }
+        rock/skysand2_to_sharprock01_brown.wl    = { t_q4basematerials_rock=! }
+        rock/smoothrock01.wl    = { t_q4basematerials_rock=! }
+        rock/smoothrock01_to_sharprock01_brown.wl    = { t_q4basematerials_rock=! }
+        rock/vistarock_gray.wl    = { t_q4basematerials_rock=! }
+      }
+      skies.txlist =
+      {
+  //      skies/CanyonClouds_Sky.wl    = { t_q4basematerials_skies=! }
+        skies/CanyonClouds_Sky2.wl    = { t_q4basematerials_skies=! }
+  //      skies/Canyonken_Sky.wl    = { t_q4basematerials_skies=! }
+        skies/Red_Sky.wl    = { t_q4basematerials_skies=! }
+        skies/act_2.wl    = { t_q4basematerials_skies=! }
+        skies/act_3_network.wl    = { t_q4basematerials_skies=! }
+  //      skies/blacksky.wl    = { t_q4basematerials_skies=! }
+        skies/portal_sky_ring_1.wl    = { t_q4basematerials_skies=! }
+        skies/portal_sky_terrain_1.wl    = { t_q4basematerials_skies=! }
+        skies/spaaaaace.wl    = { t_q4basematerials_skies=! }
+  //      skies/stars.wl    = { t_q4basematerials_skies=! }
+      }
+      stroyent.txlist =
+      {
+        stroyent/artery_a.wl    = { a="q4base" n="stroyent/artery_a_d" }
+        stroyent/artery_b.wl    = { a="q4base" n="stroyent/artery_b_d" }
+        stroyent/belt.wl    = { t_q4basematerials_stroyent=! }
+        stroyent/blast_door1.wl    = { a="q4base" n="stroyent/blast_door1_d" }
+  //      stroyent/blast_door2.wl    = { a="q4base" n="stroyent/blast_door2_d" }
+        stroyent/c_railing02_noshadows.wl    = { t_q4basematerials_stroyent=! }
+        stroyent/can_dispersal_door.wl    = { t_q4basematerials_stroyent=! }
+        stroyent/chunky.wl    = { t_q4basematerials_stroyent=! }
+        stroyent/d_door3.wl    = { a="q4base" n="stroyent/d_door3_d" }
+        stroyent/gorefloor_a.wl    = { a="q4base" n="stroyent/gorefloor_a_d" }
+        stroyent/gorefloor_b.wl    = { a="q4base" n="stroyent/gorefloor_b_d" }
+        stroyent/gorefloor_c.wl    = { a="q4base" n="stroyent/gorefloor_c_d" }
+        stroyent/intestine_a.wl    = { t_q4basematerials_stroyent=! }
+        stroyent/intestine_b.wl    = { t_q4basematerials_stroyent=! }
+        stroyent/intestine_collision.wl    = { t_q4basematerials_stroyent=! }
+        stroyent/panel2.wl    = { a="q4base" n="stroyent/panel2_d" }
+        stroyent/pipes.wl    = { a="q4base" n="stroyent/pipes_d" }
+        stroyent/stroy_bloodfloor.wl    = { a="q4base" n="stroyent/stroy_bloodfloor_d" }
+        stroyent/stroy_ceiling_01.wl    = { a="q4base" n="stroyent/stroy_ceiling_01_d" }
+        stroyent/stroy_ceiling_03.wl    = { a="q4base" n="stroyent/stroy_ceiling_03_d" }
+        stroyent/stroy_conveyor.wl    = { t_q4basematerials_stroyent=! }
+        stroyent/stroy_conveyor2.wl    = { t_q4basematerials_stroyent=! }
+        stroyent/stroy_conveyor_stopped.wl    = { t_q4basematerials_stroyent=! }
+        stroyent/stroy_floor_03_rusty.wl    = { a="q4base" n="stroyent/stroy_floor_03_rusty_d" }
+        stroyent/stroy_floor_03_rusty2.wl    = { a="q4base" n="stroyent/stroy_floor_03_rusty2_d" }
+        stroyent/stroy_floor_03_rusty2sided.wl    = { a="q4base" n="stroyent/stroy_floor_03_rusty2sided_d" }
+  //      stroyent/stroy_floor_03a.wl    = { a="q4base" n="stroyent/stroy_floor_03a_d" }
+        stroyent/stroy_floor_06.wl    = { a="q4base" n="stroyent/stroy_floor_06_d" }
+        stroyent/stroy_floor_06a.wl    = { a="q4base" n="stroyent/stroy_floor_06a_d" }
+  //      stroyent/stroy_floor_06a2sided.wl    = { a="q4base" n="stroyent/stroy_floor_06a2sided_d" }
+  //      stroyent/stroy_light_2.wl    = { a="q4base" n="stroyent/stroy_light_2_d" }
+        stroyent/stroy_pillar1.wl    = { a="q4base" n="stroyent/stroy_pillar1_d" }
+        stroyent/stroy_pillar1a.wl    = { a="q4base" n="stroyent/stroy_pillar1a_d" }
+        stroyent/stroy_pillar2.wl    = { a="q4base" n="stroyent/stroy_pillar2_d" }
+        stroyent/stroy_pillar2a.wl    = { a="q4base" n="stroyent/stroy_pillar2a_d" }
+        stroyent/stroy_pillar2a_noshadows.wl    = { t_q4basematerials_stroyent=! }
+        stroyent/stroy_pillar2alight.wl    = { t_q4basematerials_stroyent=! }
+        stroyent/stroy_steel.wl    = { a="q4base" n="stroyent/stroy_steel_d" }
+        stroyent/stroy_steel_02.wl    = { a="q4base" n="stroyent/stroy_steel_02_d" }
+  //      stroyent/stroy_steel_04.wl    = { a="q4base" n="stroyent/stroy_steel_04_d" }
+        stroyent/stroy_steel_05.wl    = { a="q4base" n="stroyent/stroy_steel_05_d" }
+        stroyent/stroy_steel_ut.wl    = { t_q4basematerials_stroyent=! }
+        stroyent/stroy_steelcopper.wl    = { a="q4base" n="stroyent/stroy_steelcopper_d" }
+        stroyent/stroy_steptop16.wl    = { a="q4base" n="stroyent/stroy_steptop16_d" }
+        stroyent/stroy_steptop16_noshadows.wl    = { t_q4basematerials_stroyent=! }
+        stroyent/stroy_steptop16a.wl    = { a="q4base" n="stroyent/stroy_steptop16a_d" }
+        stroyent/stroy_steptop16a_noshadows.wl    = { t_q4basematerials_stroyent=! }
+  //      stroyent/stroy_stroy_tun2.wl    = { a="q4base" n="stroyent/stroy_stroy_tun2_d" }
+  //      stroyent/stroy_stroy_tun6.wl    = { a="q4base" n="stroyent/stroy_stroy_tun6_d" }
+  //      stroyent/stroy_trim08.wl    = { a="q4base" n="stroyent/stroy_trim08_d" }
+        stroyent/stroy_trim_11.wl    = { a="q4base" n="stroyent/stroy_trim_11_d" }
+        stroyent/stroy_trim_13.wl    = { a="q4base" n="stroyent/stroy_trim_13_d" }
+        stroyent/stroy_trim_15.wl    = { a="q4base" n="stroyent/stroy_trim_15_d" }
+        stroyent/stroy_trim_16.wl    = { a="q4base" n="stroyent/stroy_trim_16_d" }
+        stroyent/stroy_trim_18.wl    = { a="q4base" n="stroyent/stroy_trim_18_d" }
+        stroyent/stroy_trim_19.wl    = { a="q4base" n="stroyent/stroy_trim_19_d" }
+        stroyent/stroy_trim_22.wl    = { a="q4base" n="stroyent/stroy_trim_22_d" }
+        stroyent/stroy_tun1.wl    = { a="q4base" n="stroyent/stroy_tun1_d" }
+        stroyent/stroy_tun3.wl    = { a="q4base" n="stroyent/stroy_tun3_d" }
+        stroyent/stroy_tun3_ut.wl    = { t_q4basematerials_stroyent=! }
+        stroyent/stroy_tun4.wl    = { a="q4base" n="stroyent/stroy_tun4_d" }
+        stroyent/stroy_tun5.wl    = { a="q4base" n="stroyent/stroy_tun5_d" }
+        stroyent/stroy_tun7.wl    = { a="q4base" n="stroyent/stroy_tun7_d" }
+        stroyent/stroy_tunfloor.wl    = { a="q4base" n="stroyent/stroy_tunfloor_d" }
+        stroyent/stroy_vat_3.wl    = { a="q4base" n="stroyent/stroy_vat_3_d" }
+        stroyent/stroy_vatb_01.wl    = { a="q4base" n="stroyent/stroy_vatb_01_d" }
+        stroyent/stroy_vatb_01b.wl    = { a="q4base" n="stroyent/stroy_vatb_01b_d" }
+        stroyent/stroy_vatb_02.wl    = { a="q4base" n="stroyent/stroy_vatb_02_d" }
+        stroyent/stroy_vatb_02b.wl    = { a="q4base" n="stroyent/stroy_vatb_02b_d" }
+        stroyent/stroy_wall_04.wl    = { a="q4base" n="stroyent/stroy_wall_04_d" }
+        stroyent/stroy_wall_05.wl    = { a="q4base" n="stroyent/stroy_wall_05_d" }
+        stroyent/stroy_wall_06.wl    = { a="q4base" n="stroyent/stroy_wall_06_d" }
+        stroyent/stroy_wall_20.wl    = { a="q4base" n="stroyent/stroy_wall_20_d" }
+  //      stroyent/stroy_wall_21.wl    = { a="q4base" n="stroyent/stroy_wall_21_d" }
+  //      stroyent/stroy_wall_22.wl    = { a="q4base" n="stroyent/stroy_wall_22_d" }
+        stroyent/stroy_wall_23.wl    = { a="q4base" n="stroyent/stroy_wall_23_d" }
+        stroyent/stroy_wall_25a.wl    = { a="q4base" n="stroyent/stroy_wall_25a_d" }
+        stroyent/stroy_wall_26.wl    = { a="q4base" n="stroyent/stroy_wall_26_d" }
+        stroyent/stroy_wall_27.wl    = { a="q4base" n="stroyent/stroy_wall_27_d" }
+        stroyent/stroy_wall_28.wl    = { a="q4base" n="stroyent/stroy_wall_28_d" }
+        stroyent/stroy_wall_31.wl    = { a="q4base" n="stroyent/stroy_wall_31_d" }
+        stroyent/stroy_walltrim_02.wl    = { a="q4base" n="stroyent/stroy_walltrim_02_d" }
+        stroyent/stroy_walltrim_04.wl    = { a="q4base" n="stroyent/stroy_walltrim_04_d" }
+        stroyent/stroy_walltrim_07.wl    = { a="q4base" n="stroyent/stroy_walltrim_07_d" }
+        stroyent/stroy_walltrim_08.wl    = { a="q4base" n="stroyent/stroy_walltrim_08_d" }
+        stroyent/stroy_walltrim_09.wl    = { a="q4base" n="stroyent/stroy_walltrim_09_d" }
+        stroyent/stroy_walltrim_10.wl    = { a="q4base" n="stroyent/stroy_walltrim_10_d" }
+        stroyent/stroy_walltrim_11.wl    = { a="q4base" n="stroyent/stroy_walltrim_11_d" }
+        stroyent/stroy_walltrim_12.wl    = { a="q4base" n="stroyent/stroy_walltrim_12_d" }
+        stroyent/stroy_walltrim_13.wl    = { a="q4base" n="stroyent/stroy_walltrim_13_d" }
+        stroyent/stroy_walltrim_14.wl    = { a="q4base" n="stroyent/stroy_walltrim_14_d" }
+  //      stroyent/stroy_walltrim_16.wl    = { a="q4base" n="stroyent/stroy_walltrim_16_d" }
+  //      stroyent/stroyent_flare1.wl    = { t_q4basematerials_stroyent=! }
+  //      stroyent/stroyent_flare2.wl    = { t_q4basematerials_stroyent=! }
+  //      stroyent/stroyent_flare2a.wl    = { t_q4basematerials_stroyent=! }
+  //      stroyent/stroyent_flare3.wl    = { t_q4basematerials_stroyent=! }
+  //      stroyent/stroyent_flare3a.wl    = { t_q4basematerials_stroyent=! }
+        stroyent/stroyent_flare_12.wl    = { t_q4basematerials_stroyent=! }
+        stroyent/stroyent_flare_20.wl    = { t_q4basematerials_stroyent=! }
+        stroyent/stroyent_flare_6.wl    = { t_q4basematerials_stroyent=! }
+  //      stroyent/stroyent_flare_green.wl    = { t_q4basematerials_stroyent=! }
+  //      stroyent/stroyent_flare_red.wl    = { t_q4basematerials_stroyent=! }
+  //      stroyent/stroyent_flareg.wl    = { t_q4basematerials_stroyent=! }
+  //      stroyent/stroyent_flareo.wl    = { t_q4basematerials_stroyent=! }
+        stroyent/thinwavy.wl    = { t_q4basematerials_stroyent=! }
+        stroyent/tun2_plain.wl    = { a="q4base" n="stroyent/tun2_plain_d" }
+        stroyent/tun6small.wl    = { a="q4base" n="stroyent/tun6small_d" }
+        stroyent/tunbump.wl    = { a="q4base" n="stroyent/tunbump_d" }
+        stroyent/tunceiltop.wl    = { a="q4base" n="stroyent/tunceiltop_d" }
+        stroyent/tungrate.wl    = { a="q4base" n="stroyent/tungrate_d" }
+        stroyent/tungrate_ut.wl    = { t_q4basematerials_stroyent=! }
+        stroyent/tunlight.wl    = { t_q4basematerials_stroyent=! }
+        stroyent/tunlight_ut.wl    = { t_q4basematerials_stroyent=! }
+        stroyent/tunlightred.wl    = { t_q4basematerials_stroyent=! }
+        stroyent/tunmid.wl    = { a="q4base" n="stroyent/tunmid_d" }
+        stroyent/tunpipe.wl    = { a="q4base" n="stroyent/tunpipe_d" }
+        stroyent/tunpipe1_nonsolid.wl    = { t_q4basematerials_stroyent=! }
+        stroyent/tunpipe1_noshadows.wl    = { t_q4basematerials_stroyent=! }
+        stroyent/tunpipe2.wl    = { a="q4base" n="stroyent/tunpipe2_d" }
+        stroyent/tunpipe2_nonsolid.wl    = { t_q4basematerials_stroyent=! }
+        stroyent/tunpipe2_noshadows.wl    = { t_q4basematerials_stroyent=! }
+        stroyent/tunsvent.wl    = { a="q4base" n="stroyent/tunsvent_d" }
+        stroyent/tuntech.wl    = { a="q4base" n="stroyent/tuntech_d" }
+        stroyent/tuntrim.wl    = { a="q4base" n="stroyent/tuntrim_d" }
+  //      stroyent/tunwall11.wl    = { a="q4base" n="stroyent/tunwall11_d" }
+        stroyent/tunwall12.wl    = { a="q4base" n="stroyent/tunwall12_d" }
+        stroyent/tunwall15.wl    = { a="q4base" n="stroyent/tunwall15_d" }
+        stroyent/tunwall22.wl    = { a="q4base" n="stroyent/tunwall22_d" }
+        stroyent/tunwall4.wl    = { a="q4base" n="stroyent/tunwall4_d" }
+        stroyent/tunwall6.wl    = { a="q4base" n="stroyent/tunwall6_d" }
+        stroyent/tunwall7.wl    = { a="q4base" n="stroyent/tunwall7_d" }
+        stroyent/tunwall8.wl    = { a="q4base" n="stroyent/tunwall8_d" }
+        stroyent/tunx.wl    = { a="q4base" n="stroyent/tunx_d" }
+  //      stroyent/tunx_twosided.wl    = { a="q4base" n="stroyent/tunx_twosided_d" }
+        stroyent/tunzig_ceiling.wl    = { a="q4base" n="stroyent/tunzig_ceiling_d" }
+        stroyent/window_alpha_rust.wl    = { t_q4basematerials_stroyent=! }
+        stroyent/window_alpha_rust_onesided.wl    = { t_q4basematerials_stroyent=! }
+      }
+      temp_guis.txlist =
+      {
+        common/black.wl    = { t_q4basematerials_temp_guis=! }
+        common/blue.wl    = { t_q4basematerials_temp_guis=! }
+        common/grid.wl    = { t_q4basematerials_temp_guis=! }
+        common/halfgray.wl    = { t_q4basematerials_temp_guis=! }
+        common/red.wl    = { t_q4basematerials_temp_guis=! }
+      }
+      terminal.txlist =
+      {
+        terminal/EnergyPipe_flow.wl    = { t_q4basematerials_terminal=! }
+        terminal/EnergyPipe_flow_1.wl    = { t_q4basematerials_terminal=! }
+        terminal/EnergyPipe_outer.wl    = { t_q4basematerials_terminal=! }
+        terminal/Orange_Blinklight_01.wl    = { t_q4basematerials_terminal=! }
+        terminal/Orange_Blinklight_02.wl    = { t_q4basematerials_terminal=! }
+        terminal/alpha_filler.wl    = { a="q4base" n="terminal/alpha_filler_d" }
+        terminal/alpha_filler_01.wl    = { a="q4base" n="terminal/alpha_filler_01_d" }
+        terminal/alpha_filler_01_nomip.wl    = { t_q4basematerials_terminal=! }
+        terminal/alpha_filler_nomip.wl    = { t_q4basematerials_terminal=! }
+        terminal/c2_ceiling_1_impact.wl    = { t_q4basematerials_terminal=! }
+        terminal/c2_ceiling_1_impact_begin.wl    = { t_q4basematerials_terminal=! }
+        terminal/c2_ceiling_1_impact_end.wl    = { t_q4basematerials_terminal=! }
+        terminal/c3_step_1a.wl    = { a="q4base" n="terminal/c3_step_1a_d" }
+        terminal/c3_step_3.wl    = { a="q4base" n="terminal/c3_step_3_d" }
+        terminal/c_pipe02_impact.wl    = { t_q4basematerials_terminal=! }
+        terminal/c_wall_outside_01.wl    = { a="q4base" n="terminal/c_wall_outside_01_d" }
+        terminal/chiclightflat.wl    = { t_q4basematerials_terminal=! }
+        terminal/floor_mp.wl    = { t_q4basematerials_terminal=! }
+        terminal/media_piece_front.wl    = { a="q4base" n="terminal/media_piece_front_d" }
+        terminal/media_piece_side.wl    = { a="q4base" n="terminal/media_piece_side_d" }
+        terminal/media_piece_tile.wl    = { a="q4base" n="terminal/media_piece_tile_d" }
+        terminal/media_round_front.wl    = { a="q4base" n="terminal/media_round_front_d" }
+        terminal/media_round_top.wl    = { a="q4base" n="terminal/media_round_top_d" }
+        terminal/media_trim_1.wl    = { a="q4base" n="terminal/media_trim_1_d" }
+        terminal/media_trim_2.wl    = { a="q4base" n="terminal/media_trim_2_d" }
+        terminal/monitor_cap.wl    = { a="q4base" n="terminal/monitor_cap_d" }
+        terminal/outdoor_wall1_13.wl    = { a="q4base" n="terminal/outdoor_wall1_13_d" }
+        terminal/pipe_tile.wl    = { a="q4base" n="terminal/pipe_tile_d" }
+        terminal/pipe_tile_end.wl    = { a="q4base" n="terminal/pipe_tile_end_d" }
+        terminal/process2_textglass1.wl    = { t_q4basematerials_terminal=! }
+        terminal/rect_light3_red.wl    = { t_q4basematerials_terminal=! }
+        terminal/red_flare.wl    = { t_q4basematerials_terminal=! }
+        terminal/small_light7_orange.wl    = { t_q4basematerials_terminal=! }
+        terminal/square_hole.wl    = { a="q4base" n="terminal/square_hole_d" }
+        terminal/t10_floor_1.wl    = { a="q4base" n="terminal/t10_floor_1_d" }
+        terminal/t10_wall_1.wl    = { a="q4base" n="terminal/t10_wall_1_d" }
+        terminal/t10_wall_10.wl    = { a="q4base" n="terminal/t10_wall_10_d" }
+        terminal/t10_wall_10_glow.wl    = { t_q4basematerials_terminal=! }
+        terminal/t10_wall_2.wl    = { a="q4base" n="terminal/t10_wall_2_d" }
+        terminal/t10_wall_2_glow.wl    = { t_q4basematerials_terminal=! }
+        terminal/t10_wall_3.wl    = { a="q4base" n="terminal/t10_wall_3_d" }
+        terminal/t10_wall_4.wl    = { a="q4base" n="terminal/t10_wall_4_d" }
+        terminal/t10_wall_4_glow.wl    = { t_q4basematerials_terminal=! }
+        terminal/t10_wall_5a.wl    = { a="q4base" n="terminal/t10_wall_5a_d" }
+        terminal/t10_wall_5b.wl    = { a="q4base" n="terminal/t10_wall_5b_d" }
+        terminal/t10_wall_6.wl    = { a="q4base" n="terminal/t10_wall_6_d" }
+        terminal/t10_wall_6_glow.wl    = { t_q4basematerials_terminal=! }
+        terminal/t10_wall_7.wl    = { a="q4base" n="terminal/t10_wall_7_d" }
+        terminal/t10_wall_7_glow.wl    = { t_q4basematerials_terminal=! }
+        terminal/t10_wall_7b.wl    = { a="q4base" n="terminal/t10_wall_7b_d" }
+        terminal/t10_wall_8.wl    = { a="q4base" n="terminal/t10_wall_8_d" }
+        terminal/t10_wall_9.wl    = { a="q4base" n="terminal/t10_wall_9_d" }
+        terminal/t10_wall_9_glow.wl    = { t_q4basematerials_terminal=! }
+        terminal/t10_walltrim_1.wl    = { a="q4base" n="terminal/t10_walltrim_1_d" }
+        terminal/t10_walltrim_2.wl    = { a="q4base" n="terminal/t10_walltrim_2_d" }
+        terminal/t10_walltrim_2_glow.wl    = { t_q4basematerials_terminal=! }
+        terminal/t11_trim01.wl    = { a="q4base" n="terminal/t11_trim01_d" }
+        terminal/t11_trim01_side.wl    = { a="q4base" n="terminal/t11_trim01_side_d" }
+        terminal/t11_trim02.wl    = { a="q4base" n="terminal/t11_trim02_d" }
+        terminal/t11_wall01.wl    = { a="q4base" n="terminal/t11_wall01_d" }
+        terminal/t11_wall01a.wl    = { a="q4base" n="terminal/t11_wall01a_d" }
+        terminal/t11_wall01b.wl    = { a="q4base" n="terminal/t11_wall01b_d" }
+        terminal/t11_wall01b_impact.wl    = { t_q4basematerials_terminal=! }
+        terminal/t11_wall01d.wl    = { a="q4base" n="terminal/t11_wall01d_d" }
+        terminal/t11_wall01e.wl    = { a="q4base" n="terminal/t11_wall01e_d" }
+        terminal/t11_wall01f.wl    = { a="q4base" n="terminal/t11_wall01f_d" }
+        terminal/t11_wall01g.wl    = { a="q4base" n="terminal/t11_wall01g_d" }
+        terminal/t11_wall02.wl    = { a="q4base" n="terminal/t11_wall02_d" }
+        terminal/t11_wall03.wl    = { a="q4base" n="terminal/t11_wall03_d" }
+        terminal/t12_ceiling_1.wl    = { a="q4base" n="terminal/t12_ceiling_1_d" }
+        terminal/t12_floor_1.wl    = { a="q4base" n="terminal/t12_floor_1_d" }
+        terminal/t12_wall_1.wl    = { a="q4base" n="terminal/t12_wall_1_d" }
+        terminal/t12_wall_1_glow.wl    = { t_q4basematerials_terminal=! }
+        terminal/t12_wall_2.wl    = { a="q4base" n="terminal/t12_wall_2_d" }
+        terminal/t12_wall_2_glow.wl    = { t_q4basematerials_terminal=! }
+        terminal/t12_wall_3.wl    = { a="q4base" n="terminal/t12_wall_3_d" }
+        terminal/t12_wall_3_glow.wl    = { t_q4basematerials_terminal=! }
+        terminal/t13_ceiling_1.wl    = { a="q4base" n="terminal/t13_ceiling_1_d" }
+        terminal/t13_floor_1.wl    = { a="q4base" n="terminal/t13_floor_1_d" }
+        terminal/t13_trim_1.wl    = { a="q4base" n="terminal/t13_trim_1_d" }
+        terminal/t13_trim_1_ut.wl    = { t_q4basematerials_terminal=! }
+        terminal/t13_trim_2.wl    = { a="q4base" n="terminal/t13_trim_2_d" }
+        terminal/t13_trim_3.wl    = { a="q4base" n="terminal/t13_trim_3_d" }
+        terminal/t13_trim_4.wl    = { a="q4base" n="terminal/t13_trim_4_d" }
+        terminal/t13_trim_4_ut.wl    = { t_q4basematerials_terminal=! }
+        terminal/t13_wall_1.wl    = { a="q4base" n="terminal/t13_wall_1_d" }
+        terminal/t13_wall_1_glow.wl    = { t_q4basematerials_terminal=! }
+        terminal/t13_wall_2.wl    = { a="q4base" n="terminal/t13_wall_2_d" }
+        terminal/t13_wall_2_glow.wl    = { t_q4basematerials_terminal=! }
+        terminal/t13_wall_2b.wl    = { a="q4base" n="terminal/t13_wall_2b_d" }
+        terminal/t13_wall_2b_glow.wl    = { t_q4basematerials_terminal=! }
+        terminal/t13_wall_3.wl    = { a="q4base" n="terminal/t13_wall_3_d" }
+  //      terminal/t13_wall_3_2s.wl    = { a="q4base" n="terminal/t13_wall_3_2s_d" }
+        terminal/t13_wall_3_glow.wl    = { t_q4basematerials_terminal=! }
+        terminal/t13_wall_3_twosided.wl    = { t_q4basematerials_terminal=! }
+        terminal/t13_wall_3_twosided_ut.wl    = { t_q4basematerials_terminal=! }
+        terminal/t1_ceiling1.wl    = { a="q4base" n="terminal/t1_ceiling1_d" }
+        terminal/t1_ceiling2.wl    = { a="q4base" n="terminal/t1_ceiling2_d" }
+        terminal/t1_floor1a.wl    = { a="q4base" n="terminal/t1_floor1a_d" }
+        terminal/t1_floor2.wl    = { a="q4base" n="terminal/t1_floor2_d" }
+        terminal/t1_floor2a.wl    = { a="q4base" n="terminal/t1_floor2a_d" }
+        terminal/t1_metal1.wl    = { t_q4basematerials_terminal=! }
+        terminal/t1_metal1dark.wl    = { t_q4basematerials_terminal=! }
+        terminal/t1_metal1light.wl    = { t_q4basematerials_terminal=! }
+        terminal/t1_metal2.wl    = { t_q4basematerials_terminal=! }
+        terminal/t1_metal3.wl    = { t_q4basematerials_terminal=! }
+        terminal/t1_trim1.wl    = { a="q4base" n="terminal/t1_trim1_d" }
+  //      terminal/t1_trim1a.wl    = { a="q4base" n="terminal/t1_trim1a_d" }
+        terminal/t1_wall3.wl    = { a="q4base" n="terminal/t1_wall3_d" }
+        terminal/t2_ceiling1.wl    = { a="q4base" n="terminal/t2_ceiling1_d" }
+        terminal/t2_ceiling2a.wl    = { a="q4base" n="terminal/t2_ceiling2a_d" }
+        terminal/t2_floor1.wl    = { a="q4base" n="terminal/t2_floor1_d" }
+        terminal/t2_floor1a.wl    = { a="q4base" n="terminal/t2_floor1a_d" }
+        terminal/t2_floor2.wl    = { a="q4base" n="terminal/t2_floor2_d" }
+        terminal/t2_floor2a.wl    = { a="q4base" n="terminal/t2_floor2a_d" }
+        terminal/t2_trim1.wl    = { a="q4base" n="terminal/t2_trim1_d" }
+        terminal/t2_walltrim2.wl    = { a="q4base" n="terminal/t2_walltrim2_d" }
+        terminal/t3_ceiling_01.wl    = { a="q4base" n="terminal/t3_ceiling_01_d" }
+        terminal/t3_floor_01.wl    = { a="q4base" n="terminal/t3_floor_01_d" }
+        terminal/t3_floor_02.wl    = { a="q4base" n="terminal/t3_floor_02_d" }
+        terminal/t3_htrim_01.wl    = { a="q4base" n="terminal/t3_htrim_01_d" }
+        terminal/t3_htrim_01b.wl    = { t_q4basematerials_terminal=! }
+        terminal/t3_htrim_01glow.wl    = { t_q4basematerials_terminal=! }
+        terminal/t3_vtrim_01.wl    = { a="q4base" n="terminal/t3_vtrim_01_d" }
+  //      terminal/t3_wall_01.wl    = { a="q4base" n="terminal/t3_wall_01_d" }
+        terminal/t3_wall_02.wl    = { a="q4base" n="terminal/t3_wall_02_d" }
+        terminal/t3_wall_02a.wl    = { a="q4base" n="terminal/t3_wall_02a_d" }
+        terminal/t4_ceiling_1.wl    = { a="q4base" n="terminal/t4_ceiling_1_d" }
+        terminal/t4_ceiling_2.wl    = { a="q4base" n="terminal/t4_ceiling_2_d" }
+        terminal/t4_floor_1.wl    = { a="q4base" n="terminal/t4_floor_1_d" }
+        terminal/t4_floor_1a.wl    = { a="q4base" n="terminal/t4_floor_1a_d" }
+        terminal/t4_floor_2.wl    = { a="q4base" n="terminal/t4_floor_2_d" }
+        terminal/t4_floor_2a.wl    = { a="q4base" n="terminal/t4_floor_2a_d" }
+  //      terminal/t4_wall_01a.wl    = { a="q4base" n="terminal/t4_wall_01a_d" }
+        terminal/t4_wall_2.wl    = { a="q4base" n="terminal/t4_wall_2_d" }
+        terminal/t4_walltrim_1.wl    = { a="q4base" n="terminal/t4_walltrim_1_d" }
+        terminal/t4_walltrim_2.wl    = { a="q4base" n="terminal/t4_walltrim_2_d" }
+        terminal/t4_walltrim_3.wl    = { a="q4base" n="terminal/t4_walltrim_3_d" }
+        terminal/t4_walltrim_4.wl    = { a="q4base" n="terminal/t4_walltrim_4_d" }
+        terminal/t4_walltrim_6.wl    = { a="q4base" n="terminal/t4_walltrim_6_d" }
+        terminal/t4_walltrim_7.wl    = { a="q4base" n="terminal/t4_walltrim_7_d" }
+        terminal/t5_ceiling_1.wl    = { a="q4base" n="terminal/t5_ceiling_1_d" }
+        terminal/t5_ceiling_1_color.wl    = { t_q4basematerials_terminal=! }
+        terminal/t5_ceiling_1_color_global_startoff.wl    = { t_q4basematerials_terminal=! }
+        terminal/t5_ceilingtrim_1.wl    = { a="q4base" n="terminal/t5_ceilingtrim_1_d" }
+        terminal/t5_walltrim_1.wl    = { a="q4base" n="terminal/t5_walltrim_1_d" }
+        terminal/t5_walltrim_2.wl    = { a="q4base" n="terminal/t5_walltrim_2_d" }
+        terminal/t5_walltrim_3.wl    = { a="q4base" n="terminal/t5_walltrim_3_d" }
+        terminal/t6_wall_1.wl    = { a="q4base" n="terminal/t6_wall_1_d" }
+        terminal/t6_wall_2.wl    = { a="q4base" n="terminal/t6_wall_2_d" }
+        terminal/t6_wall_4.wl    = { a="q4base" n="terminal/t6_wall_4_d" }
+        terminal/t6_wall_6.wl    = { a="q4base" n="terminal/t6_wall_6_d" }
+        terminal/t6_wall_7.wl    = { a="q4base" n="terminal/t6_wall_7_d" }
+        terminal/t6_wall_8.wl    = { a="q4base" n="terminal/t6_wall_8_d" }
+        terminal/t6_walltrim_2.wl    = { a="q4base" n="terminal/t6_walltrim_2_d" }
+        terminal/t7_wall_1.wl    = { a="q4base" n="terminal/t7_wall_1_d" }
+        terminal/t7_wall_10.wl    = { a="q4base" n="terminal/t7_wall_10_d" }
+        terminal/t7_wall_2.wl    = { a="q4base" n="terminal/t7_wall_2_d" }
+        terminal/t7_wall_3.wl    = { a="q4base" n="terminal/t7_wall_3_d" }
+        terminal/t7_wall_5.wl    = { a="q4base" n="terminal/t7_wall_5_d" }
+        terminal/t7_wall_6.wl    = { a="q4base" n="terminal/t7_wall_6_d" }
+        terminal/t7_wall_7.wl    = { a="q4base" n="terminal/t7_wall_7_d" }
+        terminal/t7_wall_8.wl    = { a="q4base" n="terminal/t7_wall_8_d" }
+        terminal/t7_wall_9.wl    = { a="q4base" n="terminal/t7_wall_9_d" }
+        terminal/t7_walltrim_1.wl    = { a="q4base" n="terminal/t7_walltrim_1_d" }
+        terminal/t7_walltrim_2.wl    = { a="q4base" n="terminal/t7_walltrim_2_d" }
+        terminal/t7_walltrim_3.wl    = { a="q4base" n="terminal/t7_walltrim_3_d" }
+        terminal/t7_walltrim_3_label.wl    = { a="q4base" n="terminal/t7_walltrim_3_label_d" }
+        terminal/t7_walltrim_4.wl    = { a="q4base" n="terminal/t7_walltrim_4_d" }
+        terminal/t7_walltrim_5.wl    = { a="q4base" n="terminal/t7_walltrim_5_d" }
+        terminal/t7_walltrim_6.wl    = { a="q4base" n="terminal/t7_walltrim_6_d" }
+        terminal/t7_walltrimvert_1.wl    = { a="q4base" n="terminal/t7_walltrimvert_1_d" }
+        terminal/t8_pillar_1.wl    = { a="q4base" n="terminal/t8_pillar_1_d" }
+        terminal/t8_pillar_2.wl    = { a="q4base" n="terminal/t8_pillar_2_d" }
+        terminal/t8_pillar_2a.wl    = { a="q4base" n="terminal/t8_pillar_2a_d" }
+        terminal/t8_pillar_2a_ut.wl    = { t_q4basematerials_terminal=! }
+        terminal/t8_pillar_3.wl    = { a="q4base" n="terminal/t8_pillar_3_d" }
+        terminal/t8_square_1.wl    = { a="q4base" n="terminal/t8_square_1_d" }
+        terminal/t8_square_1a.wl    = { a="q4base" n="terminal/t8_square_1a_d" }
+        terminal/t8_square_2.wl    = { a="q4base" n="terminal/t8_square_2_d" }
+        terminal/t8_square_3.wl    = { a="q4base" n="terminal/t8_square_3_d" }
+        terminal/t8_square_3a.wl    = { a="q4base" n="terminal/t8_square_3a_d" }
+        terminal/t8_trim_1.wl    = { a="q4base" n="terminal/t8_trim_1_d" }
+        terminal/t8_trim_1b.wl    = { a="q4base" n="terminal/t8_trim_1b_d" }
+        terminal/t8_trim_1c.wl    = { a="q4base" n="terminal/t8_trim_1c_d" }
+        terminal/t9_wall_1.wl    = { a="q4base" n="terminal/t9_wall_1_d" }
+        terminal/t9_wall_2.wl    = { a="q4base" n="terminal/t9_wall_2_d" }
+        terminal/t9_wall_2_glow.wl    = { t_q4basematerials_terminal=! }
+        terminal/t9_wall_3.wl    = { a="q4base" n="terminal/t9_wall_3_d" }
+        terminal/t9_wall_3_glow.wl    = { t_q4basematerials_terminal=! }
+        terminal/t_Antenna.wl    = { t_q4basematerials_terminal=! }
+        terminal/t_floor_1a.wl    = { a="q4base" n="terminal/t_floor_1a_d" }
+        terminal/t_floor_1a_noshadow_2sided.wl    = { t_q4basematerials_terminal=! }
+        terminal/t_shaft1.wl    = { a="q4base" n="terminal/t_shaft1_d" }
+        terminal/t_shaft2.wl    = { a="q4base" n="terminal/t_shaft2_d" }
+        terminal/t_shaft2_512.wl    = { a="q4base" n="terminal/t_shaft2_512_d" }
+        terminal/t_shaft2b_512.wl    = { a="q4base" n="terminal/t_shaft2b_512_d" }
+        terminal/t_shaft2c_512.wl    = { a="q4base" n="terminal/t_shaft2c_512_d" }
+        terminal/t_shaft3.wl    = { a="q4base" n="terminal/t_shaft3_d" }
+        terminal/t_shaft_1.wl    = { a="q4base" n="terminal/t_shaft_1_d" }
+        terminal/t_shaft_2.wl    = { a="q4base" n="terminal/t_shaft_2_d" }
+        terminal/t_shaft_2b.wl    = { a="q4base" n="terminal/t_shaft_2b_d" }
+        terminal/t_shaft_3.wl    = { a="q4base" n="terminal/t_shaft_3_d" }
+        terminal/t_shaft_3b.wl    = { a="q4base" n="terminal/t_shaft_3b_d" }
+        terminal/t_shaft_4.wl    = { a="q4base" n="terminal/t_shaft_4_d" }
+        terminal/t_shaft_4b.wl    = { a="q4base" n="terminal/t_shaft_4b_d" }
+        terminal/t_shaft_5.wl    = { a="q4base" n="terminal/t_shaft_5_d" }
+        terminal/t_shaft_512.wl    = { a="q4base" n="terminal/t_shaft_512_d" }
+        terminal/t_shaft_512b.wl    = { a="q4base" n="terminal/t_shaft_512b_d" }
+        terminal/t_shaft_trim.wl    = { a="q4base" n="terminal/t_shaft_trim_d" }
+        terminal/t_trim_02.wl    = { a="q4base" n="terminal/t_trim_02_d" }
+        terminal/t_trim_02_b.wl    = { a="q4base" n="terminal/t_trim_02_b_d" }
+        terminal/t_trim_04.wl    = { a="q4base" n="terminal/t_trim_04_d" }
+        terminal/t_trim_05.wl    = { a="q4base" n="terminal/t_trim_05_d" }
+        terminal/t_trim_06.wl    = { a="q4base" n="terminal/t_trim_06_d" }
+        terminal/t_vertpipe1.wl    = { a="q4base" n="terminal/t_vertpipe1_d" }
+        terminal/t_wall_1a.wl    = { a="q4base" n="terminal/t_wall_1a_d" }
+        terminal/t_wall_platesvert.wl    = { a="q4base" n="terminal/t_wall_platesvert_d" }
+        terminal/t_wall_plating2.wl    = { a="q4base" n="terminal/t_wall_plating2_d" }
+        terminal/t_walltrim_02.wl    = { a="q4base" n="terminal/t_walltrim_02_d" }
+  //      terminal/t_walltrim_04.wl    = { a="q4base" n="terminal/t_walltrim_04_d" }
+        terminal/t_window_alpha_01.wl    = { t_q4basematerials_terminal=! }
+        terminal/t_window_alpha_01_onesided.wl    = { t_q4basematerials_terminal=! }
+        terminal/t_window_alpha_01_scroll.wl    = { t_q4basematerials_terminal=! }
+        terminal/t_window_alpha_01extra.wl    = { t_q4basematerials_terminal=! }
+        terminal/t_window_alpha_02.wl    = { t_q4basematerials_terminal=! }
+        terminal/t_window_alpha_02_glass.wl    = { t_q4basematerials_terminal=! }
+        terminal/t_window_alpha_02_onesided.wl    = { t_q4basematerials_terminal=! }
+        terminal/t_wirebundle_thick.wl    = { a="q4base" n="terminal/t_wirebundle_thick_d" }
+  //      terminal/t_wirebundle_thick_2.wl    = { a="q4base" n="terminal/t_wirebundle_thick_2_d" }
+        terminal/t_wirebundle_thick_3.wl    = { a="q4base" n="terminal/t_wirebundle_thick_3_d" }
+        terminal/t_wirebundle_thin.wl    = { a="q4base" n="terminal/t_wirebundle_thin_d" }
+        terminal/t_wirebundle_thin_2.wl    = { a="q4base" n="terminal/t_wirebundle_thin_2_d" }
+        terminal/t_wirecap.wl    = { a="q4base" n="terminal/t_wirecap_d" }
+        terminal/tn_45deg_plate_1.wl    = { a="q4base" n="terminal/tn_45deg_plate_1_d" }
+        terminal/tn_45deg_plate_2.wl    = { a="q4base" n="terminal/tn_45deg_plate_2_d" }
+        terminal/tn_ceiling_1.wl    = { a="q4base" n="terminal/tn_ceiling_1_d" }
+        terminal/tn_ceiling_2.wl    = { a="q4base" n="terminal/tn_ceiling_2_d" }
+        terminal/tn_circuit_2.wl    = { a="q4base" n="terminal/tn_circuit_2_d" }
+        terminal/tn_flooraccess_1.wl    = { a="q4base" n="terminal/tn_flooraccess_1_d" }
+        terminal/tn_fronta_1.wl    = { a="q4base" n="terminal/tn_fronta_1_d" }
+        terminal/tn_halfside_1.wl    = { a="q4base" n="terminal/tn_halfside_1_d" }
+        terminal/tn_halfside_2.wl    = { a="q4base" n="terminal/tn_halfside_2_d" }
+        terminal/tn_sidea_1.wl    = { a="q4base" n="terminal/tn_sidea_1_d" }
+        terminal/tn_sidea_2.wl    = { a="q4base" n="terminal/tn_sidea_2_d" }
+        terminal/tr_rail.wl    = { a="q4base" n="terminal/tr_rail_d" }
+        terminal/tunlight.wl    = { a="q4base" n="terminal/tunlight_d" }
+        terminal/wire_tile.wl    = { a="q4base" n="terminal/wire_tile_d" }
+        terminal/wire_tile_a.wl    = { a="q4base" n="terminal/wire_tile_a_d" }
+      }
+      test.txlist =
+      {
+        common_misc/concrete_09_test.wl    = { t_q4basematerials_test=! }
+        consoles/console3b_test.wl    = { t_q4basematerials_test=! }
+        flares/berserkerflaretest.wl    = { t_q4basematerials_test=! }
+  //      flesh_boundingbox.wl    = { t_q4basematerials_test=! }
+        guis/test/flagtest.wl    = { t_q4basematerials_test=! }
+        terminal/t_shaft1_super.wl    = { t_q4basematerials_test=! }
+        test/DisolvedConcrete.wl    = { t_q4basematerials_test=! }
+        test/ForceField.wl    = { t_q4basematerials_test=! }
+        test/IAFull.wl    = { t_q4basematerials_test=! }
+        test/IAFullTranslucent.wl    = { t_q4basematerials_test=! }
+        test/IAdiffuse.wl    = { t_q4basematerials_test=! }
+        test/IAdiffusetranslucent.wl    = { t_q4basematerials_test=! }
+        test/MetalFlow.wl    = { t_q4basematerials_test=! }
+        test/Metal_drip.wl    = { t_q4basematerials_test=! }
+        test/Metal_dripedge.wl    = { t_q4basematerials_test=! }
+  //      test/Pipething.wl    = { t_q4basematerials_test=! }
+  //      test/TramWater.wl    = { t_q4basematerials_test=! }
+  //      test/TriggerMe.wl    = { t_q4basematerials_test=! }
+        test/bevglass01.wl    = { t_q4basematerials_test=! }
+        test/blank.wl    = { t_q4basematerials_test=! }
+        test/fakeSky/fakeBuilding.wl    = { t_q4basematerials_test=! }
+        test/fakeSky/gradient1.wl    = { t_q4basematerials_test=! }
+        test/fakeSky/solidBottom.wl    = { t_q4basematerials_test=! }
+        test/fakeSky/solidTop.wl    = { t_q4basematerials_test=! }
+        test/func_beam.wl    = { t_q4basematerials_test=! }
+        test/grnx1_1.wl    = { t_q4basematerials_test=! }
+        test/m_alph.wl    = { t_q4basematerials_test=! }
+  //      test/mdecal1.wl    = { t_q4basematerials_test=! }
+  //      test/mdecal2.wl    = { t_q4basematerials_test=! }
+  //      test/mdecal3.wl    = { t_q4basematerials_test=! }
+  //      test/med1_wall1d.wl    = { a="q4base" n="test/med1_wall1d_d" }
+  //      test/med2_wall1.wl    = { a="q4base" n="test/med2_wall1_d" }
+  //      test/med4_wall3.wl    = { a="q4base" n="test/med4_wall3_d" }
+        test/melt.wl    = { t_q4basematerials_test=! }
+  //      test/mp_ceiling1.wl    = { a="q4base" n="test/mp_ceiling1_d" }
+  //      test/mp_floor1.wl    = { a="q4base" n="test/mp_floor1_d" }
+  //      test/mp_floor2.wl    = { a="q4base" n="test/mp_floor2_d" }
+  //      test/mp_trim_h1.wl    = { a="q4base" n="test/mp_trim_h1_d" }
+  //      test/mp_trim_h2.wl    = { a="q4base" n="test/mp_trim_h2_d" }
+        test/mp_trim_h3.wl    = { t_q4basematerials_test=! }
+  //      test/mp_trim_h4.wl    = { a="q4base" n="test/mp_trim_h4_d" }
+  //      test/mp_trim_h5.wl    = { a="q4base" n="test/mp_trim_h5_d" }
+        test/mp_trim_v1.wl    = { t_q4basematerials_test=! }
+  //      test/mp_trim_v2.wl    = { a="q4base" n="test/mp_trim_v2_d" }
+  //      test/mp_wall1.wl    = { a="q4base" n="test/mp_wall1_d" }
+  //      test/mp_wall2.wl    = { a="q4base" n="test/mp_wall2_d" }
+  //      test/mp_wall3.wl    = { a="q4base" n="test/mp_wall3_d" }
+  //      test/mp_wall4.wl    = { a="q4base" n="test/mp_wall4_d" }
+  //      test/mp_wall5.wl    = { a="q4base" n="test/mp_wall5_d" }
+  //      test/mp_wall6.wl    = { a="q4base" n="test/mp_wall6_d" }
+        test/msign1.wl    = { t_q4basematerials_test=! }
+        test/msign10.wl    = { t_q4basematerials_test=! }
+        test/msign1a.wl    = { t_q4basematerials_test=! }
+        test/msign2.wl    = { t_q4basematerials_test=! }
+        test/msign3.wl    = { t_q4basematerials_test=! }
+        test/msign4.wl    = { t_q4basematerials_test=! }
+        test/msign5.wl    = { t_q4basematerials_test=! }
+        test/msign6.wl    = { t_q4basematerials_test=! }
+        test/msign7.wl    = { t_q4basematerials_test=! }
+        test/msign8.wl    = { t_q4basematerials_test=! }
+        test/msign9.wl    = { t_q4basematerials_test=! }
+  //      test/mvglass1.wl    = { t_q4basematerials_test=! }
+  //      test/mvglass10.wl    = { t_q4basematerials_test=! }
+  //      test/mvglass11.wl    = { t_q4basematerials_test=! }
+  //      test/mvglass12.wl    = { t_q4basematerials_test=! }
+  //      test/mvglass13.wl    = { t_q4basematerials_test=! }
+  //      test/mvglass2.wl    = { t_q4basematerials_test=! }
+  //      test/mvglass2_dirt.wl    = { t_q4basematerials_test=! }
+  //      test/mvglass4.wl    = { t_q4basematerials_test=! }
+  //      test/mvglass6.wl    = { t_q4basematerials_test=! }
+  //      test/mvglass7.wl    = { t_q4basematerials_test=! }
+  //      test/mvglass7a.wl    = { t_q4basematerials_test=! }
+  //      test/mvglass8.wl    = { t_q4basematerials_test=! }
+  //      test/mvglass9.wl    = { t_q4basematerials_test=! }
+  //      test/mvglass9_dirt.wl    = { t_q4basematerials_test=! }
+  //      test/nichol.wl    = { a="q4base" n="test/nichol_d" }
+  //      test/nm1.wl    = { a="q4base" n="test/nm1_d" }
+  //      test/nm2.wl    = { a="q4base" n="test/nm2_d" }
+  //      test/nm3.wl    = { a="q4base" n="test/nm3_d" }
+  //      test/nm4.wl    = { a="q4base" n="test/nm4_d" }
+  //      test/nm5.wl    = { a="q4base" n="test/nm5_d" }
+  //      test/nm6.wl    = { a="q4base" n="test/nm6_d" }
+  //      test/rock/rock1.wl    = { t_q4basematerials_test=! }
+  //      test/rock/rock2.wl    = { t_q4basematerials_test=! }
+  //      test/rock/sand.wl    = { t_q4basematerials_test=! }
+        test/stars/stars_close.wl    = { t_q4basematerials_test=! }
+        test/stars/stars_close_opaque.wl    = { t_q4basematerials_test=! }
+        test/stars/stars_far.wl    = { t_q4basematerials_test=! }
+        test/stars/stars_sparse.wl    = { t_q4basematerials_test=! }
+        test/stars/stars_sparse2.wl    = { t_q4basematerials_test=! }
+  //      test/t1_floor1_a_glowy.wl    = { t_q4basematerials_test=! }
+  //      test/t1_wall1_d2_azclamp.wl    = { t_q4basematerials_test=! }
+  //      test/t1_wall1_d2_clamp.wl    = { t_q4basematerials_test=! }
+  //      test/t1_wall1_d2_zclamp.wl    = { t_q4basematerials_test=! }
+  //      test/test1.wl    = { a="q4base" n="test/test1_d" }
+  //      test/test2.wl    = { a="q4base" n="test/test2_d" }
+  //      test/test2a.wl    = { a="q4base" n="test/test2a_d" }
+  //      test/test2c.wl    = { a="q4base" n="test/test2c_d" }
+  //      test/test2d.wl    = { a="q4base" n="test/test2d_d" }
+  //      test/test2e.wl    = { a="q4base" n="test/test2e_d" }
+  //      test/test2f.wl    = { a="q4base" n="test/test2f_d" }
+  //      test/test2g.wl    = { a="q4base" n="test/test2g_d" }
+  //      test/testacid.wl    = { t_q4basematerials_test=! }
+  //      waste/fuzz_shield.wl    = { t_q4basematerials_test=! }
+      }
+      tram.txlist =
+      {
+        tram/big_Red_flare.wl    = { t_q4basematerials_tram=! }
+        tram/big_orange_flare.wl    = { t_q4basematerials_tram=! }
+        tram/ceil_light1_blue.wl    = { t_q4basematerials_tram=! }
+        tram/flare_blue_64.wl    = { t_q4basematerials_tram=! }
+        tram/flare_off_white_64.wl    = { t_q4basematerials_tram=! }
+        tram/flare_orange_64.wl    = { t_q4basematerials_tram=! }
+        tram/flare_red_64.wl    = { t_q4basematerials_tram=! }
+        tram/flare_white_64.wl    = { t_q4basematerials_tram=! }
+        tram/floor_06a.wl    = { t_q4basematerials_tram=! }
+        tram/rect_light10.wl    = { t_q4basematerials_tram=! }
+        tram/rect_light10_orange.wl    = { t_q4basematerials_tram=! }
+        tram/rect_light4_red.wl    = { t_q4basematerials_tram=! }
+        tram/road1_1.wl    = { t_q4basematerials_tram=! }
+        tram/road1_1_smolder.wl    = { t_q4basematerials_tram=! }
+        tram/road1_1cap.wl    = { t_q4basematerials_tram=! }
+        tram/road1_1cap_smolder.wl    = { t_q4basematerials_tram=! }
+        tram/road1_2.wl    = { t_q4basematerials_tram=! }
+        tram/road1_2_smolder.wl    = { t_q4basematerials_tram=! }
+        tram/small_light7_ns_orange.wl    = { t_q4basematerials_tram=! }
+        tram/stip_light1_off_white.wl    = { t_q4basematerials_tram=! }
+        tram/stip_light2_orange.wl    = { t_q4basematerials_tram=! }
+        tram/tr_13_floor_1.wl    = { a="q4base" n="tram/tr_13_floor_1_d" }
+        tram/tr_1_floor1.wl    = { a="q4base" n="tram/tr_1_floor1_d" }
+        tram/tr_1_trim2.wl    = { a="q4base" n="tram/tr_1_trim2_d" }
+        tram/tr_2_ceiling1.wl    = { a="q4base" n="tram/tr_2_ceiling1_d" }
+        tram/tr_45_wall_dusty.wl    = { a="q4base" n="tram/tr_45_wall_dusty_d" }
+  //      tram/tr_45_wall_dusty_alpha.wl    = { a="q4base" n="tram/tr_45_wall_dusty_alpha_d" }
+        tram/tr_45_wall_dusty_label.wl    = { a="q4base" n="tram/tr_45_wall_dusty_label_d" }
+        tram/tr_45_wall_dusty_label_ut.wl    = { t_q4basematerials_tram=! }
+        tram/tr_45_wall_grime.wl    = { a="q4base" n="tram/tr_45_wall_grime_d" }
+        tram/tr_4_ceiling1.wl    = { a="q4base" n="tram/tr_4_ceiling1_d" }
+        tram/tr_4_trim1.wl    = { a="q4base" n="tram/tr_4_trim1_d" }
+        tram/tr_4_trim2.wl    = { a="q4base" n="tram/tr_4_trim2_d" }
+        tram/tr_4floor_1.wl    = { a="q4base" n="tram/tr_4floor_1_d" }
+        tram/tr_4floor_2.wl    = { a="q4base" n="tram/tr_4floor_2_d" }
+        tram/tr_4floor_2_dusty.wl    = { a="q4base" n="tram/tr_4floor_2_dusty_d" }
+        tram/tr_4floor_3_dusty.wl    = { a="q4base" n="tram/tr_4floor_3_dusty_d" }
+  //      tram/tr_4floor_4_dusty.wl    = { a="q4base" n="tram/tr_4floor_4_dusty_d" }
+  //      tram/tr_alpha_railing_01_dusty.wl    = { a="q4base" n="tram/tr_alpha_railing_01_dusty_d" }
+  //      tram/tr_alpha_railing_01_dusty_ns.wl    = { t_q4basematerials_tram=! }
+  //      tram/tr_alpha_railing_01end_dusty.wl    = { a="q4base" n="tram/tr_alpha_railing_01end_dusty_d" }
+        tram/tr_ceiling_1.wl    = { a="q4base" n="tram/tr_ceiling_1_d" }
+        tram/tr_ceiling_2.wl    = { a="q4base" n="tram/tr_ceiling_2_d" }
+        tram/tr_ceiling_3.wl    = { a="q4base" n="tram/tr_ceiling_3_d" }
+        tram/tr_door_floor_piece1.wl    = { a="q4base" n="tram/tr_door_floor_piece1_d" }
+        tram/tr_floor_01.wl    = { a="q4base" n="tram/tr_floor_01_d" }
+        tram/tr_floor_3.wl    = { a="q4base" n="tram/tr_floor_3_d" }
+        tram/tr_floor_trim1_1.wl    = { a="q4base" n="tram/tr_floor_trim1_1_d" }
+        tram/tr_floor_trim1_2.wl    = { a="q4base" n="tram/tr_floor_trim1_2_d" }
+        tram/tr_grip_floor1.wl    = { a="q4base" n="tram/tr_grip_floor1_d" }
+        tram/tr_light_02.wl    = { a="q4base" n="tram/tr_light_02_d" }
+        tram/tr_pillar_1_dusty.wl    = { a="q4base" n="tram/tr_pillar_1_dusty_d" }
+        tram/tr_pillar_1_dusty_label.wl    = { a="q4base" n="tram/tr_pillar_1_dusty_label_d" }
+        tram/tr_pipe_outside_01.wl    = { a="q4base" n="tram/tr_pipe_outside_01_d" }
+  //      tram/tr_pipe_outside_02.wl    = { a="q4base" n="tram/tr_pipe_outside_02_d" }
+        tram/tr_pipe_outside_05.wl    = { a="q4base" n="tram/tr_pipe_outside_05_d" }
+        tram/tr_pipecap_01.wl    = { a="q4base" n="tram/tr_pipecap_01_d" }
+        tram/tr_pipecap_01_dusty.wl    = { a="q4base" n="tram/tr_pipecap_01_dusty_d" }
+        tram/tr_pipecap_01_dusty2.wl    = { a="q4base" n="tram/tr_pipecap_01_dusty2_d" }
+        tram/tr_pipecap_01_dusty_label.wl    = { a="q4base" n="tram/tr_pipecap_01_dusty_label_d" }
+  //      tram/tr_pipecap_01_label.wl    = { a="q4base" n="tram/tr_pipecap_01_label_d" }
+        tram/tr_pipecap_arnie_01.wl    = { a="q4base" n="tram/tr_pipecap_arnie_01_d" }
+        tram/tr_rail.wl    = { a="q4base" n="tram/tr_rail_d" }
+  //      tram/tr_rail_dusty.wl    = { a="q4base" n="tram/tr_rail_dusty_d" }
+        tram/tr_ribbed_piece.wl    = { a="q4base" n="tram/tr_ribbed_piece_d" }
+        tram/tr_ribbed_piecedusty.wl    = { a="q4base" n="tram/tr_ribbed_piecedusty_d" }
+        tram/tr_step1_1.wl    = { a="q4base" n="tram/tr_step1_1_d" }
+        tram/tr_step1_2.wl    = { a="q4base" n="tram/tr_step1_2_d" }
+        tram/tr_steptop16.wl    = { a="q4base" n="tram/tr_steptop16_d" }
+        tram/tr_steptop32.wl    = { a="q4base" n="tram/tr_steptop32_d" }
+        tram/tr_support_02.wl    = { a="q4base" n="tram/tr_support_02_d" }
+        tram/tr_support_02dusty.wl    = { a="q4base" n="tram/tr_support_02dusty_d" }
+        tram/tr_support_02dusty_alpha.wl    = { a="q4base" n="tram/tr_support_02dusty_alpha_d" }
+        tram/tr_support_03_alpha.wl    = { a="q4base" n="tram/tr_support_03_alpha_d" }
+        tram/tr_support_03dusty_alpha.wl    = { a="q4base" n="tram/tr_support_03dusty_alpha_d" }
+        tram/tr_support_04adusty_2sided.wl    = { t_q4basematerials_tram=! }
+        tram/tr_support_04adusty_scroll.wl    = { t_q4basematerials_tram=! }
+        tram/tr_support_05adusty.wl    = { a="q4base" n="tram/tr_support_05adusty_d" }
+        tram/tr_support_05adusty_2sided.wl    = { t_q4basematerials_tram=! }
+        tram/tr_support_mod.wl    = { a="q4base" n="tram/tr_support_mod_d" }
+  //      tram/tr_support_mod_01a.wl    = { a="q4base" n="tram/tr_support_mod_01a_d" }
+        tram/tr_support_moddusty.wl    = { a="q4base" n="tram/tr_support_moddusty_d" }
+  //      tram/tr_tracktop.wl    = { a="q4base" n="tram/tr_tracktop_d" }
+        tram/tr_trim_01_dusty.wl    = { a="q4base" n="tram/tr_trim_01_dusty_d" }
+        tram/tr_trim_02_dusty.wl    = { a="q4base" n="tram/tr_trim_02_dusty_d" }
+        tram/tr_trim_02_dusty_label.wl    = { a="q4base" n="tram/tr_trim_02_dusty_label_d" }
+        tram/tr_trim_03_dusty.wl    = { a="q4base" n="tram/tr_trim_03_dusty_d" }
+        tram/tr_trim_03_dusty_label.wl    = { a="q4base" n="tram/tr_trim_03_dusty_label_d" }
+        tram/tr_trim_04_dusty.wl    = { a="q4base" n="tram/tr_trim_04_dusty_d" }
+        tram/tr_trim_05_dusty.wl    = { a="q4base" n="tram/tr_trim_05_dusty_d" }
+        tram/tr_trim_06_grime.wl    = { a="q4base" n="tram/tr_trim_06_grime_d" }
+        tram/tr_trim_07_dusty.wl    = { a="q4base" n="tram/tr_trim_07_dusty_d" }
+        tram/tr_trim_outside_03.wl    = { a="q4base" n="tram/tr_trim_outside_03_d" }
+        tram/tr_trim_outside_04.wl    = { a="q4base" n="tram/tr_trim_outside_04_d" }
+        tram/tr_trim_outside_05.wl    = { a="q4base" n="tram/tr_trim_outside_05_d" }
+        tram/tr_trim_piece.wl    = { a="q4base" n="tram/tr_trim_piece_d" }
+        tram/tr_tunceiltop.wl    = { a="q4base" n="tram/tr_tunceiltop_d" }
+        tram/tr_vent_outside_01.wl    = { a="q4base" n="tram/tr_vent_outside_01_d" }
+        tram/tr_wall_01.wl    = { a="q4base" n="tram/tr_wall_01_d" }
+        tram/tr_wall_01_grime.wl    = { a="q4base" n="tram/tr_wall_01_grime_d" }
+        tram/tr_wall_01_label.wl    = { a="q4base" n="tram/tr_wall_01_label_d" }
+        tram/tr_wall_01a_grime.wl    = { a="q4base" n="tram/tr_wall_01a_grime_d" }
+        tram/tr_wall_01a_grime_label.wl    = { a="q4base" n="tram/tr_wall_01a_grime_label_d" }
+        tram/tr_wall_02_grime.wl    = { a="q4base" n="tram/tr_wall_02_grime_d" }
+        tram/tr_wall_02_grime_label.wl    = { a="q4base" n="tram/tr_wall_02_grime_label_d" }
+        tram/tr_wall_02_grime_stripe.wl    = { a="q4base" n="tram/tr_wall_02_grime_stripe_d" }
+        tram/tr_wall_02a.wl    = { a="q4base" n="tram/tr_wall_02a_d" }
+        tram/tr_wall_03_grime.wl    = { a="q4base" n="tram/tr_wall_03_grime_d" }
+        tram/tr_wall_03_grime_label.wl    = { a="q4base" n="tram/tr_wall_03_grime_label_d" }
+        tram/tr_wall_04_grime_label.wl    = { a="q4base" n="tram/tr_wall_04_grime_label_d" }
+        tram/tr_wall_04_grime_stripe.wl    = { a="q4base" n="tram/tr_wall_04_grime_stripe_d" }
+        tram/tr_wall_04a_grime.wl    = { a="q4base" n="tram/tr_wall_04a_grime_d" }
+        tram/tr_wall_04b.wl    = { a="q4base" n="tram/tr_wall_04b_d" }
+        tram/tr_wall_05.wl    = { a="q4base" n="tram/tr_wall_05_d" }
+        tram/tr_wall_06.wl    = { a="q4base" n="tram/tr_wall_06_d" }
+        tram/tr_wall_outside_01.wl    = { a="q4base" n="tram/tr_wall_outside_01_d" }
+        tram/tr_wall_outside_02.wl    = { a="q4base" n="tram/tr_wall_outside_02_d" }
+        tram/tr_wall_outside_04.wl    = { a="q4base" n="tram/tr_wall_outside_04_d" }
+        tram/tr_wall_outside_05.wl    = { a="q4base" n="tram/tr_wall_outside_05_d" }
+        tram/tr_wall_outside_07.wl    = { a="q4base" n="tram/tr_wall_outside_07_d" }
+        tram/tr_wall_outside_09.wl    = { a="q4base" n="tram/tr_wall_outside_09_d" }
+        tram/tr_wall_outside_10.wl    = { a="q4base" n="tram/tr_wall_outside_10_d" }
+        tram/tr_wall_outside_11.wl    = { a="q4base" n="tram/tr_wall_outside_11_d" }
+        tram/tr_wall_outside_12.wl    = { a="q4base" n="tram/tr_wall_outside_12_d" }
+        tram/tr_wall_outside_13.wl    = { a="q4base" n="tram/tr_wall_outside_13_d" }
+        tram/tr_walltrim_01.wl    = { a="q4base" n="tram/tr_walltrim_01_d" }
+        tram/tr_walltrim_01a.wl    = { a="q4base" n="tram/tr_walltrim_01a_d" }
+        tram/tr_walltrim_02_grime.wl    = { a="q4base" n="tram/tr_walltrim_02_grime_d" }
+        tram/tr_walltrim_02a.wl    = { a="q4base" n="tram/tr_walltrim_02a_d" }
+        tram/tr_walltrim_02b.wl    = { a="q4base" n="tram/tr_walltrim_02b_d" }
+        tram/tr_walltrim_03.wl    = { a="q4base" n="tram/tr_walltrim_03_d" }
+        tram/tr_walltrim_03a.wl    = { a="q4base" n="tram/tr_walltrim_03a_d" }
+  //      tram/tr_walltrim_03a_2side.wl    = { a="q4base" n="tram/tr_walltrim_03a_2side_d" }
+        tram/tr_walltrim_04.wl    = { a="q4base" n="tram/tr_walltrim_04_d" }
+        tram/tr_walltrim_04a.wl    = { a="q4base" n="tram/tr_walltrim_04a_d" }
+        tram/tr_walltrim_05.wl    = { a="q4base" n="tram/tr_walltrim_05_d" }
+        tram/tr_walltrim_06.wl    = { a="q4base" n="tram/tr_walltrim_06_d" }
+        tram/trim3_1.wl    = { a="q4base" n="tram/trim3_1_d" }
+        tram/walltrim1_1.wl    = { a="q4base" n="tram/walltrim1_1_d" }
+      }
+      common.txlist =
+      {
+        common/128_128.wl    = { t_q4basematerials_common=! }
+        common/128_128_ut.wl    = { t_q4basematerials_common=! }
+        common/128_256.wl    = { t_q4basematerials_common=! }
+        common/256_256.wl    = { t_q4basematerials_common=! }
+        common/32_128.wl    = { t_q4basematerials_common=! }
+        common/32_256.wl    = { t_q4basematerials_common=! }
+        common/32_32.wl    = { t_q4basematerials_common=! }
+        common/32_64.wl    = { t_q4basematerials_common=! }
+        common/64_128.wl    = { t_q4basematerials_common=! }
+        common/64_256.wl    = { t_q4basematerials_common=! }
+        common/64_64.wl    = { t_q4basematerials_common=! }
+        common/64_grid.wl    = { t_q4basematerials_common=! }
+        common/collision_concrete.wl    = { t_q4basematerials_common=! }
+        common/collision_electronics.wl    = { t_q4basematerials_common=! }
+        common/collision_flesh.wl    = { t_q4basematerials_common=! }
+        common/collision_rock.wl    = { t_q4basematerials_common=! }
+        common/collision_rubber.wl    = { t_q4basematerials_common=! }
+        common/debuggraph.wl    = { t_q4basematerials_common=! }
+        common/flatblack.wl    = { t_q4basematerials_common=! }
+        common/flatblack_glass.wl    = { t_q4basematerials_common=! }
+        common/flatblack_lit.wl    = { t_q4basematerials_common=! }
+        common/flatblack_noimpact.wl    = { t_q4basematerials_common=! }
+        editor/128_128_modview.wl    = { t_q4basematerials_common=! }
+        editor/combat.wl    = { t_q4basematerials_common=! }
+      }
+      common_floors.txlist =
+      {
+        common_floors/c2_ceiling_2.wl    = { a="q4base" n="common_floors/c2_ceiling_2_d" }
+        common_floors/c_4floor_1.wl    = { a="q4base" n="common_floors/c_4floor_1_d" }
+        common_floors/c_4floor_1b.wl    = { a="q4base" n="common_floors/c_4floor_1b_d" }
+        common_floors/c_beam.wl    = { t_q4basematerials_common_floors=! }
+        common_floors/c_ceiling_1.wl    = { a="q4base" n="common_floors/c_ceiling_1_d" }
+        common_floors/c_ceiling_2.wl    = { a="q4base" n="common_floors/c_ceiling_2_d" }
+        common_floors/c_ceiling_3.wl    = { a="q4base" n="common_floors/c_ceiling_3_d" }
+        common_floors/c_floor_1.wl    = { a="q4base" n="common_floors/c_floor_1_d" }
+        common_floors/c_floor_1a.wl    = { a="q4base" n="common_floors/c_floor_1a_d" }
+        common_floors/c_floor_1a_onesided.wl    = { t_q4basematerials_common_floors=! }
+        common_floors/c_floor_1b.wl    = { t_q4basematerials_common_floors=! }
+        common_floors/c_floor_3.wl    = { a="q4base" n="common_floors/c_floor_3_d" }
+        common_floors/c_floor_4a.wl    = { a="q4base" n="common_floors/c_floor_4a_d" }
+        common_floors/c_floor_4b.wl    = { a="q4base" n="common_floors/c_floor_4b_d" }
+  //      common_floors/c_floor_4c.wl    = { a="q4base" n="common_floors/c_floor_4c_d" }
+        common_floors/c_floor_grid1.wl    = { a="q4base" n="common_floors/c_floor_grid1_d" }
+        common_floors/c_p4_ceiling_1.wl    = { a="q4base" n="common_floors/c_p4_ceiling_1_d" }
+        common_floors/c_p4_floor_1.wl    = { a="q4base" n="common_floors/c_p4_floor_1_d" }
+        common_floors/c_steptop16.wl    = { a="q4base" n="common_floors/c_steptop16_d" }
+        common_floors/c_warningstrip32t.wl    = { a="q4base" n="common_floors/c_warningstrip32t_d" }
+        common_floors/floor1_1.wl    = { a="q4base" n="common_floors/floor1_1_d" }
+        common_floors/floor1_1a.wl    = { a="q4base" n="common_floors/floor1_1a_d" }
+        common_floors/floor1_2.wl    = { a="q4base" n="common_floors/floor1_2_d" }
+        common_floors/floor1_2a.wl    = { a="q4base" n="common_floors/floor1_2a_d" }
+        common_floors/floor1_3.wl    = { t_q4basematerials_common_floors=! }
+        common_floors/floor3_1.wl    = { a="q4base" n="common_floors/floor3_1_d" }
+        common_floors/floor3_1_onesided.wl    = { t_q4basematerials_common_floors=! }
+        common_floors/floor4_1.wl    = { a="q4base" n="common_floors/floor4_1_d" }
+        common_floors/floor4_2.wl    = { a="q4base" n="common_floors/floor4_2_d" }
+        common_floors/floor4_2_ut.wl    = { t_q4basematerials_common_floors=! }
+        common_floors/floor5_1.wl    = { a="q4base" n="common_floors/floor5_1_d" }
+        common_floors/floor5_2.wl    = { a="q4base" n="common_floors/floor5_2_d" }
+        common_floors/floor5_3.wl    = { a="q4base" n="common_floors/floor5_3_d" }
+        common_floors/floor_06a.wl    = { a="q4base" n="common_floors/floor_06a_d" }
+        common_floors/floor_06a_shoot_through.wl    = { t_q4basematerials_common_floors=! }
+        common_floors/floor_06a_ut.wl    = { t_q4basematerials_common_floors=! }
+        common_floors/floortrench1_1.wl    = { a="q4base" n="common_floors/floortrench1_1_d" }
+        common_floors/floortrench1_1_ut.wl    = { t_q4basematerials_common_floors=! }
+        common_floors/floortrim2_1.wl    = { a="q4base" n="common_floors/floortrim2_1_d" }
+        common_floors/mp_floor_6.wl    = { a="q4base" n="common_floors/mp_floor_6_d" }
+        common_floors/steptop16.wl    = { a="q4base" n="common_floors/steptop16_d" }
+        common_floors/steptop16a.wl    = { a="q4base" n="common_floors/steptop16a_d" }
+        common_floors/steptop16b.wl    = { a="q4base" n="common_floors/steptop16b_d" }
+        common_floors/steptop16c.wl    = { a="q4base" n="common_floors/steptop16c_d" }
+      }
+      common_lights.txlist =
+      {
+        common_lights/ceil_light1.wl    = { a="q4base" n="common_lights/ceil_light1_d" }
+  //      common_lights/ceil_light1_core.wl    = { a="q4base" n="common_lights/ceil_light1_core_d" }
+        common_lights/ctf_ceil_light_1_marine.wl    = { t_q4basematerials_common_lights=! }
+        common_lights/ctf_ceil_light_1_strogg.wl    = { t_q4basematerials_common_lights=! }
+        common_lights/ctf_light_1_marine.wl    = { t_q4basematerials_common_lights=! }
+        common_lights/ctf_light_1_strogg.wl    = { t_q4basematerials_common_lights=! }
+        common_lights/ctf_strip_light_1_marine.wl    = { t_q4basematerials_common_lights=! }
+        common_lights/ctf_strip_light_1_strogg.wl    = { t_q4basematerials_common_lights=! }
+        common_lights/dlight_round.wl    = { a="q4base" n="common_lights/dlight_round_d" }
+        common_lights/light1_1.wl    = { t_q4basematerials_common_lights=! }
+        common_lights/light1_1_global_startoff.wl    = { t_q4basematerials_common_lights=! }
+        common_lights/light1_1_storage.wl    = { t_q4basematerials_common_lights=! }
+        common_lights/mcc_light3_engine.wl    = { t_q4basematerials_common_lights=! }
+        common_lights/rect_light1.wl    = { a="q4base" n="common_lights/rect_light1_d" }
+        common_lights/rect_light10.wl    = { a="q4base" n="common_lights/rect_light10_d" }
+        common_lights/rect_light2.wl    = { a="q4base" n="common_lights/rect_light2_d" }
+        common_lights/rect_light3.wl    = { a="q4base" n="common_lights/rect_light3_d" }
+        common_lights/rect_light5.wl    = { a="q4base" n="common_lights/rect_light5_d" }
+  //      common_lights/rect_light5_mcc.wl    = { a="q4base" n="common_lights/rect_light5_mcc_d" }
+  //      common_lights/rect_light5_mcc_med.wl    = { a="q4base" n="common_lights/rect_light5_mcc_med_d" }
+        common_lights/rect_light6.wl    = { a="q4base" n="common_lights/rect_light6_d" }
+        common_lights/rect_light7.wl    = { a="q4base" n="common_lights/rect_light7_d" }
+        common_lights/rect_light8.wl    = { a="q4base" n="common_lights/rect_light8_d" }
+        common_lights/rect_light8_waste_orange_to_red.wl    = { t_q4basematerials_common_lights=! }
+        common_lights/small_light2.wl    = { a="q4base" n="common_lights/small_light2_d" }
+        common_lights/small_light2_global_starton.wl    = { t_q4basematerials_common_lights=! }
+        common_lights/small_light3.wl    = { a="q4base" n="common_lights/small_light3_d" }
+        common_lights/small_light4.wl    = { a="q4base" n="common_lights/small_light4_d" }
+        common_lights/small_light5.wl    = { a="q4base" n="common_lights/small_light5_d" }
+        common_lights/small_light6.wl    = { a="q4base" n="common_lights/small_light6_d" }
+  //      common_lights/small_light6_mcc.wl    = { a="q4base" n="common_lights/small_light6_mcc_d" }
+        common_lights/small_light7.wl    = { t_q4basematerials_common_lights=! }
+        common_lights/small_light7_noshadows.wl    = { t_q4basematerials_common_lights=! }
+        common_lights/small_light7_noshadows_global.wl    = { t_q4basematerials_common_lights=! }
+        common_lights/small_light7_noshadows_global_startoff.wl    = { t_q4basematerials_common_lights=! }
+        common_lights/small_light7_noshadows_global_starton.wl    = { t_q4basematerials_common_lights=! }
+        common_lights/small_light7_ns_redpulse.wl    = { t_q4basematerials_common_lights=! }
+        common_lights/strip_light1.wl    = { a="q4base" n="common_lights/strip_light1_d" }
+        common_lights/strip_light2.wl    = { a="q4base" n="common_lights/strip_light2_d" }
+        common_lights/strip_light2_global_startoff.wl    = { t_q4basematerials_common_lights=! }
+      }
+      common_misc.txlist =
+      {
+        common_misc/acid_drip.wl    = { t_q4basematerials_common_misc=! }
+        common_misc/acid_dripedge.wl    = { t_q4basematerials_common_misc=! }
+        common_misc/acid_dripedge_blend.wl    = { t_q4basematerials_common_misc=! }
+        common_misc/acid_flow.wl    = { t_q4basematerials_common_misc=! }
+        common_misc/c_mesh_1.wl    = { t_q4basematerials_common_misc=! }
+        common_misc/c_pipe02.wl    = { a="q4base" n="common_misc/c_pipe02_d" }
+        common_misc/c_pipe_outside_01.wl    = { a="q4base" n="common_misc/c_pipe_outside_01_d" }
+        common_misc/c_pipe_outside_05.wl    = { a="q4base" n="common_misc/c_pipe_outside_05_d" }
+        common_misc/c_railing01.wl    = { a="q4base" n="common_misc/c_railing01_d" }
+        common_misc/c_railing01_nonsolid.wl    = { t_q4basematerials_common_misc=! }
+        common_misc/c_railing01a.wl    = { t_q4basematerials_common_misc=! }
+        common_misc/c_railing01a_nonsolid.wl    = { t_q4basematerials_common_misc=! }
+        common_misc/c_railing01a_ut.wl    = { t_q4basematerials_common_misc=! }
+        common_misc/c_railing01b.wl    = { t_q4basematerials_common_misc=! }
+        common_misc/c_railing01b_nonsolid.wl    = { t_q4basematerials_common_misc=! }
+        common_misc/c_railing01c_nonsolid.wl    = { t_q4basematerials_common_misc=! }
+        common_misc/c_railing01e_nonsolid.wl    = { t_q4basematerials_common_misc=! }
+        common_misc/c_railing01f.wl    = { t_q4basematerials_common_misc=! }
+        common_misc/c_railing01f_nonsolid.wl    = { t_q4basematerials_common_misc=! }
+        common_misc/c_railing01g_nonsolid.wl    = { t_q4basematerials_common_misc=! }
+        common_misc/c_railing02.wl    = { a="q4base" n="common_misc/c_railing02_d" }
+        common_misc/c_railing02_nonsolid.wl    = { t_q4basematerials_common_misc=! }
+        common_misc/c_railing02_noshadows_nonsolid.wl    = { t_q4basematerials_common_misc=! }
+        common_misc/c_railing03.wl    = { a="q4base" n="common_misc/c_railing03_d" }
+        common_misc/c_wirecap01.wl    = { a="q4base" n="common_misc/c_wirecap01_d" }
+        common_misc/cap_lg.wl    = { a="q4base" n="common_misc/cap_lg_d" }
+        common_misc/clouds_scroll.wl    = { t_q4basematerials_common_misc=! }
+        common_misc/clouds_scroll_multiply.wl    = { t_q4basematerials_common_misc=! }
+        common_misc/concrete01.wl    = { t_q4basematerials_common_misc=! }
+        common_misc/concrete02.wl    = { a="q4base" n="common_misc/concrete02_d" }
+        common_misc/concrete02_to_impact_middle.wl    = { t_q4basematerials_common_misc=! }
+        common_misc/concrete04.wl    = { t_q4basematerials_common_misc=! }
+        common_misc/concrete04_slime.wl    = { t_q4basematerials_common_misc=! }
+        common_misc/concrete05.wl    = { t_q4basematerials_common_misc=! }
+        common_misc/concrete06.wl    = { t_q4basematerials_common_misc=! }
+        common_misc/concrete06_chipped.wl    = { t_q4basematerials_common_misc=! }
+        common_misc/concrete07.wl    = { a="q4base" n="common_misc/concrete07_d" }
+        common_misc/concrete07_chipped.wl    = { t_q4basematerials_common_misc=! }
+        common_misc/concrete07_chipped_slime.wl    = { t_q4basematerials_common_misc=! }
+        common_misc/concrete07_slime.wl    = { a="q4base" n="common_misc/concrete07_slime_d" }
+        common_misc/concrete08.wl    = { a="q4base" n="common_misc/concrete08_d" }
+        common_misc/concrete08_chipped.wl    = { t_q4basematerials_common_misc=! }
+        common_misc/concrete08_slime.wl    = { a="q4base" n="common_misc/concrete08_slime_d" }
+        common_misc/concrete09.wl    = { t_q4basematerials_common_misc=! }
+        common_misc/concrete09_smolder.wl    = { t_q4basematerials_common_misc=! }
+        common_misc/concrete09a.wl    = { a="q4base" n="common_misc/concrete09a_d" }
+        common_misc/concrete09b.wl    = { t_q4basematerials_common_misc=! }
+        common_misc/concrete_roadway.wl    = { t_q4basematerials_common_misc=! }
+        common_misc/conmetal.wl    = { t_q4basematerials_common_misc=! }
+        common_misc/crate1_side.wl    = { a="q4base" n="common_misc/crate1_side_d" }
+        common_misc/crate1_top.wl    = { a="q4base" n="common_misc/crate1_top_d" }
+  //      common_misc/elevator_floor.wl    = { a="q4base" n="common_misc/elevator_floor_d" }
+        common_misc/elevator_trim1.wl    = { t_q4basematerials_common_misc=! }
+        common_misc/elevator_wall.wl    = { t_q4basematerials_common_misc=! }
+        common_misc/fanblade.wl    = { t_q4basematerials_common_misc=! }
+        common_misc/fence01.wl    = { t_q4basematerials_common_misc=! }
+        common_misc/fence02.wl    = { t_q4basematerials_common_misc=! }
+        common_misc/fence02_noscale.wl    = { t_q4basematerials_common_misc=! }
+        common_misc/fence03.wl    = { t_q4basematerials_common_misc=! }
+        common_misc/floor_piece_1.wl    = { a="q4base" n="common_misc/floor_piece_1_d" }
+        common_misc/fluid_surge.wl    = { t_q4basematerials_common_misc=! }
+        common_misc/gate_door_red.wl    = { t_q4basematerials_common_misc=! }
+        common_misc/greyswatch64t.wl    = { a="q4base" n="common_misc/greyswatch64t_d" }
+        common_misc/heartpump_fluid.wl    = { t_q4basematerials_common_misc=! }
+        common_misc/p1_walltrim2.wl    = { a="q4base" n="common_misc/p1_walltrim2_d" }
+        common_misc/p4_beam.wl    = { t_q4basematerials_common_misc=! }
+        common_misc/p4_beam_3.wl    = { a="q4base" n="common_misc/p4_beam_3_d" }
+        common_misc/p4_beam_3_ut.wl    = { t_q4basematerials_common_misc=! }
+        common_misc/p4_beam_5.wl    = { a="q4base" n="common_misc/p4_beam_5_d" }
+        common_misc/pipe1_1.wl    = { t_q4basematerials_common_misc=! }
+        common_misc/pipe1_1_black.wl    = { t_q4basematerials_common_misc=! }
+        common_misc/pipe1_1_black_clean.wl    = { a="q4base" n="common_misc/pipe1_1_black_clean_d" }
+        common_misc/pipe1_1_black_to_smolder.wl    = { t_q4basematerials_common_misc=! }
+        common_misc/pipe1_1_blue_clean.wl    = { a="q4base" n="common_misc/pipe1_1_blue_clean_d" }
+        common_misc/pipe1_1_orange.wl    = { t_q4basematerials_common_misc=! }
+        common_misc/pipe1_1_orange_burn.wl    = { t_q4basematerials_common_misc=! }
+        common_misc/pipe1_1_orange_to_smolder.wl    = { t_q4basematerials_common_misc=! }
+        common_misc/pipe1_1_red.wl    = { t_q4basematerials_common_misc=! }
+        common_misc/pipe1_1_red_to_smolder.wl    = { t_q4basematerials_common_misc=! }
+        common_misc/pipe1_1a_blue_clean.wl    = { a="q4base" n="common_misc/pipe1_1a_blue_clean_d" }
+        common_misc/pipe1_1b_orange.wl    = { t_q4basematerials_common_misc=! }
+        common_misc/pipe1_1c_orange.wl    = { t_q4basematerials_common_misc=! }
+        common_misc/pipe1_1c_orange_burn.wl    = { t_q4basematerials_common_misc=! }
+        common_misc/pipe1_2_black.wl    = { t_q4basematerials_common_misc=! }
+        common_misc/pipe1_2_black_clean.wl    = { a="q4base" n="common_misc/pipe1_2_black_clean_d" }
+        common_misc/pipe1_2_blue_clean.wl    = { a="q4base" n="common_misc/pipe1_2_blue_clean_d" }
+        common_misc/pipe1_2_orange.wl    = { t_q4basematerials_common_misc=! }
+        common_misc/pipe1_2_red.wl    = { t_q4basematerials_common_misc=! }
+        common_misc/pipe1_2a_black_clean.wl    = { a="q4base" n="common_misc/pipe1_2a_black_clean_d" }
+        common_misc/pipe1_thread.wl    = { a="q4base" n="common_misc/pipe1_thread_d" }
+        common_misc/pipecap1_1.wl    = { a="q4base" n="common_misc/pipecap1_1_d" }
+  //      common_misc/prison_4floor_1.wl    = { a="q4base" n="common_misc/prison_4floor_1_d" }
+        common_misc/prison_4floor_2.wl    = { a="q4base" n="common_misc/prison_4floor_2_d" }
+        common_misc/prison_beamside.wl    = { a="q4base" n="common_misc/prison_beamside_d" }
+        common_misc/prisonpipecapt_alpha.wl    = { t_q4basematerials_common_misc=! }
+  //      common_misc/skybox_billboard_01.wl    = { t_q4basematerials_common_misc=! }
+  //      common_misc/skybox_billboard_02.wl    = { t_q4basematerials_common_misc=! }
+  //      common_misc/skybox_billboard_03.wl    = { t_q4basematerials_common_misc=! }
+  //      common_misc/skybox_billboard_04.wl    = { t_q4basematerials_common_misc=! }
+  //      common_misc/skybox_billboard_05.wl    = { t_q4basematerials_common_misc=! }
+  //      common_misc/skybox_billboard_06.wl    = { t_q4basematerials_common_misc=! }
+  //      common_misc/skybox_billboard_07.wl    = { t_q4basematerials_common_misc=! }
+  //      common_misc/skybox_billboard_08.wl    = { t_q4basematerials_common_misc=! }
+        common_misc/str_wall2.wl    = { t_q4basematerials_common_misc=! }
+        common_misc/support1_1.wl    = { a="q4base" n="common_misc/support1_1_d" }
+        common_misc/support1_2.wl    = { a="q4base" n="common_misc/support1_2_d" }
+        common_misc/sw_wall_22a.wl    = { a="q4base" n="common_misc/sw_wall_22a_d" }
+        common_misc/tr_door_floor_piece1.wl    = { t_q4basematerials_common_misc=! }
+        common_misc/warningstrip32t.wl    = { a="q4base" n="common_misc/warningstrip32t_d" }
+        common_misc/wire1_1_black.wl    = { t_q4basematerials_common_misc=! }
+        common_misc/wire1_1_black_nonsolid.wl    = { t_q4basematerials_common_misc=! }
+        common_misc/wire1_1_blue_nonsolid.wl    = { t_q4basematerials_common_misc=! }
+        common_misc/wire1_1_orange.wl    = { t_q4basematerials_common_misc=! }
+        common_misc/wire1_1_red.wl    = { t_q4basematerials_common_misc=! }
+        common_misc/wire1_1_red_nonsolid.wl    = { t_q4basematerials_common_misc=! }
+        common_misc/wire1_1_yellow.wl    = { t_q4basematerials_common_misc=! }
+        common_misc/wire1_1_yellow_nonsolid.wl    = { t_q4basematerials_common_misc=! }
+        common_misc/wiretile_a.wl    = { t_q4basematerials_common_misc=! }
+      }
+      common_trims.txlist =
+      {
+        common_trims/c_beam32t.wl    = { a="q4base" n="common_trims/c_beam32t_d" }
+        common_trims/c_beam32t_onesided.wl    = { t_q4basematerials_common_trims=! }
+        common_trims/c_beam32t_red.wl    = { a="q4base" n="common_trims/c_beam32t_red_d" }
+        common_trims/c_beam32t_sil.wl    = { a="q4base" n="common_trims/c_beam32t_sil_d" }
+        common_trims/c_trim03.wl    = { a="q4base" n="common_trims/c_trim03_d" }
+        common_trims/c_trim04.wl    = { a="q4base" n="common_trims/c_trim04_d" }
+        common_trims/c_trim04_slime.wl    = { a="q4base" n="common_trims/c_trim04_slime_d" }
+        common_trims/c_trim05.wl    = { a="q4base" n="common_trims/c_trim05_d" }
+        common_trims/c_trim2.wl    = { a="q4base" n="common_trims/c_trim2_d" }
+        common_trims/c_trim2_noshadows.wl    = { t_q4basematerials_common_trims=! }
+        common_trims/c_trim2_slime.wl    = { a="q4base" n="common_trims/c_trim2_slime_d" }
+        common_trims/c_trim2_smolder.wl    = { t_q4basematerials_common_trims=! }
+  //      common_trims/c_trim2b.wl    = { a="q4base" n="common_trims/c_trim2b_d" }
+        common_trims/c_walltrim_1.wl    = { a="q4base" n="common_trims/c_walltrim_1_d" }
+        common_trims/mechtrim1_1.wl    = { a="q4base" n="common_trims/mechtrim1_1_d" }
+        common_trims/trim1_1.wl    = { a="q4base" n="common_trims/trim1_1_d" }
+        common_trims/trim1_2.wl    = { a="q4base" n="common_trims/trim1_2_d" }
+        common_trims/trim1_3.wl    = { a="q4base" n="common_trims/trim1_3_d" }
+        common_trims/trim1_4.wl    = { a="q4base" n="common_trims/trim1_4_d" }
+        common_trims/trim1_5.wl    = { t_q4basematerials_common_trims=! }
+        common_trims/trim1_6.wl    = { a="q4base" n="common_trims/trim1_6_d" }
+        common_trims/trim1_7.wl    = { a="q4base" n="common_trims/trim1_7_d" }
+        common_trims/trim2_1.wl    = { a="q4base" n="common_trims/trim2_1_d" }
+        common_trims/trim2_2.wl    = { a="q4base" n="common_trims/trim2_2_d" }
+        common_trims/trim3_1.wl    = { a="q4base" n="common_trims/trim3_1_d" }
+        common_trims/trim3_1_smolder.wl    = { t_q4basematerials_common_trims=! }
+        common_trims/trim3_1_ut.wl    = { t_q4basematerials_common_trims=! }
+        common_trims/trim3_2.wl    = { a="q4base" n="common_trims/trim3_2_d" }
+        common_trims/trim5_1.wl    = { a="q4base" n="common_trims/trim5_1_d" }
+        common_trims/trim5_2.wl    = { a="q4base" n="common_trims/trim5_2_d" }
+        common_trims/trim5_2_to_smolder.wl    = { t_q4basematerials_common_trims=! }
+        common_trims/trim5_3.wl    = { a="q4base" n="common_trims/trim5_3_d" }
+        common_trims/trim5_3_ut.wl    = { t_q4basematerials_common_trims=! }
+        common_trims/trim6_1.wl    = { a="q4base" n="common_trims/trim6_1_d" }
+        common_trims/trim7_1.wl    = { a="q4base" n="common_trims/trim7_1_d" }
+        common_trims/trim7_2.wl    = { t_q4basematerials_common_trims=! }
+        common_trims/walltrim1_1.wl    = { a="q4base" n="common_trims/walltrim1_1_d" }
+        common_trims/walltrim1_1_ut.wl    = { t_q4basematerials_common_trims=! }
+        common_trims/walltrim1_2.wl    = { t_q4basematerials_common_trims=! }
+        common_trims/walltrim1_3.wl    = { a="q4base" n="common_trims/walltrim1_3_d" }
+      }
+      common_walls.txlist =
+      {
+        common_walls/ba_panel1_1.wl    = { a="q4base" n="common_walls/ba_panel1_1_d" }
+        common_walls/ba_panel1_1_ut.wl    = { t_q4basematerials_common_walls=! }
+        common_walls/ba_panel1_2.wl    = { a="q4base" n="common_walls/ba_panel1_2_d" }
+        common_walls/ba_smalltrim1_1.wl    = { a="q4base" n="common_walls/ba_smalltrim1_1_d" }
+        common_walls/ba_smalltrim1_2.wl    = { a="q4base" n="common_walls/ba_smalltrim1_2_d" }
+        common_walls/ba_smalltrim1_3.wl    = { a="q4base" n="common_walls/ba_smalltrim1_3_d" }
+        common_walls/ba_techtrim1_1.wl    = { a="q4base" n="common_walls/ba_techtrim1_1_d" }
+        common_walls/ba_wall1_1.wl    = { a="q4base" n="common_walls/ba_wall1_1_d" }
+        common_walls/ba_wall1_2.wl    = { a="q4base" n="common_walls/ba_wall1_2_d" }
+        common_walls/ba_wall1_3.wl    = { a="q4base" n="common_walls/ba_wall1_3_d" }
+        common_walls/ba_wall1_4.wl    = { a="q4base" n="common_walls/ba_wall1_4_d" }
+        common_walls/ba_wall1_5.wl    = { a="q4base" n="common_walls/ba_wall1_5_d" }
+        common_walls/ba_wall1_5b.wl    = { a="q4base" n="common_walls/ba_wall1_5b_d" }
+        common_walls/ba_wall1_5c.wl    = { a="q4base" n="common_walls/ba_wall1_5c_d" }
+        common_walls/ba_wall1_5d.wl    = { a="q4base" n="common_walls/ba_wall1_5d_d" }
+  //      common_walls/ba_wall_small1.wl    = { a="q4base" n="common_walls/ba_wall_small1_d" }
+        common_walls/c_45_wall_dusty.wl    = { a="q4base" n="common_walls/c_45_wall_dusty_d" }
+  //      common_walls/c_45_wall_dusty_mp.wl    = { a="q4base" n="common_walls/c_45_wall_dusty_mp_d" }
+        common_walls/c_bunker_w_a.wl    = { a="q4base" n="common_walls/c_bunker_w_a_d" }
+        common_walls/c_bunker_w_d.wl    = { a="q4base" n="common_walls/c_bunker_w_d_d" }
+        common_walls/c_p1_walltrim2.wl    = { a="q4base" n="common_walls/c_p1_walltrim2_d" }
+        common_walls/c_p4_beam_2.wl    = { a="q4base" n="common_walls/c_p4_beam_2_d" }
+        common_walls/c_pipecap01.wl    = { a="q4base" n="common_walls/c_pipecap01_d" }
+        common_walls/c_ribwall.wl    = { a="q4base" n="common_walls/c_ribwall_d" }
+        common_walls/c_support01.wl    = { a="q4base" n="common_walls/c_support01_d" }
+  //      common_walls/c_support01_twosided.wl    = { a="q4base" n="common_walls/c_support01_twosided_d" }
+        common_walls/c_t10_floor_1.wl    = { a="q4base" n="common_walls/c_t10_floor_1_d" }
+        common_walls/c_t10_wall_10.wl    = { a="q4base" n="common_walls/c_t10_wall_10_d" }
+        common_walls/c_t10_wall_2.wl    = { a="q4base" n="common_walls/c_t10_wall_2_d" }
+        common_walls/c_t10_wall_3.wl    = { a="q4base" n="common_walls/c_t10_wall_3_d" }
+        common_walls/c_t10_wall_4.wl    = { a="q4base" n="common_walls/c_t10_wall_4_d" }
+        common_walls/c_t10_wall_5a.wl    = { a="q4base" n="common_walls/c_t10_wall_5a_d" }
+        common_walls/c_t10_wall_5b.wl    = { a="q4base" n="common_walls/c_t10_wall_5b_d" }
+        common_walls/c_t10_wall_6.wl    = { a="q4base" n="common_walls/c_t10_wall_6_d" }
+        common_walls/c_t10_wall_7b.wl    = { a="q4base" n="common_walls/c_t10_wall_7b_d" }
+        common_walls/c_t10_wall_9.wl    = { a="q4base" n="common_walls/c_t10_wall_9_d" }
+        common_walls/c_t10_walltrim_1.wl    = { a="q4base" n="common_walls/c_t10_walltrim_1_d" }
+        common_walls/c_t10_walltrim_2.wl    = { a="q4base" n="common_walls/c_t10_walltrim_2_d" }
+        common_walls/c_trim03_label.wl    = { a="q4base" n="common_walls/c_trim03_label_d" }
+        common_walls/c_vent_outside_02.wl    = { a="q4base" n="common_walls/c_vent_outside_02_d" }
+        common_walls/c_wall_10.wl    = { a="q4base" n="common_walls/c_wall_10_d" }
+        common_walls/c_wall_7.wl    = { a="q4base" n="common_walls/c_wall_7_d" }
+        common_walls/c_wall_8.wl    = { a="q4base" n="common_walls/c_wall_8_d" }
+        common_walls/c_wall_9.wl    = { a="q4base" n="common_walls/c_wall_9_d" }
+        common_walls/c_wall_outside_01.wl    = { a="q4base" n="common_walls/c_wall_outside_01_d" }
+        common_walls/c_wall_outside_04.wl    = { a="q4base" n="common_walls/c_wall_outside_04_d" }
+        common_walls/c_wall_plates4.wl    = { a="q4base" n="common_walls/c_wall_plates4_d" }
+        common_walls/c_walltrim02.wl    = { a="q4base" n="common_walls/c_walltrim02_d" }
+        common_walls/c_walltrim02a.wl    = { a="q4base" n="common_walls/c_walltrim02a_d" }
+        common_walls/c_walltrim2.wl    = { a="q4base" n="common_walls/c_walltrim2_d" }
+        common_walls/ctech_wall1_1.wl    = { t_q4basematerials_common_walls=! }
+        common_walls/ctech_wall1_1_smolder.wl    = { t_q4basematerials_common_walls=! }
+        common_walls/ctech_wall1_2.wl    = { t_q4basematerials_common_walls=! }
+        common_walls/miscpanel1_1.wl    = { a="q4base" n="common_walls/miscpanel1_1_d" }
+        common_walls/miscpanel1_1_to_smolder.wl    = { t_q4basematerials_common_walls=! }
+  //      common_walls/miscpanel1_2.wl    = { a="q4base" n="common_walls/miscpanel1_2_d" }
+        common_walls/miscpanel1_3.wl    = { a="q4base" n="common_walls/miscpanel1_3_d" }
+        common_walls/miscpanel1_3_to_smolder.wl    = { t_q4basematerials_common_walls=! }
+        common_walls/miscpanel2_1.wl    = { a="q4base" n="common_walls/miscpanel2_1_d" }
+        common_walls/miscpanel2_2.wl    = { a="q4base" n="common_walls/miscpanel2_2_d" }
+        common_walls/miscpanel2_3.wl    = { a="q4base" n="common_walls/miscpanel2_3_d" }
+        common_walls/outdoor_wall1_1.wl    = { a="q4base" n="common_walls/outdoor_wall1_1_d" }
+        common_walls/outdoor_wall1_10.wl    = { a="q4base" n="common_walls/outdoor_wall1_10_d" }
+        common_walls/outdoor_wall1_10a.wl    = { t_q4basematerials_common_walls=! }
+        common_walls/outdoor_wall1_11.wl    = { a="q4base" n="common_walls/outdoor_wall1_11_d" }
+        common_walls/outdoor_wall1_12.wl    = { a="q4base" n="common_walls/outdoor_wall1_12_d" }
+        common_walls/outdoor_wall1_13.wl    = { a="q4base" n="common_walls/outdoor_wall1_13_d" }
+        common_walls/outdoor_wall1_1a.wl    = { t_q4basematerials_common_walls=! }
+        common_walls/outdoor_wall1_2.wl    = { a="q4base" n="common_walls/outdoor_wall1_2_d" }
+        common_walls/outdoor_wall1_3.wl    = { a="q4base" n="common_walls/outdoor_wall1_3_d" }
+        common_walls/outdoor_wall1_3a.wl    = { t_q4basematerials_common_walls=! }
+        common_walls/outdoor_wall1_4.wl    = { a="q4base" n="common_walls/outdoor_wall1_4_d" }
+        common_walls/outdoor_wall1_4_burn.wl    = { t_q4basematerials_common_walls=! }
+        common_walls/outdoor_wall1_4_ut.wl    = { t_q4basematerials_common_walls=! }
+        common_walls/outdoor_wall1_5.wl    = { a="q4base" n="common_walls/outdoor_wall1_5_d" }
+        common_walls/outdoor_wall1_6.wl    = { a="q4base" n="common_walls/outdoor_wall1_6_d" }
+        common_walls/outdoor_wall1_6a.wl    = { t_q4basematerials_common_walls=! }
+        common_walls/outdoor_wall1_7.wl    = { a="q4base" n="common_walls/outdoor_wall1_7_d" }
+        common_walls/outdoor_wall1_8.wl    = { a="q4base" n="common_walls/outdoor_wall1_8_d" }
+        common_walls/outdoor_wall1_8a.wl    = { t_q4basematerials_common_walls=! }
+        common_walls/outdoor_wall1_9.wl    = { a="q4base" n="common_walls/outdoor_wall1_9_d" }
+        common_walls/outdoor_wall2_1.wl    = { a="q4base" n="common_walls/outdoor_wall2_1_d" }
+        common_walls/outdoor_wall2_2.wl    = { a="q4base" n="common_walls/outdoor_wall2_2_d" }
+        common_walls/vent1_1.wl    = { a="q4base" n="common_walls/vent1_1_d" }
+        common_walls/wall1_1.wl    = { a="q4base" n="common_walls/wall1_1_d" }
+        common_walls/wall1_1a.wl    = { a="q4base" n="common_walls/wall1_1a_d" }
+        common_walls/wall1_1b.wl    = { a="q4base" n="common_walls/wall1_1b_d" }
+        common_walls/wall1_1bv.wl    = { a="q4base" n="common_walls/wall1_1bv_d" }
+        common_walls/wall1_1v.wl    = { a="q4base" n="common_walls/wall1_1v_d" }
+        common_walls/wall1_2.wl    = { a="q4base" n="common_walls/wall1_2_d" }
+  //      common_walls/wall1_2av.wl    = { a="q4base" n="common_walls/wall1_2av_d" }
+        common_walls/wall1_2v.wl    = { a="q4base" n="common_walls/wall1_2v_d" }
+        common_walls/wall1_4.wl    = { a="q4base" n="common_walls/wall1_4_d" }
+        common_walls/wall1_4_to_smolder.wl    = { t_q4basematerials_common_walls=! }
+        common_walls/wall1_5.wl    = { a="q4base" n="common_walls/wall1_5_d" }
+        common_walls/wall1_5_to_smolder.wl    = { t_q4basematerials_common_walls=! }
+  //      common_walls/wall1_6.wl    = { a="q4base" n="common_walls/wall1_6_d" }
+        common_walls/wall1_7.wl    = { a="q4base" n="common_walls/wall1_7_d" }
+        common_walls/wall2_1.wl    = { a="q4base" n="common_walls/wall2_1_d" }
+        common_walls/wall2_1a.wl    = { a="q4base" n="common_walls/wall2_1a_d" }
+        common_walls/wall2_1b.wl    = { a="q4base" n="common_walls/wall2_1b_d" }
+        common_walls/wall2_2.wl    = { a="q4base" n="common_walls/wall2_2_d" }
+        common_walls/wall2_3.wl    = { a="q4base" n="common_walls/wall2_3_d" }
+        common_walls/wall2_3a.wl    = { a="q4base" n="common_walls/wall2_3a_d" }
+        common_walls/wall2_4.wl    = { a="q4base" n="common_walls/wall2_4_d" }
+        common_walls/wall2_5.wl    = { a="q4base" n="common_walls/wall2_5_d" }
+        common_walls/wall2_5a.wl    = { a="q4base" n="common_walls/wall2_5a_d" }
+        common_walls/wall2_5a_to_smolder.wl    = { t_q4basematerials_common_walls=! }
+        common_walls/wall3_1.wl    = { a="q4base" n="common_walls/wall3_1_d" }
+        common_walls/wall4_1.wl    = { a="q4base" n="common_walls/wall4_1_d" }
+        common_walls/wall4_1a.wl    = { a="q4base" n="common_walls/wall4_1a_d" }
+        common_walls/wall4_1v.wl    = { a="q4base" n="common_walls/wall4_1v_d" }
+        common_walls/wall4_2v.wl    = { a="q4base" n="common_walls/wall4_2v_d" }
+        common_walls/wall5_1.wl    = { a="q4base" n="common_walls/wall5_1_d" }
+        common_walls/wall5_3.wl    = { a="q4base" n="common_walls/wall5_3_d" }
+        common_walls/wall5_4.wl    = { a="q4base" n="common_walls/wall5_4_d" }
+        common_walls/wall6_1.wl    = { a="q4base" n="common_walls/wall6_1_d" }
+  //      common_walls/wall7_1.wl    = { a="q4base" n="common_walls/wall7_1_d" }
+        common_walls/wall7_2.wl    = { a="q4base" n="common_walls/wall7_2_d" }
+        common_walls/wall7_3.wl    = { a="q4base" n="common_walls/wall7_3_d" }
+      }
+      e_decals.txlist =
+      {
+  //      decals/bulleth02.wl    = { t_q4basematerials_e_decals=! }
+        decals/bulleth02a.wl    = { t_q4basematerials_e_decals=! }
+        decals/bullethole.wl    = { t_q4basematerials_e_decals=! }
+        decals/bullethole_multiply.wl    = { t_q4basematerials_e_decals=! }
+        decals/rocketburn.wl    = { t_q4basematerials_e_decals=! }
+      }
+  //    test.txlist =
+  //    {
+  //      test/526_decal.wl    = { t_q4basematerials_effects_test=! }
+  //      test/marine_decal_alpha.wl    = { t_q4basematerials_effects_test=! }
+  //    }
+    }
+  }
+}

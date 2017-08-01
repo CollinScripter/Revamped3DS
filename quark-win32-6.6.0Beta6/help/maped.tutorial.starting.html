@@ -1,0 +1,296 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"  "http://www.w3.org/TR/html4/loose.dtd">
+<html lang="en">
+<head>
+  <title>Starting the map-editor</title>
+  <meta name="Description" content="QuArK Information Database - Page: 2.1.1.&nbsp;Starting the map-editor">
+  <meta name="Keywords" content="QuArK InfoBase Quake Army Knife QRK QKM Python PY Map Editor Hexen Heretic Half-Life Sin Kingpin Soldier-of-Fortune Star-Trek-Voyager Elite-Force">
+  <link rel=stylesheet href="standard.css" type="text/css">
+</head>
+
+<body>
+<a name="__top__"></a>
+<table width="100%" border=0 cellspacing=0>
+  <tr>
+    <td width=213>
+      <a target="_blank" href="http://quark.sourceforge.net/"><img src="quarkicon.png" width=213 height=90 border=0 alt="Go to QuArK Web Site"></a>
+    </td>
+    <td width="70%" align=center>
+      <div class="topheadline">Starting the map-editor</div>
+      <div class="sm">Updated&nbsp;25 Jul 2009</div>
+    </td>
+    <td width="30%" valign=bottom nowrap>
+      Upper&nbsp;levels:<br>-&nbsp;<a href="index.html">QuArK&nbsp;Information&nbsp;Base</a><br>-&nbsp;<a href="maped.html">2.&nbsp;Map&nbsp;editing</a><br>-&nbsp;<a href="maped.tutorial.html">2.1.&nbsp;Tutorial&nbsp;-&nbsp;Creating&nbsp;a&nbsp;map</a><br>
+    </td>
+  </tr>
+</table>
+<table width="100%" border=0 cellspacing=0>
+  <tr class="headline">
+    <td width="99%">
+      <p class="headline">&nbsp;2.1.1.&nbsp;Starting the map-editor</p>
+    </td>
+    <td width="1%" align=right nowrap>
+      &nbsp;[&nbsp;<span class="navenable"><a href="maped.tutorial.html">Prev</a></span>&nbsp;-&nbsp;<span class="navenable"><a href="maped.tutorial.html">Up</a></span>&nbsp;-&nbsp;<span class="navenable"><a href="maped.tutorial.polyhedrons.html">Next</a></span>&nbsp;]&nbsp;
+    </td>
+  </tr>
+</table>
+<table border=0 width="100%" cellspacing=10><tr><td><p>This is the first part of four, which guides you through the methods and
+functions of creating a map in QuArK's map-editor.
+</p><p>Once you've completed this section, proceed to <a href="maped.tutorial.polyhedrons.html">'Using brushes (polyhedrons)'</a>.
+</p>
+</td></tr></table>
+<br>
+
+<table width="100%" border=0 cellspacing=0>
+  <tr class="headline">
+    <td width="100%">
+      <p class="subheadline">&nbsp;Index</p>
+    </td>
+  </tr>
+</table>
+<ul class="index">
+  <li>- <a href="#entering">Entering the map-editor</a>&nbsp;<span class="added">(25 Jul 2009)</span>
+  <li>- <a href="#help">Help in the map-editor</a>&nbsp;<span class="added">(12 Sep 2008)</span>
+  <li>- <a href="#defaultroom">The default room</a>&nbsp;<span class="added">(25 Jul 2009)</span>
+  <li>- <a href="#deleting">Deleting the default room</a>&nbsp;<span class="added">(28 Feb 2001)</span>
+  <li>- <a href="#undoredo">Undo/Redo</a>&nbsp;<span class="added">(12 Sep 2008)</span>
+  <li>- <a href="#saving">Saving your map in a QuArK project</a>&nbsp;<span class="added">(12 Sep 2008)</span>
+  <li>- <a href="#nextpart">Next part</a>&nbsp;<span class="added">(31 Aug 2008)</span>
+</ul>
+<br>
+
+
+<a name="entering"></a>
+  <table width="100%" border=0 cellspacing=0>
+    <tr class="headline">
+      <td>
+        <p class="item">&nbsp;Entering the map-editor</p>
+      </td>
+      <td align=right>
+        <font size=-2>Decker&nbsp;-&nbsp;25 Jul 2009</font>
+      </td>
+      <td width="1%" align=right nowrap>
+        &nbsp;&nbsp;[&nbsp;<a href="#__top__">Top</a>&nbsp;]&nbsp;
+      </td>
+    </tr>
+  </table>
+  <table border=0 width="100%" cellspacing=10><tr><td>
+<p>Before we start, make sure that the <a href="glossary.html#b">build-programs</a> are configured
+properly in the <a href="intro.configuration.games.html">'Games'</a> section.
+</p><p><img width=336 height=62 align=right src="maped.tutorial.starting.image1.png">
+You start the QuArK map-editor, by first selecting what game you want to
+develop for, in the <span class="act">'Games'</span> menu. For this tutorial, the game
+'Half-Life' has been choosen.
+</p><p>Then press the 'New map' icon as shown in the image, to start the
+map-editor.
+</p>
+  </td></tr></table>
+  <br>
+
+<a name="help"></a>
+  <table width="100%" border=0 cellspacing=0>
+    <tr class="headline">
+      <td>
+        <p class="item">&nbsp;Help in the map-editor</p>
+      </td>
+      <td align=right>
+        <font size=-2>Decker&nbsp;-&nbsp;12 Sep 2008</font>
+      </td>
+      <td width="1%" align=right nowrap>
+        &nbsp;&nbsp;[&nbsp;<a href="#__top__">Top</a>&nbsp;]&nbsp;
+      </td>
+    </tr>
+  </table>
+  <table border=0 width="100%" cellspacing=10><tr><td>
+<p>Before you proceed, you should be aware of the help you can get in QuArK. Where
+ever you point your mouse-cursor in QuArK's map-editor, you might get a
+&nbsp;<tt>&quot;Press <b>F1</b> for help&quot;</tt>&nbsp; message in the bottom leftcorner of the
+screen, like this: <img width=177 height=17 align=absmiddle src="maped.tutorial.starting.image1b.png">.
+If you don't know about the item you are pointing at, then press the F1 key and
+you will get a help-box up, explaining a little about the item.
+</p>
+  </td></tr></table>
+  <br>
+
+<a name="defaultroom"></a>
+  <table width="100%" border=0 cellspacing=0>
+    <tr class="headline">
+      <td>
+        <p class="item">&nbsp;The default room</p>
+      </td>
+      <td align=right>
+        <font size=-2>Decker&nbsp;-&nbsp;25 Jul 2009</font>
+      </td>
+      <td width="1%" align=right nowrap>
+        &nbsp;&nbsp;[&nbsp;<a href="#__top__">Top</a>&nbsp;]&nbsp;
+      </td>
+    </tr>
+  </table>
+  <table border=0 width="100%" cellspacing=10><tr><td>
+<p><img width=218 height=161 align=right src="maped.tutorial.starting.image2.png">
+When you start the map-editor using the icon described, a default room will be
+presented for you. This you can use to test to see if the build-programs works,
+by issuing a &nbsp;<tt>QuickGO!</tt>&nbsp; from the game menu; which is either Quake-1,
+Hexen-II, Quake-2, Heretic-II, Half-Life, etc., depending on what you have
+selected in the QuArK-explorer games menu.
+</p><p>If you have any problems calling the build-programs, first check the
+<a href="intro.basicknowledge.html">'Basic knowledge - A must know for people using QuArK'</a>, next the <a href="intro.configuration.games.html">Configuration</a>
+then the <a href="maped.games.html">'FAQs for each supported game'</a> and lastly if you simply can't get it to work,
+mail your problem to the <a target="_blank" href="http://quark.sourceforge.net/forums/">QuArK-forum</a>; stating
+for what game you are developing, and a good description of your problem.
+</p><p>There are different views and panels in the map-editor, each with their
+function, which you will be presented to, through this tutorial. You can also
+check the <a href="intro.mapeditor.html">map-editor reference pages</a>, if
+you can't wait.
+</p>
+  </td></tr></table>
+  <br>
+
+<a name="deleting"></a>
+  <table width="100%" border=0 cellspacing=0>
+    <tr class="headline">
+      <td>
+        <p class="item">&nbsp;Deleting the default room</p>
+      </td>
+      <td align=right>
+        <font size=-2>Decker&nbsp;-&nbsp;28 Feb 2001</font>
+      </td>
+      <td width="1%" align=right nowrap>
+        &nbsp;&nbsp;[&nbsp;<a href="#__top__">Top</a>&nbsp;]&nbsp;
+      </td>
+    </tr>
+  </table>
+  <table border=0 width="100%" cellspacing=10><tr><td>
+<p><img width=184 height=104 align=right src="maped.tutorial.starting.image3.png">
+The default room is okay for test purposes, but usually you don't want to use
+it at all, so how do you get rid of it?
+</p><p>Easy, by deleting it! Mark the three items in the
+<a href="intro.mapeditor.dataforms.html#treeview">'Tree-view (hierarchy-view)'</a>, as shown in the
+image, and either press the Delete key on your keyboard, or &nbsp;<tt>drag</tt>&nbsp; them
+to the <a href="intro.mapeditor.misctools.html#trashcan">trashcan</a> icon
+<img width=23 height=23 align=absmiddle src="maped.tutorial.starting.image4.png"> and &nbsp;<tt>drop</tt>&nbsp;.
+</p><p>You must not, and can not, delete the 'worldspawn' item. This must exist in all
+maps.
+</p><p>To select multiple items, QuArK's tree-view understands the common method as
+every other Windows' program do. By holding down the Ctrl key on your keyboard,
+and click on items will toggle between selected and unselected. (Just like in
+Windows' File-Explorer.)
+</p><p>You can also select the first item of a list, then hold down the Shift key and
+click on the last item, all items in between will be selected. (Just like in
+Windows' File-Explorer.)
+</p>
+  </td></tr></table>
+  <br>
+
+<a name="undoredo"></a>
+  <table width="100%" border=0 cellspacing=0>
+    <tr class="headline">
+      <td>
+        <p class="item">&nbsp;Undo/Redo</p>
+      </td>
+      <td align=right>
+        <font size=-2>Decker&nbsp;-&nbsp;12 Sep 2008</font>
+      </td>
+      <td width="1%" align=right nowrap>
+        &nbsp;&nbsp;[&nbsp;<a href="#__top__">Top</a>&nbsp;]&nbsp;
+      </td>
+    </tr>
+  </table>
+  <table border=0 width="100%" cellspacing=10><tr><td>
+<p><img width=182 height=130 align=right src="maped.tutorial.starting.image5.png">
+Before moving on, let's look at the <a href="intro.mapeditor.misctools.html#undoredo">undo/redo</a>
+facility in QuArK. This would be a good time to test it, as we are
+experimenting deleting the default room.
+</p><p>You activate the undo/redo window, by either clicking on the icon
+<img width=24 height=23 align=absmiddle src="maped.tutorial.starting.image6.png">, or from the
+&nbsp;<tt>Edit</tt>&nbsp; menu select &nbsp;<tt>Undo/Redo...</tt>&nbsp;
+</p><p>In this window, you can see what QuArK allows you to undo and/or redo. You can
+<u>not</u> do a selective undo or redo, so it's better to get some knowledge
+about how it works. There is also a limit on how much thats available to
+undo/redo, see <a href="intro.configuration.general.html#memory">'Memory'</a>.
+</p><p>Try to undo your 'delete selection'. Now the default room and all came back
+again. You can then redo the 'delete selection'. Try it.
+</p><p>Try to experiment with deleting all items, one item at a time, from the
+tree-view, and then open the undo/redo window.
+</p><p>Remember to look at the shortcut keys in the menus ('Ctrl+...' and 'Shift+...')
+and in <a href="intro.configuration.map.html#keys">'Keys'</a>.
+Using these will not only give you a faster work-flow, but also reduce the
+risk of getting physical-disabilities due to using the mouse too much.
+</p>
+  </td></tr></table>
+  <br>
+
+<a name="saving"></a>
+  <table width="100%" border=0 cellspacing=0>
+    <tr class="headline">
+      <td>
+        <p class="item">&nbsp;Saving your map in a QuArK project</p>
+      </td>
+      <td align=right>
+        <font size=-2>Decker&nbsp;-&nbsp;12 Sep 2008</font>
+      </td>
+      <td width="1%" align=right nowrap>
+        &nbsp;&nbsp;[&nbsp;<a href="#__top__">Top</a>&nbsp;]&nbsp;
+      </td>
+    </tr>
+  </table>
+  <table border=0 width="100%" cellspacing=10><tr><td>
+<p><img width=195 height=164 align=right src="maped.tutorial.starting.image7.png">
+Saving your work often is also a good idea. There are several ways to do this.
+</p><p>When you first start a new map, you should save it using the &nbsp;<tt>Save in QuArK
+Explorer</tt>&nbsp;. This will create a new entry in your QuArK project
+(<a href="glossary.html#fileext">.QRK</a>), so you can keep multiple versions of the same map, in one
+project file.
+</p><p>You can also choose to save it as a QuArK map-file (<a href="glossary.html#fileext">.QKM</a>), but then
+it's only one map per file.
+</p><p>The last option, is to save it as a <a href="glossary.html#fileext">.MAP</a> file. However this is not
+advisable when using QuArK, because you loose all the neat information that is
+stored in the tree-view, like; groups, duplicators, negative brushes, shared
+faces, etc. Only save as a .MAP file, if you want others to look at your work,
+and they use another map-editor than QuArK.
+</p><p>Try using the &nbsp;<tt>Save in QuArK Explorer</tt>&nbsp; a few times. Notice that you will
+be brought back to the QuArK explorer when using this, so you can see that a
+new entry is added to your project. You can rename the entries by slowly
+double-clicking on them, or press the F2 key (Just like in Windows'
+File-Explorer.)
+</p><p>Also when saving to the QuArK explorer, you then have to save your project
+there.
+</p>
+  </td></tr></table>
+  <br>
+
+<a name="nextpart"></a>
+  <table width="100%" border=0 cellspacing=0>
+    <tr class="headline">
+      <td>
+        <p class="item">&nbsp;Next part</p>
+      </td>
+      <td align=right>
+        <font size=-2>Decker&nbsp;-&nbsp;31 Aug 2008</font>
+      </td>
+      <td width="1%" align=right nowrap>
+        &nbsp;&nbsp;[&nbsp;<a href="#__top__">Top</a>&nbsp;]&nbsp;
+      </td>
+    </tr>
+  </table>
+  <table border=0 width="100%" cellspacing=10><tr><td>
+<p>Once you've completed this section, proceed to <a href="maped.tutorial.polyhedrons.html">'Using brushes (polyhedrons)'</a>.
+</p>
+  </td></tr></table>
+  <br>
+
+<br>
+
+<table width="100%" border=0 cellspacing=0>
+  <tr class="headline">
+    <td width="99%" align=center>
+      <p class="sm">
+        Copyright (c) 2009, GNU General Public License by The QuArK (Quake Army Knife) Community - <a target="_blank" href="http://quark.sourceforge.net/">http://quark.sourceforge.net/</a><br>
+      </p>
+    </td>
+    <td width="1%" align=right nowrap>
+      &nbsp;[&nbsp;<span class="navenable"><a href="maped.tutorial.html">Prev</a></span>&nbsp;-&nbsp;<a href="#__top__">Top</a>&nbsp;-&nbsp;<span class="navenable"><a href="maped.tutorial.polyhedrons.html">Next</a></span>&nbsp;]&nbsp;
+    </td>
+  </tr>
+</table>
+</body>
+</html>

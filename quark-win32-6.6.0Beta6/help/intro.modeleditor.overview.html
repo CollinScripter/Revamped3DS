@@ -1,0 +1,338 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"  "http://www.w3.org/TR/html4/loose.dtd">
+<html lang="en">
+<head>
+  <title>Overview</title>
+  <meta name="Description" content="QuArK Information Database - Page: 1.6.1.&nbsp;Overview">
+  <meta name="Keywords" content="QuArK InfoBase Quake Army Knife QRK QKM Python PY Map Editor Hexen Heretic Half-Life Sin Kingpin Soldier-of-Fortune Star-Trek-Voyager Elite-Force">
+  <link rel=stylesheet href="standard.css" type="text/css">
+</head>
+
+<body>
+<a name="__top__"></a>
+<table width="100%" border=0 cellspacing=0>
+  <tr>
+    <td width=213>
+      <a target="_blank" href="http://quark.sourceforge.net/"><img src="quarkicon.png" width=213 height=90 border=0 alt="Go to QuArK Web Site"></a>
+    </td>
+    <td width="70%" align=center>
+      <div class="topheadline">Overview</div>
+      <div class="sm">Updated&nbsp;09 Jul 2012</div>
+    </td>
+    <td width="30%" valign=bottom nowrap>
+      Upper&nbsp;levels:<br>-&nbsp;<a href="index.html">QuArK&nbsp;Information&nbsp;Base</a><br>-&nbsp;<a href="intro.html">1.&nbsp;Introduction&nbsp;to&nbsp;QuArK</a><br>-&nbsp;<a href="intro.modeleditor.html">1.6.&nbsp;Model-editor&nbsp;in&nbsp;QuArK</a><br>
+    </td>
+  </tr>
+</table>
+<table width="100%" border=0 cellspacing=0>
+  <tr class="headline">
+    <td width="99%">
+      <p class="headline">&nbsp;1.6.1.&nbsp;Overview</p>
+    </td>
+    <td width="1%" align=right nowrap>
+      &nbsp;[&nbsp;<span class="navenable"><a href="intro.modeleditor.html">Prev</a></span>&nbsp;-&nbsp;<span class="navenable"><a href="intro.modeleditor.html">Up</a></span>&nbsp;-&nbsp;<span class="navenable"><a href="intro.modeleditor.model.html">Next</a></span>&nbsp;]&nbsp;
+    </td>
+  </tr>
+</table>
+<table border=0 width="100%" cellspacing=10><tr><td><p>The <a href="intro.modeleditor.html">Model-editor in QuArK</a> is laid out and functions
+very much in the same way that the 
+<a href="intro.mapeditor.overview.html">Map-editor in QuArK</a> does for constancy in its use.</p>
+</td></tr></table>
+<br>
+
+<table width="100%" border=0 cellspacing=0>
+  <tr class="headline">
+    <td width="100%">
+      <p class="subheadline">&nbsp;Index</p>
+    </td>
+  </tr>
+</table>
+<ul class="index">
+  <li>- <a href="#overview">Overview</a>&nbsp;<span class="added">(09 Jul 2012)</span>
+  <li>- <a href="#selection">Selection & Navigation Methods</a>&nbsp;<span class="added">(13 Sep 2007)</span>
+  <li>- <a href="#hintbox">Hintbox</a>&nbsp;<span class="added">(09 Jul 2012)</span>
+</ul>
+<br>
+
+
+<a name="overview"></a>
+  <table width="100%" border=0 cellspacing=0>
+    <tr class="headline">
+      <td>
+        <p class="item">&nbsp;Overview</p>
+      </td>
+      <td align=right>
+        <font size=-2>cdunde&nbsp;-&nbsp;09 Jul 2012</font>
+      </td>
+      <td width="1%" align=right nowrap>
+        &nbsp;&nbsp;[&nbsp;<a href="#__top__">Top</a>&nbsp;]&nbsp;
+      </td>
+    </tr>
+  </table>
+  <table border=0 width="100%" cellspacing=10><tr><td>
+<p><noscript>
+  <div class="warning">Please enable JavaScript to get the most out of this page</div>
+</noscript>
+<script language="javascript">
+<!--
+imgsPrefix = "intro.modeleditor.overview."; /* This is a hack due to BUILD.PY */
+imgsA = new Array("menu",
+                  "display",
+                  "viewselect",
+                  "movement",
+                  "userdata",
+                  "misctool",
+                  "compass",
+                  "specificspage",
+                  "layout",
+                  "hintbox",
+                  "animation",
+                  "objectmodes",
+                  "edittools",
+                  "paint",
+                  "skinview",
+                  "hintbox2");
+imgsB = new Array();
+for (i=0; i<32; i+=2) {
+  imgsB[i] = new Image();
+  imgsB[i].src = imgsPrefix+imgsA[i/2]+".png";
+  imgsB[i+1] = new Image();
+  imgsB[i+1].src = imgsPrefix+imgsA[i/2]+"_s.png";
+}
+function imgchange(imgname,num,typ)
+{
+document[imgname].src = imgsB[num*2+typ].src;
+}
+//-->
+</script>
+Move your mouse to highlight an area in the Model-editor, then mouse-click to go
+to a description of that area.
+<span class="sm">(Graphic-example from QuArK v6.6.0 Beta4)</span>
+<center>
+<table cellpadding=0 cellspacing=0 border=1 width=856 height=606>
+  <!-- menu -->
+  <tr>
+                                     <!-- HACK/FIX -->
+    <td width=856 colspan=2><a href="intro.modeleditor.menu.html" onMouseover='imgchange("0menu",0,0)' onMouseout='imgchange("0menu",0,1)'><img name="0menu" width=856 height=44 border=0 alt="Model-Editor Menu" src="intro.modeleditor.overview.menu_s.png"></a></td>
+  </tr>
+  <tr>
+    <td width=856 colspan=2>
+      <table cellpadding=0 cellspacing=0 border=0 width=856 height=26>
+        <tr>
+  <!-- row 1 toolbars -->
+                                 <!-- HACK/FIX -->
+          <td width=222><a href="intro.modeleditor.toolpalettes.display.html" onMouseover='imgchange("1display",1,0)' onMouseout='imgchange("1display",1,1)'><img name="1display" width=222 height=26 border=0 alt="Display (Grid, Zoom, 3D floating window, Linear-handle and Help-book)" src="intro.modeleditor.overview.display_s.png"></a></td>
+          <td width=333><a href="intro.modeleditor.toolpalettes.movement.html" onMouseover='imgchange("3movement",3,0)' onMouseout='imgchange("3movement",3,1)'><img name="3movement" width=333 height=26 border=0 alt="Movement tool-palette (Movement, Enlarge, Shrink, Shift Left/Right, Symmetry, Rotation and Movement-config.)" src="intro.modeleditor.overview.movement_s.png"></a></td>
+          <td width=145><a href="intro.modeleditor.toolpalettes.viewselection.html" onMouseover='imgchange("2viewselect",2,0)' onMouseout='imgchange("2viewselect",2,1)'><img name="2viewselect" width=145 height=26 border=0 alt="View Selection (Lock-views, View-Options, Color-settings.)" src="intro.modeleditor.overview.viewselect_s.png"></a></td>
+          <td width=156><a href="intro.modeleditor.toolpalettes.paintmodes.html" onMouseover='imgchange("13paint",13,0)' onMouseout='imgchange("13paint",13,1)'><img name="13paint" width=156 height=26 border=0 alt="Paint Modes tool-palette (Image color editing tools, patterns, color picker." src="intro.modeleditor.overview.paint_s.png"></a></td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+    <td width=856 colspan=2>
+      <table cellpadding=0 cellspacing=0 border=0 width=856 height=26>
+        <tr>
+  <!-- row 2 toolbars -->
+                                 <!-- HACK/FIX -->
+          <td width=443><a href="intro.modeleditor.toolpalettes.animation.html" onMouseover='imgchange("10animation",10,0)' onMouseout='imgchange("10animation",10,1)'><img name="10animation" width=443 height=26 border=0 alt="Animation (Animate, FPS, Pause, Animation views)" src="intro.modeleditor.overview.animation_s.png"></a></td>
+          <td width=213><a href="intro.modeleditor.toolpalettes.objectmodes.html" onMouseover='imgchange("11objectmodes",11,0)' onMouseout='imgchange("11objectmodes",11,1)'><img name="11objectmodes" width=213 height=26 border=0 alt="Quick Object modes (Dialogs, Activation, Sphere, Pyramid-cone, Double-cone, Cylinder, Dome, Fan, Torus)" src="intro.modeleditor.overview.objectmodes_s.png"></a></td>
+          <td width=200><a href="intro.modeleditor.toolpalettes.edittools.html" onMouseover='imgchange("12edittools",12,0)' onMouseout='imgchange("12edittools",12,1)'><img name="12edittools" width=200 height=26 border=0 alt="Editing Tools (Extrude faces, Extrude w\bulkheads, Reverse faces, Subdivide faces)" src="intro.modeleditor.overview.edittools_s.png"></a></td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+  <tr>
+    <td width=284>
+      <table cellpadding=0 cellspacing=0 border=0 width=284 height=511>
+  <!--- user objects --->
+        <tr>
+                                           <!-- HACK/FIX -->
+          <td width=284 colspan=2><a href="intro.modeleditor.userdata.html" onMouseover='imgchange("4userdata",4,0)' onMouseout='imgchange("4userdata",4,1)'><img name="4userdata" width=284 height=42 border=0 alt="User Objects" src="intro.modeleditor.overview.userdata_s.png"></a></td>
+        </tr>
+  <!--- misc tools & compass --->
+        <tr>
+                                 <!-- HACK/FIX -->
+          <td width=132><a href="intro.modeleditor.misctools.html" onMouseover='imgchange("5misctool",5,0)' onMouseout='imgchange("5misctool",5,1)'><img name="5misctool" width=132 height=99 border=0 alt="New item, Trashcan, Undo/Redo and sub_groups" src="intro.modeleditor.overview.misctool_s.png"></a></td>
+          <td width=152><a href="intro.mapeditor.compass.html" onMouseover='imgchange("6compass",6,0)' onMouseout='imgchange("6compass",6,1)'><img name="6compass" width=152 height=99 border=0 alt="Compass, Zoom & Tree-view (below)" src="intro.modeleditor.overview.compass_s.png"></a></td>
+        </tr>
+  <!--- treeview \ specificspage & skinview --->
+        <tr>
+                                           <!-- HACK/FIX -->
+          <td width=132><a href="intro.modeleditor.dataforms.html#treeview" onMouseover='imgchange("7specificspage",7,0)' onMouseout='imgchange("7specificspage",7,1)'><img name="7specificspage" width=132 height=350 border=0 alt="Skin-view page (skin-view grid, skin-view zoom, Drag modes, Snapshot, 2D view)" src="intro.modeleditor.overview.specificspage_s.png"></a></td>
+          <td width=152><a href="intro.modeleditor.skinview.html" onMouseover='imgchange("14skinview",14,0)' onMouseout='imgchange("14skinview",14,1)'><img name="14skinview" width=152 height=350 border=0 alt="Skin-view page (skin-view grid, skin-view zoom, Drag modes, Snapshot, 2D view)" src="intro.modeleditor.overview.skinview_s.png"></a></td>
+        </tr>
+        <tr>
+  <!--- hintboxes --->
+                                <!-- HACK/FIX -->
+          <td width=132><a href="#hintbox" onMouseover='imgchange("9hintbox",9,0)' onMouseout='imgchange("9hintbox",9,1)'><img name="9hintbox" width=132 height=20 border=0 alt="editor view handle positions & Hintbox" src="intro.modeleditor.overview.hintbox_s.png"></a></td>
+          <td width=152><a href="#hintbox" onMouseover='imgchange("15hintbox2",15,0)' onMouseout='imgchange("15hintbox2",15,1)'><img name="15hintbox2" width=152 height=20 border=0 alt="editor view handle positions & Hintbox" src="intro.modeleditor.overview.hintbox2_s.png"></a></td>
+        </tr>
+      </table>
+    </td>
+  <!--- editor views (layout) --->
+                           <!-- HACK/FIX -->
+    <td width=570><a href="intro.mapeditor.maplayout.html" onMouseover='imgchange("8layout",8,0)' onMouseout='imgchange("8layout",8,1)'><img name="8layout" width=570 height=511 border=0 alt="4 views layout" src="intro.modeleditor.overview.layout_s.png"></a></td>
+  </tr>
+</table>
+<!-- hack/fix to load the non-shaded images -->
+<img border=0 width=0 height=0 src="intro.modeleditor.overview.menu.png">
+<img border=0 width=0 height=0 src="intro.modeleditor.overview.display.png">
+<img border=0 width=0 height=0 src="intro.modeleditor.overview.viewselect.png">
+<img border=0 width=0 height=0 src="intro.modeleditor.overview.movement.png">
+<img border=0 width=0 height=0 src="intro.modeleditor.overview.userdata.png">
+<img border=0 width=0 height=0 src="intro.modeleditor.overview.misctool.png">
+<img border=0 width=0 height=0 src="intro.modeleditor.overview.compass.png">
+<img border=0 width=0 height=0 src="intro.modeleditor.overview.specificspage.png">
+<img border=0 width=0 height=0 src="intro.modeleditor.overview.layout.png">
+<img border=0 width=0 height=0 src="intro.modeleditor.overview.hintbox.png">
+<img border=0 width=0 height=0 src="intro.modeleditor.overview.animation.png">
+<img border=0 width=0 height=0 src="intro.modeleditor.overview.objectmodes.png">
+<img border=0 width=0 height=0 src="intro.modeleditor.overview.edittools.png">
+<img border=0 width=0 height=0 src="intro.modeleditor.overview.paint.png">
+<img border=0 width=0 height=0 src="intro.modeleditor.overview.skinview.png">
+<img border=0 width=0 height=0 src="intro.modeleditor.overview.hintbox2.png">
+</center></p>
+  </td></tr></table>
+  <br>
+
+<a name="selection"></a>
+  <table width="100%" border=0 cellspacing=0>
+    <tr class="headline">
+      <td>
+        <p class="item">&nbsp;Selection & Navigation Methods</p>
+      </td>
+      <td align=right>
+        <font size=-2>cdunde&nbsp;-&nbsp;13 Sep 2007</font>
+      </td>
+      <td width="1%" align=right nowrap>
+        &nbsp;&nbsp;[&nbsp;<a href="#__top__">Top</a>&nbsp;]&nbsp;
+      </td>
+    </tr>
+  </table>
+  <table border=0 width="100%" cellspacing=10><tr><td>
+<p><i><b><u>Selection Methods </u></b></i>&nbsp;: Different selection methods have been designed into the
+QuArK Model Editor for the editor itself. Also see the
+<a href="intro.modeleditor.skinview.html">Skin-view page</a> for its particular
+<a href="intro.modeleditor.skinview.html#selection">Selection &amp; Navigation Methods</a>.
+</p><p><i><a href="glossary.html#l">LMB</a> Click on Component</i>&nbsp; : A model can be made up of a single
+<a href="intro.modeleditor.model.html#components">Component</a> (part) or a whole lot of components,
+sometimes becoming very complicated. Such as a separate component for the head, upper torso, upper arm,
+elbow, lower arm.....and so on. So to make these different components easy to select and find in the
+<a href="intro.mapeditor.dataforms.html">editor's tree-view</a> all you need to do is make a quick
+<a href="glossary.html#l">LMB Click</a> on any component in one of the editors views and that component will become selected
+as well as its main folder in the tree-view.
+</p><p><i><a href="glossary.html#l">LMB</a> Vertex Handle Drag</i>&nbsp; : This method is available when your cursor is directly over a model
+components mesh <a href="glossary.html#v">vertex</a> (point) <a href="glossary.html#d">drag handle</a> and the cursor will change in appearance when it is.
+Holding down your <a href="glossary.html#l">LMB</a> will allow you to <a href="glossary.html#d">drag</a> that particular vertex to a new location in the view,
+changing the shape of the model mesh for that particular <a href="glossary.html#a">animation frame</a>. A specific <a href="glossary.html#f">frame</a>
+must be selected for this function to work. If not, a warning message will appear instructing you do to so.
+In which case you will need to click your <a href="glossary.html#l">LMB</a> one time anywhere in the same view to release,
+or free up, the mouse's action and continue on with your work or make that frame selection in the editor's <a href="glossary.html#t">tree-view</a>.
+</p><p><i><a href="glossary.html#l">LMB</a> Rectangle Selector</i>&nbsp; : This method is available when the cursor is <b>not</b> over a <a href="glossary.html#v">vertex</a>.
+Holding down your <a href="glossary.html#l">LMB</a> and moving your mouse will produce a <a href="glossary.html#r">Red Rectangle</a> selector that you can
+drag across the view. This selector will allow you to make a multiple selection of a model components mesh
+vertex points at one time. These vertexes can then be passed on to the
+<a href="intro.modeleditor.skinview.html">Skin-view</a> or will be done so
+automatically if you have activated one of the options on that editor's view
+<a href="intro.modeleditor.skinview.html">RMB menu</a> (which you can obtain by clicking your <a href="glossary.html#r">RMB</a> in that view)
+for <a href="intro.modeleditor.rmbmenus.html#viewsrmbmenus">Editor Vertex Options</a>. These options are also available on
+the main <a href="intro.modeleditor.menu.html#optionsmenu">Options menu</a>. As the Model Editor is developed,
+this selection method will be used to move whole sections of the model's mesh by use of its selected triangle <a href="glossary.html#f">faces</a>.
+To <a href="glossary.html#d">de-select</a> any and all vertexes, simply do another small <a href="glossary.html#r">Rectangle drag</a> in any unused area of any view.
+</p><p><i><a href="glossary.html#l">LMB</a> &amp; <a href="glossary.html#r">RMB</a> Face Selector</i>&nbsp; : The third method is a unique one in that by holding down
+your <a href="glossary.html#l">LMB</a> and <a href="glossary.html#r">RMB</a> together you can do a number of things:
+</p><p>1) If your cursor is over a model's mesh <a href="glossary.html#f">face</a> it will select that particular <a href="glossary.html#f">face</a>, outlining it in the
+<a href="intro.modeleditor.toolpalettes.viewselection.html#coloroptions">Editor views selected faces outline color</a>
+that you can change by using the
+<a href="intro.modeleditor.toolpalettes.viewselection.html#coloroptions">Color Options button</a>.
+</p><p>2) Continuing to hold your mouse buttons and dragging your cursor over the model's mesh will select additional
+faces.
+</p><p>3) Dragging over a face that has already be selected will <a href="glossary.html#d">de-select</a> that face.
+</p><p>4) And doing a <a href="glossary.html#l">LMB</a> &amp; <a href="glossary.html#r">RMB</a> drag in any unused area of any view will <a href="glossary.html#d">de-select</a> any and all faces.
+</p><p>Besides outlining the selected faces, as described above, it will also <a href="glossary.html#f">fill in</a> those faces, for easier
+identification, if you have activated, checked, the
+<a href="intro.modeleditor.toolpalettes.viewselection.html#viewoptions">View Options 'Mesh in Frames'</a> item
+for any particular view. This selection method also works in conjunction with a view's
+<a href="intro.modeleditor.rmbmenus.html">RMB menu</a>
+<a href="intro.modeleditor.rmbmenus.html#viewsrmbmenus">Editor Face Options</a>
+and main <a href="intro.modeleditor.menu.html#optionsmenu">Options menu</a>.
+</p><p><i><b><u>Navigation Methods </u></b></i>&nbsp;: The QuArK Model Editor navigates much like it does in the Map Editor,
+except for one big difference for any of its <a href="glossary.html#numbers">3D views</a> as covered in detail below.
+</p><p><i>2D Views</i>&nbsp; : Using your <a href="glossary.html#m">MMB</a> you can <a href="glossary.html#z">Zoom</a> in and out for any of the 2D and 3D views.
+Press and holding your <a href="glossary.html#r">RMB</a> will allow you to <a href="glossary.html#s">Scroll</a> or <a href="glossary.html#p">Pan</a> in those same views.
+All other combinations are used as described above in the
+<a href="intro.modeleditor.overview.html#selection">Selection Methods</a> section.
+</p><p><i>3D Views</i>&nbsp; : Besides what we just covered above, the 3D views have one more navigation item, the <a href="glossary.html#r">RMB</a>.
+When your cursor is <b>not</b> over a <a href="glossary.html#v">vertex</a> <a href="glossary.html#d">drag handle</a> you can use this to <a href="glossary.html#r">Rotate</a>
+the model with. This is also used in conjunction with the main
+<a href="intro.modeleditor.menu.html#optionsmenu">Options menu</a> item
+<a href="intro.modeleditor.menu.html#optionsmenu">3D Rotation Options</a> which
+give you four selections to choose from, each one being distinct from the others as to how rotation will take
+place and its particular point of rotation. Experimenting with each one will soon get you acquainted to their use.</p>
+  </td></tr></table>
+  <br>
+
+<a name="hintbox"></a>
+  <table width="100%" border=0 cellspacing=0>
+    <tr class="headline">
+      <td>
+        <p class="item">&nbsp;Hintbox</p>
+      </td>
+      <td align=right>
+        <font size=-2>cdunde&nbsp;-&nbsp;09 Jul 2012</font>
+      </td>
+      <td width="1%" align=right nowrap>
+        &nbsp;&nbsp;[&nbsp;<a href="#__top__">Top</a>&nbsp;]&nbsp;
+      </td>
+    </tr>
+  </table>
+  <table border=0 width="100%" cellspacing=10><tr><td>
+<p><table border=0 cellspacing=0>
+<tr><td valign=top>
+</p><p>Whenever you see the text &quot;&nbsp;<tt>Press <b>F1</b> for help</tt>&nbsp;&quot; in the little
+hintbox under the <a href="#dataform">dataform-display</a>, you can press F1
+and get a Hint Pop-up window, which tells you a little more about the item
+you are pointing at. This is its primary function.
+</p><p>Many of the Hint Pop-up windows will have an InfoBase button that is linked
+directly to a page in the InfoBase and will give you further help for the
+item in question. Clicking that button or pressing <b>F1</b> again will open that page.
+</p><p>If you are new to QuArK, these hints and InfoBase links come in handy if you
+do not know exactly what the item you are pointing at, does. So press <b>F1</b> to
+get the hint and information available, before asking about it in the
+<a target="_blank" href="http://quark.sourceforge.net/forums/">QuArK Forum</a>.
+</p><p>Once you move your mouse outside the larger hintbox, it will automatically
+disappear.
+</p><p>The <b>Hintbox</b> also has a secondary function, that of displaying useful
+informaiton as to the view you are in, the location of your cursor and certain
+items it is over such as a model mesh face (triangle) or drag handle. It will also display
+your cursor co-ordinances at the start of a drag and your current drag position to assist
+in the positioning of those drag handles. This also applies to the
+<a href="intro.modeleditor.skinview.html">Skin-view page</a> to aid in the <a href="glossary.html#s">skinning</a>
+process of a model.
+</p><p></td><td valign=top>
+<center>
+<img border=1 src="intro.modeleditor.overview.hintbox_small.png"><br><br>
+<img border=1 src="intro.modeleditor.overview.hintbox_large.png"><br><br>
+<img border=1 src="intro.modeleditor.overview.hintbox_small2.png">
+</center>
+</td></tr>
+</table>
+</p>
+  </td></tr></table>
+  <br>
+
+<br>
+
+<table width="100%" border=0 cellspacing=0>
+  <tr class="headline">
+    <td width="99%" align=center>
+      <p class="sm">
+        Copyright (c) 2009, GNU General Public License by The QuArK (Quake Army Knife) Community - <a target="_blank" href="http://quark.sourceforge.net/">http://quark.sourceforge.net/</a><br>
+      </p>
+    </td>
+    <td width="1%" align=right nowrap>
+      &nbsp;[&nbsp;<span class="navenable"><a href="intro.modeleditor.html">Prev</a></span>&nbsp;-&nbsp;<a href="#__top__">Top</a>&nbsp;-&nbsp;<span class="navenable"><a href="intro.modeleditor.model.html">Next</a></span>&nbsp;]&nbsp;
+    </td>
+  </tr>
+</table>
+</body>
+</html>

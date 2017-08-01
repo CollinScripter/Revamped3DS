@@ -1,0 +1,2754 @@
+QQRKSRC1
+// This file has been written by QuArK QuArK 6.4 alpha
+// It's the text version of file: Q3UT2.qrk
+
+{
+  Description = "Urban Terror basic data"
+  Toolbox Folders.qtx =
+  {
+    ToolBox = "Texture Browser..."
+    Root = "Q3UT2.qtxfolder"
+    HTML = "intro.texturebrowser.html"
+
+    Q3UT2.qtxfolder =
+    {
+      q3ut2.osfolder =
+      {
+        path = "q3ut2"
+      }
+    }
+    q3ut2 textures.qtxfolder =
+    {
+      q3ut2.osfolder =
+      {
+        path = "q3ut2"
+        build = "1"
+      }
+    }
+  }
+  Toolbox Folders.qtx =
+  {
+    ToolBox = "New map items..."
+    Root = "Q3UT2.qtxfolder"
+    Q3UT2.qtxfolder =
+    {
+      func_breakable:b =
+      {
+        health = "20"
+        type = "0"
+        new cube:p =
+        {
+          east:f =
+          {
+            v = '0 64 64 0 128 64 0 64 128'
+            tex = "base_wall/basewall03"
+          }
+          west:f =
+          {
+            v = '-64 -64 64 -64 -128 64 -64 -64 128'
+            tex = "base_wall/basewall03"
+          }
+          north:f =
+          {
+            v = '-64 0 64 -128 0 64 -64 0 128'
+            tex = "base_wall/basewall03"
+          }
+          south:f =
+          {
+            v = '64 -64 64 128 -64 64 64 -64 128'
+            tex = "base_wall/basewall03"
+          }
+          up:f =
+          {
+            v = '64 64 0 128 64 0 64 128 0'
+            tex = "base_wall/basewall03"
+          }
+          down:f =
+          {
+            v = '64 -64 -64 128 -64 -64 64 -128 -64'
+            tex = "base_wall/basewall03"
+          }
+        }
+      }
+      func_ut_train:b =
+      {
+        ;desc = "A train is a mover that moves between path_ut_stop target poi"
+         "nts."
+        ORIGIN:p =
+        {
+          east:f =
+          {
+            v = '8 0 0 8 64 0 8 0 64'
+            tex = "common/origin"
+          }
+          west:f =
+          {
+            v = '-8 0 0 -8 -64 0 -8 0 64'
+            tex = "common/origin"
+          }
+          north:f =
+          {
+            v = '0 8 0 -64 8 0 0 8 64'
+            tex = "common/origin"
+          }
+          south:f =
+          {
+            v = '0 -8 0 64 -8 0 0 -8 64'
+            tex = "common/origin"
+          }
+          up:f =
+          {
+            v = '0 0 24 64 0 24 0 64 24'
+            tex = "common/origin"
+          }
+          down:f =
+          {
+            v = '0 0 -24 64 0 -24 0 -64 -24'
+            tex = "common/origin"
+          }
+        }
+        poly:p =
+        {
+          east:f =
+          {
+            v = '32 -32 -32 32 96 -32 32 -32 96'
+            tex = "[auto]"
+          }
+          west:f =
+          {
+            v = '-32 -32 -32 -32 -32 96 -32 96 -32'
+            tex = "[auto]"
+            m = "1"
+          }
+          north:f =
+          {
+            v = '-32 32 -32 -32 32 96 96 32 -32'
+            tex = "[auto]"
+            m = "1"
+          }
+          south:f =
+          {
+            v = '-32 -32 -32 96 -32 -32 -32 -32 96'
+            tex = "[auto]"
+          }
+          up:f =
+          {
+            v = '-32 -32 32 96 -32 32 -32 96 32'
+            tex = "[auto]"
+          }
+          down:f =
+          {
+            v = '-32 -32 -32 -32 96 -32 96 -32 -32'
+            tex = "[auto]"
+            m = "1"
+          }
+        }
+      }
+      func_keyboard_interface:b =
+      {
+        ;desc = "keyboard menu interface"
+      }
+      trigger_location:b =
+      {
+        message = "location"
+        Color = "1"
+        new cube:p =
+        {
+          east:f =
+          {
+            v = '-1408 64 320 -1408 128 320 -1408 64 384'
+            tex = "common/trigger"
+          }
+          west:f =
+          {
+            v = '-1536 -64 320 -1536 -128 320 -1536 -64 384'
+            tex = "common/trigger"
+          }
+          north:f =
+          {
+            v = '-1536 64 320 -1600 64 320 -1536 64 384'
+            tex = "common/trigger"
+          }
+          south:f =
+          {
+            v = '-1408 -64 320 -1344 -64 320 -1408 -64 384'
+            tex = "common/trigger"
+          }
+          up:f =
+          {
+            v = '-1408 64 320 -1344 64 320 -1408 128 320'
+            tex = "common/trigger"
+          }
+          down:f =
+          {
+            v = '-1408 -64 192 -1344 -64 192 -1408 -128 192'
+            tex = "common/trigger"
+          }
+        }
+      }
+      func_rotating_door:b =
+      {
+        speed = "-100"
+        dmg = "0"
+        origin = "-387 -789 154"
+        poly:p =
+        {
+          face:f =
+          {
+            v = '448 896 -1 512 896 -1 448 960 -1'
+            tex = "e1u1/clip"
+          }
+          face:f =
+          {
+            v = '448 896 -75 448 960 -75 512 896 -75'
+            tex = "e1u1/clip"
+            m = "1"
+          }
+          face:f =
+          {
+            v = '448 43 -128 448 43 -64 512 43 -128'
+            tex = "e1u1/clip"
+            m = "1"
+          }
+          face:f =
+          {
+            v = '448 -1 -128 512 -1 -128 448 -1 -64'
+            tex = "e1u1/clip"
+          }
+          face:f =
+          {
+            v = '-1 896 -128 -1 960 -128 -1 896 -64'
+            tex = "e1u1/clip"
+          }
+          face:f =
+          {
+            v = '-6 896 -128 -6 896 -64 -6 960 -128'
+            tex = "e1u1/clip"
+            m = "1"
+          }
+        }
+        poly:p =
+        {
+          face:f =
+          {
+            v = '448 896 -22 512 896 -22 448 960 -22'
+            tex = "e1u1/origin"
+          }
+          face:f =
+          {
+            v = '448 896 -54 448 960 -54 512 896 -54'
+            tex = "e1u1/origin"
+            m = "1"
+          }
+          face:f =
+          {
+            v = '448 59 -128 448 59 -64 512 59 -128'
+            tex = "e1u1/origin"
+            m = "1"
+          }
+          face:f =
+          {
+            v = '448 27 -128 512 27 -128 448 27 -64'
+            tex = "e1u1/origin"
+          }
+          face:f =
+          {
+            v = '13 896 -128 13 960 -128 13 896 -64'
+            tex = "e1u1/origin"
+          }
+          face:f =
+          {
+            v = '-19 896 -128 -19 896 -64 -19 960 -128'
+            tex = "e1u1/origin"
+            m = "1"
+          }
+        }
+      }
+      Team Stuff.qtxfolder =
+      {
+        info_player_deathmatch:e =
+        {
+          origin = "0 0 0"
+          angle = "360"
+          ;desc = "Player spawing postion for all Q3A maps."
+        }
+        team_CTF_blueplayer:e =
+        {
+          origin = "0 0 0"
+          angle = "360"
+          ;desc = "Blue player spawn position."
+        }
+        team_CTF_bluespawn:e =
+        {
+          origin = "0 0 0"
+          angle = "360"
+          ;desc = "I guess the same as team_CTF_blueplayer."
+        }
+        team_CTF_redplayer:e =
+        {
+          origin = "0 0 0"
+          angle = "360"
+          ;desc = "Red player spawn position."
+        }
+        team_CTF_redspawn:e =
+        {
+          origin = "0 0 0"
+          angle = "360"
+          ;desc = "I guess the same as team_CTF_redplayer."
+        }
+      }
+      Mapobjects.qtxfolder =
+      {
+        Orange Trashcan:g =
+        {
+          misc_model:e =
+          {
+            origin = "-128 0 -91"
+            model = "/models/mapobjects/urbanterror/trashcan/trashcan2.md3"
+            angle = "90"
+          }
+          ClipBrushes:g =
+          {
+            clip:p =
+            {
+              side:f =
+              {
+                v = '-140 -82 -28 -140 -146 -28 -140 -82 36'
+                tex = "common/full_clip"
+              }
+              side:f =
+              {
+                v = '-80 46 -47 -16 46 -47 -80 110 -47'
+                tex = "common/full_clip"
+              }
+              side:f =
+              {
+                v = '-116 46 20 -116 110 20 -116 46 84'
+                tex = "common/full_clip"
+              }
+              side:f =
+              {
+                v = '-48 -82 -91 16 -82 -91 -48 -146 -91'
+                tex = "common/full_clip"
+              }
+              front:f =
+              {
+                v = '-80 -10 -28 -16 -10 -28 -80 -10 36'
+                tex = "common/full_clip"
+              }
+              back:f =
+              {
+                v = '-208 10 20 -272 10 20 -208 10 84'
+                tex = "common/full_clip"
+              }
+            }
+            clip:p =
+            {
+              side:f =
+              {
+                v = '-140 -82 -28 -140 -146 -28 -140 -82 36'
+                tex = "common/weapclip"
+              }
+              side:f =
+              {
+                v = '-80 46 -47 -16 46 -47 -80 110 -47'
+                tex = "common/weapclip"
+              }
+              side:f =
+              {
+                v = '-116 46 20 -116 110 20 -116 46 84'
+                tex = "common/weapclip"
+              }
+              side:f =
+              {
+                v = '-48 -82 -91 16 -82 -91 -48 -146 -91'
+                tex = "common/weapclip"
+              }
+              front:f =
+              {
+                v = '-80 -10 -28 -16 -10 -28 -80 -10 36'
+                tex = "common/weapclip"
+              }
+              back:f =
+              {
+                v = '-208 10 20 -272 10 20 -208 10 84'
+                tex = "common/weapclip"
+              }
+            }
+          }
+        }
+        Grey Trashcan:g =
+        {
+          misc_model:e =
+          {
+            origin = "0 0 -27"
+            model = "/models/mapobjects/urbanterror/trashcan/trashcan1.md3"
+            angle = "90"
+          }
+          ClipBrushes:g =
+          {
+            clip:p =
+            {
+              side:f =
+              {
+                v = '-12 -114 68 -12 -146 68 -12 -114 100'
+                tex = "common/full_clip"
+              }
+              side:f =
+              {
+                v = '80 78 17 112 78 17 80 110 17'
+                tex = "common/full_clip"
+              }
+              side:f =
+              {
+                v = '12 78 116 12 110 116 12 78 148'
+                tex = "common/full_clip"
+              }
+              side:f =
+              {
+                v = '112 -114 -27 144 -114 -27 112 -146 -27'
+                tex = "common/full_clip"
+              }
+              front:f =
+              {
+                v = '80 -10 68 112 -10 68 80 -10 100'
+                tex = "common/full_clip"
+              }
+              back:f =
+              {
+                v = '-112 10 116 -144 10 116 -112 10 148'
+                tex = "common/full_clip"
+              }
+            }
+            clip:p =
+            {
+              side:f =
+              {
+                v = '-12 -114 68 -12 -146 68 -12 -114 100'
+                tex = "common/weapclip"
+              }
+              side:f =
+              {
+                v = '80 78 17 112 78 17 80 110 17'
+                tex = "common/weapclip"
+              }
+              side:f =
+              {
+                v = '12 78 116 12 110 116 12 78 148'
+                tex = "common/weapclip"
+              }
+              side:f =
+              {
+                v = '112 -114 -27 144 -114 -27 112 -146 -27'
+                tex = "common/weapclip"
+              }
+              front:f =
+              {
+                v = '80 -10 68 112 -10 68 80 -10 100'
+                tex = "common/weapclip"
+              }
+              back:f =
+              {
+                v = '-112 10 116 -144 10 116 -112 10 148'
+                tex = "common/weapclip"
+              }
+            }
+          }
+        }
+        Pooltoy:g =
+        {
+          misc_model:e =
+          {
+            origin = "128 0 -96"
+            model = "/models/mapobjects/urbanterror/pooltoy/pooltoy.md3"
+          }
+          ClipBrushes:g =
+          {
+            new cube:p =
+            {
+              east:f =
+              {
+                v = '160 96 32 160 160 32 160 96 96'
+                tex = "common/weapclip"
+              }
+              west:f =
+              {
+                v = '90 -38 32 90 -102 32 90 -38 96'
+                tex = "common/weapclip"
+              }
+              north:f =
+              {
+                v = '64 78 32 0 78 32 64 78 96'
+                tex = "common/weapclip"
+              }
+              south:f =
+              {
+                v = '192 -2 32 256 -2 32 192 -2 96'
+                tex = "common/weapclip"
+              }
+              up:f =
+              {
+                v = '192 96 -74 256 96 -74 192 160 -74'
+                tex = "common/weapclip"
+              }
+              down:f =
+              {
+                v = '192 -32 -96 256 -32 -96 192 -96 -96'
+                tex = "common/weapclip"
+              }
+            }
+            new cube:p =
+            {
+              east:f =
+              {
+                v = '138 148 54 138 212 54 138 148 118'
+                tex = "common/weapclip"
+              }
+              west:f =
+              {
+                v = '112 14 54 112 -50 54 112 14 118'
+                tex = "common/weapclip"
+              }
+              north:f =
+              {
+                v = '64 86 54 0 86 54 64 86 118'
+                tex = "common/weapclip"
+              }
+              south:f =
+              {
+                v = '192 50 54 256 50 54 192 50 118'
+                tex = "common/weapclip"
+              }
+              up:f =
+              {
+                v = '192 148 -36 256 148 -36 192 212 -36'
+                tex = "common/weapclip"
+              }
+              down:f =
+              {
+                v = '192 20 -74 256 20 -74 192 -44 -74'
+                tex = "common/weapclip"
+              }
+            }
+            new cube:p =
+            {
+              east:f =
+              {
+                v = '160 96 32 160 160 32 160 96 96'
+                tex = "common/full_clip"
+              }
+              west:f =
+              {
+                v = '90 -38 32 90 -102 32 90 -38 96'
+                tex = "common/full_clip"
+              }
+              north:f =
+              {
+                v = '64 78 32 0 78 32 64 78 96'
+                tex = "common/full_clip"
+              }
+              south:f =
+              {
+                v = '192 -2 32 256 -2 32 192 -2 96'
+                tex = "common/full_clip"
+              }
+              up:f =
+              {
+                v = '192 96 -74 256 96 -74 192 160 -74'
+                tex = "common/full_clip"
+              }
+              down:f =
+              {
+                v = '192 -32 -96 256 -32 -96 192 -96 -96'
+                tex = "common/full_clip"
+              }
+            }
+            new cube:p =
+            {
+              east:f =
+              {
+                v = '138 148 54 138 212 54 138 148 118'
+                tex = "common/full_clip"
+              }
+              west:f =
+              {
+                v = '112 14 54 112 -50 54 112 14 118'
+                tex = "common/full_clip"
+              }
+              north:f =
+              {
+                v = '64 86 54 0 86 54 64 86 118'
+                tex = "common/full_clip"
+              }
+              south:f =
+              {
+                v = '192 50 54 256 50 54 192 50 118'
+                tex = "common/full_clip"
+              }
+              up:f =
+              {
+                v = '192 148 -36 256 148 -36 192 212 -36'
+                tex = "common/full_clip"
+              }
+              down:f =
+              {
+                v = '192 20 -74 256 20 -74 192 -44 -74'
+                tex = "common/full_clip"
+              }
+            }
+          }
+        }
+        Trafficlight:g =
+        {
+          misc_model:e =
+          {
+            origin = "96 -96 -128"
+            model = "/models/mapobjects/urbanterror/trafficlight/trafficlight."
+             "md3"
+          }
+          ClipBrushes:g =
+          {
+            new cube:p =
+            {
+              east:f =
+              {
+                v = '106 -64 -32 106 64 -32 106 -64 96'
+                tex = "common/full_clip"
+              }
+              west:f =
+              {
+                v = '84 -128 -32 84 -256 -32 84 -128 96'
+                tex = "common/full_clip"
+              }
+              north:f =
+              {
+                v = '64 -98 -32 -64 -98 -32 64 -98 96'
+                tex = "common/full_clip"
+              }
+              south:f =
+              {
+                v = '128 -120 -32 256 -120 -32 128 -120 96'
+                tex = "common/full_clip"
+              }
+              up:f =
+              {
+                v = '128 -64 101 256 -64 101 128 64 101'
+                tex = "common/full_clip"
+              }
+              down:f =
+              {
+                v = '128 -128 -128 256 -128 -128 128 -256 -128'
+                tex = "common/full_clip"
+              }
+            }
+            new cube:p =
+            {
+              east:f =
+              {
+                v = '102 -64 -32 102 64 -32 102 -64 96'
+                tex = "common/full_clip"
+              }
+              west:f =
+              {
+                v = '88 -96 -32 88 -224 -32 88 -96 96'
+                tex = "common/full_clip"
+              }
+              north:f =
+              {
+                v = '64 111 -32 -64 111 -32 64 111 96'
+                tex = "common/full_clip"
+              }
+              south:f =
+              {
+                v = '128 -98 -32 256 -98 -32 128 -98 96'
+                tex = "common/full_clip"
+              }
+              up:f =
+              {
+                v = '128 -64 91 256 -64 91 128 64 91'
+                tex = "common/full_clip"
+              }
+              down:f =
+              {
+                v = '128 -96 78 256 -96 78 128 -224 78'
+                tex = "common/full_clip"
+              }
+            }
+            new cube:p =
+            {
+              east:f =
+              {
+                v = '99 -32 64 99 96 64 99 -32 192'
+                tex = "common/full_clip"
+              }
+              west:f =
+              {
+                v = '79 -64 64 79 -192 64 79 -64 192'
+                tex = "common/full_clip"
+              }
+              north:f =
+              {
+                v = '64 -38 64 -64 -38 64 64 -38 192'
+                tex = "common/full_clip"
+              }
+              south:f =
+              {
+                v = '128 -60 64 256 -60 64 128 -60 192'
+                tex = "common/full_clip"
+              }
+              up:f =
+              {
+                v = '128 -32 78 256 -32 78 128 96 78'
+                tex = "common/full_clip"
+              }
+              down:f =
+              {
+                v = '128 -64 16 256 -64 16 128 -192 16'
+                tex = "common/full_clip"
+              }
+            }
+            new cube:p =
+            {
+              east:f =
+              {
+                v = '99 96 64 99 224 64 99 96 192'
+                tex = "common/full_clip"
+              }
+              west:f =
+              {
+                v = '79 64 64 79 -64 64 79 64 192'
+                tex = "common/full_clip"
+              }
+              north:f =
+              {
+                v = '64 90 64 -64 90 64 64 90 192'
+                tex = "common/full_clip"
+              }
+              south:f =
+              {
+                v = '128 67 64 256 67 64 128 67 192'
+                tex = "common/full_clip"
+              }
+              up:f =
+              {
+                v = '128 96 78 256 96 78 128 224 78'
+                tex = "common/full_clip"
+              }
+              down:f =
+              {
+                v = '128 64 16 256 64 16 128 -64 16'
+                tex = "common/full_clip"
+              }
+            }
+            new cube:p =
+            {
+              east:f =
+              {
+                v = '106 -64 -32 106 64 -32 106 -64 96'
+                tex = "common/weapclip"
+              }
+              west:f =
+              {
+                v = '84 -128 -32 84 -256 -32 84 -128 96'
+                tex = "common/weapclip"
+              }
+              north:f =
+              {
+                v = '64 -98 -32 -64 -98 -32 64 -98 96'
+                tex = "common/weapclip"
+              }
+              south:f =
+              {
+                v = '128 -120 -32 256 -120 -32 128 -120 96'
+                tex = "common/weapclip"
+              }
+              up:f =
+              {
+                v = '128 -64 101 256 -64 101 128 64 101'
+                tex = "common/weapclip"
+              }
+              down:f =
+              {
+                v = '128 -128 -128 256 -128 -128 128 -256 -128'
+                tex = "common/weapclip"
+              }
+            }
+            new cube:p =
+            {
+              east:f =
+              {
+                v = '102 -64 -32 102 64 -32 102 -64 96'
+                tex = "common/weapclip"
+              }
+              west:f =
+              {
+                v = '88 -96 -32 88 -224 -32 88 -96 96'
+                tex = "common/weapclip"
+              }
+              north:f =
+              {
+                v = '64 111 -32 -64 111 -32 64 111 96'
+                tex = "common/weapclip"
+              }
+              south:f =
+              {
+                v = '128 -98 -32 256 -98 -32 128 -98 96'
+                tex = "common/weapclip"
+              }
+              up:f =
+              {
+                v = '128 -64 91 256 -64 91 128 64 91'
+                tex = "common/weapclip"
+              }
+              down:f =
+              {
+                v = '128 -96 78 256 -96 78 128 -224 78'
+                tex = "common/weapclip"
+              }
+            }
+            new cube:p =
+            {
+              east:f =
+              {
+                v = '99 -32 64 99 96 64 99 -32 192'
+                tex = "common/weapclip"
+              }
+              west:f =
+              {
+                v = '79 -64 64 79 -192 64 79 -64 192'
+                tex = "common/weapclip"
+              }
+              north:f =
+              {
+                v = '64 -38 64 -64 -38 64 64 -38 192'
+                tex = "common/weapclip"
+              }
+              south:f =
+              {
+                v = '128 -60 64 256 -60 64 128 -60 192'
+                tex = "common/weapclip"
+              }
+              up:f =
+              {
+                v = '128 -32 78 256 -32 78 128 96 78'
+                tex = "common/weapclip"
+              }
+              down:f =
+              {
+                v = '128 -64 16 256 -64 16 128 -192 16'
+                tex = "common/weapclip"
+              }
+            }
+            new cube:p =
+            {
+              east:f =
+              {
+                v = '99 96 64 99 224 64 99 96 192'
+                tex = "common/weapclip"
+              }
+              west:f =
+              {
+                v = '79 64 64 79 -64 64 79 64 192'
+                tex = "common/weapclip"
+              }
+              north:f =
+              {
+                v = '64 90 64 -64 90 64 64 90 192'
+                tex = "common/weapclip"
+              }
+              south:f =
+              {
+                v = '128 67 64 256 67 64 128 67 192'
+                tex = "common/weapclip"
+              }
+              up:f =
+              {
+                v = '128 96 78 256 96 78 128 224 78'
+                tex = "common/weapclip"
+              }
+              down:f =
+              {
+                v = '128 64 16 256 64 16 128 -64 16'
+                tex = "common/weapclip"
+              }
+            }
+          }
+        }
+        Torch Small:g =
+        {
+          light:e =
+          {
+            origin = "0 152 0"
+            light = "50"
+            _color = "1 0.5 0"
+          }
+          misc_model:e =
+          {
+            origin = "0 180 0"
+            model = "\models\mapobjects\gratelamp\gratetorch.md3"
+            angle = "270"
+          }
+        }
+        Torch Big:g =
+        {
+          light:e =
+          {
+            origin = "-64 152 0"
+            light = "55"
+            _color = "1 0.5 0"
+          }
+          misc_model:e =
+          {
+            origin = "-64 180 0"
+            model = "\models\mapobjects\gratelamp\gratetorchbig.md3"
+            angle = "270"
+          }
+        }
+        Forklift:g =
+        {
+          ClipBrushes:g =
+          {
+            new cube:p =
+            {
+              east:f =
+              {
+                v = '40 100 64 40 132 64 40 100 96'
+                tex = "common/full_clip"
+              }
+              west:f =
+              {
+                v = '-48 -100 64 -48 -132 64 -48 -100 96'
+                tex = "common/full_clip"
+              }
+              north:f =
+              {
+                v = '-104 28 64 -136 28 64 -104 28 96'
+                tex = "common/full_clip"
+              }
+              south:f =
+              {
+                v = '88 -16 64 120 -16 64 88 -16 96'
+                tex = "common/full_clip"
+              }
+              up:f =
+              {
+                v = '88 100 -68 120 100 -68 88 132 -68'
+                tex = "common/full_clip"
+              }
+              down:f =
+              {
+                v = '88 -92 -96 120 -92 -96 88 -124 -96'
+                tex = "common/full_clip"
+              }
+            }
+            new cube:p =
+            {
+              east:f =
+              {
+                v = '-32 100 110 -32 132 110 -32 100 142'
+                tex = "common/full_clip"
+              }
+              west:f =
+              {
+                v = '-48 -100 110 -48 -132 110 -48 -100 142'
+                tex = "common/full_clip"
+              }
+              north:f =
+              {
+                v = '-104 28 110 -136 28 110 -104 28 142'
+                tex = "common/full_clip"
+              }
+              south:f =
+              {
+                v = '88 -16 110 120 -16 110 88 -16 142'
+                tex = "common/full_clip"
+              }
+              up:f =
+              {
+                v = '88 100 0 120 100 0 88 132 0'
+                tex = "common/full_clip"
+              }
+              down:f =
+              {
+                v = '88 -92 -68 120 -92 -68 88 -124 -68'
+                tex = "common/full_clip"
+              }
+            }
+            new cube:p =
+            {
+              east:f =
+              {
+                v = '40 100 110 40 132 110 40 100 142'
+                tex = "common/full_clip"
+              }
+              west:f =
+              {
+                v = '32 -100 110 32 -132 110 32 -100 142'
+                tex = "common/full_clip"
+              }
+              north:f =
+              {
+                v = '-32 28 110 -64 28 110 -32 28 142'
+                tex = "common/full_clip"
+              }
+              south:f =
+              {
+                v = '160 -16 110 192 -16 110 160 -16 142'
+                tex = "common/full_clip"
+              }
+              up:f =
+              {
+                v = '160 100 0 192 100 0 160 132 0'
+                tex = "common/full_clip"
+              }
+              down:f =
+              {
+                v = '160 -92 -68 192 -92 -68 160 -124 -68'
+                tex = "common/full_clip"
+              }
+            }
+            new cube:p =
+            {
+              east:f =
+              {
+                v = '-36.24155 116 113.97750 -36.24155 148 113.97750 -47.47750
+                  116 143.94000'
+                tex = "common/full_clip"
+              }
+              west:f =
+              {
+                v = '-49.85952 -132 128.95870 -49.85952 -164 128.95870 -61.09547
+                  -132 158.92130'
+                tex = "common/full_clip"
+              }
+              north:f =
+              {
+                v = '-64 28 106 -96 28 106 -64 28 138'
+                tex = "common/full_clip"
+              }
+              south:f =
+              {
+                v = '128 -16 106 160 -16 106 128 -16 138'
+                tex = "common/full_clip"
+              }
+              up:f =
+              {
+                v = '128 100 -4 160 100 -4 128 132 -4'
+                tex = "common/full_clip"
+              }
+              down:f =
+              {
+                v = '175.75100 -140 -48 207.75100 -140 -48 175.75100 -172 -48'
+                tex = "common/full_clip"
+              }
+            }
+            new cube:p =
+            {
+              east:f =
+              {
+                v = '8 100 110 8 132 110 8 100 142'
+                tex = "common/full_clip"
+              }
+              west:f =
+              {
+                v = '-32 -100 110 -32 -132 110 -32 -100 142'
+                tex = "common/full_clip"
+              }
+              north:f =
+              {
+                v = '-88 28 110 -120 28 110 -88 28 142'
+                tex = "common/full_clip"
+              }
+              south:f =
+              {
+                v = '104 -16 110 136 -16 110 104 -16 142'
+                tex = "common/full_clip"
+              }
+              up:f =
+              {
+                v = '104 100 0 136 100 0 104 132 0'
+                tex = "common/full_clip"
+              }
+              down:f =
+              {
+                v = '104 -92 -4 136 -92 -4 104 -124 -4'
+                tex = "common/full_clip"
+              }
+            }
+            new cube:p =
+            {
+              east:f =
+              {
+                v = '-8 100 110 -8 132 110 -8 100 142'
+                tex = "common/full_clip"
+              }
+              west:f =
+              {
+                v = '-32 -100 110 -32 -132 110 -32 -100 142'
+                tex = "common/full_clip"
+              }
+              north:f =
+              {
+                v = '-88 28 110 -120 28 110 -88 28 142'
+                tex = "common/full_clip"
+              }
+              south:f =
+              {
+                v = '104 -16 110 136 -16 110 104 -16 142'
+                tex = "common/full_clip"
+              }
+              up:f =
+              {
+                v = '104 100 -48 136 100 -48 104 132 -48'
+                tex = "common/full_clip"
+              }
+              down:f =
+              {
+                v = '104 -92 -68 136 -92 -68 104 -124 -68'
+                tex = "common/full_clip"
+              }
+            }
+            new cube:p =
+            {
+              east:f =
+              {
+                v = '32 100 110 32 132 110 32 100 142'
+                tex = "common/full_clip"
+              }
+              west:f =
+              {
+                v = '14 -100 110 14 -132 110 14 -100 142'
+                tex = "common/full_clip"
+              }
+              north:f =
+              {
+                v = '-48 28 110 -80 28 110 -48 28 142'
+                tex = "common/full_clip"
+              }
+              south:f =
+              {
+                v = '144 -16 110 176 -16 110 144 -16 142'
+                tex = "common/full_clip"
+              }
+              up:f =
+              {
+                v = '144 100 -48 176 100 -48 144 132 -48'
+                tex = "common/full_clip"
+              }
+              down:f =
+              {
+                v = '144 -92 -68 176 -92 -68 144 -124 -68'
+                tex = "common/full_clip"
+              }
+            }
+            new cube:p =
+            {
+              east:f =
+              {
+                v = '44 94 82 44 126 82 44 94 114'
+                tex = "common/full_clip"
+              }
+              west:f =
+              {
+                v = '40 -106 82 40 -138 82 40 -106 114'
+                tex = "common/full_clip"
+              }
+              north:f =
+              {
+                v = '-22 22 82 -54 22 82 -22 22 114'
+                tex = "common/full_clip"
+              }
+              south:f =
+              {
+                v = '170 14 82 202 14 82 170 14 114'
+                tex = "common/full_clip"
+              }
+              up:f =
+              {
+                v = '170 94 -62 202 94 -62 170 126 -62'
+                tex = "common/full_clip"
+              }
+              down:f =
+              {
+                v = '170 -98 -96 202 -98 -96 170 -130 -96'
+                tex = "common/full_clip"
+              }
+            }
+            new cube:p =
+            {
+              east:f =
+              {
+                v = '44 70 82 44 102 82 44 70 114'
+                tex = "common/full_clip"
+              }
+              west:f =
+              {
+                v = '40 -130 82 40 -162 82 40 -130 114'
+                tex = "common/full_clip"
+              }
+              north:f =
+              {
+                v = '-22 -2 82 -54 -2 82 -22 -2 114'
+                tex = "common/full_clip"
+              }
+              south:f =
+              {
+                v = '170 -10 82 202 -10 82 170 -10 114'
+                tex = "common/full_clip"
+              }
+              up:f =
+              {
+                v = '170 70 -62 202 70 -62 170 102 -62'
+                tex = "common/full_clip"
+              }
+              down:f =
+              {
+                v = '170 -122 -96 202 -122 -96 170 -154 -96'
+                tex = "common/full_clip"
+              }
+            }
+            new cube:p =
+            {
+              east:f =
+              {
+                v = '-22.00002 110 144.36070 -22.00002 142 144.36070 -22.00002
+                  110 176.36070'
+                tex = "common/full_clip"
+              }
+              west:f =
+              {
+                v = '-32 -122 112 -32 -154 112 -32 -122 144'
+                tex = "common/full_clip"
+              }
+              north:f =
+              {
+                v = '-94 16 112 -126 16 112 -94 16 144'
+                tex = "common/full_clip"
+              }
+              south:f =
+              {
+                v = '98 -4 112 130 -4 112 98 -4 144'
+                tex = "common/full_clip"
+              }
+              up:f =
+              {
+                v = '114 94 -24 146 94 -24 114 126 -24'
+                tex = "common/full_clip"
+              }
+              down:f =
+              {
+                v = '114 -130 -48 146 -130 -48 114 -162 -48'
+                tex = "common/full_clip"
+              }
+            }
+            new cube:p =
+            {
+              east:f =
+              {
+                v = '-8.00002 110 128.36070 -8.00002 142 128.36070 -8.00002 110
+                  160.36070'
+                tex = "common/full_clip"
+              }
+              west:f =
+              {
+                v = '-22 -122 96 -22 -154 96 -22 -122 128'
+                tex = "common/full_clip"
+              }
+              north:f =
+              {
+                v = '-84 16 96 -116 16 96 -84 16 128'
+                tex = "common/full_clip"
+              }
+              south:f =
+              {
+                v = '108 -4 96 140 -4 96 108 -4 128'
+                tex = "common/full_clip"
+              }
+              up:f =
+              {
+                v = '124 94 -40 156 94 -40 124 126 -40'
+                tex = "common/full_clip"
+              }
+              down:f =
+              {
+                v = '124 -130 -48 156 -130 -48 124 -162 -48'
+                tex = "common/full_clip"
+              }
+            }
+            new cube:p =
+            {
+              east:f =
+              {
+                v = '-80.82626 102 52.82628 -80.82626 134 52.82628 -103.45370 102
+                  75.45370'
+                tex = "common/full_clip"
+              }
+              west:f =
+              {
+                v = '44 -130 82 44 -162 82 44 -130 114'
+                tex = "common/full_clip"
+              }
+              north:f =
+              {
+                v = '-18 -2 82 -50 -2 82 -18 -2 114'
+                tex = "common/full_clip"
+              }
+              south:f =
+              {
+                v = '174 -10 82 206 -10 82 174 -10 114'
+                tex = "common/full_clip"
+              }
+              up:f =
+              {
+                v = '189.40040 86 -105.21820 221.26900 86 -108.11530 189.40040
+                  118 -105.21820'
+                tex = "common/full_clip"
+              }
+              down:f =
+              {
+                v = '190 -138 -96 222 -138 -96 190 -170 -96'
+                tex = "common/full_clip"
+              }
+            }
+            new cube:p =
+            {
+              east:f =
+              {
+                v = '-80.82626 126 52.82628 -80.82626 158 52.82628 -103.45370 126
+                  75.45370'
+                tex = "common/full_clip"
+              }
+              west:f =
+              {
+                v = '44 -106 82 44 -138 82 44 -106 114'
+                tex = "common/full_clip"
+              }
+              north:f =
+              {
+                v = '-18 22 82 -50 22 82 -18 22 114'
+                tex = "common/full_clip"
+              }
+              south:f =
+              {
+                v = '174 14 82 206 14 82 174 14 114'
+                tex = "common/full_clip"
+              }
+              up:f =
+              {
+                v = '189.40040 110 -105.21820 221.26900 110 -108.11530 189.40040
+                  142 -105.21820'
+                tex = "common/full_clip"
+              }
+              down:f =
+              {
+                v = '190 -114 -96 222 -114 -96 190 -146 -96'
+                tex = "common/full_clip"
+              }
+            }
+          }
+          misc_model:e =
+          {
+            origin = "0 0 -96"
+            model = "\models\mapobjects\urbanterror\forklift\forklift.md3"
+          }
+        }
+        Swat Truck:g =
+        {
+          ClipBrushes:g =
+          {
+            poly:p =
+            {
+              face:f =
+              {
+                v = '-132 152 -24 -4 152 -24 -132 280 -24'
+                tex = "common/full_clip"
+                Contents = "1"
+                Flags = "0"
+                Value = "0"
+              }
+              face:f =
+              {
+                v = '-132 152 -46 -132 280 -46 -4 152 -46'
+                tex = "common/full_clip"
+                Contents = "1"
+                Flags = "0"
+                Value = "0"
+                m = "1"
+              }
+              face:f =
+              {
+                v = '-132 -23 -96 -132 -23 32 -4 -23 -96'
+                tex = "common/full_clip"
+                Contents = "1"
+                Flags = "0"
+                Value = "0"
+                m = "1"
+              }
+              face:f =
+              {
+                v = '-132 -24 -96 -4 -24 -96 -132 -24 32'
+                tex = "common/full_clip"
+                Contents = "1"
+                Flags = "0"
+                Value = "0"
+              }
+              face:f =
+              {
+                v = '87 152 -96 87 280 -96 87 152 32'
+                tex = "common/full_clip"
+                Contents = "1"
+                Flags = "0"
+                Value = "0"
+              }
+              face:f =
+              {
+                v = '68 152 -96 68 152 32 68 280 -96'
+                tex = "common/full_clip"
+                Contents = "1"
+                Flags = "0"
+                Value = "0"
+                m = "1"
+              }
+            }
+            poly:p =
+            {
+              face:f =
+              {
+                v = '-132 152 -24 -4 152 -24 -132 280 -24'
+                tex = "common/full_clip"
+                Contents = "1"
+                Flags = "0"
+                Value = "0"
+              }
+              face:f =
+              {
+                v = '-132 152 -46 -132 280 -46 -4 152 -46'
+                tex = "common/full_clip"
+                Contents = "1"
+                Flags = "0"
+                Value = "0"
+                m = "1"
+              }
+              face:f =
+              {
+                v = '-132 26 -96 -132 26 32 -4 26 -96'
+                tex = "common/full_clip"
+                Contents = "1"
+                Flags = "0"
+                Value = "0"
+                m = "1"
+              }
+              face:f =
+              {
+                v = '-132 25 -96 -4 25 -96 -132 25 32'
+                tex = "common/full_clip"
+                Contents = "1"
+                Flags = "0"
+                Value = "0"
+              }
+              face:f =
+              {
+                v = '87 152 -96 87 280 -96 87 152 32'
+                tex = "common/full_clip"
+                Contents = "1"
+                Flags = "0"
+                Value = "0"
+              }
+              face:f =
+              {
+                v = '68 152 -96 68 152 32 68 280 -96'
+                tex = "common/full_clip"
+                Contents = "1"
+                Flags = "0"
+                Value = "0"
+                m = "1"
+              }
+            }
+            poly:p =
+            {
+              face:f =
+              {
+                v = '-132 152 -79 -4 152 -79 -132 280 -79'
+                tex = "common/full_clip"
+                Contents = "1"
+                Flags = "0"
+                Value = "0"
+              }
+              face:f =
+              {
+                v = '-132 152 -96 -132 280 -96 -4 152 -96'
+                tex = "common/full_clip"
+                Contents = "1"
+                Flags = "0"
+                Value = "0"
+                m = "1"
+              }
+              face:f =
+              {
+                v = '-132 42 -96 -132 42 32 -4 42 -96'
+                tex = "common/full_clip"
+                Contents = "1"
+                Flags = "0"
+                Value = "0"
+                m = "1"
+              }
+              face:f =
+              {
+                v = '-132 -40 -96 -4 -40 -96 -132 -40 32'
+                tex = "common/full_clip"
+                Contents = "1"
+                Flags = "0"
+                Value = "0"
+              }
+              face:f =
+              {
+                v = '68 152 -96 68 280 -96 68 152 32'
+                tex = "common/full_clip"
+                Contents = "1"
+                Flags = "0"
+                Value = "0"
+              }
+              face:f =
+              {
+                v = '-112 152 -96 -112 152 32 -112 280 -96'
+                tex = "common/full_clip"
+                Contents = "1"
+                Flags = "0"
+                Value = "0"
+                m = "1"
+              }
+            }
+            poly:p =
+            {
+              face:f =
+              {
+                v = '-140.94440 152 -96 -69.83430 152 32 -140.94440 280 -96'
+                tex = "common/full_clip"
+                Contents = "1"
+                Flags = "0"
+                Value = "0"
+                m = "1"
+              }
+              face:f =
+              {
+                v = '114.54750 152 -96 114.54750 280 -96 43.44627 152 32'
+                tex = "common/full_clip"
+                Contents = "1"
+                Flags = "0"
+                Value = "0"
+              }
+              face:f =
+              {
+                v = '-132 152 -3 -4 152 -3 -132 280 -3'
+                tex = "common/full_clip"
+                Contents = "1"
+                Flags = "0"
+                Value = "0"
+              }
+              face:f =
+              {
+                v = '-132 152 -12 -132 280 -12 -4 152 -12'
+                tex = "common/full_clip"
+                Contents = "1"
+                Flags = "0"
+                Value = "0"
+                m = "1"
+              }
+              face:f =
+              {
+                v = '-132 42 -96 -132 42 32 -4 42 -96'
+                tex = "common/full_clip"
+                Contents = "1"
+                Flags = "0"
+                Value = "0"
+                m = "1"
+              }
+              face:f =
+              {
+                v = '-132 -40 -96 -4 -40 -96 -132 -40 32'
+                tex = "common/full_clip"
+                Contents = "1"
+                Flags = "0"
+                Value = "0"
+              }
+            }
+            poly:p =
+            {
+              face:f =
+              {
+                v = '-132 152 -74 -4 152 -74 -132 280 -74'
+                tex = "common/full_clip"
+                Contents = "1"
+                Flags = "0"
+                Value = "0"
+              }
+              face:f =
+              {
+                v = '-132 152 -96 -132 280 -96 -4 152 -96'
+                tex = "common/full_clip"
+                Contents = "1"
+                Flags = "0"
+                Value = "0"
+                m = "1"
+              }
+              face:f =
+              {
+                v = '-132 42 -96 -132 42 32 -4 42 -96'
+                tex = "common/full_clip"
+                Contents = "1"
+                Flags = "0"
+                Value = "0"
+                m = "1"
+              }
+              face:f =
+              {
+                v = '-132 -40 -96 -4 -40 -96 -132 -40 32'
+                tex = "common/full_clip"
+                Contents = "1"
+                Flags = "0"
+                Value = "0"
+              }
+              face:f =
+              {
+                v = '-112 152 -96 -112 280 -96 -112 152 32'
+                tex = "common/full_clip"
+                Contents = "1"
+                Flags = "0"
+                Value = "0"
+              }
+              face:f =
+              {
+                v = '-129 152 -96 -129 152 32 -129 280 -96'
+                tex = "common/full_clip"
+                Contents = "1"
+                Flags = "0"
+                Value = "0"
+                m = "1"
+              }
+            }
+            poly:p =
+            {
+              face:f =
+              {
+                v = '-132 152 -12 -4 152 -12 -132 280 -12'
+                tex = "common/full_clip"
+                Contents = "1"
+                Flags = "0"
+                Value = "0"
+              }
+              face:f =
+              {
+                v = '-132 152 -74 -132 280 -74 -4 152 -74'
+                tex = "common/full_clip"
+                Contents = "1"
+                Flags = "0"
+                Value = "0"
+                m = "1"
+              }
+              face:f =
+              {
+                v = '-132 42 -96 -132 42 32 -4 42 -96'
+                tex = "common/full_clip"
+                Contents = "1"
+                Flags = "0"
+                Value = "0"
+                m = "1"
+              }
+              face:f =
+              {
+                v = '-132 38 -96 -4 38 -96 -132 38 32'
+                tex = "common/full_clip"
+                Contents = "1"
+                Flags = "0"
+                Value = "0"
+              }
+              face:f =
+              {
+                v = '68 152 -96 68 280 -96 68 152 32'
+                tex = "common/full_clip"
+                Contents = "1"
+                Flags = "0"
+                Value = "0"
+              }
+              face:f =
+              {
+                v = '-94 152 -96 -94 152 32 -94 280 -96'
+                tex = "common/full_clip"
+                Contents = "1"
+                Flags = "0"
+                Value = "0"
+                m = "1"
+              }
+            }
+            poly:p =
+            {
+              face:f =
+              {
+                v = '-132 152 -12 -4 152 -12 -132 280 -12'
+                tex = "common/full_clip"
+                Contents = "1"
+                Flags = "0"
+                Value = "0"
+              }
+              face:f =
+              {
+                v = '-132 152 -74 -132 280 -74 -4 152 -74'
+                tex = "common/full_clip"
+                Contents = "1"
+                Flags = "0"
+                Value = "0"
+                m = "1"
+              }
+              face:f =
+              {
+                v = '-132 -36 -96 -132 -36 32 -4 -36 -96'
+                tex = "common/full_clip"
+                Contents = "1"
+                Flags = "0"
+                Value = "0"
+                m = "1"
+              }
+              face:f =
+              {
+                v = '-132 -40 -96 -4 -40 -96 -132 -40 32'
+                tex = "common/full_clip"
+                Contents = "1"
+                Flags = "0"
+                Value = "0"
+              }
+              face:f =
+              {
+                v = '68 152 -96 68 280 -96 68 152 32'
+                tex = "common/full_clip"
+                Contents = "1"
+                Flags = "0"
+                Value = "0"
+              }
+              face:f =
+              {
+                v = '-94 152 -96 -94 152 32 -94 280 -96'
+                tex = "common/full_clip"
+                Contents = "1"
+                Flags = "0"
+                Value = "0"
+                m = "1"
+              }
+            }
+            poly:p =
+            {
+              face:f =
+              {
+                v = '-132 152 -49.48029 -4 152 9.17814 -132 280 -49.48029'
+                tex = "common/full_clip"
+                Contents = "1"
+                Flags = "0"
+                Value = "0"
+              }
+              face:f =
+              {
+                v = '-132 152 -74 -132 280 -74 -4 152 -74'
+                tex = "common/full_clip"
+                Contents = "1"
+                Flags = "0"
+                Value = "0"
+                m = "1"
+              }
+              face:f =
+              {
+                v = '-132 42 -96 -132 42 32 -4 42 -96'
+                tex = "common/full_clip"
+                Contents = "1"
+                Flags = "0"
+                Value = "0"
+                m = "1"
+              }
+              face:f =
+              {
+                v = '-132 -40 -96 -4 -40 -96 -132 -40 32'
+                tex = "common/full_clip"
+                Contents = "1"
+                Flags = "0"
+                Value = "0"
+              }
+              face:f =
+              {
+                v = '-94 152 -96 -94 280 -96 -94 152 32'
+                tex = "common/full_clip"
+                Contents = "1"
+                Flags = "0"
+                Value = "0"
+              }
+              face:f =
+              {
+                v = '-124 152 -96 -124 152 32 -124 280 -96'
+                tex = "common/full_clip"
+                Contents = "1"
+                Flags = "0"
+                Value = "0"
+                m = "1"
+              }
+            }
+            poly:p =
+            {
+              face:f =
+              {
+                v = '-132 152 -8 -4 152 -8 -132 280 -8'
+                tex = "common/full_clip"
+                Contents = "1"
+                Flags = "0"
+                Value = "0"
+              }
+              face:f =
+              {
+                v = '-132 152 -29 -132 280 -29 -4 152 -29'
+                tex = "common/full_clip"
+                Contents = "1"
+                Flags = "0"
+                Value = "0"
+                m = "1"
+              }
+              face:f =
+              {
+                v = '-132 60 -96 -132 60 32 -4 60 -96'
+                tex = "common/full_clip"
+                Contents = "1"
+                Flags = "0"
+                Value = "0"
+                m = "1"
+              }
+              face:f =
+              {
+                v = '-132 42 -96 -4 42 -96 -132 42 32'
+                tex = "common/full_clip"
+                Contents = "1"
+                Flags = "0"
+                Value = "0"
+              }
+              face:f =
+              {
+                v = '-81 152 -96 -81 280 -96 -81 152 32'
+                tex = "common/full_clip"
+                Contents = "1"
+                Flags = "0"
+                Value = "0"
+              }
+              face:f =
+              {
+                v = '-85 152 -96 -85 152 32 -85 280 -96'
+                tex = "common/full_clip"
+                Contents = "1"
+                Flags = "0"
+                Value = "0"
+                m = "1"
+              }
+            }
+            poly:p =
+            {
+              face:f =
+              {
+                v = '-132 152 -8 -4 152 -8 -132 280 -8'
+                tex = "common/full_clip"
+                Contents = "1"
+                Flags = "0"
+                Value = "0"
+              }
+              face:f =
+              {
+                v = '-132 152 -29 -132 280 -29 -4 152 -29'
+                tex = "common/full_clip"
+                Contents = "1"
+                Flags = "0"
+                Value = "0"
+                m = "1"
+              }
+              face:f =
+              {
+                v = '-132 -40 -96 -132 -40 32 -4 -40 -96'
+                tex = "common/full_clip"
+                Contents = "1"
+                Flags = "0"
+                Value = "0"
+                m = "1"
+              }
+              face:f =
+              {
+                v = '-132 -58 -96 -4 -58 -96 -132 -58 32'
+                tex = "common/full_clip"
+                Contents = "1"
+                Flags = "0"
+                Value = "0"
+              }
+              face:f =
+              {
+                v = '-81 152 -96 -81 280 -96 -81 152 32'
+                tex = "common/full_clip"
+                Contents = "1"
+                Flags = "0"
+                Value = "0"
+              }
+              face:f =
+              {
+                v = '-85 152 -96 -85 152 32 -85 280 -96'
+                tex = "common/full_clip"
+                Contents = "1"
+                Flags = "0"
+                Value = "0"
+                m = "1"
+              }
+            }
+            poly:p =
+            {
+              face:f =
+              {
+                v = '-132 152 -51.00123 -132 280 -51.00123 -4 152 12.99004'
+                tex = "common/full_clip"
+                Contents = "1"
+                Flags = "0"
+                Value = "0"
+                m = "1"
+              }
+              face:f =
+              {
+                v = '-122.00010 152 -96 -79.33895 152 32 -122.00010 280 -96'
+                tex = "common/full_clip"
+                Contents = "1"
+                Flags = "0"
+                Value = "0"
+                m = "1"
+              }
+              face:f =
+              {
+                v = '-132 42 -96 -132 42 32 -4 42 -96'
+                tex = "common/full_clip"
+                Contents = "1"
+                Flags = "0"
+                Value = "0"
+                m = "1"
+              }
+              face:f =
+              {
+                v = '-132 -40 -96 -4 -40 -96 -132 -40 32'
+                tex = "common/full_clip"
+                Contents = "1"
+                Flags = "0"
+                Value = "0"
+              }
+              face:f =
+              {
+                v = '-94 152 -96 -94 280 -96 -94 152 32'
+                tex = "common/full_clip"
+                Contents = "1"
+                Flags = "0"
+                Value = "0"
+              }
+            }
+            poly:p =
+            {
+              face:f =
+              {
+                v = '-132 60.83864 -96 -132 18.19669 32 -4 60.83864 -96'
+                tex = "common/full_clip"
+                Contents = "1"
+                Flags = "0"
+                Value = "0"
+                m = "1"
+              }
+              face:f =
+              {
+                v = '-26.33471 152 -96 -26.33471 280 -96 -68.99588 152 32'
+                tex = "common/full_clip"
+                Contents = "1"
+                Flags = "0"
+                Value = "0"
+              }
+              face:f =
+              {
+                v = '-132 -68.00085 -96 -4 -68.00085 -96 -132 -14.66612 32'
+                tex = "common/full_clip"
+                Contents = "1"
+                Flags = "0"
+                Value = "0"
+              }
+              face:f =
+              {
+                v = '-110.87560 152 -96 -57.55286 152 32 -110.87560 280 -96'
+                tex = "common/full_clip"
+                Contents = "1"
+                Flags = "0"
+                Value = "0"
+                m = "1"
+              }
+              face:f =
+              {
+                v = '-132 152 9 -4 152 9 -132 280 9'
+                tex = "common/full_clip"
+                Contents = "1"
+                Flags = "0"
+                Value = "0"
+              }
+              face:f =
+              {
+                v = '-132 152 -3 -132 280 -3 -4 152 -3'
+                tex = "common/full_clip"
+                Contents = "1"
+                Flags = "0"
+                Value = "0"
+                m = "1"
+              }
+            }
+            poly:p =
+            {
+              face:f =
+              {
+                v = '-132 152 -79 -4 152 -79 -132 280 -79'
+                tex = "common/full_clip"
+                Contents = "1"
+                Flags = "0"
+                Value = "0"
+              }
+              face:f =
+              {
+                v = '-132 152 -96 -132 280 -96 -4 152 -96'
+                tex = "common/full_clip"
+                Contents = "1"
+                Flags = "0"
+                Value = "0"
+                m = "1"
+              }
+              face:f =
+              {
+                v = '-132 44 -96 -132 44 32 -4 44 -96'
+                tex = "common/full_clip"
+                Contents = "1"
+                Flags = "0"
+                Value = "0"
+                m = "1"
+              }
+              face:f =
+              {
+                v = '-132 -40 -96 -4 -40 -96 -132 -40 32'
+                tex = "common/full_clip"
+                Contents = "1"
+                Flags = "0"
+                Value = "0"
+              }
+              face:f =
+              {
+                v = '77 152 -96 77 280 -96 77 152 32'
+                tex = "common/full_clip"
+                Contents = "1"
+                Flags = "0"
+                Value = "0"
+              }
+              face:f =
+              {
+                v = '68 152 -96 68 152 32 68 280 -96'
+                tex = "common/full_clip"
+                Contents = "1"
+                Flags = "0"
+                Value = "0"
+                m = "1"
+              }
+            }
+            poly:p =
+            {
+              face:f =
+              {
+                v = '-132 152 -12 -4 152 -12 -132 280 -12'
+                tex = "common/full_clip"
+                Contents = "1"
+                Flags = "0"
+                Value = "0"
+              }
+              face:f =
+              {
+                v = '-132 152 -79 -132 280 -79 -4 152 -79'
+                tex = "common/full_clip"
+                Contents = "1"
+                Flags = "0"
+                Value = "0"
+                m = "1"
+              }
+              face:f =
+              {
+                v = '-132 -22 -96 -132 -22 32 -4 -22 -96'
+                tex = "common/full_clip"
+                Contents = "1"
+                Flags = "0"
+                Value = "0"
+                m = "1"
+              }
+              face:f =
+              {
+                v = '-132 -36 -96 -4 -36 -96 -132 -36 32'
+                tex = "common/full_clip"
+                Contents = "1"
+                Flags = "0"
+                Value = "0"
+              }
+              face:f =
+              {
+                v = '68 152 -96 68 280 -96 68 152 32'
+                tex = "common/full_clip"
+                Contents = "1"
+                Flags = "0"
+                Value = "0"
+              }
+              face:f =
+              {
+                v = '65 152 -96 65 152 32 65 280 -96'
+                tex = "common/full_clip"
+                Contents = "1"
+                Flags = "0"
+                Value = "0"
+                m = "1"
+              }
+            }
+            poly:p =
+            {
+              face:f =
+              {
+                v = '-132 152 -12 -4 152 -12 -132 280 -12'
+                tex = "common/full_clip"
+                Contents = "1"
+                Flags = "0"
+                Value = "0"
+              }
+              face:f =
+              {
+                v = '-132 152 -79 -132 280 -79 -4 152 -79'
+                tex = "common/full_clip"
+                Contents = "1"
+                Flags = "0"
+                Value = "0"
+                m = "1"
+              }
+              face:f =
+              {
+                v = '-132 38 -96 -132 38 32 -4 38 -96'
+                tex = "common/full_clip"
+                Contents = "1"
+                Flags = "0"
+                Value = "0"
+                m = "1"
+              }
+              face:f =
+              {
+                v = '-132 24 -96 -4 24 -96 -132 24 32'
+                tex = "common/full_clip"
+                Contents = "1"
+                Flags = "0"
+                Value = "0"
+              }
+              face:f =
+              {
+                v = '68 152 -96 68 280 -96 68 152 32'
+                tex = "common/full_clip"
+                Contents = "1"
+                Flags = "0"
+                Value = "0"
+              }
+              face:f =
+              {
+                v = '65 152 -96 65 152 32 65 280 -96'
+                tex = "common/full_clip"
+                Contents = "1"
+                Flags = "0"
+                Value = "0"
+                m = "1"
+              }
+            }
+            poly:p =
+            {
+              face:f =
+              {
+                v = '-132 152 -46 -4 152 -46 -132 280 -46'
+                tex = "common/full_clip"
+                Contents = "1"
+                Flags = "0"
+                Value = "0"
+              }
+              face:f =
+              {
+                v = '-132 152 -79 -132 280 -79 -4 152 -79'
+                tex = "common/full_clip"
+                Contents = "1"
+                Flags = "0"
+                Value = "0"
+                m = "1"
+              }
+              face:f =
+              {
+                v = '-132 27 -96 -132 27 32 -4 27 -96'
+                tex = "common/full_clip"
+                Contents = "1"
+                Flags = "0"
+                Value = "0"
+                m = "1"
+              }
+              face:f =
+              {
+                v = '-132 24 -96 -4 24 -96 -132 24 32'
+                tex = "common/full_clip"
+                Contents = "1"
+                Flags = "0"
+                Value = "0"
+              }
+              face:f =
+              {
+                v = '91 152 -96 91 280 -96 91 152 32'
+                tex = "common/full_clip"
+                Contents = "1"
+                Flags = "0"
+                Value = "0"
+              }
+              face:f =
+              {
+                v = '68 152 -96 68 152 32 68 280 -96'
+                tex = "common/full_clip"
+                Contents = "1"
+                Flags = "0"
+                Value = "0"
+                m = "1"
+              }
+            }
+            poly:p =
+            {
+              face:f =
+              {
+                v = '-132 152 -46 -4 152 -46 -132 280 -46'
+                tex = "common/full_clip"
+                Contents = "1"
+                Flags = "0"
+                Value = "0"
+              }
+              face:f =
+              {
+                v = '-132 152 -79 -132 280 -79 -4 152 -79'
+                tex = "common/full_clip"
+                Contents = "1"
+                Flags = "0"
+                Value = "0"
+                m = "1"
+              }
+              face:f =
+              {
+                v = '-132 -22 -96 -132 -22 32 -4 -22 -96'
+                tex = "common/full_clip"
+                Contents = "1"
+                Flags = "0"
+                Value = "0"
+                m = "1"
+              }
+              face:f =
+              {
+                v = '-132 -25 -96 -4 -25 -96 -132 -25 32'
+                tex = "common/full_clip"
+                Contents = "1"
+                Flags = "0"
+                Value = "0"
+              }
+              face:f =
+              {
+                v = '91 152 -96 91 280 -96 91 152 32'
+                tex = "common/full_clip"
+                Contents = "1"
+                Flags = "0"
+                Value = "0"
+              }
+              face:f =
+              {
+                v = '68 152 -96 68 152 32 68 280 -96'
+                tex = "common/full_clip"
+                Contents = "1"
+                Flags = "0"
+                Value = "0"
+                m = "1"
+              }
+            }
+            poly:p =
+            {
+              face:f =
+              {
+                v = '-132 152 -12 -4 152 -12 -132 280 -12'
+                tex = "common/full_clip"
+                Contents = "1"
+                Flags = "0"
+                Value = "0"
+              }
+              face:f =
+              {
+                v = '-132 152 -74 -132 280 -74 -4 152 -74'
+                tex = "common/full_clip"
+                Contents = "1"
+                Flags = "0"
+                Value = "0"
+                m = "1"
+              }
+              face:f =
+              {
+                v = '-132 38 -96 -132 38 32 -4 38 -96'
+                tex = "common/full_clip"
+                Contents = "1"
+                Flags = "0"
+                Value = "0"
+                m = "1"
+              }
+              face:f =
+              {
+                v = '-132 -36 -96 -4 -36 -96 -132 -36 32'
+                tex = "common/full_clip"
+                Contents = "1"
+                Flags = "0"
+                Value = "0"
+              }
+              face:f =
+              {
+                v = '-71 152 -96 -71 280 -96 -71 152 32'
+                tex = "common/full_clip"
+                Contents = "1"
+                Flags = "0"
+                Value = "0"
+              }
+              face:f =
+              {
+                v = '-94 152 -96 -94 152 32 -94 280 -96'
+                tex = "common/full_clip"
+                Contents = "1"
+                Flags = "0"
+                Value = "0"
+                m = "1"
+              }
+            }
+            poly:p =
+            {
+              face:f =
+              {
+                v = '-132 152 -11 -4 152 -11 -132 280 -11'
+                tex = "common/full_clip"
+                Contents = "1"
+                Flags = "0"
+                Value = "0"
+              }
+              face:f =
+              {
+                v = '-132 152 -24 -132 280 -24 -4 152 -24'
+                tex = "common/full_clip"
+                Contents = "1"
+                Flags = "0"
+                Value = "0"
+                m = "1"
+              }
+              face:f =
+              {
+                v = '-132 -22 -96 -132 -22 32 -4 -22 -96'
+                tex = "common/full_clip"
+                Contents = "1"
+                Flags = "0"
+                Value = "0"
+                m = "1"
+              }
+              face:f =
+              {
+                v = '-132 -25 -96 -4 -25 -96 -132 -25 32'
+                tex = "common/full_clip"
+                Contents = "1"
+                Flags = "0"
+                Value = "0"
+              }
+              face:f =
+              {
+                v = '92 152 -96 92 280 -96 92 152 32'
+                tex = "common/full_clip"
+                Contents = "1"
+                Flags = "0"
+                Value = "0"
+              }
+              face:f =
+              {
+                v = '69 152 -96 69 152 32 69 280 -96'
+                tex = "common/full_clip"
+                Contents = "1"
+                Flags = "0"
+                Value = "0"
+                m = "1"
+              }
+            }
+            poly:p =
+            {
+              face:f =
+              {
+                v = '-132 152 -11 -4 152 -11 -132 280 -11'
+                tex = "common/full_clip"
+                Contents = "1"
+                Flags = "0"
+                Value = "0"
+              }
+              face:f =
+              {
+                v = '-132 152 -24 -132 280 -24 -4 152 -24'
+                tex = "common/full_clip"
+                Contents = "1"
+                Flags = "0"
+                Value = "0"
+                m = "1"
+              }
+              face:f =
+              {
+                v = '-132 27 -96 -132 27 32 -4 27 -96'
+                tex = "common/full_clip"
+                Contents = "1"
+                Flags = "0"
+                Value = "0"
+                m = "1"
+              }
+              face:f =
+              {
+                v = '-132 24 -96 -4 24 -96 -132 24 32'
+                tex = "common/full_clip"
+                Contents = "1"
+                Flags = "0"
+                Value = "0"
+              }
+              face:f =
+              {
+                v = '92 152 -96 92 280 -96 92 152 32'
+                tex = "common/full_clip"
+                Contents = "1"
+                Flags = "0"
+                Value = "0"
+              }
+              face:f =
+              {
+                v = '69 152 -96 69 152 32 69 280 -96'
+                tex = "common/full_clip"
+                Contents = "1"
+                Flags = "0"
+                Value = "0"
+                m = "1"
+              }
+            }
+            poly:p =
+            {
+              face:f =
+              {
+                v = '-132 152 -24 -4 152 -24 -132 280 -24'
+                tex = "common/full_clip"
+                Contents = "1"
+                Flags = "0"
+                Value = "0"
+              }
+              face:f =
+              {
+                v = '-132 152 -46 -132 280 -46 -4 152 -46'
+                tex = "common/full_clip"
+                Contents = "1"
+                Flags = "0"
+                Value = "0"
+                m = "1"
+              }
+              face:f =
+              {
+                v = '-132 27 -96 -132 27 32 -4 27 -96'
+                tex = "common/full_clip"
+                Contents = "1"
+                Flags = "0"
+                Value = "0"
+                m = "1"
+              }
+              face:f =
+              {
+                v = '-132 24 -96 -4 24 -96 -132 24 32'
+                tex = "common/full_clip"
+                Contents = "1"
+                Flags = "0"
+                Value = "0"
+              }
+              face:f =
+              {
+                v = '92 152 -96 92 280 -96 92 152 32'
+                tex = "common/full_clip"
+                Contents = "1"
+                Flags = "0"
+                Value = "0"
+              }
+              face:f =
+              {
+                v = '87 152 -96 87 152 32 87 280 -96'
+                tex = "common/full_clip"
+                Contents = "1"
+                Flags = "0"
+                Value = "0"
+                m = "1"
+              }
+            }
+            poly:p =
+            {
+              face:f =
+              {
+                v = '-132 152 -24 -4 152 -24 -132 280 -24'
+                tex = "common/full_clip"
+                Contents = "1"
+                Flags = "0"
+                Value = "0"
+              }
+              face:f =
+              {
+                v = '-132 152 -46 -132 280 -46 -4 152 -46'
+                tex = "common/full_clip"
+                Contents = "1"
+                Flags = "0"
+                Value = "0"
+                m = "1"
+              }
+              face:f =
+              {
+                v = '-132 -22 -96 -132 -22 32 -4 -22 -96'
+                tex = "common/full_clip"
+                Contents = "1"
+                Flags = "0"
+                Value = "0"
+                m = "1"
+              }
+              face:f =
+              {
+                v = '-132 -25 -96 -4 -25 -96 -132 -25 32'
+                tex = "common/full_clip"
+                Contents = "1"
+                Flags = "0"
+                Value = "0"
+              }
+              face:f =
+              {
+                v = '92 152 -96 92 280 -96 92 152 32'
+                tex = "common/full_clip"
+                Contents = "1"
+                Flags = "0"
+                Value = "0"
+              }
+              face:f =
+              {
+                v = '87 152 -96 87 152 32 87 280 -96'
+                tex = "common/full_clip"
+                Contents = "1"
+                Flags = "0"
+                Value = "0"
+                m = "1"
+              }
+            }
+          }
+          misc_model:e =
+          {
+            origin = "-12 0 -96"
+            model = "\models\mapobjects\urbanterror\swattruck.md3"
+          }
+        }
+        Tall Candle Holder:g =
+        {
+          ClipBrushes:g =
+          {
+            clip:p =
+            {
+              side:f =
+              {
+                v = '-14 -130 16 -14 -146 16 -14 -130 32'
+                tex = "common/weapclip"
+              }
+              side:f =
+              {
+                v = '82 92 -32 98 92 -32 82 108 -32'
+                tex = "common/weapclip"
+              }
+              side:f =
+              {
+                v = '-10 94 64 -10 110 64 -10 94 80'
+                tex = "common/weapclip"
+              }
+              side:f =
+              {
+                v = '122 -132 -96 138 -132 -96 122 -148 -96'
+                tex = "common/weapclip"
+              }
+              front:f =
+              {
+                v = '90 2 16 106 2 16 90 2 32'
+                tex = "common/weapclip"
+              }
+              back:f =
+              {
+                v = '-134 6 64 -150 6 64 -134 6 80'
+                tex = "common/weapclip"
+              }
+            }
+            clip:p =
+            {
+              side:f =
+              {
+                v = '-14 -134 62 -14 -150 62 -14 -134 78'
+                tex = "common/weapclip"
+              }
+              side:f =
+              {
+                v = '82 88 -46 98 88 -46 82 104 -46'
+                tex = "common/weapclip"
+              }
+              side:f =
+              {
+                v = '-10 90 110 -10 106 110 -10 90 126'
+                tex = "common/weapclip"
+              }
+              side:f =
+              {
+                v = '122 -136 -50 138 -136 -50 122 -152 -50'
+                tex = "common/weapclip"
+              }
+              front:f =
+              {
+                v = '90 -4 62 106 -4 62 90 -4 78'
+                tex = "common/weapclip"
+              }
+              back:f =
+              {
+                v = '-134 2 110 -150 2 110 -134 2 126'
+                tex = "common/weapclip"
+              }
+            }
+            clip:p =
+            {
+              side:f =
+              {
+                v = '-14 -124 62 -14 -140 62 -14 -124 78'
+                tex = "common/weapclip"
+              }
+              side:f =
+              {
+                v = '82 98 -46 98 98 -46 82 114 -46'
+                tex = "common/weapclip"
+              }
+              side:f =
+              {
+                v = '-10 100 110 -10 116 110 -10 100 126'
+                tex = "common/weapclip"
+              }
+              side:f =
+              {
+                v = '122 -126 -50 138 -126 -50 122 -142 -50'
+                tex = "common/weapclip"
+              }
+              front:f =
+              {
+                v = '90 6 62 106 6 62 90 6 78'
+                tex = "common/weapclip"
+              }
+              back:f =
+              {
+                v = '-134 12 110 -150 12 110 -134 12 126'
+                tex = "common/weapclip"
+              }
+            }
+            clip:p =
+            {
+              side:f =
+              {
+                v = '-14 -124 66 -14 -140 66 -14 -124 82'
+                tex = "common/weapclip"
+              }
+              side:f =
+              {
+                v = '82 98 -36 98 98 -36 82 114 -36'
+                tex = "common/weapclip"
+              }
+              side:f =
+              {
+                v = '-10 100 114 -10 116 114 -10 100 130'
+                tex = "common/weapclip"
+              }
+              side:f =
+              {
+                v = '122 -126 -46 138 -126 -46 122 -142 -46'
+                tex = "common/weapclip"
+              }
+              front:f =
+              {
+                v = '90 8 66 106 8 66 90 8 82'
+                tex = "common/weapclip"
+              }
+              back:f =
+              {
+                v = '-134 12 114 -150 12 114 -134 12 130'
+                tex = "common/weapclip"
+              }
+            }
+            clip:p =
+            {
+              side:f =
+              {
+                v = '-14 -136 66 -14 -152 66 -14 -136 82'
+                tex = "common/weapclip"
+              }
+              side:f =
+              {
+                v = '82 86 -36 98 86 -36 82 102 -36'
+                tex = "common/weapclip"
+              }
+              side:f =
+              {
+                v = '-10 88 114 -10 104 114 -10 88 130'
+                tex = "common/weapclip"
+              }
+              side:f =
+              {
+                v = '122 -138 -46 138 -138 -46 122 -154 -46'
+                tex = "common/weapclip"
+              }
+              front:f =
+              {
+                v = '90 -4 66 106 -4 66 90 -4 82'
+                tex = "common/weapclip"
+              }
+              back:f =
+              {
+                v = '-134 0 114 -150 0 114 -134 0 130'
+                tex = "common/weapclip"
+              }
+            }
+          }
+          misc_model:e =
+          {
+            origin = "-12 4 -96"
+            model = "\models\mapobjects\ut-lights\candlebragold.md3"
+            angle = "180"
+          }
+        }
+      }
+      path_ut_stop:e =
+      {
+        origin = "0 0 0"
+        ;desc = "Train path stops"
+      }
+      info_ut_spawn:e =
+      {
+        origin = "-144 0 -64"
+        angle = "360"
+        ;desc = "initial potential spawning position for Urban Terror"
+      }
+      team_CAH_capturepoint:e =
+      {
+        origin = "-144 0 -64"
+        ;desc = "zone that can be captured in the Capture and Hold gametype"
+      }
+    }
+  }
+  Entityforms.qctx =
+  {
+    Game = "Quake 3"
+    SourceDir = ""
+    GameDir = ""
+  }
+  Q3UrbanTerror directory infos.qctx =
+  {
+    Game = "Quake 3"
+    SourceDir = "q3ut2"
+    GameDir = "q3ut2"
+  }
+}

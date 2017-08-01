@@ -1,0 +1,2317 @@
+QQRKSRC1
+// NEXUIZ jpg Textures file for Quark
+
+//$Header: /cvsroot/quark/runtime/addons/NEXUIZ/NEXUIZ_jpgTextures.qrk,v 1.3 2008/09/14 12:54:48 danielpharos Exp $
+// ----------- REVISION HISTORY ------------
+//$Log: NEXUIZ_jpgTextures.qrk,v $
+//Revision 1.3  2008/09/14 12:54:48  danielpharos
+//Changes to Help system: All forms now have a customizable help-link. Also, added an fallback option to the online infobase docs.
+//
+//Revision 1.2  2008/04/15 11:16:25  cdunde
+//To add main and all sub-folders level processing of texture listing.
+//
+//Revision 1.1  2008/04/05 06:17:32  cdunde
+//Added full game support for NEXUIZ including .md3 model displaying.
+//
+//
+
+{
+  QuArKProtected = "1"
+  Description = "NEXUIZ jpg Textures"
+
+  Textures.qtx =
+  {
+    Toolbox = "Texture Browser..."
+    Root = "NEXUIZ jpg Textures.qtxfolder"
+    HTML = "intro.texturebrowser.html"
+
+    t_data:incl =      { a = "data" }
+
+    NEXUIZ jpg Textures.qtxfolder =
+    {
+      textures.txlist =
+      {
+        50hpskin_bump.wl                           = { t_data=! }
+        50hpskin_gloss.wl                          = { t_data=! }
+        bloodyskull.wl                             = { t_data=! }
+        bulletammoskin.wl                          = { t_data=! }
+        cellammoskin.wl                            = { t_data=! }
+        cellammoskin_glow.wl                       = { t_data=! }
+        cleanskull.wl                              = { t_data=! }
+        crylink_glow.wl                            = { t_data=! }
+        dmask.wl                                   = { t_data=! }
+        dmask1.wl                                  = { t_data=! }
+        evillight.wl                               = { t_data=! }
+        eye.wl                                     = { t_data=! }
+        eyeblood.wl                                = { t_data=! }
+        frontlig.wl                                = { t_data=! }
+        f_shotgun.wl                               = { t_data=! }
+        gib2.wl                                    = { t_data=! }
+        gib3.wl                                    = { t_data=! }
+        gib4.wl                                    = { t_data=! }
+        grenademodelskin.wl                        = { t_data=! }
+        grenademodelskin_glow.wl                   = { t_data=! }
+        grenskin.wl                                = { t_data=! }
+        invincible.wl                              = { t_data=! }
+        invincible_glow.wl                         = { t_data=! }
+        jumppad.wl                                 = { t_data=! }
+        jumppad_bump.wl                            = { t_data=! }
+        ldarl.wl                                   = { t_data=! }
+        light1.wl                                  = { t_data=! }
+        light2.wl                                  = { t_data=! }
+        light3.wl                                  = { t_data=! }
+        light4.wl                                  = { t_data=! }
+        reactor.wl                                 = { t_data=! }
+        rl_gloss.wl                                = { t_data=! }
+        rocketam.wl                                = { t_data=! }
+        rocketam_bump.wl                           = { t_data=! }
+        rrclip_d.wl                                = { t_data=! }
+        rrclip_d_bump.wl                           = { t_data=! }
+        rrfx_d.wl                                  = { t_data=! }
+        rrock_d.wl                                 = { t_data=! }
+        spawn.wl                                   = { t_data=! }
+        strength.wl                                = { t_data=! }
+        strength_glow.wl                           = { t_data=! }
+        uziflash.wl                                = { t_data=! }
+      }
+      amethyst7/purplenebula-cmp1.txlist =
+      {
+        amethyst7/purplenebula-cmp1/purplenebula.wl= { t_data=! }
+      }
+      cmp1-dm8.txlist =
+      {
+        cmp1-dm8/ame7jp.wl                         = { t_data=! }
+        cmp1-dm8/ame7jp2.wl                        = { t_data=! }
+        cmp1-dm8/e8beam01b.wl                      = { t_data=! }
+        cmp1-dm8/e8bolttrimb.wl                    = { t_data=! }
+        cmp1-dm8/e8clangfloor.wl                   = { t_data=! }
+        cmp1-dm8/e8crete03.wl                      = { t_data=! }
+        cmp1-dm8/e8crete03c.wl                     = { t_data=! }
+        cmp1-dm8/e8crete03f.wl                     = { t_data=! }
+        cmp1-dm8/e8crete03g.wl                     = { t_data=! }
+        cmp1-dm8/e8metal01.wl                      = { t_data=! }
+        cmp1-dm8/e8mtltrim.wl                      = { t_data=! }
+        cmp1-dm8/e8mtltrim1.wl                     = { t_data=! }
+        cmp1-dm8/e8support01c.wl                   = { t_data=! }
+        cmp1-dm8/e8support02c.wl                   = { t_data=! }
+        cmp1-dm8/e8support03.wl                    = { t_data=! }
+        cmp1-dm8/e8support03b_pur.wl               = { t_data=! }
+        cmp1-dm8/e8support04b_pur.wl               = { t_data=! }
+        cmp1-dm8/e8support04_pur.wl                = { t_data=! }
+        cmp1-dm8/e8support05.wl                    = { t_data=! }
+        cmp1-dm8/e8support06c.wl                   = { t_data=! }
+        cmp1-dm8/e8tinylightpur.wl                 = { t_data=! }
+        cmp1-dm8/e8tinylightpur_glow.wl            = { t_data=! }
+        cmp1-dm8/e8trimlight2_pur.wl               = { t_data=! }
+        cmp1-dm8/e8trimlight2_pur_glow.wl          = { t_data=! }
+        cmp1-dm8/e8_base1.wl                       = { t_data=! }
+        cmp1-dm8/e8_mtlwall3b.wl                   = { t_data=! }
+        cmp1-dm8/logo.wl                           = { t_data=! }
+      }
+      common.txlist =
+      {
+        common/caulk.wl                            = { t_data=! }
+      }
+      dsi_textures.txlist =
+      {
+        dsi_textures/cretebase.wl                  = { t_data=! }
+        dsi_textures/cretebase2.wl                 = { t_data=! }
+        dsi_textures/cretebase3.wl                 = { t_data=! }
+        dsi_textures/cretebase4.wl                 = { t_data=! }
+        dsi_textures/cretelighttrim01.wl           = { t_data=! }
+        dsi_textures/cretelighttrim01_0000.wl      = { t_data=! }
+        dsi_textures/cretelighttrim3.wl            = { t_data=! }
+        dsi_textures/cretetrimlight2.wl            = { t_data=! }
+        dsi_textures/cretetrimlight3.wl            = { t_data=! }
+        dsi_textures/cretetrimlight3b.wl           = { t_data=! }
+        dsi_textures/cretetrimlight4.wl            = { t_data=! }
+        dsi_textures/cretewall01.wl                = { t_data=! }
+        dsi_textures/cretewalllight01.wl           = { t_data=! }
+        dsi_textures/dablue.wl                     = { t_data=! }
+        dsi_textures/dablue_0000.wl                = { t_data=! }
+        dsi_textures/dsiglass.wl                   = { t_data=! }
+        dsi_textures/dsitinfx.wl                   = { t_data=! }
+        dsi_textures/dsi_floorlogo.wl              = { t_data=! }
+        dsi_textures/steplight1.wl                 = { t_data=! }
+        dsi_textures/steplight1b.wl                = { t_data=! }
+        dsi_textures/stepside0.wl                  = { t_data=! }
+        dsi_textures/stepside1.wl                  = { t_data=! }
+        dsi_textures/stepside2.wl                  = { t_data=! }
+        dsi_textures/stepside3.wl                  = { t_data=! }
+        dsi_textures/tlight.wl                     = { t_data=! }
+        dsi_textures/tmpjp.wl                      = { t_data=! }
+        dsi_textures/tmpjp2.wl                     = { t_data=! }
+        dsi_textures/weapspawn01.wl                = { t_data=! }
+      }
+      e7.txlist =
+      {
+        e7/e7arch01.wl                             = { t_data=! }
+        e7/e7beam01.wl                             = { t_data=! }
+        e7/e7beam01_bump.wl                        = { t_data=! }
+        e7/e7beam02.wl                             = { t_data=! }
+        e7/e7beam02_blue.wl                        = { t_data=! }
+        e7/e7beam02_bump.wl                        = { t_data=! }
+        e7/e7beam02_red.wl                         = { t_data=! }
+        e7/e7bigwall.wl                            = { t_data=! }
+        e7/e7bmtrim.wl                             = { t_data=! }
+        e7/e7bmtrim2.wl                            = { t_data=! }
+        e7/e7bmtrim2_bump.wl                       = { t_data=! }
+        e7/e7bmtrim2_gloss.wl                      = { t_data=! }
+        e7/e7bmtrim_bump.wl                        = { t_data=! }
+        e7/e7brickfloor01.wl                       = { t_data=! }
+        e7/e7brickfloor01jump-1.wl                 = { t_data=! }
+        e7/e7brickfloor01jump-1_glow.wl            = { t_data=! }
+        e7/e7brickfloor01jump-2.wl                 = { t_data=! }
+        e7/e7brickfloor01jump-2_glow.wl            = { t_data=! }
+        e7/e7brickfloor01jump-3.wl                 = { t_data=! }
+        e7/e7brickfloor01jump-3_glow.wl            = { t_data=! }
+        e7/e7brickfloor01jump-4.wl                 = { t_data=! }
+        e7/e7brickfloor01jump-4_glow.wl            = { t_data=! }
+        e7/e7brickfloor01jump-5.wl                 = { t_data=! }
+        e7/e7brickfloor01jump-5_glow.wl            = { t_data=! }
+        e7/e7brickfloor01jump-6.wl                 = { t_data=! }
+        e7/e7brickfloor01jump-6_glow.wl            = { t_data=! }
+        e7/e7brickfloor01jump-7.wl                 = { t_data=! }
+        e7/e7brickfloor01jump-7_glow.wl            = { t_data=! }
+        e7/e7brickfloor01jump.wl                   = { t_data=! }
+        e7/e7brickfloor01jump_glow.wl              = { t_data=! }
+        e7/e7brickfloor01_bump.wl                  = { t_data=! }
+        e7/e7bricks01.wl                           = { t_data=! }
+        e7/e7bricks01_bump.wl                      = { t_data=! }
+        e7/e7brnmetal.wl                           = { t_data=! }
+        e7/e7brnmetal_bump.wl                      = { t_data=! }
+        e7/e7brnmetal_gloss.wl                     = { t_data=! }
+        e7/e7dimfloor.wl                           = { t_data=! }
+        e7/e7dimfloor_ow.wl                        = { t_data=! }
+        e7/e7evilsky_1.wl                          = { t_data=! }
+        e7/e7evilsky_2.wl                          = { t_data=! }
+        e7/e7grate01.wl                            = { t_data=! }
+        e7/e7mlight.wl                             = { t_data=! }
+        e7/e7mlight_glow.wl                        = { t_data=! }
+        e7/e7panelwood.wl                          = { t_data=! }
+        e7/e7panelwood2.wl                         = { t_data=! }
+        e7/e7panelwood2_bump.wl                    = { t_data=! }
+        e7/e7panelwood_bump.wl                     = { t_data=! }
+        e7/e7plate01.wl                            = { t_data=! }
+        e7/e7rain.wl                               = { t_data=! }
+        e7/e7sbrickfloor.wl                        = { t_data=! }
+        e7/e7sbrickfloorbig.wl                     = { t_data=! }
+        e7/e7sbrickfloor_bump.wl                   = { t_data=! }
+        e7/e7sbrickfloor_jump-1.wl                 = { t_data=! }
+        e7/e7sbrickfloor_jump-1_glow.wl            = { t_data=! }
+        e7/e7sbrickfloor_jump-2.wl                 = { t_data=! }
+        e7/e7sbrickfloor_jump-2_glow.wl            = { t_data=! }
+        e7/e7sbrickfloor_jump-3.wl                 = { t_data=! }
+        e7/e7sbrickfloor_jump-3_glow.wl            = { t_data=! }
+        e7/e7sbrickfloor_jump-4.wl                 = { t_data=! }
+        e7/e7sbrickfloor_jump-4_glow.wl            = { t_data=! }
+        e7/e7sbrickfloor_jump-5.wl                 = { t_data=! }
+        e7/e7sbrickfloor_jump-5_glow.wl            = { t_data=! }
+        e7/e7sbrickfloor_jump-6.wl                 = { t_data=! }
+        e7/e7sbrickfloor_jump-6_glow.wl            = { t_data=! }
+        e7/e7sbrickfloor_jump-7.wl                 = { t_data=! }
+        e7/e7sbrickfloor_jump-7_glow.wl            = { t_data=! }
+        e7/e7sbrickfloor_jump.wl                   = { t_data=! }
+        e7/e7sbrickfloor_jump_glow.wl              = { t_data=! }
+        e7/e7sbrickfloor_ow.wl                     = { t_data=! }
+        e7/e7sfx_lava.wl                           = { t_data=! }
+        e7/e7sky_01.wl                             = { t_data=! }
+        e7/e7sky_02.wl                             = { t_data=! }
+        e7/e7slight.wl                             = { t_data=! }
+        e7/e7smgrate.wl                            = { t_data=! }
+        e7/e7stepborder.wl                         = { t_data=! }
+        e7/e7stepborder2.wl                        = { t_data=! }
+        e7/e7steptop.wl                            = { t_data=! }
+        e7/e7steptop2.wl                           = { t_data=! }
+        e7/e7swindow.wl                            = { t_data=! }
+        e7/e7trim01.wl                             = { t_data=! }
+        e7/e7trim01_bump.wl                        = { t_data=! }
+        e7/e7trimlight.wl                          = { t_data=! }
+        e7/e7trimlight_gloss.wl                    = { t_data=! }
+        e7/e7trimlight_glow.wl                     = { t_data=! }
+        e7/e7walldesign01.wl                       = { t_data=! }
+        e7/e7walldesign01b.wl                      = { t_data=! }
+        e7/e7walldesign02.wl                       = { t_data=! }
+        e7/e7wgrate.wl                             = { t_data=! }
+      }
+      e8.txlist =
+      {
+        e8/e8beam_blue.wl                          = { t_data=! }
+        e8/e8bolttrim.wl                           = { t_data=! }
+        e8/e8bolttrim_bump.wl                      = { t_data=! }
+        e8/e8clangfloor05.wl                       = { t_data=! }
+        e8/e8clangfloor05_bump.wl                  = { t_data=! }
+        e8/e8jumpspawn02b-1.wl                     = { t_data=! }
+        e8/e8jumpspawn02b-1_glow.wl                = { t_data=! }
+        e8/e8jumpspawn02b-2.wl                     = { t_data=! }
+        e8/e8jumpspawn02b-2_glow.wl                = { t_data=! }
+        e8/e8jumpspawn02b-3.wl                     = { t_data=! }
+        e8/e8jumpspawn02b-3_glow.wl                = { t_data=! }
+        e8/e8jumpspawn02b-4.wl                     = { t_data=! }
+        e8/e8jumpspawn02b-4_glow.wl                = { t_data=! }
+        e8/e8jumpspawn02b-5.wl                     = { t_data=! }
+        e8/e8jumpspawn02b-5_glow.wl                = { t_data=! }
+        e8/e8jumpspawn02b-6.wl                     = { t_data=! }
+        e8/e8jumpspawn02b-6_glow.wl                = { t_data=! }
+        e8/e8jumpspawn02b.wl                       = { t_data=! }
+        e8/e8jumpspawn02b_glow.wl                  = { t_data=! }
+        e8/e8jumpspawn02c-1.wl                     = { t_data=! }
+        e8/e8jumpspawn02c-1_glow.wl                = { t_data=! }
+        e8/e8jumpspawn02c-2.wl                     = { t_data=! }
+        e8/e8jumpspawn02c-2_glow.wl                = { t_data=! }
+        e8/e8jumpspawn02c-3.wl                     = { t_data=! }
+        e8/e8jumpspawn02c-3_glow.wl                = { t_data=! }
+        e8/e8jumpspawn02c-4.wl                     = { t_data=! }
+        e8/e8jumpspawn02c-4_glow.wl                = { t_data=! }
+        e8/e8jumpspawn02c-5.wl                     = { t_data=! }
+        e8/e8jumpspawn02c-5_glow.wl                = { t_data=! }
+        e8/e8jumpspawn02c-6.wl                     = { t_data=! }
+        e8/e8jumpspawn02c-6_glow.wl                = { t_data=! }
+        e8/e8jumpspawn02c.wl                       = { t_data=! }
+        e8/e8jumpspawn02c_glow.wl                  = { t_data=! }
+        e8/e8jumpspawn02_fx.wl                     = { t_data=! }
+        e8/e8mtltrim1b.wl                          = { t_data=! }
+        e8/e8mtltrim1b_bump.wl                     = { t_data=! }
+        e8/e8mtltrimb_bump.wl                      = { t_data=! }
+        e8/e8tinylightblue.wl                      = { t_data=! }
+        e8/e8tinylightblue_glow.wl                 = { t_data=! }
+        e8/e8trimlight.wl                          = { t_data=! }
+        e8/e8trimlight2.wl                         = { t_data=! }
+        e8/e8trimlight2_bump.wl                    = { t_data=! }
+        e8/e8trimlight2_glow.wl                    = { t_data=! }
+        e8/e8trimlight_bump.wl                     = { t_data=! }
+        e8/e8trimlight_fx.wl                       = { t_data=! }
+        e8/e8warning2.wl                           = { t_data=! }
+        e8/e8warning2_bump.wl                      = { t_data=! }
+        e8/e8warning2_gloss.wl                     = { t_data=! }
+        e8/e8_base1.wl                             = { t_data=! }
+        e8/e8_base1broke.wl                        = { t_data=! }
+        e8/e8_base1broke_bump.wl                   = { t_data=! }
+        e8/e8_base1c.wl                            = { t_data=! }
+      }
+      evil1_floors.txlist =
+      {
+        evil1_floors/asphalt.wl                    = { t_data=! }
+        evil1_floors/asphalt_1.wl                  = { t_data=! }
+        evil1_floors/asphalt_1_bump.wl             = { t_data=! }
+        evil1_floors/asphalt_2.wl                  = { t_data=! }
+        evil1_floors/asphalt_2_bump.wl             = { t_data=! }
+        evil1_floors/asphalt_bump.wl               = { t_data=! }
+        evil1_floors/asphalt_side.wl               = { t_data=! }
+        evil1_floors/asphalt_side_bump.wl          = { t_data=! }
+        evil1_floors/br_tiles.wl                   = { t_data=! }
+        evil1_floors/br_tiles_blood.wl             = { t_data=! }
+        evil1_floors/br_tiles_blood_bump.wl        = { t_data=! }
+        evil1_floors/br_tiles_brkblood.wl          = { t_data=! }
+        evil1_floors/br_tiles_brkblood_bump.wl     = { t_data=! }
+        evil1_floors/br_tiles_broke.wl             = { t_data=! }
+        evil1_floors/br_tiles_broke2.wl            = { t_data=! }
+        evil1_floors/br_tiles_broke2_bump.wl       = { t_data=! }
+        evil1_floors/br_tiles_broke_bump.wl        = { t_data=! }
+        evil1_floors/br_tiles_bump.wl              = { t_data=! }
+        evil1_floors/carpet_drty.wl                = { t_data=! }
+        evil1_floors/carpet_drty_blood.wl          = { t_data=! }
+        evil1_floors/carpet_drty_blood2.wl         = { t_data=! }
+        evil1_floors/carpet_drty_blood2_bump.wl    = { t_data=! }
+        evil1_floors/carpet_drty_blood_bump.wl     = { t_data=! }
+        evil1_floors/carpet_drty_bump.wl           = { t_data=! }
+        evil1_floors/floortech1.wl                 = { t_data=! }
+        evil1_floors/floortech1_bump.wl            = { t_data=! }
+        evil1_floors/floortile1.wl                 = { t_data=! }
+        evil1_floors/floortile1b.wl                = { t_data=! }
+        evil1_floors/floortile1b_bump.wl           = { t_data=! }
+        evil1_floors/floortile1_bump.wl            = { t_data=! }
+        evil1_floors/floortilebig.wl               = { t_data=! }
+        evil1_floors/floortilebig1b.wl             = { t_data=! }
+        evil1_floors/floortilebig1b_gloss.wl       = { t_data=! }
+        evil1_floors/floortilebig2.wl              = { t_data=! }
+        evil1_floors/floortilebig2_bump.wl         = { t_data=! }
+        evil1_floors/floortilebig_bump.wl          = { t_data=! }
+        evil1_floors/floortilebig_gloss.wl         = { t_data=! }
+        evil1_floors/flr_grts.wl                   = { t_data=! }
+        evil1_floors/flr_grtswrn.wl                = { t_data=! }
+        evil1_floors/flr_grtswrn_bump.wl           = { t_data=! }
+        evil1_floors/flr_grtswrn_gloss.wl          = { t_data=! }
+        evil1_floors/flr_grts_bump.wl              = { t_data=! }
+        evil1_floors/flr_grts_gloss.wl             = { t_data=! }
+        evil1_floors/metalflr1.wl                  = { t_data=! }
+        evil1_floors/metalflr1b.wl                 = { t_data=! }
+        evil1_floors/metalflr1b_bump.wl            = { t_data=! }
+        evil1_floors/metalflr1c.wl                 = { t_data=! }
+        evil1_floors/metalflr1c_bump.wl            = { t_data=! }
+        evil1_floors/metalflr1_bump.wl             = { t_data=! }
+        evil1_floors/mtl_flooring.wl               = { t_data=! }
+        evil1_floors/mtl_flooring_bump.wl          = { t_data=! }
+        evil1_floors/stile_cln.wl                  = { t_data=! }
+        evil1_floors/stile_cln_bump.wl             = { t_data=! }
+        evil1_floors/stile_drty.wl                 = { t_data=! }
+        evil1_floors/stile_drty_brk.wl             = { t_data=! }
+        evil1_floors/stile_drty_brk2.wl            = { t_data=! }
+        evil1_floors/stile_drty_brk2_bump.wl       = { t_data=! }
+        evil1_floors/stile_drty_brk_bump.wl        = { t_data=! }
+        evil1_floors/stile_drty_bump.wl            = { t_data=! }
+        evil1_floors/tile_brn.wl                   = { t_data=! }
+        evil1_floors/tile_brn_bump.wl              = { t_data=! }
+        evil1_floors/tile_brn_lite.wl              = { t_data=! }
+        evil1_floors/tile_brn_lite_bump.wl         = { t_data=! }
+      }
+      evil1_grates.txlist =
+      {
+        evil1_grates/flrgrt_h_bump.wl              = { t_data=! }
+        evil1_grates/flr_grt.wl                    = { t_data=! }
+        evil1_grates/flr_grt_bump.wl               = { t_data=! }
+        evil1_grates/grt_ow.wl                     = { t_data=! }
+        evil1_grates/grt_ow_bump.wl                = { t_data=! }
+        evil1_grates/grt_rst1.wl                   = { t_data=! }
+        evil1_grates/grt_rst1_bump.wl              = { t_data=! }
+        evil1_grates/smlgrt_rnd.wl                 = { t_data=! }
+        evil1_grates/smlgrt_rnd2.wl                = { t_data=! }
+        evil1_grates/smlgrt_rnd2_bump.wl           = { t_data=! }
+        evil1_grates/smlgrt_rnd_bump.wl            = { t_data=! }
+        evil1_grates/smlgrt_sqr.wl                 = { t_data=! }
+        evil1_grates/smlgrt_sqr_bump.wl            = { t_data=! }
+        evil1_grates/smllgrt_h.wl                  = { t_data=! }
+        evil1_grates/smllgrt_h_bump.wl             = { t_data=! }
+      }
+      evil1_liquids.txlist =
+      {
+        evil1_liquids/lavaish.wl                   = { t_data=! }
+        evil1_liquids/lavaishb.wl                  = { t_data=! }
+        evil1_liquids/liquid1.wl                   = { t_data=! }
+        evil1_liquids/liquid2dirty.wl              = { t_data=! }
+      }
+      evil1_metals.txlist =
+      {
+        evil1_metals/de-cleanmtl.wl                = { t_data=! }
+        evil1_metals/de-r_mtl.wl                   = { t_data=! }
+        evil1_metals/de-r_mtl2.wl                  = { t_data=! }
+        evil1_metals/de-r_mtl2b.wl                 = { t_data=! }
+        evil1_metals/de-r_mtl_bump.wl              = { t_data=! }
+        evil1_metals/de-r_mtl_gloss.wl             = { t_data=! }
+        evil1_metals/doormtl2_cln.wl               = { t_data=! }
+        evil1_metals/doormtl2_drty.wl              = { t_data=! }
+        evil1_metals/doormtl2_drty2.wl             = { t_data=! }
+        evil1_metals/doormtl2_rusty.wl             = { t_data=! }
+        evil1_metals/doormtl_cln.wl                = { t_data=! }
+        evil1_metals/doormtl_cmbo.wl               = { t_data=! }
+        evil1_metals/doormtl_drty.wl               = { t_data=! }
+        evil1_metals/doormtl_drty2.wl              = { t_data=! }
+        evil1_metals/doormtl_rusty.wl              = { t_data=! }
+        evil1_metals/mtl_rst.wl                    = { t_data=! }
+        evil1_metals/mtl_rst2.wl                   = { t_data=! }
+        evil1_metals/mtl_rst3.wl                   = { t_data=! }
+        evil1_metals/mtl_rst4.wl                   = { t_data=! }
+        evil1_metals/mtl_rst5.wl                   = { t_data=! }
+        evil1_metals/rmetal1.wl                    = { t_data=! }
+        evil1_metals/rmetal1b.wl                   = { t_data=! }
+        evil1_metals/rmetal2.wl                    = { t_data=! }
+        evil1_metals/rmetal2b.wl                   = { t_data=! }
+        evil1_metals/rmetal2c.wl                   = { t_data=! }
+        evil1_metals/rmetal2d.wl                   = { t_data=! }
+        evil1_metals/rmetal2e.wl                   = { t_data=! }
+      }
+      evil1_misc.txlist =
+      {
+        evil1_misc/mtl_support.wl                  = { t_data=! }
+        evil1_misc/mtl_support_bump.wl             = { t_data=! }
+        evil1_misc/mtl_support_gloss.wl            = { t_data=! }
+        evil1_misc/mtl_support_wrn.wl              = { t_data=! }
+        evil1_misc/mtl_support_wrn_bump.wl         = { t_data=! }
+        evil1_misc/mtl_support_wrn_gloss.wl        = { t_data=! }
+        evil1_misc/pipemetal.wl                    = { t_data=! }
+        evil1_misc/pipes.wl                        = { t_data=! }
+        evil1_misc/pipes2.wl                       = { t_data=! }
+        evil1_misc/rstpipes_lum.wl                 = { t_data=! }
+        evil1_misc/rstpipes_lum_glow.wl            = { t_data=! }
+        evil1_misc/rstpipes_misc.wl                = { t_data=! }
+        evil1_misc/ta_wrnsign.wl                   = { t_data=! }
+        evil1_misc/wrn_big.wl                      = { t_data=! }
+        evil1_misc/wrn_big2.wl                     = { t_data=! }
+        evil1_misc/wrn_big2b.wl                    = { t_data=! }
+        evil1_misc/wrn_big2b_gloss.wl              = { t_data=! }
+      }
+      evil1_trims.txlist =
+      {
+        evil1_trims/brdmtl_rst.wl                  = { t_data=! }
+        evil1_trims/brdmtl_rst_bump.wl             = { t_data=! }
+        evil1_trims/brdmtl_rst_gloss.wl            = { t_data=! }
+        evil1_trims/crude_warn.wl                  = { t_data=! }
+        evil1_trims/grllkinda0.wl                  = { t_data=! }
+        evil1_trims/smllwrnbrd_mr.wl               = { t_data=! }
+        evil1_trims/smllwrnbrd_mr_bump.wl          = { t_data=! }
+        evil1_trims/smllwrnbrd_mr_gloss.wl         = { t_data=! }
+        evil1_trims/trim_cem.wl                    = { t_data=! }
+        evil1_trims/trim_cementwall1.wl            = { t_data=! }
+        evil1_trims/trim_cementwall2.wl            = { t_data=! }
+        evil1_trims/trim_cementwall_wrn.wl         = { t_data=! }
+        evil1_trims/trim_cem_grt.wl                = { t_data=! }
+        evil1_trims/trim_cem_mtl.wl                = { t_data=! }
+        evil1_trims/trim_cem_wrnmtl.wl             = { t_data=! }
+        evil1_trims/trim_cmtwll_wrn_rip.wl         = { t_data=! }
+        evil1_trims/trim_mtl.wl                    = { t_data=! }
+        evil1_trims/trim_mtlb.wl                   = { t_data=! }
+        evil1_trims/trim_mtlc.wl                   = { t_data=! }
+        evil1_trims/trim_mtlwrn.wl                 = { t_data=! }
+        evil1_trims/trim_wallpaper.wl              = { t_data=! }
+        evil1_trims/trim_wallpaper_drty.wl         = { t_data=! }
+        evil1_trims/trim_wlpr_drtyckred.wl         = { t_data=! }
+        evil1_trims/trm_rivetmtl.wl                = { t_data=! }
+        evil1_trims/trm_rivetmtl0.wl               = { t_data=! }
+        evil1_trims/trm_rivetmtlgrt.wl             = { t_data=! }
+        evil1_trims/trm_rivetmtlgrt_bump.wl        = { t_data=! }
+        evil1_trims/trm_rivetmtlgrt_gloss.wl       = { t_data=! }
+        evil1_trims/trm_rivetmtlpipes.wl           = { t_data=! }
+        evil1_trims/trm_rivetmtlpipes_bump.wl      = { t_data=! }
+        evil1_trims/trm_rivetmtlpipes_gloss.wl     = { t_data=! }
+        evil1_trims/trm_rivetmtlwrn.wl             = { t_data=! }
+      }
+      evil1_walls.txlist =
+      {
+        evil1_walls/ancient1b.wl                   = { t_data=! }
+        evil1_walls/ancient3.wl                    = { t_data=! }
+        evil1_walls/ancient3b.wl                   = { t_data=! }
+        evil1_walls/ancient3_bump.wl               = { t_data=! }
+        evil1_walls/ancient3_gloss.wl              = { t_data=! }
+        evil1_walls/anc_wll1.wl                    = { t_data=! }
+        evil1_walls/anc_wll2.wl                    = { t_data=! }
+        evil1_walls/anc_wll2_bump.wl               = { t_data=! }
+        evil1_walls/anc_wll2_gloss.wl              = { t_data=! }
+        evil1_walls/cementwall.wl                  = { t_data=! }
+        evil1_walls/cementwall_btm.wl              = { t_data=! }
+        evil1_walls/cementwall_btm2.wl             = { t_data=! }
+        evil1_walls/cementwall_btm2wrn.wl          = { t_data=! }
+        evil1_walls/cementwall_btm2wrn_bump.wl     = { t_data=! }
+        evil1_walls/cementwall_btm2wrn_gloss.wl    = { t_data=! }
+        evil1_walls/cementwall_btm2_bump.wl        = { t_data=! }
+        evil1_walls/cementwall_btm2_gloss.wl       = { t_data=! }
+        evil1_walls/cementwall_btmmtl.wl           = { t_data=! }
+        evil1_walls/cementwall_btmmtl_bump.wl      = { t_data=! }
+        evil1_walls/cementwall_btmmtl_gloss.wl     = { t_data=! }
+        evil1_walls/cementwall_btmwrn.wl           = { t_data=! }
+        evil1_walls/cementwall_btmwrn_bump.wl      = { t_data=! }
+        evil1_walls/cementwall_btmwrn_gloss.wl     = { t_data=! }
+        evil1_walls/cementwall_btm_bump.wl         = { t_data=! }
+        evil1_walls/cementwall_btm_jericho.wl      = { t_data=! }
+        evil1_walls/cementwall_btm_jericho_bump.wl = { t_data=! }
+        evil1_walls/cementwall_btm_jericho_gloss.wl= { t_data=! }
+        evil1_walls/cementwall_btm_ow.wl           = { t_data=! }
+        evil1_walls/cementwall_btm_ow_bump.wl      = { t_data=! }
+        evil1_walls/cementwall_btm_ow_gloss.wl     = { t_data=! }
+        evil1_walls/cementwall_bump.wl             = { t_data=! }
+        evil1_walls/cementwall_gloss.wl            = { t_data=! }
+        evil1_walls/cementwall_jericho.wl          = { t_data=! }
+        evil1_walls/cementwall_jericho_bump.wl     = { t_data=! }
+        evil1_walls/cementwall_jericho_gloss.wl    = { t_data=! }
+        evil1_walls/cementwall_top.wl              = { t_data=! }
+        evil1_walls/cementwall_top_bump.wl         = { t_data=! }
+        evil1_walls/cementwall_top_gloss.wl        = { t_data=! }
+        evil1_walls/cemold.wl                      = { t_data=! }
+        evil1_walls/cemold1.wl                     = { t_data=! }
+        evil1_walls/cemold_grt.wl                  = { t_data=! }
+        evil1_walls/cemold_grt2.wl                 = { t_data=! }
+        evil1_walls/crude_1.wl                     = { t_data=! }
+        evil1_walls/crude_2.wl                     = { t_data=! }
+        evil1_walls/crude_2_bump.wl                = { t_data=! }
+        evil1_walls/crude_2_gloss.wl               = { t_data=! }
+        evil1_walls/drkcem2.wl                     = { t_data=! }
+        evil1_walls/drk_cem.wl                     = { t_data=! }
+        evil1_walls/drtwll1.wl                     = { t_data=! }
+        evil1_walls/drtwll2.wl                     = { t_data=! }
+        evil1_walls/drtwll3.wl                     = { t_data=! }
+        evil1_walls/house_wall.wl                  = { t_data=! }
+        evil1_walls/smt_cemwll.wl                  = { t_data=! }
+        evil1_walls/stonewall.wl                   = { t_data=! }
+        evil1_walls/stonewall_bump.wl              = { t_data=! }
+        evil1_walls/stonewall_gloss.wl             = { t_data=! }
+        evil1_walls/wallpaper.wl                   = { t_data=! }
+        evil1_walls/wallpaperd.wl                  = { t_data=! }
+        evil1_walls/wallpaperd_old.wl              = { t_data=! }
+        evil1_walls/wallpaperd_oldc.wl             = { t_data=! }
+        evil1_walls/wallpaperd_oldc_h.wl           = { t_data=! }
+        evil1_walls/wallpaperd_ripped.wl           = { t_data=! }
+        evil1_walls/wallpaperold_cracked.wl        = { t_data=! }
+        evil1_walls/wallpaper_border.wl            = { t_data=! }
+        evil1_walls/wallpaper_drk1.wl              = { t_data=! }
+        evil1_walls/wallpaper_drk2.wl              = { t_data=! }
+        evil1_walls/wallpaper_drk_hole.wl          = { t_data=! }
+        evil1_walls/wallpaper_ripped.wl            = { t_data=! }
+      }
+      evil1_woods.txlist =
+      {
+        evil1_woods/wood.wl                        = { t_data=! }
+        evil1_woods/wood_bump.wl                   = { t_data=! }
+        evil1_woods/wood_pnl.wl                    = { t_data=! }
+        evil1_woods/wood_pnl_drty.wl               = { t_data=! }
+        evil1_woods/wood_pnl_drty_bump.wl          = { t_data=! }
+        evil1_woods/wood_rot.wl                    = { t_data=! }
+        evil1_woods/wood_rot_bump.wl               = { t_data=! }
+      }
+      evil2_basefloor.txlist =
+      {
+        evil2_basefloor/flr_b-w.wl                 = { t_data=! }
+        evil2_basefloor/flr_b-w_drty.wl            = { t_data=! }
+        evil2_basefloor/flr_b-w_drty_bbig.wl       = { t_data=! }
+        evil2_basefloor/flr_b-w_drty_bld.wl        = { t_data=! }
+        evil2_basefloor/flr_b-w_drty_bld2.wl       = { t_data=! }
+        evil2_basefloor/flr_bigrndwrn.wl           = { t_data=! }
+        evil2_basefloor/flr_cemtile.wl             = { t_data=! }
+        evil2_basefloor/flr_cemtilesmll_drk.wl     = { t_data=! }
+        evil2_basefloor/flr_cemtile_bigbrk.wl      = { t_data=! }
+        evil2_basefloor/flr_cemtile_drk.wl         = { t_data=! }
+        evil2_basefloor/flr_cemtile_m.wl           = { t_data=! }
+        evil2_basefloor/flr_tmtl.wl                = { t_data=! }
+        evil2_basefloor/flr_tmtl_bump.wl           = { t_data=! }
+        evil2_basefloor/flr_tmtl_drk.wl            = { t_data=! }
+        evil2_basefloor/flr_tmtl_drkwrn.wl         = { t_data=! }
+        evil2_basefloor/flr_tmtl_drkwrn_bump.wl    = { t_data=! }
+        evil2_basefloor/flr_tmtl_drk_bld.wl        = { t_data=! }
+        evil2_basefloor/flr_tmtl_drk_bld_bump.wl   = { t_data=! }
+        evil2_basefloor/flr_tmtl_drk_bump.wl       = { t_data=! }
+        evil2_basefloor/mtl_floorgrt_h.wl          = { t_data=! }
+        evil2_basefloor/mtl_floorgrt_old_h.wl      = { t_data=! }
+      }
+      evil2_basemetal.txlist =
+      {
+        evil2_basemetal/mtl_old0.wl                = { t_data=! }
+        evil2_basemetal/mtl_rstb.wl                = { t_data=! }
+        evil2_basemetal/mtl_rstb_bump.wl           = { t_data=! }
+        evil2_basemetal/mtl_rstb_gloss.wl          = { t_data=! }
+        evil2_basemetal/p_mtl_blue.wl              = { t_data=! }
+        evil2_basemetal/p_mtl_brn.wl               = { t_data=! }
+        evil2_basemetal/p_mtl_brn_gloss.wl         = { t_data=! }
+        evil2_basemetal/p_mtl_tin.wl               = { t_data=! }
+      }
+      evil2_basewall.txlist =
+      {
+        evil2_basewall/cementwall_btm_gore.wl      = { t_data=! }
+        evil2_basewall/cementwall_btm_gore_bump.wl = { t_data=! }
+        evil2_basewall/dirtybrick.wl               = { t_data=! }
+        evil2_basewall/dirtybrick_bump.wl          = { t_data=! }
+        evil2_basewall/dirtybrick_faded.wl         = { t_data=! }
+        evil2_basewall/dirtybrick_faded_btm.wl     = { t_data=! }
+        evil2_basewall/dirtybrick_faded_btm_bump.wl= { t_data=! }
+        evil2_basewall/dirtybrick_faded_bump.wl    = { t_data=! }
+        evil2_basewall/dirtybrick_faded_stn.wl     = { t_data=! }
+        evil2_basewall/dirtybrick_faded_stn_bump.wl= { t_data=! }
+        evil2_basewall/dirtybrick_gloss.wl         = { t_data=! }
+        evil2_basewall/mtl_btmwrnblah.wl           = { t_data=! }
+        evil2_basewall/mtl_btmwrnblah_bump.wl      = { t_data=! }
+        evil2_basewall/mtl_chn_grt.wl              = { t_data=! }
+        evil2_basewall/mtl_chn_grt_bump.wl         = { t_data=! }
+        evil2_basewall/mtl_fnce.wl                 = { t_data=! }
+        evil2_basewall/mtl_fnce2.wl                = { t_data=! }
+        evil2_basewall/mtl_fnce2_bump.wl           = { t_data=! }
+        evil2_basewall/mtl_fnce3.wl                = { t_data=! }
+        evil2_basewall/mtl_fnce3_bump.wl           = { t_data=! }
+        evil2_basewall/mtl_fnce4.wl                = { t_data=! }
+        evil2_basewall/mtl_fnce4_bump.wl           = { t_data=! }
+        evil2_basewall/mtl_fnce_bump.wl            = { t_data=! }
+        evil2_basewall/mtl_gray.wl                 = { t_data=! }
+        evil2_basewall/mtl_gray2.wl                = { t_data=! }
+        evil2_basewall/mtl_gray2_bump.wl           = { t_data=! }
+        evil2_basewall/mtl_gray3.wl                = { t_data=! }
+        evil2_basewall/mtl_gray3_bump.wl           = { t_data=! }
+        evil2_basewall/mtl_gray4.wl                = { t_data=! }
+        evil2_basewall/mtl_gray4_bump.wl           = { t_data=! }
+        evil2_basewall/mtl_gray4_ow.wl             = { t_data=! }
+        evil2_basewall/mtl_gray4_ow2.wl            = { t_data=! }
+        evil2_basewall/mtl_gray4_ow2_0000.wl       = { t_data=! }
+        evil2_basewall/mtl_gray4_ow_bump.wl        = { t_data=! }
+        evil2_basewall/mtl_gray4_sec1.wl           = { t_data=! }
+        evil2_basewall/mtl_gray4_sec1_bump.wl      = { t_data=! }
+        evil2_basewall/mtl_gray4_sec2.wl           = { t_data=! }
+        evil2_basewall/mtl_gray4_sec2_bump.wl      = { t_data=! }
+        evil2_basewall/mtl_gray4_sec3.wl           = { t_data=! }
+        evil2_basewall/mtl_gray4_sec3_bump.wl      = { t_data=! }
+        evil2_basewall/mtl_gray4_sec4.wl           = { t_data=! }
+        evil2_basewall/mtl_gray4_sec4_bump.wl      = { t_data=! }
+        evil2_basewall/mtl_gray4_sec5.wl           = { t_data=! }
+        evil2_basewall/mtl_gray4_sec5_bump.wl      = { t_data=! }
+        evil2_basewall/mtl_gray_bump.wl            = { t_data=! }
+        evil2_basewall/mtl_grtmdl.wl               = { t_data=! }
+        evil2_basewall/mtl_grtmdl_bump.wl          = { t_data=! }
+        evil2_basewall/mtl_grtodd.wl               = { t_data=! }
+        evil2_basewall/mtl_grtodd2.wl              = { t_data=! }
+        evil2_basewall/mtl_grtodd2_bump.wl         = { t_data=! }
+        evil2_basewall/mtl_grtodd3.wl              = { t_data=! }
+        evil2_basewall/mtl_grtodd3_bump.wl         = { t_data=! }
+        evil2_basewall/mtl_grtodd_bump.wl          = { t_data=! }
+        evil2_basewall/mtl_midwrn.wl               = { t_data=! }
+        evil2_basewall/mtl_midwrn_bump.wl          = { t_data=! }
+        evil2_basewall/t_wll_fnctrm.wl             = { t_data=! }
+        evil2_basewall/t_wll_fnctrm2.wl            = { t_data=! }
+        evil2_basewall/t_wll_fnctrm2_bump.wl       = { t_data=! }
+        evil2_basewall/t_wll_fnctrm_bump.wl        = { t_data=! }
+        evil2_basewall/t_wll_fnctrm_ow.wl          = { t_data=! }
+        evil2_basewall/t_wll_fnctrm_ow_bump.wl     = { t_data=! }
+        evil2_basewall/t_wll_fnctrm_sign.wl        = { t_data=! }
+        evil2_basewall/t_wll_fnctrm_sign2.wl       = { t_data=! }
+        evil2_basewall/t_wll_fnctrm_sign_bump.wl   = { t_data=! }
+      }
+      evil2_lights.txlist =
+      {
+        evil2_lights/smll_light.wl                 = { t_data=! }
+        evil2_lights/smll_light2.wl                = { t_data=! }
+        evil2_lights/smll_light3.wl                = { t_data=! }
+        evil2_lights/trim_light.wl                 = { t_data=! }
+        evil2_lights/trim_light_glow.wl            = { t_data=! }
+      }
+      evil2_misc.txlist =
+      {
+        evil2_misc/barrel_rst.wl                   = { t_data=! }
+        evil2_misc/barrel_rst_ow.wl                = { t_data=! }
+        evil2_misc/barrel_rst_sign.wl              = { t_data=! }
+        evil2_misc/barrel_rst_sign2.wl             = { t_data=! }
+        evil2_misc/barrel_rst_sign3.wl             = { t_data=! }
+        evil2_misc/barrel_rst_top.wl               = { t_data=! }
+        evil2_misc/barrel_rst_top2.wl              = { t_data=! }
+        evil2_misc/blue_marble.wl                  = { t_data=! }
+        evil2_misc/ceil_blank.wl                   = { t_data=! }
+        evil2_misc/crate_drtycamo.wl               = { t_data=! }
+        evil2_misc/crate_drtycamo2.wl              = { t_data=! }
+        evil2_misc/crate_drtyow.wl                 = { t_data=! }
+        evil2_misc/crate_drtyow_sign.wl            = { t_data=! }
+        evil2_misc/ecrate_cln.wl                   = { t_data=! }
+        evil2_misc/ecrate_drty-fmtl.wl             = { t_data=! }
+        evil2_misc/ecrate_drty-fmtl2.wl            = { t_data=! }
+        evil2_misc/ecrate_drty-fmtl3.wl            = { t_data=! }
+        evil2_misc/ecrate_drty.wl                  = { t_data=! }
+        evil2_misc/ecrate_drty2.wl                 = { t_data=! }
+        evil2_misc/ecrate_drty3ow.wl               = { t_data=! }
+        evil2_misc/ecrate_dunno.wl                 = { t_data=! }
+        evil2_misc/light_x_trm.wl                  = { t_data=! }
+        evil2_misc/mtlrail.wl                      = { t_data=! }
+        evil2_misc/mtlrail_rst.wl                  = { t_data=! }
+        evil2_misc/mtlrail_rst2.wl                 = { t_data=! }
+        evil2_misc/mtl_bvl.wl                      = { t_data=! }
+        evil2_misc/mtl_grtx.wl                     = { t_data=! }
+        evil2_misc/mtl_meshplate.wl                = { t_data=! }
+        evil2_misc/smll_pipes.wl                   = { t_data=! }
+        evil2_misc/support_grate.wl                = { t_data=! }
+        evil2_misc/support_grate2.wl               = { t_data=! }
+        evil2_misc/support_grate3.wl               = { t_data=! }
+      }
+      evil2_trims.txlist =
+      {
+        evil2_trims/trim_odd.wl                    = { t_data=! }
+        evil2_trims/trim_wrnodd.wl                 = { t_data=! }
+      }
+      evil3_floors.txlist =
+      {
+        evil3_floors/bdirt.wl                      = { t_data=! }
+        evil3_floors/bdirt2.wl                     = { t_data=! }
+        evil3_floors/bdirt2_gloss.wl               = { t_data=! }
+        evil3_floors/bdirt_blood.wl                = { t_data=! }
+        evil3_floors/bdirt_blood_gloss.wl          = { t_data=! }
+        evil3_floors/bdirt_gloss.wl                = { t_data=! }
+        evil3_floors/cemdrk.wl                     = { t_data=! }
+        evil3_floors/cemdrk_gloss.wl               = { t_data=! }
+        evil3_floors/cemdrk_mhole.wl               = { t_data=! }
+        evil3_floors/cemdrk_mhole_gloss.wl         = { t_data=! }
+        evil3_floors/cemdrk_oddtile.wl             = { t_data=! }
+        evil3_floors/cemdrk_oddtile_big.wl         = { t_data=! }
+        evil3_floors/cemdrk_oddtile_big2.wl        = { t_data=! }
+        evil3_floors/cemdrk_oddtile_big2b.wl       = { t_data=! }
+        evil3_floors/cemdrk_oddtile_big2b_bump.wl  = { t_data=! }
+        evil3_floors/cemdrk_oddtile_big2b_gloss.wl = { t_data=! }
+        evil3_floors/cemdrk_oddtile_big2_bump.wl   = { t_data=! }
+        evil3_floors/cemdrk_oddtile_big2_gloss.wl  = { t_data=! }
+        evil3_floors/cemdrk_oddtile_big_bump.wl    = { t_data=! }
+        evil3_floors/cemdrk_oddtile_big_gloss.wl   = { t_data=! }
+        evil3_floors/cemdrk_oddtile_bld.wl         = { t_data=! }
+        evil3_floors/cemdrk_oddtile_bldb.wl        = { t_data=! }
+        evil3_floors/cemdrk_oddtile_bldb_bump.wl   = { t_data=! }
+        evil3_floors/cemdrk_oddtile_bldb_gloss.wl  = { t_data=! }
+        evil3_floors/cemdrk_oddtile_bld_bump.wl    = { t_data=! }
+        evil3_floors/cemdrk_oddtile_bld_gloss.wl   = { t_data=! }
+        evil3_floors/cemdrk_oddtile_bump.wl        = { t_data=! }
+        evil3_floors/cemdrk_oddtile_crkd2.wl       = { t_data=! }
+        evil3_floors/cemdrk_oddtile_crkd2_bump.wl  = { t_data=! }
+        evil3_floors/cemdrk_oddtile_crkd2_gloss.wl = { t_data=! }
+        evil3_floors/cemdrk_oddtile_crked.wl       = { t_data=! }
+        evil3_floors/cemdrk_oddtile_crked_bump.wl  = { t_data=! }
+        evil3_floors/cemdrk_oddtile_crked_gloss.wl = { t_data=! }
+        evil3_floors/cemdrk_oddtile_gloss.wl       = { t_data=! }
+        evil3_floors/cemdrk_ot2.wl                 = { t_data=! }
+        evil3_floors/cemdrk_ot2_gloss.wl           = { t_data=! }
+        evil3_floors/cemtiledrk.wl                 = { t_data=! }
+        evil3_floors/cemtiledrk2.wl                = { t_data=! }
+        evil3_floors/cemtiledrk2_gloss.wl          = { t_data=! }
+        evil3_floors/cemtiledrk3.wl                = { t_data=! }
+        evil3_floors/cemtiledrk3_gloss.wl          = { t_data=! }
+        evil3_floors/cemtiledrk4.wl                = { t_data=! }
+        evil3_floors/cemtiledrk4_gloss.wl          = { t_data=! }
+        evil3_floors/cemtiledrk5.wl                = { t_data=! }
+        evil3_floors/cemtiledrk5_bump.wl           = { t_data=! }
+        evil3_floors/cemtiledrk5_gloss.wl          = { t_data=! }
+        evil3_floors/cemtiledrk_gloss.wl           = { t_data=! }
+        evil3_floors/cemtiledrk_mhbrk.wl           = { t_data=! }
+        evil3_floors/cemtiledrk_mhbrk_gloss.wl     = { t_data=! }
+        evil3_floors/cemtiledrk_mhbrk_glow.wl      = { t_data=! }
+        evil3_floors/flr_tmtl_drk_mh.wl            = { t_data=! }
+        evil3_floors/grtmtl_offt.wl                = { t_data=! }
+        evil3_floors/grtmtl_offt2.wl               = { t_data=! }
+        evil3_floors/grt_offmtl.wl                 = { t_data=! }
+        evil3_floors/mtl-wlkway.wl                 = { t_data=! }
+        evil3_floors/mtl-wlkway_end.wl             = { t_data=! }
+        evil3_floors/mtl-wlkway_mid.wl             = { t_data=! }
+        evil3_floors/t-flr_oddtile_cln.wl          = { t_data=! }
+        evil3_floors/t-flr_oddtile_drty.wl         = { t_data=! }
+        evil3_floors/t-flr_oddtile_drty_0000.wl    = { t_data=! }
+        evil3_floors/t-flr_oddtile_drty_glow.wl    = { t_data=! }
+        evil3_floors/wd_tile.wl                    = { t_data=! }
+        evil3_floors/wd_tile_drk.wl                = { t_data=! }
+        evil3_floors/wd_tile_drk_bld.wl            = { t_data=! }
+        evil3_floors/woodvfloor.wl                 = { t_data=! }
+        evil3_floors/woodvfloor2.wl                = { t_data=! }
+        evil3_floors/woodvfloor3.wl                = { t_data=! }
+        evil3_floors/woodvfloor3_brain.wl          = { t_data=! }
+        evil3_floors/woodvfloor3_bump.wl           = { t_data=! }
+        evil3_floors/woodvfloor3_gloss.wl          = { t_data=! }
+        evil3_floors/woodvfloor_bump.wl            = { t_data=! }
+      }
+      evil3_lights.txlist =
+      {
+        evil3_lights/rlight_a.wl                   = { t_data=! }
+        evil3_lights/rlight_a_blend.wl             = { t_data=! }
+      }
+      evil3_metals.txlist =
+      {
+        evil3_metals/mtldrk0.wl                    = { t_data=! }
+        evil3_metals/mtldrk0_gloss.wl              = { t_data=! }
+        evil3_metals/mtldrk1.wl                    = { t_data=! }
+        evil3_metals/mtldrk1_gloss.wl              = { t_data=! }
+        evil3_metals/mtl_pipeswll.wl               = { t_data=! }
+        evil3_metals/mtl_pipeswll_bump.wl          = { t_data=! }
+        evil3_metals/mtl_pipeswll_drk.wl           = { t_data=! }
+        evil3_metals/mtl_pipeswll_drkb-b.wl        = { t_data=! }
+        evil3_metals/mtl_pipeswll_drkb.wl          = { t_data=! }
+        evil3_metals/mtl_pipeswll_drkc-b.wl        = { t_data=! }
+        evil3_metals/mtl_pipeswll_drkc-b_bump.wl   = { t_data=! }
+        evil3_metals/mtl_pipeswll_drkc-b_gloss.wl  = { t_data=! }
+        evil3_metals/mtl_pipeswll_drkd-b.wl        = { t_data=! }
+        evil3_metals/mtl_pipeswll_drk_bump.wl      = { t_data=! }
+        evil3_metals/mtl_pipeswll_drk_gloss.wl     = { t_data=! }
+        evil3_metals/mtl_pipeswll_gloss.wl         = { t_data=! }
+        evil3_metals/mtl_rivplt.wl                 = { t_data=! }
+        evil3_metals/mtl_rivplt2-yellow.wl         = { t_data=! }
+        evil3_metals/mtl_rivplt2-yellow_gloss.wl   = { t_data=! }
+        evil3_metals/mtl_rivplt2-yellow_ow.wl      = { t_data=! }
+        evil3_metals/mtl_rivplt2.wl                = { t_data=! }
+        evil3_metals/mtl_rivplt2_bump.wl           = { t_data=! }
+        evil3_metals/mtl_rivplt2_gloss.wl          = { t_data=! }
+        evil3_metals/mtl_rivplt2_wrn.wl            = { t_data=! }
+        evil3_metals/mtl_rivplt2_wrn2.wl           = { t_data=! }
+        evil3_metals/mtl_rivplt2_wrn2_bump.wl      = { t_data=! }
+        evil3_metals/mtl_rivplt2_wrn2_gloss.wl     = { t_data=! }
+        evil3_metals/mtl_rivplt2_wrn_bump.wl       = { t_data=! }
+        evil3_metals/mtl_rivplt2_wrn_gloss.wl      = { t_data=! }
+        evil3_metals/mtl_rivplt_bump.wl            = { t_data=! }
+        evil3_metals/mtl_rivplt_gloss.wl           = { t_data=! }
+        evil3_metals/mtl_rivplt_wrn.wl             = { t_data=! }
+        evil3_metals/mtl_rivplt_wrn2.wl            = { t_data=! }
+        evil3_metals/mtl_rivplt_wrn2_bump.wl       = { t_data=! }
+        evil3_metals/mtl_rivplt_wrn2_gloss.wl      = { t_data=! }
+        evil3_metals/mtl_rivplt_wrn_bump.wl        = { t_data=! }
+        evil3_metals/mtl_rivplt_wrn_gloss.wl       = { t_data=! }
+      }
+      evil3_misc.txlist =
+      {
+        evil3_misc/rstbounce.wl                    = { t_data=! }
+        evil3_misc/rstbouncefan.wl                 = { t_data=! }
+        evil3_misc/support-cem.wl                  = { t_data=! }
+      }
+      evil3_roofs.txlist =
+      {
+        evil3_roofs/ceil-crkd_big.wl               = { t_data=! }
+        evil3_roofs/ceil-older.wl                  = { t_data=! }
+        evil3_roofs/ceil-older2.wl                 = { t_data=! }
+        evil3_roofs/ceil.wl                        = { t_data=! }
+        evil3_roofs/s_roof.wl                      = { t_data=! }
+        evil3_roofs/s_roof2.wl                     = { t_data=! }
+        evil3_roofs/s_roof2_gloss.wl               = { t_data=! }
+        evil3_roofs/s_roof3.wl                     = { t_data=! }
+      }
+      evil3_support.txlist =
+      {
+        evil3_support/mtlsupgrt2_light.wl          = { t_data=! }
+        evil3_support/mtlsupgrt2_light_blend.wl    = { t_data=! }
+        evil3_support/mtlsupgrt2_light_bump.wl     = { t_data=! }
+        evil3_support/mtlsupgrt2_light_gloss.wl    = { t_data=! }
+        evil3_support/mtlsupgrt2_light_glow.wl     = { t_data=! }
+        evil3_support/mtlsupport_grt.wl            = { t_data=! }
+        evil3_support/mtlsupport_grt2.wl           = { t_data=! }
+        evil3_support/mtlsupport_grt2_bump.wl      = { t_data=! }
+        evil3_support/mtlsupport_grt2_gloss.wl     = { t_data=! }
+        evil3_support/mtlsupport_grt3wrn.wl        = { t_data=! }
+        evil3_support/mtlsupport_grt3wrnb.wl       = { t_data=! }
+        evil3_support/mtlsupport_grt3wrnb_bump.wl  = { t_data=! }
+        evil3_support/mtlsupport_grt3wrnb_gloss.wl = { t_data=! }
+        evil3_support/mtlsupport_grt3wrn_bump.wl   = { t_data=! }
+        evil3_support/mtlsupport_grt3wrn_gloss.wl  = { t_data=! }
+        evil3_support/mtlsupport_grt4.wl           = { t_data=! }
+        evil3_support/mtlsupport_grt4b.wl          = { t_data=! }
+        evil3_support/mtlsupport_grt4b_bump.wl     = { t_data=! }
+        evil3_support/mtlsupport_grt4b_gloss.wl    = { t_data=! }
+        evil3_support/mtlsupport_grt4s.wl          = { t_data=! }
+        evil3_support/mtlsupport_grt4s_bump.wl     = { t_data=! }
+        evil3_support/mtlsupport_grt4s_gloss.wl    = { t_data=! }
+        evil3_support/mtlsupport_grt4_bump.wl      = { t_data=! }
+        evil3_support/mtlsupport_grt4_gloss.wl     = { t_data=! }
+        evil3_support/mtlsupport_grts.wl           = { t_data=! }
+        evil3_support/mtlsupport_grts_bump.wl      = { t_data=! }
+        evil3_support/mtlsupport_grts_gloss.wl     = { t_data=! }
+        evil3_support/mtlsupport_grtwrn-d.wl       = { t_data=! }
+        evil3_support/mtlsupport_grtwrn-d_bump.wl  = { t_data=! }
+        evil3_support/mtlsupport_grtwrn-d_gloss.wl = { t_data=! }
+        evil3_support/mtlsupport_grtwrn.wl         = { t_data=! }
+        evil3_support/mtlsupport_grtwrn_bump.wl    = { t_data=! }
+        evil3_support/mtlsupport_grtwrn_gloss.wl   = { t_data=! }
+        evil3_support/mtlsupport_grt_bump.wl       = { t_data=! }
+        evil3_support/mtlsupport_grt_gloss.wl      = { t_data=! }
+        evil3_support/mtlsupport_pipes.wl          = { t_data=! }
+        evil3_support/mtlsupport_pipes_bump.wl     = { t_data=! }
+        evil3_support/mtlsupport_pipes_gloss.wl    = { t_data=! }
+        evil3_support/mtlsupport_wrn-d.wl          = { t_data=! }
+        evil3_support/mtlsupport_wrn-d_bump.wl     = { t_data=! }
+        evil3_support/mtlsupport_wrn-d_gloss.wl    = { t_data=! }
+        evil3_support/mtlsupport_wrn.wl            = { t_data=! }
+        evil3_support/mtlsupport_wrn_bump.wl       = { t_data=! }
+        evil3_support/mtlsupport_wrn_gloss.wl      = { t_data=! }
+      }
+      evil3_trims.txlist =
+      {
+        evil3_trims/trim_wp.wl                     = { t_data=! }
+      }
+      evil3_walls.txlist =
+      {
+        evil3_walls/b_wllpaper.wl                  = { t_data=! }
+        evil3_walls/b_wllpaper_old.wl              = { t_data=! }
+        evil3_walls/b_wllpaper_oldcrkd.wl          = { t_data=! }
+        evil3_walls/mtlwll_twrn.wl                 = { t_data=! }
+        evil3_walls/mtlwll_twrn1.wl                = { t_data=! }
+        evil3_walls/mtlwll_twrn1_bump.wl           = { t_data=! }
+        evil3_walls/mtlwll_twrn1_gloss.wl          = { t_data=! }
+        evil3_walls/mtlwll_twrn2drty-yellow.wl     = { t_data=! }
+        evil3_walls/mtlwll_twrn2drty-yellow_bump.wl= { t_data=! }
+        evil3_walls/mtlwll_twrn2drty-yellow_gloss.wl= { t_data=! }
+        evil3_walls/mtlwll_twrn2drty.wl            = { t_data=! }
+        evil3_walls/mtlwll_twrn2drtyhfx.wl         = { t_data=! }
+        evil3_walls/mtlwll_twrn2drtyhfx_bump.wl    = { t_data=! }
+        evil3_walls/mtlwll_twrn2drtyhfx_gloss.wl   = { t_data=! }
+        evil3_walls/mtlwll_twrn2drty_bump.wl       = { t_data=! }
+        evil3_walls/mtlwll_twrn2drty_gloss.wl      = { t_data=! }
+        evil3_walls/mtlwll_twrn2drty_grt.wl        = { t_data=! }
+        evil3_walls/mtlwll_twrn2drty_grt_bump.wl   = { t_data=! }
+        evil3_walls/mtlwll_twrn2drty_grt_gloss.wl  = { t_data=! }
+        evil3_walls/mtlwll_twrn2drty_pipes.wl      = { t_data=! }
+        evil3_walls/mtlwll_twrn2drty_pipes_bump.wl = { t_data=! }
+        evil3_walls/mtlwll_twrn2drty_pipes_gloss.wl= { t_data=! }
+        evil3_walls/mtlwll_twrn3drty-yellow.wl     = { t_data=! }
+        evil3_walls/mtlwll_twrn3drty-yellow_bump.wl= { t_data=! }
+        evil3_walls/mtlwll_twrn3drty-yellow_gloss.wl= { t_data=! }
+        evil3_walls/mtlwll_twrn3drty.wl            = { t_data=! }
+        evil3_walls/mtlwll_twrn3drtygrt.wl         = { t_data=! }
+        evil3_walls/mtlwll_twrn3drtygrt_bump.wl    = { t_data=! }
+        evil3_walls/mtlwll_twrn3drtypipes.wl       = { t_data=! }
+        evil3_walls/mtlwll_twrn3drtypipes_bump.wl  = { t_data=! }
+        evil3_walls/mtlwll_twrn3drtypipes_gloss.wl = { t_data=! }
+        evil3_walls/mtlwll_twrn3drty_bump.wl       = { t_data=! }
+        evil3_walls/mtlwll_twrn3drty_gloss.wl      = { t_data=! }
+        evil3_walls/mtlwll_twrn_bump.wl            = { t_data=! }
+        evil3_walls/mtlwll_twrn_gloss.wl           = { t_data=! }
+      }
+      evil4_d_techwalls.txlist =
+      {
+        evil4_d_techwalls/d_drkmtlsupport.wl       = { t_data=! }
+        evil4_d_techwalls/d_drkmtlsupport_alpha.wl = { t_data=! }
+        evil4_d_techwalls/d_drkmtl_dpanel.wl       = { t_data=! }
+        evil4_d_techwalls/d_drkmtl_dpanelb.wl      = { t_data=! }
+        evil4_d_techwalls/d_drkmtl_dpanelc.wl      = { t_data=! }
+        evil4_d_techwalls/d_drkmtl_dpanelwrn.wl    = { t_data=! }
+        evil4_d_techwalls/d_drkmtl_dpanelwrnb.wl   = { t_data=! }
+        evil4_d_techwalls/d_drkmtl_dpanelwrnb2.wl  = { t_data=! }
+        evil4_d_techwalls/d_drkmtl_dpanelwrnbgrt.wl= { t_data=! }
+        evil4_d_techwalls/d_drkmtl_lightboard.wl   = { t_data=! }
+        evil4_d_techwalls/d_drkmtl_lightboard_glow.wl= { t_data=! }
+        evil4_d_techwalls/d_drkmtl_mpanel.wl       = { t_data=! }
+        evil4_d_techwalls/d_drkmtl_mpanelgrt.wl    = { t_data=! }
+        evil4_d_techwalls/d_lighttechdoor.wl       = { t_data=! }
+        evil4_d_techwalls/d_shinymtlsupport.wl     = { t_data=! }
+        evil4_d_techwalls/d_tech_drkwall.wl        = { t_data=! }
+        evil4_d_techwalls/d_tech_drkwall2.wl       = { t_data=! }
+        evil4_d_techwalls/d_tech_drkwall_b.wl      = { t_data=! }
+        evil4_d_techwalls/d_tech_drkwall_cutl.wl   = { t_data=! }
+        evil4_d_techwalls/d_tech_drkwall_cutr.wl   = { t_data=! }
+        evil4_d_techwalls/d_tech_drkwall_seam.wl   = { t_data=! }
+        evil4_d_techwalls/d_tech_drkwall_seam2.wl  = { t_data=! }
+        evil4_d_techwalls/d_tech_drkwll_pnltek.wl  = { t_data=! }
+        evil4_d_techwalls/d_tech_drkwll_pnltek_glow.wl= { t_data=! }
+        evil4_d_techwalls/d_tech_dw2.wl            = { t_data=! }
+        evil4_d_techwalls/d_tech_dw2g.wl           = { t_data=! }
+        evil4_d_techwalls/d_tech_dw2gb.wl          = { t_data=! }
+        evil4_d_techwalls/d_tech_dw2g_glow.wl      = { t_data=! }
+        evil4_d_techwalls/d_tech_dw2_fx.wl         = { t_data=! }
+        evil4_d_techwalls/d_tech_dw2_glow.wl       = { t_data=! }
+        evil4_d_techwalls/d_tech_dwb.wl            = { t_data=! }
+        evil4_d_techwalls/d_tech_dwb_2g.wl         = { t_data=! }
+        evil4_d_techwalls/d_tech_dwb_2gsign.wl     = { t_data=! }
+        evil4_d_techwalls/d_tech_dwb_light.wl      = { t_data=! }
+        evil4_d_techwalls/d_tech_dwb_sign.wl       = { t_data=! }
+        evil4_d_techwalls/d_tech_dws_grate.wl      = { t_data=! }
+        evil4_d_techwalls/d_tech_dwteky.wl         = { t_data=! }
+        evil4_d_techwalls/d_tech_dwteky_glow.wl    = { t_data=! }
+        evil4_d_techwalls/d_tech_dw_grate.wl       = { t_data=! }
+        evil4_d_techwalls/d_tech_wall2_huge.wl     = { t_data=! }
+        evil4_d_techwalls/d_tech_wall_dlight.wl    = { t_data=! }
+        evil4_d_techwalls/d_tech_wall_dlight_glw.wl= { t_data=! }
+        evil4_d_techwalls/d_tech_wall_drkm.wl      = { t_data=! }
+        evil4_d_techwalls/d_tech_wall_drkm2.wl     = { t_data=! }
+        evil4_d_techwalls/d_tech_wall_drkmpanel.wl = { t_data=! }
+        evil4_d_techwalls/d_tech_wall_grll.wl      = { t_data=! }
+        evil4_d_techwalls/d_tech_window.wl         = { t_data=! }
+        evil4_d_techwalls/d_tech_windowmask.wl     = { t_data=! }
+      }
+      evil4_lights.txlist =
+      {
+        evil4_lights/drkmtlsupport_light.wl        = { t_data=! }
+        evil4_lights/drkmtlsupport_light_glow.wl   = { t_data=! }
+        evil4_lights/dwtrim_llight.wl              = { t_data=! }
+        evil4_lights/llight_s.wl                   = { t_data=! }
+        evil4_lights/llight_s_glow.wl              = { t_data=! }
+        evil4_lights/l_light_b.wl                  = { t_data=! }
+        evil4_lights/l_light_b_glow.wl             = { t_data=! }
+        evil4_lights/l_light_g.wl                  = { t_data=! }
+        evil4_lights/l_light_g_glow.wl             = { t_data=! }
+        evil4_lights/l_light_r.wl                  = { t_data=! }
+        evil4_lights/l_light_r_glow.wl             = { t_data=! }
+        evil4_lights/l_light_w.wl                  = { t_data=! }
+        evil4_lights/l_light_w_glow.wl             = { t_data=! }
+        evil4_lights/mtl_l1.wl                     = { t_data=! }
+        evil4_lights/mtl_l1_fx.wl                  = { t_data=! }
+        evil4_lights/mtl_l1_glow.wl                = { t_data=! }
+        evil4_lights/mtl_lightsmll.wl              = { t_data=! }
+        evil4_lights/mtl_lightsmll_glow.wl         = { t_data=! }
+        evil4_lights/steplight.wl                  = { t_data=! }
+        evil4_lights/steplight_glow.wl             = { t_data=! }
+        evil4_lights/s_bluelight.wl                = { t_data=! }
+        evil4_lights/s_bluelight_glow.wl           = { t_data=! }
+        evil4_lights/s_light.wl                    = { t_data=! }
+        evil4_lights/s_light_blend.wl              = { t_data=! }
+        evil4_lights/s_light_glow.wl               = { t_data=! }
+        evil4_lights/trimtl_grlbtm_light.wl        = { t_data=! }
+        evil4_lights/trimtl_grlbtm_light_glow.wl   = { t_data=! }
+        evil4_lights/t_mtllight.wl                 = { t_data=! }
+        evil4_lights/t_mtllight_glow.wl            = { t_data=! }
+      }
+      evil4_metals.txlist =
+      {
+        evil4_metals/defaultmetal.wl               = { t_data=! }
+        evil4_metals/drkmtl_default.wl             = { t_data=! }
+        evil4_metals/drkmtl_grlpltmech.wl          = { t_data=! }
+        evil4_metals/drkmtl_grlpltmech_fx.wl       = { t_data=! }
+        evil4_metals/drkmtl_grlpltmech_fx2.wl      = { t_data=! }
+        evil4_metals/eshinytin.wl                  = { t_data=! }
+        evil4_metals/flrgrate.wl                   = { t_data=! }
+        evil4_metals/hexametal.wl                  = { t_data=! }
+        evil4_metals/hexametal_drk.wl              = { t_data=! }
+        evil4_metals/hexametal_drk_bump.wl         = { t_data=! }
+        evil4_metals/hexametal_drk_gloss.wl        = { t_data=! }
+        evil4_metals/mediummtl_default.wl          = { t_data=! }
+        evil4_metals/mtl2grt.wl                    = { t_data=! }
+        evil4_metals/mtlb.wl                       = { t_data=! }
+        evil4_metals/mtlbrushed.wl                 = { t_data=! }
+        evil4_metals/mtlbrushed_env.wl             = { t_data=! }
+        evil4_metals/mtlb_bump.wl                  = { t_data=! }
+        evil4_metals/mtlb_gloss.wl                 = { t_data=! }
+        evil4_metals/mtldoor.wl                    = { t_data=! }
+        evil4_metals/mtlflrslots.wl                = { t_data=! }
+        evil4_metals/mtloverlaprwll.wl             = { t_data=! }
+        evil4_metals/mtloverlaprwll_bump.wl        = { t_data=! }
+        evil4_metals/mtloverlaprwll_gloss.wl       = { t_data=! }
+        evil4_metals/mtlpanel.wl                   = { t_data=! }
+        evil4_metals/mtlpanelsmll.wl               = { t_data=! }
+        evil4_metals/mtlpanelsmll_ow.wl            = { t_data=! }
+        evil4_metals/mtlpanelsmll_ow2.wl           = { t_data=! }
+        evil4_metals/mtlpanel_d.wl                 = { t_data=! }
+        evil4_metals/mtlpanel_ow.wl                = { t_data=! }
+        evil4_metals/mtlpanel_wrnstripe.wl         = { t_data=! }
+        evil4_metals/mtlpanel_wrnstripe_ow.wl      = { t_data=! }
+        evil4_metals/mtlpanel_wrnstripe_ow2.wl     = { t_data=! }
+        evil4_metals/mtlpnl_wrnstrpow2_glow.wl     = { t_data=! }
+        evil4_metals/mtlslots.wl                   = { t_data=! }
+        evil4_metals/mtlslotsrivts.wl              = { t_data=! }
+        evil4_metals/mtlslotsrivts_ow.wl           = { t_data=! }
+        evil4_metals/mtlslots_ow.wl                = { t_data=! }
+        evil4_metals/mtlsportal.wl                 = { t_data=! }
+        evil4_metals/mtlsportal_fx1.wl             = { t_data=! }
+        evil4_metals/mtlsportal_fx2.wl             = { t_data=! }
+        evil4_metals/mtlsportal_fx3.wl             = { t_data=! }
+        evil4_metals/mtltechwall.wl                = { t_data=! }
+        evil4_metals/mtltechwall_128.wl            = { t_data=! }
+        evil4_metals/mtltekfloor.wl                = { t_data=! }
+        evil4_metals/mtltekfloor_fx.wl             = { t_data=! }
+        evil4_metals/mtltekfloor_fx2.wl            = { t_data=! }
+        evil4_metals/mtlwrndoor.wl                 = { t_data=! }
+        evil4_metals/mtlwrndoor2.wl                = { t_data=! }
+        evil4_metals/step.wl                       = { t_data=! }
+        evil4_metals/stepgrl.wl                    = { t_data=! }
+        evil4_metals/tekwallmulti.wl               = { t_data=! }
+        evil4_metals/tekwallmulti2.wl              = { t_data=! }
+        evil4_metals/tekwallmulti2_0000.wl         = { t_data=! }
+        evil4_metals/tekwallmulti2_wrn.wl          = { t_data=! }
+        evil4_metals/tekwallmulti_lights_blend.wl  = { t_data=! }
+        evil4_metals/tekwallmulti_wrn.wl           = { t_data=! }
+        evil4_metals/tekwallmulti_wrn2.wl          = { t_data=! }
+        evil4_metals/tekwallmulti_wrn2hfx.wl       = { t_data=! }
+        evil4_metals/tekwallmulti_wrnb.wl          = { t_data=! }
+        evil4_metals/tekwallmulti_wrnlights.wl     = { t_data=! }
+        evil4_metals/tekwallmulti_wrnlights2.wl    = { t_data=! }
+        evil4_metals/tekwallmulti_wrnlights2_glow.wl= { t_data=! }
+        evil4_metals/tekwallmulti_wrnlights_glow.wl= { t_data=! }
+        evil4_metals/trimtl_grlbtm.wl              = { t_data=! }
+        evil4_metals/trim_wrnrivets.wl             = { t_data=! }
+        evil4_metals/trim_wrnrivets_bump.wl        = { t_data=! }
+        evil4_metals/trim_wrnrivets_gloss.wl       = { t_data=! }
+        evil4_metals/whitemtl_default.wl           = { t_data=! }
+        evil4_metals/wrnjumppad.wl                 = { t_data=! }
+        evil4_metals/wrnjumppad_glow.wl            = { t_data=! }
+      }
+      evil4_techfloors.txlist =
+      {
+        evil4_techfloors/tfloor.wl                 = { t_data=! }
+        evil4_techfloors/tfloor2.wl                = { t_data=! }
+        evil4_techfloors/tfloor2b.wl               = { t_data=! }
+        evil4_techfloors/tfloor3.wl                = { t_data=! }
+        evil4_techfloors/tfloor3_huge.wl           = { t_data=! }
+        evil4_techfloors/tfloor4.wl                = { t_data=! }
+        evil4_techfloors/tfloor4plain.wl           = { t_data=! }
+        evil4_techfloors/tfloorhex_big.wl          = { t_data=! }
+        evil4_techfloors/tfloorhex_smll.wl         = { t_data=! }
+        evil4_techfloors/tflooroddtile.wl          = { t_data=! }
+        evil4_techfloors/tfloor_rndholes.wl        = { t_data=! }
+        evil4_techfloors/tfloor_rndholes_drty.wl   = { t_data=! }
+      }
+      evil4_techtrims.txlist =
+      {
+        evil4_techtrims/cleantrimmulti.wl          = { t_data=! }
+        evil4_techtrims/drkmtl_oddtrim.wl          = { t_data=! }
+        evil4_techtrims/drttrimmulti.wl            = { t_data=! }
+        evil4_techtrims/dwtrim_bevel.wl            = { t_data=! }
+        evil4_techtrims/dwtrim_bevelslite.wl       = { t_data=! }
+        evil4_techtrims/dwtrim_fade.wl             = { t_data=! }
+        evil4_techtrims/dwtrim_fade2.wl            = { t_data=! }
+        evil4_techtrims/dwtrim_grill.wl            = { t_data=! }
+        evil4_techtrims/dwtrim_grt.wl              = { t_data=! }
+        evil4_techtrims/dwtrim_panel.wl            = { t_data=! }
+        evil4_techtrims/dwtrim_panel2.wl           = { t_data=! }
+        evil4_techtrims/dw_combo.wl                = { t_data=! }
+        evil4_techtrims/medmtl_oddtrim.wl          = { t_data=! }
+        evil4_techtrims/misc_grill.wl              = { t_data=! }
+      }
+      evil4_techwalls.txlist =
+      {
+        evil4_techwalls/drkmtlsupport.wl           = { t_data=! }
+        evil4_techwalls/drkmtlsupport_alpha.wl     = { t_data=! }
+        evil4_techwalls/drkmtl_dpanel.wl           = { t_data=! }
+        evil4_techwalls/drkmtl_dpanelb.wl          = { t_data=! }
+        evil4_techwalls/drkmtl_dpanelc.wl          = { t_data=! }
+        evil4_techwalls/drkmtl_dpanelwrn.wl        = { t_data=! }
+        evil4_techwalls/drkmtl_dpanelwrnb.wl       = { t_data=! }
+        evil4_techwalls/drkmtl_dpanelwrnb2.wl      = { t_data=! }
+        evil4_techwalls/drkmtl_dpanelwrnbgrt.wl    = { t_data=! }
+        evil4_techwalls/drkmtl_dpanel_ow.wl        = { t_data=! }
+        evil4_techwalls/drkmtl_lightboard.wl       = { t_data=! }
+        evil4_techwalls/drkmtl_lightboard_glow.wl  = { t_data=! }
+        evil4_techwalls/drkmtl_mpanel.wl           = { t_data=! }
+        evil4_techwalls/drkmtl_mpanelgrt.wl        = { t_data=! }
+        evil4_techwalls/lighttechdoor.wl           = { t_data=! }
+        evil4_techwalls/lighttechdoor_drty.wl      = { t_data=! }
+        evil4_techwalls/mechanical.wl              = { t_data=! }
+        evil4_techwalls/mechanicalx128.wl          = { t_data=! }
+        evil4_techwalls/mechanicalx128_old.wl      = { t_data=! }
+        evil4_techwalls/mechanical_old.wl          = { t_data=! }
+        evil4_techwalls/mechanical_old_bump.wl     = { t_data=! }
+        evil4_techwalls/mechanical_old_gloss.wl    = { t_data=! }
+        evil4_techwalls/shinymtlsupport.wl         = { t_data=! }
+        evil4_techwalls/tech_drkwall.wl            = { t_data=! }
+        evil4_techwalls/tech_drkwall2.wl           = { t_data=! }
+        evil4_techwalls/tech_drkwall_b.wl          = { t_data=! }
+        evil4_techwalls/tech_drkwall_cutl.wl       = { t_data=! }
+        evil4_techwalls/tech_drkwall_cutr.wl       = { t_data=! }
+        evil4_techwalls/tech_drkwall_seam.wl       = { t_data=! }
+        evil4_techwalls/tech_drkwall_seam2.wl      = { t_data=! }
+        evil4_techwalls/tech_drkwll_pnltek.wl      = { t_data=! }
+        evil4_techwalls/tech_drkwll_pnltek_glow.wl = { t_data=! }
+        evil4_techwalls/tech_dw2.wl                = { t_data=! }
+        evil4_techwalls/tech_dw2g.wl               = { t_data=! }
+        evil4_techwalls/tech_dw2gb.wl              = { t_data=! }
+        evil4_techwalls/tech_dw2_fx.wl             = { t_data=! }
+        evil4_techwalls/tech_dwb.wl                = { t_data=! }
+        evil4_techwalls/tech_dwb_2g.wl             = { t_data=! }
+        evil4_techwalls/tech_dwb_2gsign.wl         = { t_data=! }
+        evil4_techwalls/tech_dwb_light.wl          = { t_data=! }
+        evil4_techwalls/tech_dwb_sign.wl           = { t_data=! }
+        evil4_techwalls/tech_dws_grate.wl          = { t_data=! }
+        evil4_techwalls/tech_dwteky.wl             = { t_data=! }
+        evil4_techwalls/tech_dwteky_glow.wl        = { t_data=! }
+        evil4_techwalls/tech_dw_grate.wl           = { t_data=! }
+        evil4_techwalls/tech_wall2_huge.wl         = { t_data=! }
+        evil4_techwalls/tech_wall_dlight.wl        = { t_data=! }
+        evil4_techwalls/tech_wall_dlight_glw.wl    = { t_data=! }
+        evil4_techwalls/tech_wall_drkm.wl          = { t_data=! }
+        evil4_techwalls/tech_wall_drkm2.wl         = { t_data=! }
+        evil4_techwalls/tech_wall_drkmpanel.wl     = { t_data=! }
+        evil4_techwalls/tech_wall_grll.wl          = { t_data=! }
+        evil4_techwalls/tech_window.wl             = { t_data=! }
+        evil4_techwalls/tech_windowmask.wl         = { t_data=! }
+      }
+      evil4_walls.txlist =
+      {
+        evil4_walls/drk_brnbrick.wl                = { t_data=! }
+        evil4_walls/drk_brnbrick_bump.wl           = { t_data=! }
+        evil4_walls/drk_brnbrick_gloss.wl          = { t_data=! }
+        evil4_walls/d_stnwll_mossbtm.wl            = { t_data=! }
+        evil4_walls/d_stnwll_mossbtm_gloss.wl      = { t_data=! }
+        evil4_walls/d_stone.wl                     = { t_data=! }
+        evil4_walls/d_stonewll.wl                  = { t_data=! }
+        evil4_walls/d_stonewll_bump.wl             = { t_data=! }
+        evil4_walls/d_stonewll_drk.wl              = { t_data=! }
+        evil4_walls/d_stonewll_drk2.wl             = { t_data=! }
+        evil4_walls/d_stonewll_drk2_gloss.wl       = { t_data=! }
+        evil4_walls/d_stonewll_drk3.wl             = { t_data=! }
+        evil4_walls/d_stonewll_drk3_gloss.wl       = { t_data=! }
+        evil4_walls/d_stonewll_drk_gloss.wl        = { t_data=! }
+        evil4_walls/d_stonewll_gloss.wl            = { t_data=! }
+        evil4_walls/d_stone_fourthwll.wl           = { t_data=! }
+        evil4_walls/d_stone_fourthwll_bump.wl      = { t_data=! }
+        evil4_walls/d_stone_fourthwll_gloss.wl     = { t_data=! }
+        evil4_walls/d_stone_gloss.wl               = { t_data=! }
+        evil4_walls/d_stone_halfwll.wl             = { t_data=! }
+        evil4_walls/d_stone_halfwll_gloss.wl       = { t_data=! }
+        evil4_walls/hsptl_wallpainted_blu.wl       = { t_data=! }
+        evil4_walls/hsptl_wallpainted_brn.wl       = { t_data=! }
+        evil4_walls/hsptl_wallpainted_gray.wl      = { t_data=! }
+        evil4_walls/hsptl_wallpainted_grn.wl       = { t_data=! }
+        evil4_walls/hsptl_wall_blu.wl              = { t_data=! }
+        evil4_walls/hsptl_wall_brn.wl              = { t_data=! }
+        evil4_walls/hsptl_wall_gray.wl             = { t_data=! }
+        evil4_walls/hsptl_wall_graydrty.wl         = { t_data=! }
+        evil4_walls/hsptl_wall_grn.wl              = { t_data=! }
+        evil4_walls/rbrick.wl                      = { t_data=! }
+        evil4_walls/rbrick_bttm.wl                 = { t_data=! }
+        evil4_walls/rbrick_bttmcem.wl              = { t_data=! }
+        evil4_walls/rbrick_bttmcem_bump.wl         = { t_data=! }
+        evil4_walls/rbrick_bttmcem_gloss.wl        = { t_data=! }
+        evil4_walls/rbrick_bttmcem_grss.wl         = { t_data=! }
+        evil4_walls/rbrick_bttmcem_grss2.wl        = { t_data=! }
+        evil4_walls/rbrick_bttmgrss.wl             = { t_data=! }
+        evil4_walls/rbrick_bttmgrss2.wl            = { t_data=! }
+        evil4_walls/rbrick_top.wl                  = { t_data=! }
+      }
+      evil5_floor.txlist =
+      {
+        evil5_floor/confllr.wl                     = { t_data=! }
+        evil5_floor/confllrtile2pad.wl             = { t_data=! }
+      }
+      evil5_metal.txlist =
+      {
+        evil5_metal/dkmtl.wl                       = { t_data=! }
+        evil5_metal/drkrstmtl.wl                   = { t_data=! }
+        evil5_metal/rstmtlbxfrm.wl                 = { t_data=! }
+        evil5_metal/rstmtl_smllpnls.wl             = { t_data=! }
+        evil5_metal/rstmtl_smllpnls2btm.wl         = { t_data=! }
+        evil5_metal/rstmtl_smllpnls2grll2.wl       = { t_data=! }
+        evil5_metal/rstmtl_smllpnls_bump.wl        = { t_data=! }
+        evil5_metal/rstmtl_smllpnls_gloss.wl       = { t_data=! }
+        evil5_metal/rstmtl_wrnpnls.wl              = { t_data=! }
+        evil5_metal/rstmtl_wrnpnls2.wl             = { t_data=! }
+        evil5_metal/walltek2.wl                    = { t_data=! }
+      }
+      evil5_trim.txlist =
+      {
+        evil5_trim/trimrstmtlpipes.wl              = { t_data=! }
+        evil5_trim/trstmtl_panel.wl                = { t_data=! }
+        evil5_trim/trstmtl_panelbig.wl             = { t_data=! }
+      }
+      evil5_wall.txlist =
+      {
+        evil5_wall/concrete.wl                     = { t_data=! }
+        evil5_wall/cretesep_btm.wl                 = { t_data=! }
+        evil5_wall/cretesep_mid.wl                 = { t_data=! }
+        evil5_wall/cretewall_pipes.wl              = { t_data=! }
+        evil5_wall/cretewllroof_brdsym.wl          = { t_data=! }
+        evil5_wall/crete_btmold.wl                 = { t_data=! }
+        evil5_wall/crete_tek2btm.wl                = { t_data=! }
+      }
+      evil6_bmtls.txlist =
+      {
+        evil6_bmtls/e6bmetal.wl                    = { t_data=! }
+        evil6_bmtls/e6brnmetal.wl                  = { t_data=! }
+        evil6_bmtls/e6dmetal.wl                    = { t_data=! }
+        evil6_bmtls/e6drkbmetalscatched.wl         = { t_data=! }
+        evil6_bmtls/e6drstmetal.wl                 = { t_data=! }
+        evil6_bmtls/e6drstmetal_b.wl               = { t_data=! }
+        evil6_bmtls/e6tileceiling.wl               = { t_data=! }
+      }
+      evil6_floors.txlist =
+      {
+        evil6_floors/e6bsegrtflr128.wl             = { t_data=! }
+        evil6_floors/e6bsegrtflr256.wl             = { t_data=! }
+        evil6_floors/e6c_floor.wl                  = { t_data=! }
+        evil6_floors/e6c_floordented.wl            = { t_data=! }
+        evil6_floors/e6c_floordented_bump.wl       = { t_data=! }
+        evil6_floors/e6c_floordented_gloss.wl      = { t_data=! }
+        evil6_floors/e6c_floor_b.wl                = { t_data=! }
+        evil6_floors/e6c_floor_bump.wl             = { t_data=! }
+        evil6_floors/e6c_floor_b_bump.wl           = { t_data=! }
+        evil6_floors/e6c_floor_b_gloss.wl          = { t_data=! }
+        evil6_floors/e6c_floor_gloss.wl            = { t_data=! }
+        evil6_floors/e6c_stepedge.wl               = { t_data=! }
+        evil6_floors/e6grate2_flr.wl               = { t_data=! }
+        evil6_floors/e6grate2_flr_b.wl             = { t_data=! }
+        evil6_floors/e6grate_flr.wl                = { t_data=! }
+        evil6_floors/e6grate_flr_b.wl              = { t_data=! }
+        evil6_floors/e6grtfloorceil.wl             = { t_data=! }
+        evil6_floors/e6grtflr2bl.wl                = { t_data=! }
+        evil6_floors/e6launchcfloor-1.wl           = { t_data=! }
+        evil6_floors/e6launchcfloor-1_glow.wl      = { t_data=! }
+        evil6_floors/e6launchcfloor-2.wl           = { t_data=! }
+        evil6_floors/e6launchcfloor-2_glow.wl      = { t_data=! }
+        evil6_floors/e6launchcfloor-3.wl           = { t_data=! }
+        evil6_floors/e6launchcfloor-3_glow.wl      = { t_data=! }
+        evil6_floors/e6launchcfloor-4.wl           = { t_data=! }
+        evil6_floors/e6launchcfloor-4_glow.wl      = { t_data=! }
+        evil6_floors/e6launchcfloor-5.wl           = { t_data=! }
+        evil6_floors/e6launchcfloor-5_glow.wl      = { t_data=! }
+        evil6_floors/e6launchcfloor-6.wl           = { t_data=! }
+        evil6_floors/e6launchcfloor-6_glow.wl      = { t_data=! }
+        evil6_floors/e6launchcfloor-7.wl           = { t_data=! }
+        evil6_floors/e6launchcfloor-7_glow.wl      = { t_data=! }
+        evil6_floors/e6launchcfloor.wl             = { t_data=! }
+        evil6_floors/e6launchcfloor_glow.wl        = { t_data=! }
+        evil6_floors/e6launchengine-1.wl           = { t_data=! }
+        evil6_floors/e6launchengine-1_gloss.wl     = { t_data=! }
+        evil6_floors/e6launchengine-1_glow.wl      = { t_data=! }
+        evil6_floors/e6launchengine-2.wl           = { t_data=! }
+        evil6_floors/e6launchengine-2_gloss.wl     = { t_data=! }
+        evil6_floors/e6launchengine-2_glow.wl      = { t_data=! }
+        evil6_floors/e6launchengine-3.wl           = { t_data=! }
+        evil6_floors/e6launchengine-3_gloss.wl     = { t_data=! }
+        evil6_floors/e6launchengine-3_glow.wl      = { t_data=! }
+        evil6_floors/e6launchengine-4.wl           = { t_data=! }
+        evil6_floors/e6launchengine-4_gloss.wl     = { t_data=! }
+        evil6_floors/e6launchengine-4_glow.wl      = { t_data=! }
+        evil6_floors/e6launchengine-5.wl           = { t_data=! }
+        evil6_floors/e6launchengine-5_gloss.wl     = { t_data=! }
+        evil6_floors/e6launchengine-5_glow.wl      = { t_data=! }
+        evil6_floors/e6launchengine-6.wl           = { t_data=! }
+        evil6_floors/e6launchengine-6_gloss.wl     = { t_data=! }
+        evil6_floors/e6launchengine-6_glow.wl      = { t_data=! }
+        evil6_floors/e6launchengine-7.wl           = { t_data=! }
+        evil6_floors/e6launchengine-7_gloss.wl     = { t_data=! }
+        evil6_floors/e6launchengine-7_glow.wl      = { t_data=! }
+        evil6_floors/e6launchengine.wl             = { t_data=! }
+        evil6_floors/e6launchengine_gloss.wl       = { t_data=! }
+        evil6_floors/e6launchengine_glow.wl        = { t_data=! }
+        evil6_floors/e6launchlfloor-1.wl           = { t_data=! }
+        evil6_floors/e6launchlfloor-1_glow.wl      = { t_data=! }
+        evil6_floors/e6launchlfloor-2.wl           = { t_data=! }
+        evil6_floors/e6launchlfloor-2_glow.wl      = { t_data=! }
+        evil6_floors/e6launchlfloor-3.wl           = { t_data=! }
+        evil6_floors/e6launchlfloor-3_glow.wl      = { t_data=! }
+        evil6_floors/e6launchlfloor-4.wl           = { t_data=! }
+        evil6_floors/e6launchlfloor-4_glow.wl      = { t_data=! }
+        evil6_floors/e6launchlfloor-5.wl           = { t_data=! }
+        evil6_floors/e6launchlfloor-5_glow.wl      = { t_data=! }
+        evil6_floors/e6launchlfloor-6.wl           = { t_data=! }
+        evil6_floors/e6launchlfloor-6_glow.wl      = { t_data=! }
+        evil6_floors/e6launchlfloor-7.wl           = { t_data=! }
+        evil6_floors/e6launchlfloor-7_glow.wl      = { t_data=! }
+        evil6_floors/e6launchlfloor.wl             = { t_data=! }
+        evil6_floors/e6launchlfloor_glow.wl        = { t_data=! }
+        evil6_floors/e6l_floor.wl                  = { t_data=! }
+        evil6_floors/e6l_floor_gloss.wl            = { t_data=! }
+        evil6_floors/e6l_stepedge.wl               = { t_data=! }
+        evil6_floors/e6l_stepedge_bump.wl          = { t_data=! }
+        evil6_floors/e6smallgrtflr2bl.wl           = { t_data=! }
+        evil6_floors/e6tekmtlrflr.wl               = { t_data=! }
+        evil6_floors/e6tekmtlrflr_bump.wl          = { t_data=! }
+        evil6_floors/e6tekmtlrflr_gloss.wl         = { t_data=! }
+        evil6_floors/e6tekmtlrflr_h.wl             = { t_data=! }
+        evil6_floors/e6tekmtlrflr_h_glow.wl        = { t_data=! }
+        evil6_floors/e6xgratebasic.wl              = { t_data=! }
+        evil6_floors/e6xgratebasic_b.wl            = { t_data=! }
+      }
+      evil6_lights.txlist =
+      {
+        evil6_lights/e6basicstrip_blue.wl          = { t_data=! }
+        evil6_lights/e6basicstrip_blue_s_nolight.wl= { t_data=! }
+        evil6_lights/e6basicstrip_blue_s_nolight_glow.wl= { t_data=! }
+        evil6_lights/e6basicstrip_green.wl         = { t_data=! }
+        evil6_lights/e6basicstrip_green_s_nolight.wl= { t_data=! }
+        evil6_lights/e6basicstrip_green_s_nolight_glow.wl= { t_data=! }
+        evil6_lights/e6basicstrip_orange.wl        = { t_data=! }
+        evil6_lights/e6basicstrip_orange_s_nolight.wl= { t_data=! }
+        evil6_lights/e6basicstrip_orange_s_nolight_glow.wl= { t_data=! }
+        evil6_lights/e6basicstrip_red.wl           = { t_data=! }
+        evil6_lights/e6basicstrip_red_s_nolight.wl = { t_data=! }
+        evil6_lights/e6basicstrip_red_s_nolight_glow.wl= { t_data=! }
+        evil6_lights/e6basicstrip_white.wl         = { t_data=! }
+        evil6_lights/e6basicstrip_white_s_nolight.wl= { t_data=! }
+        evil6_lights/e6basicstrip_white_s_nolight_glow.wl= { t_data=! }
+        evil6_lights/e6basicstrip_yellow.wl        = { t_data=! }
+        evil6_lights/e6basicstrip_yellow_s_nolight.wl= { t_data=! }
+        evil6_lights/e6basicstrip_yellow_s_nolight_glow.wl= { t_data=! }
+        evil6_lights/e6horzlight.wl                = { t_data=! }
+        evil6_lights/e6horzlight_glow.wl           = { t_data=! }
+        evil6_lights/e6horzlight_s_nolight.wl      = { t_data=! }
+        evil6_lights/e6horzlight_s_nolight_glow.wl = { t_data=! }
+        evil6_lights/e6horzovallight.wl            = { t_data=! }
+        evil6_lights/e6horzovallight_a.wl          = { t_data=! }
+        evil6_lights/e6horzovallight_glow.wl       = { t_data=! }
+        evil6_lights/e6mtltpnl_light.wl            = { t_data=! }
+        evil6_lights/e6mtltpnl_light_glow.wl       = { t_data=! }
+        evil6_lights/e6platelight.wl               = { t_data=! }
+        evil6_lights/e6platelight_burnt.wl         = { t_data=! }
+        evil6_lights/e6platelight_burnt_blend.wl   = { t_data=! }
+        evil6_lights/e6platelight_burnt_glow.wl    = { t_data=! }
+        evil6_lights/e6platelight_glow.wl          = { t_data=! }
+        evil6_lights/e6tinylight.wl                = { t_data=! }
+        evil6_lights/e6tinylight_glow.wl           = { t_data=! }
+        evil6_lights/e6tinylight_s_nolight.wl      = { t_data=! }
+        evil6_lights/e6tinylight_s_nolight_glow.wl = { t_data=! }
+        evil6_lights/e6v_light.wl                  = { t_data=! }
+        evil6_lights/e6v_light_glow.wl             = { t_data=! }
+        evil6_lights/e6v_light_s_nolight.wl        = { t_data=! }
+        evil6_lights/e6v_light_s_nolight_glow.wl   = { t_data=! }
+        evil6_lights/e6walllight.wl                = { t_data=! }
+        evil6_lights/e6walllight_glow.wl           = { t_data=! }
+      }
+      evil6_support.txlist =
+      {
+        evil6_support/e6holestrip.wl               = { t_data=! }
+        evil6_support/e6h_support.wl               = { t_data=! }
+        evil6_support/e6n_support.wl               = { t_data=! }
+        evil6_support/e6panelsym.wl                = { t_data=! }
+        evil6_support/e6q3support.wl               = { t_data=! }
+        evil6_support/e6vertgrt_supp.wl            = { t_data=! }
+        evil6_support/e6vertgrt_supp_fx.wl         = { t_data=! }
+        evil6_support/e6vlight_supp.wl             = { t_data=! }
+        evil6_support/e6vlight_supp_glow.wl        = { t_data=! }
+        evil6_support/e6vpanel.wl                  = { t_data=! }
+        evil6_support/e6vpanelsupprt.wl            = { t_data=! }
+        evil6_support/e6wallsupprt.wl              = { t_data=! }
+        evil6_support/e6xrst_supprt.wl             = { t_data=! }
+        evil6_support/e6x_supprt.wl                = { t_data=! }
+      }
+      evil6_trims.txlist =
+      {
+        evil6_trims/e6basegrate.wl                 = { t_data=! }
+        evil6_trims/e6basegrt_smll.wl              = { t_data=! }
+        evil6_trims/e6boltstrip.wl                 = { t_data=! }
+        evil6_trims/e6btrim_light.wl               = { t_data=! }
+        evil6_trims/e6dtrimnd.wl                   = { t_data=! }
+        evil6_trims/e6metalfan.wl                  = { t_data=! }
+        evil6_trims/e6metalfan_bump.wl             = { t_data=! }
+        evil6_trims/e6strimlight.wl                = { t_data=! }
+        evil6_trims/e6strimlight_glow.wl           = { t_data=! }
+        evil6_trims/e6supptrim.wl                  = { t_data=! }
+        evil6_trims/e6supptrim128.wl               = { t_data=! }
+        evil6_trims/e6symbol_a.wl                  = { t_data=! }
+        evil6_trims/e6symbol_b.wl                  = { t_data=! }
+        evil6_trims/e6symbol_c.wl                  = { t_data=! }
+        evil6_trims/e6symbol_d.wl                  = { t_data=! }
+        evil6_trims/e6trim_basic128.wl             = { t_data=! }
+        evil6_trims/e6trim_bsrlight.wl             = { t_data=! }
+        evil6_trims/e6trim_light.wl                = { t_data=! }
+        evil6_trims/e6trim_ltb.wl                  = { t_data=! }
+      }
+      evil6_walls.txlist =
+      {
+        evil6_walls/e6cyb0rpipes.wl                = { t_data=! }
+        evil6_walls/e6cyb0rpipes_gloss.wl          = { t_data=! }
+        evil6_walls/e6girdergrate.wl               = { t_data=! }
+        evil6_walls/e6girdergrate2b.wl             = { t_data=! }
+        evil6_walls/e6girdergrate2b_gloss.wl       = { t_data=! }
+        evil6_walls/e6girdergrate_gloss.wl         = { t_data=! }
+        evil6_walls/e6girdersupport.wl             = { t_data=! }
+        evil6_walls/e6girdersupport_gloss.wl       = { t_data=! }
+        evil6_walls/e6gridergrtwll.wl              = { t_data=! }
+        evil6_walls/e6gridergrtwll_gloss.wl        = { t_data=! }
+        evil6_walls/e6indsdoor.wl                  = { t_data=! }
+        evil6_walls/e6panelgrill.wl                = { t_data=! }
+        evil6_walls/e6simpwallsupp.wl              = { t_data=! }
+        evil6_walls/e6simpwallsupp_bump.wl         = { t_data=! }
+        evil6_walls/e6simpwallsupp_gloss.wl        = { t_data=! }
+        evil6_walls/e6simpwallsupp_rst.wl          = { t_data=! }
+        evil6_walls/e6simpwallsupp_rst_bump.wl     = { t_data=! }
+        evil6_walls/e6simpwallsupp_rst_gloss.wl    = { t_data=! }
+        evil6_walls/e6tdoor.wl                     = { t_data=! }
+      }
+      evil8_base.txlist =
+      {
+        evil8_base/e8base_blue.wl                  = { t_data=! }
+        evil8_base/e8base_blue_bump.wl             = { t_data=! }
+        evil8_base/e8base_red.wl                   = { t_data=! }
+        evil8_base/e8base_red_bump.wl              = { t_data=! }
+        evil8_base/e8crete01.wl                    = { t_data=! }
+        evil8_base/e8crete01_bump.wl               = { t_data=! }
+        evil8_base/e8crete03.wl                    = { t_data=! }
+        evil8_base/e8crete03_blue.wl               = { t_data=! }
+        evil8_base/e8crete03_blue_bump.wl          = { t_data=! }
+        evil8_base/e8crete03_bump.wl               = { t_data=! }
+        evil8_base/e8crete03_gloss.wl              = { t_data=! }
+        evil8_base/e8crete03_red.wl                = { t_data=! }
+        evil8_base/e8crete03_red_bump.wl           = { t_data=! }
+        evil8_base/e8creteold_blue.wl              = { t_data=! }
+        evil8_base/e8creteold_blue_bump.wl         = { t_data=! }
+        evil8_base/e8creteold_red.wl               = { t_data=! }
+        evil8_base/e8creteold_red_bump.wl          = { t_data=! }
+        evil8_base/e8crete_blue.wl                 = { t_data=! }
+        evil8_base/e8crete_blue_bump.wl            = { t_data=! }
+        evil8_base/e8crete_red.wl                  = { t_data=! }
+        evil8_base/e8metal01.wl                    = { t_data=! }
+        evil8_base/e8metal01_bump.wl               = { t_data=! }
+        evil8_base/e8metal01_gloss.wl              = { t_data=! }
+        evil8_base/e8metal03b.wl                   = { t_data=! }
+        evil8_base/e8metal03b_bump.wl              = { t_data=! }
+        evil8_base/e8metal03c.wl                   = { t_data=! }
+        evil8_base/e8metal03c_blue.wl              = { t_data=! }
+        evil8_base/e8metal03c_blue_bump.wl         = { t_data=! }
+        evil8_base/e8metal03c_bump.wl              = { t_data=! }
+        evil8_base/e8metal03c_red.wl               = { t_data=! }
+        evil8_base/e8metal03c_red_bump.wl          = { t_data=! }
+        evil8_base/e8metal_blue.wl                 = { t_data=! }
+        evil8_base/e8metal_blue_bump.wl            = { t_data=! }
+        evil8_base/e8metal_red.wl                  = { t_data=! }
+        evil8_base/e8metal_red_bump.wl             = { t_data=! }
+        evil8_base/e8_base1.wl                     = { t_data=! }
+        evil8_base/e8_base1b.wl                    = { t_data=! }
+        evil8_base/e8_base1b_bump.wl               = { t_data=! }
+        evil8_base/e8_base1c.wl                    = { t_data=! }
+        evil8_base/e8_base1c_bump.wl               = { t_data=! }
+        evil8_base/e8_base1c_gloss.wl              = { t_data=! }
+        evil8_base/e8_base1_bump.wl                = { t_data=! }
+        evil8_base/e8_base1_gloss.wl               = { t_data=! }
+      }
+      evil8_env.txlist =
+      {
+        evil8_env/e8_bk.wl                         = { t_data=! }
+        evil8_env/e8_dn.wl                         = { t_data=! }
+        evil8_env/e8_ft.wl                         = { t_data=! }
+        evil8_env/e8_lf.wl                         = { t_data=! }
+        evil8_env/e8_rt.wl                         = { t_data=! }
+        evil8_env/e8_up.wl                         = { t_data=! }
+      }
+      evil8_floor.txlist =
+      {
+        evil8_floor/e8clangfloor.wl                = { t_data=! }
+        evil8_floor/e8clangfloor01.wl              = { t_data=! }
+        evil8_floor/e8clangfloor01_bump.wl         = { t_data=! }
+        evil8_floor/e8clangfloor01_gloss.wl        = { t_data=! }
+        evil8_floor/e8clangfloor03.wl              = { t_data=! }
+        evil8_floor/e8clangfloor03_bump.wl         = { t_data=! }
+        evil8_floor/e8clangfloor03_gloss.wl        = { t_data=! }
+        evil8_floor/e8clangfloor04.wl              = { t_data=! }
+        evil8_floor/e8clangfloor04b.wl             = { t_data=! }
+        evil8_floor/e8clangfloor04b_bump.wl        = { t_data=! }
+        evil8_floor/e8clangfloor04b_gloss.wl       = { t_data=! }
+        evil8_floor/e8clangfloor04warn.wl          = { t_data=! }
+        evil8_floor/e8clangfloor04warn2.wl         = { t_data=! }
+        evil8_floor/e8clangfloor04warn2_bump.wl    = { t_data=! }
+        evil8_floor/e8clangfloor04warn2_gloss.wl   = { t_data=! }
+        evil8_floor/e8clangfloor04warn_bump.wl     = { t_data=! }
+        evil8_floor/e8clangfloor04warn_gloss.wl    = { t_data=! }
+        evil8_floor/e8clangfloor04_blue.wl         = { t_data=! }
+        evil8_floor/e8clangfloor04_bump.wl         = { t_data=! }
+        evil8_floor/e8clangfloor04_gloss.wl        = { t_data=! }
+        evil8_floor/e8clangfloor04_red.wl          = { t_data=! }
+        evil8_floor/e8clangfloor04_red_bump.wl     = { t_data=! }
+        evil8_floor/e8clangfloor04_red_gloss.wl    = { t_data=! }
+        evil8_floor/e8clangfloor05.wl              = { t_data=! }
+        evil8_floor/e8clangfloor05b.wl             = { t_data=! }
+        evil8_floor/e8clangfloor05b_bump.wl        = { t_data=! }
+        evil8_floor/e8clangfloor05b_gloss.wl       = { t_data=! }
+        evil8_floor/e8clangfloor05c.wl             = { t_data=! }
+        evil8_floor/e8clangfloor05c_bump.wl        = { t_data=! }
+        evil8_floor/e8clangfloor05c_gloss.wl       = { t_data=! }
+        evil8_floor/e8clangfloor05step.wl          = { t_data=! }
+        evil8_floor/e8clangfloor05step_bump.wl     = { t_data=! }
+        evil8_floor/e8clangfloor05step_gloss.wl    = { t_data=! }
+        evil8_floor/e8clangfloor05_bump.wl         = { t_data=! }
+        evil8_floor/e8clangfloor05_gloss.wl        = { t_data=! }
+        evil8_floor/e8clangfloor_bump.wl           = { t_data=! }
+        evil8_floor/e8clangfloor_gloss.wl          = { t_data=! }
+        evil8_floor/e8clangwarnmix.wl              = { t_data=! }
+        evil8_floor/e8clangwarnmix_b.wl            = { t_data=! }
+        evil8_floor/e8clangwarnmix_bump.wl         = { t_data=! }
+        evil8_floor/e8clangwarnmix_b_bump.wl       = { t_data=! }
+        evil8_floor/e8clangwarnmix_b_gloss.wl      = { t_data=! }
+        evil8_floor/e8clangwarnmix_c.wl            = { t_data=! }
+        evil8_floor/e8clangwarnmix_c_bump.wl       = { t_data=! }
+        evil8_floor/e8clangwarnmix_c_gloss.wl      = { t_data=! }
+        evil8_floor/e8clangwarnmix_gloss.wl        = { t_data=! }
+        evil8_floor/e8crete01stair1.wl             = { t_data=! }
+        evil8_floor/e8crete01stair1_bump.wl        = { t_data=! }
+        evil8_floor/e8crete01stair1_gloss.wl       = { t_data=! }
+        evil8_floor/e8crete03fadedwarn.wl          = { t_data=! }
+        evil8_floor/e8cretefloor01.wl              = { t_data=! }
+        evil8_floor/e8cretefloor01b.wl             = { t_data=! }
+        evil8_floor/e8cretefloor01b_bump.wl        = { t_data=! }
+        evil8_floor/e8cretefloor01c.wl             = { t_data=! }
+        evil8_floor/e8cretefloor01c_bump.wl        = { t_data=! }
+        evil8_floor/e8cretefloor01_bump.wl         = { t_data=! }
+        evil8_floor/e8cretefloor02.wl              = { t_data=! }
+        evil8_floor/e8cretefloor_tile.wl           = { t_data=! }
+        evil8_floor/e8cretefloor_tile_bump.wl      = { t_data=! }
+        evil8_floor/e8spacecrete.wl                = { t_data=! }
+        evil8_floor/e8spacecrete_bump.wl           = { t_data=! }
+        evil8_floor/e8warn2steplight.wl            = { t_data=! }
+        evil8_floor/e8warn2steplight_bump.wl       = { t_data=! }
+        evil8_floor/e8warn2steplight_gloss.wl      = { t_data=! }
+        evil8_floor/e8warning128.wl                = { t_data=! }
+        evil8_floor/e8warning2.wl                  = { t_data=! }
+        evil8_floor/e8warning256.wl                = { t_data=! }
+        evil8_floor/e8warning2step.wl              = { t_data=! }
+      }
+      evil8_fx.txlist =
+      {
+        evil8_fx/e8alphaspawn.wl                   = { t_data=! }
+        evil8_fx/e8beam.wl                         = { t_data=! }
+        evil8_fx/e8beam_blue.wl                    = { t_data=! }
+        evil8_fx/e8beam_blue_original.wl           = { t_data=! }
+        evil8_fx/e8blue_dcl.wl                     = { t_data=! }
+        evil8_fx/e8circle_blue.wl                  = { t_data=! }
+        evil8_fx/e8circle_red.wl                   = { t_data=! }
+        evil8_fx/e8evilspacetxt.wl                 = { t_data=! }
+        evil8_fx/e8icon_blue.wl                    = { t_data=! }
+        evil8_fx/e8icon_red.wl                     = { t_data=! }
+        evil8_fx/e8jumpspawn02-1.wl                = { t_data=! }
+        evil8_fx/e8jumpspawn02-1_glow.wl           = { t_data=! }
+        evil8_fx/e8jumpspawn02-2.wl                = { t_data=! }
+        evil8_fx/e8jumpspawn02-2_glow.wl           = { t_data=! }
+        evil8_fx/e8jumpspawn02-3.wl                = { t_data=! }
+        evil8_fx/e8jumpspawn02-3_glow.wl           = { t_data=! }
+        evil8_fx/e8jumpspawn02-4.wl                = { t_data=! }
+        evil8_fx/e8jumpspawn02-4_glow.wl           = { t_data=! }
+        evil8_fx/e8jumpspawn02-5.wl                = { t_data=! }
+        evil8_fx/e8jumpspawn02-5_glow.wl           = { t_data=! }
+        evil8_fx/e8jumpspawn02-6.wl                = { t_data=! }
+        evil8_fx/e8jumpspawn02-6_glow.wl           = { t_data=! }
+        evil8_fx/e8jumpspawn02.wl                  = { t_data=! }
+        evil8_fx/e8jumpspawn02b.wl                 = { t_data=! }
+        evil8_fx/e8jumpspawn02c.wl                 = { t_data=! }
+        evil8_fx/e8jumpspawn02grey-1.wl            = { t_data=! }
+        evil8_fx/e8jumpspawn02grey-1_glow.wl       = { t_data=! }
+        evil8_fx/e8jumpspawn02grey-2.wl            = { t_data=! }
+        evil8_fx/e8jumpspawn02grey-2_glow.wl       = { t_data=! }
+        evil8_fx/e8jumpspawn02grey-3.wl            = { t_data=! }
+        evil8_fx/e8jumpspawn02grey-3_glow.wl       = { t_data=! }
+        evil8_fx/e8jumpspawn02grey-4.wl            = { t_data=! }
+        evil8_fx/e8jumpspawn02grey-4_glow.wl       = { t_data=! }
+        evil8_fx/e8jumpspawn02grey-5.wl            = { t_data=! }
+        evil8_fx/e8jumpspawn02grey-5_glow.wl       = { t_data=! }
+        evil8_fx/e8jumpspawn02grey-6.wl            = { t_data=! }
+        evil8_fx/e8jumpspawn02grey-6_glow.wl       = { t_data=! }
+        evil8_fx/e8jumpspawn02grey.wl              = { t_data=! }
+        evil8_fx/e8jumpspawn02grey_glow.wl         = { t_data=! }
+        evil8_fx/e8jumpspawn02red-1.wl             = { t_data=! }
+        evil8_fx/e8jumpspawn02red-1_glow.wl        = { t_data=! }
+        evil8_fx/e8jumpspawn02red-2.wl             = { t_data=! }
+        evil8_fx/e8jumpspawn02red-2_glow.wl        = { t_data=! }
+        evil8_fx/e8jumpspawn02red-3.wl             = { t_data=! }
+        evil8_fx/e8jumpspawn02red-3_glow.wl        = { t_data=! }
+        evil8_fx/e8jumpspawn02red-4.wl             = { t_data=! }
+        evil8_fx/e8jumpspawn02red-4_glow.wl        = { t_data=! }
+        evil8_fx/e8jumpspawn02red-5.wl             = { t_data=! }
+        evil8_fx/e8jumpspawn02red-5_glow.wl        = { t_data=! }
+        evil8_fx/e8jumpspawn02red-6.wl             = { t_data=! }
+        evil8_fx/e8jumpspawn02red-6_glow.wl        = { t_data=! }
+        evil8_fx/e8jumpspawn02red.wl               = { t_data=! }
+        evil8_fx/e8jumpspawn02red_glow.wl          = { t_data=! }
+        evil8_fx/e8jumpspawn02_glow.wl             = { t_data=! }
+        evil8_fx/e8jump_spawn01.wl                 = { t_data=! }
+        evil8_fx/e8jump_spawn01_gloss.wl           = { t_data=! }
+        evil8_fx/e8rail.wl                         = { t_data=! }
+        evil8_fx/e8red_dcl.wl                      = { t_data=! }
+        evil8_fx/e8scuffs1.wl                      = { t_data=! }
+        evil8_fx/e8spawn01b.wl                     = { t_data=! }
+        evil8_fx/e8stars.wl                        = { t_data=! }
+        evil8_fx/e8yarrow.wl                       = { t_data=! }
+        evil8_fx/e8_jumppad02.wl                   = { t_data=! }
+        evil8_fx/e8_jumppad02_gloss.wl             = { t_data=! }
+        evil8_fx/e8_launchpad1.wl                  = { t_data=! }
+        evil8_fx/e8_launchpad1_gloss.wl            = { t_data=! }
+        evil8_fx/e8_launchpad1_glow.wl             = { t_data=! }
+      }
+      evil8_grate.txlist =
+      {
+        evil8_grate/e8bgrate01_gloss.wl            = { t_data=! }
+        evil8_grate/e8xgirder.wl                   = { t_data=! }
+        evil8_grate/e8xgirder_gloss.wl             = { t_data=! }
+        evil8_grate/e8xgirder_small.wl             = { t_data=! }
+        evil8_grate/e8xgirder_small2.wl            = { t_data=! }
+        evil8_grate/e8xgirder_small2_gloss.wl      = { t_data=! }
+        evil8_grate/e8xgirder_small_gloss.wl       = { t_data=! }
+      }
+      evil8_lights.txlist =
+      {
+        evil8_lights/e8btrimlight.wl               = { t_data=! }
+        evil8_lights/e8btrimlight_gloss.wl         = { t_data=! }
+        evil8_lights/e8minitrimlight.wl            = { t_data=! }
+        evil8_lights/e8minitrimlight_glow.wl       = { t_data=! }
+        evil8_lights/e8tinylight.wl                = { t_data=! }
+        evil8_lights/e8tinylightblue.wl            = { t_data=! }
+        evil8_lights/e8tinylightblue_gloss.wl      = { t_data=! }
+        evil8_lights/e8tinylightblue_glow.wl       = { t_data=! }
+        evil8_lights/e8tinylight_gloss.wl          = { t_data=! }
+        evil8_lights/e8tinylight_glow.wl           = { t_data=! }
+        evil8_lights/e8tmtllight.wl                = { t_data=! }
+        evil8_lights/e8tmtllight2.wl               = { t_data=! }
+        evil8_lights/e8tmtllight2b.wl              = { t_data=! }
+        evil8_lights/e8tmtllight2b_gloss.wl        = { t_data=! }
+        evil8_lights/e8tmtllight2b_glow.wl         = { t_data=! }
+        evil8_lights/e8tmtllight2_gloss.wl         = { t_data=! }
+        evil8_lights/e8tmtllight2_glow.wl          = { t_data=! }
+        evil8_lights/e8tmtllight_gloss.wl          = { t_data=! }
+        evil8_lights/e8trimlight.wl                = { t_data=! }
+        evil8_lights/e8trimlight_gloss.wl          = { t_data=! }
+        evil8_lights/e8trimlight_glow.wl           = { t_data=! }
+        evil8_lights/e8_rlight.wl                  = { t_data=! }
+        evil8_lights/e8_rlightb.wl                 = { t_data=! }
+        evil8_lights/e8_rlightb2.wl                = { t_data=! }
+        evil8_lights/e8_rlightb2_gloss.wl          = { t_data=! }
+        evil8_lights/e8_rlightb2_glow.wl           = { t_data=! }
+        evil8_lights/e8_rlightb_gloss.wl           = { t_data=! }
+        evil8_lights/e8_rlight_glow.wl             = { t_data=! }
+      }
+      evil8_trim.txlist =
+      {
+        evil8_trim/e8basictrim2_blue.wl            = { t_data=! }
+        evil8_trim/e8basictrim2_blue_gloss.wl      = { t_data=! }
+        evil8_trim/e8basictrim2_red.wl             = { t_data=! }
+        evil8_trim/e8basictrim2_red_gloss.wl       = { t_data=! }
+        evil8_trim/e8basictrim_blue.wl             = { t_data=! }
+        evil8_trim/e8basictrim_blue_gloss.wl       = { t_data=! }
+        evil8_trim/e8basictrim_blue_glow.wl        = { t_data=! }
+        evil8_trim/e8basictrim_red.wl              = { t_data=! }
+        evil8_trim/e8basictrim_red_gloss.wl        = { t_data=! }
+        evil8_trim/e8basictrim_red_glow.wl         = { t_data=! }
+        evil8_trim/e8beam01.wl                     = { t_data=! }
+        evil8_trim/e8beam01b.wl                    = { t_data=! }
+        evil8_trim/e8beam01b_bump.wl               = { t_data=! }
+        evil8_trim/e8beam01b_gloss.wl              = { t_data=! }
+        evil8_trim/e8beam01_bump.wl                = { t_data=! }
+        evil8_trim/e8beam01_gloss.wl               = { t_data=! }
+        evil8_trim/e8beam02.wl                     = { t_data=! }
+        evil8_trim/e8beam02_gloss.wl               = { t_data=! }
+        evil8_trim/e8bolttrim.wl                   = { t_data=! }
+        evil8_trim/e8bolttrimb.wl                  = { t_data=! }
+        evil8_trim/e8bolttrimb_gloss.wl            = { t_data=! }
+        evil8_trim/e8bolttrim_bump.wl              = { t_data=! }
+        evil8_trim/e8bolttrim_gloss.wl             = { t_data=! }
+        evil8_trim/e8cretesmlltrim.wl              = { t_data=! }
+        evil8_trim/e8cretesmlltrim_gloss.wl        = { t_data=! }
+        evil8_trim/e8cretesupport_blue.wl          = { t_data=! }
+        evil8_trim/e8cretesupport_blue_bump.wl     = { t_data=! }
+        evil8_trim/e8cretesupport_blue_gloss.wl    = { t_data=! }
+        evil8_trim/e8cretesupport_red.wl           = { t_data=! }
+        evil8_trim/e8cretesupport_red_bump.wl      = { t_data=! }
+        evil8_trim/e8cretesupport_red_gloss.wl     = { t_data=! }
+        evil8_trim/e8lighttrim.wl                  = { t_data=! }
+        evil8_trim/e8lighttrim_b.wl                = { t_data=! }
+        evil8_trim/e8lighttrim_b_glow.wl           = { t_data=! }
+        evil8_trim/e8lighttrim_glow.wl             = { t_data=! }
+        evil8_trim/e8mtltrim.wl                    = { t_data=! }
+        evil8_trim/e8mtltrim1.wl                   = { t_data=! }
+        evil8_trim/e8mtltrim1b.wl                  = { t_data=! }
+        evil8_trim/e8mtltrim1b_bump.wl             = { t_data=! }
+        evil8_trim/e8mtltrim1b_gloss.wl            = { t_data=! }
+        evil8_trim/e8mtltrim2.wl                   = { t_data=! }
+        evil8_trim/e8smlltrim1.wl                  = { t_data=! }
+        evil8_trim/e8smlltrim1b.wl                 = { t_data=! }
+        evil8_trim/e8smlltrim1b_bump.wl            = { t_data=! }
+        evil8_trim/e8smlltrim1b_gloss.wl           = { t_data=! }
+        evil8_trim/e8smlltrim1_bump.wl             = { t_data=! }
+        evil8_trim/e8smlltrim1_gloss.wl            = { t_data=! }
+        evil8_trim/e8support01.wl                  = { t_data=! }
+        evil8_trim/e8support01b.wl                 = { t_data=! }
+        evil8_trim/e8support01b_bump.wl            = { t_data=! }
+        evil8_trim/e8support01c.wl                 = { t_data=! }
+        evil8_trim/e8support01c_bump.wl            = { t_data=! }
+        evil8_trim/e8support02.wl                  = { t_data=! }
+        evil8_trim/e8support02b.wl                 = { t_data=! }
+        evil8_trim/e8support02b_bump.wl            = { t_data=! }
+        evil8_trim/e8support02c.wl                 = { t_data=! }
+        evil8_trim/e8support02c_bump.wl            = { t_data=! }
+        evil8_trim/e8support02_bump.wl             = { t_data=! }
+        evil8_trim/e8support03.wl                  = { t_data=! }
+        evil8_trim/e8support03b.wl                 = { t_data=! }
+        evil8_trim/e8support03b_blue.wl            = { t_data=! }
+        evil8_trim/e8support03b_red.wl             = { t_data=! }
+        evil8_trim/e8support04b_blue.wl            = { t_data=! }
+        evil8_trim/e8support04b_red.wl             = { t_data=! }
+        evil8_trim/e8support04_blue.wl             = { t_data=! }
+        evil8_trim/e8support04_red.wl              = { t_data=! }
+        evil8_trim/e8support05.wl                  = { t_data=! }
+        evil8_trim/e8support05_bump.wl             = { t_data=! }
+        evil8_trim/e8support05_gloss.wl            = { t_data=! }
+        evil8_trim/e8support06.wl                  = { t_data=! }
+        evil8_trim/e8support06b.wl                 = { t_data=! }
+        evil8_trim/e8support06c.wl                 = { t_data=! }
+        evil8_trim/e8supporttrim01.wl              = { t_data=! }
+        evil8_trim/e8supporttrim01b.wl             = { t_data=! }
+        evil8_trim/e8trim2_blue.wl                 = { t_data=! }
+        evil8_trim/e8trim2_red.wl                  = { t_data=! }
+        evil8_trim/e8trimfx.wl                     = { t_data=! }
+        evil8_trim/e8trimfx_b.wl                   = { t_data=! }
+        evil8_trim/e8trimfx_r.wl                   = { t_data=! }
+        evil8_trim/e8trimlight.wl                  = { t_data=! }
+        evil8_trim/e8trimlight2_blue.wl            = { t_data=! }
+        evil8_trim/e8trimlight2_red.wl             = { t_data=! }
+        evil8_trim/e8trimlight_fx.wl               = { t_data=! }
+        evil8_trim/e8trimlight_gloss.wl            = { t_data=! }
+        evil8_trim/e8trim_blue.wl                  = { t_data=! }
+        evil8_trim/e8trim_bluefx.wl                = { t_data=! }
+        evil8_trim/e8trim_red.wl                   = { t_data=! }
+        evil8_trim/e8trim_redfx.wl                 = { t_data=! }
+        evil8_trim/e8wrntrim.wl                    = { t_data=! }
+        evil8_trim/e8wrntrim2.wl                   = { t_data=! }
+        evil8_trim/e8wrntrim2b.wl                  = { t_data=! }
+        evil8_trim/e8wrntrim_bump.wl               = { t_data=! }
+        evil8_trim/e8wrntrim_gloss.wl              = { t_data=! }
+        evil8_trim/e8_btrim01.wl                   = { t_data=! }
+        evil8_trim/e8_btrim01b.wl                  = { t_data=! }
+        evil8_trim/e8_btrim01b_gloss.wl            = { t_data=! }
+        evil8_trim/e8_btrim01_bump.wl              = { t_data=! }
+        evil8_trim/e8_btrim01_gloss.wl             = { t_data=! }
+        evil8_trim/e8_btrim02.wl                   = { t_data=! }
+        evil8_trim/e8_btrim02_gloss.wl             = { t_data=! }
+        evil8_trim/e8_btrim03.wl                   = { t_data=! }
+        evil8_trim/e8_btrim03b.wl                  = { t_data=! }
+        evil8_trim/e8_btrim03b_gloss.wl            = { t_data=! }
+        evil8_trim/e8_btrim03_gloss.wl             = { t_data=! }
+        evil8_trim/e8_btrim04.wl                   = { t_data=! }
+        evil8_trim/e8_btrim04b.wl                  = { t_data=! }
+        evil8_trim/e8_btrim04b_bump.wl             = { t_data=! }
+        evil8_trim/e8_btrim04b_gloss.wl            = { t_data=! }
+        evil8_trim/e8_btrim04_gloss.wl             = { t_data=! }
+        evil8_trim/e8_btrim05.wl                   = { t_data=! }
+        evil8_trim/e8_btrim05b.wl                  = { t_data=! }
+        evil8_trim/e8_btrim05b_gloss.wl            = { t_data=! }
+        evil8_trim/e8_btrim05_bump.wl              = { t_data=! }
+        evil8_trim/e8_btrim05_gloss.wl             = { t_data=! }
+      }
+      evil8_wall.txlist =
+      {
+        evil8_wall/e8crete03b.wl                   = { t_data=! }
+        evil8_wall/e8crete03b_bump.wl              = { t_data=! }
+        evil8_wall/e8crete03b_gloss.wl             = { t_data=! }
+        evil8_wall/e8crete03c.wl                   = { t_data=! }
+        evil8_wall/e8crete03cc.wl                  = { t_data=! }
+        evil8_wall/e8crete03cc_bump.wl             = { t_data=! }
+        evil8_wall/e8crete03cc_gloss.wl            = { t_data=! }
+        evil8_wall/e8crete03c_bump.wl              = { t_data=! }
+        evil8_wall/e8crete03c_gloss.wl             = { t_data=! }
+        evil8_wall/e8crete03d.wl                   = { t_data=! }
+        evil8_wall/e8crete03d_bump.wl              = { t_data=! }
+        evil8_wall/e8crete03d_gloss.wl             = { t_data=! }
+        evil8_wall/e8crete03e.wl                   = { t_data=! }
+        evil8_wall/e8crete03e_bump.wl              = { t_data=! }
+        evil8_wall/e8crete03e_gloss.wl             = { t_data=! }
+        evil8_wall/e8crete03e_neu.wl               = { t_data=! }
+        evil8_wall/e8crete03f.wl                   = { t_data=! }
+        evil8_wall/e8crete03f_bump.wl              = { t_data=! }
+        evil8_wall/e8crete03f_gloss.wl             = { t_data=! }
+        evil8_wall/e8crete03g.wl                   = { t_data=! }
+        evil8_wall/e8crete03g_bump.wl              = { t_data=! }
+        evil8_wall/e8crete03g_gloss.wl             = { t_data=! }
+        evil8_wall/e8crete_pillar.wl               = { t_data=! }
+        evil8_wall/e8crete_pillarb.wl              = { t_data=! }
+        evil8_wall/e8crete_pillarb_bump.wl         = { t_data=! }
+        evil8_wall/e8crete_pillarb_gloss.wl        = { t_data=! }
+        evil8_wall/e8crete_pillarc.wl              = { t_data=! }
+        evil8_wall/e8crete_pillarc_bump.wl         = { t_data=! }
+        evil8_wall/e8crete_pillarc_gloss.wl        = { t_data=! }
+        evil8_wall/e8crete_pillar_bump.wl          = { t_data=! }
+        evil8_wall/e8crete_pillar_gloss.wl         = { t_data=! }
+        evil8_wall/e8_mtlwall1.wl                  = { t_data=! }
+        evil8_wall/e8_mtlwall1b.wl                 = { t_data=! }
+        evil8_wall/e8_mtlwall1b_bump.wl            = { t_data=! }
+        evil8_wall/e8_mtlwall1b_gloss.wl           = { t_data=! }
+        evil8_wall/e8_mtlwall1_bump.wl             = { t_data=! }
+        evil8_wall/e8_mtlwall1_gloss.wl            = { t_data=! }
+        evil8_wall/e8_mtlwall2.wl                  = { t_data=! }
+        evil8_wall/e8_mtlwall2_bump.wl             = { t_data=! }
+        evil8_wall/e8_mtlwall2_gloss.wl            = { t_data=! }
+        evil8_wall/e8_mtlwall3.wl                  = { t_data=! }
+        evil8_wall/e8_mtlwall3b.wl                 = { t_data=! }
+        evil8_wall/e8_mtlwall3b_bump.wl            = { t_data=! }
+        evil8_wall/e8_mtlwall3b_gloss.wl           = { t_data=! }
+        evil8_wall/e8_mtlwall3_bump.wl             = { t_data=! }
+        evil8_wall/e8_mtlwall3_gloss.wl            = { t_data=! }
+        evil8_wall/e8_mtlwall4.wl                  = { t_data=! }
+        evil8_wall/e8_mtlwall4_bump.wl             = { t_data=! }
+        evil8_wall/e8_mtlwall4_gloss.wl            = { t_data=! }
+      }
+      evil9.txlist =
+      {
+        evil9/9basetrim01.wl                       = { t_data=! }
+        evil9/9darktrim02b.wl                      = { t_data=! }
+        evil9/9floorbasic01b.wl                    = { t_data=! }
+        evil9/9gratefloor01b.wl                    = { t_data=! }
+        evil9/9gratefloor02.wl                     = { t_data=! }
+        evil9/9hangwires01b.wl                     = { t_data=! }
+        evil9/9screen01.wl                         = { t_data=! }
+        evil9/9techwall01.wl                       = { t_data=! }
+        evil9/9techwall03b.wl                      = { t_data=! }
+        evil9/9techwall05b.wl                      = { t_data=! }
+        evil9/9techwall06.wl                       = { t_data=! }
+        evil9/9techwall07.wl                       = { t_data=! }
+      }
+      evil_basemetal.txlist =
+      {
+        evil_basemetal/p_mtl_blue.wl               = { t_data=! }
+      }
+      evil_basewall.txlist =
+      {
+        evil_basewall/mtl_gray.wl                  = { t_data=! }
+        evil_basewall/mtl_gray3.wl                 = { t_data=! }
+        evil_basewall/mtl_gray4_sec1.wl            = { t_data=! }
+        evil_basewall/mtl_midwrn.wl                = { t_data=! }
+      }
+      evil_d_techwalls.txlist =
+      {
+        evil_d_techwalls/d_drkmtlsupport.wl        = { t_data=! }
+        evil_d_techwalls/d_drkmtl_dpanelb.wl       = { t_data=! }
+        evil_d_techwalls/d_tech_dw2.wl             = { t_data=! }
+        evil_d_techwalls/d_tech_dw2g.wl            = { t_data=! }
+        evil_d_techwalls/d_tech_dw2gb.wl           = { t_data=! }
+        evil_d_techwalls/d_tech_dw2_fx.wl          = { t_data=! }
+      }
+      evil_floor.txlist =
+      {
+        evil_floor/confllrtile.wl                  = { t_data=! }
+        evil_floor/confllrtile2.wl                 = { t_data=! }
+      }
+      evil_floors.txlist =
+      {
+        evil_floors/grtmtl_offt.wl                 = { t_data=! }
+        evil_floors/t-flr_oddtile_cln.wl           = { t_data=! }
+        evil_floors/t-flr_oddtile_drty.wl          = { t_data=! }
+        evil_floors/t-flr_oddtile_drty_0000.wl     = { t_data=! }
+        evil_floors/t-flr_oddtile_drty_glow.wl     = { t_data=! }
+      }
+      evil_lights.txlist =
+      {
+        evil_lights/drkmtlsupport_light.wl         = { t_data=! }
+        evil_lights/drkmtlsupport_light_glow.wl    = { t_data=! }
+        evil_lights/mtl_l1.wl                      = { t_data=! }
+        evil_lights/mtl_l1_fx.wl                   = { t_data=! }
+        evil_lights/mtl_l1_fx2.wl                  = { t_data=! }
+        evil_lights/rlight_a.wl                    = { t_data=! }
+        evil_lights/rlight_a_glow.wl               = { t_data=! }
+        evil_lights/steplight.wl                   = { t_data=! }
+        evil_lights/steplight_glow.wl              = { t_data=! }
+        evil_lights/s_bluelight.wl                 = { t_data=! }
+        evil_lights/s_bluelight_glow.wl            = { t_data=! }
+        evil_lights/trim_light.wl                  = { t_data=! }
+      }
+      evil_metal.txlist =
+      {
+        evil_metal/rstmtlbxfrm.wl                  = { t_data=! }
+        evil_metal/walltek3.wl                     = { t_data=! }
+      }
+      evil_metals.txlist =
+      {
+        evil_metals/drkmtl_grlpltmech.wl           = { t_data=! }
+        evil_metals/drkmtl_grlpltmech_fx.wl        = { t_data=! }
+        evil_metals/drkmtl_grlpltmech_fx2.wl       = { t_data=! }
+        evil_metals/eshinytin.wl                   = { t_data=! }
+        evil_metals/mtldrk0.wl                     = { t_data=! }
+        evil_metals/mtloverlaprwll.wl              = { t_data=! }
+        evil_metals/mtlpanelsmll.wl                = { t_data=! }
+        evil_metals/mtlslots.wl                    = { t_data=! }
+        evil_metals/mtltechwall.wl                 = { t_data=! }
+        evil_metals/mtl_rivplt2-yellow.wl          = { t_data=! }
+        evil_metals/tekwallmulti2.wl               = { t_data=! }
+        evil_metals/tekwallmulti_wrn2.wl           = { t_data=! }
+        evil_metals/tekwallmulti_wrnlights.wl      = { t_data=! }
+        evil_metals/trim_wrnrivets.wl              = { t_data=! }
+      }
+      evil_techfloors.txlist =
+      {
+        evil_techfloors/tflooroddtile.wl           = { t_data=! }
+      }
+      evil_techtrims.txlist =
+      {
+        evil_techtrims/dwtrim_grill.wl             = { t_data=! }
+      }
+      evil_techwalls.txlist =
+      {
+        evil_techwalls/mechanical_old.wl           = { t_data=! }
+        evil_techwalls/tech_drkwall.wl             = { t_data=! }
+      }
+      evil_trim.txlist =
+      {
+        evil_trim/stepside_mtl.wl                  = { t_data=! }
+        evil_trim/stepside_mtl3.wl                 = { t_data=! }
+        evil_trim/stepside_mtllight.wl             = { t_data=! }
+        evil_trim/stepside_mtllight_glow.wl        = { t_data=! }
+        evil_trim/steptop_mtl.wl                   = { t_data=! }
+        evil_trim/steptop_mtl2.wl                  = { t_data=! }
+        evil_trim/trimwrn_rstmtl.wl                = { t_data=! }
+        evil_trim/trimwrn_rstmtl_bump.wl           = { t_data=! }
+        evil_trim/trimwrn_rstmtl_gloss.wl          = { t_data=! }
+        evil_trim/trim_drkmtl.wl                   = { t_data=! }
+        evil_trim/trim_wrnodd.wl                   = { t_data=! }
+      }
+      eX.txlist =
+      {
+        eX/eXmetalBase01_bump.wl                   = { t_data=! }
+        eX/eXmetalBase02_bump.wl                   = { t_data=! }
+        eX/eXmetalBase03_bump.wl                   = { t_data=! }
+        eX/eXmetalBase05Rust_bump.wl               = { t_data=! }
+        eX/eXmetalFloor02_bump.wl                  = { t_data=! }
+        eX/eXmetalrib01_bump.wl                    = { t_data=! }
+        eX/eXmetal_plate01B_bump.wl                = { t_data=! }
+        eX/eXmetal_plate01c_bump.wl                = { t_data=! }
+        eX/eXmetal_plate01_bump.wl                 = { t_data=! }
+        eX/eX_clangfloor_01b_bump.wl               = { t_data=! }
+        eX/eX_clangfloor_01_bump.wl                = { t_data=! }
+        eX/eX_cretefloor_01_bump.wl                = { t_data=! }
+        eX/eX_cretewall_01_bump.wl                 = { t_data=! }
+        eX/eX_cretewall_02_bump.wl                 = { t_data=! }
+        eX/eX_cretewall_03b_bump.wl                = { t_data=! }
+        eX/eX_cretewall_03_bump.wl                 = { t_data=! }
+        eX/eX_deswall_01_bump.wl                   = { t_data=! }
+        eX/eX_floorpanel_01_bump.wl                = { t_data=! }
+        eX/eX_floor_grate03_bump.wl                = { t_data=! }
+        eX/eX_floor_grate_03_128_bump.wl           = { t_data=! }
+        eX/eX_floor_grate_03_bump.wl               = { t_data=! }
+        eX/eX_floor_mtl_grate_01_bump.wl           = { t_data=! }
+        eX/eX_floor_mtl_wrn_01_bump.wl             = { t_data=! }
+        eX/eX_floor_simple_05_bump.wl              = { t_data=! }
+        eX/eX_floor_simplines_bump.wl              = { t_data=! }
+        eX/eX_floor_tile_03_bump.wl                = { t_data=! }
+        eX/eX_floor_tread_01_bump.wl               = { t_data=! }
+        eX/eX_light_u201_bump.wl                   = { t_data=! }
+        eX/eX_metalplate_01_bump.wl                = { t_data=! }
+        eX/eX_metalSupp01_bump.wl                  = { t_data=! }
+        eX/eX_metalwall02_bump.wl                  = { t_data=! }
+        eX/eX_mtl_bigplate_04b_bump.wl             = { t_data=! }
+        eX/eX_mtl_bigplate_04_bump.wl              = { t_data=! }
+        eX/eX_mtl_panel_02_bump.wl                 = { t_data=! }
+        eX/eX_mtl_panel_03_bump.wl                 = { t_data=! }
+        eX/eX_mtl_panel_04_bump.wl                 = { t_data=! }
+        eX/eX_q2_01b_bump.wl                       = { t_data=! }
+        eX/eX_q2_01c_bump.wl                       = { t_data=! }
+        eX/eX_q2_01d_bump.wl                       = { t_data=! }
+        eX/eX_q2_01e_bump.wl                       = { t_data=! }
+        eX/eX_q2_01_bump.wl                        = { t_data=! }
+        eX/eX_rndfloor_01_bump.wl                  = { t_data=! }
+        eX/eX_rndfloor_02_bump.wl                  = { t_data=! }
+        eX/eX_rplates_01_bump.wl                   = { t_data=! }
+        eX/eX_steptop_01_bump.wl                   = { t_data=! }
+        eX/eX_trim_01_bump.wl                      = { t_data=! }
+        eX/eX_trim_baseboard_02_bump.wl            = { t_data=! }
+        eX/eX_trim_baseboard_03_bump.wl            = { t_data=! }
+        eX/eX_trim_baseboard_bump.wl               = { t_data=! }
+        eX/eX_trim_psimple_04_bump.wl              = { t_data=! }
+        eX/eX_trim_psimple_05_bump.wl              = { t_data=! }
+        eX/eX_trim_simple03_bump.wl                = { t_data=! }
+        eX/eX_trim_simple_01_bump.wl               = { t_data=! }
+        eX/eX_trim_support_03_bump.wl              = { t_data=! }
+        eX/eX_trim_vert_01_bump.wl                 = { t_data=! }
+        eX/eX_wall_01b_bump.wl                     = { t_data=! }
+        eX/eX_wall_01_bump.wl                      = { t_data=! }
+        eX/eX_wall_b01_bump.wl                     = { t_data=! }
+        eX/eX_wall_bigrib_02_bump.wl               = { t_data=! }
+        eX/eX_wall_bplate_06_bump.wl               = { t_data=! }
+        eX/eX_wall_panels_08b_bump.wl              = { t_data=! }
+        eX/eX_wall_panels_08_bump.wl               = { t_data=! }
+        eX/eX_wall_panel_05_bump.wl                = { t_data=! }
+        eX/eX_wall_pipe_bump.wl                    = { t_data=! }
+        eX/eX_wall_u207_bump.wl                    = { t_data=! }
+      }
+      final_rage.txlist =
+      {
+        final_rage/drkmtl_default.wl               = { t_data=! }
+        final_rage/drkmtl_default_bump.wl          = { t_data=! }
+        final_rage/drkmtl_default_gloss.wl         = { t_data=! }
+        final_rage/drkmtl_oddtrim.wl               = { t_data=! }
+        final_rage/drkmtl_oddtrim_bump.wl          = { t_data=! }
+        final_rage/drkmtl_oddtrim_gloss.wl         = { t_data=! }
+        final_rage/dwtrim_grill.wl                 = { t_data=! }
+        final_rage/dwtrim_grill_bump.wl            = { t_data=! }
+        final_rage/dwtrim_grill_gloss.wl           = { t_data=! }
+        final_rage/lava.wl                         = { t_data=! }
+        final_rage/lava_glow.wl                    = { t_data=! }
+        final_rage/mtltekfloor.wl                  = { t_data=! }
+        final_rage/mtltekfloor_bump.wl             = { t_data=! }
+        final_rage/mtltekfloor_gloss.wl            = { t_data=! }
+        final_rage/mtltekfloor_glow.wl             = { t_data=! }
+        final_rage/nd-lava.wl                      = { t_data=! }
+      }
+      harlequin_sky/env.txlist =
+      {
+        harlequin_sky/env/nebular_bk.wl            = { t_data=! }
+        harlequin_sky/env/nebular_dn.wl            = { t_data=! }
+        harlequin_sky/env/nebular_ft.wl            = { t_data=! }
+        harlequin_sky/env/nebular_lf.wl            = { t_data=! }
+        harlequin_sky/env/nebular_rt.wl            = { t_data=! }
+        harlequin_sky/env/nebular_up.wl            = { t_data=! }
+      }
+      kaznexctf2.txlist =
+      {
+        kaznexctf2/large_blue.wl                   = { t_data=! }
+        kaznexctf2/large_blue_glow.wl              = { t_data=! }
+        kaznexctf2/large_red.wl                    = { t_data=! }
+        kaznexctf2/large_red_glow.wl               = { t_data=! }
+        kaznexctf2/long_light.wl                   = { t_data=! }
+        kaznexctf2/long_light_glow.wl              = { t_data=! }
+        kaznexctf2/small_blue.wl                   = { t_data=! }
+        kaznexctf2/small_blue_glow.wl              = { t_data=! }
+        kaznexctf2/small_light.wl                  = { t_data=! }
+        kaznexctf2/small_light_glow.wl             = { t_data=! }
+        kaznexctf2/small_red.wl                    = { t_data=! }
+        kaznexctf2/small_red_glow.wl               = { t_data=! }
+      }
+      liquids.txlist =
+      {
+        liquids/e7sfx_lava.wl                      = { t_data=! }
+        liquids/protolava.wl                       = { t_data=! }
+        liquids/protolava_glow.wl                  = { t_data=! }
+        liquids/slime1.wl                          = { t_data=! }
+      }
+      morphed.txlist =
+      {
+        morphed/gelslime_bright.wl                 = { t_data=! }
+        morphed/gelslime_glow.wl                   = { t_data=! }
+      }
+      Reaptxt.txlist =
+      {
+        Reaptxt/hrlamp.wl                          = { t_data=! }
+      }
+      rustymetal_tex.txlist =
+      {
+        rustymetal_tex/wall01_gloss.wl             = { t_data=! }
+        rustymetal_tex/wall02_gloss.wl             = { t_data=! }
+        rustymetal_tex/wall03_gloss.wl             = { t_data=! }
+        rustymetal_tex/wall04_gloss.wl             = { t_data=! }
+        rustymetal_tex/wall05_gloss.wl             = { t_data=! }
+      }
+      savdm6ish.txlist =
+      {
+        savdm6ish/#lava1.wl                        = { t_data=! }
+        savdm6ish/#teleport.wl                     = { t_data=! }
+        savdm6ish/afloor1_3.wl                     = { t_data=! }
+        savdm6ish/ceil1_1.wl                       = { t_data=! }
+        savdm6ish/ceil1_1_luma.wl                  = { t_data=! }
+        savdm6ish/elwall2_4.wl                     = { t_data=! }
+        savdm6ish/floor01_5.wl                     = { t_data=! }
+        savdm6ish/floor01_5_bump.wl                = { t_data=! }
+        savdm6ish/floor01_5_gloss.wl               = { t_data=! }
+        savdm6ish/light3_7.wl                      = { t_data=! }
+        savdm6ish/light3_7_luma.wl                 = { t_data=! }
+        savdm6ish/light3_8.wl                      = { t_data=! }
+        savdm6ish/light3_8_luma.wl                 = { t_data=! }
+        savdm6ish/mmetal1_6.wl                     = { t_data=! }
+        savdm6ish/mmetal_1_6_bump.wl               = { t_data=! }
+        savdm6ish/mmetal_1_6_gloss.wl              = { t_data=! }
+        savdm6ish/plat_top2.wl                     = { t_data=! }
+        savdm6ish/sfloor1_2.wl                     = { t_data=! }
+        savdm6ish/sfloor1_2_bump.wl                = { t_data=! }
+        savdm6ish/sfloor1_2_gloss.wl               = { t_data=! }
+        savdm6ish/wall14_5.wl                      = { t_data=! }
+        savdm6ish/wall14_5_bump.wl                 = { t_data=! }
+        savdm6ish/wall14_5_gloss.wl                = { t_data=! }
+        savdm6ish/wall5_4.wl                       = { t_data=! }
+        savdm6ish/wiz1_4.wl                        = { t_data=! }
+        savdm6ish/wiz1_4_bump.wl                   = { t_data=! }
+        savdm6ish/wiz1_4_gloss.wl                  = { t_data=! }
+        savdm6ish/wizwood1_2.wl                    = { t_data=! }
+        savdm6ish/wizwood1_4.wl                    = { t_data=! }
+        savdm6ish/wizwood1_5.wl                    = { t_data=! }
+        savdm6ish/wood1_1.wl                       = { t_data=! }
+      }
+      sfx.txlist =
+      {
+        sfx/zap_scroll.wl                          = { t_data=! }
+        sfx/zap_scroll2.wl                         = { t_data=! }
+      }
+      shad.txlist =
+      {
+        shad/shad.wl                               = { t_data=! }
+      }
+      straledm6.txlist =
+      {
+        straledm6/creteshorter_y.wl                = { t_data=! }
+      }
+      stralenex1.txlist =
+      {
+        stralenex1/drkmtl_grlpltmech.wl            = { t_data=! }
+        stralenex1/d_tech_dw2.wl                   = { t_data=! }
+        stralenex1/d_tech_dw2gb.wl                 = { t_data=! }
+        stralenex1/e6basicstrip_blue.wl            = { t_data=! }
+        stralenex1/e6btrim_light.wl                = { t_data=! }
+        stralenex1/e6horzovallight.wl              = { t_data=! }
+        stralenex1/e6horzovallight_glow.wl         = { t_data=! }
+        stralenex1/e6vertgrt_supp.wl               = { t_data=! }
+        stralenex1/e7beam02_blue.wl                = { t_data=! }
+        stralenex1/e8_btrim04c.wl                  = { t_data=! }
+        stralenex1/jumppad.wl                      = { t_data=! }
+        stralenex1/jumppad_glow.wl                 = { t_data=! }
+        stralenex1/light_tube_green.wl             = { t_data=! }
+        stralenex1/light_tube_green_glow.wl        = { t_data=! }
+        stralenex1/mtl_l1.wl                       = { t_data=! }
+        stralenex1/mtl_l1_fx.wl                    = { t_data=! }
+        stralenex1/newstrip_blue.wl                = { t_data=! }
+        stralenex1/newstrip_blue_glow.wl           = { t_data=! }
+        stralenex1/newstrip_grey.wl                = { t_data=! }
+        stralenex1/newstrip_grey_glow.wl           = { t_data=! }
+        stralenex1/newstrip_red.wl                 = { t_data=! }
+        stralenex1/newstrip_red_glow.wl            = { t_data=! }
+        stralenex1/rlight_a.wl                     = { t_data=! }
+        stralenex1/slimepit_ad-1.wl                = { t_data=! }
+        stralenex1/slimepit_ad-10.wl               = { t_data=! }
+        stralenex1/slimepit_ad-10_glow.wl          = { t_data=! }
+        stralenex1/slimepit_ad-11.wl               = { t_data=! }
+        stralenex1/slimepit_ad-11_glow.wl          = { t_data=! }
+        stralenex1/slimepit_ad-1_glow.wl           = { t_data=! }
+        stralenex1/slimepit_ad-2.wl                = { t_data=! }
+        stralenex1/slimepit_ad-2_glow.wl           = { t_data=! }
+        stralenex1/slimepit_ad-3.wl                = { t_data=! }
+        stralenex1/slimepit_ad-3_glow.wl           = { t_data=! }
+        stralenex1/slimepit_ad-4.wl                = { t_data=! }
+        stralenex1/slimepit_ad-4_glow.wl           = { t_data=! }
+        stralenex1/slimepit_ad-5.wl                = { t_data=! }
+        stralenex1/slimepit_ad-5_glow.wl           = { t_data=! }
+        stralenex1/slimepit_ad-6.wl                = { t_data=! }
+        stralenex1/slimepit_ad-6_glow.wl           = { t_data=! }
+        stralenex1/slimepit_ad-7.wl                = { t_data=! }
+        stralenex1/slimepit_ad-7_glow.wl           = { t_data=! }
+        stralenex1/slimepit_ad-8.wl                = { t_data=! }
+        stralenex1/slimepit_ad-8_glow.wl           = { t_data=! }
+        stralenex1/slimepit_ad-9.wl                = { t_data=! }
+        stralenex1/slimepit_ad-9_glow.wl           = { t_data=! }
+        stralenex1/slimepit_ad.wl                  = { t_data=! }
+        stralenex1/slimepit_ad_glow.wl             = { t_data=! }
+        stralenex1/slime_rev-1.wl                  = { t_data=! }
+        stralenex1/slime_rev-1_glow.wl             = { t_data=! }
+        stralenex1/slime_rev-2.wl                  = { t_data=! }
+        stralenex1/slime_rev-2_glow.wl             = { t_data=! }
+        stralenex1/slime_rev-3.wl                  = { t_data=! }
+        stralenex1/slime_rev-3_glow.wl             = { t_data=! }
+        stralenex1/slime_rev.wl                    = { t_data=! }
+        stralenex1/slime_rev_glow.wl               = { t_data=! }
+        stralenex1/steplight.wl                    = { t_data=! }
+        stralenex1/stepside_mtllight.wl            = { t_data=! }
+        stralenex1/stralenex5_fakesky.wl           = { t_data=! }
+        stralenex1/stralenex5_water.wl             = { t_data=! }
+        stralenex1/stralenex_roundlight.wl         = { t_data=! }
+        stralenex1/stralenex_roundlight_glow.wl    = { t_data=! }
+        stralenex1/stralenex_trimlight.wl          = { t_data=! }
+        stralenex1/stralenex_trimlight_glow.wl     = { t_data=! }
+        stralenex1/s_bluelight.wl                  = { t_data=! }
+        stralenex1/s_bluelight_glow.wl             = { t_data=! }
+      }
+      strength.txlist =
+      {
+        strength/e6redmtl_light.wl                 = { t_data=! }
+        strength/e6redmtl_light_glow.wl            = { t_data=! }
+        strength/e8beam_yellow.wl                  = { t_data=! }
+        strength/e8circle_yellow.wl                = { t_data=! }
+        strength/eX_cretefloor_01glow_bump.wl      = { t_data=! }
+        strength/eX_cretefloor_01glow_gloss.wl     = { t_data=! }
+        strength/eX_cretefloor_01glow_glow.wl      = { t_data=! }
+        strength/eX_trim_simple_01b.wl             = { t_data=! }
+        strength/eX_trim_simple_01b_gloss.wl       = { t_data=! }
+        strength/light-liney-1.wl                  = { t_data=! }
+        strength/light-liney-1_glow.wl             = { t_data=! }
+        strength/light-liney-2.wl                  = { t_data=! }
+        strength/light-liney-2_glow.wl             = { t_data=! }
+        strength/light-liney-3.wl                  = { t_data=! }
+        strength/light-liney-3_glow.wl             = { t_data=! }
+        strength/light-liney-4.wl                  = { t_data=! }
+        strength/light-liney-4_glow.wl             = { t_data=! }
+        strength/light-liney-5.wl                  = { t_data=! }
+        strength/light-liney-5_glow.wl             = { t_data=! }
+        strength/light-liney.wl                    = { t_data=! }
+        strength/light-lineya.wl                   = { t_data=! }
+        strength/light-liney_glow.wl               = { t_data=! }
+        strength/light_slots-1.wl                  = { t_data=! }
+        strength/light_slots-1_glow.wl             = { t_data=! }
+        strength/light_slots-2.wl                  = { t_data=! }
+        strength/light_slots-2_glow.wl             = { t_data=! }
+        strength/light_slots-3.wl                  = { t_data=! }
+        strength/light_slots-3_glow.wl             = { t_data=! }
+        strength/light_slots-4.wl                  = { t_data=! }
+        strength/light_slots-4_glow.wl             = { t_data=! }
+        strength/light_slots.wl                    = { t_data=! }
+        strength/light_slots_glow.wl               = { t_data=! }
+        strength/sand_bump.wl                      = { t_data=! }
+        strength/sand_gloss.wl                     = { t_data=! }
+        strength/strength_jp-1.wl                  = { t_data=! }
+        strength/strength_jp-1_glow.wl             = { t_data=! }
+        strength/strength_jp-2.wl                  = { t_data=! }
+        strength/strength_jp-2_glow.wl             = { t_data=! }
+        strength/strength_jp-3.wl                  = { t_data=! }
+        strength/strength_jp-3_glow.wl             = { t_data=! }
+        strength/strength_jp-4.wl                  = { t_data=! }
+        strength/strength_jp-4_glow.wl             = { t_data=! }
+        strength/strength_jp-5.wl                  = { t_data=! }
+        strength/strength_jp-5_glow.wl             = { t_data=! }
+        strength/strength_jp-6.wl                  = { t_data=! }
+        strength/strength_jp-6_glow.wl             = { t_data=! }
+        strength/strength_jp.wl                    = { t_data=! }
+        strength/strength_jp_glow.wl               = { t_data=! }
+        strength/strength_rlight.wl                = { t_data=! }
+        strength/strength_rlight_glow.wl           = { t_data=! }
+        strength/strength_ylight.wl                = { t_data=! }
+        strength/strength_ylight_glow.wl           = { t_data=! }
+      }
+      tech1soc_mat.txlist =
+      {
+        tech1soc_mat/mat5c.wl                      = { t_data=! }
+      }
+      terrain_dotproduct2.txlist =
+      {
+        terrain_dotproduct2/grass01-rock05.wl      = { t_data=! }
+        terrain_dotproduct2/leafs01-rock02.wl      = { t_data=! }
+        terrain_dotproduct2/mossrock02-mudground04.wl= { t_data=! }
+        terrain_dotproduct2/mudground01_rock01.wl  = { t_data=! }
+        terrain_dotproduct2/mudground02-rock06.wl  = { t_data=! }
+        terrain_dotproduct2/sand-rock07.wl         = { t_data=! }
+        terrain_dotproduct2/snow-rock05.wl         = { t_data=! }
+      }
+      terrain_dotproduct2projected.txlist =
+      {
+        terrain_dotproduct2projected/grass01-rock05.wl= { t_data=! }
+        terrain_dotproduct2projected/leafs01-rock02.wl= { t_data=! }
+        terrain_dotproduct2projected/mossrock02-mudground04.wl= { t_data=! }
+        terrain_dotproduct2projected/mudground01_rock01.wl= { t_data=! }
+        terrain_dotproduct2projected/mudground02-rock06.wl= { t_data=! }
+        terrain_dotproduct2projected/sand-rock07.wl= { t_data=! }
+        terrain_dotproduct2projected/snow-rock05.wl= { t_data=! }
+      }
+      tymo3t5.txlist =
+      {
+        tymo3t5/wf1.wl                             = { t_data=! }
+        tymo3t5/wf2.wl                             = { t_data=! }
+      }
+      tznex01.txlist =
+      {
+        tznex01/stained_glass_nexlogo_blue_qei.wl  = { t_data=! }
+        tznex01/stained_glass_nexlogo_red_qei.wl   = { t_data=! }
+      }
+      water.txlist =
+      {
+        water/pool3d_5e.wl                         = { t_data=! }
+        water/ruiner_water.wl                      = { t_data=! }
+        water/tzorkwater-blue.wl                   = { t_data=! }
+      }
+    }
+  }
+}

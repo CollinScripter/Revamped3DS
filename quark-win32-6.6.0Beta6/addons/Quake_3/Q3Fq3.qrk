@@ -1,0 +1,1054 @@
+QQRKSRC1
+// This file has been written by QuArK Version 5.11
+// It's the text version of file: Q3Fq3.qrk
+
+// Configuration file for Quake3Fortress
+//
+//   This file is maintained by Decker, send bug-reports to decker@post1.tele.dk.
+//
+//$Header: /cvsroot/quark/runtime/addons/Quake_3/Q3Fq3.qrk,v 1.5 2008/09/14 12:54:59 danielpharos Exp $
+// ----------- REVISION HISTORY ------------
+//$Log: Q3Fq3.qrk,v $
+//Revision 1.5  2008/09/14 12:54:59  danielpharos
+//Changes to Help system: All forms now have a customizable help-link. Also, added an fallback option to the online infobase docs.
+//
+//Revision 1.4  2005/10/15 01:00:02  cdunde
+//To reinstate headers and history
+//
+//Revision 1.1  2001/02/11 11:09:59  decker_dk
+//Moved from addons directory
+//
+//
+// 2000-04-xx   Begun creating Q3Fq3.QRK. Use a TAB-size of 4.
+{
+  Description = "Q3Fortress Data Add-on"
+
+  Q3Fortress directory infos.qctx =
+  {
+    Game = "Quake 3"
+    SourceDir = "q3f"
+    GameDir = "q3f"
+  }
+
+  Toolbox Folders.qtx =
+  {
+    t_orig_ang:incl = { angle="360" origin="0 0 0" }
+
+    ToolBox = "New map items..."
+    Root = "Q3Fortress.qtxfolder"
+    Q3Fortress.qtxfolder =
+    {
+      Q3F Entities.qtxfolder =
+      {
+        ;desc = "Send additions/corrections to decker@post1.tele.dk"
+
+        info_player_deathmatch:e  = { ;desc="potential spawning position for deathmatch games" t_orig_ang=! }
+        info_notnull:e            = { ;desc="The target for a misc_portal_director" t_orig_ang=! }
+        misc_portal_camera:e      = { ;desc="Used as a positional target for in-game calculation" t_orig_ang=! }
+        func_door:b               = { ;desc="Door" ;incl="defpoly" angle="360" }
+        func_plat:b               = { ;desc="Platform" ;incl="defpoly" angle="360" }
+        func_button:b             = { ;desc="Button" ;incl="defpoly" angle="360" }
+        trigger_multiple:b        = { ;desc="Trigger Multiple" ;incl="trigpoly" }
+        trigger_teleport:b        = { ;desc="Trigger Teleport" ;incl="trigpoly" }
+        func_goalinfo:e           = { ;desc="A basic 'point entity' that becomes active when touched" t_orig_ang=! }
+        func_goalitem:e           = { ;desc="A basic 'point entity' that becomes carried when touched" t_orig_ang=! }
+        func_commandpoint:e       = { ;desc="A command point entity - teams can claim this, and it will trigger for them at regular intervals" t_orig_ang=! }
+        func_hud:e                = { ;desc="Displays a model on the player's screen, based on criteria and state." origin="0 0 0" }
+      }
+    }
+  }
+
+  Entity forms.qctx =
+  {
+// Spec/Arg Templates
+      t_nobots:incl = {
+        nobots: = { Txt="&" Typ="C" hint="will prevent bots from using this spot." items="False"$0D"True" values="0"$0D"1" }
+      }
+      t_nohumans:incl = {
+        nohumans: = { Txt="&" Typ="C" hint="will prevent non-bots from using this spot." items="False"$0D"True" values="0"$0D"1" }
+      }
+      t_<state>target:incl = {
+        <state>target: = { Txt = "&"
+          Typ = "B"
+          Cap = "(...target)"
+          form = "<state>target_form:form"
+          hint ="holds lists of entities to trigger, when this entity"$0D
+                "goes to a particular state (see docs for more info)."
+        }
+      }
+      t_groupname:incl = {
+        groupname: = { Txt = "&"
+          hint ="allows other entities to refer to this (multiple names are allowed,"$0D
+                "seperated by commas). E.q."$0D
+                "'flaggroup,notblue' or 'redlasers,reddoors,redalarm'"
+        }
+      }
+      t_allowteams:incl = {
+        allowteams: = { Txt = "&"
+          hint ="a list of teams allowed to spawn here, e.g."$0D
+                "'red,yellow' or 'blue,red,green'"
+        }
+      }
+      t_allowclasses:incl = {
+        allowclasses: = { Txt = "&"
+          hint ="a list of classes allowed to spawn here, e.g."$0D
+                "'soldier,medic,agent' or 'scout'"
+        }
+      }
+      t_<state>_<team>_message:incl = {
+        <state>_<team>_message: = { Txt = "&"
+          Typ = "B"
+          Cap = "(...message)"
+          form = "<state>_<team>_message_form:form"
+          Hint = "Displays a message to affected clients (See docs for more info)"
+        }
+      }
+      t_<state>_<team>_sound:incl = {
+        <state>_<team>_sound: = { Txt = "&"
+          Typ = "B"
+          Cap = "(...sound)"
+          form = "<state>_<team>_sound_form:form"
+          hint ="Play a sound to affected clients (See docs for more info)"
+        }
+      }
+      t_<state>_<team>_dict:incl = {
+        <state>_<team>_dict: = { Txt = "&"
+          Typ = "B"
+          Cap = "(...dict)"
+          form = "<state>_<team>_dict_form:form"
+          hint ="Parse string and play sounds to affected clients (See docs for more info)"
+        }
+      }
+      t_<state>_flaginfo:incl = {
+        <state>_flaginfo: = { Txt = "&"
+          Typ = "B"
+          Cap = "(...flaginfo)"
+          form = "<state>_flaginfo_form:form"
+          hint ="specifies a message to display on \flaginfo command"
+        }
+      }
+      t_give:incl = {
+        give: = { Txt = "&"
+          hint ="Specifies a string to give to player on spawn"
+        }
+      }
+      t_wait:incl = {
+        wait: = { Txt = "&"
+          hint ="will keep the spawnpoint active for this many seconds (default 0.1)"
+        }
+      }
+      t_holding:incl = {
+        holding: = { Txt = "&"
+          hint ="specifies goalitems the player must be holding to activate."
+        }
+      }
+      t_notholding:incl = {
+        notholding: = { Txt = "&"
+          hint ="specifies goalitems the player must be carrying to activate."
+        }
+      }
+      t_checkstate:incl = {
+        checkstate: = { Txt = "&"
+          hint ="specifies states entities must be in to activate."
+        }
+      }
+      t_teamscore:incl = {
+        teamscore: = { Txt = "&"
+          hint ="value added to team(s) score"
+        }
+      }
+      t_affectteams:incl = {
+        affectteams: = { Txt = "&"
+          hint ="is a list of those teams affected when entity activates"$0D
+                "(e.g. 'green,blue')"
+        }
+      }
+      t_effectradius:incl = {
+        effectradius: = { Txt = "&"
+          hint ="is the radius within which players will be affected"
+        }
+      }
+      t_flags:incl = {
+        flags: = { Txt = "&"
+          hint ="Valid here are; 'revealspy,detpackable,reversecriteria,"$0D
+                "affectteam,affectnonteam,dropoff,lineofsight,environment'."$0D
+                "For func_button also; 'shootable'."$0D
+                "For func_goalinfo also; 'hideactive,rotating'."$0D
+                "For func_goalitem also; 'showcarry'."$0D
+                "For func_commandpoint also; 'rotating'."
+            }
+      }
+      t_light:incl = {
+        light: = { Txt="&" hint="specifies a dynamic light" }
+      }
+      t_color:incl = {
+        color: = { Txt="&" hint="specifies the colour of the dynamic light" }
+        color: = { Txt="color ->" Typ="L" hint="specifies the colour of the dynamic light" }
+      }
+      t_<class>_playerlimit:incl = {
+        <class>_playerlimit: = { txt="&"
+          Typ = "B"
+          Cap = "(...playerlimit)"
+          form = "<class>_playerlimit_form:form"
+          hint="Maximum of players of this class (overridden by team specific value)"
+        }
+      }
+      t_<class>_name:incl = {
+        <class>_name: = { txt="&"
+          Typ = "B"
+          Cap = "(...name)"
+          form = "<class>_name_form:form"
+          hint="Name of this class (overridden by team specific value)"
+        }
+      }
+      t_team_<colour>_name:incl = {
+        team_<colour>_name: = { txt="&"
+          Typ = "B"
+          Cap = "(team...name)"
+          form = "team_<colour>_name_form:form"
+          hint="Name of the team (default: '<colour> Team')"
+        }
+      }
+      t_team_<colour>_playerlimit:incl = {
+        team_<colour>_playerlimit: = { txt="&"
+          Typ = "B"
+          Cap = "(team...playerlimit)"
+          form = "team_<colour>_playerlimit_form:form"
+          hint="Maximum of players on this team (default: -1 (unlimited))"
+        }
+      }
+      t_team_<colour>_maxlives:incl = {
+        team_<colour>_maxlives: = { txt="&"
+          Typ = "B"
+          Cap = "(team...maxlives)"
+          form = "team_<colour>_maxlives_form:form"
+          hint="Maximum lives per player on this team (default: -1 (unlimited)) (Not implemented)"
+        }
+      }
+      t_team_<colour>_allies:incl = {
+        team_<colour>_allies: = { txt="&"
+          Typ = "B"
+          Cap = "(team...allies)"
+          form = "team_<colour>_allies_form:form"
+          hint="Allied teams (e.g. team_red_allies = 'blue,yellow') (Not implemented)"
+        }
+      }
+      t_team_<colour>_<class>_playerlimit:incl = {
+        team_<colour>_<class>_playerlimit: = { txt="&"
+          Typ = "B"
+          Cap = "(team...playerlimit)"
+          form = "team_<colour>_<class>_playerlimit_form:form"
+          hint="Maximum of players of this class on this team (default: -1 (unlimited))"
+        }
+      }
+      t_team_<colour>_<class>_name:incl = {
+        team_<colour>_<class>_name: = { txt="&"
+          Typ = "B"
+          Cap = "(team...name)"
+          form = "team_<colour>_<class>_name_form:form"
+          hint="Name of this class on this team (default: <class>)"
+        }
+      }
+      t_<state>_model:incl = {
+        <state>_model: = { txt="&"
+          Typ = "B"
+          Cap = "(...model)"
+          form = "<state>_model_form:form"
+          hint="Model to display when in specified state"
+        }
+      }
+      t_model_items:incl = {
+          typ="C"
+          items="backpack.md3"$0D
+                "bioweapon.md3"$0D
+                "charge.md3"$0D
+                "clusterbomb.md3"$0D
+                "duck.md3"$0D
+                "eng_railgun.md3"$0D
+                "flamer.md3"$0D
+                "g_flag.md3"$0D
+                "gasgren.md3"$0D
+                "knife.md3"$0D
+                "minigun.md3"$0D
+                "nail.md3"$0D
+                "nailbomb.md3"$0D
+                "nailgun.md3"$0D
+                "nervesph.md3"$0D
+                "pipebomb.md3"$0D
+                "pipegren.md3"$0D
+                "single_shotgun.md3"$0D
+                "sniper_rifle.md3"$0D
+                "supplystation.md3"$0D
+                "wrench.md3"$0D
+                "y_flag.md3"
+          values=
+                "models/objects/backpack.md3"$0D
+                "models/weapons2/bioweapon.md3"$0D
+                "models/objects/charge.md3"$0D
+                "models/ammo/clusterbomb.md3"$0D
+                "models/mapobjects/duck.md3"$0D
+                "models/weapons2/eng_railgun.md3"$0D
+                "models/weapons2/flamer.md3"$0D
+                "models/flags/g_flag.md3"$0D
+                "models/ammo/gasgren.md3"$0D
+                "models/weapons2/knife.md3"$0D
+                "models/weapons2/minigun.md3"$0D
+                "models/ammo/nail.md3"$0D
+                "models/ammo/nailbomb.md3"$0D
+                "models/weapons2/nailgun.md3"$0D
+                "models/objetcs/rock_items/nervesph.md3"$0D
+                "models/ammo/pipebomb.md3"$0D
+                "models/ammo/pipebomb/pipegren.md3"$0D
+                "models/weapons2/single_shotgun.md3"$0D
+                "models/weapons2/sniper_rifle.md3"$0D
+                "models/objects/supplystation.md3"$0D
+                "models/weapons2/wrench.md3"$0D
+                "models/flags/y_flag.md3"
+      }
+
+// Sub-Spec/Arg Forms
+    <state>target_form:form = {
+      activetarget    := { Txt="&" hint="" }
+      inactivetarget  := { Txt="&" hint="" }
+      carriedtarget   := { Txt="&" hint="" }
+      disabledtarget  := { Txt="&" hint="" }
+      invisibletarget := { Txt="&" hint="" }
+    }
+    <state>_<team>_message_form:form = {
+      active_message          := { Txt="&" hint="" }
+      active_team_message     := { Txt="&" hint="" }
+      active_all_message      := { Txt="&" hint="" }
+      active_blue_message     := { Txt="&" hint="" }
+      active_red_message      := { Txt="&" hint="" }
+      active_green_message    := { Txt="&" hint="" }
+      active_yellow_message   := { Txt="&" hint="" }
+      sep := { Typ="S" }
+      inactive_message        := { Txt="&" hint="" }
+      inactive_team_message   := { Txt="&" hint="" }
+      inactive_all_message    := { Txt="&" hint="" }
+      inactive_blue_message   := { Txt="&" hint="" }
+      inactive_red_message    := { Txt="&" hint="" }
+      inactive_green_message  := { Txt="&" hint="" }
+      inactive_yellow_message := { Txt="&" hint="" }
+      sep := { Typ="S" }
+      carried_message         := { Txt="&" hint="" }
+      carried_team_message    := { Txt="&" hint="" }
+      carried_all_message     := { Txt="&" hint="" }
+      carried_blue_message    := { Txt="&" hint="" }
+      carried_red_message     := { Txt="&" hint="" }
+      carried_green_message   := { Txt="&" hint="" }
+      carried_yellow_message  := { Txt="&" hint="" }
+      sep := { Typ="S" }
+      disabled_message        := { Txt="&" hint="" }
+      disabled_team_message   := { Txt="&" hint="" }
+      disabled_all_message    := { Txt="&" hint="" }
+      disabled_blue_message   := { Txt="&" hint="" }
+      disabled_red_message    := { Txt="&" hint="" }
+      disabled_green_message  := { Txt="&" hint="" }
+      disabled_yellow_message := { Txt="&" hint="" }
+      sep := { Typ="S" }
+      invisible_message       := { Txt="&" hint="" }
+      invisible_team_message  := { Txt="&" hint="" }
+      invisible_all_message   := { Txt="&" hint="" }
+      invisible_blue_message  := { Txt="&" hint="" }
+      invisible_red_message   := { Txt="&" hint="" }
+      invisible_green_message := { Txt="&" hint="" }
+      invisible_yellow_message:= { Txt="&" hint="" }
+    }
+    <state>_<team>_sound_form:form = {
+      active_sound          := { Txt="&" hint="" }
+      active_team_sound     := { Txt="&" hint="" }
+      active_all_sound      := { Txt="&" hint="" }
+      active_blue_sound     := { Txt="&" hint="" }
+      active_red_sound      := { Txt="&" hint="" }
+      active_green_sound    := { Txt="&" hint="" }
+      active_yellow_sound   := { Txt="&" hint="" }
+      sep := { Typ="S" }
+      inactive_sound        := { Txt="&" hint="" }
+      inactive_team_sound   := { Txt="&" hint="" }
+      inactive_all_sound    := { Txt="&" hint="" }
+      inactive_blue_sound   := { Txt="&" hint="" }
+      inactive_red_sound    := { Txt="&" hint="" }
+      inactive_green_sound  := { Txt="&" hint="" }
+      inactive_yellow_sound := { Txt="&" hint="" }
+      sep := { Typ="S" }
+      carried_sound         := { Txt="&" hint="" }
+      carried_team_sound    := { Txt="&" hint="" }
+      carried_all_sound     := { Txt="&" hint="" }
+      carried_blue_sound    := { Txt="&" hint="" }
+      carried_red_sound     := { Txt="&" hint="" }
+      carried_green_sound   := { Txt="&" hint="" }
+      carried_yellow_sound  := { Txt="&" hint="" }
+      sep := { Typ="S" }
+      disabled_sound        := { Txt="&" hint="" }
+      disabled_team_sound   := { Txt="&" hint="" }
+      disabled_all_sound    := { Txt="&" hint="" }
+      disabled_blue_sound   := { Txt="&" hint="" }
+      disabled_red_sound    := { Txt="&" hint="" }
+      disabled_green_sound  := { Txt="&" hint="" }
+      disabled_yellow_sound := { Txt="&" hint="" }
+      sep := { Typ="S" }
+      invisible_sound       := { Txt="&" hint="" }
+      invisible_team_sound  := { Txt="&" hint="" }
+      invisible_all_sound   := { Txt="&" hint="" }
+      invisible_blue_sound  := { Txt="&" hint="" }
+      invisible_red_sound   := { Txt="&" hint="" }
+      invisible_green_sound := { Txt="&" hint="" }
+      invisible_yellow_sound:= { Txt="&" hint="" }
+    }
+    <state>_<team>_dict_form:form = {
+      active_dict          := { Txt="&" hint="" }
+      active_team_dict     := { Txt="&" hint="" }
+      active_all_dict      := { Txt="&" hint="" }
+      active_blue_dict     := { Txt="&" hint="" }
+      active_red_dict      := { Txt="&" hint="" }
+      active_green_dict    := { Txt="&" hint="" }
+      active_yellow_dict   := { Txt="&" hint="" }
+      sep := { Typ="S" }
+      inactive_dict        := { Txt="&" hint="" }
+      inactive_team_dict   := { Txt="&" hint="" }
+      inactive_all_dict    := { Txt="&" hint="" }
+      inactive_blue_dict   := { Txt="&" hint="" }
+      inactive_red_dict    := { Txt="&" hint="" }
+      inactive_green_dict  := { Txt="&" hint="" }
+      inactive_yellow_dict := { Txt="&" hint="" }
+      sep := { Typ="S" }
+      carried_dict         := { Txt="&" hint="" }
+      carried_team_dict    := { Txt="&" hint="" }
+      carried_all_dict     := { Txt="&" hint="" }
+      carried_blue_dict    := { Txt="&" hint="" }
+      carried_red_dict     := { Txt="&" hint="" }
+      carried_green_dict   := { Txt="&" hint="" }
+      carried_yellow_dict  := { Txt="&" hint="" }
+      sep := { Typ="S" }
+      disabled_dict        := { Txt="&" hint="" }
+      disabled_team_dict   := { Txt="&" hint="" }
+      disabled_all_dict    := { Txt="&" hint="" }
+      disabled_blue_dict   := { Txt="&" hint="" }
+      disabled_red_dict    := { Txt="&" hint="" }
+      disabled_green_dict  := { Txt="&" hint="" }
+      disabled_yellow_dict := { Txt="&" hint="" }
+      sep := { Typ="S" }
+      invisible_dict       := { Txt="&" hint="" }
+      invisible_team_dict  := { Txt="&" hint="" }
+      invisible_all_dict   := { Txt="&" hint="" }
+      invisible_blue_dict  := { Txt="&" hint="" }
+      invisible_red_dict   := { Txt="&" hint="" }
+      invisible_green_dict := { Txt="&" hint="" }
+      invisible_yellow_dict:= { Txt="&" hint="" }
+    }
+    <state>_flaginfo_form:form = {
+      active_flaginfo     := { Txt="&" hint="" }
+      inactive_flaginfo   := { Txt="&" hint="" }
+      carried_flaginfo    := { Txt="&" hint="" }
+//      disabled_flaginfo   := { Txt="&" hint="" }
+//      invisible_flaginfo  := { Txt="&" hint="" }
+    }
+    <class>_playerlimit_form:form = {
+      recon_playerlimit         := { Txt="&" hint="" }
+      sniper_playerlimit        := { Txt="&" hint="" }
+      soldier_playerlimit       := { Txt="&" hint="" }
+      grenadier_playerlimit     := { Txt="&" hint="" }
+      paramedic_playerlimit     := { Txt="&" hint="" }
+      minigunner_playerlimit    := { Txt="&" hint="" }
+      flametrooper_playerlimit  := { Txt="&" hint="" }
+      agent_playerlimit         := { Txt="&" hint="" }
+      engineer_playerlimit      := { Txt="&" hint="" }
+    }
+    <class>_name_form:form = {
+      recon_name            := { Txt="&" hint="" }
+      sniper_name           := { Txt="&" hint="" }
+      soldier_name          := { Txt="&" hint="" }
+      grenadier_name        := { Txt="&" hint="" }
+      paramedic_name        := { Txt="&" hint="" }
+      minigunner_name       := { Txt="&" hint="" }
+      flametrooper_name     := { Txt="&" hint="" }
+      agent_name            := { Txt="&" hint="" }
+      engineer_name         := { Txt="&" hint="" }
+    }
+    team_<colour>_name_form:form = {
+      team_blue_name      := { Txt="&" hint="" }
+      team_red_name       := { Txt="&" hint="" }
+      team_green_name     := { Txt="&" hint="" }
+      team_yellow_name    := { Txt="&" hint="" }
+    }
+    team_<colour>_playerlimit_form:form = {
+      team_blue_playerlimit   := { Txt="&" hint="" }
+      team_red_playerlimit    := { Txt="&" hint="" }
+      team_green_playerlimit  := { Txt="&" hint="" }
+      team_yellow_playerlimit := { Txt="&" hint="" }
+    }
+    team_<colour>_maxlives_form:form = {
+      team_blue_maxlives    := { Txt="&" hint="" }
+      team_red_maxlives     := { Txt="&" hint="" }
+      team_green_maxlives   := { Txt="&" hint="" }
+      team_yellow_maxlives  := { Txt="&" hint="" }
+    }
+    team_<colour>_allies_form:form = {
+      team_blue_allies    := { Txt="&" hint="" }
+      team_red_allies     := { Txt="&" hint="" }
+      team_green_allies   := { Txt="&" hint="" }
+      team_yellow_allies  := { Txt="&" hint="" }
+    }
+    team_<colour>_<class>_playerlimit_form:form = {
+      team_blue_recon_playerlimit           := { Txt="&" hint="" }
+      team_blue_sniper_playerlimit          := { Txt="&" hint="" }
+      team_blue_soldier_playerlimit         := { Txt="&" hint="" }
+      team_blue_grenadier_playerlimit       := { Txt="&" hint="" }
+      team_blue_paramedic_playerlimit       := { Txt="&" hint="" }
+      team_blue_minigunner_playerlimit      := { Txt="&" hint="" }
+      team_blue_flametrooper_playerlimit    := { Txt="&" hint="" }
+      team_blue_agent_playerlimit           := { Txt="&" hint="" }
+      team_blue_engineer_playerlimit        := { Txt="&" hint="" }
+      sep:={typ="S"}
+      team_red_recon_playerlimit           := { Txt="&" hint="" }
+      team_red_sniper_playerlimit          := { Txt="&" hint="" }
+      team_red_soldier_playerlimit         := { Txt="&" hint="" }
+      team_red_grenadier_playerlimit       := { Txt="&" hint="" }
+      team_red_paramedic_playerlimit       := { Txt="&" hint="" }
+      team_red_minigunner_playerlimit      := { Txt="&" hint="" }
+      team_red_flametrooper_playerlimit    := { Txt="&" hint="" }
+      team_red_agent_playerlimit           := { Txt="&" hint="" }
+      team_red_engineer_playerlimit        := { Txt="&" hint="" }
+      sep:={typ="S"}
+      team_green_recon_playerlimit           := { Txt="&" hint="" }
+      team_green_sniper_playerlimit          := { Txt="&" hint="" }
+      team_green_soldier_playerlimit         := { Txt="&" hint="" }
+      team_green_grenadier_playerlimit       := { Txt="&" hint="" }
+      team_green_paramedic_playerlimit       := { Txt="&" hint="" }
+      team_green_minigunner_playerlimit      := { Txt="&" hint="" }
+      team_green_flametrooper_playerlimit    := { Txt="&" hint="" }
+      team_green_agent_playerlimit           := { Txt="&" hint="" }
+      team_green_engineer_playerlimit        := { Txt="&" hint="" }
+      sep:={typ="S"}
+      team_yellow_recon_playerlimit           := { Txt="&" hint="" }
+      team_yellow_sniper_playerlimit          := { Txt="&" hint="" }
+      team_yellow_soldier_playerlimit         := { Txt="&" hint="" }
+      team_yellow_grenadier_playerlimit       := { Txt="&" hint="" }
+      team_yellow_paramedic_playerlimit       := { Txt="&" hint="" }
+      team_yellow_minigunner_playerlimit      := { Txt="&" hint="" }
+      team_yellow_flametrooper_playerlimit    := { Txt="&" hint="" }
+      team_yellow_agent_playerlimit           := { Txt="&" hint="" }
+      team_yellow_engineer_playerlimit        := { Txt="&" hint="" }
+      sep:={typ="S"}
+    }
+    team_<colour>_<class>_name_form:form = {
+      team_blue_recon_name          := { Txt="&" hint="" }
+      team_blue_sniper_name         := { Txt="&" hint="" }
+      team_blue_soldier_name        := { Txt="&" hint="" }
+      team_blue_grenadier_name      := { Txt="&" hint="" }
+      team_blue_paramedic_name      := { Txt="&" hint="" }
+      team_blue_minigunner_name     := { Txt="&" hint="" }
+      team_blue_flametrooper_name   := { Txt="&" hint="" }
+      team_blue_agent_name          := { Txt="&" hint="" }
+      team_blue_engineer_name       := { Txt="&" hint="" }
+      sep:={typ="S"}
+      team_red_recon_name          := { Txt="&" hint="" }
+      team_red_sniper_name         := { Txt="&" hint="" }
+      team_red_soldier_name        := { Txt="&" hint="" }
+      team_red_grenadier_name      := { Txt="&" hint="" }
+      team_red_paramedic_name      := { Txt="&" hint="" }
+      team_red_minigunner_name     := { Txt="&" hint="" }
+      team_red_flametrooper_name   := { Txt="&" hint="" }
+      team_red_agent_name          := { Txt="&" hint="" }
+      team_red_engineer_name       := { Txt="&" hint="" }
+      sep:={typ="S"}
+      team_green_recon_name          := { Txt="&" hint="" }
+      team_green_sniper_name         := { Txt="&" hint="" }
+      team_green_soldier_name        := { Txt="&" hint="" }
+      team_green_grenadier_name      := { Txt="&" hint="" }
+      team_green_paramedic_name      := { Txt="&" hint="" }
+      team_green_minigunner_name     := { Txt="&" hint="" }
+      team_green_flametrooper_name   := { Txt="&" hint="" }
+      team_green_agent_name          := { Txt="&" hint="" }
+      team_green_engineer_name       := { Txt="&" hint="" }
+      sep:={typ="S"}
+      team_yellow_recon_name          := { Txt="&" hint="" }
+      team_yellow_sniper_name         := { Txt="&" hint="" }
+      team_yellow_soldier_name        := { Txt="&" hint="" }
+      team_yellow_grenadier_name      := { Txt="&" hint="" }
+      team_yellow_paramedic_name      := { Txt="&" hint="" }
+      team_yellow_minigunner_name     := { Txt="&" hint="" }
+      team_yellow_flametrooper_name   := { Txt="&" hint="" }
+      team_yellow_agent_name          := { Txt="&" hint="" }
+      team_yellow_engineer_name       := { Txt="&" hint="" }
+      sep:={typ="S"}
+    }
+    <state>_model_form:form = {
+      active_model    := { Txt="&" hint="" t_model_items=! }
+      inactive_model  := { Txt="&" hint="" t_model_items=! }
+      carried_model   := { Txt="&" hint="" t_model_items=! }
+      disabled_model  := { Txt="&" hint="" t_model_items=! }
+      invisible_model := { Txt="&" hint="" t_model_items=! }
+    }
+
+// Entity Forms
+    info_player_deathmatch:form = {
+      bbox = '-16 -16 -24 16 16 32'
+      t_wait = !
+      t_<state>target = !
+      t_groupname = !
+      t_allowteams = !
+      t_allowclasses = !
+      t_<state>_<team>_message = !
+      t_<state>_<team>_sound = !
+      t_<state>_<team>_dict = !
+      t_<state>_flaginfo = !
+      t_give = !
+      spawnflags: = { Txt="&" cap="initial" typ="X1" hint="The first time a player enters the game, they will be at an 'initial' spot." }
+      t_nobots = !
+      t_nohumans = !
+    }
+    info_notnull:form = {
+      t_<state>target = !
+      t_groupname = !
+      t_allowteams = !
+      t_allowclasses = !
+      t_holding = !
+      t_checkstate = !
+      t_<state>_<team>_message = !
+      t_<state>_<team>_sound = !
+      t_<state>_<team>_dict = !
+      t_<state>_flaginfo = !
+      t_teamscore = !
+      t_give = !
+      t_affectteams = !
+      t_effectradius = !
+      t_flags = !
+      t_light = !
+      t_color = !
+    }
+    misc_portal_camera:form = {
+      t_<state>target = !
+      t_groupname = !
+      t_allowteams = !
+      t_allowclasses = !
+      t_holding = !
+      t_checkstate = !
+      t_<state>_<team>_message = !
+      t_<state>_<team>_sound = !
+      t_<state>_<team>_dict = !
+      t_<state>_flaginfo = !
+      t_teamscore = !
+      t_give = !
+      t_affectteams = !
+      t_effectradius = !
+      t_flags = !
+      sep: = { Typ="S" }
+      roll: = { txt="&" hint="an angle modifier to orient the camera around the target vector;" }
+      spawnflags: = { txt="&" cap="slowrotate" typ="X1" hint="" }
+      spawnflags: = { txt="&" cap="fastrotate" typ="X2" hint="" }
+    }
+    func_door:form = {
+      t_<state>target = !
+      t_groupname = !
+      t_allowteams = !
+      t_allowclasses = !
+      t_holding = !
+      t_checkstate = !
+      t_<state>_<team>_message = !
+      t_<state>_<team>_sound = !
+      t_<state>_<team>_dict = !
+      t_<state>_flaginfo = !
+      t_teamscore = !
+      t_give = !
+      t_affectteams = !
+      t_effectradius = !
+      t_flags = !
+      sep: = { Typ="S" }
+      model2:     = { txt="&" hint=".md3 model to also draw" t_model_items=! }
+      angle:      = { txt="&" hint="determines the opening direction" }
+      targetname: = { txt="&" hint="if set, no touch field will be spawned and a remote button or trigger field activates the door." }
+      speed:      = { txt="&" hint="movement speed (100 default)" }
+      wait:       = { txt="&" hint="wait before returning (3 default, -1 = stay active until explicitely changed by another ent)" }
+      lip:        = { txt="&" hint="lip remaining at end of move (8 default)" }
+      dmg:        = { txt="&" hint="damage to inflict when blocked (2 default)" }
+      color:      = { txt="&" hint="constantLight color" }
+      light:      = { txt="&" hint="constantLight radius" }
+      health:     = { txt="&" hint="if set, the door must be shot open" }
+      spawnflags: = { txt="&" cap="START_OPEN" typ="X1" hint ="the door to moves to its destination when spawned, and operate in reverse."$0D
+                                                              "It is used to temporarily or permanently close off an area when triggered"$0D
+                                                              "(not useful for touch or takedamage doors)."
+      }
+      spawnflags: = { txt="&" cap="CRUSHER" typ="X4" hint="Will crush any players in the way rather than reversing" }
+    }
+    func_plat:form = {
+      t_<state>target = !
+      t_groupname = !
+      t_allowteams = !
+      t_allowclasses = !
+      t_holding = !
+      t_checkstate = !
+      t_<state>_<team>_message = !
+      t_<state>_<team>_sound = !
+      t_<state>_<team>_dict = !
+      t_<state>_flaginfo = !
+      t_teamscore = !
+      t_give = !
+      t_affectteams = !
+      t_effectradius = !
+      t_flags = !
+      sep: = { Typ="S" }
+      lip:    = { txt="&" hint="default 8, protrusion above rest position" }
+      height: = { txt="&" hint="total height of movement, defaults to model height" }
+      speed:  = { txt="&" hint="overrides default 200." }
+      dmg:    = { txt="&" hint="overrides default 2" }
+      model2: = { txt="&" hint=".md3 model to also draw" t_model_items=! }
+      color:  = { txt="&" hint="constantLight color" }
+      light:  = { txt="&" hint="constantLight radius" }
+    }
+    func_button:form = {
+      t_<state>target = !
+      t_groupname = !
+      t_allowteams = !
+      t_allowclasses = !
+      t_holding = !
+      t_checkstate = !
+      t_<state>_<team>_message = !
+      t_<state>_<team>_sound = !
+      t_<state>_<team>_dict = !
+      t_<state>_flaginfo = !
+      t_teamscore = !
+      t_give = !
+      t_affectteams = !
+      t_effectradius = !
+      t_flags = !
+      sep: = { Typ="S" }
+      model2:   = { txt="&" hint=".md3 model to also draw" t_model_items=! }
+      angle:    = { txt="&" hint="determines the opening direction" }
+      target:   = { txt="&" hint="all entities with a matching targetname will be used" }
+      speed:    = { txt="&" hint="override the default 40 speed" }
+      wait:     = { txt="&" hint="override the default 1 second wait (-1 = never return)" }
+      lip:      = { txt="&" hint="override the default 4 pixel lip remaining at end of move" }
+      health:   = { txt="&" hint="if set, the button must be killed instead of touched" }
+      color:    = { txt="&" hint="constantLight color" }
+      light:    = { txt="&" hint="constantLight radius" }
+    }
+    worldspawn:form = {
+      music:    = { txt="&" hint="music wav file" }
+      gravity:  = { txt="&" hint="800 is default gravity" }
+      message:  = { txt="&" hint="Text to print during connection process" }
+      sep: = { Typ="S" }
+      t_<class>_playerlimit = !
+      t_<class>_name = !
+      t_team_<colour>_name = !
+      t_team_<colour>_playerlimit = !
+      t_team_<colour>_maxlives = !
+      t_team_<colour>_allies = !
+      t_team_<colour>_<class>_playerlimit = !
+      t_team_<colour>_<class>_name = !
+    }
+    trigger_multiple:form = {
+      t_<state>target = !
+      t_groupname = !
+      t_allowteams = !
+      t_allowclasses = !
+      t_holding = !
+      t_checkstate = !
+      t_<state>_<team>_message = !
+      t_<state>_<team>_sound = !
+      t_<state>_<team>_dict = !
+      t_<state>_flaginfo = !
+      t_teamscore = !
+      t_give = !
+      t_affectteams = !
+      t_effectradius = !
+      t_flags = !
+      sep: = { Typ="S" }
+      wait: = { txt="&" hint="Seconds between triggerings, 0.5 default, -1 = one time only." }
+      random: = { txt="&" hint="wait variance, default is 0" }
+    }
+    trigger_teleport:form = {
+      t_<state>target = !
+      t_groupname = !
+      t_allowteams = !
+      t_allowclasses = !
+      t_holding = !
+      t_checkstate = !
+      t_<state>_<team>_message = !
+      t_<state>_<team>_sound = !
+      t_<state>_<team>_dict = !
+      t_<state>_flaginfo = !
+      t_teamscore = !
+      t_give = !
+      t_affectteams = !
+      t_effectradius = !
+      t_flags = !
+      sep: = { Typ="S" }
+    }
+    func_goalinfo:form = {
+      t_<state>target = !
+      t_groupname = !
+      t_allowteams = !
+      t_allowclasses = !
+      t_holding = !
+      t_checkstate = !
+      t_<state>_<team>_message = !
+      t_<state>_<team>_sound = !
+      t_<state>_<team>_dict = !
+      t_<state>_flaginfo = !
+      t_teamscore = !
+      t_give = !
+      t_affectteams = !
+      t_effectradius = !
+      t_flags = !
+      sep: = { Typ="S" }
+      mins: = { txt="&" hint="Specifies size of trigger field (default: -15 -15 -15)" }
+      maxs: = { txt="&" hint="Specifies size of trigger field (default: 15 15 15)" }
+      model: = { txt="&" hint="model to display" t_model_items=! }
+      angle: = { txt="&" hint="angle to rotate displayed model at" }
+    }
+    func_goalitem:form = {
+      t_<state>target = !
+      t_groupname = !
+      t_allowteams = !
+      t_allowclasses = !
+      t_holding = !
+      t_checkstate = !
+      t_<state>_<team>_message = !
+      t_<state>_<team>_sound = !
+      t_<state>_<team>_dict = !
+      t_<state>_flaginfo = !
+      t_teamscore = !
+      t_give = !
+      t_affectteams = !
+      t_effectradius = !
+      t_flags = !
+      sep: = { Typ="S" }
+      mins: = { txt="&" hint="Specifies size of trigger field (default: -15 -15 -15)" }
+      maxs: = { txt="&" hint="Specifies size of trigger field (default: 15 15 15)" }
+      model: = { txt="&" hint="model to display" t_model_items=! }
+      wait: = { txt="&" hint="Time in seconds to wait before flag returns to origin point" }
+      sparkle: = { txt="&" hint="Generate smoke puffs around carrier (default: 0 0 0)" }
+    }
+    func_commandpoint:form = {
+      teamset: = { txt="&" hint="Set the 'allowteams' on all specified entities to the activating team's." }
+      nonteamset: = { txt="&" hint="Set the 'allowteams' on all specified entities to all but the activating team's." }
+      pulsegive: = { txt="&" hint="'give' command executed every pulse" }
+      pulseteamscore: = { txt="&" hint="'teamscore' command executed every pulse" }
+      pulsetarget: = { txt="&" hint="targets triggered every pulse" }
+      count: = { txt="&" hint="If specified, 'count' pulses will occur before expiring rather than indefinitely." }
+      expiretarget: = { txt="&" hint="targets triggered when CP expires" }
+      sep: = { Typ="S" }
+      t_<state>target = !
+      t_groupname = !
+      t_allowteams = !
+      t_allowclasses = !
+      t_holding = !
+      t_checkstate = !
+      t_<state>_<team>_message = !
+      t_<state>_<team>_sound = !
+      t_<state>_<team>_dict = !
+      t_<state>_flaginfo = !
+      t_teamscore = !
+      t_give = !
+      t_affectteams = !
+      t_effectradius = !
+      t_flags = !
+      sep: = { Typ="S" }
+      mins: = { txt="&" hint="Specifies size of trigger field (default: -15 -15 -15)" }
+      maxs: = { txt="&" hint="Specifies size of trigger field (default: 15 15 15)" }
+      model: = { txt="&" hint="model to display (if no model is set the entity MUST be triggered by another)" t_model_items=! }
+      angle: = { txt="&" hint="angle to rotate displayed model at" }
+      wait: = { txt="&" hint="time between pulses (note that CPs become inactive immediately)" }
+    }
+    func_hud:form = {
+      t_<state>_model = !
+      scale: = { txt="&" hint="" }
+      initialstate: = { txt="&" hint="" }
+      t_allowteams = !
+      t_holding = !
+      slot: = { txt="&" typ="C" hint="A number from 1 to 10, indicating the slot to show in (two columns: 1-5, 6-10)"
+        items = "Slot 1"$0D"Slot 2"$0D"Slot 3"$0D"Slot 4"$0D"Slot 5"$0D"Slot 6"$0D"Slot 7"$0D"Slot 8"$0D"Slot 9"$0D"Slot 10"
+        values ="1"$0D"2"$0D"3"$0D"4"$0D"5"$0D"6"$0D"7"$0D"8"$0D"9"$0D"10"
+      }
+      t_groupname = !
+      t_<state>_<team>_message = !
+      t_<state>_<team>_sound = !
+      t_<state>_<team>_dict = !
+      t_<state>_flaginfo = !
+      t_teamscore = !
+      t_give = !
+      t_affectteams = !
+      t_effectradius = !
+      t_flags = !
+    }
+  }
+
+
+  Textures.qtx =
+  {
+    Toolbox = "Texture Browser..."
+    Root = "Q3F Shaders.qtxfolder"
+    HTML = "intro.texturebrowser.html"
+
+    t_q3fshader_2stag2:incl         = { a="q3f" b="2stag2.shader" }
+    t_q3fshader_cyber:incl          = { a="q3f" b="cyber.shader" }
+    t_q3fshader_golliwog:incl       = { a="q3f" b="golliwog.shader" }
+    t_q3fshader_llama:incl          = { a="q3f" b="llama.shader" }
+    t_q3fshader_q3f_2machse:incl    = { a="q3f" b="q3f_2machse.shader" }
+    t_q3fshader_q3f_2night3:incl    = { a="q3f" b="q3f_2night3.shader" }
+    t_q3fshader_q3f_cbases:incl     = { a="q3f" b="q3f_cbases.shader" }
+    t_q3fshader_q3f_chaos3:incl     = { a="q3f" b="q3f_chaos3.shader" }
+    t_q3fshader_q3f_forts:incl      = { a="q3f" b="q3f_forts.shader" }
+    t_q3fshader_q3f_gfx:incl        = { a="q3f" b="q3f_gfx.shader" }
+    t_q3fshader_q3f_icons:incl      = { a="q3f" b="q3f_icons.shader" }
+    t_q3fshader_q3f_models:incl     = { a="q3f" b="q3f_models.shader" }
+    t_q3fshader_q3f_weapons:incl    = { a="q3f" b="q3f_weapons.shader" }
+    t_q3fshader_wils:incl           = { a="q3f" b="wils.shader" }
+
+    Q3F Shaders.qtxfolder =
+    {
+      2stag2.txlist =
+      {
+        2stag2/deepwater1.wl                     = { t_q3fshader_2stag2=! }
+        2stag2/qstag.wl                          = { t_q3fshader_2stag2=! }
+        2stag2/qstagg.wl                         = { t_q3fshader_2stag2=! }
+        2stag2/stagfog.wl                        = { t_q3fshader_2stag2=! }
+      }
+      cyber.txlist =
+      {
+        cyber/blue_lit_1k.wl                     = { t_q3fshader_cyber=! }
+        cyber/red_lit_1k.wl                      = { t_q3fshader_cyber=! }
+        cyber/bluemetaldoor_outside.wl           = { t_q3fshader_cyber=! }
+        cyber/redmetaldoor_outside.wl            = { t_q3fshader_cyber=! }
+        cyber/fog_denseblue.wl                   = { t_q3fshader_cyber=! }
+        cyber/fog_densered.wl                    = { t_q3fshader_cyber=! }
+        cyber/blueshinelogo.wl                   = { t_q3fshader_cyber=! }
+        cyber/redshinelogo.wl                    = { t_q3fshader_cyber=! }
+        cyber/beam_red.wl                        = { t_q3fshader_cyber=! }
+        cyber/murkywater1.wl                     = { t_q3fshader_cyber=! }
+        cyber/deepwater1.wl                      = { t_q3fshader_cyber=! }
+        cyber/murkywater1s.wl                    = { t_q3fshader_cyber=! }
+        cyber/grate.wl                           = { t_q3fshader_cyber=! }
+      }
+      golliwog.txlist =
+      {
+        common/ladderclip.wl                     = { t_q3fshader_golliwog=! }
+      }
+      llama.txlist =
+      {
+        llama/grlnstrpan.wl                      = { t_q3fshader_llama=! }
+        llama/gmet01.wl                          = { t_q3fshader_llama=! }
+        llama/grpanel.wl                         = { t_q3fshader_llama=! }
+        llama/grpanel2.wl                        = { t_q3fshader_llama=! }
+        llama/gllight1.wl                        = { t_q3fshader_llama=! }
+        llama/ladder.wl                          = { t_q3fshader_llama=! }
+        llama/blue_capture.wl                    = { t_q3fshader_llama=! }
+        llama/red_capture.wl                     = { t_q3fshader_llama=! }
+        skies/2machsesky.wl                      = { t_q3fshader_llama=! }
+        llama/light5_1k.wl                       = { t_q3fshader_llama=! }
+        llama/blue_capture2.wl                   = { t_q3fshader_llama=! }
+        llama/red_capture2.wl                    = { t_q3fshader_llama=! }
+      }
+      q3f_2machse.txlist =
+      {
+        q3f_2machse/grlnstrpan.wl                = { t_q3fshader_q3f_2machse=! }
+        q3f_2machse/gmet01.wl                    = { t_q3fshader_q3f_2machse=! }
+        q3f_2machse/grpanel.wl                   = { t_q3fshader_q3f_2machse=! }
+        q3f_2machse/grpanel2.wl                  = { t_q3fshader_q3f_2machse=! }
+        q3f_2machse/gllight1.wl                  = { t_q3fshader_q3f_2machse=! }
+        q3f_2machse/ladder.wl                    = { t_q3fshader_q3f_2machse=! }
+        q3f_2machse/blue_capture.wl              = { t_q3fshader_q3f_2machse=! }
+        q3f_2machse/red_capture.wl               = { t_q3fshader_q3f_2machse=! }
+        skies/2machsesky.wl                      = { t_q3fshader_q3f_2machse=! }
+        q3f_2machse/light5_1k.wl                 = { t_q3fshader_q3f_2machse=! }
+        q3f_2machse/blue_capture2.wl             = { t_q3fshader_q3f_2machse=! }
+        q3f_2machse/red_capture2.wl              = { t_q3fshader_q3f_2machse=! }
+        q3f_2machse/grass3.wl                    = { t_q3fshader_q3f_2machse=! }
+      }
+      q3f_2night3.txlist =
+      {
+        q3f_2night3/2night3sky.wl                = { t_q3fshader_q3f_2night3=! }
+        q3f_2night3/2night3sky_high.wl           = { t_q3fshader_q3f_2night3=! }
+        q3f_2night3/2night3sky_bright.wl         = { t_q3fshader_q3f_2night3=! }
+        q3f_2night3/fog_denseblue.wl             = { t_q3fshader_q3f_2night3=! }
+        q3f_2night3/fog_densered.wl              = { t_q3fshader_q3f_2night3=! }
+        q3f_2night3/gloop_100.wl                 = { t_q3fshader_q3f_2night3=! }
+        q3f_2night3/halogen_2k.wl                = { t_q3fshader_q3f_2night3=! }
+        q3f_2night3/halogen_1k.wl                = { t_q3fshader_q3f_2night3=! }
+        q3f_2night3/square_blue_8k.wl            = { t_q3fshader_q3f_2night3=! }
+        q3f_2night3/square_red_8k.wl             = { t_q3fshader_q3f_2night3=! }
+        q3f_2night3/square_blue_4k.wl            = { t_q3fshader_q3f_2night3=! }
+        q3f_2night3/square_red_4k.wl             = { t_q3fshader_q3f_2night3=! }
+        q3f_2night3/square_blue_16k.wl           = { t_q3fshader_q3f_2night3=! }
+        q3f_2night3/square_red_16k.wl            = { t_q3fshader_q3f_2night3=! }
+        q3f_2night3/clang_redteam.wl             = { t_q3fshader_q3f_2night3=! }
+        q3f_2night3/clang_blueteam.wl            = { t_q3fshader_q3f_2night3=! }
+        q3f_2night3/grass3.wl                    = { t_q3fshader_q3f_2night3=! }
+        q3f_2night3/glass.wl                     = { t_q3fshader_q3f_2night3=! }
+        q3f_2night3/ladder.wl                    = { t_q3fshader_q3f_2night3=! }
+      }
+      q3f_cbases.txlist =
+      {
+        q3f_cbases/clear_ripple2.wl              = { t_q3fshader_q3f_cbases=! }
+        q3f_cbases/cbasessky.wl                  = { t_q3fshader_q3f_cbases=! }
+      }
+      q3f_chaos3.txlist =
+      {
+        q3f_chaos3/chaos3sky.wl                  = { t_q3fshader_q3f_chaos3=! }
+        q3f_chaos3/halogen_2k.wl                 = { t_q3fshader_q3f_chaos3=! }
+        q3f_chaos3/halogen_1k.wl                 = { t_q3fshader_q3f_chaos3=! }
+        q3f_chaos3/square_blue_8k.wl             = { t_q3fshader_q3f_chaos3=! }
+        q3f_chaos3/square_red_8k.wl              = { t_q3fshader_q3f_chaos3=! }
+        q3f_chaos3/square_blue_4k.wl             = { t_q3fshader_q3f_chaos3=! }
+        q3f_chaos3/square_red_4k.wl              = { t_q3fshader_q3f_chaos3=! }
+        q3f_chaos3/square_blue_16k.wl            = { t_q3fshader_q3f_chaos3=! }
+        q3f_chaos3/square_red_16k.wl             = { t_q3fshader_q3f_chaos3=! }
+      }
+      q3f_forts.txlist =
+      {
+        q3f_forts/blue_lit_1k.wl                 = { t_q3fshader_q3f_forts=! }
+        q3f_forts/red_lit_1k.wl                  = { t_q3fshader_q3f_forts=! }
+        q3f_forts/bluemetaldoor_outside.wl       = { t_q3fshader_q3f_forts=! }
+        q3f_forts/redmetaldoor_outside.wl        = { t_q3fshader_q3f_forts=! }
+        q3f_forts/fog_denseblue.wl               = { t_q3fshader_q3f_forts=! }
+        q3f_forts/fog_densered.wl                = { t_q3fshader_q3f_forts=! }
+        q3f_forts/blueshinelogo.wl               = { t_q3fshader_q3f_forts=! }
+        q3f_forts/redshinelogo.wl                = { t_q3fshader_q3f_forts=! }
+        q3f_forts/beam_red.wl                    = { t_q3fshader_q3f_forts=! }
+        q3f_forts/murkywater1.wl                 = { t_q3fshader_q3f_forts=! }
+        q3f_forts/deepwater1.wl                  = { t_q3fshader_q3f_forts=! }
+        q3f_forts/murkywater1s.wl                = { t_q3fshader_q3f_forts=! }
+        q3f_forts/grate.wl                       = { t_q3fshader_q3f_forts=! }
+      }
+      q3f_gfx.txlist =
+      {
+      }
+      q3f_icons.txlist =
+      {
+      }
+      q3f_models.txlist =
+      {
+      }
+      q3f_weapons.txlist =
+      {
+      }
+      wils.txlist =
+      {
+        skies/2night3sky.wl                      = { t_q3fshader_wils=! }
+        skies/2night3sky_high.wl                 = { t_q3fshader_wils=! }
+        skies/2night3sky_bright.wl               = { t_q3fshader_wils=! }
+        skies/chaos3sky.wl                       = { t_q3fshader_wils=! }
+        skies/moonsky.wl                         = { t_q3fshader_wils=! }
+        sfx/fog_denseblue.wl                     = { t_q3fshader_wils=! }
+        sfx/fog_densered.wl                      = { t_q3fshader_wils=! }
+        sfx/fog_densegrey.wl                     = { t_q3fshader_wils=! }
+        wils/gloop_100.wl                        = { t_q3fshader_wils=! }
+        wils/halogen_2k.wl                       = { t_q3fshader_wils=! }
+        wils/halogen_1k.wl                       = { t_q3fshader_wils=! }
+        wils/square_blue_8k.wl                   = { t_q3fshader_wils=! }
+        wils/square_red_8k.wl                    = { t_q3fshader_wils=! }
+        wils/square_blue_4k.wl                   = { t_q3fshader_wils=! }
+        wils/square_red_4k.wl                    = { t_q3fshader_wils=! }
+        wils/square_blue_16k.wl                  = { t_q3fshader_wils=! }
+        wils/square_red_16k.wl                   = { t_q3fshader_wils=! }
+        wils/clang_redteam.wl                    = { t_q3fshader_wils=! }
+        wils/clang_blueteam.wl                   = { t_q3fshader_wils=! }
+        wils/grass3.wl                           = { t_q3fshader_wils=! }
+        wils/glass.wl                            = { t_q3fshader_wils=! }
+        common/ladder.wl                         = { t_q3fshader_wils=! }
+      }
+    }
+  }
+}

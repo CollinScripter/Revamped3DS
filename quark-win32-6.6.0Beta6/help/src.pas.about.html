@@ -1,0 +1,249 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"  "http://www.w3.org/TR/html4/loose.dtd">
+<html lang="en">
+<head>
+  <title>About.pas</title>
+  <meta name="Description" content="QuArK Information Database - Page: 4.5.1.&nbsp;About.pas">
+  <meta name="Keywords" content="QuArK InfoBase Quake Army Knife QRK QKM Python PY Map Editor Hexen Heretic Half-Life Sin Kingpin Soldier-of-Fortune Star-Trek-Voyager Elite-Force">
+  <link rel=stylesheet href="standard.css" type="text/css">
+</head>
+
+<body>
+<a name="__top__"></a>
+<table width="100%" border=0 cellspacing=0>
+  <tr>
+    <td width=213>
+      <a target="_blank" href="http://quark.sourceforge.net/"><img src="quarkicon.png" width=213 height=90 border=0 alt="Go to QuArK Web Site"></a>
+    </td>
+    <td width="70%" align=center>
+      <div class="topheadline">About.pas</div>
+      <div class="sm">Updated&nbsp;31 Jul 2009</div>
+    </td>
+    <td width="30%" valign=bottom nowrap>
+      Upper&nbsp;levels:<br>-&nbsp;<a href="index.html">QuArK&nbsp;Information&nbsp;Base</a><br>-&nbsp;<a href="src.html">4.&nbsp;The&nbsp;Source&nbsp;Code</a><br>-&nbsp;<a href="src.pas.html">4.5.&nbsp;File-by-file&nbsp;descriptions</a><br>
+    </td>
+  </tr>
+</table>
+<table width="100%" border=0 cellspacing=0>
+  <tr class="headline">
+    <td width="99%">
+      <p class="headline">&nbsp;4.5.1.&nbsp;About.pas</p>
+    </td>
+    <td width="1%" align=right nowrap>
+      &nbsp;[&nbsp;<span class="navenable"><a href="src.pas.html">Prev</a></span>&nbsp;-&nbsp;<span class="navenable"><a href="src.pas.html">Up</a></span>&nbsp;-&nbsp;<span class="navenable"><a href="src.pas.bezier.html">Next</a></span>&nbsp;]&nbsp;
+    </td>
+  </tr>
+</table>
+<table border=0 width="100%" cellspacing=10><tr><td><p>This file contains everything dealing with the About form and intro splash screen.
+</p>
+</td></tr></table>
+<br>
+
+<table width="100%" border=0 cellspacing=0>
+  <tr class="headline">
+    <td width="100%">
+      <p class="subheadline">&nbsp;Index</p>
+    </td>
+  </tr>
+</table>
+<ul class="index">
+  <li>- <a href="#taboutbox">TAboutBox</a>&nbsp;<span class="added">(31 Jul 2009)</span>
+  <li>- <a href="#opensplashscreen">OpenSplashScreen</a>&nbsp;<span class="added">(31 Jul 2009)</span>
+  <li>- <a href="#openaboutbox">OpenAboutBox</a>&nbsp;<span class="added">(31 Jul 2009)</span>
+  <li>- <a href="#disclaimerthread">DisclaimerThread</a>&nbsp;<span class="added">(31 Jul 2009)</span>
+  <li>- <a href="#tdisclaimerinfo">TDisclaimerInfo</a>&nbsp;<span class="added">(31 Jul 2009)</span>
+  <li>- <a href="#tsplashscreen">TSplashScreen</a>&nbsp;<span class="added">(31 Jul 2009)</span>
+  <li>- <a href="#redrawdisclaimer">RedrawDisclaimer</a>&nbsp;<span class="added">(31 Jul 2009)</span>
+</ul>
+<br>
+
+
+<a name="taboutbox"></a>
+  <table width="100%" border=0 cellspacing=0>
+    <tr class="headline">
+      <td>
+        <p class="item">&nbsp;TAboutBox</p>
+      </td>
+      <td align=right>
+        <font size=-2>DanielPharos&nbsp;-&nbsp;31 Jul 2009</font>
+      </td>
+      <td width="1%" align=right nowrap>
+        &nbsp;&nbsp;[&nbsp;<a href="#__top__">Top</a>&nbsp;]&nbsp;
+      </td>
+    </tr>
+  </table>
+  <table border=0 width="100%" cellspacing=10><tr><td>
+<div class="doccode"><pre>
+TAboutBox = class(TQkForm)
+</pre></div>
+
+<p>TAboutBox is QuArK's About window class.
+</p>
+  </td></tr></table>
+  <br>
+
+<a name="opensplashscreen"></a>
+  <table width="100%" border=0 cellspacing=0>
+    <tr class="headline">
+      <td>
+        <p class="item">&nbsp;OpenSplashScreen</p>
+      </td>
+      <td align=right>
+        <font size=-2>DanielPharos&nbsp;-&nbsp;31 Jul 2009</font>
+      </td>
+      <td width="1%" align=right nowrap>
+        &nbsp;&nbsp;[&nbsp;<a href="#__top__">Top</a>&nbsp;]&nbsp;
+      </td>
+    </tr>
+  </table>
+  <table border=0 width="100%" cellspacing=10><tr><td>
+<div class="doccode"><pre>
+function OpenSplashScreen : TForm;
+</pre></div>
+
+<p>OpenSplashScreen creates (and displays) the QuArK splash screen and returns its &nbsp;<tt>TForm</tt>&nbsp;. Do not forget to release the splash screen when it it not needed anymore, because it will NOT auto-close!
+</p><p>Also, please don't open the splash screen without a good reason to do so.
+</p>
+  </td></tr></table>
+  <br>
+
+<a name="openaboutbox"></a>
+  <table width="100%" border=0 cellspacing=0>
+    <tr class="headline">
+      <td>
+        <p class="item">&nbsp;OpenAboutBox</p>
+      </td>
+      <td align=right>
+        <font size=-2>DanielPharos&nbsp;-&nbsp;31 Jul 2009</font>
+      </td>
+      <td width="1%" align=right nowrap>
+        &nbsp;&nbsp;[&nbsp;<a href="#__top__">Top</a>&nbsp;]&nbsp;
+      </td>
+    </tr>
+  </table>
+  <table border=0 width="100%" cellspacing=10><tr><td>
+<div class="doccode"><pre>
+procedure OpenAboutBox;
+</pre></div>
+
+<p>OpenAboutBox creates QuArK's About form, and displays it modal, so it has to be closed by the user before anything else can be done.
+</p><p>Also, please don't open the about window without a good reason to do so.
+</p>
+  </td></tr></table>
+  <br>
+
+<a name="disclaimerthread"></a>
+  <table width="100%" border=0 cellspacing=0>
+    <tr class="headline">
+      <td>
+        <p class="item">&nbsp;DisclaimerThread</p>
+      </td>
+      <td align=right>
+        <font size=-2>DanielPharos&nbsp;-&nbsp;31 Jul 2009</font>
+      </td>
+      <td width="1%" align=right nowrap>
+        &nbsp;&nbsp;[&nbsp;<a href="#__top__">Top</a>&nbsp;]&nbsp;
+      </td>
+    </tr>
+  </table>
+  <table border=0 width="100%" cellspacing=10><tr><td>
+<div class="doccode"><pre>
+function DisclaimerThread(F: TForm): THandle;
+</pre></div>
+
+<p>DisclaimerThread creates the flashing red disclaimer text on the splash screen and the about window. Call it with the window's handle, and it returns a handle to a thread it created that draws the flashing text.
+</p><p>Currently, only one disclaimer thread at a time is supported. Opening multiple can result in undefined behavior.
+</p><p>Don't forget to close the returned handle when you're done with the flashing text!
+</p>
+  </td></tr></table>
+  <br>
+
+<a name="tdisclaimerinfo"></a>
+  <table width="100%" border=0 cellspacing=0>
+    <tr class="headline">
+      <td>
+        <p class="item">&nbsp;TDisclaimerInfo</p>
+      </td>
+      <td align=right>
+        <font size=-2>DanielPharos&nbsp;-&nbsp;31 Jul 2009</font>
+      </td>
+      <td width="1%" align=right nowrap>
+        &nbsp;&nbsp;[&nbsp;<a href="#__top__">Top</a>&nbsp;]&nbsp;
+      </td>
+    </tr>
+  </table>
+  <table border=0 width="100%" cellspacing=10><tr><td>
+<div class="doccode"><pre>
+TDisclaimerInfo = record
+  ...
+end;
+</pre></div>
+
+<p>TDisclaimerInfo stores the information about the flashing disclaimer text. It is created and used by the &nbsp;<tt>DisclaimerThread</tt>&nbsp; function.
+</p>
+  </td></tr></table>
+  <br>
+
+<a name="tsplashscreen"></a>
+  <table width="100%" border=0 cellspacing=0>
+    <tr class="headline">
+      <td>
+        <p class="item">&nbsp;TSplashScreen</p>
+      </td>
+      <td align=right>
+        <font size=-2>DanielPharos&nbsp;-&nbsp;31 Jul 2009</font>
+      </td>
+      <td width="1%" align=right nowrap>
+        &nbsp;&nbsp;[&nbsp;<a href="#__top__">Top</a>&nbsp;]&nbsp;
+      </td>
+    </tr>
+  </table>
+  <table border=0 width="100%" cellspacing=10><tr><td>
+<div class="doccode"><pre>
+TSplashScreen = class(TForm)
+</pre></div>
+
+<p>TAboutBox is QuArK's Splash screen class. Note that this class does not have its own Delphi unit; it is purely created in 'runtime-code'. It cannot depend on any deeper QuArK functions, since the splash screen is one of the first things we display (before anything has been initialized).
+</p>
+  </td></tr></table>
+  <br>
+
+<a name="redrawdisclaimer"></a>
+  <table width="100%" border=0 cellspacing=0>
+    <tr class="headline">
+      <td>
+        <p class="item">&nbsp;RedrawDisclaimer</p>
+      </td>
+      <td align=right>
+        <font size=-2>DanielPharos&nbsp;-&nbsp;31 Jul 2009</font>
+      </td>
+      <td width="1%" align=right nowrap>
+        &nbsp;&nbsp;[&nbsp;<a href="#__top__">Top</a>&nbsp;]&nbsp;
+      </td>
+    </tr>
+  </table>
+  <table border=0 width="100%" cellspacing=10><tr><td>
+<div class="doccode"><pre>
+var RedrawDisclaimer: Boolean;
+</pre></div>
+
+<p>RedrawDisclaimer is a boolean variable that, when set, indicates that the currently running &nbsp;<tt>DisclaimerThread</tt>&nbsp; should redraw the flashing disclaimer text. &nbsp;<tt>DisclaimerThread</tt>&nbsp; periodically polls this value, and redraws when needed (unsetting this variable in the process, of course).
+</p>
+  </td></tr></table>
+  <br>
+
+<br>
+
+<table width="100%" border=0 cellspacing=0>
+  <tr class="headline">
+    <td width="99%" align=center>
+      <p class="sm">
+        Copyright (c) 2009, GNU General Public License by The QuArK (Quake Army Knife) Community - <a target="_blank" href="http://quark.sourceforge.net/">http://quark.sourceforge.net/</a><br>
+      </p>
+    </td>
+    <td width="1%" align=right nowrap>
+      &nbsp;[&nbsp;<span class="navenable"><a href="src.pas.html">Prev</a></span>&nbsp;-&nbsp;<a href="#__top__">Top</a>&nbsp;-&nbsp;<span class="navenable"><a href="src.pas.bezier.html">Next</a></span>&nbsp;]&nbsp;
+    </td>
+  </tr>
+</table>
+</body>
+</html>

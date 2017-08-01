@@ -1,0 +1,205 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"  "http://www.w3.org/TR/html4/loose.dtd">
+<html lang="en">
+<head>
+  <title>Installing QuArK on GNU Linux systems</title>
+  <meta name="Description" content="QuArK Information Database - Page: 1.9.1.&nbsp;Installing QuArK on GNU Linux systems">
+  <meta name="Keywords" content="QuArK InfoBase Quake Army Knife QRK QKM Python PY Map Editor Hexen Heretic Half-Life Sin Kingpin Soldier-of-Fortune Star-Trek-Voyager Elite-Force">
+  <link rel=stylesheet href="standard.css" type="text/css">
+</head>
+
+<body>
+<a name="__top__"></a>
+<table width="100%" border=0 cellspacing=0>
+  <tr>
+    <td width=213>
+      <a target="_blank" href="http://quark.sourceforge.net/"><img src="quarkicon.png" width=213 height=90 border=0 alt="Go to QuArK Web Site"></a>
+    </td>
+    <td width="70%" align=center>
+      <div class="topheadline">Installing QuArK on GNU Linux systems</div>
+      <div class="sm">Updated&nbsp;25 Jul 2009</div>
+    </td>
+    <td width="30%" valign=bottom nowrap>
+      Upper&nbsp;levels:<br>-&nbsp;<a href="index.html">QuArK&nbsp;Information&nbsp;Base</a><br>-&nbsp;<a href="intro.html">1.&nbsp;Introduction&nbsp;to&nbsp;QuArK</a><br>-&nbsp;<a href="intro.quarkonlinux.html">1.9.&nbsp;QuArK&nbsp;on&nbsp;GNU&nbsp;Linux&nbsp;system...</a><br>
+    </td>
+  </tr>
+</table>
+<table width="100%" border=0 cellspacing=0>
+  <tr class="headline">
+    <td width="99%">
+      <p class="headline">&nbsp;1.9.1.&nbsp;Installing QuArK on GNU Linux systems</p>
+    </td>
+    <td width="1%" align=right nowrap>
+      &nbsp;[&nbsp;<span class="navenable"><a href="intro.quarkonlinux.html">Prev</a></span>&nbsp;-&nbsp;<span class="navenable"><a href="intro.quarkonlinux.html">Up</a></span>&nbsp;-&nbsp;<span class="navenable"><a href="maped.html">Next</a></span>&nbsp;]&nbsp;
+    </td>
+  </tr>
+</table>
+<table border=0 width="100%" cellspacing=10><tr><td><p>QuArK runs pretty well on Linux systems, given a bit of patience.
+Here's how to get started.</p>
+</td></tr></table>
+<br>
+
+<table width="100%" border=0 cellspacing=0>
+  <tr class="headline">
+    <td width="100%">
+      <p class="subheadline">&nbsp;Index</p>
+    </td>
+  </tr>
+</table>
+<ul class="index">
+  <li>- <a href="#1wine">Get Wine with OpenGL Support</a>&nbsp;<span class="added">(28 Apr 2009)</span>
+  <li>- <a href="#2get">Get QuArK</a>&nbsp;<span class="added">(25 Jul 2009)</span>
+  <li>- <a href="#3install">Install QuArK</a>&nbsp;<span class="added">(15 Jan 2004)</span>
+  <li>- <a href="#4run">Running QuArK</a>&nbsp;<span class="added">(26 Jan 2009)</span>
+</ul>
+<br>
+
+
+<a name="1wine"></a>
+  <table width="100%" border=0 cellspacing=0>
+    <tr class="headline">
+      <td>
+        <p class="item">&nbsp;Get Wine with OpenGL Support</p>
+      </td>
+      <td align=right>
+        <font size=-2>slightcrazed, Peter Brett&nbsp;-&nbsp;28 Apr 2009</font>
+      </td>
+      <td width="1%" align=right nowrap>
+        &nbsp;&nbsp;[&nbsp;<a href="#__top__">Top</a>&nbsp;]&nbsp;
+      </td>
+    </tr>
+  </table>
+  <table border=0 width="100%" cellspacing=10><tr><td>
+<p>Wine (Wine Is Not an Emulator) is a nifty bit of programming that
+allows for Windows binaries to run on a Linux/Unix platform through
+the use of a compatibility layer. This extra layer of programming lies
+between the binaries and the operating system, and it 'tricks' the
+executable into thinking it is running on a Windows machine. If you
+don't have Wine, you'll need to obtain it from 
+<a target=_blank href="http://www.winehq.org/">http://www.winehq.org</a>. I
+used Wine release 20030911, but any of the newer versions will work.
+Wine release 20031118 is the most recent version at the time of this
+writing. Of course, you will need Wine to be compiled with OpenGL
+support, both for QuArK to display the OpenGL 3D window.  This
+<a href="http://lhl.linuxgames.com/howto/half-life-HOWTO-0.5.html">article</a>
+at Linuxgames.com is the best I know of for compiling Wine with OpenGL
+support, and I am not going to take the time to re-write what has
+already been written (the article also explains how to install
+Half-Life).
+</p><p>Make sure to check out <a target="_blank" href="http://appdb.winehq.org/objectManager.php?sClass=application&iId=1532">WineHQ's AppDB</a>
+to see what versions of QuArK have been tested to work with what version of Wine.</p>
+  </td></tr></table>
+  <br>
+
+<a name="2get"></a>
+  <table width="100%" border=0 cellspacing=0>
+    <tr class="headline">
+      <td>
+        <p class="item">&nbsp;Get QuArK</p>
+      </td>
+      <td align=right>
+        <font size=-2>slightcrazed, Peter Brett&nbsp;-&nbsp;25 Jul 2009</font>
+      </td>
+      <td width="1%" align=right nowrap>
+        &nbsp;&nbsp;[&nbsp;<a href="#__top__">Top</a>&nbsp;]&nbsp;
+      </td>
+    </tr>
+  </table>
+  <table border=0 width="100%" cellspacing=10><tr><td>
+<p>After following the above steps, you should have a
+working Wine install with OpenGL compiled and functioning. There are
+many versions of QuArK available, and most if not all will work with
+Wine. The one issue is that versions are available with an installer
+(.exe), or as a zip archive (.zip). The installer that comes with
+QuArK 6.4 does not work with Wine. The zip archive are simply a zipped
+up copy of the QuArK file tree, and these work perfectly. Some older
+versions of QuArK will work as well, but may require a separate
+download of Python.
+</p><p>If you need to download Python separately, ignore the link for
+&nbsp;<tt>python1.5b.exe</tt>&nbsp; given on the QuArK home page.  The installer
+does not work with Wine.  Instead you'll need the full Python 1.5.2
+libraries from the <a target=_blank href="http://www.python.org/">
+official Python website</a>.
+</p>
+  </td></tr></table>
+  <br>
+
+<a name="3install"></a>
+  <table width="100%" border=0 cellspacing=0>
+    <tr class="headline">
+      <td>
+        <p class="item">&nbsp;Install QuArK</p>
+      </td>
+      <td align=right>
+        <font size=-2>slightcrazed, Peter Brett&nbsp;-&nbsp;15 Jan 2004</font>
+      </td>
+      <td width="1%" align=right nowrap>
+        &nbsp;&nbsp;[&nbsp;<a href="#__top__">Top</a>&nbsp;]&nbsp;
+      </td>
+    </tr>
+  </table>
+  <table border=0 width="100%" cellspacing=10><tr><td>
+<p>QuArK 6.4:
+</p><p>Open a terminal window and unzip the the file to the desired location.
+</p><div class="doccode"><pre>
+$ unzip quark-win32-<blah>.zip
+</pre></div>
+
+<p>QuArK 6.3.0:
+</p><p>Open a terminal window, move to the directory you downloaded the file
+to, and run the installer.
+</p><div class="doccode"><pre>
+$ cd /path/to/quark
+$ wine quark_v6.3.0.EXE
+</pre></div>
+
+<p>You can put the file tree anywhere you want, but it is probably
+easiest to place it in your Wine 'C' drive.</p>
+  </td></tr></table>
+  <br>
+
+<a name="4run"></a>
+  <table width="100%" border=0 cellspacing=0>
+    <tr class="headline">
+      <td>
+        <p class="item">&nbsp;Running QuArK</p>
+      </td>
+      <td align=right>
+        <font size=-2>slightcrazed, Peter Brett&nbsp;-&nbsp;26 Jan 2009</font>
+      </td>
+      <td width="1%" align=right nowrap>
+        &nbsp;&nbsp;[&nbsp;<a href="#__top__">Top</a>&nbsp;]&nbsp;
+      </td>
+    </tr>
+  </table>
+  <table border=0 width="100%" cellspacing=10><tr><td>
+<p>A note regarding running QuArK. Currently, it seems that the only way
+to run QuArK and have it function correctly is to cd into the install
+directory in a terminal and run the executables by hand.
+</p><p>Example: My Wine directories are located in my &nbsp;<tt>/home</tt>&nbsp; folder
+under Wine.
+</p><p>To run QuArK:
+</p><div class="doccode"><pre>
+cd /home/slight/Wine/C/QuArK\ 6.3/
+wine QuArK.exe
+</pre></div>
+
+<p>This is the case with many applications run under Wine.</p>
+  </td></tr></table>
+  <br>
+
+<br>
+
+<table width="100%" border=0 cellspacing=0>
+  <tr class="headline">
+    <td width="99%" align=center>
+      <p class="sm">
+        Copyright (c) 2009, GNU General Public License by The QuArK (Quake Army Knife) Community - <a target="_blank" href="http://quark.sourceforge.net/">http://quark.sourceforge.net/</a><br>
+      </p>
+    </td>
+    <td width="1%" align=right nowrap>
+      &nbsp;[&nbsp;<span class="navenable"><a href="intro.quarkonlinux.html">Prev</a></span>&nbsp;-&nbsp;<a href="#__top__">Top</a>&nbsp;-&nbsp;<span class="navenable"><a href="maped.html">Next</a></span>&nbsp;]&nbsp;
+    </td>
+  </tr>
+</table>
+</body>
+</html>

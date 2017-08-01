@@ -1,0 +1,842 @@
+QQRKSRC1
+{
+  QuArKProtected = "1"
+  Description = "Portal Textures from portal content.gcf (April 24,2008) by Who Gives A Dam"
+
+  Portal directory infos.qctx =
+  {
+    Game = "Half-Life2"
+    SourceDir = "portal"
+    GameDir = "portal"
+  }
+
+//
+// Materials for Portal
+//
+
+  Portal Textures.qtx =
+  {
+    ToolBox = "Texture Browser..."
+    Root = "Portal Textures.qtxfolder"
+    HTML = "intro.texturebrowser.html"
+
+    t_portal:incl = { v="portal" PakFile="portal content.gcf" }
+
+    Portal Textures.qtxfolder =
+    {
+      Concrete.txlist =
+      {
+        concrete/concretefloor_bts_002a.wl = { t_portal=! }
+        concrete/concretewall075a.wl = { t_portal=! }
+        concrete/concrete_bts_ceiling001a.wl = { t_portal=! }
+        concrete/concrete_bts_ceiling002a.wl = { t_portal=! }
+        concrete/concrete_bts_floor001a.wl = { t_portal=! }
+        concrete/concrete_bts_floor001b.wl = { t_portal=! }
+        concrete/concrete_bts_floor002a.wl = { t_portal=! }
+        concrete/concrete_bts_modular_wall001a.wl = { t_portal=! }
+        concrete/concrete_bts_modular_wall001b.wl = { t_portal=! }
+        concrete/concrete_bts_modular_wall001c.wl = { t_portal=! }
+        concrete/concrete_bts_modular_wall001d.wl = { t_portal=! }
+        concrete/concrete_bts_sumpfloor.wl = { t_portal=! }
+        concrete/concrete_bts_wall001a.wl = { t_portal=! }
+        concrete/concrete_modular_ceiling001a.wl = { t_portal=! }
+        concrete/concrete_modular_floor001a.wl = { t_portal=! }
+        concrete/concrete_modular_floor001b.wl = { t_portal=! }
+        concrete/concrete_modular_floor001c.wl = { t_portal=! }
+        concrete/concrete_modular_wall001a.wl = { t_portal=! }
+        concrete/concrete_modular_wall001b.wl = { t_portal=! }
+        concrete/concrete_modular_wall001c.wl = { t_portal=! }
+        concrete/concrete_modular_wall001d.wl = { t_portal=! }
+        concrete/concrete_modular_wall001e.wl = { t_portal=! }
+        concrete/concrete_modular_wall001f.wl = { t_portal=! }
+        concrete/concrete_modular_wall001_gradient00.wl = { t_portal=! }
+        concrete/concrete_modular_wall001_gradient01.wl = { t_portal=! }
+        concrete/concrete_modular_wall001_gradient02.wl = { t_portal=! }
+        concrete/concrete_modular_wall001_gradient03.wl = { t_portal=! }
+        concrete/concrete_modular_wall001_gradient04.wl = { t_portal=! }
+        concrete/concrete_modular_wall001_gradient05.wl = { t_portal=! }
+        concrete/concrete_modular_wall001_gradient06.wl = { t_portal=! }
+        concrete/concrete_modular_wall001_gradient07.wl = { t_portal=! }
+        concrete/concrete_modular_wall001_gradient08.wl = { t_portal=! }
+        concrete/concrete_modular_wall001_gradient11.wl = { t_portal=! }
+        concrete/observationwall_001a.wl = { t_portal=! }
+        concrete/observationwall_001b.wl = { t_portal=! }
+      }
+
+      Console.txlist =
+      {
+        console/background1.wl = { t_portal=! }
+        console/background1_widescreen.wl = { t_portal=! }
+        console/background2.wl = { t_portal=! }
+        console/background2_widescreen.wl = { t_portal=! }
+      }
+
+      Decals.txlist =
+      {
+        decals/orange_spot.wl = { t_portal=! }
+        decals/orange_spot001.wl = { t_portal=! }
+        decals/orange_spot002.wl = { t_portal=! }
+        decals/overlay_light_gradient.wl = { t_portal=! }
+      }
+
+      Effects.txlist =
+      {
+        effects/brightglow_y_nomodel.wl = { t_portal=! }
+        effects/cleanser_edge.wl = { t_portal=! }
+        effects/Cleanser_field_edge.wl = { t_portal=! }
+        effects/eball_finite_life.wl = { t_portal=! }
+        effects/eball_infinite_life.wl = { t_portal=! }
+        effects/electric1.wl = { t_portal=! }
+        effects/ember_swirling001.wl = { t_portal=! }
+        effects/fleck_ash1.wl = { t_portal=! }
+        effects/fleck_ash2.wl = { t_portal=! }
+        effects/fleck_ash3.wl = { t_portal=! }
+        effects/light_rail_beam1.wl = { t_portal=! }
+        effects/light_rail_endpoint.wl = { t_portal=! }
+        effects/portal_1_particle.wl = { t_portal=! }
+        effects/portal_2_particle.wl = { t_portal=! }
+        effects/portal_cleanser.wl = { t_portal=! }
+        effects/portal_create_warp_dudv.wl = { t_portal=! }
+        effects/portal_create_warp_dudv_dx60.wl = { t_portal=! }
+        effects/redlaser1.wl = { t_portal=! }
+        effects/softglow.wl = { t_portal=! }
+        effects/softglow_translucent.wl = { t_portal=! }
+        effects/whatisthis.wl = { t_portal=! }
+      }
+
+      Engine.txlist =
+      {
+        Engine/debug_portal_1.wl = { t_portal=! }
+        Engine/debug_portal_2.wl = { t_portal=! }
+        Engine/debug_water_reflect_0.wl = { t_portal=! }
+        Engine/debug_water_reflect_1.wl = { t_portal=! }
+        Engine/debug_water_reflect_2.wl = { t_portal=! }
+        Engine/debug_water_refract_0.wl = { t_portal=! }
+        Engine/debug_water_refract_1.wl = { t_portal=! }
+        Engine/debug_water_refract_2.wl = { t_portal=! }
+        Engine/SetZ.wl = { t_portal=! }
+        Engine/TranslucentVertexColor.wl = { t_portal=! }
+        Engine/WriteZ_model.wl = { t_portal=! }
+      }
+
+      Glass.txlist =
+      {
+        glass/glasswindow_frosted.wl = { t_portal=! }
+        glass/glasswindow_frosted_002.wl = { t_portal=! }
+        glass/glasswindow_frosted_002b.wl = { t_portal=! }
+        glass/glasswindow_frosted_003.wl = { t_portal=! }
+        glass/glasswindow_frosted_003b.wl = { t_portal=! }
+        glass/glasswindow_frosted_004.wl = { t_portal=! }
+        glass/glasswindow_frosted_break001a.wl = { t_portal=! }
+        glass/glasswindow_frosted_break001b.wl = { t_portal=! }
+        glass/glasswindow_refract01.wl = { t_portal=! }
+        glass/refract01_dx8.wl = { t_portal=! }
+      }
+
+      Lights.txlist =
+      {
+        lights/light_orange001.wl = { t_portal=! }
+        lights/light_recessedcool001.wl = { t_portal=! }
+        lights/light_recessedcool002.wl = { t_portal=! }
+        lights/white007.wl = { t_portal=! }
+        lights/white008.wl = { t_portal=! }
+        lights/white009.wl = { t_portal=! }
+        lights/white010.wl = { t_portal=! }
+      }
+
+      Metal.txlist =
+      {
+        metal/citadel_metalwall060a.wl = { t_portal=! }
+        metal/metalbeam_bts_001a.wl = { t_portal=! }
+        metal/metaldoor_white01.wl = { t_portal=! }
+        metal/metalduct_bts_001.wl = { t_portal=! }
+        metal/metalfloor_bts_001a.wl = { t_portal=! }
+        metal/metalfloor_bts_001b.wl = { t_portal=! }
+        metal/metalgrate011a.wl = { t_portal=! }
+        metal/metalgrate018.wl = { t_portal=! }
+        metal/metalgrate018b.wl = { t_portal=! }
+        metal/metalgrate_bts_001a.wl = { t_portal=! }
+        metal/metalwall048b.wl = { t_portal=! }
+        metal/metalwall048b_cheap.wl = { t_portal=! }
+        metal/metalwall048b_gradient.wl = { t_portal=! }
+        metal/metalwall048b_lrg.wl = { t_portal=! }
+        metal/metalwall048b_med.wl = { t_portal=! }
+        metal/metalwall048c.wl = { t_portal=! }
+        metal/metalwall048c_gradient.wl = { t_portal=! }
+        metal/metalwall048e.wl = { t_portal=! }
+        metal/metalwall_bts_001b.wl = { t_portal=! }
+        metal/metalwall_bts_002a.wl = { t_portal=! }
+        metal/metalwall_bts_002c.wl = { t_portal=! }
+        metal/metalwall_bts_002d.wl = { t_portal=! }
+        metal/metalwall_bts_003a.wl = { t_portal=! }
+        metal/metalwall_bts_004a.wl = { t_portal=! }
+        metal/metalwall_bts_005a.wl = { t_portal=! }
+        metal/metalwall_bts_006a.wl = { t_portal=! }
+        metal/metalwall_bts_006a_gradient.wl = { t_portal=! }
+        metal/metalwall_bts_006b.wl = { t_portal=! }
+        metal/metalwall_bts_006b_gradient.wl = { t_portal=! }
+        metal/metalwall_bts_006c_gradient.wl = { t_portal=! }
+        metal/metalwall_bts_006d_gradient.wl = { t_portal=! }
+        metal/metalwall_bts_006e_cable.wl = { t_portal=! }
+        metal/metal_lift001.wl = { t_portal=! }
+        metal/metal_lift001e.wl = { t_portal=! }
+        metal/metal_lift001_gradient.wl = { t_portal=! }
+        metal/metal_modular_floor001.wl = { t_portal=! }
+        metal/metal_modular_floor002.wl = { t_portal=! }
+      }
+
+      Models.txlist =
+      {
+        models/gladdysDestruction/bts_chair.wl = { t_portal=! }
+        models/gladdysDestruction/bts_clipboard.wl = { t_portal=! }
+        models/gladdysDestruction/bts_clipboard_a.wl = { t_portal=! }
+        models/gladdysDestruction/bts_clipboard_b.wl = { t_portal=! }
+        models/gladdysDestruction/bts_clipboard_c.wl = { t_portal=! }
+        models/gladdysDestruction/bts_clipboard_d.wl = { t_portal=! }
+        models/gladdysDestruction/bts_shelf.wl = { t_portal=! }
+        models/gladdysDestruction/bts_stool.wl = { t_portal=! }
+        models/gladdysDestruction/bts_table.wl = { t_portal=! }
+        models/gladdysDestruction/bts_turret.wl = { t_portal=! }
+        models/gladdysDestruction/cage_light.wl = { t_portal=! }
+        models/gladdysDestruction/clear_tubes.wl = { t_portal=! }
+        models/gladdysDestruction/clear_tubes_broken_glass.wl = { t_portal=! }
+        models/gladdysDestruction/clear_tubes_glass.wl = { t_portal=! }
+        models/gladdysDestruction/computer.wl = { t_portal=! }
+        models/gladdysDestruction/computer_case.wl = { t_portal=! }
+        models/gladdysDestruction/emergency_phone.wl = { t_portal=! }
+        models/gladdysDestruction/exit_ceiling.wl = { t_portal=! }
+        models/gladdysDestruction/Fan01.wl = { t_portal=! }
+        models/gladdysDestruction/fire_extinguisher.wl = { t_portal=! }
+        models/gladdysDestruction/Glados_Aperturedoor.wl = { t_portal=! }
+        models/gladdysDestruction/glados_ball.wl = { t_portal=! }
+        models/gladdysDestruction/glados_ball_01.wl = { t_portal=! }
+        models/gladdysDestruction/glados_ball_02.wl = { t_portal=! }
+        models/gladdysDestruction/glados_ball_03.wl = { t_portal=! }
+        models/gladdysDestruction/glados_ball_04.wl = { t_portal=! }
+        models/gladdysDestruction/glados_body.wl = { t_portal=! }
+        models/gladdysDestruction/Glados_bunker.wl = { t_portal=! }
+        models/gladdysDestruction/Glados_bunker_glass.wl = { t_portal=! }
+        models/gladdysDestruction/glados_disc.wl = { t_portal=! }
+        models/gladdysDestruction/Glados_floorlight.wl = { t_portal=! }
+        models/gladdysDestruction/Glados_floorlight_glass.wl = { t_portal=! }
+        models/gladdysDestruction/glados_generator.wl = { t_portal=! }
+        models/gladdysDestruction/glados_generator_sheet_01.wl = { t_portal=! }
+        models/gladdysDestruction/glados_generator_sheet_02.wl = { t_portal=! }
+        models/gladdysDestruction/glados_generator_sheet_03.wl = { t_portal=! }
+        models/gladdysDestruction/glados_generator_sheet_04.wl = { t_portal=! }
+        models/gladdysDestruction/glados_screenborder.wl = { t_portal=! }
+        models/gladdysDestruction/horizontal_piston.wl = { t_portal=! }
+        models/gladdysDestruction/lab_floorlight.wl = { t_portal=! }
+        models/gladdysDestruction/Lab_floorlight_glass.wl = { t_portal=! }
+        models/gladdysDestruction/lab_phone.wl = { t_portal=! }
+        models/gladdysDestruction/ladder_01.wl = { t_portal=! }
+        models/gladdysDestruction/machineCmap.wl = { t_portal=! }
+        models/gladdysDestruction/metal_block.wl = { t_portal=! }
+        models/gladdysDestruction/mini_piston.wl = { t_portal=! }
+        models/gladdysDestruction/observationwall_001a.wl = { t_portal=! }
+        models/gladdysDestruction/plant01.wl = { t_portal=! }
+        models/gladdysDestruction/plant02.wl = { t_portal=! }
+        models/gladdysDestruction/projector.wl = { t_portal=! }
+        models/gladdysDestruction/rocket_engine.wl = { t_portal=! }
+        models/gladdysDestruction/Rocket_Sentry.wl = { t_portal=! }
+        models/gladdysDestruction/screen.wl = { t_portal=! }
+        models/gladdysDestruction/trash_can.wl = { t_portal=! }
+        models/gladdysDestruction/vertical_piston.wl = { t_portal=! }
+        models/player/chell_body.wl = { t_portal=! }
+        models/player/chell_face.wl = { t_portal=! }
+        models/player/chell_hair.wl = { t_portal=! }
+        models/player/chell_hairclip.wl = { t_portal=! }
+        models/player/eyeball_l.wl = { t_portal=! }
+        models/player/eyeball_r.wl = { t_portal=! }
+        models/player/glint.wl = { t_portal=! }
+        models/player/lower_teeth.wl = { t_portal=! }
+        models/player/mouth.wl = { t_portal=! }
+        models/player/pupil_l.wl = { t_portal=! }
+        models/player/pupil_r.wl = { t_portal=! }
+        models/player/upper_teeth.wl = { t_portal=! }
+        models/portals/portalstaticoverlay_1.wl = { t_portal=! }
+        models/portals/portalstaticoverlay_2.wl = { t_portal=! }
+        models/portals/Portal_1_Anims.wl = { t_portal=! }
+        models/portals/portal_1_dynamicmesh.wl = { t_portal=! }
+        models/portals/portal_1_dynamicmesh_fogcompatible.wl = { t_portal=! }
+        models/portals/portal_1_renderfix_dynamicmesh.wl = { t_portal=! }
+        models/portals/Portal_2_Anims.wl = { t_portal=! }
+        models/portals/portal_2_dynamicmesh.wl = { t_portal=! }
+        models/portals/portal_2_dynamicmesh_fogcompatible.wl = { t_portal=! }
+        models/portals/portal_2_renderfix_dynamicmesh.wl = { t_portal=! }
+        models/portals/portal_depthdoubler.wl = { t_portal=! }
+        models/portals/portal_refract_1.wl = { t_portal=! }
+        models/portals/portal_refract_2.wl = { t_portal=! }
+        models/portals/portal_stencil_hole.wl = { t_portal=! }
+        models/props/ball_catcher_sheet.wl = { t_portal=! }
+        models/props/Bed01.wl = { t_portal=! }
+        models/props/bed01_glass.wl = { t_portal=! }
+        models/props/Box_dropper.wl = { t_portal=! }
+        models/props/Box_dropper_tube.wl = { t_portal=! }
+        models/props/button.wl = { t_portal=! }
+        models/props/Clock.wl = { t_portal=! }
+        models/props/combine_ball_launcher.wl = { t_portal=! }
+        models/props/Door_01.wl = { t_portal=! }
+        models/props/Door_02.wl = { t_portal=! }
+        models/props/Door_02_a.wl = { t_portal=! }
+        models/props/Door_02_b.wl = { t_portal=! }
+        models/props/Elevator_glass.wl = { t_portal=! }
+        models/props/Glados_stairs.wl = { t_portal=! }
+        models/props/Glados_stairs_glass.wl = { t_portal=! }
+        models/props/hospital_ivstand01.wl = { t_portal=! }
+        models/props/Lift_Platform.wl = { t_portal=! }
+        models/props/Light_rail_Corner.wl = { t_portal=! }
+        models/props/Light_rail_endcap.wl = { t_portal=! }
+        models/props/Light_rail_endcap_Glass.wl = { t_portal=! }
+        models/props/Light_rail_platform.wl = { t_portal=! }
+        models/props/Light_rail_wall_emitter.wl = { t_portal=! }
+        models/props/metal_box.wl = { t_portal=! }
+        models/props/metal_box_skin001.wl = { t_portal=! }
+        models/props/pedestal.wl = { t_portal=! }
+        models/props/pedestal_glass.wl = { t_portal=! }
+        models/props/portal_cleanser.wl = { t_portal=! }
+        models/props/radio.wl = { t_portal=! }
+        models/props/Round_elevator_sheet_1.wl = { t_portal=! }
+        models/props/Round_elevator_sheet_2.wl = { t_portal=! }
+        models/props/Round_elevator_sheet_3.wl = { t_portal=! }
+        models/props/Security_Camera.wl = { t_portal=! }
+        models/props/sphere.wl = { t_portal=! }
+        models/props/sphere_lit.wl = { t_portal=! }
+        models/props/sphere_lit01.wl = { t_portal=! }
+        models/props/sphere_lit02.wl = { t_portal=! }
+        models/props/sphere_lit03.wl = { t_portal=! }
+        models/props/sphere_lit04.wl = { t_portal=! }
+        models/props/sphere_lit05.wl = { t_portal=! }
+        models/props/sphere_lit06.wl = { t_portal=! }
+        models/props/sphere_lit07.wl = { t_portal=! }
+        models/props/sphere_lit08.wl = { t_portal=! }
+        models/props/sphere_lit09.wl = { t_portal=! }
+        models/props/sphere_lit10.wl = { t_portal=! }
+        models/props/sphere_shelf.wl = { t_portal=! }
+        models/props/switch001.wl = { t_portal=! }
+        models/props/table.wl = { t_portal=! }
+        models/props/toilet.wl = { t_portal=! }
+        models/props/Turret_01.wl = { t_portal=! }
+        models/props/Turret_01_inactive.wl = { t_portal=! }
+        models/props/128_fuse_set01/128_fuse_set01.wl = { t_portal=! }
+        models/props/128_fuse_set01/128_fuse_set01_b.wl = { t_portal=! }
+        models/props/128_fuse_set02/128_fuse_set02.wl = { t_portal=! }
+        models/props/128_fuse_set02/128_fuse_set02_b.wl = { t_portal=! }
+        models/props/128_fuse_set03/128_fuse_set03.wl = { t_portal=! }
+        models/props/128_fuse_set03/128_fuse_set03_b.wl = { t_portal=! }
+        models/props/128_fuse_set04/128_fuse_set04.wl = { t_portal=! }
+        models/props/128_fuse_set04/128_fuse_set04_b.wl = { t_portal=! }
+        models/props/128_fuse_set05/128_fuse_set05.wl = { t_portal=! }
+        models/props/128_fuse_set05/128_fuse_set05_b.wl = { t_portal=! }
+        models/props/128_fuse_set06/128_fuse_set06.wl = { t_portal=! }
+        models/props/128_fuse_set06/128_fuse_set06_b.wl = { t_portal=! }
+        models/props/128_fuse_set07/128_fuse_set07.wl = { t_portal=! }
+        models/props/128_fuse_set07/128_fuse_set07_b.wl = { t_portal=! }
+        models/props/128_fuse_set08/128_fuse_set08.wl = { t_portal=! }
+        models/props/128_fuse_set08/128_fuse_set08_b.wl = { t_portal=! }
+        models/props/128_fuse_set09/128_fuse_set09.wl = { t_portal=! }
+        models/props/128_fuse_set09/128_fuse_set09_b.wl = { t_portal=! }
+        models/props/128_fuse_set10/128_fuse_set10.wl = { t_portal=! }
+        models/props/128_fuse_set10/128_fuse_set10_b.wl = { t_portal=! }
+        models/props/autoportal_frame/autoportal_frame.wl = { t_portal=! }
+        models/props/bts_bed/bts_bed.wl = { t_portal=! }
+        models/props/cake/cake.wl = { t_portal=! }
+        models/props/claw/claw.wl = { t_portal=! }
+        models/props/elevatorshaft_wall/elevatorshaft_wall.wl = { t_portal=! }
+        models/props/elevator_caps/elevator_caps.wl = { t_portal=! }
+        models/props/food_can/food_can.wl = { t_portal=! }
+        models/props/glados_ceiling_light/glados_ceiling_light.wl = { t_portal=! }
+        models/props/glados_pillar/glados_pillar.wl = { t_portal=! }
+        models/props/kb_mouse/kb_mouse.wl = { t_portal=! }
+        models/props/lab_chair/lab_chair.wl = { t_portal=! }
+        models/props/lab_desk01/lab_desk01.wl = { t_portal=! }
+        models/props/lab_desk02/lab_desk02.wl = { t_portal=! }
+        models/props/lab_desk03/lab_desk03.wl = { t_portal=! }
+        models/props/lab_desk04/lab_desk04.wl = { t_portal=! }
+        models/props/lab_desk05/lab_desk05.wl = { t_portal=! }
+        models/props/lab_monitor/lab_monitor.wl = { t_portal=! }
+        models/props/lab_monitor/lab_monitor_logo.wl = { t_portal=! }
+        models/props/lab_monitor/lab_monitor_off.wl = { t_portal=! }
+        models/props/lab_monitor/lab_monitor_screen.wl = { t_portal=! }
+        models/props/lab_monitor/lab_monitor_screen_fast.wl = { t_portal=! }
+        models/props/lab_monitor/lab_monitor_screen_slow.wl = { t_portal=! }
+        models/props/lab_shelf/lab_shelf.wl = { t_portal=! }
+        models/props/lab_shelf_small/lab_shelf_small.wl = { t_portal=! }
+        models/props/milk_carton/milk_carton.wl = { t_portal=! }
+        models/props/pc_case02/pc_case02.wl = { t_portal=! }
+        models/props/pc_case02/pc_case02_b.wl = { t_portal=! }
+        models/props/pc_case_open/pc_case_open.wl = { t_portal=! }
+        models/props/rot_door/rot_door.wl = { t_portal=! }
+        models/props/saucepan/saucepan.wl = { t_portal=! }
+        models/props/server_wall/server_wall.wl = { t_portal=! }
+        models/props/shelf128/shelf128.wl = { t_portal=! }
+        models/props/sign_frame01/sign_frame01.wl = { t_portal=! }
+        models/props/sign_frame02/sign_frame02.wl = { t_portal=! }
+        models/props/speaker_system01/speaker_system01.wl = { t_portal=! }
+        models/props/speaker_system01/speaker_system01_b.wl = { t_portal=! }
+        models/props/vert_door/vert_door.wl = { t_portal=! }
+        models/props/wall_pipes_bend01/wall_pipes_bend01.wl = { t_portal=! }
+        models/props/wall_pipes_bend02/wall_pipes_bend02.wl = { t_portal=! }
+        models/props/wall_pipes_bend03/wall_pipes_bend03.wl = { t_portal=! }
+        models/props/wall_pipes_corner/wall_pipes_corner.wl = { t_portal=! }
+        models/props/wall_pipes_horiz/wall_pipes_horiz.wl = { t_portal=! }
+        models/props/wall_pipes_terminate01/wall_pipes_terminate01.wl = { t_portal=! }
+        models/props/wall_pipes_tjunc01/wall_pipes_tjunc01.wl = { t_portal=! }
+        models/props/wall_pipes_wave/wall_pipes_wave.wl = { t_portal=! }
+        models/props/water_bottle/water_bottle.wl = { t_portal=! }
+        models/props_animsigns/awe_blank.wl = { t_portal=! }
+        models/props_animsigns/awe_total.wl = { t_portal=! }
+        models/props_animsigns/awe_total_grey.wl = { t_portal=! }
+        models/props_animsigns/newsignage_back00.wl = { t_portal=! }
+        models/props_animsigns/newsignage_back01.wl = { t_portal=! }
+        models/props_animsigns/newsignage_back02.wl = { t_portal=! }
+        models/props_bts/bts_chair.wl = { t_portal=! }
+        models/props_bts/bts_clipboard.wl = { t_portal=! }
+        models/props_bts/bts_clipboard_a.wl = { t_portal=! }
+        models/props_bts/bts_clipboard_b.wl = { t_portal=! }
+        models/props_bts/bts_clipboard_c.wl = { t_portal=! }
+        models/props_bts/bts_clipboard_d.wl = { t_portal=! }
+        models/props_bts/bts_stool.wl = { t_portal=! }
+        models/props_bts/bts_table.wl = { t_portal=! }
+        models/props_bts/bts_turret.wl = { t_portal=! }
+        models/props_bts/cage_light.wl = { t_portal=! }
+        models/props_bts/clear_tubes.wl = { t_portal=! }
+        models/props_bts/clear_tubes_broken_glass.wl = { t_portal=! }
+        models/props_bts/clear_tubes_glass.wl = { t_portal=! }
+        models/props_bts/emergency_phone.wl = { t_portal=! }
+        models/props_bts/Fan01.wl = { t_portal=! }
+        models/props_bts/Glados_Aperturedoor.wl = { t_portal=! }
+        models/props_bts/glados_ball.wl = { t_portal=! }
+        models/props_bts/glados_ball_01.wl = { t_portal=! }
+        models/props_bts/glados_ball_02.wl = { t_portal=! }
+        models/props_bts/glados_ball_03.wl = { t_portal=! }
+        models/props_bts/glados_ball_04.wl = { t_portal=! }
+        models/props_bts/glados_body.wl = { t_portal=! }
+        models/props_bts/Glados_bunker.wl = { t_portal=! }
+        models/props_bts/Glados_bunker_glass.wl = { t_portal=! }
+        models/props_bts/glados_disc.wl = { t_portal=! }
+        models/props_bts/Glados_floorlight.wl = { t_portal=! }
+        models/props_bts/Glados_floorlight_glass.wl = { t_portal=! }
+        models/props_bts/glados_generator.wl = { t_portal=! }
+        models/props_bts/glados_generator_sheet_01.wl = { t_portal=! }
+        models/props_bts/glados_generator_sheet_02.wl = { t_portal=! }
+        models/props_bts/glados_generator_sheet_03.wl = { t_portal=! }
+        models/props_bts/glados_generator_sheet_04.wl = { t_portal=! }
+        models/props_bts/glados_platform.wl = { t_portal=! }
+        models/props_bts/glados_platform_glass.wl = { t_portal=! }
+        models/props_bts/glados_screenborder.wl = { t_portal=! }
+        models/props_bts/horizontal_piston.wl = { t_portal=! }
+        models/props_bts/lab_floorlight.wl = { t_portal=! }
+        models/props_bts/Lab_floorlight_glass.wl = { t_portal=! }
+        models/props_bts/lab_phone.wl = { t_portal=! }
+        models/props_bts/ladder_01.wl = { t_portal=! }
+        models/props_bts/metal_block.wl = { t_portal=! }
+        models/props_bts/mini_piston.wl = { t_portal=! }
+        models/props_bts/projector.wl = { t_portal=! }
+        models/props_bts/Rocket_Sentry.wl = { t_portal=! }
+        models/props_bts/rocket_sentry_b.wl = { t_portal=! }
+        models/props_bts/rocket_sentry_c.wl = { t_portal=! }
+        models/props_bts/Rocket_Sentry_inactive.wl = { t_portal=! }
+        models/props_bts/vertical_piston.wl = { t_portal=! }
+        models/props_c17/door01a_skin6.wl = { t_portal=! }
+        models/props_canal/generator01.wl = { t_portal=! }
+        models/props_wasteland/fence_alpha.wl = { t_portal=! }
+        models/props_wasteland/fence_sheet01.wl = { t_portal=! }
+        models/weapons/v_models/v_portalgun/v_hands.wl = { t_portal=! }
+        models/weapons/v_models/v_portalgun/v_portalgun.wl = { t_portal=! }
+        models/weapons/v_models/v_portalgun/v_portalgun2.wl = { t_portal=! }
+        models/weapons/v_models/v_portalgun/v_portalgun_glass.wl = { t_portal=! }
+        models/weapons/w_models/portalgun/w_portalgun.wl = { t_portal=! }
+      }
+
+      Nature.txlist =
+      {
+        nature/escape_vista_01.wl = { t_portal=! }
+        nature/escape_vista_02.wl = { t_portal=! }
+        nature/hazard_liquid.wl = { t_portal=! }
+        nature/hazard_liquid_beneath.wl = { t_portal=! }
+        nature/mudfloor004b.wl = { t_portal=! }
+      }
+
+      Objects.txlist =
+      {
+        objects/flat_panel_tv.wl = { t_portal=! }
+      }
+
+      Overlays.txlist =
+      {
+        overlays/aperture_lrg001.wl = { t_portal=! }
+        overlays/aperture_poster001a.wl = { t_portal=! }
+        overlays/aperture_poster002a.wl = { t_portal=! }
+        overlays/aperture_poster003a.wl = { t_portal=! }
+        overlays/cake_picture.wl = { t_portal=! }
+        overlays/garagegroundmarking01f.wl = { t_portal=! }
+        overlays/overlays_scrawlings_007.wl = { t_portal=! }
+        overlays/overlays_scrawlings_008.wl = { t_portal=! }
+        overlays/overlay_handprint.wl = { t_portal=! }
+        overlays/overlay_scrawlings001a.wl = { t_portal=! }
+        overlays/overlay_scrawlings002a.wl = { t_portal=! }
+        overlays/overlay_scrawlings003a.wl = { t_portal=! }
+        overlays/overlay_scrawlings004a.wl = { t_portal=! }
+        overlays/overlay_scrawlings004b.wl = { t_portal=! }
+        overlays/overlay_scrawlings005a.wl = { t_portal=! }
+        overlays/overlay_scrawlings005b.wl = { t_portal=! }
+        overlays/overlay_scrawlings006a.wl = { t_portal=! }
+        overlays/overlay_scrawlings006b.wl = { t_portal=! }
+        overlays/overlay_scrawlings006c.wl = { t_portal=! }
+        overlays/overlay_scrawlings_arrow01.wl = { t_portal=! }
+        overlays/overlay_scrawlings_arrow02.wl = { t_portal=! }
+        overlays/overlay_scrawlings_exit01.wl = { t_portal=! }
+        overlays/overlay_scrawlings_exit02.wl = { t_portal=! }
+        overlays/stain_concrete001.wl = { t_portal=! }
+        overlays/stain_concrete002.wl = { t_portal=! }
+        overlays/stain_concrete004.wl = { t_portal=! }
+        overlays/stain_concrete005.wl = { t_portal=! }
+        overlays/stain_concrete006.wl = { t_portal=! }
+        overlays/stain_concrete007.wl = { t_portal=! }
+        overlays/stain_concrete008.wl = { t_portal=! }
+        overlays/stain_concrete009.wl = { t_portal=! }
+        overlays/stain_concrete010.wl = { t_portal=! }
+        overlays/stain_concrete011.wl = { t_portal=! }
+        overlays/stain_concrete012.wl = { t_portal=! }
+        overlays/stain_oil_01.wl = { t_portal=! }
+        overlays/stain_oil_02.wl = { t_portal=! }
+        overlays/stain_oil_03.wl = { t_portal=! }
+        overlays/stain_oil_04.wl = { t_portal=! }
+        overlays/stain_oil_05.wl = { t_portal=! }
+        overlays/stain_oil_06.wl = { t_portal=! }
+        overlays/stain_tile001.wl = { t_portal=! }
+      }
+
+      Particle.txlist =
+      {
+        particle/Particle_Glow_02_Additive.wl = { t_portal=! }
+        particle/Particle_Glow_05_Add_15OB.wl = { t_portal=! }
+        particle/smoke1/smoke1_nearcull.wl = { t_portal=! }
+      }
+
+      Plastic.txlist =
+      {
+        plastic/plasticwall001a.wl = { t_portal=! }
+        plastic/plasticwall001b.wl = { t_portal=! }
+        plastic/plasticwall002a.wl = { t_portal=! }
+        plastic/plasticwall003a.wl = { t_portal=! }
+        plastic/plasticwall004a.wl = { t_portal=! }
+        plastic/plastic_light001a.wl = { t_portal=! }
+        plastic/plastic_light001b.wl = { t_portal=! }
+        plastic/plastic_light002a.wl = { t_portal=! }
+        plastic/plastic_light002b.wl = { t_portal=! }
+        plastic/plastic_light002c.wl = { t_portal=! }
+      }
+
+      Signage.txlist =
+      {
+        signage/decal_hazard_orange_03b.wl = { t_portal=! }
+        signage/fixed_portal_border.wl = { t_portal=! }
+        signage/hazard_orange_03b.wl = { t_portal=! }
+        signage/overlay_aperture_logo_worn.wl = { t_portal=! }
+        signage/overlay_button_accent.wl = { t_portal=! }
+        signage/signage_arrow.wl = { t_portal=! }
+        signage/signage_border.wl = { t_portal=! }
+        signage/signage_doorstate.wl = { t_portal=! }
+        signage/signage_exit.wl = { t_portal=! }
+        signage/signage_overlay_arrow.wl = { t_portal=! }
+        signage/signage_overlay_boxdispenser.wl = { t_portal=! }
+        signage/signage_overlay_boxhurt.wl = { t_portal=! }
+        signage/signage_overlay_cake.wl = { t_portal=! }
+        signage/signage_overlay_catcher.wl = { t_portal=! }
+        signage/signage_overlay_companioncube.wl = { t_portal=! }
+        signage/signage_overlay_companioncube_broken.wl = { t_portal=! }
+        signage/signage_overlay_dots1.wl = { t_portal=! }
+        signage/signage_overlay_dots2.wl = { t_portal=! }
+        signage/signage_overlay_dots3.wl = { t_portal=! }
+        signage/signage_overlay_dots4.wl = { t_portal=! }
+        signage/signage_overlay_energyball.wl = { t_portal=! }
+        signage/signage_overlay_fling1.wl = { t_portal=! }
+        signage/signage_overlay_fling2.wl = { t_portal=! }
+        signage/signage_overlay_fountain.wl = { t_portal=! }
+        signage/signage_overlay_incinerator.wl = { t_portal=! }
+        signage/signage_overlay_lab01.wl = { t_portal=! }
+        signage/signage_overlay_lab02.wl = { t_portal=! }
+        signage/signage_overlay_midair1.wl = { t_portal=! }
+        signage/signage_overlay_midair2.wl = { t_portal=! }
+        signage/signage_overlay_toxic.wl = { t_portal=! }
+        signage/signage_overlay_turret.wl = { t_portal=! }
+        signage/clock/clock_centiseconds.wl = { t_portal=! }
+        signage/clock/clock_dots.wl = { t_portal=! }
+        signage/clock/clock_milliseconds.wl = { t_portal=! }
+        signage/clock/clock_minutes.wl = { t_portal=! }
+        signage/clock/clock_seconds.wl = { t_portal=! }
+        signage/indicator_lights/indicator_lights_corner_floor.wl = { t_portal=! }
+        signage/indicator_lights/indicator_lights_corner_wall.wl = { t_portal=! }
+        signage/indicator_lights/indicator_lights_floor.wl = { t_portal=! }
+        signage/indicator_lights/indicator_lights_wall.wl = { t_portal=! }
+        signage/Summary_sign/pointer.wl = { t_portal=! }
+        signage/Summary_sign/Sign_field.wl = { t_portal=! }
+        signage/Summary_sign/stats_grid.wl = { t_portal=! }
+        signage/Summary_sign/subject_happy.wl = { t_portal=! }
+        signage/Summary_sign/subject_idle.wl = { t_portal=! }
+        signage/Summary_sign/subject_sad.wl = { t_portal=! }
+      }
+
+      Skybox.txlist =
+      {
+        skybox/bts_custom_cubemapbk.wl = { t_portal=! }
+        skybox/bts_custom_cubemapdn.wl = { t_portal=! }
+        skybox/bts_custom_cubemapft.wl = { t_portal=! }
+        skybox/bts_custom_cubemaplf.wl = { t_portal=! }
+        skybox/bts_custom_cubemaprt.wl = { t_portal=! }
+        skybox/bts_custom_cubemapup.wl = { t_portal=! }
+        skybox/sky_blank.wl = { t_portal=! }
+        skybox/sky_escape_01_bk.wl = { t_portal=! }
+        skybox/sky_escape_01_dn.wl = { t_portal=! }
+        skybox/sky_escape_01_ft.wl = { t_portal=! }
+        skybox/sky_escape_01_lf.wl = { t_portal=! }
+        skybox/sky_escape_01_rt.wl = { t_portal=! }
+        skybox/sky_escape_01_up.wl = { t_portal=! }
+      }
+
+      Slides.txlist =
+      {
+        slides/slide1.wl = { t_portal=! }
+      }
+
+      Sprites.txlist =
+      {
+        sprites/bluelight.wl = { t_portal=! }
+        sprites/glow04_noz.wl = { t_portal=! }
+        sprites/grav_beam.wl = { t_portal=! }
+        sprites/grav_beam_noz.wl = { t_portal=! }
+        sprites/grav_flare.wl = { t_portal=! }
+        sprites/grav_light.wl = { t_portal=! }
+        sprites/orangecore1.wl = { t_portal=! }
+        sprites/orangecore2.wl = { t_portal=! }
+        sprites/orangeflare1.wl = { t_portal=! }
+        sprites/orangelight.wl = { t_portal=! }
+        sprites/orangelight1_noz.wl = { t_portal=! }
+        sprites/portalgun_effects.wl = { t_portal=! }
+        sprites/redlaserglow.wl = { t_portal=! }
+        sprites/sphere_silhouette.wl = { t_portal=! }
+        sprites/track_beam.wl = { t_portal=! }
+        sprites/hud/portal_crosshairs.wl = { t_portal=! }
+        sprites/hud/portal_crosshairs_x360.wl = { t_portal=! }
+      }
+
+      Tile.txlist =
+      {
+        tile/observation_tilefloor001a.wl = { t_portal=! }
+        tile/observation_tilefloor002a.wl = { t_portal=! }
+        tile/observation_tilefloor003a.wl = { t_portal=! }
+        tile/observation_tilefloor004a.wl = { t_portal=! }
+        tile/observation_tilestair001a.wl = { t_portal=! }
+      }
+
+      Vgui.txlist =
+      {
+        VGUI/ui_logo.wl = { t_portal=! }
+        VGUI/achievements/portal_beat_2advancedmaps.wl = { t_portal=! }
+        VGUI/achievements/portal_beat_4advancedmaps.wl = { t_portal=! }
+        VGUI/achievements/portal_beat_6advancedmaps.wl = { t_portal=! }
+        VGUI/achievements/portal_beat_game.wl = { t_portal=! }
+        VGUI/achievements/portal_detach_all_cameras.wl = { t_portal=! }
+        VGUI/achievements/portal_escape_testchambers.wl = { t_portal=! }
+        VGUI/achievements/portal_get_allbronze.wl = { t_portal=! }
+        VGUI/achievements/portal_get_allgold.wl = { t_portal=! }
+        VGUI/achievements/portal_get_allsilver.wl = { t_portal=! }
+        VGUI/achievements/portal_get_portalguns.wl = { t_portal=! }
+        VGUI/achievements/portal_hit_turret_with_turret.wl = { t_portal=! }
+        VGUI/achievements/portal_infinitefall.wl = { t_portal=! }
+        VGUI/achievements/portal_kill_companioncube.wl = { t_portal=! }
+        VGUI/achievements/portal_longjump.wl = { t_portal=! }
+        VGUI/bonusmaps/advanced_chambers.wl = { t_portal=! }
+        VGUI/bonusmaps/challenges.wl = { t_portal=! }
+        VGUI/bonusmaps/testchmb_a_08_advanced.wl = { t_portal=! }
+        VGUI/bonusmaps/testchmb_a_08_challenges.wl = { t_portal=! }
+        VGUI/bonusmaps/testchmb_a_09_advanced.wl = { t_portal=! }
+        VGUI/bonusmaps/testchmb_a_09_challenges.wl = { t_portal=! }
+        VGUI/bonusmaps/testchmb_a_10_advanced.wl = { t_portal=! }
+        VGUI/bonusmaps/testchmb_a_10_challenges.wl = { t_portal=! }
+        VGUI/bonusmaps/testchmb_a_11_advanced.wl = { t_portal=! }
+        VGUI/bonusmaps/testchmb_a_11_challenges.wl = { t_portal=! }
+        VGUI/bonusmaps/testchmb_a_13_advanced.wl = { t_portal=! }
+        VGUI/bonusmaps/testchmb_a_13_challenges.wl = { t_portal=! }
+        VGUI/bonusmaps/testchmb_a_14_advanced.wl = { t_portal=! }
+        VGUI/bonusmaps/testchmb_a_14_challenges.wl = { t_portal=! }
+        VGUI/chapters/chapter1.wl = { t_portal=! }
+        VGUI/chapters/chapter10.wl = { t_portal=! }
+        VGUI/chapters/chapter11.wl = { t_portal=! }
+        VGUI/chapters/chapter2.wl = { t_portal=! }
+        VGUI/chapters/chapter3.wl = { t_portal=! }
+        VGUI/chapters/chapter4.wl = { t_portal=! }
+        VGUI/chapters/chapter5.wl = { t_portal=! }
+        VGUI/chapters/chapter6.wl = { t_portal=! }
+        VGUI/chapters/chapter7.wl = { t_portal=! }
+        VGUI/chapters/chapter8.wl = { t_portal=! }
+        VGUI/chapters/chapter9.wl = { t_portal=! }
+        VGUI/medals/medal_00_bronze.wl = { t_portal=! }
+        VGUI/medals/medal_00_gold.wl = { t_portal=! }
+        VGUI/medals/medal_00_none.wl = { t_portal=! }
+        VGUI/medals/medal_00_silver.wl = { t_portal=! }
+        VGUI/medals/medal_01_bronze.wl = { t_portal=! }
+        VGUI/medals/medal_01_gold.wl = { t_portal=! }
+        VGUI/medals/medal_01_none.wl = { t_portal=! }
+        VGUI/medals/medal_01_silver.wl = { t_portal=! }
+        VGUI/medals/medal_02_bronze.wl = { t_portal=! }
+        VGUI/medals/medal_02_gold.wl = { t_portal=! }
+        VGUI/medals/medal_02_none.wl = { t_portal=! }
+        VGUI/medals/medal_02_silver.wl = { t_portal=! }
+        VGUI/resource/autosave.wl = { t_portal=! }
+        VGUI/resource/best_with_ATI.wl = { t_portal=! }
+        VGUI/resource/black_round_rect.wl = { t_portal=! }
+        VGUI/screens/screen.wl = { t_portal=! }
+        VGUI/screens/screenanim.wl = { t_portal=! }
+        VGUI/screens/transparent.wl = { t_portal=! }
+        VGUI/screens/vgui_overlay.wl = { t_portal=! }
+        VGUI/slideshow/glados/glados_screens_barnexterior001.wl = { t_portal=! }
+        VGUI/slideshow/glados/glados_screens_barninterior001.wl = { t_portal=! }
+        VGUI/slideshow/glados/glados_screens_bench001.wl = { t_portal=! }
+        VGUI/slideshow/glados/glados_screens_bird001.wl = { t_portal=! }
+        VGUI/slideshow/glados/glados_screens_bird002.wl = { t_portal=! }
+        VGUI/slideshow/glados/glados_screens_bird003.wl = { t_portal=! }
+        VGUI/slideshow/glados/glados_screens_bird004.wl = { t_portal=! }
+        VGUI/slideshow/glados/glados_screens_bird005.wl = { t_portal=! }
+        VGUI/slideshow/glados/glados_screens_blackmesa001.wl = { t_portal=! }
+        VGUI/slideshow/glados/glados_screens_black_bear_cub.wl = { t_portal=! }
+        VGUI/slideshow/glados/glados_screens_boots001.wl = { t_portal=! }
+        VGUI/slideshow/glados/glados_screens_bow001.wl = { t_portal=! }
+        VGUI/slideshow/glados/glados_screens_cake001.wl = { t_portal=! }
+        VGUI/slideshow/glados/glados_screens_cake002.wl = { t_portal=! }
+        VGUI/slideshow/glados/glados_screens_cake003.wl = { t_portal=! }
+        VGUI/slideshow/glados/glados_screens_cake004.wl = { t_portal=! }
+        VGUI/slideshow/glados/glados_screens_cake005.wl = { t_portal=! }
+        VGUI/slideshow/glados/glados_screens_cake006.wl = { t_portal=! }
+        VGUI/slideshow/glados/glados_screens_cake007.wl = { t_portal=! }
+        VGUI/slideshow/glados/glados_screens_cake008.wl = { t_portal=! }
+        VGUI/slideshow/glados/glados_screens_cake009.wl = { t_portal=! }
+        VGUI/slideshow/glados/glados_screens_cake010.wl = { t_portal=! }
+        VGUI/slideshow/glados/glados_screens_cake011.wl = { t_portal=! }
+        VGUI/slideshow/glados/glados_screens_cake012.wl = { t_portal=! }
+        VGUI/slideshow/glados/glados_screens_cake013.wl = { t_portal=! }
+        VGUI/slideshow/glados/glados_screens_cake014.wl = { t_portal=! }
+        VGUI/slideshow/glados/glados_screens_cake015.wl = { t_portal=! }
+        VGUI/slideshow/glados/glados_screens_cake1.wl = { t_portal=! }
+        VGUI/slideshow/glados/glados_screens_cake11.wl = { t_portal=! }
+        VGUI/slideshow/glados/glados_screens_cake12.wl = { t_portal=! }
+        VGUI/slideshow/glados/glados_screens_cake13.wl = { t_portal=! }
+        VGUI/slideshow/glados/glados_screens_cake14.wl = { t_portal=! }
+        VGUI/slideshow/glados/glados_screens_cake15.wl = { t_portal=! }
+        VGUI/slideshow/glados/glados_screens_cake16.wl = { t_portal=! }
+        VGUI/slideshow/glados/glados_screens_cake17.wl = { t_portal=! }
+        VGUI/slideshow/glados/glados_screens_cake18.wl = { t_portal=! }
+        VGUI/slideshow/glados/glados_screens_cake19.wl = { t_portal=! }
+        VGUI/slideshow/glados/glados_screens_cake2.wl = { t_portal=! }
+        VGUI/slideshow/glados/glados_screens_cake20.wl = { t_portal=! }
+        VGUI/slideshow/glados/glados_screens_cake21.wl = { t_portal=! }
+        VGUI/slideshow/glados/glados_screens_cake22.wl = { t_portal=! }
+        VGUI/slideshow/glados/glados_screens_cake23.wl = { t_portal=! }
+        VGUI/slideshow/glados/glados_screens_cake24.wl = { t_portal=! }
+        VGUI/slideshow/glados/glados_screens_cake25.wl = { t_portal=! }
+        VGUI/slideshow/glados/glados_screens_cake4.wl = { t_portal=! }
+        VGUI/slideshow/glados/glados_screens_cake5.wl = { t_portal=! }
+        VGUI/slideshow/glados/glados_screens_cake6.wl = { t_portal=! }
+        VGUI/slideshow/glados/glados_screens_cake7.wl = { t_portal=! }
+        VGUI/slideshow/glados/glados_screens_cake8.wl = { t_portal=! }
+        VGUI/slideshow/glados/glados_screens_cake9.wl = { t_portal=! }
+        VGUI/slideshow/glados/glados_screens_cakeandutencil001.wl = { t_portal=! }
+        VGUI/slideshow/glados/glados_screens_cakeandutencil002.wl = { t_portal=! }
+        VGUI/slideshow/glados/glados_screens_cakeandutencil003.wl = { t_portal=! }
+        VGUI/slideshow/glados/glados_screens_cakeandutencil004.wl = { t_portal=! }
+        VGUI/slideshow/glados/glados_screens_cakeandutencil005.wl = { t_portal=! }
+        VGUI/slideshow/glados/glados_screens_cakeandutencil006.wl = { t_portal=! }
+        VGUI/slideshow/glados/glados_screens_cakeandutencil007.wl = { t_portal=! }
+        VGUI/slideshow/glados/glados_screens_cakeandutencil008.wl = { t_portal=! }
+        VGUI/slideshow/glados/glados_screens_cakeandutencil009.wl = { t_portal=! }
+        VGUI/slideshow/glados/glados_screens_cakeandutencil010.wl = { t_portal=! }
+        VGUI/slideshow/glados/glados_screens_cakeandutencil011.wl = { t_portal=! }
+        VGUI/slideshow/glados/glados_screens_cakeandutencil012.wl = { t_portal=! }
+        VGUI/slideshow/glados/glados_screens_cakeandutencil013.wl = { t_portal=! }
+        VGUI/slideshow/glados/glados_screens_cakeandutencil014.wl = { t_portal=! }
+        VGUI/slideshow/glados/glados_screens_cakeandutencilb001.wl = { t_portal=! }
+        VGUI/slideshow/glados/glados_screens_cakeandutencilb002.wl = { t_portal=! }
+        VGUI/slideshow/glados/glados_screens_cakeandutencilb003.wl = { t_portal=! }
+        VGUI/slideshow/glados/glados_screens_cakeandutencilb004.wl = { t_portal=! }
+        VGUI/slideshow/glados/glados_screens_cakeandutencilb005.wl = { t_portal=! }
+        VGUI/slideshow/glados/glados_screens_confusedcake001.wl = { t_portal=! }
+        VGUI/slideshow/glados/glados_screens_confusedcake002.wl = { t_portal=! }
+        VGUI/slideshow/glados/glados_screens_confusedcake003.wl = { t_portal=! }
+        VGUI/slideshow/glados/glados_screens_confusedcake004.wl = { t_portal=! }
+        VGUI/slideshow/glados/glados_screens_confusedcake005.wl = { t_portal=! }
+        VGUI/slideshow/glados/glados_screens_confusedcake006.wl = { t_portal=! }
+        VGUI/slideshow/glados/glados_screens_confusedcake007.wl = { t_portal=! }
+        VGUI/slideshow/glados/glados_screens_confusedcake008.wl = { t_portal=! }
+        VGUI/slideshow/glados/glados_screens_confusedcake009.wl = { t_portal=! }
+        VGUI/slideshow/glados/glados_screens_confusedcake010.wl = { t_portal=! }
+        VGUI/slideshow/glados/glados_screens_cow001.wl = { t_portal=! }
+        VGUI/slideshow/glados/glados_screens_dumb1.wl = { t_portal=! }
+        VGUI/slideshow/glados/glados_screens_eraser001.wl = { t_portal=! }
+        VGUI/slideshow/glados/glados_screens_euclid.wl = { t_portal=! }
+        VGUI/slideshow/glados/glados_screens_farmequip001.wl = { t_portal=! }
+        VGUI/slideshow/glados/glados_screens_fort_hays_experiment_station.wl = { t_portal=! }
+        VGUI/slideshow/glados/glados_screens_goat001.wl = { t_portal=! }
+        VGUI/slideshow/glados/glados_screens_goat002.wl = { t_portal=! }
+        VGUI/slideshow/glados/glados_screens_heart1.wl = { t_portal=! }
+        VGUI/slideshow/glados/glados_screens_hero1.wl = { t_portal=! }
+        VGUI/slideshow/glados/glados_screens_hero2.wl = { t_portal=! }
+        VGUI/slideshow/glados/glados_screens_horse001.wl = { t_portal=! }
+        VGUI/slideshow/glados/glados_screens_horse002.wl = { t_portal=! }
+        VGUI/slideshow/glados/glados_screens_knife001.wl = { t_portal=! }
+        VGUI/slideshow/glados/glados_screens_parts1.wl = { t_portal=! }
+        VGUI/slideshow/glados/glados_screens_parts2.wl = { t_portal=! }
+        VGUI/slideshow/glados/glados_screens_parts3.wl = { t_portal=! }
+        VGUI/slideshow/glados/glados_screens_parts4.wl = { t_portal=! }
+        VGUI/slideshow/glados/glados_screens_parts5.wl = { t_portal=! }
+        VGUI/slideshow/glados/glados_screens_parts6.wl = { t_portal=! }
+        VGUI/slideshow/glados/glados_screens_parts7.wl = { t_portal=! }
+        VGUI/slideshow/glados/glados_screens_pig001.wl = { t_portal=! }
+        VGUI/slideshow/glados/glados_screens_plateofstuff001.wl = { t_portal=! }
+        VGUI/slideshow/glados/glados_screens_rabbit001.wl = { t_portal=! }
+        VGUI/slideshow/glados/glados_screens_science1.wl = { t_portal=! }
+        VGUI/slideshow/glados/glados_screens_science10.wl = { t_portal=! }
+        VGUI/slideshow/glados/glados_screens_science11.wl = { t_portal=! }
+        VGUI/slideshow/glados/glados_screens_science12.wl = { t_portal=! }
+        VGUI/slideshow/glados/glados_screens_science2.wl = { t_portal=! }
+        VGUI/slideshow/glados/glados_screens_science3.wl = { t_portal=! }
+        VGUI/slideshow/glados/glados_screens_science4.wl = { t_portal=! }
+        VGUI/slideshow/glados/glados_screens_science5.wl = { t_portal=! }
+        VGUI/slideshow/glados/glados_screens_science6.wl = { t_portal=! }
+        VGUI/slideshow/glados/glados_screens_science7.wl = { t_portal=! }
+        VGUI/slideshow/glados/glados_screens_science8.wl = { t_portal=! }
+        VGUI/slideshow/glados/glados_screens_science9.wl = { t_portal=! }
+        VGUI/slideshow/glados/glados_screens_scrap.wl = { t_portal=! }
+        VGUI/slideshow/glados/glados_screens_screw001.wl = { t_portal=! }
+        VGUI/slideshow/glados/glados_screens_screw002.wl = { t_portal=! }
+        VGUI/slideshow/glados/glados_screens_sheep1.wl = { t_portal=! }
+        VGUI/slideshow/glados/glados_screens_sign001.wl = { t_portal=! }
+        VGUI/slideshow/glados/glados_screens_sign002.wl = { t_portal=! }
+        VGUI/slideshow/glados/glados_screens_sign003.wl = { t_portal=! }
+        VGUI/slideshow/glados/glados_screens_sign_danger.wl = { t_portal=! }
+        VGUI/slideshow/glados/glados_screens_sign_exit.wl = { t_portal=! }
+        VGUI/slideshow/glados/glados_screens_sign_skull.wl = { t_portal=! }
+        VGUI/slideshow/glados/glados_screens_spheres001.wl = { t_portal=! }
+        VGUI/slideshow/glados/glados_screens_spongeandutencil001.wl = { t_portal=! }
+        VGUI/slideshow/glados/glados_screens_spongeandutencil002.wl = { t_portal=! }
+        VGUI/slideshow/glados/glados_screens_spongeandutencil003.wl = { t_portal=! }
+        VGUI/slideshow/glados/glados_screens_spongeandutencil004.wl = { t_portal=! }
+        VGUI/slideshow/glados/glados_screens_spongeandutencil005.wl = { t_portal=! }
+        VGUI/slideshow/glados/glados_screens_spongeandutencil006.wl = { t_portal=! }
+        VGUI/slideshow/glados/glados_screens_spring001.wl = { t_portal=! }
+        VGUI/slideshow/glados/glados_screens_techroom1.wl = { t_portal=! }
+        VGUI/slideshow/glados/glados_screens_toolsandfruit001.wl = { t_portal=! }
+        VGUI/slideshow/glados/glados_screens_toolsandfruit002.wl = { t_portal=! }
+        VGUI/slideshow/glados/glados_screens_toy001.wl = { t_portal=! }
+        VGUI/slideshow/glados/glados_screens_trashcan001.wl = { t_portal=! }
+        VGUI/slideshow/glados/glados_screens_upside_down_shed.wl = { t_portal=! }
+        VGUI/slideshow/glados/glados_screens_violin001.wl = { t_portal=! }
+        VGUI/slideshow/glados/glados_screens_WarWorkers.wl = { t_portal=! }
+        VGUI/slideshow/glados/glados_screens_wrench001.wl = { t_portal=! }
+      }
+
+
+    }
+  }
+}

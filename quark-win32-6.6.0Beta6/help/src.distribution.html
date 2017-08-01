@@ -1,0 +1,279 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"  "http://www.w3.org/TR/html4/loose.dtd">
+<html lang="en">
+<head>
+  <title>Snapshots & Distributions</title>
+  <meta name="Description" content="QuArK Information Database - Page: 4.11.&nbsp;Snapshots & Distributions">
+  <meta name="Keywords" content="QuArK InfoBase Quake Army Knife QRK QKM Python PY Map Editor Hexen Heretic Half-Life Sin Kingpin Soldier-of-Fortune Star-Trek-Voyager Elite-Force">
+  <link rel=stylesheet href="standard.css" type="text/css">
+</head>
+
+<body>
+<a name="__top__"></a>
+<table width="100%" border=0 cellspacing=0>
+  <tr>
+    <td width=213>
+      <a target="_blank" href="http://quark.sourceforge.net/"><img src="quarkicon.png" width=213 height=90 border=0 alt="Go to QuArK Web Site"></a>
+    </td>
+    <td width="70%" align=center>
+      <div class="topheadline">Snapshots & Distributions</div>
+      <div class="sm">Updated&nbsp;07 Mar 2010</div>
+    </td>
+    <td width="30%" valign=bottom nowrap>
+      Upper&nbsp;levels:<br>-&nbsp;<a href="index.html">QuArK&nbsp;Information&nbsp;Base</a><br>-&nbsp;<a href="src.html">4.&nbsp;The&nbsp;Source&nbsp;Code</a><br>
+    </td>
+  </tr>
+</table>
+<table width="100%" border=0 cellspacing=0>
+  <tr class="headline">
+    <td width="99%">
+      <p class="headline">&nbsp;4.11.&nbsp;Snapshots & Distributions</p>
+    </td>
+    <td width="1%" align=right nowrap>
+      &nbsp;[&nbsp;<span class="navenable"><a href="src.delphi.html">Prev</a></span>&nbsp;-&nbsp;<span class="navenable"><a href="src.html">Up</a></span>&nbsp;-&nbsp;<span class="navenable"><a href="plans.html">Next</a></span>&nbsp;]&nbsp;
+    </td>
+  </tr>
+</table>
+<table border=0 width="100%" cellspacing=10><tr><td><p>This section describes QuArK distribution policy, tools and
+methodology.</p>
+</td></tr></table>
+<br>
+
+<table width="100%" border=0 cellspacing=0>
+  <tr class="headline">
+    <td width="100%">
+      <p class="subheadline">&nbsp;Index</p>
+    </td>
+  </tr>
+</table>
+<ul class="index">
+  <li>- <a href="#policy">QuArK Release Policy</a>&nbsp;<span class="added">(07 Mar 2010)</span>
+  <li>- <a href="#snapshot">Releasing a Snapshot</a>&nbsp;<span class="added">(07 Mar 2010)</span>
+  <li>- <a href="#dist">Releasing a Distribution</a>&nbsp;<span class="added">(07 Mar 2010)</span>
+</ul>
+<br>
+
+
+<a name="policy"></a>
+  <table width="100%" border=0 cellspacing=0>
+    <tr class="headline">
+      <td>
+        <p class="item">&nbsp;QuArK Release Policy</p>
+      </td>
+      <td align=right>
+        <font size=-2>Peter Brett&nbsp;-&nbsp;07 Mar 2010</font>
+      </td>
+      <td width="1%" align=right nowrap>
+        &nbsp;&nbsp;[&nbsp;<a href="#__top__">Top</a>&nbsp;]&nbsp;
+      </td>
+    </tr>
+  </table>
+  <table border=0 width="100%" cellspacing=10><tr><td>
+<p>QuArK has two types of releases: distributions and snapshots.
+</p><p><ol>
+<li>Distributions are released through the SourceForge Release System.
+A distribution consists of the following files:
+<ul>
+<li>&nbsp;<tt>quark-win32-*version*.exe</tt>&nbsp; - a Nullsoft Scriptable Install
+System executable containing the QuArK Windows binaries with a bundled
+Python micro-distribution and the Infobase.</li>
+<li>&nbsp;<tt>quark-win32-*version*.zip</tt>&nbsp; - a zip archive containing the
+QuArK Windows binaries with a bundled Python micro-distribution and
+the Infobase.</li>
+<li>&nbsp;<tt>quark-src-*version*.zip</tt>&nbsp; - a zip archive containing full
+exports of the &nbsp;<tt>infobase</tt>&nbsp;, &nbsp;<tt>runtime</tt>&nbsp; and &nbsp;<tt>source</tt>&nbsp; CVS modules.</li>
+<li>&nbsp;<tt>quark-help-*version*.zip</tt>&nbsp; - a zip archive containing the
+compiled Infobase.</li>
+</ul>
+You will need to have &quot;Release Technician&quot; permissions on the QuArK
+SourceForge project to be able to release a distribution.
+</p><p>N.B. that version numbers are in the format
+&nbsp;<tt>#.#.#state#</tt>&nbsp; where 'state' can be one of 'rel', 'beta', or
+'alpha'.  The numbers before the current state are the major and minor
+versions, and the number after the state is the release number at that
+version/state. Examples:<ul><li>&nbsp;<tt>6.4.0alpha1</tt>&nbsp;. Note also that version numbers should be <strong>unique</strong>.</li>
+<li>&nbsp;<tt>6.3.0rel4</tt>&nbsp;</li></ul>
+</li>
+<li>Snapshots are released on <a target="_blank" href="http://sourceforge.net/projects/quark/">QuArK's SourceForge webspace</a>.
+A snapshot consists of the following files:
+<ul>
+<li>&nbsp;<tt>quark-win32-*date*.zip</tt>&nbsp; - a zip archive containing the QuArK
+Windows binaries with a bundled Python micro-distribution and the 
+Infobase.</li>
+<li>&nbsp;<tt>quark-src-*date*.zip</tt>&nbsp; - a zip archive containing full
+exports of the &nbsp;<tt>infobase</tt>&nbsp;, &nbsp;<tt>runtime</tt>&nbsp; and &nbsp;<tt>source</tt>&nbsp;
+CVS modules.</li>
+<li>&nbsp;<tt>quark-help-*date*.zip</tt>&nbsp; - a zip archive containing the
+compiled Infobase.</li>
+</ul>
+You will need to have access to the QuArK project's SourceForge
+webspace (i.e. a SourceForge shell account is required) to be able to
+release a snapshot.
+</p><p>N.B. that dates should be in the format &nbsp;<tt>YYYYMMDD</tt>&nbsp;.
+</li>
+</ol>
+</p><p>Typically, QuArK snapshots are released every couple of weeks,
+although this may vary depending on how much work is being done.  If
+two weeks go by with very little CVS activity, there won't be much
+point in making a snapshot; equally, if things are frantic, it's
+likely we'll do snapshots more frequently.  Also, it depends how much
+time the release technicians have available.
+</p><p>Distributions are done on a much less frequent basis, because they
+require much more work on the part of whoever's doing the releases.
+</p>
+  </td></tr></table>
+  <br>
+
+<a name="snapshot"></a>
+  <table width="100%" border=0 cellspacing=0>
+    <tr class="headline">
+      <td>
+        <p class="item">&nbsp;Releasing a Snapshot</p>
+      </td>
+      <td align=right>
+        <font size=-2>Peter Brett, DanielPharos&nbsp;-&nbsp;07 Mar 2010</font>
+      </td>
+      <td width="1%" align=right nowrap>
+        &nbsp;&nbsp;[&nbsp;<a href="#__top__">Top</a>&nbsp;]&nbsp;
+      </td>
+    </tr>
+  </table>
+  <table border=0 width="100%" cellspacing=10><tr><td>
+<p>Here's the process you might follow to prepare and release a snapshot.
+Before you'll be able to follow the process outlined below, you'll
+probably want to read <a href="http://alexandria.wiki.sourceforge.net/File+Release+System+-+Offering+Files+for+Download">File Release System - Offering Files for Download</a> to know how to work with the SourceForge File Release System.
+</p><p><ol>
+<li>Make a copy of the &nbsp;<tt>runtime</tt>&nbsp;, &nbsp;<tt>source</tt>&nbsp; and &nbsp;<tt>infobase</tt>&nbsp; directories you want to release.</li>
+<li>Build a QuArK binary from this source directory.</li>
+<li>Put the new QuArK binary in the main runtime directory (where it belongs).</li>
+<li>Zip up the directory, each to a different zip-file, using the scheme from <a href="src.distribution.html#policy">'QuArK Release Policy'</a>. No fancy zip-compressions, please! Any plain old unzipper should be able to unzip the files.</li>
+<li>Create a new snapshot-release in the QuArK-package using the SourceForge File Release System. Name this release 'snapshot YYYY-MM-DD', and add the zip-files to that new release. Don't forget to set the 'specifics' on the files correctly!</li>
+<li>Make sure the new release is 'Active', and visible on the SourceForge website.</li>
+</p><p>You should also e-mail a release announcement to the development
+mailing list (<a href="mailto:quark-python@yahoogroups.com">quark-python@yahoogroups.com</a>),
+something along the lines of: (I'm going to assume that the date is 31st August 2007)
+</p><div class="doccode"><pre>Subject: Snapshots 20070831
+
+New QuArK snapshots are now available from
+http://quark.sourceforge.net/
+
+- Compiled Infobase:
+http://quark.sourceforge.net/download/quark-help-20070831.zip
+- Full source code with Python 2.2.3:
+http://quark.sourceforge.net/download/quark-src-20070831.zip
+- Win32 binaries with Python 2.2.3:
+http://quark.sourceforge.net/download/quark-win32-20070831.zip
+</pre></div>
+
+<p>It's also a good idea only to have four snapshots on the site at a
+time, so as to be sure not to exceed the storage quota.  So delete the
+oldest snapshots if you need to.
+</ol>
+</p>
+  </td></tr></table>
+  <br>
+
+<a name="dist"></a>
+  <table width="100%" border=0 cellspacing=0>
+    <tr class="headline">
+      <td>
+        <p class="item">&nbsp;Releasing a Distribution</p>
+      </td>
+      <td align=right>
+        <font size=-2>Peter Brett, DanielPharos&nbsp;-&nbsp;07 Mar 2010</font>
+      </td>
+      <td width="1%" align=right nowrap>
+        &nbsp;&nbsp;[&nbsp;<a href="#__top__">Top</a>&nbsp;]&nbsp;
+      </td>
+    </tr>
+  </table>
+  <table border=0 width="100%" cellspacing=10><tr><td>
+<p>(I'm going to assume that you're running Windows.)
+</p><p>In preparation for creating a distribution, you'll need to carry out a
+couple of preliminary steps.
+</p><p><ol><li>Download and install Nullsoft Scriptable Install System (NSIS)
+2.0 beta 4 or higher from 
+<a href="http://nsis.sourceforge.net">http://nsis.sourceforge.net</a>.
+</li>
+<li>Checkout the &nbsp;<tt>utils</tt>&nbsp; module from QuArK CVS on SourceForge.
+This module contains the scripts and other files you'll need to be
+able to create the distribution.</li>
+<li>Make sure you have access permissions to work with the SourceForge
+release system.</li>
+</ol>
+</p><p>So, once you've decided that you're ready to create a distribution,
+here's what you do.
+</p><p><ol>
+<li>First, work out what the version number is for this distribution
+(see <a href="src.distribution.html#policy">'QuArK Release Policy'</a>). You'll probably need to
+discuss with other developers to decide what the state is going to be
+and whether to increment the the minor version, but for the sake of
+argument lets say the version number you come up with is '6.4.1beta3'.
+</li>
+<li>For a distribtion, it's necessary to update the version numbers
+in the QuArK executable. Go to the Project &gt; Options &gt; Version Info
+and update the numbers. Don't forget the copyright year!<br>
+Also, some const's in QkObjects need to be updated. Check them out
+and update where needed:
+<div class="doccode"><pre>
+  QuArKVersion
+  QuArKMinorVersion
+  QuArKCopyright
+  QuArKUsedCompiler
+  QuArKCompileDate
+</pre></div></li>
+<li>Most of creating a distribution is similar to creating a snapshot.
+First, do steps 1 to 3 of <a href="src.distribution.html#snapshot">'Releasing a Snapshot'</a>, with
+the difference that you name the files with the '6.4.1beta3' instead
+of the date, so &nbsp;<tt>quark-win32-20070831</tt>&nbsp; becomes
+&nbsp;<tt>quark-win32-6.4.1beta3</tt>&nbsp;.</li>
+<li>Open up your local copy of &nbsp;<tt>QuArK.nsi</tt>&nbsp;. You'll need to
+make some changes there:
+<ol>
+<li>Update the version numbers:
+<div class="doccode"><pre>!define INSTALLER_EXENAME &quot;quark-win32-6.4.1beta3.exe&quot;
+!define PRODUCT_VERSION &quot;6.4.1 beta 3&quot;
+InstallDir &quot;$PROGRAMFILES\QuArK 6.4.1 beta 3&quot;
+</pre></div></li>
+<li>Set the path to the files to create the installer with:
+<div class="doccode"><pre>!define BUILDDIR &quot;C:\QuArK_installer_files&quot;</pre></div>
+It is advisable to simply create this directory and copy the files into
+it manually.</li>
+<li>Set the path to the installer images:
+<div class="doccode"><pre>!define SPLASHDIR &quot;C:\QuArK_installer_splash_image&quot;</pre></div></li>
+</ol>
+</li>
+<li>Run the &nbsp;<tt>QuArK.nsi</tt>&nbsp; script. If you selected this option during
+the NSIS installation, right-clicking the file should provide you with
+that option. If not, open up &nbsp;<tt>QuArK.nsi</tt>&nbsp; in NSIS and create the
+installer there.</li>
+<li>It's not a bad idea to run some tests at this point. Test the
+installer, and make sure the new release does not have any obvious
+bugs.</li>
+<li>Zip up the source and infobase directories just as with the snapshot.
+Again: no fancy zip-compressions!</li>
+<li>Now create the release in SourceForge (see <a href="src.distribution.html#snapshot">'Releasing a Snapshot'</a>
+for more details about this).</li>
+<li>Create a news-announcement on the SourceForge-page.</li>
+<li>Tell the webmaster of the QuArK website to do the same. (It's probably
+smart to have similar text in both.)</li>
+</ol>
+</p>
+  </td></tr></table>
+  <br>
+
+<br>
+
+<table width="100%" border=0 cellspacing=0>
+  <tr class="headline">
+    <td width="99%" align=center>
+      <p class="sm">
+        Copyright (c) 2009, GNU General Public License by The QuArK (Quake Army Knife) Community - <a target="_blank" href="http://quark.sourceforge.net/">http://quark.sourceforge.net/</a><br>
+      </p>
+    </td>
+    <td width="1%" align=right nowrap>
+      &nbsp;[&nbsp;<span class="navenable"><a href="src.delphi.html">Prev</a></span>&nbsp;-&nbsp;<a href="#__top__">Top</a>&nbsp;-&nbsp;<span class="navenable"><a href="plans.html">Next</a></span>&nbsp;]&nbsp;
+    </td>
+  </tr>
+</table>
+</body>
+</html>

@@ -1,0 +1,737 @@
+QQRKSRC1
+// This file has been written by QuArK QuArK 6.3snap070901
+// It's the text version of file: HLTex_BuzzyBots.qrk
+
+{
+  Description = "HL Textures - BuzzyBots"
+  Toolbox Folders.qtx =
+  {
+    ToolBox = "Texture Browser..."
+    Root = "BuzzyBots Textures.qtxfolder"
+    HTML = "intro.texturebrowser.html"
+
+    BuzzyBots Textures.qtxfolder =
+    {
+      ditlew.txlist =
+      {
+        BlueWalls.wl =
+        {
+          s = "buzzybots"
+          d = "ditlew"
+          h = "C"
+        }
+        DBlueFloor.wl =
+        {
+          s = "buzzybots"
+          d = "ditlew"
+          h = "C"
+        }
+        sky.wl =
+        {
+          s = "buzzybots"
+          d = "ditlew"
+          h = "C"
+        }
+        BlueMoon.wl =
+        {
+          s = "buzzybots"
+          d = "ditlew"
+          h = "C"
+        }
+        BlueMoonLight.wl =
+        {
+          s = "buzzybots"
+          d = "ditlew"
+          h = "C"
+        }
+        Black.wl =
+        {
+          s = "buzzybots"
+          d = "ditlew"
+          h = "C"
+        }
+        Green.wl =
+        {
+          s = "buzzybots"
+          d = "ditlew"
+          h = "C"
+        }
+        Orange.wl =
+        {
+          s = "buzzybots"
+          d = "ditlew"
+          h = "C"
+        }
+        {transparant.wl =
+        {
+          s = "buzzybots"
+          d = "ditlew"
+          h = "C"
+        }
+        blue2.wl =
+        {
+          s = "buzzybots"
+          d = "ditlew"
+          h = "C"
+        }
+        qbe.wl =
+        {
+          s = "buzzybots"
+          d = "ditlew"
+          h = "C"
+        }
+        qbes_armygreen.wl =
+        {
+          s = "buzzybots"
+          d = "ditlew"
+          h = "C"
+        }
+        qbes_blue2.wl =
+        {
+          s = "buzzybots"
+          d = "ditlew"
+          h = "C"
+        }
+        cross.wl =
+        {
+          s = "buzzybots"
+          d = "ditlew"
+          h = "C"
+        }
+        wall1.wl =
+        {
+          s = "buzzybots"
+          d = "ditlew"
+          h = "C"
+        }
+        WALL2.wl =
+        {
+          s = "buzzybots"
+          d = "ditlew"
+          h = "C"
+        }
+        wallblueteam.wl =
+        {
+          s = "buzzybots"
+          d = "ditlew"
+          h = "C"
+        }
+        wallredteam.wl =
+        {
+          s = "buzzybots"
+          d = "ditlew"
+          h = "C"
+        }
+        red.wl =
+        {
+          s = "buzzybots"
+          d = "ditlew"
+          h = "C"
+        }
+        blue.wl =
+        {
+          s = "buzzybots"
+          d = "ditlew"
+          h = "C"
+        }
+      }
+      ttj_exp.txlist =
+      {
+        floor1.wl =
+        {
+          s = "buzzybots"
+          d = "ttj_exp"
+          h = "C"
+        }
+        floor2.wl =
+        {
+          s = "buzzybots"
+          d = "ttj_exp"
+          h = "C"
+        }
+        floor3.wl =
+        {
+          s = "buzzybots"
+          d = "ttj_exp"
+          h = "C"
+        }
+        floor4.wl =
+        {
+          s = "buzzybots"
+          d = "ttj_exp"
+          h = "C"
+        }
+        wall1.wl =
+        {
+          s = "buzzybots"
+          d = "ttj_exp"
+          h = "C"
+        }
+        wall2.wl =
+        {
+          s = "buzzybots"
+          d = "ttj_exp"
+          h = "C"
+        }
+        light2.wl =
+        {
+          s = "buzzybots"
+          d = "ttj_exp"
+          h = "C"
+        }
+        white.wl =
+        {
+          s = "buzzybots"
+          d = "ttj_exp"
+          h = "C"
+        }
+        black.wl =
+        {
+          s = "buzzybots"
+          d = "ttj_exp"
+          h = "C"
+        }
+        trim1.wl =
+        {
+          s = "buzzybots"
+          d = "ttj_exp"
+          h = "C"
+        }
+        black_floor2.wl =
+        {
+          s = "buzzybots"
+          d = "ttj_exp"
+          h = "C"
+        }
+        floor_test.wl =
+        {
+          s = "buzzybots"
+          d = "ttj_exp"
+          h = "C"
+        }
+        black_floor3.wl =
+        {
+          s = "buzzybots"
+          d = "ttj_exp"
+          h = "C"
+        }
+        black_floor.wl =
+        {
+          s = "buzzybots"
+          d = "ttj_exp"
+          h = "C"
+        }
+        crate1.wl =
+        {
+          s = "buzzybots"
+          d = "ttj_exp"
+          h = "C"
+        }
+        sky.wl =
+        {
+          s = "buzzybots"
+          d = "ttj_exp"
+          h = "C"
+        }
+        clip.wl =
+        {
+          s = "buzzybots"
+          d = "ttj_exp"
+          h = "C"
+        }
+        origin.wl =
+        {
+          s = "buzzybots"
+          d = "ttj_exp"
+          h = "C"
+        }
+        grey_wall.wl =
+        {
+          s = "buzzybots"
+          d = "ttj_exp"
+          h = "C"
+        }
+        white_floor.wl =
+        {
+          s = "buzzybots"
+          d = "ttj_exp"
+          h = "C"
+        }
+        c0a0yellowhln.wl =
+        {
+          s = "buzzybots"
+          d = "ttj_exp"
+          h = "C"
+        }
+        triangle.wl =
+        {
+          s = "buzzybots"
+          d = "ttj_exp"
+          h = "C"
+        }
+        red.wl =
+        {
+          s = "buzzybots"
+          d = "ttj_exp"
+          h = "C"
+        }
+        blue.wl =
+        {
+          s = "buzzybots"
+          d = "ttj_exp"
+          h = "C"
+        }
+        grey_floor.wl =
+        {
+          s = "buzzybots"
+          d = "ttj_exp"
+          h = "C"
+        }
+        pink.wl =
+        {
+          s = "buzzybots"
+          d = "ttj_exp"
+          h = "C"
+        }
+      }
+      buzzy.txlist =
+      {
+        wall_blue.wl =
+        {
+          s = "buzzybots"
+          d = "buzzy"
+          h = "C"
+        }
+        pipe_blue.wl =
+        {
+          s = "buzzybots"
+          d = "buzzy"
+          h = "C"
+        }
+        floor_blue.wl =
+        {
+          s = "buzzybots"
+          d = "buzzy"
+          h = "C"
+        }
+        ceiling_blue.wl =
+        {
+          s = "buzzybots"
+          d = "buzzy"
+          h = "C"
+        }
+        light_blue.wl =
+        {
+          s = "buzzybots"
+          d = "buzzy"
+          h = "C"
+        }
+        electronics_blu.wl =
+        {
+          s = "buzzybots"
+          d = "buzzy"
+          h = "C"
+        }
+        wall_blue_end.wl =
+        {
+          s = "buzzybots"
+          d = "buzzy"
+          h = "C"
+        }
+        wall_blank_blue.wl =
+        {
+          s = "buzzybots"
+          d = "buzzy"
+          h = "C"
+        }
+        wall_bl_vert.wl =
+        {
+          s = "buzzybots"
+          d = "buzzy"
+          h = "C"
+        }
+        door_blue.wl =
+        {
+          s = "buzzybots"
+          d = "buzzy"
+          h = "C"
+        }
+        blue.wl =
+        {
+          s = "buzzybots"
+          d = "buzzy"
+          h = "C"
+        }
+        grey.wl =
+        {
+          s = "buzzybots"
+          d = "buzzy"
+          h = "C"
+        }
+        ceiling_grey.wl =
+        {
+          s = "buzzybots"
+          d = "buzzy"
+          h = "C"
+        }
+        door_grey.wl =
+        {
+          s = "buzzybots"
+          d = "buzzy"
+          h = "C"
+        }
+        electronics_gre.wl =
+        {
+          s = "buzzybots"
+          d = "buzzy"
+          h = "C"
+        }
+        floor_grey.wl =
+        {
+          s = "buzzybots"
+          d = "buzzy"
+          h = "C"
+        }
+        light_grey.wl =
+        {
+          s = "buzzybots"
+          d = "buzzy"
+          h = "C"
+        }
+        pipe_grey.wl =
+        {
+          s = "buzzybots"
+          d = "buzzy"
+          h = "C"
+        }
+        wall_gr_vert.wl =
+        {
+          s = "buzzybots"
+          d = "buzzy"
+          h = "C"
+        }
+        wall_blank_gr.wl =
+        {
+          s = "buzzybots"
+          d = "buzzy"
+          h = "C"
+        }
+        wall_gr.wl =
+        {
+          s = "buzzybots"
+          d = "buzzy"
+          h = "C"
+        }
+        wall_gr_end.wl =
+        {
+          s = "buzzybots"
+          d = "buzzy"
+          h = "C"
+        }
+        alien_wall.wl =
+        {
+          s = "buzzybots"
+          d = "buzzy"
+          h = "C"
+        }
+        alien_grey.wl =
+        {
+          s = "buzzybots"
+          d = "buzzy"
+          h = "C"
+        }
+        alien_ceiling.wl =
+        {
+          s = "buzzybots"
+          d = "buzzy"
+          h = "C"
+        }
+        alien_door.wl =
+        {
+          s = "buzzybots"
+          d = "buzzy"
+          h = "C"
+        }
+        alien_floor.wl =
+        {
+          s = "buzzybots"
+          d = "buzzy"
+          h = "C"
+        }
+        alien_light.wl =
+        {
+          s = "buzzybots"
+          d = "buzzy"
+          h = "C"
+        }
+        alien_pipe.wl =
+        {
+          s = "buzzybots"
+          d = "buzzy"
+          h = "C"
+        }
+        alien_wall_blan.wl =
+        {
+          s = "buzzybots"
+          d = "buzzy"
+          h = "C"
+        }
+        alien_wall_vert.wl =
+        {
+          s = "buzzybots"
+          d = "buzzy"
+          h = "C"
+        }
+        alien_beam.wl =
+        {
+          s = "buzzybots"
+          d = "buzzy"
+          h = "C"
+        }
+        alien_panel.wl =
+        {
+          s = "buzzybots"
+          d = "buzzy"
+          h = "C"
+        }
+        tape.wl =
+        {
+          s = "buzzybots"
+          d = "buzzy"
+          h = "C"
+        }
+        strip.wl =
+        {
+          s = "buzzybots"
+          d = "buzzy"
+          h = "C"
+        }
+        alien_beam2.wl =
+        {
+          s = "buzzybots"
+          d = "buzzy"
+          h = "C"
+        }
+        thing_wall.wl =
+        {
+          s = "buzzybots"
+          d = "buzzy"
+          h = "C"
+        }
+        thing_wall2.wl =
+        {
+          s = "buzzybots"
+          d = "buzzy"
+          h = "C"
+        }
+        thing_wall2_glu.wl =
+        {
+          s = "buzzybots"
+          d = "buzzy"
+          h = "C"
+        }
+        thing_wall_glu.wl =
+        {
+          s = "buzzybots"
+          d = "buzzy"
+          h = "C"
+        }
+        thing_floor_lig.wl =
+        {
+          s = "buzzybots"
+          d = "buzzy"
+          h = "C"
+        }
+        thing_floor.wl =
+        {
+          s = "buzzybots"
+          d = "buzzy"
+          h = "C"
+        }
+        thing_strip.wl =
+        {
+          s = "buzzybots"
+          d = "buzzy"
+          h = "C"
+        }
+        thing_stip_blu.wl =
+        {
+          s = "buzzybots"
+          d = "buzzy"
+          h = "C"
+        }
+        thing_strip_red.wl =
+        {
+          s = "buzzybots"
+          d = "buzzy"
+          h = "C"
+        }
+        thing_grey.wl =
+        {
+          s = "buzzybots"
+          d = "buzzy"
+          h = "C"
+        }
+        thing_grey_glu.wl =
+        {
+          s = "buzzybots"
+          d = "buzzy"
+          h = "C"
+        }
+        thing_grey_wall.wl =
+        {
+          s = "buzzybots"
+          d = "buzzy"
+          h = "C"
+        }
+        +0thing_grey_cp.wl =
+        {
+          s = "buzzybots"
+          d = "buzzy"
+          h = "C"
+        }
+        +1thing_grey_cp.wl =
+        {
+          s = "buzzybots"
+          d = "buzzy"
+          h = "C"
+        }
+        thing_tape.wl =
+        {
+          s = "buzzybots"
+          d = "buzzy"
+          h = "C"
+        }
+        chip_slot.wl =
+        {
+          s = "buzzybots"
+          d = "buzzy"
+          h = "C"
+        }
+        red_ship_glue.wl =
+        {
+          s = "buzzybots"
+          d = "buzzy"
+          h = "C"
+        }
+        blue_ship_glue.wl =
+        {
+          s = "buzzybots"
+          d = "buzzy"
+          h = "C"
+        }
+        blue_ship_pipes.wl =
+        {
+          s = "buzzybots"
+          d = "buzzy"
+          h = "C"
+        }
+        red_ship_pipes.wl =
+        {
+          s = "buzzybots"
+          d = "buzzy"
+          h = "C"
+        }
+        red_ship_panel.wl =
+        {
+          s = "buzzybots"
+          d = "buzzy"
+          h = "C"
+        }
+        blue_ship_panel.wl =
+        {
+          s = "buzzybots"
+          d = "buzzy"
+          h = "C"
+        }
+        blue_ship_diag.wl =
+        {
+          s = "buzzybots"
+          d = "buzzy"
+          h = "C"
+        }
+        red_ship_diag.wl =
+        {
+          s = "buzzybots"
+          d = "buzzy"
+          h = "C"
+        }
+        pipe_red.wl =
+        {
+          s = "buzzybots"
+          d = "buzzy"
+          h = "C"
+        }
+        ceiling_red.wl =
+        {
+          s = "buzzybots"
+          d = "buzzy"
+          h = "C"
+        }
+        door_red.wl =
+        {
+          s = "buzzybots"
+          d = "buzzy"
+          h = "C"
+        }
+        floor_red.wl =
+        {
+          s = "buzzybots"
+          d = "buzzy"
+          h = "C"
+        }
+        wall_red.wl =
+        {
+          s = "buzzybots"
+          d = "buzzy"
+          h = "C"
+        }
+        wall_blank_red.wl =
+        {
+          s = "buzzybots"
+          d = "buzzy"
+          h = "C"
+        }
+        wall_red_vert.wl =
+        {
+          s = "buzzybots"
+          d = "buzzy"
+          h = "C"
+        }
+        wal_red_end.wl =
+        {
+          s = "buzzybots"
+          d = "buzzy"
+          h = "C"
+        }
+        light_red.wl =
+        {
+          s = "buzzybots"
+          d = "buzzy"
+          h = "C"
+        }
+        red.wl =
+        {
+          s = "buzzybots"
+          d = "buzzy"
+          h = "C"
+        }
+      }
+      decals.txlist =
+      {
+        {bbscorch.wl =
+        {
+          s = "buzzybots"
+          d = "decals"
+          h = "C"
+        }
+        {bbscorch2.wl =
+        {
+          s = "buzzybots"
+          d = "decals"
+          h = "C"
+        }
+      }
+    }
+  }
+}

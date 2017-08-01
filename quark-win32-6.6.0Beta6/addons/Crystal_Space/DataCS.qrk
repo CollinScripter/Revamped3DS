@@ -1,0 +1,952 @@
+QQRKSRC1
+// This file has been written by QuArK Version 5.10
+// It's the text version of file: DataCS.qrk
+
+//$Header: /cvsroot/quark/runtime/addons/Crystal_Space/DataCS.qrk,v 1.10 2008/03/28 19:03:56 cdunde Exp $
+// ----------- REVISION HISTORY ------------
+//$Log: DataCS.qrk,v $
+//Revision 1.10  2008/03/28 19:03:56  cdunde
+//Cleaned up, fixed if needed and brought into sync with all QuArK addons.
+//
+//Revision 1.9  2008/02/27 00:18:27  danielpharos
+//Fix the contextual help files not being found anymore
+//
+//Revision 1.8  2007/12/26 06:01:46  cdunde
+//Setup of a full beizer library with over 30 prefab beizer to work with for games that can use beziers.
+//
+//Revision 1.7  2007/12/14 21:48:02  cdunde
+//Added many new beizer shapes and functions developed by our friends in Russia,
+//the Shine team, Nazar and vodkins.
+//
+//Revision 1.6  2005/10/15 01:00:27  cdunde
+//To reinstate headers and history
+//
+//Revision 1.3  2001/07/03 02:36:30  tiglari
+//CrystalSpace->Crystal Space
+//
+//Revision 1.2  2001/03/20 21:52:26  decker_dk
+//Added log-header
+//
+
+{
+  QuArKProtected = "1"
+  Description = "Base Crystal Space data"
+  Crystal Space setup.qctx =
+  {
+    Game = "Crystal Space"
+    HTML = "index.html"
+    SFSkills = '256 512 1024 2048'
+    TexFlagsTransparent = '16 0.66670 32 0.33330'
+    SourceDir = "D:\q\QuArK511"
+    TextureFlags:form =
+    {
+      Style = "5"
+      Reset: =
+      {
+        Cap = "Reset to default"
+        Typ = "B"
+        Hint = "Reset all flags to the texture's default"
+        Delete: =
+        {
+          Flags = ""
+          Contents = ""
+          Value = ""
+          restitution = ''
+          friction = ''
+          animtime = ''
+          nonlit = ''
+          direct = ""
+          directangle = ""
+          directstyle = ""
+          translucence = ''
+          trans_angle = ""
+          trans_mag = ''
+          color = ""
+        }
+      }
+      restitution: =
+      {
+        Typ = "EF001"
+        Txt = "restitution: "
+        Hint = "how vigoriously things bounce off it, floating point value"
+      }
+      friction: =
+      {
+        Typ = "EF001"
+        Txt = "friction: "
+        Hint = "How slippery"
+      }
+      Value: =
+      {
+        Typ = "E"
+        Txt = "lightvalue"
+        Hint = "intensity of light from surface, integer value"
+      }
+      direct: =
+      {
+        Typ = "E"
+        Txt = "direct"
+        Hint = "Light-value emitted from surface in `spotlite' mode. "$0D" As "
+         "for example the effect of the sun thru a skylight.  Integer value"
+      }
+      directangle: =
+      {
+        Typ = "E"
+        Txt = "directangle: "
+        Hint = "Spread-angle of light emitted in spotlite (direct) mode."$0D" "
+         " Values 0..180 degrees"
+      }
+      nonlit: =
+      {
+        Typ = "EF001"
+        Txt = "nonlitvalue"
+        Hint = "If nonlit surface flag is set, the surface is not lighted exte"
+         "rnally,"$0D" this sets its intrinsic light-level.  Value between 0 a"
+         "nd 1"
+      }
+      color =
+      {
+        Typ = "L"
+        Txt = "color (swatch)"
+        Hint = "Color of light from radiating surfaces.  Click on the swatch, "
+         "or can be specified numerically below"
+      }
+      color: =
+      {
+        Typ = "E"
+        Txt = "color (coords)"
+        Hint = "Color of light from radiating surfaces.  Triple of floats 0..1"
+         ", or can be specified by clicking on the swatch above"
+      }
+      directstyle: =
+      {
+        Typ = "E"
+        Txt = "directstyle"
+        Hint = "Value is a string, label for grouping switchable lights"
+      }
+      translucence: =
+      {
+        Typ = "EF001"
+        Txt = "translucence"
+        Hint = "translucence value between 0..1.  Can't be used on scrolling t"
+         "extures."
+      }
+      trans_mag: =
+      {
+        Typ = "EF001"
+        Txt = "trans_mag"
+        Hint = "scrolling speed for scrolling textures, floating point value, "
+         "pixels/sec"$0D"  `translate' surface flag must be checked for this t"
+         "o work"
+      }
+      trans_angle: =
+      {
+        Typ = "E"
+        Txt = "trans_angle"
+        Hint = "Angular offset to scrolling texture; value 0..180 degrees"
+      }
+      animtime: =
+      {
+        Typ = "EF001"
+        Txt = "animtime"
+        Hint = "Time to the next animation frame; floating point value"
+      }
+      Sep: =
+      {
+        Typ = "S"
+      }
+      Flags: =
+      {
+        Txt = "Sound"
+        Typ = "CL2013265920"
+        Items = "none"$0D"wood"$0D"metal"$0D"stone"$0D"concrete"$0D"dirt"$0D"f"
+         "lesh"$0D"grill"$0D"glass"$0D"fabric"$0D"monitor"$0D"gravel"$0D"veget"
+         "ation"$0D"paper"$0D"duct"$0D"water"
+        Values = "0"$0D"134217728"$0D"268435456"$0D"402653184"$0D"536870912"$0D
+         "671088640"$0D"805306368"$0D"939524096"$0D"1073741824"$0D"1207959552"$0D
+         "1342177280"$0D"1476395008"$0D"1610612736"$0D"1744830464"$0D"18790481"
+         "92"$0D"2013265920"
+        Hint = "Determines sound made when brush is walked on"
+      }
+      Sep: =
+      {
+        Typ = "S"
+      }
+      Flags: =
+      {
+        Txt = "Surface"
+        Cap = "light"
+        Typ = "X1"
+      }
+      Flags: =
+      {
+        Cap = "masked"
+        Typ = "X2"
+      }
+      Flags: =
+      {
+        Cap = "sky"
+        Typ = "X4"
+      }
+      Flags: =
+      {
+        Cap = "warping"
+        Typ = "X8"
+      }
+      Flags: =
+      {
+        Cap = "nonlit"
+        Typ = "X16"
+      }
+      Flags: =
+      {
+        Cap = "nofilter"
+        Typ = "X32"
+      }
+      Flags: =
+      {
+        Cap = "conveyor"
+        Typ = "X64"
+      }
+      Flags: =
+      {
+        Cap = "nodraw"
+        Typ = "X128"
+      }
+      Flags: =
+      {
+        Cap = "hint"
+        Typ = "X256"
+      }
+      Flags: =
+      {
+        Cap = "skip"
+        Typ = "X512"
+      }
+      Flags: =
+      {
+        Cap = "wavy"
+        Typ = "X1024"
+      }
+      Flags: =
+      {
+        Cap = "ricochet"
+        Typ = "X2048"
+      }
+      Flags: =
+      {
+        Cap = "prelit"
+        Typ = "X4096"
+      }
+      Flags: =
+      {
+        Cap = "mirror"
+        Typ = "X8192"
+      }
+      Flags: =
+      {
+        Cap = "console"
+        Typ = "X16384"
+      }
+      Flags: =
+      {
+        Cap = "usecolor"
+        Typ = "X32768"
+      }
+      Flags: =
+      {
+        Cap = "hardwareonly"
+        Typ = "X65536"
+      }
+      Flags: =
+      {
+        Cap = "damage"
+        Typ = "X131072"
+      }
+      Flags: =
+      {
+        Cap = "weak"
+        Typ = "X262144"
+      }
+      Flags: =
+      {
+        Cap = "normal"
+        Typ = "X524288"
+      }
+      Flags: =
+      {
+        Cap = "add"
+        Typ = "X1048576"
+      }
+      Flags: =
+      {
+        Cap = "envmapped"
+        Typ = "X2097152"
+      }
+      Flags: =
+      {
+        Cap = "random"
+        Typ = "X4194304"
+      }
+      Flags: =
+      {
+        Cap = "animate"
+        Typ = "X8388608"
+      }
+      Flags: =
+      {
+        Cap = "rndtime"
+        Typ = "X16777216"
+      }
+      Flags: =
+      {
+        Cap = "translate"
+        Typ = "X33554432"
+      }
+      Flags: =
+      {
+        Cap = "nomerge"
+        Typ = "X67108864"
+      }
+      Flags: =
+      {
+        Cap = "surfbit0"
+        Typ = "X134217728"
+      }
+      Flags: =
+      {
+        Cap = "surfbit1"
+        Typ = "X268435456"
+      }
+      Flags: =
+      {
+        Cap = "surfbit2"
+        Typ = "X536870912"
+      }
+      Flags: =
+      {
+        Cap = "surfbit3"
+        Typ = "X1073741824"
+      }
+      Contents: =
+      {
+        Txt = "Contents"
+        Cap = "solid"
+        Typ = "X1"
+      }
+      Contents: =
+      {
+        Cap = "window"
+        Typ = "X2"
+      }
+      Contents: =
+      {
+        Cap = "fence"
+        Typ = "X4"
+      }
+      Contents: =
+      {
+        Cap = "lava"
+        Typ = "X8"
+      }
+      Contents: =
+      {
+        Cap = "slime"
+        Typ = "X16"
+      }
+      Contents: =
+      {
+        Cap = "water"
+        Typ = "X32"
+      }
+      Contents: =
+      {
+        Cap = "mist"
+        Typ = "X64"
+      }
+      Contents: =
+      {
+        Cap = "playerclip"
+        Typ = "X65536"
+      }
+      Contents: =
+      {
+        Cap = "monsterclip"
+        Typ = "X131072"
+      }
+      Contents: =
+      {
+        Cap = "current_0"
+        Typ = "X262144"
+      }
+      Contents: =
+      {
+        Cap = "current_90"
+        Typ = "X524288"
+      }
+      Contents: =
+      {
+        Cap = "current_180"
+        Typ = "X1048576"
+      }
+      Contents: =
+      {
+        Cap = "current_270"
+        Typ = "X2097152"
+      }
+      Contents: =
+      {
+        Cap = "current_up"
+        Typ = "X4194304"
+      }
+      Contents: =
+      {
+        Cap = "current_dn"
+        Typ = "X8388608"
+      }
+      Contents: =
+      {
+        Cap = "origin"
+        Typ = "X16777216"
+      }
+      Contents: =
+      {
+        Cap = "monster"
+        Typ = "X33554432"
+      }
+      Contents: =
+      {
+        Cap = "corpse"
+        Typ = "X67108864"
+      }
+      Contents: =
+      {
+        Cap = "detail"
+        Typ = "X134217728"
+      }
+      Contents: =
+      {
+        Cap = "translucent"
+        Typ = "X268435456"
+      }
+      Contents: =
+      {
+        Cap = "ladder"
+        Typ = "X536870912"
+      }
+    }
+    SurfFlags:form =
+    {
+      Flags: =
+      {
+        Cap = "light"
+        Typ = "X1"
+      }
+      Flags: =
+      {
+        Cap = "masked"
+        Typ = "X2"
+      }
+      Flags: =
+      {
+        Cap = "sky"
+        Typ = "X4"
+      }
+      Flags: =
+      {
+        Cap = "warping"
+        Typ = "X8"
+      }
+      Flags: =
+      {
+        Cap = "nonlit"
+        Typ = "X16"
+      }
+      Flags: =
+      {
+        Cap = "nofilter"
+        Typ = "X32"
+      }
+      Flags: =
+      {
+        Cap = "conveyor"
+        Typ = "X64"
+      }
+      Flags: =
+      {
+        Cap = "nodraw"
+        Typ = "X128"
+      }
+      Flags: =
+      {
+        Cap = "hint"
+        Typ = "X256"
+      }
+      Flags: =
+      {
+        Cap = "skip"
+        Typ = "X512"
+      }
+      Flags: =
+      {
+        Cap = "wavy"
+        Typ = "X1024"
+      }
+      Flags: =
+      {
+        Cap = "ricochet"
+        Typ = "X2048"
+      }
+      Flags: =
+      {
+        Cap = "prelit"
+        Typ = "X4096"
+      }
+      Flags: =
+      {
+        Cap = "mirror"
+        Typ = "X8192"
+      }
+      Flags: =
+      {
+        Cap = "console"
+        Typ = "X16384"
+      }
+      Flags: =
+      {
+        Cap = "usecolor"
+        Typ = "X32768"
+      }
+      Flags: =
+      {
+        Cap = "hardwareonly"
+        Typ = "X65536"
+      }
+      Flags: =
+      {
+        Cap = "damage"
+        Typ = "X131072"
+      }
+      Flags: =
+      {
+        Cap = "weak"
+        Typ = "X262144"
+      }
+      Flags: =
+      {
+        Cap = "normal"
+        Typ = "X524288"
+      }
+      Flags: =
+      {
+        Cap = "add"
+        Typ = "X1048576"
+      }
+      Flags: =
+      {
+        Cap = "envmapped"
+        Typ = "X2097152"
+      }
+      Flags: =
+      {
+        Cap = "random"
+        Typ = "X4194304"
+      }
+      Flags: =
+      {
+        Cap = "animate"
+        Typ = "X8388608"
+      }
+      Flags: =
+      {
+        Cap = "rndtime"
+        Typ = "X16777216"
+      }
+      Flags: =
+      {
+        Cap = "translate"
+        Typ = "X33554432"
+      }
+      Flags: =
+      {
+        Cap = "nomerge"
+        Typ = "X67108864"
+      }
+    }
+    ContFlags:form =
+    {
+      Contents: =
+      {
+        Txt = "Contents"
+        Cap = "solid"
+        Typ = "X1"
+      }
+      Contents: =
+      {
+        Cap = "window"
+        Typ = "X2"
+      }
+      Contents: =
+      {
+        Cap = "fence"
+        Typ = "X4"
+      }
+      Contents: =
+      {
+        Cap = "lava"
+        Typ = "X8"
+      }
+      Contents: =
+      {
+        Cap = "slime"
+        Typ = "X16"
+      }
+      Contents: =
+      {
+        Cap = "water"
+        Typ = "X32"
+      }
+      Contents: =
+      {
+        Cap = "mist"
+        Typ = "X64"
+      }
+      Contents: =
+      {
+        Cap = "playerclip"
+        Typ = "X65536"
+      }
+      Contents: =
+      {
+        Cap = "monsterclip"
+        Typ = "X131072"
+      }
+      Contents: =
+      {
+        Cap = "current_0"
+        Typ = "X262144"
+      }
+      Contents: =
+      {
+        Cap = "current_90"
+        Typ = "X524288"
+      }
+      Contents: =
+      {
+        Cap = "current_180"
+        Typ = "X1048576"
+      }
+      Contents: =
+      {
+        Cap = "current_270"
+        Typ = "X2097152"
+      }
+      Contents: =
+      {
+        Cap = "current_up"
+        Typ = "X4194304"
+      }
+      Contents: =
+      {
+        Cap = "current_dn"
+        Typ = "X8388608"
+      }
+      Contents: =
+      {
+        Cap = "origin"
+        Typ = "X16777216"
+      }
+      Contents: =
+      {
+        Cap = "monster"
+        Typ = "X33554432"
+      }
+      Contents: =
+      {
+        Cap = "corpse"
+        Typ = "X67108864"
+      }
+      Contents: =
+      {
+        Cap = "detail"
+        Typ = "X134217728"
+        Hint = "for small, detail brushes that compiler can ignore"
+      }
+      Contents: =
+      {
+        Cap = "translucent"
+        Typ = "X268435456"
+      }
+      Contents: =
+      {
+        Cap = "ladder"
+        Typ = "X536870912"
+      }
+    }
+  }
+  NewFiles.qtx =
+  {
+    ToolBox = "New files..."
+    Root = "Crystal Space file types.qtxfolder"
+    Crystal Space file types.qtxfolder =
+    {
+      Texture Wad.wad = { }
+    }
+  }
+  walltex:incl =
+  {
+    tex = "abstract_a097"
+  }
+  floortex:incl =
+  {
+    tex = "floors_1_d3ln"
+  }
+  ceiltex:incl =
+  {
+    tex = "abstract_a097"
+  }
+  caulktex:incl =
+  {
+    tex = "common/caulk"
+  }
+  NewMap:incl =
+  {
+    Game = "Crystal Space"
+    Root = "worldspawn:b"
+    worldspawn:b =
+    {
+      farplane_cull = "1"
+	  message = ""
+	  skybox = "util"
+	  skyboxsize = "500"
+	  skydome = ""
+	  skydomeradius = ""
+      Border walls:g =
+      {
+        cs_sky:b =
+        {
+          cs_name = "cs_skysector"
+		  sky = "1"
+          East wall:p =
+          {
+            west:f =
+            {
+              v = '376 0 56 376 0 184 376 128 56'
+              walltex = !
+              m = "1"
+            }
+            east:f =
+            {
+              v = '408 0 56 408 128 56 408 0 184'
+              walltex = !
+            }
+            south:f =
+            {
+              v = '80 -384 56 208 -384 56 80 -384 184'
+              walltex = !
+            }
+            north:f =
+            {
+              v = '80 392 56 -48 392 56 80 392 184'
+              walltex = !
+            }
+            down:f =
+            {
+              v = '80 0 0 208 0 0 80 -128 0'
+              walltex = !
+            }
+            up:f =
+            {
+              v = '80 0 256 208 0 256 80 128 256'
+              walltex = !
+            }
+          }
+          West wall:p =
+          {
+            west:f =
+            {
+              v = '-416 0 56 -416 -128 56 -416 0 184'
+              walltex = !
+            }
+            east:f =
+            {
+              v = '-384 0 56 -384 0 184 -384 -128 56'
+              walltex = !
+              m = "1"
+            }
+            south:f =
+            {
+              v = '80 -384 56 208 -384 56 80 -384 184'
+              walltex = !
+            }
+            north:f =
+            {
+              v = '80 392 56 -48 392 56 80 392 184'
+              walltex = !
+            }
+            down:f =
+            {
+              v = '80 0 0 208 0 0 80 -128 0'
+              walltex = !
+            }
+            up:f =
+            {
+              v = '80 0 256 208 0 256 80 128 256'
+              walltex = !
+            }
+          }
+          North wall:p =
+          {
+            west:f =
+            {
+              v = '-384 0 56 -384 -128 56 -384 0 184'
+              walltex = !
+            }
+            east:f =
+            {
+              v = '376 0 56 376 128 56 376 0 184'
+              walltex = !
+            }
+            south:f =
+            {
+              v = '80 392 56 80 392 184 -48 392 56'
+              walltex = !
+              m = "1"
+            }
+            north:f =
+            {
+              v = '80 424 56 -48 424 56 80 424 184'
+              walltex = !
+            }
+            down:f =
+            {
+              v = '80 0 0 208 0 0 80 -128 0'
+              walltex = !
+            }
+            up:f =
+            {
+              v = '80 0 256 208 0 256 80 128 256'
+              walltex = !
+            }
+          }
+          South wall:p =
+          {
+            west:f =
+            {
+              v = '-384 0 56 -384 -128 56 -384 0 184'
+              walltex = !
+            }
+            east:f =
+            {
+              v = '376 0 56 376 128 56 376 0 184'
+              walltex = !
+            }
+            south:f =
+            {
+              v = '80 -416 56 208 -416 56 80 -416 184'
+              walltex = !
+            }
+            north:f =
+            {
+              v = '80 -384 56 80 -384 184 208 -384 56'
+              walltex = !
+              m = "1"
+            }
+            down:f =
+            {
+              v = '80 0 0 208 0 0 80 -128 0'
+              walltex = !
+            }
+            up:f =
+            {
+              v = '80 0 256 208 0 256 80 128 256'
+              walltex = !
+            }
+          }
+          Sky:p =
+          {
+            west:f =
+            {
+              v = '-384 0 56 -384 -128 56 -384 0 184'
+              ceiltex = !
+            }
+            east:f =
+            {
+              v = '376 0 56 376 128 56 376 0 184'
+              ceiltex = !
+            }
+            south:f =
+            {
+              v = '80 -384 56 208 -384 56 80 -384 184'
+              ceiltex = !
+            }
+            north:f =
+            {
+              v = '80 392 56 -48 392 56 80 392 184'
+              ceiltex = !
+            }
+            down:f =
+            {
+              v = '80 0 256 80 128 256 208 0 256'
+              ceiltex = !
+              m = "1"
+            }
+            up:f =
+            {
+              v = '80 0 288 208 0 288 80 128 288'
+              ceiltex = !
+            }
+          }
+        }
+        Floor:p =
+        {
+          west:f =
+          {
+            v = '-384 0 56 -384 -128 56 -384 0 184'
+            floortex = !
+          }
+          east:f =
+          {
+            v = '376 0 56 376 128 56 376 0 184'
+            floortex = !
+          }
+          south:f =
+          {
+            v = '80 -384 56 208 -384 56 80 -384 184'
+            floortex = !
+          }
+          north:f =
+          {
+            v = '80 392 56 -48 392 56 80 392 184'
+            floortex = !
+          }
+          down:f =
+          {
+            v = '80 0 -32 208 0 -32 80 -128 -32'
+            floortex = !
+          }
+          up:f =
+          {
+            v = '80 0 0 80 -128 0 208 0 0'
+            floortex = !
+            m = "1"
+          }
+        }
+	  }
+      info_player_start:e =
+      {
+        origin = "-160 0 48"
+        angle = "90"
+      }
+      light:e =
+      {
+        _light = "255 255 255 300"
+        dynamic = "0"
+        halo = "0 0 0"
+        attenuation = "realistic"
+        angle = "360"
+        origin = "0 0 160"
+      }
+    }
+  }
+}

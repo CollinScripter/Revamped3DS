@@ -1,0 +1,415 @@
+QQRKSRC1
+{
+  QuArKProtected = "1"
+  Description = "HL2 Episode 1 from episode 1 shared.gcf (august/14/2011)"
+
+  HL2EP1 directory infos.qctx =
+  {
+    Game = "Half-Life2"
+    SourceDir = "episodic"
+    GameDir = "episodic"
+  }
+
+//
+// Materials for Half Life 2 Episode 1
+//
+
+  HL2EP1Textures.qtx =
+  {
+    ToolBox = "Texture Browser..."
+    Root = "HL2 Episode 1 Textures.qtxfolder"
+    HTML = "intro.texturebrowser.html"
+
+    t_ep1:incl =      {  v="episodic" PakFile="episode 1 shared.gcf"}
+
+    HL2 Episode 1 Textures.qtxfolder =
+    {
+        Concrete.txlist =
+        {
+            Concrete\blendconcretedebris001a.wl = { t_ep1=! }
+            Concrete\blendconcreterock001a.wl = { t_ep1=! }
+            Concrete\blenddebris001a.wl = { t_ep1=! }
+            Concrete\concretefloor009a.wl = { t_ep1=! }
+            Concrete\concretefloor028a.wl = { t_ep1=! }
+            Concrete\concretefloor028a_c17.wl = { t_ep1=! }
+            Concrete\concretefloor028a_normal.wl = { t_ep1=! }
+            Concrete\concretefloor028c.wl = { t_ep1=! }
+            Concrete\concretefloor028c_c17.wl = { t_ep1=! }
+            Concrete\concretefloor028c_normal.wl = { t_ep1=! }
+            Concrete\concretefloor028d.wl = { t_ep1=! }
+            Concrete\concretefloor028d_normal.wl = { t_ep1=! }
+            Concrete\concretefloor033a.wl = { t_ep1=! }
+            Concrete\concretefloor033a_normal.wl = { t_ep1=! }
+            Concrete\concretefloor033k.wl = { t_ep1=! }
+            Concrete\concretefloor033k_normal.wl = { t_ep1=! }
+            Concrete\concretefloor033o.wl = { t_ep1=! }
+            Concrete\concretefloor033o_normal.wl = { t_ep1=! }
+            Concrete\concretefloor033p.wl = { t_ep1=! }
+            Concrete\concretefloor033p_normal.wl = { t_ep1=! }
+            Concrete\concretefloor033q.wl = { t_ep1=! }
+            Concrete\concretefloor033q_normal.wl = { t_ep1=! }
+            Concrete\concretefloor033y.wl = { t_ep1=! }
+            Concrete\concretefloor033y_normal.wl = { t_ep1=! }
+            Concrete\concretefloor039a.wl = { t_ep1=! }
+            Concrete\concretefloor039a_normal.wl = { t_ep1=! }
+            Concrete\concretefloor039b.wl = { t_ep1=! }
+            Concrete\concretefloor039b_normal.wl = { t_ep1=! }
+            Concrete\concretewall075a.wl = { t_ep1=! }
+            Concrete\concretewall075b.wl = { t_ep1=! }
+            Concrete\concretewall075c.wl = { t_ep1=! }
+            Concrete\concretewall075d.wl = { t_ep1=! }
+            Concrete\concretewall075e.wl = { t_ep1=! }
+            Concrete\concretewall075g.wl = { t_ep1=! }
+            Concrete\concretewall075h.wl = { t_ep1=! }
+            Concrete\concretewall075j.wl = { t_ep1=! }
+            Concrete\concretewall075k.wl = { t_ep1=! }
+            Concrete\concretewall076a.wl = { t_ep1=! }
+            Concrete\concretewall076c.wl = { t_ep1=! }
+            Concrete\concretewall076f.wl = { t_ep1=! }
+            Concrete\concretewall076h.wl = { t_ep1=! }
+            Concrete\concretewall076j.wl = { t_ep1=! }
+        }
+
+        Console.txlist =
+        {
+            Console\ep1_background01.wl = { t_ep1=! }
+            Console\ep1_background01a.wl = { t_ep1=! }
+            Console\ep1_background01a_widescreen.wl = { t_ep1=! }
+            Console\ep1_background01_widescreen.wl = { t_ep1=! }
+            Console\ep1_background02.wl = { t_ep1=! }
+            Console\ep1_background02_widescreen.wl = { t_ep1=! }
+        }
+
+        decals.txlist =
+        {
+            decals\Blood1.wl = { t_ep1=! }
+            decals\blood1_subrect.wl = { t_ep1=! }
+            decals\Blood2.wl = { t_ep1=! }
+            decals\blood2_subrect.wl = { t_ep1=! }
+            decals\Blood4.wl = { t_ep1=! }
+            decals\blood4_subrect.wl = { t_ep1=! }
+            decals\Blood5.wl = { t_ep1=! }
+            decals\blood5_subrect.wl = { t_ep1=! }
+            decals\Blood6.wl = { t_ep1=! }
+            decals\blood6_subrect.wl = { t_ep1=! }
+            decals\Blood7.wl = { t_ep1=! }
+            decals\blood8.wl = { t_ep1=! }
+            decals\decal_combine_core.wl = { t_ep1=! }
+            decals\decal_paintsplatterblue001.wl = { t_ep1=! }
+            decals\decal_paintsplatterblue001_subrect.wl = { t_ep1=! }
+            decals\decal_paintsplatterblue_model.wl = { t_ep1=! }
+            decals\decal_paintsplattergreen001.wl = { t_ep1=! }
+            decals\decal_paintsplattergreen001_subrect.wl = { t_ep1=! }
+            decals\decal_paintsplattergreen_model.wl = { t_ep1=! }
+            decals\decal_paintsplatterpink001.wl = { t_ep1=! }
+            decals\decal_paintsplatterpink001_subrect.wl = { t_ep1=! }
+            decals\snow01.wl = { t_ep1=! }
+        }
+
+        Dev.txlist =
+        {
+            Dev\dev_monitoradditive.wl = { t_ep1=! }
+            Dev\dev_monitor_simple.wl = { t_ep1=! }
+        }
+
+        Effects.txlist =
+        {
+            Effects\building_card01.wl = { t_ep1=! }
+            Effects\building_card02.wl = { t_ep1=! }
+            Effects\cloud_funnel_01.wl = { t_ep1=! }
+            Effects\combinedisplay_core_.wl = { t_ep1=! }
+            Effects\combinedisplay_dump.wl = { t_ep1=! }
+            Effects\combinedisplay_eli.wl = { t_ep1=! }
+            Effects\combinedisplay_gna.wl = { t_ep1=! }
+            Effects\combinedisplay_mossman1.wl = { t_ep1=! }
+            Effects\combinedisplay_mossmanrec.wl = { t_ep1=! }
+            Effects\ember_swirling001.wl = { t_ep1=! }
+            Effects\fake_fog01.wl = { t_ep1=! }
+            Effects\fake_fog01a.wl = { t_ep1=! }
+            Effects\fake_fog01a_hdr.wl = { t_ep1=! }
+            Effects\fake_fog01_hdr.wl = { t_ep1=! }
+            Effects\fake_fog02.wl = { t_ep1=! }
+            Effects\fake_fog02_hdr.wl = { t_ep1=! }
+            Effects\fake_fog03.wl = { t_ep1=! }
+            Effects\fleck_ash1.wl = { t_ep1=! }
+            Effects\fleck_ash2.wl = { t_ep1=! }
+            Effects\fleck_ash3.wl = { t_ep1=! }
+            Effects\introblur.wl = { t_ep1=! }
+            Effects\prisonmap_disp.wl = { t_ep1=! }
+            Effects\rubble_card01.wl = { t_ep1=! }
+            Effects\stun.wl = { t_ep1=! }
+        }
+
+        glass.txlist =
+        {
+            glass\glasswindow015c.wl = { t_ep1=! }
+            glass\pipes01.wl = { t_ep1=! }
+            glass\pipes01_spec.wl = { t_ep1=! }
+            glass\pipes03.wl = { t_ep1=! }
+            glass\pipes03_spec.wl = { t_ep1=! }
+        }
+
+        lights.txlist =
+        {
+            lights\red001.wl = { t_ep1=! }
+        }
+
+        metal.txlist =
+        {
+            metal\citadel_metaldoor_core01.wl = { t_ep1=! }
+            metal\citadel_metalwall063a.wl = { t_ep1=! }
+            metal\citadel_metalwall063a_cheap_nofog.wl = { t_ep1=! }
+            metal\citadel_metalwall072a.wl = { t_ep1=! }
+            metal\citadel_metalwall072b.wl = { t_ep1=! }
+            metal\citadel_metalwall072b_cheap.wl = { t_ep1=! }
+            metal\citadel_metalwall076a.wl = { t_ep1=! }
+            metal\citadel_metalwall077a.wl = { t_ep1=! }
+            metal\citadel_metalwall077a_cheap.wl = { t_ep1=! }
+            metal\citadel_metalwall078a.wl = { t_ep1=! }
+            metal\citadel_metalwall090a.wl = { t_ep1=! }
+            metal\citadel_metalwall091a.wl = { t_ep1=! }
+            metal\citadel_metalwall101a.wl = { t_ep1=! }
+            metal\citadel_metalwall101b.wl = { t_ep1=! }
+            metal\citadel_tilefloor016a.wl = { t_ep1=! }
+            metal\metaldoor043b.wl = { t_ep1=! }
+            metal\metalfloor005a.wl = { t_ep1=! }
+            metal\metalwall090a.wl = { t_ep1=! }
+            metal\metalwall_combinecore01a.wl = { t_ep1=! }
+            metal\metalwall_combinecore01a_normal.wl = { t_ep1=! }
+            metal\metalwall_combinecore03a.wl = { t_ep1=! }
+            metal\metalwall_combinecore04a.wl = { t_ep1=! }
+        }
+
+        models.txlist =
+        {
+        }
+
+        nature.txlist =
+        {
+            nature\blendcliffwallrock001a.wl = { t_ep1=! }
+            nature\blendconcretedirt001a.wl = { t_ep1=! }
+            nature\blendcondirt001a.wl = { t_ep1=! }
+            nature\blendcondirt001a_tooltexture.wl = { t_ep1=! }
+            nature\blenddebris002a.wl = { t_ep1=! }
+            nature\blenddebris002a_tooltexture.wl = { t_ep1=! }
+            nature\blenddirtgravel001a.wl = { t_ep1=! }
+            nature\blendgrassgravel001a.wl = { t_ep1=! }
+            nature\blendmuddirt001b.wl = { t_ep1=! }
+            nature\blendmuddirt001c.wl = { t_ep1=! }
+            nature\blendmuddirt001d.wl = { t_ep1=! }
+            nature\blendmuddirt001e.wl = { t_ep1=! }
+            nature\blendrockrock007a.wl = { t_ep1=! }
+            nature\blendrubbledirt001a.wl = { t_ep1=! }
+            nature\blendrubbledirt001a_tooltexture.wl = { t_ep1=! }
+            nature\blendstonedirt001a.wl = { t_ep1=! }
+            nature\blendstonedirt001a_tooltexture.wl = { t_ep1=! }
+            nature\mountain001.wl = { t_ep1=! }
+            nature\rockblendtexture001a.wl = { t_ep1=! }
+            nature\rockwall006b.wl = { t_ep1=! }
+            nature\rockwall_citadel02a.wl = { t_ep1=! }
+            nature\rockwall_citadel02a_normal.wl = { t_ep1=! }
+            nature\water_pretty1.wl = { t_ep1=! }
+            nature\water_pretty1_beneath.wl = { t_ep1=! }
+            nature\water_riverbed01.wl = { t_ep1=! }
+            nature\water_riverbed01_beneath.wl = { t_ep1=! }
+        }
+
+        overlays.txlist =
+        {
+            overlays\combineburn001a.wl = { t_ep1=! }
+            overlays\concreteartifacts01a.wl = { t_ep1=! }
+            overlays\dirtartifacts01a.wl = { t_ep1=! }
+            overlays\dirtartifacts02a.wl = { t_ep1=! }
+            overlays\garagegroundmarking01a.wl = { t_ep1=! }
+            overlays\garagegroundmarking01b.wl = { t_ep1=! }
+            overlays\garagegroundmarking01f.wl = { t_ep1=! }
+            overlays\garagegroundmarking01g.wl = { t_ep1=! }
+            overlays\garagegroundmarking01h.wl = { t_ep1=! }
+            overlays\garagegroundmarking01i.wl = { t_ep1=! }
+            overlays\garagegroundmarking01j.wl = { t_ep1=! }
+            overlays\garagegroundmarking01k.wl = { t_ep1=! }
+            overlays\garagegroundmarking01l.wl = { t_ep1=! }
+            overlays\garagegroundmarking01m.wl = { t_ep1=! }
+            overlays\garagewallmarking02a.wl = { t_ep1=! }
+            overlays\garagewallmarking02c.wl = { t_ep1=! }
+            overlays\garagewallmarking02d.wl = { t_ep1=! }
+            overlays\garagewallmarking02e.wl = { t_ep1=! }
+            overlays\garagewallmarking02f.wl = { t_ep1=! }
+            overlays\garagewallmarking02g.wl = { t_ep1=! }
+            overlays\garagewallmarking02h.wl = { t_ep1=! }
+            overlays\garagewallmarking02i.wl = { t_ep1=! }
+            overlays\garagewallmarking02j.wl = { t_ep1=! }
+            overlays\garagewallmarking02k.wl = { t_ep1=! }
+            overlays\garagewallmarking02l.wl = { t_ep1=! }
+            overlays\signstreet005a.wl = { t_ep1=! }
+        }
+
+        plaster.txlist =
+        {
+            plaster\plasterwall051b.wl = { t_ep1=! }
+            plaster\plasterwall051c.wl = { t_ep1=! }
+            plaster\plasterwall051d.wl = { t_ep1=! }
+            plaster\plasterwall053c.wl = { t_ep1=! }
+        }
+
+        props.txlist =
+        {
+            props\plasticexitsign001c.wl = { t_ep1=! }
+            props\signbillboard005a.wl = { t_ep1=! }
+            props\signs_hospital01.wl = { t_ep1=! }
+            props\signs_hospital01b.wl = { t_ep1=! }
+            props\signs_hospital02.wl = { t_ep1=! }
+            props\Sign_hospital01a.wl = { t_ep1=! }
+        }
+
+        skybox.txlist =
+        {
+            skybox\sky_day03_06cbk.wl = { t_ep1=! }
+            skybox\sky_day03_06cdn.wl = { t_ep1=! }
+            skybox\sky_day03_06cft.wl = { t_ep1=! }
+            skybox\sky_day03_06clf.wl = { t_ep1=! }
+            skybox\sky_day03_06crt.wl = { t_ep1=! }
+            skybox\sky_day03_06cup.wl = { t_ep1=! }
+            skybox\sky_ep01_00bk.wl = { t_ep1=! }
+            skybox\sky_ep01_00dn.wl = { t_ep1=! }
+            skybox\sky_ep01_00ft.wl = { t_ep1=! }
+            skybox\sky_ep01_00lf.wl = { t_ep1=! }
+            skybox\sky_ep01_00rt.wl = { t_ep1=! }
+            skybox\sky_ep01_00up.wl = { t_ep1=! }
+            skybox\sky_ep01_00_hdrbk.wl = { t_ep1=! }
+            skybox\sky_ep01_00_hdrbk_compressed.wl = { t_ep1=! }
+            skybox\sky_ep01_00_hdrdn.wl = { t_ep1=! }
+            skybox\sky_ep01_00_hdrdn_compressed.wl = { t_ep1=! }
+            skybox\sky_ep01_00_hdrft.wl = { t_ep1=! }
+            skybox\sky_ep01_00_hdrft_compressed.wl = { t_ep1=! }
+            skybox\sky_ep01_00_hdrlf.wl = { t_ep1=! }
+            skybox\sky_ep01_00_hdrlf_compressed.wl = { t_ep1=! }
+            skybox\sky_ep01_00_hdrrt.wl = { t_ep1=! }
+            skybox\sky_ep01_00_hdrrt_compressed.wl = { t_ep1=! }
+            skybox\sky_ep01_00_hdrup.wl = { t_ep1=! }
+            skybox\sky_ep01_00_hdrup_compressed.wl = { t_ep1=! }
+            skybox\sky_ep01_01bk.wl = { t_ep1=! }
+            skybox\sky_ep01_01dn.wl = { t_ep1=! }
+            skybox\sky_ep01_01ft.wl = { t_ep1=! }
+            skybox\sky_ep01_01lf.wl = { t_ep1=! }
+            skybox\sky_ep01_01rt.wl = { t_ep1=! }
+            skybox\sky_ep01_01up.wl = { t_ep1=! }
+            skybox\sky_ep01_02bk.wl = { t_ep1=! }
+            skybox\sky_ep01_02dn.wl = { t_ep1=! }
+            skybox\sky_ep01_02ft.wl = { t_ep1=! }
+            skybox\sky_ep01_02lf.wl = { t_ep1=! }
+            skybox\sky_ep01_02rt.wl = { t_ep1=! }
+            skybox\sky_ep01_02up.wl = { t_ep1=! }
+            skybox\sky_ep01_02_hdrbk.wl = { t_ep1=! }
+            skybox\sky_ep01_02_hdrbk_compressed.wl = { t_ep1=! }
+            skybox\sky_ep01_02_hdrdn.wl = { t_ep1=! }
+            skybox\sky_ep01_02_hdrdn_compressed.wl = { t_ep1=! }
+            skybox\sky_ep01_02_hdrft.wl = { t_ep1=! }
+            skybox\sky_ep01_02_hdrft_compressed.wl = { t_ep1=! }
+            skybox\sky_ep01_02_hdrlf.wl = { t_ep1=! }
+            skybox\sky_ep01_02_hdrlf_compressed.wl = { t_ep1=! }
+            skybox\sky_ep01_02_hdrrt.wl = { t_ep1=! }
+            skybox\sky_ep01_02_hdrrt_compressed.wl = { t_ep1=! }
+            skybox\sky_ep01_02_hdrup.wl = { t_ep1=! }
+            skybox\sky_ep01_02_hdrup_compressed.wl = { t_ep1=! }
+            skybox\sky_ep01_04abk.wl = { t_ep1=! }
+            skybox\sky_ep01_04adn.wl = { t_ep1=! }
+            skybox\sky_ep01_04aft.wl = { t_ep1=! }
+            skybox\sky_ep01_04alf.wl = { t_ep1=! }
+            skybox\sky_ep01_04art.wl = { t_ep1=! }
+            skybox\sky_ep01_04aup.wl = { t_ep1=! }
+            skybox\sky_ep01_04a_hdrbk.wl = { t_ep1=! }
+            skybox\sky_ep01_04a_hdrbk_compressed.wl = { t_ep1=! }
+            skybox\sky_ep01_04a_hdrdn.wl = { t_ep1=! }
+            skybox\sky_ep01_04a_hdrdn_compressed.wl = { t_ep1=! }
+            skybox\sky_ep01_04a_hdrft.wl = { t_ep1=! }
+            skybox\sky_ep01_04a_hdrft_compressed.wl = { t_ep1=! }
+            skybox\sky_ep01_04a_hdrlf.wl = { t_ep1=! }
+            skybox\sky_ep01_04a_hdrlf_compressed.wl = { t_ep1=! }
+            skybox\sky_ep01_04a_hdrrt.wl = { t_ep1=! }
+            skybox\sky_ep01_04a_hdrrt_compressed.wl = { t_ep1=! }
+            skybox\sky_ep01_04a_hdrup.wl = { t_ep1=! }
+            skybox\sky_ep01_04a_hdrup_compressed.wl = { t_ep1=! }
+            skybox\sky_ep01_04bk.wl = { t_ep1=! }
+            skybox\sky_ep01_04dn.wl = { t_ep1=! }
+            skybox\sky_ep01_04ft.wl = { t_ep1=! }
+            skybox\sky_ep01_04lf.wl = { t_ep1=! }
+            skybox\sky_ep01_04rt.wl = { t_ep1=! }
+            skybox\sky_ep01_04up.wl = { t_ep1=! }
+            skybox\sky_ep01_04_hdrbk.wl = { t_ep1=! }
+            skybox\sky_ep01_04_hdrbk_compressed.wl = { t_ep1=! }
+            skybox\sky_ep01_04_hdrdn.wl = { t_ep1=! }
+            skybox\sky_ep01_04_hdrdn_compressed.wl = { t_ep1=! }
+            skybox\sky_ep01_04_hdrft.wl = { t_ep1=! }
+            skybox\sky_ep01_04_hdrft_compressed.wl = { t_ep1=! }
+            skybox\sky_ep01_04_hdrlf.wl = { t_ep1=! }
+            skybox\sky_ep01_04_hdrlf_compressed.wl = { t_ep1=! }
+            skybox\sky_ep01_04_hdrrt.wl = { t_ep1=! }
+            skybox\sky_ep01_04_hdrrt_compressed.wl = { t_ep1=! }
+            skybox\sky_ep01_04_hdrup.wl = { t_ep1=! }
+            skybox\sky_ep01_04_hdrup_compressed.wl = { t_ep1=! }
+            skybox\sky_ep01_citadel_intbk.wl = { t_ep1=! }
+            skybox\sky_ep01_citadel_intdn.wl = { t_ep1=! }
+            skybox\sky_ep01_citadel_intft.wl = { t_ep1=! }
+            skybox\sky_ep01_citadel_intlf.wl = { t_ep1=! }
+            skybox\sky_ep01_citadel_intrt.wl = { t_ep1=! }
+            skybox\sky_ep01_citadel_intup.wl = { t_ep1=! }
+            skybox\sky_fogbk.wl = { t_ep1=! }
+            skybox\sky_fogdn.wl = { t_ep1=! }
+            skybox\sky_fogft.wl = { t_ep1=! }
+            skybox\sky_foglf.wl = { t_ep1=! }
+            skybox\sky_fogrt.wl = { t_ep1=! }
+            skybox\sky_fogup.wl = { t_ep1=! }
+            skybox\sky_fog_002.wl = { t_ep1=! }
+        }
+
+        Sprites.txlist =
+        {
+            Sprites\cloudglow1_nofog.wl = { t_ep1=! }
+            Sprites\core_beam1.wl = { t_ep1=! }
+            Sprites\rollermine_shock_yellow.wl = { t_ep1=! }
+            Sprites\vortring1-.wl = { t_ep1=! }
+            Sprites\vortring1.wl = { t_ep1=! }
+            Sprites\yellowlaser1.wl = { t_ep1=! }
+        }
+
+        stone.txlist =
+        {
+            stone\stonefloor006a_normal.wl = { t_ep1=! }
+            stone\stonefloor006b.wl = { t_ep1=! }
+            stone\stonefloor006b_normal.wl = { t_ep1=! }
+            stone\stonefloor006c_normal.wl = { t_ep1=! }
+            stone\stonefloor006d.wl = { t_ep1=! }
+            stone\stonefloor006d_c17.wl = { t_ep1=! }
+            stone\stonefloor006e.wl = { t_ep1=! }
+            stone\stonefloor006f.wl = { t_ep1=! }
+            stone\stonefloor006f_c17.wl = { t_ep1=! }
+        }
+
+        tile.txlist =
+        {
+            tile\tilefloor010b.wl = { t_ep1=! }
+            tile\tilefloor010b_normal.wl = { t_ep1=! }
+            tile\tilefloor010c.wl = { t_ep1=! }
+            tile\tilefloor010c_normal.wl = { t_ep1=! }
+            tile\tilefloor010d.wl = { t_ep1=! }
+            tile\tilewall009e.wl = { t_ep1=! }
+            tile\tilewall009e_normal.wl = { t_ep1=! }
+            tile\tilewall009f.wl = { t_ep1=! }
+            tile\tilewall009g.wl = { t_ep1=! }
+            tile\tilewall009h.wl = { t_ep1=! }
+            tile\tilewall009h_normal.wl = { t_ep1=! }
+        }
+
+        vgui.txlist =
+        {
+        }
+
+        Wood.txlist =
+        {
+            Wood\woodfloor007a.wl = { t_ep1=! }
+            Wood\woodfloor007a_c17.wl = { t_ep1=! }
+        }
+    }
+  }
+}

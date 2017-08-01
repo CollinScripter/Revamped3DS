@@ -1,0 +1,2832 @@
+QQRKSRC1
+// Quake 1 entities file for Quark
+
+//$Header: /cvsroot/quark/runtime/addons/Quake_1/Q1Entities.qrk,v 1.9 2011/12/08 20:06:09 cdunde Exp $
+// ----------- REVISION HISTORY ------------
+//$Log: Q1Entities.qrk,v $
+//Revision 1.9  2011/12/08 20:06:09  cdunde
+//Cleaned up file and updated from link provided by Hardkore on QuArK's Forums:
+//http://www.quakewiki.net/archives/worldcraft/entity/standard/standard.shtm
+//Other entities exist for 'Hipnotic' and 'Rogue', see above link.
+//
+//Revision 1.8  2009/09/15 18:21:20  cdunde
+//Hint correction.
+//
+//Revision 1.7  2009/07/22 19:13:10  danielpharos
+//Added missing spawnflags for item_cells, found by randper, helped by hardkore and fixed by X7.
+//
+//Revision 1.6  2009/06/24 20:32:22  cdunde
+//Another one for the teleporter by hardkore.
+//
+//Revision 1.5  2009/06/14 23:02:31  cdunde
+//Another one for the teleporter by hardkore.
+//
+//Revision 1.4  2009/06/13 18:37:28  cdunde
+//Another one for light by hardkore, keep'em coming.
+//
+//Revision 1.3  2008/06/04 21:36:24  cdunde
+//Fix by X7.
+//
+//Revision 1.2  2008/05/14 20:38:52  cdunde
+//Fixed basic lighting in all games and a few other small typo errors.
+//
+//Revision 1.1  2008/03/28 19:10:34  cdunde
+//Cleaned up, fixed if needed and brought into sync with all QuArK addons.
+//
+//
+
+{
+    QuArKProtected = "1"
+    Description = "Quake 1 Entities"
+
+    Toolbox Folders.qtx =
+    {
+        Toolbox = "New map items..."
+        Root = "Quake1 Entities.qtxfolder"
+        Quake1 Entities.qtxfolder =
+        {
+            Ambient sounds.qtxfolder =
+            {
+                ambient_comp_hum:e =
+                    {
+                    origin = "0 0 0"
+                    ;desc = "Computer background sounds"
+                    }
+                ambient_drip:e =
+                    {
+                    origin = "0 0 0"
+                    ;desc = "Dripping sound"
+                    }
+                ambient_drone:e =
+                    {
+                    origin = "0 0 0"
+                    ;desc = "Engine/machinery sound"
+                    }
+                ambient_fluoro_buzz:e =
+                    {
+                    origin = "0 0 0"
+                    ;desc = "Flourescent buzzing sound"
+                    }
+                ambient_light_buzz:e =
+                    {
+                    origin = "0 0 0"
+                    ;desc = "Buzzing sound from light"
+                    }
+                ambient_suck_wind:e =
+                    {
+                    origin = "0 0 0"
+                    ;desc = "Wind sound"
+                    }
+                ambient_swamp1:e =
+                    {
+                    origin = "0 0 0"
+                    ;desc = "Frogs croaking"
+                    }
+                ambient_swamp2:e =
+                    {
+                    origin = "0 0 0"
+                    ;desc = "Slightly different sounding frogs croaking"
+                    }
+                ambient_thunder:e =
+                    {
+                    origin = "0 0 0"
+                    ;desc = "Thunder sound"
+                    }
+            }
+
+            Func Doors & lifts.qtxfolder =
+            {
+                func_bossgate:b =
+                    {
+                    ;desc = "This bmodel disappears when player has all the episode runes"
+                    ;incl = "defpoly"
+                    }
+                func_button:b =
+                    {
+                    angle = "0"
+                    ;desc = "A button, used to trigger events"
+                    ;incl = "defpoly"
+                    }
+                func_dm_only:b =
+                    {
+                    angle="0"
+                    ;desc="Deathmatch teleporter"
+                    ;incl="defpoly"
+                    }
+                func_door:b =
+                    {
+                    angle = "0"
+                    ;desc = "A door"
+                    ;incl = "defpoly"
+                    }
+                func_door_secret:b =
+                    {
+                    angle = "0"
+                    sounds = "3"
+                    ;desc = "A secret door"
+                    ;incl = "defpoly"
+                    }
+                func_episodegate:b =
+                    {
+                    ;desc = "Appears if episode has been completed so player can't re-enter it"
+                    ;incl = "defpoly"
+                    }
+                func_illusionary:b =
+                    {
+                    ;desc = "Entity that looks solid but lets you walk right through it"
+                    ;incl = "defpoly"
+                    }
+                func_plat:b =
+                    {
+                    angle = "0"
+                    sounds = "2"
+                    ;desc = "A lift/elevator"
+                    ;incl = "defpoly"
+                    }
+                func_train:b =
+                    {
+                    ;desc = "A platform that moves along a path"
+                    ;incl = "defpoly"
+                    }
+                func_train2:b =
+                    {
+                    ;desc = "A modification of the standard func_train entity"
+                    ;incl = "defpoly"
+                    }
+                func_rotate_train:b =
+                    {
+                    ;desc = "A modification of the standard func_train entity"
+                    ;incl = "defpoly"
+                    }
+                func_wall:b =
+                    {
+                    ;desc = "Just a solid wall if not inhibited"
+                    ;incl = "defpoly"
+                    }
+            }
+
+            Info.qtxfolder =
+            {
+                info_intermission:e =
+                    {
+                    origin = "0 0 0"
+                    mangle = "0 0 0"
+                    ;desc = "Camera position during intermissions"
+                    }
+                info_notnull:e =
+                    {
+                    origin = "0 0 0"
+                    ;desc = "Used as a positional target for 'Misc: event_lightning' entity, and does not remove itself"
+                    }
+                info_null:e =
+                    {
+                    origin = "0 0 0"
+                    ;desc = "Used as a positional target for spotlights, and does remove itself"
+                    }
+                info_teleport_destination:e =
+                    {
+                    origin = "0 0 0"
+                    ;desc = "Teleport destination"
+                        targetname = "[auto]"
+                        angle = "0"
+                    }
+            }
+
+            Items.qtxfolder =
+            {
+                item_armor1:e =
+                    {
+                    origin = "0 0 0"
+                    ;desc = "Green Armor (100 armor points)"
+                    }
+                item_armor2:e =
+                    {
+                    origin = "0 0 0"
+                    ;desc = "Yellow Armor (150 armor points)"
+                    }
+                item_armorInv:e =
+                    {
+                    origin = "0 0 0"
+                    ;desc = "Red Armor (200 armor points)"
+                    }
+                item_artifact_envirosuit:e =
+                    {
+                    origin = "0 0 0"
+                    ;desc = "Environmental protection suit"
+                    }
+                item_artifact_invisibility:e =
+                    {
+                    origin = "0 0 0"
+                    ;desc = "Ring of Shadows (invisibility)"
+                    }
+                item_artifact_invulnerability:e =
+                    {
+                    origin = "0 0 0"
+                    ;desc = "Pentagram of Protection"
+                    }
+                item_artifact_super_damage:e =
+                    {
+                    origin = "0 0 0"
+                    ;desc = "Quad Damage"
+                    }
+                item_cells:e =
+                    {
+                    origin = "0 0 0"
+                    ;desc = "Ammo for Thunderbolt"
+                    }
+                item_health:e =
+                    {
+                    origin = "0 0 0"
+                    ;desc = "Medkit"
+                    }
+                item_key1:e =
+                    {
+                    origin = "0 0 0"
+                    ;desc = "Silver Key"
+                    }
+                item_key2:e =
+                    {
+                    origin = "0 0 0"
+                    ;desc = "Gold Key"
+                    }
+                item_rockets:e =
+                    {
+                    origin = "0 0 0"
+                    ;desc = "Ammo for both Grenade/Rocket Launcher"
+                    }
+                item_shells:e =
+                    {
+                    origin = "0 0 0"
+                    ;desc = "Ammo for both shotguns"
+                    }
+                item_sigil:e =
+                    {
+                    origin = "0 0 0"
+                    ;desc = "End of level run, pick up to end episode and return to start"
+                    }
+                item_spikes:e =
+                    {
+                    origin = "0 0 0"
+                    ;desc = "Ammo for both nailguns"
+                    }
+            }
+
+            Lights.qtxfolder =
+            {
+                light:e =
+                    {
+                    light = "300"
+                    angle = "360"
+                    origin = "0 0 0"
+                    ;desc = "An unsourced light (no visible light source)"
+                    }
+                light_flame_large_yellow:e =
+                    {
+                    origin = "0 0 0"
+                    ;desc ="Large yellow flame"
+                    }
+                light_flame_small_yellow:e =
+                    {
+                    origin = "0 0 0"
+                    ;desc = "Small yellow flame"
+                    }
+                light_flame_small_white:e =
+                    {
+                    origin = "0 0 0"
+                    ;desc = "Small white flame"
+                    }
+                light_fluoro:e =
+                    {
+                    origin = "0 0 0"
+                    ;desc = "Light that makes steady fluorescent humming"
+                    }
+                light_fluorospark:e =
+                    {
+                    origin = "0 0 0"
+                    ;desc = "Light that makes sparking, broken fluorescent sound"
+                    }
+                light_globe:e =
+                    {
+                    origin = "0 0 0"
+                    ;desc = "Sphere globe light"
+                    }
+                light_torch_small_walltorch:e =
+                    {
+                    origin = "0 0 0"
+                    ;desc = "Short walltorch"
+                    }
+            }
+
+            Misc.qtxfolder =
+            {
+                air_bubbles:e =
+                    {
+                    origin = "0 0 0"
+                    ;desc = "Rising air bubbles"
+                    }
+                event_lightning:e =
+                    {
+                    origin = "0 0 0"
+                    ;desc = "Used to kill Chthon: Shareware Boss"
+                    }
+                misc_explobox:e =
+                    {
+                    origin = "0 0 0"
+                    ;desc = "Exploding box (explodes upon being shot, harms player)"
+                    }
+                misc_explobox2:e =
+                    {
+                    origin = "0 0 0"
+                    ;desc = "Small exploding box"
+                    }
+                misc_fireball:e =
+                    {
+                    origin = "0 0 0"
+                    ;desc = "This is the ball that jumps up from lava"
+                    }
+                misc_teleporttrain:e =
+                    {
+                    origin = "0 0 0"
+                    ;desc = "Used to kill Shub-Niggurath. Possibly acts as a func_train"
+                    }
+                path_corner:e =
+                    {
+                    origin = "0 0 0"
+                    ;desc = "Used to define a path for func_train platforms"
+                    }
+                path_rotate:e =
+                    {
+                    origin = "0 0 0"
+                    ;desc = "Used to define a rotation for 'Func: func_rotate_train'"
+                    }
+                trap_shooter:e =
+                    {
+                    origin = "0 0 0"
+                    angle = "0"
+                    ;desc = "Continuously fires spikes"
+                    }
+                trap_spikeshooter:e =
+                    {
+                    origin = "0 0 0"
+                    angle = "0"
+                    ;desc = "Shoots a spike when triggered"
+                    }
+            }
+
+            Monsters.qtxfolder =
+            {
+                monster_army:e =
+                    {
+                    origin = "0 0 0"
+                    angle = "0"
+                    ;desc = "Grunt, 30 HP"
+                    }
+                monster_boss:e =
+                    {
+                    origin = "0 0 0"
+                    angle = "0"
+                    ;desc = "Chthon (Shareware Boss) only killed by lightning"
+                    }
+                monster_demon1:e =
+                    {
+                    origin = "0 0 0"
+                    angle = "0"
+                    ;desc = "Fiend (Demon), 300 HP"
+                    }
+                monster_dog:e =
+                    {
+                    origin = "0 0 0"
+                    angle = "0"
+                    ;desc = "Rottweiler attack dog, 25 HP"
+                    }
+                monster_enforcer:e =
+                    {
+                    origin = "0 0 0"
+                    angle = "0"
+                    ;desc = "Enforcer, 80 HP"
+                    }
+                monster_fish:e =
+                    {
+                    origin = "0 0 0"
+                    angle = "0"
+                    ;desc = "Rotfish, 25 HP"
+                    }
+                monster_hell_knight:e =
+                    {
+                    origin = "0 0 0"
+                    angle = "0"
+                    ;desc = "Death Knight (HellKnight), 250 HP"
+                    }
+                monster_knight:e =
+                    {
+                    origin = "0 0 0"
+                    angle = "0"
+                    ;desc = "Knight, 75 HP"
+                    }
+                monster_ogre:e =
+                    {
+                    origin = "0 0 0"
+                    angle = "0"
+                    ;desc = "Ogre, 200 HP"
+                    }
+                monster_ogre_marksman:e =
+                    {
+                    origin = "0 0 0"
+                    angle = "0"
+                    ;desc = "Ogre Marksman, 200 HP"
+                    }
+                monster_oldone:e =
+                    {
+                    origin = "0 0 0"
+                    angle = "0"
+                    ;desc = "Shub-Niggurath, 40000 HP"
+                    }
+                monster_shalrath:e =
+                    {
+                    origin = "0 0 0"
+                    angle = "0"
+                    ;desc = "Vore (Shalrath), 400 HP"
+                    }
+                monster_shambler:e =
+                    {
+                    origin = "0 0 0"
+                    angle = "0"
+                    ;desc = "Shambler, 600 HP"
+                    }
+                monster_tarbaby:e =
+                    {
+                    origin = "0 0 0"
+                    angle = "0"
+                    ;desc = "Spawn (Tarbaby), 80 HP"
+                    }
+                monster_wizard:e =
+                    {
+                    origin = "0 0 0"
+                    angle = "0"
+                    ;desc = "Scrag (Wizard), 80 HP"
+                    }
+                monster_zombie:e =
+                    {
+                    origin = "0 0 0"
+                    angle = "0"
+                    ;desc = "Zombie, 60 HP"
+                    }
+            }
+
+            Player Starts.qtxfolder =
+            {
+                info_player_coop:e =
+                    {
+                    origin = "0 0 0"
+                    angle = "0"
+                    ;desc = "A coop player start (more than one allowed)"
+                    }
+                info_player_deathmatch:e =
+                    {
+                    origin = "0 0 0"
+                    angle = "0"
+                    ;desc = "A deathmatch start (more than one allowed)"
+                    }
+                info_player_start:e =
+                    {
+                    origin = "0 0 0"
+                    angle = "0"
+                    ;desc = "This is where the player starts (only one allowed)"
+                    }
+                info_player_start2:e =
+                    {
+                    origin = "0 0 0"
+                    angle = "0"
+                    ;desc = "Only used on start map for the return point from an episode"
+                    }
+                testplayerstart:e =
+                    {
+                    origin = "0 0 0"
+                    angle = "0"
+                    ;desc = "Used to temporarily change the info_player_start"
+                    }
+            }
+
+            Triggers.qtxfolder =
+            {
+                trigger_changelevel:b =
+                    {
+                    map = "start"
+                    ;desc = "Changes to another level"
+                    ;incl = "defpoly"
+                    }
+                trigger_counter:e =
+                    {
+                    origin = "0 0 0"
+                    count = "2"
+                    ;desc = "Counter"
+                    }
+                trigger_hurt:b =
+                    {
+                    dmg = "5"
+                    ;desc = "Any object touching this will be hurt"
+                    ;incl = "defpoly"
+                    }
+                trigger_monsterjump:b =
+                    {
+                    angle = "0"
+                    ;desc = "Walking monsters that touch this will jump"
+                    ;incl = "defpoly"
+                    }
+                trigger_multiple:b =
+                    {
+                    ;desc = "Triggers action (can be triggered more than once)"
+                    ;incl = "defpoly"
+                    }
+                trigger_once:b =
+                    {
+                    ;desc = "Triggers action only once"
+                    ;incl = "defpoly"
+                    }
+                trigger_onlyregistered:b =
+                    {
+                    ;desc = "Only triggers if game is registered"
+                    ;incl = "defpoly"
+                    }
+                trigger_push:b =
+                    {
+                    angle = "0"
+                    speed = "1000"
+                    ;desc = "Pushes player in any direction (like a windtunnel)"
+                    ;incl = "defpoly"
+                    }
+                trigger_relay:e =
+                    {
+                    origin = "0 0 0"
+                    ;desc = "Allows delayed/multiple actions from one trigger"
+                    }
+                trigger_secret:b =
+                    {
+                    sounds = "1"
+                    ;desc = "Awards credit for secret"
+                    ;incl = "defpoly"
+                    }
+                trigger_setskill:b =
+                    {
+                    message = "1"
+                    ;desc = "Changes skill level"
+                    ;incl = "defpoly"
+                    }
+                trigger_teleport:b =
+                    {
+                    ;desc = "Teleporter (all trigger_tags are triggered by walkover"
+                    ;incl = "defpoly"
+                    }
+            }
+
+            Weapons & Ammo.qtxfolder =
+            {
+                weapon_grenadelauncher:e =
+                    {
+                    origin = "0 0 0"
+                    ;desc = "Grenade Launcher, ammo = rockets"
+                    }
+                weapon_lightning:e =
+                    {
+                    origin = "0 0 0"
+                    ;desc = "Thunderbolt, ammo = cells"
+                    }
+                weapon_nailgun:e =
+                    {
+                    origin = "0 0 0"
+                    ;desc = "Nailgun, ammo = spikes"
+                    }
+                weapon_rocketlauncher:e =
+                    {
+                    origin = "0 0 0"
+                    ;desc = "Rocket Launcher, ammo = rockets"
+                    }
+                weapon_supernailgun:e =
+                    {
+                    origin = "0 0 0"
+                    ;desc = "SuperNailgun, ammo = spikes"
+                    }
+                weapon_supershotgun:e =
+                    {
+                    origin = "0 0 0"
+                    ;desc = "Double Barrelled Shotgun, ammo = shells"
+                    }
+            }
+        }
+    }
+
+    Entity forms.fctx =    // here are the forms used to edit the Specifics of entities in the map.
+    {
+    // Ambient Sounds
+
+        ambient_comp_hum:form =
+            {
+            Help = "Computer background sounds."
+            bbox='-8 -8 -8 8 8 8'
+            }
+
+        ambient_drip:form =
+            {
+            Help = "Dripping sound."
+            bbox='-8 -8 -8 8 8 8'
+            }
+
+        ambient_drone:form =
+            {
+            Help = "Engine/machinery sound."
+            bbox='-8 -8 -8 8 8 8'
+            }
+
+        ambient_fluoro_buzz:form =
+            {
+            Help = "Flourescent buzzing sound."
+            bbox='-8 -8 -8 8 8 8'
+            }
+
+        ambient_light_buzz:form =
+            {
+            Help = "Buzzing sound from light."
+            bbox='-8 -8 -8 8 8 8'
+            }
+
+        ambient_suck_wind:form =
+            {
+            Help = "Wind sound."
+            bbox='-8 -8 -8 8 8 8'
+            }
+
+        ambient_swamp1:form =
+            {
+            Help = "Frogs croaking."
+            bbox='-8 -8 -8 8 8 8'
+            }
+
+        ambient_swamp2:form =
+            {
+            Help = "Slightly different sound of frogs croaking."
+            bbox='-8 -8 -8 8 8 8'
+            }
+
+        ambient_thunder:form =
+            {
+            Help = "Thunder sound"
+            bbox='-8 -8 -8 8 8 8'
+            }
+
+    // Func Doors & lifts
+
+        func_bossgate:form =
+            {
+            Help = "This bmodel disappears when player has all of the episode runes."
+            }
+
+        func_button:form =
+        {
+            Help = "When a button is touched, it moves some distance in the"$0D
+                   "direction of its angle and triggers all of its targets,"$0D
+                   "waits some time then returns to its original position"$0D
+                   "where it can be triggered again."
+            sounds: =
+                {Txt="&"
+                Typ="C"
+                Items="0)steam metal" $0D "1)wooden clunk" $0D "2)metallic click" $0D "3)in-out"
+                values=    "0"    $0D    "1"    $0D    "2"    $0D    "3"
+                }
+            target: =
+                {Txt="&"
+                Typ="E"
+                Hint="Targetname of what should be triggered"
+                }
+            targetname:=
+                {Txt="&"
+                Typ="E"
+                Hint="Allows a button to be triggered by other triggers"
+                }
+            killtarget: =
+                {Txt="&"
+                Typ="E"
+                Hint="This will kill certain entities, when given their 'targetname'"
+                }
+            message:=
+                {Txt="&"
+                Typ="E"
+                Hint="Message to display when activated"
+                }
+            angle:=
+                {Txt="&"
+                Typ="E"
+                Hint="Determines the pushing direction (default 0, -1 is up, -2 is down)"
+                }
+            lip:=
+                {Txt="&"
+                Typ="E"
+                Hint="How much the button will stick out when pressed (default 4)"
+                }
+            speed:=
+                {Txt="&"
+                Typ="E"
+                Hint="Speed of movement (default 40)"
+                }
+            delay:=
+                {Txt="&"
+                Typ="E"
+                Hint="Delay before trigger occurs"
+                }
+            wait:=
+                {Txt="&"
+                Typ="E"
+                Hint="How long before it can be pushed again (default 1, -1 stays pressed)"
+                }
+            health:=
+                {Txt="&"
+                Typ="E"
+                Hint="If >0, must be shot to be triggered"
+                }
+        }
+
+        func_dm_only:form =
+        {
+            Help = "A teleporter that only appears in deathmatch games"
+            angle:=
+                {Txt="&"
+                Typ="E"
+                Hint=""
+                }
+        }
+
+        func_door:form =
+        {
+            Help = "If two doors touch, they are assumed to be connected and operate as a"$0D
+                   "unit unless the 'Don't link' is set."$0D0D
+                   "'Toggle' makes the door wait in both the start and end for a trigger event."$0D0D
+                   "'Start open' makes the door move to its destination when spawned and"$0D
+                   "operate in reverse. It is used to temporarily or permanently close off"$0D
+                   "an area when triggered."$0D0D
+                   "Key doors always have 'wait' set to '-1'."
+            spawnflags:=
+                {Txt="&"
+                Typ="X1"
+                Cap="Start open"
+                Hint="Makes the door move to its destination when spawned"
+                }
+            spawnflags: =
+                {Txt="&"
+                Typ="X4"
+                Cap="Don't link"
+                Hint="Makes touching doors operate independently"
+                }
+            spawnflags: =
+                {Txt="&"
+                Typ="X8"
+                Cap="Gold Key"
+                Hint="You will need the Gold Key to open the door"
+                }
+            spawnflags: =
+                {Txt="&"
+                Typ="X16"
+                Cap="Silver Key"
+                Hint="You will need the Silver Key to open the door"
+                }
+            spawnflags: =
+                {Txt="&"
+                Typ="X32"
+                Cap="Toggle"
+                Hint="Makes the door wait in both the start and end states for a trigger event"
+                }
+            target:=
+                {Txt="&"
+                Typ="E"
+                Hint=""
+                }
+            targetname:=
+                {Txt="&"
+                Typ="E"
+                Hint="If set, no touch field will be spawned and a remote button or trigger field activates the door"
+                }
+            message:=
+                {Txt="&"
+                Typ="E"
+                Hint="Is printed when a door is touched, but only if it's a triggered door that hasn't been fired yet"
+                }
+            angle:=
+                {Txt="&"
+                Typ="E"
+                Hint="Determines the opening direction, default 0 (-1 is up, -2 is down)"$0D
+                     "A door can also be made to act as a platform that starts at the top position, and lowers."$0D
+                     "To do this, you must set the angle to -2 (down), and set the 'lip' to the distance it"$0D
+                     "must travel downward, minus the vertical thickness of the platform."
+                }
+            health:=
+                {Txt="&"
+                Typ="E"
+                Hint="If >0, must be shot to open"
+                }
+            speed:=
+                {Txt="&"
+                Typ="E"
+                Hint="Movement speed (default 100)"
+                }
+            wait:=
+                {Txt="&"
+                Typ="E"
+                Hint="How long the door waits before returning (default 3, -1 never return)"
+                }
+            lip:=
+                {Txt="&"
+                Typ="E"
+                Hint="Lip remaining after opening (default 8), also see 'angle' above."
+                }
+            dmg:=
+                {Txt="&"
+                Typ="E"
+                Hint="Damage to inflict on player when blocking the door (default 2)"
+                }
+            sounds: =
+                {Txt="&"
+                Typ="C"
+                Items="0)none" $0D "1)stone" $0D "2)base" $0D "3)stone chain" $0D "4)screechy metal"
+                values=    "0"    $0D    "1"    $0D    "2"    $0D    "3"    $0D    "4"
+                Hint="Sounds it makes while moving"
+                }
+        }
+
+        func_door_secret:form =
+        {
+            Help = "Basic secret door; slides back, then to the side."$0D0D
+                   "If a secret door has a targetname, it will only be opened by the button or trigger, not by damage."
+            spawnflags: =
+                {Txt="&"
+                Typ="X1"
+                Cap="Open once"
+                Hint="The door will not close again when it has been opened"
+                }
+            spawnflags: =
+                {Txt="&"
+                Typ="X2"
+                Cap="1st left"
+                Hint="1st move is left of arrow"
+                }
+            spawnflags: =
+                {Txt="&"
+                Typ="X4"
+                Cap="1st down"
+                Hint="1st move is down from arrow"
+                }
+            spawnflags: =
+                {Txt="&"
+                Typ="X8"
+                Cap="No shoot"
+                Hint="Makes door only operable with trigger"
+                }
+            spawnflags: =
+                {Txt="&"
+                Typ="X16"
+                Cap="Always shoot"
+                Hint="Even if targeted, it's shootable"
+                }
+            targetname:=
+                {Txt="&"
+                Typ="E"
+                Hint="If set, no touch field will be spawned and a remote button or trigger field activates the door"
+                }
+            angle:=
+                {Txt="&"
+                Typ="E"
+                Hint="Determines the opening direction, default 0 (-1 is up, -2 is down)"$0D
+                     "A door can also be made to act as a platform that starts at the top position, and lowers."$0D
+                     "To do this, you must set the angle to -2 (down), and set the 'lip' to the distance it"$0D
+                     "must travel downward, minus the vertical thickness of the platform."
+                }
+            health:=
+                {Txt="&"
+                Typ="E"
+                Hint="If >0, must be shot to open"
+                }
+            speed:=
+                {Txt="&"
+                Typ="E"
+                Hint="Movement speed (default 100)"
+                }
+            wait:=
+                {Txt="&"
+                Typ="E"
+                Hint="How long the door waits before returning (default 5, -1 never return)"
+                }
+            lip:=
+                {Txt="&"
+                Typ="E"
+                Hint="Lip remaining after opening (default 8), also see 'angle' above."
+                }
+            t_width:=
+                {Txt="&"
+                Typ="E"
+                Hint="1st move length"
+                }
+            t_length:=
+                {Txt="&"
+                Typ="E"
+                Hint="2nd move length"
+                }
+            dmg:=
+                {Txt="&"
+                Typ="E"
+                Hint="Damage to inflict on player when blocking the door (default 2)"
+                }
+            sounds: =
+                {Txt="&"
+                Typ="C"
+                Items="1)medieval" $0D "2)metal" $0D "3)base"
+                values=    "1"    $0D    "2"    $0D    "3"
+                Hint="Sounds it makes while moving"
+                }
+        }
+
+        func_episodegate:form =
+        {
+            Help = "This bmodel will appear if the episode has already been completed, so player can't re-enter it."
+            spawnflags: =
+                {Txt="&"
+                Typ="X1"
+                Cap="E1"
+                Hint="Episode 1"
+                }
+            spawnflags: =
+                {Txt="&"
+                Typ="X2"
+                Cap="E2"
+                Hint="Episode 2"
+                }
+            spawnflags: =
+                {Txt="&"
+                Typ="X4"
+                Cap="E3"
+                Hint="Episode 3"
+                }
+            spawnflags: =
+                {Txt="&"
+                Typ="X8"
+                Cap="E4"
+                Hint="Episode 4"
+                }
+        }
+
+        func_illusionary:form =
+        {
+            Help = "A simple entity that looks solid but lets you walk through it."$0D
+                   "Cannot be killed by a 'killtarget'"
+        }
+
+        func_plat:form =
+        {
+            Help = "Plats are always drawn in the extended position, so they will light correctly."$0D0D
+                   "If the plat is the target of a trigger or a button,"$0D
+                   "it will start disabled in the extended position until it's triggered,"$0D
+                   "then it will lower and become a normal plat."$0D0D
+                   "If the 'height' key is set, that will determine the amount the plat moves,"$0D
+                   "instead of being implicitly determined by the model's height."$0D0D
+                   "Also see 'func_door' to make an elevator that goes down."
+            spawnflags: =
+                {Txt="&"
+                Typ="X1"
+                Cap="Plat low trigger"
+                Hint="Starts plat in the up position"
+                }
+            sounds: =
+                {Txt="&"
+                Typ="C"
+                Items="1)base fast" $0D "2)chain slow"
+                values=    "1"    $0D    "2"
+                }
+            targetname: =
+                {Txt="&"
+                   Typ="E"
+                Hint="The name of this entity"
+                }
+            height: =
+                {Txt="&"
+                   Typ="E"
+                   Hint="How high it will rise. (Note plat is drawn extended)"
+                }
+            speed:=
+                {Txt="&"
+                Typ="E"
+                Hint="Default 150"
+                }
+        }
+
+        func_train:form =
+        {
+            Help = "Trains are moving platforms that players can ride."$0D0D
+                   "The targets origin specifies the min point of the train at each corner."$0D
+                   "The train spawns at the first target."$0D
+                   "If the train is the target of a button or trigger,"$0D
+                   "it will not begin moving until triggered."$0D0D
+                   "Also see 'Misc: path_corner'."
+            sounds: =
+                {Txt="&"
+                Typ="C"
+                Items="0)none" $0D "1)ratchet metal"
+                values="0"      $0D "1"
+                }
+            target: =
+                {Txt="&"
+                Typ="E"
+                Hint="Targets first 'Misc: path_corner'"
+                }
+            targetname:=
+                {Txt="&"
+                Typ="E"
+                Hint="Used if train is activated by trigger. Note: train will not start by player's presence"
+                }
+            speed:=
+                {Txt="&"
+                Typ="E"
+                Hint="Default 100"
+                }
+            message:=
+                {Txt="&"
+                Typ="E"
+                Hint="Message displayed when triggered"
+                }
+            dmg:=
+                {Txt="&"
+                Typ="E"
+                Hint="Amount of damage inflicted when player gets in the way of the train (default 2)"
+                }
+        }
+
+        func_train2:form =
+        {
+            Help = "Not original Quake 1 funciton, may not work. Hipnotic entitie."$0D
+                   "This is a modification of the standard 'func_train' entity."$0D
+                   "It is functionally equivalent, except that it removes a slight delay that would occur"$0D
+                   "after each path entry, and it adds a speed variable to the path_corner entity."$0D
+                   "There is more info about func_train2 use in the 04/06/97 WCU map/bsp."$0D0D
+                   "The targets origin specifies the min point of the train at each corner."$0D
+                   "The train spawns at the first target."$0D
+                   "If the train is the target of a button or trigger,"$0D
+                   "it will not begin moving until triggered."$0D0D
+                   "Also see 'Misc: path_corner'."
+            sounds: =
+                {Txt="&"
+                Typ="C"
+                Items="0)none" $0D "1)ratchet metal"
+                values="0"      $0D "1"
+                }
+            target: =
+                {Txt="&"
+                Typ="E"
+                Hint="Targets first 'Misc: path_corner'"
+                }
+            targetname:=
+                {Txt="&"
+                Typ="E"
+                Hint="Used if train is activated by trigger. Note: train will not start by player's presence"
+                }
+            speed:=
+                {Txt="&"
+                Typ="E"
+                Hint="Default 200"
+                }
+            message:=
+                {Txt="&"
+                Typ="E"
+                Hint="Message displayed when triggered"
+                }
+            dmg:=
+                {Txt="&"
+                Typ="E"
+                Hint="Amount of damage inflicted when player gets in the way of the train (default 0)"
+                }
+        }
+
+        func_rotate_train:form =
+        {
+            Help = "Not original Quake 1 funciton, may not work. Hipnotic entitie."$0D
+                   "Much like a 'func_train' or a 'func_train2', with the added ability to rotate,"$0D
+                   "and uses 'Misc: path_rotate' instead of 'Misc: path_corner'."$0D
+                   "A rotating train is setup the same way the other rotating entites are set up."$0D
+                   "However, the placement of the 'func_rotate_train' entity determines how it will"$0D
+                   "align to the 'Misc: path_rotate' entities."$0D
+                   "When setting up the 'Misc: path_rotate' path, keep in mind that the train will"$0D
+                   "position itself with the 'func_rotate_train' in the same position as the 'Misc: path_rotate'."$0D
+                   "If the train is the target of a button or trigger, it will not begin moving until activated."$0D
+                   "The func_rotate_train entity is the center of rotation of all objects targeted by it."$0D
+                   "There is more info about rotating trains in the log for the 03/23/97 WCU class."$0D0D
+                   "Also see 'Misc: path_rotate'."
+            sounds: =
+                {Txt="&"
+                Typ="C"
+                Items="0)none" $0D "1)ratchet metal"
+                values="0"      $0D "1"
+                }
+            target: =
+                {Txt="&"
+                Typ="E"
+                Hint="Targets first 'Misc: path_rotate'"
+                }
+            targetname:=
+                {Txt="&"
+                Typ="E"
+                Hint="Used if train is activated by trigger. Note: train will not start by player's presence"
+                }
+            speed:=
+                {Txt="&"
+                Typ="E"
+                Hint="Default 100"
+                }
+            message:=
+                {Txt="&"
+                Typ="E"
+                Hint="Message displayed when triggered"
+                }
+            dmg:=
+                {Txt="&"
+                Typ="E"
+                Hint="Amount of damage inflicted when player gets in the way of the train (default 0)"
+                }
+            path:=
+                {Txt="&"
+                Typ="E"
+                Hint="Specifies the first 'Misc: path_rotate' and is the starting position"
+                }
+            deathtype:=
+                {Txt="&"
+                Typ="E"
+                Hint="If set with a string, this is the message that will appear when a player is killed"
+                }
+        }
+
+        func_wall:form =
+        {
+            Help = "This is just a solid wall if not inhibited"$0D
+                   "that can be made to appear in certain skills and modes"$0D
+                   "and can be made to have switchable texture."
+            targetname:=
+                {Txt="&"
+                Typ="E"
+                hint="Used to trigger or kill a wall"
+                }
+        }
+
+    //Info
+
+        info_intermission:form =
+        {
+            Help = "This is the camera point for the intermission." $0D "Use 'mangle' instead of angle, so you can set pitch, yaw and roll." $0D $0D "Pitch is vertical angle (-90 degrees up to 90 down), 0 being horizontal and with positive values pointing down." $0D "Yaw is horizontal angle (0 to 360 degrees around the Z-axis), 0 being east and 90 being north." $0D "Roll is rotation around the direction axis (-180 to 180), 0 being straight and positive values tilting right." $0D $0D "Example: '30 135 0' means the camera is facing downwards at a 30 degree angle, straight northwest and with no tilt."
+            bbox = '-16 -16 -24 16 16 32'
+            mdl = "progs/player.mdl"
+            mangle: =
+                {Txt="&"
+                Hint="Angles for the intermission camera; 'pitch yaw roll'"
+                }
+        }
+
+        info_notnull:form =
+        {
+            Help = "Used as a positional target for 'Misc: event_lightning' entity, and does not remove itself"
+            targetname: =
+                {Txt="&"
+                Typ="E"
+                Hint="The name of this entity"
+                }
+        }
+
+        info_null:form =
+        {
+            Help = "Used as a positional target for spotlights, and does remove itself"
+            targetname: =
+            {Txt="&"
+            Typ="E"
+            Hint="The name of this entity"
+            }
+        }
+
+        info_teleport_destination:form =
+        {
+            Help = "This is the destination marker for a teleporter."$0D
+                   "It should have a 'targetname' field with the same value as a"$0D
+                   "teleporter's 'target' field."
+            bbox='-16 -16 -24 16 16 32'
+            mdl = "progs/player.mdl" 
+            targetname: =
+                {Txt="&"
+                Typ="E"
+                Hint="Name of a teleporter's 'targetname'"
+                }
+            angle:=
+                {Txt="&"
+                Typ="E"
+                Hint="Direction after teleportation (default 0, -1 is up, -2 is down)"
+                }
+        }
+
+    //Items
+
+        item_armor1:form =
+        {
+            Help = "This is the Green Armor (100 armor points)."
+            bbox='-16 -16 0 16 16 32'
+            mdl="progs/armor.mdl"
+        }
+
+        item_armor2:form =
+        {
+            Help = "This is the Yellow Armor (150 armor points)."
+            bbox='-16 -16 0 16 16 32'
+            mdl="progs/armor.mdl"
+            mdlskin='1'
+        }
+
+        item_armorInv:form =
+        {
+            Help = "This is the Red Armor (200 armor points)."
+            bbox='-16 -16 0 16 16 32'
+            mdl="progs/armor.mdl"
+            mdlskin='2'
+        }
+
+        item_artifact_envirosuit:form =
+        {
+            Help = "Player takes no damage from water or slime for 30 seconds."
+            bbox='-16 -16 -24 16 16 32'
+            mdl="progs/suit.mdl"
+        }
+
+        item_artifact_invisibility:form =
+        {
+            Help = "Player is invisible for 30 seconds."
+            bbox='-16 -16 -24 16 16 32'
+            mdl="progs/invisibl.mdl"
+        }
+
+        item_artifact_invulnerability:form =
+        {
+            Help = "Player is invulnerable for 30 seconds."
+            bbox='-16 -16 -24 16 16 32'
+            mdl="progs/invulner.mdl"
+        }
+
+        item_artifact_super_damage:form =
+        {
+            Help = "The next attack from the player will do x4 damage."
+            bbox='-16 -16 -24 16 16 32'
+            mdl="progs/quaddama.mdl"
+            target: =
+                {Txt="&"
+                Hint="Fired when item is picked up"
+                }
+        }
+
+        item_cells:form =
+        {
+            Help = "Ammo for Thunderbolt."
+            bbox='0 0 0 32 32 56'
+            mdl="maps/b_batt0.bsp"
+            spawnflags: =
+                {Txt="&"
+                Typ="X1"
+                Cap="big"
+                Hint="Big Box of Cells"
+                }
+        }
+
+        item_health:form =
+        {
+            Help = "Health box, normally gives 25 points."$0D
+                   "Rotten box heals 15 points."$0D
+                   "Megahealth will make it a 200 health box, then rot you down"$0D
+                   "to your maximum health limit, one point per second."
+            bbox='0 0 0 32 32 56'
+            mdl="maps/b_bh25.bsp"
+            spawnflags: =
+                {Txt="&"
+                Typ="X1"
+                Cap="rotten"
+                Hint=""
+                }
+            spawnflags: =
+                {Txt="&"
+                Typ="X2"
+                Cap="megahealth"
+                Hint=""
+                }
+        }
+
+        item_key1:form =
+        {
+            Help = "Silver Key"$0D0D
+                   "In order for keys to work you must set your map's"$0D
+                   "'worldtype' correctly (see worldspawn)."
+            bbox='-16 -16 -24 16 16 32'
+            mdl="progs/w_s_key.mdl"
+            target: =
+                {Txt="&"
+                Hint="Fired when item is picked up"
+                }
+        }
+
+        item_key2:form =
+        {
+            Help = "Gold Key"$0D0D
+                   "In order for keys to work you must set your map's"$0D
+                   "'worldtype' correctly (see worldspawn)."
+            bbox='-16 -16 -24 16 16 32'
+            mdl="progs/w_g_key.mdl"
+            target: =
+                {Txt="&"
+                Hint="Fired when item is picked up"
+                }
+        }
+
+        item_rockets:form =
+        {
+            Help = "Ammo for Grenade & RocketLauncher."
+            bbox='0 0 0 32 32 56'
+            mdl="maps/b_rock0.bsp"
+            spawnflags: =
+                {Txt="&"
+                Typ="X1"
+                Cap="big"
+                Hint="Big Box of Rockets"
+                }
+        }
+
+        item_shells:form =
+        {
+            Help = "Ammo for shotguns."
+            bbox='0 0 0 32 32 56'
+            mdl="maps/b_shell0.bsp"
+            spawnflags: =
+                {Txt="&"
+                Typ="X1"
+                Cap="big"
+                Hint="Big Box of Shells"
+                }
+        }
+
+        item_sigil:form =
+        {
+            Help = "End of level run, pick up to end episode and return to start."
+            bbox='-16 -16 -24 16 16 32'
+            mdl="progs/end1.mdl"
+            spawnflags: =
+                {Txt="&"
+                Typ="X1"
+                Cap="E1"
+                Hint="Episode 1"
+                }
+            spawnflags: =
+                {Txt="&"
+                Typ="X2"
+                Cap="E2"
+                Hint="Episode 2"
+                }
+            spawnflags: =
+                {Txt="&"
+                Typ="X4"
+                Cap="E3"
+                Hint="Episode 3"
+                }
+            spawnflags: =
+                {Txt="&"
+                Typ="X8"
+                Cap="E4"
+                Hint="Episode 4"
+                }
+            target: =
+                {Txt="&"
+                Hint="Fired when item is picked up"
+                }
+        }
+
+        item_spikes:form =
+        {
+            Help = "Ammo for nailguns."
+            bbox='0 0 0 32 32 56'
+            mdl="maps/b_nail0.bsp"
+            spawnflags: =
+                {Txt="&"
+                Typ="X1"
+                Cap="big"
+                Hint="Big Box of Nails"
+                }
+        }
+
+    //Lights
+
+        light:form =
+        {
+            help = "Unsourced light (without a visible model)."$0D0D
+                   "If targeted it will toggle between on or off."$0D
+                   "If 'target' and 'angle' is set, the light is projected"$0D
+                   "in the direction of the target as a cone of the size"$0D
+                   "set by angle."
+            bbox = '-10 -10 -20 10 10 20'
+            mdl = "progs/flame.mdl"
+            style: =
+                {Txt="&"
+                Typ="C"
+                Items="0)normal (default)" $0D "1)flicker (1st variety)" $0D "2) slow strong pulse" $0D "3)candle (1st variety)" $0D "4)fast strobe" $0D "5)gentle pulse" $0D "6)flicker (2nd variety)" $0D "7)candle (2nd variety)" $0D "8)candle (3rd variety)" $0D "9)slow strobe" $0D "10)fluorescent flicker" $0D "11)slow pulse, not fading to black"
+                values=    "0"    $0D    "1"    $0D    "2"    $0D    "3"    $0D    "4"    $0D    "5"    $0D    "6"    $0D    "7"    $0D    "8"    $0D    "9"    $0D    "10"    $0D    "11"
+                }
+            spawnflags: =
+                {Txt="&"
+                Typ="X1"
+                Cap="Start off"
+                Hint="If set, it must be triggered to light up"
+                }
+            light: =
+                {Txt="&"
+                   Typ="E"
+                Hint="Light value (default 300)"
+                }
+            target:=
+                {Txt="&"
+                Typ="E"
+                Hint="What light is directed at"
+                }
+            targetname: =
+                {Txt="&"
+                Hint="Used to toggle light on/off"
+                }
+            angle:=
+                {Txt="&"
+                Typ="E"
+                Hint="Angle of light cone when directed (default 40)"
+                }
+            mangle: =
+                {Txt="&"
+                Typ="E"
+                Hint="Spotlight mangle (yaw pitch 0). Yaw is 0-360 degrees around the Z-axis and pitch is 90 degrees up to -90 down"
+                }
+            delay:=
+                {Txt="&"
+                Typ="C"
+                Items="0)linear (default)" $0D "1)1/x" $0D "2)1/x2" $0D "3)infinite"
+                values="0"                 $0D "1"     $0D "2"      $0D    "3"
+                Hint="Attenuation"
+                }
+            wait:=
+                {Txt="&"
+                Typ="E"
+                Hint="Fade distance (default 1.0, lower values are brighter, 0 also means 1.0)"
+                }
+        }
+
+        light_flame_large_yellow:form =
+        {
+            Help = "Large yellow flame."
+            bbox='-10 -10 -12 12 12 18'
+            mdl="progs/flame2.mdl"
+            style: =
+                {Txt="&"
+                Typ="C"
+                Items="0)normal (default)" $0D "1)flicker (1st variety)" $0D "2) slow strong pulse" $0D "3)candle (1st variety)" $0D "4)fast strobe" $0D "5)gentle pulse" $0D "6)flicker (2nd variety)" $0D "7)candle (2nd variety)" $0D "8)candle (3rd variety)" $0D "9)slow strobe" $0D "10)fluorescent flicker" $0D "11)slow pulse, not fading to black"
+                values=    "0"    $0D    "1"    $0D    "2"    $0D    "3"    $0D    "4"    $0D    "5"    $0D    "6"    $0D    "7"    $0D    "8"    $0D    "9"    $0D    "10"    $0D    "11"
+                }
+            light: =
+                {Txt="&"
+                Typ="E"
+                Hint="Light value (default 300)"
+                }
+            delay:=
+                {Txt="&"
+                Typ="C"
+                Items="0)linear (default)" $0D "1)1/x" $0D "2)1/x2" $0D "3)infinite"
+                values="0"                 $0D "1"     $0D "2"      $0D    "3"
+                Hint="Attenuation"
+                }
+            wait:=
+                {Txt="&"
+                Typ="E"
+                Hint="Fade distance (default 1.0, lower values are brighter, 0 also means 1.0)"
+                }
+        }
+
+        light_flame_small_yellow:form =
+        {
+            Help = "Small yellow flame."
+            bbox='-8 -8 -8 8 8 8'
+            mdl="progs/flame2.mdl"
+            style: =
+                {Txt="&"
+                Typ="C"
+                Items="0)normal (default)" $0D "1)flicker (1st variety)" $0D "2) slow strong pulse" $0D "3)candle (1st variety)" $0D "4)fast strobe" $0D "5)gentle pulse" $0D "6)flicker (2nd variety)" $0D "7)candle (2nd variety)" $0D "8)candle (3rd variety)" $0D "9)slow strobe" $0D "10)fluorescent flicker" $0D "11)slow pulse, not fading to black"
+                values=    "0"    $0D    "1"    $0D    "2"    $0D    "3"    $0D    "4"    $0D    "5"    $0D    "6"    $0D    "7"    $0D    "8"    $0D    "9"    $0D    "10"    $0D    "11"
+                }
+            light: =
+                {Txt="&"
+                Typ="E"
+                Hint="Light value (default 300)"
+                }
+            delay:=
+                {Txt="&"
+                Typ="C"
+                Items="0)linear (default)" $0D "1)1/x" $0D "2)1/x2" $0D "3)infinite"
+                values="0"                 $0D "1"     $0D "2"      $0D    "3"
+                Hint="Attenuation"
+                }
+            wait:=
+                {Txt="&"
+                Typ="E"
+                Hint="Fade distance (default 1.0, lower values are brighter, 0 also means 1.0)"
+                }
+        }
+
+        light_flame_small_white:form =
+        {
+            Help = "Small white flame."
+            bbox='-10 -10 -40 10 10 40'
+            mdl="progs/flame2.mdl"
+            style: =
+                {Txt="&"
+                Typ="C"
+                Items="0)normal (default)" $0D "1)flicker (1st variety)" $0D "2) slow strong pulse" $0D "3)candle (1st variety)" $0D "4)fast strobe" $0D "5)gentle pulse" $0D "6)flicker (2nd variety)" $0D "7)candle (2nd variety)" $0D "8)candle (3rd variety)" $0D "9)slow strobe" $0D "10)fluorescent flicker" $0D "11)slow pulse, not fading to black"
+                values=    "0"    $0D    "1"    $0D    "2"    $0D    "3"    $0D    "4"    $0D    "5"    $0D    "6"    $0D    "7"    $0D    "8"    $0D    "9"    $0D    "10"    $0D    "11"
+                }
+            light: =
+                {Txt="&"
+                Typ="E"
+                Hint="Light value (default 300)"
+                }
+            delay:=
+                {Txt="&"
+                Typ="C"
+                Items="0)linear (default)" $0D "1)1/x" $0D "2)1/x2" $0D "3)infinite"
+                values="0"                 $0D "1"     $0D "2"      $0D    "3"
+                Hint="Attenuation"
+                }
+            wait:=
+                {Txt="&"
+                Typ="E"
+                Hint="Fade distance (default 1.0, lower values are brighter, 0 also means 1.0)"
+                }
+        }
+
+        light_fluoro:form =
+        {
+            Help = "Light without a visible model." $0D "Makes steady fluorescent humming sound."
+            bbox='-8 -8 -8 8 8 8'
+            style: =
+                {Txt="&"
+                Typ="C"
+                Items="0)normal (default)" $0D "1)flicker (1st variety)" $0D "2) slow strong pulse" $0D "3)candle (1st variety)" $0D "4)fast strobe" $0D "5)gentle pulse" $0D "6)flicker (2nd variety)" $0D "7)candle (2nd variety)" $0D "8)candle (3rd variety)" $0D "9)slow strobe" $0D "10)fluorescent flicker" $0D "11)slow pulse, not fading to black"
+                values=    "0"    $0D    "1"    $0D    "2"    $0D    "3"    $0D    "4"    $0D    "5"    $0D    "6"    $0D    "7"    $0D    "8"    $0D    "9"    $0D    "10"    $0D    "11"
+                }
+            light: =
+                {Txt="&"
+                Typ="E"
+                Hint="Light value (default 300)"
+                }
+            delay:=
+                {Txt="&"
+                Typ="C"
+                Items="0)linear (default)" $0D "1)1/x" $0D "2)1/x2" $0D "3)infinite"
+                values="0"                 $0D "1"     $0D "2"      $0D    "3"
+                Hint="Attenuation"
+                }
+            wait:=
+                {Txt="&"
+                Typ="E"
+                Hint="Fade distance (default 1.0, lower values are brighter, 0 also means 1.0)"
+                }
+        }
+
+        light_fluorospark:form =
+        {
+            Help = "Light without a visible model."$0D
+                   "Makes sparking, broken fluorescent sound."
+            bbox='-8 -8 -8 8 8 8'
+            style: =
+                {Txt="&"
+                Typ="C"
+                Items="0)normal (default)" $0D "1)flicker (1st variety)" $0D "2) slow strong pulse" $0D "3)candle (1st variety)" $0D "4)fast strobe" $0D "5)gentle pulse" $0D "6)flicker (2nd variety)" $0D "7)candle (2nd variety)" $0D "8)candle (3rd variety)" $0D "9)slow strobe" $0D "10)fluorescent flicker" $0D "11)slow pulse, not fading to black"
+                values=    "0"    $0D    "1"    $0D    "2"    $0D    "3"    $0D    "4"    $0D    "5"    $0D    "6"    $0D    "7"    $0D    "8"    $0D    "9"    $0D    "10"    $0D    "11"
+                }
+            light: =
+                {Txt="&"
+                Typ="E"
+                Hint="Light value (default 300)"
+                }
+            delay:=
+                {Txt="&"
+                Typ="C"
+                Items="0)linear (default)" $0D "1)1/x" $0D "2)1/x2" $0D "3)infinite"
+                values="0"                 $0D "1"     $0D "2"      $0D    "3"
+                Hint="Attenuation"
+                }
+            wait:=
+                {Txt="&"
+                Typ="E"
+                Hint="Fade distance (default 1.0, lower values are brighter, 0 also means 1.0)"
+                }
+        }
+
+        light_globe:form =
+        {
+            Help = "Sphere globe light."
+            bbox='-8 -8 -8 8 8 8'
+            mdl="progs/s_light.spr"
+            style: =
+                {Txt="&"
+                Typ="C"
+                Items="0)normal (default)" $0D "1)flicker (1st variety)" $0D "2) slow strong pulse" $0D "3)candle (1st variety)" $0D "4)fast strobe" $0D "5)gentle pulse" $0D "6)flicker (2nd variety)" $0D "7)candle (2nd variety)" $0D "8)candle (3rd variety)" $0D "9)slow strobe" $0D "10)fluorescent flicker" $0D "11)slow pulse, not fading to black"
+                values=    "0"    $0D    "1"    $0D    "2"    $0D    "3"    $0D    "4"    $0D    "5"    $0D    "6"    $0D    "7"    $0D    "8"    $0D    "9"    $0D    "10"    $0D    "11"
+                }
+            light: =
+                {Txt="&"
+                Typ="E"
+                Hint="Light value (default 300)"
+                }
+            delay:=
+                {Txt="&"
+                Typ="C"
+                Items="0)linear (default)" $0D "1)1/x" $0D "2)1/x2" $0D "3)infinite"
+                values="0"                 $0D "1"     $0D "2"      $0D    "3"
+                Hint="Attenuation"
+                }
+            wait:=
+                {Txt="&"
+                Typ="E"
+                Hint="Fade distance (default 1.0, lower values are brighter, 0 also means 1.0)"
+                }
+        }
+
+        light_torch_small_walltorch:form =
+        {
+            Help = "Short walltorch."
+            bbox='-10 -10 -20 10 10 20'
+            mdl="progs/flame.mdl"
+            style: =
+                {Txt="&"
+                Typ="C"
+                Items="0)normal (default)" $0D "1)flicker (1st variety)" $0D "2) slow strong pulse" $0D "3)candle (1st variety)" $0D "4)fast strobe" $0D "5)gentle pulse" $0D "6)flicker (2nd variety)" $0D "7)candle (2nd variety)" $0D "8)candle (3rd variety)" $0D "9)slow strobe" $0D "10)fluorescent flicker" $0D "11)slow pulse, not fading to black"
+                values=    "0"                $0D    "1"                       $0D    "2"                  $0D    "3"                 $0D    "4"     $0D    "5"          $0D    "6"                   $0D    "7"                   $0D    "8"                  $0D    "9"      $0D    "10"                   $0D    "11"
+                }
+            light: =
+                {Txt="&"
+                Hint="Light value (default 300)"
+                }
+            delay:=
+                {Txt="&"
+                Typ="C"
+                Items="0)linear (default)" $0D "1)1/x" $0D "2)1/x2" $0D "3)infinite"
+                values="0"                 $0D "1"     $0D "2"      $0D    "3"
+                Hint="Attenuation"
+                }
+            wait:=
+                {Txt="&"
+                Typ="E"
+                Hint="Fade distance (default 1.0, lower values are brighter, 0 also means 1.0)"
+                }
+        }
+
+    //Misc
+
+        air_bubbles:form =
+        {
+            Help = "Rising air bubbles."
+            bbox='-8 -8 -8 8 8 8'
+            mdl="progs/s_bubble.spr"
+        }
+
+        event_lightning:form =
+        {
+            Help = "Used to kill Chthon: Shareware Boss."$0D
+                   "First, you must place an event_lightning somewhere in"$0D
+                   "your map and give it a 'targetname' of something"$0D
+                   "unique, like 'zap'."$0D
+                   "Then you must decide where to place the electrodes,"$0D
+                   "which are what the lightning will go between."$0D
+                   "The electrodes are actually two func_doors."$0D
+                   "To set up the electrodes, you should give both of"$0D
+                   "them 'targetname's of 'nothing' or something unique"$0D
+                   "that will never be triggered."$0D
+                   "Then, give them both 'target's of 'lightning'."$0D
+                   "The actual lightning seems to appear about 12 units"$0D
+                   "below the func_doors."$0D0D
+                   "Now, to trigger the lightning, you must set up a"$0D
+                   "trigger entity to activate the 'targetname' of the event"$0D
+                   "lightning, in this case 'zap'."$0D
+                   "To deactivate the trap, all I have done is placed a"$0D
+                   "button with no 'target' entry, but I have added a"$0D
+                   "'killtarget' attribute that kills off the trigger."
+            targetname: =
+                {Txt="&"
+                Hint="name of entity, trigger to start lightning."
+                }
+        }
+
+        misc_explobox:form =
+        {
+            Help = "Exploding box (explodes upon being shot, harms player)."
+            bbox='0 0 0 32 32 64'
+            mdl="maps/b_explob.bsp"
+        }
+
+        misc_explobox2:form =
+        {
+            Help = "Smaller exploding box (registered only)."
+            bbox='0 0 0 32 32 32'
+            mdl="maps/b_exbox2.bsp"
+        }
+
+        misc_fireball:form =
+        {
+            Help = "This is the ball that jumps up from the lava."
+            speed: =
+                {Txt="&"
+                Typ="E"
+                Hint="How high the lava ball should jump"
+                }
+        }
+
+        misc_teleporttrain:form =
+        {
+            Help = "Used to kill Shub-Niggurath. Possibly acts as a func_train"
+            bbox='-8 -8 -8 8 8 8'
+        }
+
+        path_corner:form =
+        {
+            Help = "Monsters/Train will continue to moving towards the next target corner."$0D0D
+                   "When used for a func_train, you must align the path_corner"$0D
+                   "with the bottom left-hand corner of the train (in the top view),"$0D
+                   "and make sure it is aligned with the bottom of the train in the front view."$0D0D
+                   "Also see 'Func: func_train'."
+            bbox='-8 -8 -8 8 8 8'
+            target: =
+                {Txt="&"
+                Hint="Next stop target"
+                }
+            targetname: =
+                {Txt="&"
+                Hint=""
+                }
+            wait:=
+                {Txt="&"
+                Typ="E"
+                Hint="How long monster or train will wait when reaching corner (-1 means stop)"
+                }
+            event: =
+                {Txt="&"
+                Hint="Actsas a trigger for the specified event."$0D
+                     "Not original Quake 1 funciton, may not work. Hipnotic entitie."
+                }
+            speed: =
+                {Txt="&"
+                Typ="E"
+                Hint="set a new speed for the train/monster."$0D
+                     "Not original Quake 1 funciton, may not work. Hipnotic entitie."
+                }
+        }
+
+        path_rotate:form =
+        {
+            Help = "Place in a path, like you would if you were placing a 'path_corner' for a 'Func: func_rotate_train'."$0D
+                   "Not original Quake 1 funciton, may not work. Hipnotic entitie."$0D0D
+                   "Also see 'Func: func_rotate_train'."
+            bbox='-8 -8 -8 8 8 8'
+            spawnflags: =
+                {Txt="&"
+                Typ="X1"
+                Cap="rotation"
+                Hint="Tells train to rotate at rate specified by 'rotate'. Use '0 0 0' to stop rotation"
+                }
+            spawnflags: =
+                {Txt="&"
+                Typ="X2"
+                Cap="angles"
+                Hint="Tells train to rotate to the angles specified by 'angles' while traveling to"$0D
+                     "this path_rotate. Use values < 0 or > 360 to guarantee that it turns"$0D
+                     "in a certain direction. Having this flag set automatically clears any rotation"
+                }
+            spawnflags: =
+                {Txt="&"
+                Typ="X4"
+                Cap="stop"
+                Hint="Tells the train to stop and wait to be retriggered"
+                }
+            spawnflags: =
+                {Txt="&"
+                Typ="X8"
+                Cap="no_rotate"
+                Hint="Tells the train to stop rotating when waiting to be triggered"
+                }
+            spawnflags: =
+                {Txt="&"
+                Typ="X16"
+                Cap="damage"
+                Hint="Tells the train to cause damage based on 'dmg' in 'Func: func_rotate_train'"
+                }
+            spawnflags: =
+                {Txt="&"
+                Typ="X32"
+                Cap="movetime"
+                Hint="Tells the train to interpret 'speed' as the length of time to take moving"$0D
+                     "from one corner to another"
+                }
+            spawnflags: =
+                {Txt="&"
+                Typ="X64"
+                Cap="set_damage"
+                Hint="Tells the train to set all targets damage to 'dmg' in 'Func: func_rotate_train'"
+                }
+            target: =
+                {Txt="&"
+                Hint="Next stop target"
+                }
+            targetname: =
+                {Txt="&"
+                Hint=""
+                }
+            angles: =
+                {Txt="&"
+                Typ="EF003"
+                Hint="(xz xy yz) rotate in the plane specified, at the rate specified (set rotation flag) 'pitch yaw roll'"$0D
+                     "You must enter three values here. They have an accuracy of two digits."
+                }
+            rotate: =
+                {Txt="&"
+                Typ="EF003"
+                Hint="(xz xy yz) rotate in the plane specified, at the rate specified (set rotation flag) 'pitch yaw roll'"$0D
+                     "You must enter three values here. They have an accuracy of two digits."
+                }
+            event: =
+                {Txt="&"
+                Hint="Target to trigger when train arrives at path_rotate"
+                }
+            speed: =
+                {Txt="&"
+                Typ="E"
+                Hint="sets speed of train"
+                }
+            wait:=
+                {Txt="&"
+                Typ="E"
+                Hint="Amount of time to wait before going to next path_rotate (-1 means stop)"
+                }
+        }
+
+        trap_shooter:form =
+        {
+            Help = "Continuously fires spikes in the direction set in angle. (does not need to be triggered)"
+            bbox='-8 -8 -8 8 8 8'
+            spawnflags: =
+                {Txt="&"
+                Typ="X1"
+                Cap="superspike"
+                Hint="Double damage"
+                }
+            spawnflags: =
+                {Txt="&"
+                Typ="X2"
+                Cap="laser"
+                Hint="Laser instead of spike"
+                }
+            angle:=
+                {Txt="&"
+                Typ="E"
+                Hint="Angle of firing direction (default 0, -1 is up, -2 is down)"
+                }
+            wait: =
+                {Txt="&"
+                Typ="E"
+                Hint="Time between shots (default 1)"
+                }
+            nextthink: =
+                {Txt="&"
+                Typ="E"
+                Hint="Delay before firing first spike, so multiple shooters can be staggered."
+                }
+        }
+
+        trap_spikeshooter:form =
+        {
+            Help = "When triggered, fires a spike in the direction set in angle."$0D
+                   "Laser is only for registered."
+            bbox='-8 -8 -8 8 8 8'
+            spawnflags: =
+                {Txt="&"
+                Typ="X1"
+                Cap="superspike"
+                Hint="Double damage"
+                }
+            spawnflags: =
+                {Txt="&"
+                Typ="X2"
+                Cap="laser"
+                Hint="Laser instead of spike"
+                }
+            targetname: =
+                {Txt="&"
+                Hint="Used to trigger the trap"
+                }
+            angle:=
+                {Txt="&"
+                Typ="E"
+                Hint="Angle of firing direction (default 0, -1 is up, -2 is down)"
+                }
+        }
+
+    //Monsters
+
+        monster_army:form =
+        {
+            Help = "This is the Grunt, 30 HP."
+            bbox='-16 -16 -24 16 16 40'
+            mdl="progs/soldier.mdl"
+            spawnflags: =
+                {Txt="&"
+                Typ="X1"
+                Cap="Ambush"
+                Hint="Must see player to wake up"
+                }
+            angle:=
+                {Txt="&"
+                Typ="E"
+                Hint="Monster direction (default 0, -1 is up, -2 is down)"
+                }
+            target: =
+                {Txt="&"
+                Hint="Fired when monster dies"
+                }
+            targetname: =
+                {Txt="&"
+                Hint="Used to wake up monster"
+                }
+        }
+
+        monster_boss:form =
+        {
+            Help = "This is Chthon (Boss of Shareware version) only killed by lightning."
+            bbox='-128 -128 -24 128 128 256'
+            mdl="progs/boss.mdl"
+            angle:=
+                {Txt="&"
+                Typ="E"
+                Hint="Monster direction (default 0, -1 is up, -2 is down)"
+                }
+            target: =
+                {Txt="&"
+                Hint="Fired when monster dies"
+                }
+            targetname: =
+                {Txt="&"
+                Hint="Used to wake up monster"
+                }
+        }
+
+        monster_demon1:form =
+        {
+            Help = "This is the Fiend (Demon), 300 HP."
+            bbox='-32 -32 -24 32 32 64'
+            mdl="progs/demon.mdl"
+            spawnflags: =
+                {Txt="&"
+                Typ="X1"
+                Cap="Ambush"
+                Hint="Must see player to wake up"
+                }
+            angle:=
+                {Txt="&"
+                Typ="E"
+                Hint="Monster direction (default 0, -1 is up, -2 is down)"
+                }
+            target: =
+                {Txt="&"
+                Hint="Fired when monster dies"
+                }
+            targetname: =
+                {Txt="&"
+                Hint="Used to wake up monster"
+                }
+        }
+
+        monster_dog:form =
+        {
+            Help = "Rottweiler attack dog, 25 HP."
+            bbox='-32 -32 -24 32 32 40'
+            mdl="progs/dog.mdl"
+            spawnflags: =
+                {Txt="&"
+                Typ="X1"
+                Cap="Ambush"
+                Hint="Must see player to wake up"
+                }
+            angle:=
+                {Txt="&"
+                Typ="E"
+                Hint="Monster direction (default 0, -1 is up, -2 is down)"
+                }
+            target: =
+                {Txt="&"
+                Hint="Fired when monster dies"
+                }
+            targetname: =
+                {Txt="&"
+                Hint="Used to wake up monster"
+                }
+        }
+
+        monster_enforcer:form =
+        {
+            Help = "This is the Enforcer, 80 HP."
+            bbox='-16 -16 -24 16 16 40'
+            mdl="progs/enforcer.mdl"
+            spawnflags: =
+                {Txt="&"
+                Typ="X1"
+                Cap="Ambush"
+                Hint="Must see player to wake up"
+                }
+            angle:=
+                {Txt="&"
+                Typ="E"
+                Hint="Monster direction (default 0, -1 is up, -2 is down)"
+                }
+            target: =
+                {Txt="&"
+                Hint="Fired when monster dies"
+                }
+            targetname: =
+                {Txt="&"
+                Hint="Used to wake up monster"
+                }
+        }
+
+        monster_fish:form =
+        {
+            Help = "This is the Rotfish, 25 HP."
+            bbox='-16 -16 -24 16 16 24'
+            mdl="progs/fish.mdl"
+            spawnflags: =
+                {Txt="&"
+                Typ="X1"
+                Cap="Ambush"
+                Hint="Must see player to wake up"
+                }
+            angle:=
+                {Txt="&"
+                Typ="E"
+                Hint="Monster direction (default 0, -1 is up, -2 is down)"
+                }
+            target: =
+                {Txt="&"
+                Hint="Fired when monster dies"
+                }
+            targetname: =
+                {Txt="&"
+                Hint="Used to wake up monster"
+                }
+        }
+
+        monster_hell_knight:form =
+        {
+            Help = "This is the Death Knight, 250 HP."
+            bbox='-16 -16 -24 16 16 40'
+            mdl="progs/hknight.mdl"
+            spawnflags: =
+                {Txt="&"
+                Typ="X1"
+                Cap="Ambush"
+                Hint="Must see player to wake up"
+                }
+            angle:=
+                {Txt="&"
+                Typ="E"
+                Hint="Monster direction (default 0, -1 is up, -2 is down)"
+                }
+            target: =
+                {Txt="&"
+                Hint="Fired when monster dies"
+                }
+            targetname: =
+                {Txt="&"
+                Hint="Used to wake up monster"
+                }
+        }
+
+        monster_knight:form =
+        {
+            Help = "This is the Knight, 75 HP."
+            bbox='-16 -16 -24 16 16 40'
+            mdl="progs/knight.mdl"
+            spawnflags: =
+                {Txt="&"
+                Typ="X1"
+                Cap="Ambush"
+                Hint="Must see player to wake up"
+                }
+            angle:=
+                {Txt="&"
+                Typ="E"
+                Hint="Monster direction (default 0, -1 is up, -2 is down)"
+                }
+            target: =
+                {Txt="&"
+                Hint="Fired when monster dies"
+                }
+            targetname: =
+                {Txt="&"
+                Hint="Used to wake up monster"
+                }
+        }
+
+        monster_ogre:form =
+        {
+            help = "This is the Ogre, 200 HP."
+            bbox='-32 -32 -24 32 32 64'
+            mdl="progs/ogre.mdl"
+            spawnflags: =
+                {Txt="&"
+                Typ="X1"
+                Cap="Ambush"
+                Hint="Must see player to wake up"
+                }
+            angle:=
+                {Txt="&"
+                Typ="E"
+                Hint="Monster direction (default 0, -1 is up, -2 is down)"
+                }
+            target: =
+                {Txt="&"
+                Hint="Fired when monster dies"
+                }
+            targetname: =
+                {Txt="&"
+                Hint="Used to wake up monster"
+                }
+        }
+
+        monster_ogre_marksman:form =
+        {
+            help = "This is the Ogre Marksman, 200 HP."
+            bbox='-32 -32 -24 32 32 64'
+            mdl="progs/ogre.mdl"
+            spawnflags: =
+                {Txt="&"
+                Typ="X1"
+                Cap="Ambush"
+                Hint="Must see player to wake up"
+                }
+            angle:=
+                {Txt="&"
+                Typ="E"
+                Hint="Monster direction (default 0, -1 is up, -2 is down)"
+                }
+            target: =
+                {Txt="&"
+                Hint="Fired when monster dies"
+                }
+            targetname: =
+                {Txt="&"
+                Hint="Used to wake up monster"
+                }
+        }
+
+        monster_oldone:form =
+        {
+            Help = "This is Shub-Niggurath, 40000 HP."$0D
+                   "requires misc_telporttrain, info_intermission"
+            bbox='-16 -16 -24 16 16 32'
+            mdl="progs/oldone.mdl"
+        }
+
+        monster_shalrath:form =
+        {
+            Help = "This is the Shalrath (Vore), 400 HP."
+            bbox='-32 -32 -24 32 32 48'
+            mdl="progs/shalrath.mdl"
+            spawnflags: =
+                {Txt="&"
+                Typ="X1"
+                Cap="Ambush"
+                Hint="Must see player to wake up"
+                }
+            angle:=
+                {Txt="&"
+                Typ="E"
+                Hint="Monster direction (default 0, -1 is up, -2 is down)"
+                }
+            target: =
+                {Txt="&"
+                Hint="Fired when monster dies"
+                }
+            targetname: =
+                {Txt="&"
+                Hint="Used to wake up monster"
+                }
+        }
+
+        monster_shambler:form =
+        {
+            Help = "This is the Shambler, 600 HP, rockets do half damage."
+            bbox='-32 -32 -24 32 32 64'
+            mdl="progs/shambler.mdl"
+            spawnflags: =
+                {Txt="&"
+                Typ="X1"
+                Cap="Ambush"
+                Hint="Must see player to wake up"
+                }
+            angle:=
+                {Txt="&"
+                Typ="E"
+                Hint="Monster direction (default 0, -1 is up, -2 is down)"
+                }
+            target: =
+                {Txt="&"
+                Hint="Fired when monster dies"
+                }
+            targetname: =
+                {Txt="&"
+                Hint="Used to wake up monster"
+                }
+        }
+
+        monster_tarbaby:form =
+        {
+            Help = "This is the Spawn (Tarbaby), 80 HP."
+            bbox='-16 -16 -24 16 16 24'
+            mdl="progs/tarbaby.mdl"
+            spawnflags: =
+                {Txt="&"
+                Typ="X1"
+                Cap="Ambush"
+                Hint="Must see player to wake up"
+                }
+            angle:=
+                {Txt="&"
+                Typ="E"
+                Hint="Monster direction (default 0, -1 is up, -2 is down)"
+                }
+            target: =
+                {Txt="&"
+                Hint="Fired when monster dies"
+                }
+            targetname: =
+                {Txt="&"
+                Hint="Used to wake up monster"
+                }
+        }
+
+        monster_wizard:form =
+        {
+            Help = "Scrag (Wizard), 80 HP."
+            bbox='-16 -16 -24 16 16 40'
+            mdl="progs/wizard.mdl"
+            spawnflags: =
+                {Txt="&"
+                Typ="X1"
+                Cap="Ambush"
+                Hint="Must see player to wake up"
+                }
+            angle:=
+                {Txt="&"
+                Typ="E"
+                Hint="Monster direction (default 0, -1 is up, -2 is down)"
+                }
+            target: =
+                {Txt="&"
+                Hint="Fired when monster dies"
+                }
+            targetname: =
+                {Txt="&"
+                Hint="Used to wake up monster"
+                }
+        }
+
+        monster_zombie:form =
+        {
+            Help = "This is the Zombie, 60 HP."$0D
+                   "If crucified, stick the bounding box 12 units back into a wall to look right."
+            bbox='-16 -16 -24 16 16 32'
+            mdl="progs/zombie.mdl"
+            spawnflags: =
+                {Txt="&"
+                Typ="X1"
+                Cap="Crucified"
+                Hint=""
+                }
+            spawnflags: =
+                {Txt="&"
+                Typ="X2"
+                Cap="Ambush"
+                Hint="Must see player to wake up"
+                }
+            angle:=
+                {Txt="&"
+                Typ="E"
+                Hint="Monster direction (default 0, -1 is up, -2 is down)"
+                }
+            target: =
+                {Txt="&"
+                Hint="Fired when monster dies"
+                }
+            targetname: =
+                {Txt="&"
+                Hint="Used to wake up monster"
+                }
+        }
+
+    //Player Starts & Worldspawn
+
+        info_player_coop:form =
+        {
+            Help = "A coop player start (more than one allowed)."
+            bbox='-16 -16 -24 16 16 24'
+            mdl="progs/player.mdl"
+            angle:=
+                {Txt="&"
+                Typ="E"
+                Hint="Player direction (default 0, -1 is up, -2 is down)"
+                }
+        }
+
+        info_player_deathmatch:form =
+        {
+            Help = "A deathmatch start (more than one allowed)."
+            bbox='-16 -16 -24 16 16 24'
+            mdl="progs/player.mdl"
+            mdlopacity = '0.5'   // half transparent
+            angle:=
+                {Txt="&"
+                Typ="E"
+                Hint="Player direction (default 0, -1 is up, -2 is down)"
+                }
+        }
+
+        info_player_start:form =
+        {
+            Help = "This is where the player starts (only one allowed)."
+            bbox='-16 -16 -24 16 16 24'
+            mdl="progs/player.mdl"
+            angle:=
+                {Txt="&"
+                Typ="E"
+                Hint="Player direction (default 0, -1 is up, -2 is down)"
+                }
+        }
+
+        info_player_start2:form =
+        {
+            Help = "Only used on start map for the return point from an episode."
+            bbox='-16 -16 -24 16 16 24'
+            mdl="progs/player.mdl"
+            angle:=
+                {Txt="&"
+                Typ="E"
+                Hint="Player direction (default 0, -1 is up, -2 is down)"
+                }
+        }
+
+        testplayerstart:form =
+        {
+            Help = "Used to temporarily change the 'info_player_start'."
+            bbox='-16 -16 -24 16 16 24'
+            mdl="progs/player.mdl"
+        }
+
+        worldspawn:form =
+        {
+            Help = "Global world definitions."
+            message: =
+                {Txt="&"
+                Typ="E"
+                Hint="Message to display at startup (map title)"
+                }
+            worldtype: =
+                {Txt="&"
+                Typ="C"
+                Items="0)medieval" $0D "1)metal" $0D "2)base"
+                values=    "0"    $0D    "1"    $0D    "2"
+                Hint = "This controls what names, sounds and models that will be used for Silver/Gold Keys"
+                }
+            sounds: =
+                {Txt="&"
+                Typ="E"
+                Hint="Which CD track to play"
+                }
+            wad: =
+                {Txt="&"
+                Typ="E"
+                Hint="Wad path definitions, use ';' as delimiter"
+                }
+            light: =
+                {Txt="&"
+                Typ="E"
+                Hint="Minimum light level"
+                }
+            _sunlight: =
+                {Txt="&"
+                Typ="E"
+                Hint="Sunlight level"
+                }
+            _sun_mangle: =
+                {Txt="&"
+                Typ="E"
+                Hint="Sun mangle (yaw pitch 0). Yaw is 0-360 degrees around the Z-axis and pitch is 90 degrees up to -90 down"
+                }
+            sky: =
+                {Txt="&"
+                Typ="E"
+                Hint="Skybox name"
+                }
+            fog: =
+                {Txt="&"
+                Typ="E"
+                Hint="Fog (density red green blue)"
+                }
+        }
+
+    //Triggers
+
+        trigger_changelevel:form =
+        {
+            Help = "When the player touches this, he gets sent to the map listed in the 'map' variable. Unless the 'No intermission'"$0D
+                   "flag is set, the view will go to the info_intermission spot and display stats."
+            spawnflags: =
+                {Txt="&"
+                Typ="X1"
+                Cap="No intermission"
+                Hint="Don't show intermission screen"
+                }
+            map:=
+                {Txt="&"
+                Typ="E"
+                Hint="What map to change to"
+                }
+        }
+
+        trigger_counter:form =
+        {
+            Help = "Acts as an intermediary for an action that takes multiple inputs."$0D0D
+                   "If 'No message' is not set, it will print '1 more..' etc when triggered and 'sequence completed' when finished."$0D0D
+                   "After the counter has been triggered 'count' times, it will fire all of its targets and remove itself."$0D
+                   "A custom message can be used as final message, possibly with a delay set."
+            spawnflags: =
+                {Txt="&"
+                Typ="X1"
+                Cap="No message"
+                Hint=""
+                }
+            target: =
+                {Txt="&"
+                Typ="E"
+                Hint="The name of the entity/ies that this one should trigger ex. 'tcount1'"
+                }
+            targetname: =
+                {Txt="&"
+                Typ="E"
+                Hint="The name of this entity ex. 'Count1'"
+                }
+            message:=
+                {Txt="&"
+                Typ="E"
+                Hint="Message to display when counter fires"
+                }
+            count: =
+                {Txt="&"
+                Typ="E"
+                Hint="How many times triggered before counter will fire (default 2)"
+                }
+            killtarget:=
+                {Txt="&"
+                Typ="E"
+                Hint="Removes object with targetname"
+                }
+            delay:=
+                {Txt="&"
+                Typ="E"
+                Hint="Delay before trigger occurs"
+                }
+        }
+
+        trigger_hurt:form =
+        {
+            Help = "Any object touching this will be hurt."
+            targetname: =
+                {Txt="&"
+                Typ="E"
+                Hint="Can be set, so the trigger_hurt may be killed by another trigger's 'killtarget' specific."
+                }
+            cnt: =
+                {Txt="&"
+                Typ="E"
+                Hint="(Hipnotic only) is the number of times the trigger may be activated."
+                }
+            dmg: =
+                {Txt="&"
+                Typ="E"
+                Hint="Damage amount (default 5)"
+                }
+        }
+
+        trigger_monsterjump:form =
+        {
+            Help = "Walking monsters that touch this will jump in the direction of the trigger's angle."
+            speed: =
+                {Txt="&"
+                Typ="E"
+                Hint="The speed thrown forward (default 200)"
+                }
+            angle:=
+                {Txt="&"
+                Typ="E"
+                Hint="Direction of jump (default 0, -1 is up, -2 is down)"
+                }
+            cnt: =
+                {Txt="&"
+                Typ="E"
+                Hint="(Hipnotic only) is the number of times the trigger may be activated."
+                }
+            height: =
+                {Txt="&"
+                Typ="E"
+                Hint="The speed thrown upwards (default 200)"
+                }
+        }
+
+        trigger_multiple:form =
+        {
+            Help = "Variable sized repeatable trigger. Must be targeted at one or more entities."$0D
+                   "'No touch' has been obsoleted by trigger_relay."
+            spawnflags:=
+                {Txt="&"
+                Typ="X1"
+                Cap="No touch"
+                Hint="Makes trigger only activated by other triggers"
+                }
+            sounds:=
+                {Txt="&"
+                Typ="C"
+                Items="0)none" $0D "1)secret" $0D "2)beep beep" $0D "3)large switch"
+                values=    "0"    $0D    "1"    $0D    "2"    $0D    "3"
+                }
+            target:=
+                {Txt="&"
+                Typ="E"
+                Hint="The 'targetname' of another object"
+                }
+            targetname: =
+                {Txt="&"
+                Typ="E"
+                Hint="The name of this entity"
+                }
+            wait:=
+                {Txt="&"
+                Typ="E"
+                Hint="How long before it can be activated again (default 2)"
+                }
+            message:=
+                {Txt="&"
+                Typ="E"
+                Hint="Message to display when activated"
+                }
+            health:=
+                {Txt="&"
+                Typ="E"
+                Hint="If >0, the trigger must be killed to activate each time"
+                }
+            killtarget:=
+                {Txt="&"
+                Typ="E"
+                Hint="Removes object with targetname"
+                }
+            delay:=
+                {Txt="&"
+                Typ="E"
+                Hint="Delay before trigger occurs"
+                }
+        }
+
+        trigger_once:form =
+        {
+            Help = "Variable sized trigger. Triggers once, then removes itself."$0D0D
+                   "You must set the key 'target' to the name of another object in the level that has a matching name."
+            spawnflags:=
+                {Txt="&"
+                Typ="X1"
+                Cap="No touch"
+                Hint="Makes trigger only activated by other triggers"
+                }
+            sounds: =
+                {Txt="&"
+                Typ="C"
+                Items="0)none" $0D "1)secret" $0D "2)beep beep" $0D "3)large switch"
+                values=    "0"    $0D    "1"    $0D    "2"    $0D    "3"
+                }
+            target: =
+                {Txt="&"
+                typ="E"
+                Hint="The 'targetname' of another object"
+                }
+            targetname: =
+                {Txt="&"
+                Typ="E"
+                Hint="The name of this entity"
+                }
+            message:=
+                {Txt="&"
+                Typ="E"
+                Hint="Message to display when activated"
+                }
+            health:=
+                {Txt="&"
+                Typ="E"
+                Hint="If >0, the trigger must be killed to activate"
+                }
+            killtarget:=
+                {Txt="&"
+                Typ="E"
+                Hint="Removes object with targetname"
+                }
+            delay:=
+                {Txt="&"
+                Typ="E"
+                Hint="Delay before trigger occurs"
+                }
+        }
+
+        trigger_onlyregistered:form =
+        {
+            Help = "Only fires if playing the registered version, otherwise prints the 'message'."
+            target: =
+                {Txt="&"
+                Typ="E"
+                Hint=""
+                }
+            message: =
+                {Txt="&"
+                Typ="E"
+                Hint=""
+                }
+        }
+
+        trigger_push:form =
+        {
+            Help = "Pushes the player."
+            spawnflags: =
+                {Txt="&"
+                Typ="X1"
+                Cap="Push once"
+                Hint="Pushes once only"
+                }
+            angle:=
+                {Txt="&"
+                Typ="E"
+                Hint="Direction of push (default 0, -1 is up, -2 is down)"
+                }
+            speed:=
+                {Txt="&"
+                Typ="E"
+                Hint="How much force to use (default 1000). Note: player can only oppose a force of 12"
+                }
+        }
+
+        trigger_relay:form =
+        {
+        Help = "This trigger can only be fired by other events."
+        sounds: =
+            {Txt="&"
+            Typ="C"
+            Items="0)none" $0D "1)secret" $0D "2)beep beep" $0D "3)large switch"
+            values=    "0"    $0D    "1"    $0D    "2"    $0D    "3"
+            }
+        target: =
+            {Txt="&"
+            Typ="E"
+            Hint=""
+            }
+        targetname: =
+            {Txt="&"
+            Typ="E"
+            Hint="The name of this entity"
+            }
+        delay: =
+            {Txt="&"
+            Typ="E"
+            Hint="How long it should wait before targeting trigger is activated"
+            }
+        message: =
+            {Txt="&"
+            Typ="E"
+            Hint="Message to display when activated"
+            }
+        killtarget:=
+            {Txt="&"
+            Typ="E"
+            Hint="Removes target object"
+            }
+        }
+
+        trigger_secret:form =
+        {
+            Help = "Awards credit for secret."
+            sounds: =
+                {Txt="&"
+                Typ="C"
+                Items="1)secret" $0D "2)beep beep" $0D "3)large switch"
+                values="1"    $0D    "2"    $0D    "3"
+                }
+            targetname: =
+                {Txt="&"
+                Typ="E"
+                Hint="Used when not triggered by touch"
+                }
+            message: =
+                {Txt="&"
+                Typ="E"
+                Hint="Message to display when touched"
+                }
+        }
+
+        trigger_setskill:form =
+        {
+            Help = "Sets skill level to the value of 'message'."
+            message: =
+                {Txt="&"
+                Typ="C"
+                Items="0)easy" $0D "1)medium" $0D "2)hard" $0D "3)nightmare"
+                values=    "0"    $0D "1"          $0D "2"       $0D "3"
+                }
+        }
+
+        trigger_teleport:form =
+        {
+            Help = "Any object touching this will be transported to the corresponding 'info_teleport_destination' entity."$0D
+                   "You must set the 'target' field, and create an object with a 'targetname' field that matches."$0D0D
+                   "If the 'trigger_teleport' has a targetname, it will only teleport entities when it has been triggered."
+            spawnflags: =
+                {Txt="&"
+                Typ="X1"
+                Cap="Player only"
+                Hint="Only allows player to use teleport, not monsters"
+                }
+            spawnflags: =
+                {Txt="&"
+                Typ="X2"
+                Cap="Silent"
+                Hint="No teleporter sound"
+                }
+            target: =
+                {Txt="&"
+                Typ="E"
+                Hint="The name of the info_teleport_destination the player should be teleported to"
+                }
+            targetname:=
+                {Txt="&"
+                Typ="E"
+                Hint="If set, teleporter must be triggered to work"
+            }
+        }
+
+    //Weapons & ammo
+
+        weapon_grenadelauncher:form =
+        {
+            Help = "Uses item_rockets."
+            bbox='-16 -16 0 16 16 32'
+            mdl="progs/g_rock.mdl"
+        }
+
+        weapon_lightning:form =
+        {
+            Help = "Uses item_cells."
+            bbox='-16 -16 0 16 16 32'
+            mdl="progs/g_light.mdl"
+        }
+
+        weapon_nailgun:form =
+        {
+            Help = "Uses item_spikes."
+            bbox='-16 -16 0 16 16 32'
+            mdl="progs/g_nail.mdl"
+        }
+
+        weapon_rocketlauncher:form =
+        {
+            Help = "Uses item_rockets."
+            bbox='-16 -16 0 16 16 32'
+            mdl="progs/g_rock2.mdl"
+        }
+
+        weapon_supernailgun:form =
+        {
+            Help = "Uses item_spikes."
+            bbox='-16 -16 0 16 16 32'
+            mdl="progs/g_nail2.mdl"
+        }
+
+        weapon_supershotgun:form =
+        {
+            Help = "Uses item_shells."
+            bbox='-16 -16 0 16 16 32'
+            mdl="progs/g_shot.mdl"
+        }
+    }
+}
+
+

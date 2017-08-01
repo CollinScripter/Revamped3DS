@@ -1,0 +1,203 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"  "http://www.w3.org/TR/html4/loose.dtd">
+<html lang="en">
+<head>
+  <title>QkObjects.pas</title>
+  <meta name="Description" content="QuArK Information Database - Page: 4.5.8.&nbsp;QkObjects.pas">
+  <meta name="Keywords" content="QuArK InfoBase Quake Army Knife QRK QKM Python PY Map Editor Hexen Heretic Half-Life Sin Kingpin Soldier-of-Fortune Star-Trek-Voyager Elite-Force">
+  <link rel=stylesheet href="standard.css" type="text/css">
+</head>
+
+<body>
+<a name="__top__"></a>
+<table width="100%" border=0 cellspacing=0>
+  <tr>
+    <td width=213>
+      <a target="_blank" href="http://quark.sourceforge.net/"><img src="quarkicon.png" width=213 height=90 border=0 alt="Go to QuArK Web Site"></a>
+    </td>
+    <td width="70%" align=center>
+      <div class="topheadline">QkObjects.pas</div>
+      <div class="sm">Updated&nbsp;23 Feb 2001</div>
+    </td>
+    <td width="30%" valign=bottom nowrap>
+      Upper&nbsp;levels:<br>-&nbsp;<a href="index.html">QuArK&nbsp;Information&nbsp;Base</a><br>-&nbsp;<a href="src.html">4.&nbsp;The&nbsp;Source&nbsp;Code</a><br>-&nbsp;<a href="src.pas.html">4.5.&nbsp;File-by-file&nbsp;descriptions</a><br>
+    </td>
+  </tr>
+</table>
+<table width="100%" border=0 cellspacing=0>
+  <tr class="headline">
+    <td width="99%">
+      <p class="headline">&nbsp;4.5.8.&nbsp;QkObjects.pas</p>
+    </td>
+    <td width="1%" align=right nowrap>
+      &nbsp;[&nbsp;<span class="navenable"><a href="src.pas.qkmap.html">Prev</a></span>&nbsp;-&nbsp;<span class="navenable"><a href="src.pas.html">Up</a></span>&nbsp;-&nbsp;<span class="navenable"><a href="src.pas.qkq3a.html">Next</a></span>&nbsp;]&nbsp;
+    </td>
+  </tr>
+</table>
+<table border=0 width="100%" cellspacing=10><tr><td><p>This file is the core of the object management of QuArK.
+</p><p>For a general introduction about object management, see
+<a href="src.struct.html">'Structure of the program'</a>. This document discusses specific aspects only of the
+code in QkObjects.pas.
+</p>
+</td></tr></table>
+<br>
+
+<table width="100%" border=0 cellspacing=0>
+  <tr class="headline">
+    <td width="100%">
+      <p class="subheadline">&nbsp;Index</p>
+    </td>
+  </tr>
+</table>
+<ul class="index">
+  <li>- <a href="#delay">Delay loading</a>&nbsp;<span class="added">(23 Feb 2001)</span>
+  <li>- <a href="#copy">Copying</a>&nbsp;<span class="added">(23 Feb 2001)</span>
+  <li>- <a href="#typeinfo">TypeInfo</a>&nbsp;<span class="added">(23 Feb 2001)</span>
+  <li>- <a href="#specadd">SpecificsAdd</a>&nbsp;<span class="added">(23 Feb 2001)</span>
+</ul>
+<br>
+
+
+<a name="delay"></a>
+  <table width="100%" border=0 cellspacing=0>
+    <tr class="headline">
+      <td>
+        <p class="item">&nbsp;Delay loading</p>
+      </td>
+      <td align=right>
+        <font size=-2>Tiglari / Armin&nbsp;-&nbsp;23 Feb 2001</font>
+      </td>
+      <td width="1%" align=right nowrap>
+        &nbsp;&nbsp;[&nbsp;<a href="#__top__">Top</a>&nbsp;]&nbsp;
+      </td>
+    </tr>
+  </table>
+  <table border=0 width="100%" cellspacing=10><tr><td>
+<p>If FFlags contains the bit &nbsp;<tt>ofNotLoadedToMemory</tt>&nbsp; then FNode points to
+data that give the file and the position of the object inside the file. This is
+for the delay-loading mechanism. With this mechanism, when an object is loaded,
+the &nbsp;<tt>FSpecifics</tt>&nbsp; and &nbsp;<tt>FSubElements</tt>&nbsp; fields are filled, but the
+children in &nbsp;<tt>FSubElements</tt>&nbsp; are &quot;empty&quot; : they are QObject which still
+sit on the disk. Their FNode fields give the position for later reading. The
+method &nbsp;<tt>Acces</tt>&nbsp; must be called on them when they need to be actually
+loaded. You must never try to read &nbsp;<tt>FSpecifics</tt>&nbsp; or &nbsp;<tt>FSubElements</tt>&nbsp;
+before the object is actually loaded; if you're unsure call &nbsp;<tt>Acces</tt>&nbsp;
+first.
+</p><p>In the map editor this is often not necessary because the complete subtree of
+&quot;worldspawn&quot; is always loaded when the map editor opens.
+</p>
+  </td></tr></table>
+  <br>
+
+<a name="copy"></a>
+  <table width="100%" border=0 cellspacing=0>
+    <tr class="headline">
+      <td>
+        <p class="item">&nbsp;Copying</p>
+      </td>
+      <td align=right>
+        <font size=-2>Tiglari / Armin&nbsp;-&nbsp;23 Feb 2001</font>
+      </td>
+      <td width="1%" align=right nowrap>
+        &nbsp;&nbsp;[&nbsp;<a href="#__top__">Top</a>&nbsp;]&nbsp;
+      </td>
+    </tr>
+  </table>
+  <table border=0 width="100%" cellspacing=10><tr><td>
+<p>Sometimes an object is not loaded yet when it needs to be saved on disk,
+typically when you make only a few changes to a complex .QRK or .PAK file. Then
+instead of loading the object with all its sub-objects, which takes time and
+consumes memory, we make a binary copy of the part of the original file into
+the destination file. This is what &nbsp;<tt>Copying</tt>&nbsp; tries to do. It returns
+False if the object was already loaded, meaning that direct copying is not
+possible. If &nbsp;<tt>TransfertSource</tt>&nbsp; is &nbsp;<tt>True</tt>&nbsp;, the object's FNode is
+updated so that if it needs to be loaded later in memory, it will be read from
+the copy instead. This lets the original file be closed, which is necessary in
+case we are overriting it (which is the case each time we do a normal 'Save').
+</p>
+  </td></tr></table>
+  <br>
+
+<a name="typeinfo"></a>
+  <table width="100%" border=0 cellspacing=0>
+    <tr class="headline">
+      <td>
+        <p class="item">&nbsp;TypeInfo</p>
+      </td>
+      <td align=right>
+        <font size=-2>Tiglari / Armin&nbsp;-&nbsp;23 Feb 2001</font>
+      </td>
+      <td width="1%" align=right nowrap>
+        &nbsp;&nbsp;[&nbsp;<a href="#__top__">Top</a>&nbsp;]&nbsp;
+      </td>
+    </tr>
+  </table>
+  <table border=0 width="100%" cellspacing=10><tr><td>
+<p>This class method simply returns the 'extension' of the object. For files, it's
+the usual extension with the dot; for non-file objects, it should begin with
+'&nbsp;<tt>:</tt>&nbsp;' (colon). For example for TTreeMapEntity it is '&nbsp;<tt>:e</tt>&nbsp;'. This
+is a class function, but it is virtual; it's a feature that I've only seen
+possible in Delphi, not in C++. This lets the code below in QkObjects.pas build
+a list of all the classes (&quot;pointer to class&quot; is something the C++ doesn't know
+about) and when loading a object from a file or from inside a file we compare
+the end of the name with all the TypeInfo's of the classes to know which class
+should be the object we're about to build.
+</p>
+  </td></tr></table>
+  <br>
+
+<a name="specadd"></a>
+  <table width="100%" border=0 cellspacing=0>
+    <tr class="headline">
+      <td>
+        <p class="item">&nbsp;SpecificsAdd</p>
+      </td>
+      <td align=right>
+        <font size=-2>Armin Rigo&nbsp;-&nbsp;23 Feb 2001</font>
+      </td>
+      <td width="1%" align=right nowrap>
+        &nbsp;&nbsp;[&nbsp;<a href="#__top__">Top</a>&nbsp;]&nbsp;
+      </td>
+    </tr>
+  </table>
+  <table border=0 width="100%" cellspacing=10><tr><td>
+<p>Normally, Specifics are read and written through the Specifics property of
+objects, which is a Delphi string list, meaning you can do things such as
+&nbsp;<tt>Specifics['x']:='yz';</tt>&nbsp; to assign the value 'yz' to the specific called
+'x'. This actually adds the string 'x=yz' to the list, unless 'x' had already
+been set to some value previously, in which case it just replaces the existing
+'x=...' string with 'x=yz'.
+</p><p>Note that &nbsp;<tt>Specifics['x']:='';</tt>&nbsp; will remove an existing 'x=...' string,
+and never add a string with just 'x='.
+</p><p>Adding a specific/arg pair directly is also possible :
+&nbsp;<tt>Specifics.Add('x=yz')</tt>&nbsp; has the same effect as above, but it does not
+check for a previously set value, so it must not be used unless you are sure
+this value does not already exist.
+</p><p>At some point, it might be more efficient (for small specific/args) to use
+&nbsp;<tt>SpecificsAdd(...)</tt>&nbsp; instead of &nbsp;<tt>Specifics.Add(...)</tt>&nbsp;.
+&nbsp;<tt>SpecificsAdd</tt>&nbsp; is a method of QObject. The whole purpose of this routine
+and its asm code is to spare memory when loading a file : some specifics are
+repeated numerous times, e.g. in a map a string like &quot;tex=gothic_a1&quot; will
+appear dozens of times. As Delphi knows about reference-counted strings, what
+this code does is look for another already existing string which would be
+identical, and if it finds it, it is reused (and its reference counter is
+incremented).
+</p>
+  </td></tr></table>
+  <br>
+
+<br>
+
+<table width="100%" border=0 cellspacing=0>
+  <tr class="headline">
+    <td width="99%" align=center>
+      <p class="sm">
+        Copyright (c) 2009, GNU General Public License by The QuArK (Quake Army Knife) Community - <a target="_blank" href="http://quark.sourceforge.net/">http://quark.sourceforge.net/</a><br>
+      </p>
+    </td>
+    <td width="1%" align=right nowrap>
+      &nbsp;[&nbsp;<span class="navenable"><a href="src.pas.qkmap.html">Prev</a></span>&nbsp;-&nbsp;<a href="#__top__">Top</a>&nbsp;-&nbsp;<span class="navenable"><a href="src.pas.qkq3a.html">Next</a></span>&nbsp;]&nbsp;
+    </td>
+  </tr>
+</table>
+</body>
+</html>

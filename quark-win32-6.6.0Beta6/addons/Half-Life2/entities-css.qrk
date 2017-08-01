@@ -1,0 +1,610 @@
+QQRKSRC1
+// This file has been written by QuArK QuArK 6.4 alpha
+// It's the text version of file: cstrike.qrk
+
+// CS Source Entities. updated july/11/2005 by cbxpm.
+
+{
+  Description = "CS Source Entities"
+  Toolbox Folders.qtx =
+  {
+    Toolbox = "New map items..."
+    Root = "CS Source Entities.qtxfolder"
+    CS Source Entities.qtxfolder =
+    {
+
+// env entities
+
+      env_* entities.qtxfolder =
+      {
+        env_detail_controller:e =
+        {
+          origin = "0 0 0"
+          ;desc = "An entity that lets you control the fade distances for deta"
+           "il props."
+          fademindist = "400"
+          fademaxdist = "1200"
+        }
+      }
+
+// filter entities
+
+      filter_* entities.qtxfolder =
+      {
+        filter_activator_team:e =
+        {
+          origin = "0 0 0"
+          ;desc = "A filter that filters by the team of the activator."
+          filterteam = "2"
+        }
+      }
+
+// func entities
+
+      func_* entities.qtxfolder =
+      {
+        func_bomb_target:b =
+        {
+          t_triggerpoly=!
+          ;desc = $426F6D62205461726765742E2054686520746572726F7269737473206361
+           $6E20706C616365204334206578706C6F7369766573207768696C65207374616E64
+           $696E6720696E2074686973207A6F6E652E5C6E5C6E5768656E2074686520626F6D
+           $6220697320706C616E74656420616E64206578706C6F64657320696E7369646520
+           $7468697320617265612C2074686520426F6D624578706C6F6465206F7574707574
+           $73206172652066697265642E205468652067616D652068616E646C657320616C6C
+           $206F662074686520626F6D6220706C616E74696E6720616E642073636F72696E67
+           $206C6F67696320962074686520426F6D624578706C6F6465206F75747075747320
+           $6172652070726F766964656420746F206164642076697375616C20616E64206461
+           $6D61676520656666656374732E
+        }
+        func_buyzone:b =
+        {
+          t_triggerpoly=!
+          ;desc = "Buy Zone. Players can buy equipment while standing in this "
+           "zone, if the zone matches their current team.\n\nA single Buy Zone"
+           " entity must be either terrorist or counter-terrorist, it cannot b"
+           "e both. Should have the toolstrigger material applied to all sides"
+        }
+        func_hostage_rescue:b =
+        {
+          t_triggerpoly=!
+          ;desc = "Hostage Rescue Zone. When a hostage is led into this zone, "
+           "it is marked as rescued."
+        }
+        func_ladder:b =
+        {
+          t_ladderpoly=!
+          ;desc = "Ladder. Players will be able to freely along this brush, as"
+           " if it was a ladder. If you are using a model prop for the visual "
+           "representation of the ladder in the map, apply the toolsinvisiblel"
+           "adder material to the func_ladder brush."
+        }
+        func_physbox_multiplayer:b =
+        {
+          t_detailpoly=!
+          ;desc = "This class is the same as func_physbox, except the runtime "
+           "collisions use a more bouncy method that avoids the prediction err"
+           "ors normal physics objects get."
+        }
+      }
+
+// hostage entities
+
+      hostage_* entities.qtxfolder =
+      {
+        hostage_entity:e =
+        {
+          origin = "0 0 0"
+          ;desc = "Hostage. A hostage NPC will spawn at this point.\n\nThere a"
+           "re usually four hostages placed in each hostage rescue map. The mo"
+           "del for each Hostage is randomly chosen."
+          HostageType = "0"
+        }
+      }
+
+// info entities
+
+      info_* entities.qtxfolder =
+      {
+        info_map_parameters:e =
+        {
+          origin = "0 0 0"
+          ;desc = "Map parameters. Currently used only to set the C4 bomb deto"
+           "nation radius."
+        }
+        info_player_counterterrorist:e =
+        {
+          origin = "0 0 0"
+          ;desc = "This entity marks the start point for counter-terrorists. O"
+           "ne of these needs to be placed for each team member. 20 start poin"
+           "ts is typical. Should be placed at least 128 units away from each "
+           "other and surrounding walls"
+        }
+        info_player_logo:e =
+        {
+          origin = "0 0 0"
+          ;desc = "This is for logo maps for demos. All players will spawn her"
+           "e, and there will be no class menu, team menu, or HUD."
+        }
+        info_player_terrorist:e =
+        {
+          origin = "0 0 0"
+          ;desc = "This entity marks the start point for terrorists. One of th"
+           "ese needs to be placed for each team member. 20 start points is ty"
+           "pical. Should be placed at least 128 units away from each other an"
+           "d surrounding walls."
+        }
+        info_view_parameters:e =
+        {
+          origin = "0 0 0"
+          ;desc = "This entity selects whether or not this level uses the Half"
+           "-Life 2 view parameters (eye height: 64, FOV: 75) or the old Count"
+           "er-Strike settings (eye height: 53.5, FOV: 90)."
+          ViewMode = "0"
+        }
+      }
+
+// item entities
+
+      item_* entities.qtxfolder =
+      {
+        item_defuser:e =
+        {
+          origin = "0 0 0"
+          ;desc = "Defuse Kit"
+        }
+      }
+
+// point entities
+
+      point_* entities.qtxfolder =
+      {
+        point_surroundtest:e =
+        {
+          origin = "0 0 0"
+          ;desc = "Surround Sound Test"
+        }
+      }
+
+// weapon entities
+
+      weapon_* entities.qtxfolder =
+      {
+        weapon_ak47:e =
+        {
+          origin = "0 0 0"
+          ;desc = "CV-47"
+        }
+        weapon_aug:e =
+        {
+          origin = "0 0 0"
+          ;desc = "Bullpup"
+        }
+        weapon_awp:e =
+        {
+          origin = "0 0 0"
+          ;desc = "Magnum Sniper Rifle"
+        }
+        weapon_c4:e =
+        {
+          origin = "0 0 0"
+          ;desc = "C4 Bomb"
+        }
+        weapon_deagle:e =
+        {
+          origin = "0 0 0"
+          ;desc = "Night Hawk .50C"
+        }
+        weapon_elite:e =
+        {
+          origin = "0 0 0"
+          ;desc = ".40 Dual Elites"
+        }
+        weapon_famas:e =
+        {
+          origin = "0 0 0"
+          ;desc = "Clarion 5.56"
+        }
+        weapon_fiveseven:e =
+        {
+          origin = "0 0 0"
+          ;desc = "ES Five-Seven"
+        }
+        weapon_flashbang:e =
+        {
+          origin = "0 0 0"
+          ;desc = "Flashbang"
+        }
+        weapon_g3sg1:e =
+        {
+          origin = "0 0 0"
+          ;desc = "D3/AU-1 Semi-Auto Sniper Rifle"
+        }        
+        weapon_galil:e =
+        {
+          origin = "0 0 0"
+          ;desc = "IDF Defender"
+        }        
+        weapon_glock:e =
+        {
+          origin = "0 0 0"
+          ;desc = "9X19mm Sidearm"
+        }        
+        weapon_hegrenade:e =
+        {
+          origin = "0 0 0"
+          ;desc = "HE Grenade"
+        }        
+        weapon_knife:e =
+        {
+          origin = "0 0 0"
+          ;desc = "Knife"
+        }        
+        weapon_m249:e =
+        {
+          origin = "0 0 0"
+          ;desc = "ES M249 Para"
+        }        
+        weapon_m3:e =
+        {
+          origin = "0 0 0"
+          ;desc = "Leone 12 Gauge Super"
+        }        
+        weapon_m4a1:e =
+        {
+          origin = "0 0 0"
+          ;desc = "Maverick M4A1 Carbine"
+        }        
+        weapon_mac10:e =
+        {
+          origin = "0 0 0"
+          ;desc = "Ingram MAC-10"
+        }        
+        weapon_mp5navy:e =
+        {
+          origin = "0 0 0"
+          ;desc = "K&M Sub-Machine Gun"
+        }        
+        weapon_p228:e =
+        {
+          origin = "0 0 0"
+          ;desc = "228 Compact"
+        }        
+        weapon_p90:e =
+        {
+          origin = "0 0 0"
+          ;desc = "ES C90"
+        }
+        weapon_scout:e =
+        {
+          origin = "0 0 0"
+          ;desc = "Schmidt Scout"
+        }
+        weapon_sg550:e =
+        {
+          origin = "0 0 0"
+          ;desc = "Krieg 550 Commando"
+        }
+        weapon_sg552:e =
+        {
+          origin = "0 0 0"
+          ;desc = "Krieg 552 Commando"
+        }
+        weapon_smokegrenade:e =
+        {
+          origin = "0 0 0"
+          ;desc = "Smoke Grenade"
+        }
+        weapon_tmp:e =
+        {
+          origin = "0 0 0"
+          ;desc = "Schmidt Machine Pistol"
+        }
+        weapon_ump45:e =
+        {
+          origin = "0 0 0"
+          ;desc = "K&M UMP45"
+        }
+        weapon_usp:e =
+        {
+          origin = "0 0 0"
+          ;desc = "K&M .45 Tactical"
+        }
+        weapon_xm1014:e =
+        {
+          origin = "0 0 0"
+          ;desc = "Leone YG1265 Auto Shotgun"
+        }
+      }
+    }
+  }
+  Entity Forms.fctx =
+  {
+    t_Target:incl =
+    {
+      target: =
+      {
+        txt = "&"
+        hint = "Target"
+      }
+    }
+    t_TeamNum:incl =
+    {
+      TeamNum: =
+      {
+        txt = "&"
+        hint = "Team Number (int)"
+        typ = "C"
+        items = "Terrorist"$0D"Counter-Terrorist"
+        values = "2"$0D"3"
+      }
+      input#SetTeam: =
+      {
+        txt = "&"
+        hint = "Changes the entity's team"
+      }
+    }
+    t_Weapon:incl =
+    {
+      t_Targetname = !
+      t_Angles = !
+      spawnflags: =
+      {
+        txt = "&"
+        typ = "X1"
+        cap = "Start constrained"
+      }
+      output#OnPlayerUse: =
+      {
+        txt = "&"
+        hint = "Fires when the player +uses this weapon"
+      }
+      output#OnPlayerPickup: =
+      {
+        txt = "&"
+        hint = "Fires when the player picks up this weapon"
+      }
+    }
+    filter_activator_team:form =
+    {
+      bbox = '-8 -8 -8 8 8 8'
+      t_BaseFilter = !
+      filterteam: =
+      {
+        txt = "&"
+        hint = "Filter Team Number"
+        typ = "C"
+        items = "Terrorist"$0D"Counter-Terrorist"
+        values = "2"$0D"3"
+      }
+    }
+    info_player_counterterrorist:form =
+    {
+      t_Angles = !
+    }
+    info_player_terrorist:form =
+    {
+      t_Angles = !
+    }
+    info_player_logo:form =
+    {
+      t_Angles = !
+    }
+    hostage_entity:form =
+    {
+      t_Angles = !
+      HostageType: =
+      {
+        txt = "&"
+        hint = "Hostage Model (int)"
+        typ = "C"
+        items = "A"$0D"B"$0D"C"$0D"D"
+        values = "0"$0D"1"$0D"1"$0D"1"
+      }
+    }
+    info_view_parameters:form =
+    {
+      t_Angles = !
+      ViewMode: =
+      {
+        txt = "&"
+        hint = "View Mode"
+        typ = "C"
+        items = "Old"$0D"New"
+        values = "0"$0D"1"
+      }
+    }
+    info_map_parameters:form =
+    {
+      bombradius: =
+      {
+        txt = "&"
+        hint = "C4 Explosion Radius"
+      }
+    }
+    env_detail_controller:form =
+    {
+      t_Angles = !
+      fademindist: =
+      {
+        txt = "&"
+        hint = "Start Fade Dist/Pixels"
+      }
+      fademaxdist: =
+      {
+        txt = "&"
+        hint = "End Fade Dist/Pixels"
+      }
+    }
+    weapon_knife:form =
+    {
+      t_Weapon = !
+    }
+    weapon_flashbang:form =
+    {
+      t_Weapon = !
+    }
+    weapon_hegrenade:form =
+    {
+      t_Weapon = !
+    }
+    weapon_smokegrenade:form =
+    {
+      t_Weapon = !
+    }
+    item_defuser:form =
+    {
+      t_Weapon = !
+    }
+    weapon_c4:form =
+    {
+      t_Weapon = !
+    }
+    weapon_glock:form =
+    {
+      t_Weapon = !
+    }
+    weapon_usp:form =
+    {
+      t_Weapon = !
+    }
+    weapon_p228:form =
+    {
+      t_Weapon = !
+    }
+    weapon_deagle:form =
+    {
+      t_Weapon = !
+    }
+    weapon_fiveseven:form =
+    {
+      t_Weapon = !
+    }
+    weapon_elite:form =
+    {
+      t_Weapon = !
+    }
+    weapon_m3:form =
+    {
+      t_Weapon = !
+    }
+    weapon_xm1014:form =
+    {
+      t_Weapon = !
+    }
+    weapon_tmp:form =
+    {
+      t_Weapon = !
+    }
+    weapon_mp5navy:form =
+    {
+      t_Weapon = !
+    }
+    weapon_ump45:form =
+    {
+      t_Weapon = !
+    }
+    weapon_p90:form =
+    {
+      t_Weapon = !
+    }
+    weapon_mac10:form =
+    {
+      t_Weapon = !
+    }
+    weapon_galil:form =
+    {
+      t_Weapon = !
+    }
+    weapon_ak47:form =
+    {
+      t_Weapon = !
+    }
+    weapon_sg552:form =
+    {
+      t_Weapon = !
+    }
+    weapon_famas:form =
+    {
+      t_Weapon = !
+    }
+    weapon_m4a1:form =
+    {
+      t_Weapon = !
+    }
+    weapon_aug:form =
+    {
+      t_Weapon = !
+    }
+    weapon_scout:form =
+    {
+      t_Weapon = !
+    }
+    weapon_g3sg1:form =
+    {
+      t_Weapon = !
+    }
+    weapon_sg550:form =
+    {
+      t_Weapon = !
+    }
+    weapon_awp:form =
+    {
+      t_Weapon = !
+    }
+    weapon_m249:form =
+    {
+      t_Weapon = !
+    }
+    func_ladder:form =
+    {
+    }
+    func_physbox_multiplayer:form =
+    {
+      t_func_physbox = !
+    }
+    func_buyzone:form =
+    {
+      t_Targetname = !
+      t_TeamNum = !
+    }
+    func_bomb_target:form =
+    {
+      t_Targetname = !
+      output#BombExplode: =
+      {
+        txt = "&"
+        hint = "Fires when C4 explodes"
+      }
+    }
+    func_hostage_rescue:form =
+    {
+      t_Targetname = !
+    }
+    point_surroundtest:form =
+    {
+      bbox = '-8 -8 -8 8 8 8'
+      t_Targetname = !
+      input#FireCorrectOutput: =
+      {
+        txt = "&"
+        hint = "Fire output based on snd_surround_speaker cvar value"
+      }
+      output#On2Speakers: =
+      {
+        txt = "&"
+        hint = "Fired if player is using 2 speakers."
+      }
+      output#On4Speakers: =
+      {
+        txt = "&"
+        hint = "Fired if player is using 4 speakers."
+      }
+      output#On51Speakers: =
+      {
+        txt = "&"
+        hint = "Fired if player is using 5.1 speakers."
+      }
+    }
+  }
+}

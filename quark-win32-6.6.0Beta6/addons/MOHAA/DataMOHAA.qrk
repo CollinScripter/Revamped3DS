@@ -1,0 +1,429 @@
+QQRKSRC1
+// MOHAA definition file for Quark
+
+//$Header: /cvsroot/quark/runtime/addons/MOHAA/DataMOHAA.qrk,v 1.18 2008/05/21 18:14:49 cdunde Exp $
+// ----------- REVISION HISTORY ------------
+//$Log: DataMOHAA.qrk,v $
+//Revision 1.18  2008/05/21 18:14:49  cdunde
+//To add and\or activate Half-Life 2 functions: (all original code by Alexander)
+//1) to create extra Specifics setting handles for func_useableladder function (point0 & point1)
+//      func_breakable_glass and func_breakable_surf functions
+//      (lowerleft, upperleft, lowerright and upperright)
+//2) to draw special light entity lines for functions like light_spot that have the Specifics
+//      (angles, _cone, spotlightwidth and\or _inner_cone)
+//3) face displacement. Commented out at this time. believe bezier type code should be used instead.
+//
+//Revision 1.17  2008/03/28 19:08:46  cdunde
+//Cleaned up, fixed if needed and brought into sync with all QuArK addons.
+//
+//Revision 1.16  2008/02/27 00:19:44  danielpharos
+//Fix the contextual help files not being found anymore
+//
+//Revision 1.15  2007/12/26 06:01:40  cdunde
+//Setup of a full beizer library with over 30 prefab beizer to work with for games that can use beziers.
+//
+//Revision 1.14  2007/12/14 21:47:59  cdunde
+//Added many new beizer shapes and functions developed by our friends in Russia,
+//the Shine team, Nazar and vodkins.
+//
+//Revision 1.13  2007/05/06 22:28:57  cdunde
+//Added trigger_multiple, trigger_hurt and some things to the sound by OmnificienT.
+//
+//Revision 1.12  2007/03/20 18:29:37  cdunde
+//Added trigger_changelevel and trigger_clickitem specifics.
+//Fixed an error and added sound specifics and file selectors.
+//Added specific for func_emitter.
+//Also added specifics for light and all script specifics.
+//All above items by OmnificienT.
+//
+//Revision 1.11  2007/03/13 05:08:50  cdunde
+//By OmnificienT - Added all specifics for worldspawn, dropdown menu for func_crate, specifics for
+//func_exploder, func_rain, func_remove and also added target and targetname for func_emitter.
+//
+//Revision 1.10  2007/03/12 19:32:21  cdunde
+//Added specifics for func_door, func_rotatingdoor and func_barrel by OmnificienT.
+//
+//Revision 1.9  2005/10/15 01:00:30  cdunde
+//To reinstate headers and history
+//
+//Revision 1.6  2004/12/21 04:49:32  cdunde
+//Weapon entities added by raginggoblin12.
+//
+//Revision 1.6  2004/12/14 15:31:16 Hannibal
+//added weapon enitities
+//
+//Revision 1.5  2002/05/05 10:18:18  tiglari
+//Texture flags
+//
+//Revision 1.4  2002/05/01 00:16:41  tiglari
+//change deathmatch to start in default map; add texture flag info.
+// The delphi needs to be changed to write them as text
+//
+//Revision 1.3  2002/04/17 12:35:18  decker_dk
+//Added entities, converted from MOHAATools's entdefs.pk3(code/) files.
+//
+//Revision 1.2  2002/02/24 13:44:58  decker_dk
+//More MOHAA stuff
+//
+//Revision 1.1  2002/02/05 18:32:14  decker_dk
+//Begun preliminary support for Medal of Honor:Allied Assault
+//
+
+{
+  QuArKProtected = "1"
+  Description = "Base MOHAA data"
+
+  MOHAA setup.qctx =
+  {
+    Game = "MOHAA"
+    HTML = "index.html"
+    Palette = $0000000F0F0F1F1F1F2F2F2F3F3F3F4B4B4B5B5B5B6B6B6B7B7B7B8B8B8B9B9B9BAB
+     $ABABBBBBBBCBCBCBDBDBDBEBEBEB634B235B431F533F1F4F3B1B47371B3F2F173B2B1733
+     $27132F23132B1F13271B0F23170F1B130B170F0B130F070F0B075F5F6F5B5B675B535F57
+     $4F5B534B534F474B473F433F3B3B3B3737332F2F2F2B2B2727272323231B1B1B17171713
+     $13138F77537B6343735B3B674F2FCF974BA77B3B8B672F6F5327EB9F27CB8B23AF771F93
+     $631B774F175B3B0F3F270B231707A73B2B9F2F23972B1B8B27137F1F0F73170B67170757
+     $13004B0F00430F003B0F00330B002B0B00230B001B07001307007B5F4B7357436B533F67
+     $4F3B5F4737574333533F2F4B372B4333273F2F2337271B2F2317271B131F170F170F0B0F
+     $0B076F3B175F3717532F17432B17372313271B0F1B130B0F0B07B35B4FBF7B6FCB9B93D7
+     $BBB7CBD7DFB3C7D39FB7C387A7B77397A75B879B47778B2F677F17536F134B670F435B0B
+     $3F5307374B072F3F072733001F2B00171F000F1300070B0000008B5757834F4F7B474773
+     $43436B3B3B6333335B2F2F572B2B4B23233F1F1F331B1B2B13131F0F0F130B0B0B070700
+     $0000979F7B8F9773878B6B7F8363777B5F7373576B6B4F6363475B5B434F4F3B43433337
+     $372B2F2F2323231B1717130F0F0B9F4B3F9343378B3B2F7F3727772F236B2B1B63231757
+     $1F134F1B0F43170B37130B2B0F071F0B071707000B0000000000777BCF6F73C3676BB763
+     $63A75B5B9B53578F4B4F7F4747733F3F673737572F2F4B27273F231F2F1B1723130F170B
+     $07079BAB7B8F9F6F8797637B8B5773834B6777435F6F3B5767334B5B273F4F1B3743132F
+     $3B0B232F071B23001317000B0F0000FF0023E70F3FD31B53BB275FA72F5F8F335F7B33FF
+     $FFFFFFFFD3FFFFA7FFFF7FFFFF53FFFF27FFEB1FFFD717FFBF0FFFAB07FF9300EF7F00E3
+     $6B00D35700C74700B73B00AB2B009B1F008F17007F0F007307005F00004700002F00001B
+     $0000EF00003737FFFF00000000FF2B2B231B1B1713130FEB977FC373539F57337B3F1BEB
+     $D3C7C7AB9BA78B77876B579F5B53
+    ShaderFiles: =
+    {
+      scripts/shaderlist.txt =
+      {
+        Data =
+            "// Created by QuArK"$0D0A
+            "// All shaders are extracted to a single file called 'quark.shader'"$0D0A
+            "quark"$0D0A
+      }
+      scripts/shaderlist.txt =
+      {    // 2nd case: if there is no shader in the map
+        Data =
+            "// Created by QuArK"$0D0A
+            "// No shader in this map"$0D0A
+      }
+    }
+    TextureFlags:form =   // a form for setting flags on polyhedron faces
+    {
+      Style = "5"
+      Reset: =
+      {
+        Cap = "Reset to default"
+        Typ = "B"
+        Hint = "Reset all flags to the texture's default"
+        Delete: =
+        {
+          Flags = ""      // this button deletes these Specifics
+          Contents = ""
+          Value = ""
+        }
+      }
+
+      Sep:     ={Txt="" Typ="S"}  // separator
+
+      // Typ="X1" and the Default let the '?' in the texflag form work right
+      // The _esp_ prefix is a trick to support editable (or editor-overrideable
+      //   sufaceparms, see QkQ3.pas.
+
+      surfaceLight:={Txt="surf Light" Typ="E" Hint="single integer: Light intensity emitted from surface"}
+      surfaceAngle:={Txt="surf Angle" Typ="E" Hint="single integer: Not sure what this one does"}
+      surfaceColor:={Txt="surf Color" Typ="EF0003" Hint="real triple; Color of light emitted from surface"}
+      tesselation:= {Txt="tesselation" Typ="EF" Hint="real value; not sure"}
+
+      Sep:     ={Txt="" Typ="S"}  // separator
+
+      _esp_nodamage:={Txt="Face" Cap="nodamage" Typ="X1" Default="0" Hint=""}
+      _esp_slick:   ={Txt="" Cap="slick"    Typ="X1" Default="0" Hint="slidy surface"}
+      _esp_sky:     ={Txt="" Cap="sky"      Typ="X1" Default="0" Hint=""}
+      _esp_ladder:  ={Txt="" Cap="ladder"   Typ="X1" Default="0" Hint=""}
+      _esp_noimpact:={Txt="" Cap="noimpact" Typ="X1" Default="0" Hint=""}
+      _esp_nomark:  ={Txt="" Cap="nomarks"  Typ="X1" Default="0" Hint=""}
+      _esp_castshadow:={Txt="" Cap="castshadow" Typ="X1" Default="0" Hint=""}
+      _esp_nodraw:  ={Txt="" Cap="nodraw"   Typ="X1" Default="0" Hint="for clip textures and trigger textures"}
+      _esp_nolightmap:={Txt="" Cap="nolightmap" Typ="X1" Default="0" Hint=""}
+      _esp_alphashadow:={Txt="" Cap="alphashadow" Typ="X1"  Default="0"  Hint=""}
+      _esp_nosteps: ={Txt="" Cap="nosteps"  Typ="X1" Default="0" Hint=""}
+      _esp_nosolid: ={Txt="" Cap="nosolid"  Typ="X1" Default="0" Hint=""}
+      _esp_overbright:={Txt="" Cap="overbright" Typ="X1" Default="0" Hint=""}
+      _esp_patch: ={Txt=""     Cap="patch"  Typ="X1" Default="0" Hint=""}
+
+      Sep:     ={Txt="" Typ="S"}  // separator
+
+      _esp_lava:  ={Txt="Brush" Cap="lava"    Typ="X1" Default="0" Hint="lava-rafting is a minimal safety factor sport"}
+      _esp_slime: ={Txt="" Cap="slime"   Typ="X1" Default="0" Hint="mildly damaging"}
+      _esp_water: ={Txt="" Cap="water"   Typ="X1" Default="0" Hint="water"}
+      _esp_fog:   ={Txt="" Cap="fog"     Typ="X1" Default="0" Hint="non-solid window (Player can walk through it)"}
+      _esp_fence: ={Txt="" Cap="fence"   Typ="X1" Default="0" Hint=""}
+      _esp_areaportal:={Txt="" Cap="areaportal" Typ="X1" Default="0" Hint=""}
+      _esp_playerclip:={Txt="" Cap="playerclip" Typ="X1" Default="0" Hint="Stops player passing through"}
+      _esp_monsterclip:={Txt="" Cap="monsterclip" Typ="X1" Default="0" Hint="Stops monsters passing through"}
+      _esp_weaponclip: ={Txt="" Cap="weaponclip" Typ="X1" Default="0"  Hint=""}
+      _esp_origin:={Txt="" Cap="origin" Typ="X1" Default="0"  Hint="use as centrepoint, for rotating objects only"}
+      _esp_detail:={Txt="" Cap="detail" Typ="X1" Default="0"  Hint="for small, detail brushes that QVIS3 can ignore"}
+      _esp_structural:={Txt="" Cap="structural"  Typ="X1" Default="0" Hint=""}
+      _esp_translucent:={Txt=""Cap="translucent" Typ="X1" Default="0" Hint=""}
+      _esp_nodrop: ={Txt="" Cap="nodrop"   Typ="X1" Default="0" Hint=""}
+
+
+    }
+  }
+  NewFiles.qtx =
+  {
+    ToolBox = "New files..."
+    Root = "MOHAA file types.qtxfolder"
+    MOHAA file types.qtxfolder =
+    {
+      Pk3.pk3 = { }
+    }
+  }
+  walltex:incl =
+  {
+    tex = "general_structure/archstone2lt"
+  }
+  floortex:incl =
+  {
+    tex = "misc_outside/nu_grass_set1"
+  }
+  ceiltex:incl =
+  {
+    tex = "sky/d-day2"
+  }
+  caulktex:incl =
+  {
+    tex = "common/caulk"
+  }
+  NewMap:incl =
+  {
+    Game = "MOHAA"
+    Root = "worldspawn:b"
+    worldspawn:b =
+    {
+      farplane_cull = "1"
+      Border walls:g =
+      {
+        East wall:p =
+        {
+          west:f =
+          {
+            v = '256 192 -96 256 96 -96 256 192 0'
+            walltex = !
+          }
+          east:f =
+          {
+            v = '272 -192 -96 272 -64 -96 272 -192 32'
+            caulktex = !
+          }
+          south:f =
+          {
+            v = '256 -192 -96 288 -192 -96 256 -192 32'
+            caulktex = !
+          }
+          north:f =
+          {
+            v = '272 192 -96 240 192 -96 272 192 32'
+            caulktex = !
+          }
+          down:f =
+          {
+            v = '256 192 -96 288 192 -96 256 64 -96'
+            caulktex = !
+          }
+          up:f =
+          {
+            v = '256 -192 96 288 -192 96 256 -64 96'
+            caulktex = !
+          }
+        }
+        West wall:p =
+        {
+          west:f =
+          {
+            v = '-272 192 -96 -272 64 -96 -272 192 32'
+            caulktex = !
+          }
+          east:f =
+          {
+            v = '-256 -192 -96 -256 -96 -96 -256 -192 0'
+            walltex = !
+          }
+          south:f =
+          {
+            v = '-272 -192 -96 -240 -192 -96 -272 -192 32'
+            caulktex = !
+          }
+          north:f =
+          {
+            v = '-256 192 -96 -288 192 -96 -256 192 32'
+            caulktex = !
+          }
+          down:f =
+          {
+            v = '-272 192 -96 -240 192 -96 -272 64 -96'
+            caulktex = !
+          }
+          up:f =
+          {
+            v = '-272 -192 96 -240 -192 96 -272 -64 96'
+            caulktex = !
+          }
+        }
+        North wall:p =
+        {
+          west:f =
+          {
+            v = '-256 208 -96 -256 176 -96 -256 208 32'
+            caulktex = !
+          }
+          east:f =
+          {
+            v = '256 192 -96 256 224 -96 256 192 32'
+            caulktex = !
+          }
+          south:f =
+          {
+            v = '-256 192 -96 -128 192 -96 -256 192 0'
+            walltex = !
+          }
+          north:f =
+          {
+            v = '256 208 -96 128 208 -96 256 208 32'
+            caulktex = !
+          }
+          down:f =
+          {
+            v = '-256 208 -96 -128 208 -96 -256 176 -96'
+            caulktex = !
+          }
+          up:f =
+          {
+            v = '-256 192 96 -128 192 96 -256 224 96'
+            caulktex = !
+          }
+        }
+        South wall:p =
+        {
+          west:f =
+          {
+            v = '-256 -192 -96 -256 -224 -96 -256 -192 32'
+            caulktex = !
+          }
+          east:f =
+          {
+            v = '256 -208 -96 256 -176 -96 256 -208 32'
+            caulktex = !
+          }
+          south:f =
+          {
+            v = '-256 -208 -96 -128 -208 -96 -256 -208 32'
+            caulktex = !
+          }
+          north:f =
+          {
+            v = '256 -192 -96 128 -192 -96 256 -192 0'
+            walltex = !
+          }
+          down:f =
+          {
+            v = '-256 -192 -96 -128 -192 -96 -256 -224 -96'
+            caulktex = !
+          }
+          up:f =
+          {
+            v = '-256 -208 96 -128 -208 96 -256 -176 96'
+            caulktex = !
+          }
+        }
+        Sky:p =
+        {
+          west:f =
+          {
+            v = '-256 0 272 -256 -128 272 -256 0 400'
+            ceiltex = !
+          }
+          east:f =
+          {
+            v = '256 0 272 256 128 272 256 0 400'
+            ceiltex = !
+          }
+          south:f =
+          {
+            v = '432 -192 272 560 -192 272 432 -192 400'
+            ceiltex = !
+          }
+          north:f =
+          {
+            v = '432 192 272 304 192 272 432 192 400'
+            ceiltex = !
+          }
+          down:f =
+          {
+            v = '432 0 96 560 0 96 432 -128 96'
+            ceiltex = !
+          }
+          up:f =
+          {
+            v = '432 0 112 560 0 112 432 128 112'
+            ceiltex = !
+          }
+        }
+        Floor:p =
+        {
+          west:f =
+          {
+            v = '-256 0 272 -256 -128 272 -256 0 400'
+            caulktex = !
+          }
+          east:f =
+          {
+            v = '256 0 272 256 128 272 256 0 400'
+            caulktex = !
+          }
+          south:f =
+          {
+            v = '432 -192 272 560 -192 272 432 -192 400'
+            caulktex = !
+          }
+          north:f =
+          {
+            v = '432 192 272 304 192 272 432 192 400'
+            caulktex = !
+          }
+          down:f =
+          {
+            v = '432 0 -112 560 0 -112 432 -128 -112'
+            caulktex = !
+          }
+          up:f =
+          {
+            v = '432 0 -96 560 0 -96 432 128 -96'
+            floortex = !
+          }
+        }
+      }
+      info_player_start:e =
+      {
+        origin = "-144 0 -64"
+        angle = "360"
+      }
+      light:e =
+      {
+        _color = "1 1 1"
+        light = "300"
+        angles = "0 0 0"
+        origin = "0 0 0"
+      }
+    }
+  }
+}

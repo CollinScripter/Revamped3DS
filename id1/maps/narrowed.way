@@ -1,0 +1,67 @@
+// Narrowed - maps/e1m2.way
+// Ways by mrgreezy3
+saved1 1280; saved2 -2416; saved3 -1906
+scratch1 2; scratch2 0; scratch3 0; scratch4 0
+saved4 1; wait
+saved1 1281; saved2 -2075; saved3 -1938
+scratch1 3; scratch2 16; scratch3 17; scratch4 15
+saved4 2; wait
+saved1 1747; saved2 -2019
+scratch1 2; scratch2 4; scratch3 0; scratch4 0
+saved4 2; wait
+saved1 1901; saved2 -1620; saved3 -1961
+scratch1 3; scratch2 5
+saved4 2; wait
+saved1 1799; saved2 -1479; saved3 -1970
+scratch1 4; scratch2 6
+saved4 2; wait
+saved1 1306; saved2 -1495; saved3 -2034
+scratch1 5; scratch2 7; scratch3 13
+saved4 2; wait
+saved1 1274; saved2 -1114
+scratch1 6; scratch2 8; scratch3 12
+saved4 2; wait
+saved1 700; saved2 -1076; saved3 -1970
+scratch1 7; scratch2 9; scratch3 0
+saved4 2; wait
+saved1 699; saved2 -668; saved3 -1938
+scratch1 8; scratch2 10; scratch3 21
+saved4 2; wait
+saved1 1284; saved2 -492
+scratch1 9; scratch2 11; scratch4 20
+saved4 2; wait
+saved1 1845; saved2 -679
+scratch1 10; scratch2 12; scratch3 20; scratch4 0
+saved4 2; wait
+saved1 1875; saved2 -1090; saved3 -1970
+scratch1 11; scratch2 7; scratch3 0
+saved4 2; wait
+saved1 682; saved2 -1508
+scratch1 6; scratch2 14
+saved4 2; wait
+saved1 703; saved2 -1804; saved3 -1938
+scratch1 13; scratch2 15; scratch3 16
+saved4 2; wait
+saved1 1152; saved2 -1814
+scratch1 14; scratch2 2; scratch3 18
+saved4 2; wait
+saved1 756; saved2 -2012
+scratch3 0
+saved4 2; wait
+saved1 1380; saved2 -1816
+scratch1 2; scratch2 19
+saved4 2; wait
+saved1 1163; saved2 -1308; saved3 -1824
+scratch1 15; scratch3 21
+saved4 2; wait
+saved1 1407; saved2 -1286
+scratch1 17; scratch2 18; scratch3 20
+saved4 2; wait
+saved1 1393; saved2 -773; saved3 -1933
+scratch1 19; scratch2 10; scratch3 11; scratch4 21
+saved4 2; wait
+saved1 1172; saved2 -811; saved3 -1923
+scratch1 18; scratch3 9; scratch4 20
+saved4 2; wait
+saved4 3
+// end waypoint dump

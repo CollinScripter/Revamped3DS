@@ -1,0 +1,366 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"  "http://www.w3.org/TR/html4/loose.dtd">
+<html lang="en">
+<head>
+  <title>Skin-view page</title>
+  <meta name="Description" content="QuArK Information Database - Page: 1.6.10.&nbsp;Skin-view page">
+  <meta name="Keywords" content="QuArK InfoBase Quake Army Knife QRK QKM Python PY Map Editor Hexen Heretic Half-Life Sin Kingpin Soldier-of-Fortune Star-Trek-Voyager Elite-Force">
+  <link rel=stylesheet href="standard.css" type="text/css">
+</head>
+
+<body>
+<a name="__top__"></a>
+<table width="100%" border=0 cellspacing=0>
+  <tr>
+    <td width=213>
+      <a target="_blank" href="http://quark.sourceforge.net/"><img src="quarkicon.png" width=213 height=90 border=0 alt="Go to QuArK Web Site"></a>
+    </td>
+    <td width="70%" align=center>
+      <div class="topheadline">Skin-view page</div>
+      <div class="sm">Updated&nbsp;03 Mar 2011</div>
+    </td>
+    <td width="30%" valign=bottom nowrap>
+      Upper&nbsp;levels:<br>-&nbsp;<a href="index.html">QuArK&nbsp;Information&nbsp;Base</a><br>-&nbsp;<a href="intro.html">1.&nbsp;Introduction&nbsp;to&nbsp;QuArK</a><br>-&nbsp;<a href="intro.modeleditor.html">1.6.&nbsp;Model-editor&nbsp;in&nbsp;QuArK</a><br>
+    </td>
+  </tr>
+</table>
+<table width="100%" border=0 cellspacing=0>
+  <tr class="headline">
+    <td width="99%">
+      <p class="headline">&nbsp;1.6.10.&nbsp;Skin-view page</p>
+    </td>
+    <td width="1%" align=right nowrap>
+      &nbsp;[&nbsp;<span class="navenable"><a href="intro.modeleditor.dataforms.html">Prev</a></span>&nbsp;-&nbsp;<span class="navenable"><a href="intro.modeleditor.html">Up</a></span>&nbsp;-&nbsp;<span class="navenable"><a href="intro.modeleditor.editelements.html">Next</a></span>&nbsp;]&nbsp;
+    </td>
+  </tr>
+</table>
+<table border=0 width="100%" cellspacing=10><tr><td><p>QuArK's Model Skin-view page is quite different then its 
+<a href="intro.mapeditor.dataforms.html#faceview">Map Editor's Face-view page.</a>
+This is where all of the 'skinning' (texturing) functions of the model take place and therefore
+requires its own section for explanation and reference during the model editing process.
+This section is also linked to that pages buttons and <a href="glossary.html#r">RMB</a> menu items for quick access.
+</p><p>Unfortunately, like the <a href="intro.mapeditor.dataforms.html#faceview">Map Editor's Face-view page</a>,
+one unfavorable characteristics it has at this time is that when the page is pulled out of its normal
+position in the Model Editor the help hint and F1 Infobase links will no longer work until it is returned.</p>
+</td></tr></table>
+<br>
+
+<table width="100%" border=0 cellspacing=0>
+  <tr class="headline">
+    <td width="100%">
+      <p class="subheadline">&nbsp;Index</p>
+    </td>
+  </tr>
+</table>
+<ul class="index">
+  <li>- <a href="#overview">Overview</a>&nbsp;<span class="added">(15 Sep 2007)</span>
+  <li>- <a href="#selection">Selection & Navigation Methods</a>&nbsp;<span class="added">(29 Oct 2007)</span>
+  <li>- <a href="#funcsnmenus">Functions & RMB Menus</a>&nbsp;<span class="added">(05 Dec 2007)</span>
+  <li>- <a href="#importskins">Importing Skin Textures</a>&nbsp;<span class="added">(03 Mar 2011)</span>
+</ul>
+<br>
+
+
+<a name="overview"></a>
+  <table width="100%" border=0 cellspacing=0>
+    <tr class="headline">
+      <td>
+        <p class="item">&nbsp;Overview</p>
+      </td>
+      <td align=right>
+        <font size=-2>cdunde&nbsp;-&nbsp;15 Sep 2007</font>
+      </td>
+      <td width="1%" align=right nowrap>
+        &nbsp;&nbsp;[&nbsp;<a href="#__top__">Top</a>&nbsp;]&nbsp;
+      </td>
+    </tr>
+  </table>
+  <table border=0 width="100%" cellspacing=10><tr><td>
+<p><table><tr><td>
+A model is a single <b>QuArK Internal Object</b> that can consist of a single or multiple <a href="glossary.html#c">components</a>.
+Each component usually has its own <a href="glossary.html#s">skin texture</a> image such as a .pcx, .jpg, .tga or similar type of file.
+</p><p><img border=1 align=right src="intro.modeleditor.skinview.overview1.png">
+</p><p>The purpose of the <a href="intro.modeleditor.skinview.html">'Skin-view page'</a> is the application of various functions to correctly position the
+model's <a href="glossary.html#s">skin mesh</a> over its <a href="glossary.html#s">skin texture</a> giving that finished look to the model. This is done with the use
+of <a href="glossary.html#d">drag handles</a> created at each <a href="glossary.html#v">vertex</a> or point of each <a href="glossary.html#t">triangle</a> of the <a href="glossary.html#s">skin mesh</a>.
+</p><p>The <a href="glossary.html#s">skin mesh</a> is an <a href="glossary.html#u">unwrapped</a> layout, or shape, of a model's <a href="glossary.html#c">component</a>.
+</p><p>To the right is a screen shot of the Skin-view page displaying the <a href="glossary.html#s">skin mesh</a> of a model that only has
+one <a href="glossary.html#c">component</a>. Only one <a href="glossary.html#s">skin</a> can be viewed and edited at a time. The Skin-view consist of three areas.
+The top part displays information about the <a href="glossary.html#s">skin mesh</a> and the <a href="glossary.html#t">texture</a> image being used. Just under that is the
+Skin-view's button section that perform various different functions. These are covered in more detail latter.
+The third section is the actual <a href="glossary.html#s">Skin-view</a> that displays the <a href="glossary.html#m">mesh</a>, <a href="glossary.html#s">skin</a>, <a href="glossary.html#d">drag handles</a>
+and <a href="glossary.html#r">RMB</a> menus when called upon. Now for their descriptions and other important information on their uses.
+</p><p><b><u>Selected Skin section</u></b>
+</p><p><i><u>Triangles </u></i>&nbsp;: This give the number of triangles that make up the <a href="glossary.html#s">skin mesh</a> or <a href="glossary.html#t">Tris</a>
+Each triangle has tree <a href="glossary.html#d">drag handles</a>, one at each of its points and that overlap other triangles <a href="glossary.html#d">drag handles</a>.
+</p><p><i><u>Owned by </u></i>&nbsp;: This gives the name of the current component of the model that has been selected in the
+<a href="glossary.html#t">Tree-view</a> of the model editor and is currently available for editing.
+</p><p><i><u>Skin </u></i>&nbsp;: This gives the name of the current component's <a href="glossary.html#s">skin</a> of the model that has been selected in the
+<a href="glossary.html#t">Tree-view</a> of the model editor and is currently being used for the model. A model can have a single <a href="glossary.html#c">component</a>
+or multiple <a href="glossary.html#c">components</a>. And each <a href="glossary.html#c">component</a> can have a single <a href="glossary.html#s">skin</a> or multiple <a href="glossary.html#s">skins</a>
+that it can use.
+</p><p><i><u>Skin size </u></i>&nbsp;: This gives the actual size of the texture image displayed in <a href="glossary.html#p">pixels</a> or sometimes known
+as <a href="glossary.html#t">texels</a>.
+</td></tr></table>
+<b><u>Skin-view display section</u></b>
+</p><p><img border=1 align=right src="intro.modeleditor.skinview.overview2.png">
+</p><p>As stated earlier, this section actually shows the <a href="glossary.html#m">mesh</a>, <a href="glossary.html#s">skin</a>, <a href="glossary.html#d">drag handles</a> and <a href="glossary.html#r">RMB</a>
+menus when called upon. It is also the editing work area for skinning the model. Something that you will notice
+here is how the <a href="glossary.html#s">skin texture</a> is repeated over and over again with red color outlines.
+This is called <a href="glossary.html#t">Tiling</a> and goes on indefinitely. Most other model editors do not show the <a href="glossary.html#s">skin texture</a>
+in this manner, yet it still exist and is usable. We chose to show it in its true fashion to assist you in
+various aspects.
+</p><p>Some models have been skinned by over-laying parts or half of the <a href="glossary.html#s">skin mesh</a> over the top of the other,
+to conserve texture file size and\or match the texturing exactly. This method is beneficial at times but it
+can also be awkward as well. By displaying the <a href="glossary.html#t">tiled</a> areas, you can easily relocate any part of the
+<a href="glossary.html#s">skin mesh</a> you choose to another tile section rapidly and with great accuracy in QuArK's Model Editor. 
+<img border=1 align=right src="intro.modeleditor.skinview.overview3.png">
+</p><p>This is possible because of the way we have constructed the Skin-view to operate. Notice in the two screen shots
+to the right how the <b>help box</b> of the model editor displays not only the triangle (tri) and
+<a href="glossary.html#v">vertex-index</a> number of the handle the cursor is about to grab for dragging, but it also gives you
+the exact location of its position on the base tile of that texture by its <a href="glossary.html#x">x: +52 y: -2</a> amounts.
+As you drag that handle to another tile section of that texture those same co-ordnances will be displayed
+in real time along with their <b>original</b> position as a reminder. So you simply drag to that same location
+on another tile section.
+</p><p>In addition, this feature works in the same manner weather you are doing a multi-drag or a single drag by using
+the <a href="glossary.html#v">Vertex drag mode</a> (covered below).
+</p><p>Which brings us to another group of functions and <a href="glossary.html#m">modes</a> selection buttons to assist you in your work with vertexes and their relocation.
+</p><p>The <a href="glossary.html#r">RMB</a> Skin-view menus are covered in the
+<a href="intro.modeleditor.skinview.html#funcsnmenus">Functions &amp; RMB Menus</a>
+section further down.
+</p>
+  </td></tr></table>
+  <br>
+
+<a name="selection"></a>
+  <table width="100%" border=0 cellspacing=0>
+    <tr class="headline">
+      <td>
+        <p class="item">&nbsp;Selection & Navigation Methods</p>
+      </td>
+      <td align=right>
+        <font size=-2>cdunde&nbsp;-&nbsp;29 Oct 2007</font>
+      </td>
+      <td width="1%" align=right nowrap>
+        &nbsp;&nbsp;[&nbsp;<a href="#__top__">Top</a>&nbsp;]&nbsp;
+      </td>
+    </tr>
+  </table>
+  <table border=0 width="100%" cellspacing=10><tr><td>
+<p><i><b><u>Selection Methods </u></b></i>&nbsp;: Two different selection methods have been designed into the
+QuArK Model Editor for the <a href="intro.modeleditor.skinview.html">Skin-view page</a>. Also see the
+Model Editor's <a href="intro.modeleditor.overview.html">Overview</a> page
+<a href="intro.modeleditor.overview.html#selection">Selection &amp; Navigation Methods</a> for the editor's particular methods.
+</p><p><i><a href="glossary.html#l">LMB</a> Vertex Handle Drag</i>&nbsp; : This method is available when your cursor is directly over a model
+components <a href="glossary.html#s">Skin</a> mesh <a href="glossary.html#v">vertex</a> (point) <a href="glossary.html#d">drag handle</a> and the cursor will change in appearance when it is.
+Holding down your <a href="glossary.html#l">LMB</a> will allow you to <a href="glossary.html#d">drag</a> that particular vertex to a new location in the view,
+changing the appearance of the model for that particular <a href="glossary.html#c">component</a>. A specific <a href="glossary.html#a">animation frame</a>
+<b>does not</b> need to be selected for this function to work.
+</p><p><i><a href="glossary.html#l">LMB</a> Rectangle Selector</i>&nbsp; : This method is available when the cursor is <b>not</b> over a <a href="glossary.html#v">vertex</a>.
+Holding down your <a href="glossary.html#l">LMB</a> and moving your mouse will produce a <a href="glossary.html#r">Red Rectangle</a> selector that you can
+drag across the Skin-view. This selector will allow you to make a multiple selection of a model components <a href="glossary.html#s">Skin</a> mesh
+vertex points at one time. These vertexes can then be passed on to the
+<a href="intro.modeleditor.model.html#components">Editor views</a> or will be done so
+automatically if you have activated one of the options on the Skin-view
+<a href="intro.modeleditor.skinview.html#funcsnmenus">RMB menu</a>
+(which you can obtain by clicking your <a href="glossary.html#r">RMB</a> in the Skin-view) or the main
+<a href="intro.modeleditor.menu.html#optionsmenu">Options menu</a>
+for <a href="intro.modeleditor.skinview.html#funcsnmenus">Skin-view Options</a>.
+As the Model Editor is developed, this selection method will be used to move and edit whole sections of the model's <a href="glossary.html#s">Skin</a>
+mesh by use of its selected <a href="glossary.html#v">vertexes</a>.
+To <a href="glossary.html#d">de-select</a> any and all vertexes, simply do another small <a href="glossary.html#r">Rectangle drag</a> in any unused area of the Skin-view.
+</p><p><i><a href="glossary.html#l">LMB</a> &amp; <a href="glossary.html#r">RMB</a> Selector</i>&nbsp; : (not activated at this time, reserved for future use and functions.)
+</p><p><img border=1 align=right src="intro.modeleditor.skinview.selection1.png">
+<img border=1 align=right src="intro.modeleditor.skinview.selection2.png">
+<b><u>Skin-view's button section</u></b>
+</p><p><i><u>Skin-view Grid button </u></i>&nbsp;: (far left button) Because the Model Editor and the Skin-view work on different aspects of
+a model, they require their own distinct and independent <a href="glossary.html#g">Grids</a>, which is the first button to the far left.
+Each have their own <a href="glossary.html#g">grid menu</a> with pre-set amounts, but any amount can be entered by clicking on the <a href="glossary.html#o">Other</a>
+item shown at the very bottom of the menu. In addition, for the Skin-view, there are two
+<a href="intro.modeleditor.skinview.html#funcsnmenus">RMB menu</a> items for the <a href="glossary.html#s">Skin-view grid</a> (see below).
+</p><p><i><u>Skin-view Zoom button </u></i>&nbsp;: (2nd button) This allows you to zoom in and out from the skin with some pre-set factors
+as well as a setting for a 'custom' zoom amount. It only applies to the Skin-view and not to any other view
+of the Model Editor.
+</p><p><i><u>Vertex drag mode </u></i>&nbsp;: (3rd button) This is a special feature of the Skin-view. It allows you to choose to make
+either a <b>multiple drag</b> (the default setting) using a single drag handle, meaning all other handles in the same location will be
+dragged also automatically keeping the <a href="glossary.html#s">skin mesh</a> together, or a <b>single drag</b> only dragging the
+handle on top which will pull the <a href="glossary.html#s">skin mesh</a> apart for individual placement. This button also works
+in conjunction with the <a href="glossary.html#r">RMB</a> menus that we will cover further on.
+</p><p><i><u>Remap Snapshot button </u></i>&nbsp;: (far right button) Pressing this icon, will reset the selected component's <a href="glossary.html#s">skin mesh</a> using
+the angle of view that is seen in the editor's 3D view when the button is clicked. Doing it this way allows you to re-map any selected
+faces, of any component, at any angle or direction for complete control of that process. So if you originally skin from the side and the
+top faces are distorted, you can select those faces, rotate the editor's 3D view to look from the top and click this button to re-skin them.
+There is also an option on the Skin-view <a href="glossary.html#r">RMB</a> menu, shown below, to turn off the 3D view and re-skin from the Skin-view 2D perspective instead.
+If the outcome does not go as planed, just use the <a href="glossary.html#r">RMB</a> menu or editor's <a href="intro.modeleditor.menu.html#editmenu">undo function</a>
+to reverse the action.
+</p><p>A couple of other issues about all of the selection methods described at the beginning:
+</p><p>1) Once a selection is made the Skin-view <a href="intro.modeleditor.skinview.html#funcsnmenus">RMB menu, 'Vertex Commands'</a>
+will become active for its items use.
+</p><p>2) How and what a selection will select is also linked to the
+<a href="intro.modeleditor.skinview.html#funcsnmenus">Vertex drag mode</a> button above the actual viewing area.
+Meaning, either single depth or full depth selection of the vertexes can be made depending on the mode that button
+is set to at the time. Once a selection has been made,
+the <a href="intro.modeleditor.skinview.html#funcsnmenus">Vertex drag mode</a> can be changed to work with your
+selection in various different ways. A little experimentation will assist you in learning these differences.
+</p><p><i><b><u>Navigation Methods </u></b></i>&nbsp;: The <a href="intro.modeleditor.skinview.html">Skin-view</a> navigates
+much like it does in the rest of the Model Editor,
+<a href="intro.modeleditor.model.html#components">2D views</a> and is covered in detail below.
+</p><p><i>Skin-view viewing area</i>&nbsp; : Using your <a href="glossary.html#m">MMB</a> you can <a href="glossary.html#z">Zoom</a> in and out for the 2D viewing area.
+Press and holding your <a href="glossary.html#r">RMB</a> will allow you to <a href="glossary.html#s">Scroll</a> or <a href="glossary.html#p">Pan</a> in that same view.
+All other combinations are used as described above in the
+<a href="intro.modeleditor.skinview.html#selection">Selection Methods</a> section.
+</p>
+  </td></tr></table>
+  <br>
+
+<a name="funcsnmenus"></a>
+  <table width="100%" border=0 cellspacing=0>
+    <tr class="headline">
+      <td>
+        <p class="item">&nbsp;Functions & RMB Menus</p>
+      </td>
+      <td align=right>
+        <font size=-2>cdunde&nbsp;-&nbsp;05 Dec 2007</font>
+      </td>
+      <td width="1%" align=right nowrap>
+        &nbsp;&nbsp;[&nbsp;<a href="#__top__">Top</a>&nbsp;]&nbsp;
+      </td>
+    </tr>
+  </table>
+  <table border=0 width="100%" cellspacing=10><tr><td>
+<p><img border=0 align=right src="intro.modeleditor.skinview.funcsnmenus1.png">
+</p><p>Picking up from where we left off from above, these are the <a href="glossary.html#r">RMB</a> menus available in the
+Skin-view that can assist you in multi and single vertex movement and <a href="glossary.html#r">realignment</a>.
+All of these functions work in conjunction with the <a href="glossary.html#v">Vertex drag mode</a> button which is
+shown set to the <a href="glossary.html#s">Single drag mode</a> in the screen shot to the right.
+</p><p>Basically, these functions all center around <a href="glossary.html#s">snapping</a> one or more <a href="glossary.html#p">Picked</a> vertexes,
+shown here as blue handles, to a <a href="glossary.html#b">Base</a> location, shown to the right as lime green.
+These colors are changeable by selection from the
+<a href="intro.modeleditor.toolpalettes.viewselection.html#coloroptions">Model Editors Colors Configuration</a>
+section. The <a href="glossary.html#b">Base Vertex</a> uses the same color setting as the <a href="glossary.html#s">Selected brushes, side view</a>
+and the <a href="glossary.html#s">Skin Vertexes</a> use the same color as the <a href="glossary.html#numbers">3D views drag lines</a> setting.
+</p><p>The procedure is simple, first select a <a href="glossary.html#b">Base Vertex</a> by placing your cursor over the one
+you wish to choose, then <a href="glossary.html#r">RMB</a> click and select <a href="glossary.html#p">Pick Base Vertex</a> (not shown here but it's
+at the top off the menu where it displays <a href="glossary.html#c">Change Base Vertex</a> now).
+</p><p>Second, do the same for each skin vertex choosing the <a href="glossary.html#p">Pick Skin Vertex</a> menu item each time.
+</p><p>Finally, when you are ready to make your <a href="glossary.html#s">snap</a> either place your cursor over any of the selected
+skin vertexes or anywhere in the Skin-view, <a href="glossary.html#r">RMB</a> click and select <a href="glossary.html#a">Align skin vertexes</a>.
+</p><p>The snap will take place and the final results will look something like the second image of the eye
+at the bottom of the screen shot. Now a couple of special situations in using these menu functions.
+</p><p>If you are only going to snap one <a href="glossary.html#s">Skin Vertex</a> to the <a href="glossary.html#b">Base Vertex</a> then all you need to do
+is select that <a href="glossary.html#b">Base Vertex</a> and the <a href="glossary.html#a">Align skin vertexes</a> menu items following the steps above.
+You do not need to use the <a href="glossary.html#p">Pick Skin Vertex</a> menu item. In addition, the <a href="glossary.html#b">Base Vertex</a> will
+remain selected for you, so you can simply <a href="glossary.html#r">RMB</a> click over another skin vertex to move it to the
+same position <b>or</b> you can place your cursor over any unselected vertex and choose the
+<a href="glossary.html#c">Change Base Vertex</a> menu item and it will jump to that new location and you can carry on from there.
+</p><p>Using these along with the <a href="glossary.html#v">Vertex drag mode</a> button a number of various combinations of aligning
+vertexes can be accomplished. And as stated in the section above, the exact co-ordnances
+,of all of these items, will be displayed in the editor's, lower left corner,
+Help box as you proceed through the phases of your editing.
+</p><p><i>Clear Skin Pick list </i>&nbsp;: This will do just that, clear all of the <a href="glossary.html#p">picked</a> vertexes including
+the <a href="glossary.html#b">Base vertex</a> and start fresh.
+</p><p><i>Force to grid </i>&nbsp;: When the <a href="glossary.html#s">Skin Grid is Active</a> (see menu item below) in the <a href="glossary.html#s">Skin-view</a>
+this allows you to <a href="glossary.html#s">snap</a> a vertex, or group of vertexes, to the closest grid point position. These grid
+points can be changed by using the grid settings covered above.
+</p><p><i><b>Vertex Commands</b> - submenu items </i>&nbsp;:
+</p><p><i>Clear Skin Pick list </i>&nbsp;: Described above.
+</p><p><i>Align skin vertexes </i>&nbsp;: Also described above.
+</p><p><i><b>Skin-view Options</b> - submenu items </i>&nbsp;: (also located on the
+<a href="intro.modeleditor.menu.html#optionsmenu">Options menu</a>)<br>
+</p><p><i>Sync Editor views with Skin-view </i>&nbsp;: This function will turn off other related options and synchronize selected
+<a href="glossary.html#s">Skin-view mesh vertexes</a>, passing and selecting the coordinated <a href="glossary.html#m">Model mesh vertexes</a> in the Editors views,
+where they can be used for editing purposes. Any selection changes in the <a href="intro.modeleditor.skinview.html">Skin-view</a>
+will be updated to the Editors views as well. Once the selection has been passed, if this function is turned off,
+the selection will remain in both the Editor and the <a href="intro.modeleditor.skinview.html">Skin-view</a>
+for further use. The <a href="intro.modeleditor.skinview.html">Skin-view</a> and Editor views selected vertex colors can
+be changed in the <a href="intro.modeleditor.toolpalettes.viewselection.html#coloroptions">Colors Options</a> settings.
+</p><p><i>Pass selection to Editor views </i>&nbsp;: This function will pass selected <a href="glossary.html#s">Skin-view mesh vertexes</a> and select
+the coordinated <a href="glossary.html#m">Model mesh vertexes</a> in the Editors views, along with any others currently selected, where they can
+be used for editing purposes. Once the selection has been passed, if this function is turned off, the selection will remain
+in the Editor for its use there. The <a href="intro.modeleditor.skinview.html">Skin-view</a> selected vertex colors can be
+changed in the <a href="intro.modeleditor.toolpalettes.viewselection.html#coloroptions">Colors Options</a> settings.
+</p><p><i>Clear Selected Faces </i>&nbsp;: This function will clear all faces in the Skin-view that have been drawn as 'Selected'
+or 'Show' but any related selected vertexes will remain that way for editing purposes. The 'Skin-view' selected face,
+show face and selected vertex colors can be changed in the 'Configuration Model Colors' section.
+</p><p><i>Skin From 3D view </i>&nbsp;: This turns the function on or off to take co-ordnances for the 'Skin-view' from the
+editors 3D view when new objects are created using the 'Quick Object Maker'. It will place that object on the skin exactly
+the same way you see it in the 3D view when the object is created. This same process applies to selected faces in the editor.
+Because the 3D view uses its own 'scale' factor, activating this function will also turn off the <a href="glossary.html#u">Use Skin-view scale</a> function.
+</p><p><i>Use Skin-view scale </i>&nbsp;: This turns the function on or off for applying of the views 'zoom' or 'scale' factor when
+taking co-ordnances from the 'Skin-view' and which works in reverse. Meaning, when this option is checked,
+if the Skin-view is zoomed out (skin looks small) it will skin new triangles with fewer repetitions (skin looks larger)
+of that image and visa-versa. Because the 3D view uses its own 'scale' factor, activating this function will also turn
+off the <a href="glossary.html#s">Skin From 3D view</a> function.
+</p><p><i>Skin Grid Visible </i>&nbsp;: (Also located in the Model Editor Configuration Options section) This function gives
+quick access to turn the Skin-view Grid on and off, but it will still be active for functions that use it such as
+the <a href="glossary.html#s">snap to</a> function.
+</p><p><i>Skin Grid Active </i>&nbsp;: (Also located in the Model Editor Configuration Options section) This function also gives
+quick access to activate or deactivate the Skin-view Grid. But any functions that use it such as the <a href="glossary.html#s">snap to</a> function
+will not be effective.
+</p><p><i>Single Sel Drag Lines </i>&nbsp;: This function stops the multiple selection drag lines of the 'Linear Handle' from
+being drawn in the Skin-view to speed up the Skin-view selection and handle creation.
+</p><p>And Two more additional RMB items are located on the <a href="glossary.html#d">Draw Ticks During Drag</a> sub-menu. These are:
+</p><p><i><b>Draw Ticks During Drag:</b> - submenu items </i>&nbsp;: These functions give various methods for drawing the Models
+Skin Mesh Vertex Ticks while doing a <a href="glossary.html#r">rectangle drag</a>.<br>
+</p><p><i>Rectangle drag-method 1 </i>&nbsp;: This function will draw the Skin-view mesh vertex 'Ticks' during a rectangle drag
+with a minimum amount of flickering, but is a slower drawing method.
+</p><p><i>Rectangle drag-method 2 </i>&nbsp;: This function will draw the Skin-view mesh vertex 'Ticks', using the fastest method,
+during a rectangle drag, but will cause the greatest amount of flickering.
+</p>
+
+
+  </td></tr></table>
+  <br>
+
+<a name="importskins"></a>
+  <table width="100%" border=0 cellspacing=0>
+    <tr class="headline">
+      <td>
+        <p class="item">&nbsp;Importing Skin Textures</p>
+      </td>
+      <td align=right>
+        <font size=-2>cdunde&nbsp;-&nbsp;03 Mar 2011</font>
+      </td>
+      <td width="1%" align=right nowrap>
+        &nbsp;&nbsp;[&nbsp;<a href="#__top__">Top</a>&nbsp;]&nbsp;
+      </td>
+    </tr>
+  </table>
+  <table border=0 width="100%" cellspacing=10><tr><td>
+<p><img border=1 align=right src="intro.modeleditor.skinview.importskins.png">
+Basically there are two ways to import a skin texture:<br>
+1) Through the Texture Browser by
+<a href="intro.texturebrowser.tutorials.html#textureimports">making a copy of</a> or
+<a href="intro.texturebrowser.tutorials.html#texturelinks">link to</a> the skin image file and
+</p><p>2) By using a component's Skins Specifics / Arg page (detailed steps below).
+</p><p>By selecting a component's Skins folder, or a skin within that folder, you will activate the Specifics page for it.<br>
+<a href="intro.modeleditor.overview.html#overview">You can then click on the icon button above the tree-view</a>
+to show that page or hold your <a href="glossary.html#l">LMB</a> down while over the icon and drag the page out to display it in its own window.
+</p><p>One that Specifics page click on the icon button that shows three dots on it next to where it
+says either <a href="glossary.html#i">import skin</a> or <a href="glossary.html#s">skin name</a>, depending on if you selected the
+Skins folder or a skin in the tree-view.
+</p><p>Clicking that button will bring up a File Selection window that you can use to locate and
+select the skin texture image file you wish to import. Selecting the file will cause it to be imported.
+</p><p>This method supports most of the texture file formats that are available in QuArK.
+However, some, such as .pcx, files use a color pallet for their images and need to
+be imported through one of the
+<a href="intro.texturebrowser.tutorials.html">Texture Browser methods</a>
+above to get processed properly.</p>
+  </td></tr></table>
+  <br>
+
+<br>
+
+<table width="100%" border=0 cellspacing=0>
+  <tr class="headline">
+    <td width="99%" align=center>
+      <p class="sm">
+        Copyright (c) 2009, GNU General Public License by The QuArK (Quake Army Knife) Community - <a target="_blank" href="http://quark.sourceforge.net/">http://quark.sourceforge.net/</a><br>
+      </p>
+    </td>
+    <td width="1%" align=right nowrap>
+      &nbsp;[&nbsp;<span class="navenable"><a href="intro.modeleditor.dataforms.html">Prev</a></span>&nbsp;-&nbsp;<a href="#__top__">Top</a>&nbsp;-&nbsp;<span class="navenable"><a href="intro.modeleditor.editelements.html">Next</a></span>&nbsp;]&nbsp;
+    </td>
+  </tr>
+</table>
+</body>
+</html>

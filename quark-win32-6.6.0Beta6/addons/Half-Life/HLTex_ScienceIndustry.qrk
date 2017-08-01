@@ -1,0 +1,51 @@
+QQRKSRC1
+{
+  QuArKProtected = "1"
+  Description = "HL Textures - Science & Industry"
+
+//
+// Science & Industry
+//
+  SITextures.qtx =
+  {
+    ToolBox = "Texture Browser..."
+    Root = "Science & Industry Textures.qtxfolder"
+    HTML = "intro.texturebrowser.html"
+
+    // Raw definition of WAD3 files
+    t_si:incl =  { s = "si" d = "si" h = "C" }
+
+    Science & Industry Textures.qtxfolder =
+    {
+      SI.txlist =
+      {
+                {leaves.wl = {t_si=!}
+                afd_clone.wl = {t_si=!}
+                afd_grime1.wl = {t_si=!}
+                afd_hr.wl = {t_si=!}
+                afd_lab.wl = {t_si=!}
+                afd_logo1.wl = {t_si=!}
+                afd_proto.wl = {t_si=!}
+                afd_rust1.wl = {t_si=!}
+                afd_swatch1.wl = {t_si=!}
+                afd_symbol.wl = {t_si=!}
+                mcl_clone.wl = {t_si=!}
+                mcl_grime1.wl = {t_si=!}
+                mcl_hr.wl = {t_si=!}
+                mcl_lab.wl = {t_si=!}
+                mcl_logo1.wl = {t_si=!}
+                mcl_proto.wl = {t_si=!}
+                mcl_rust1.wl = {t_si=!}
+                mcl_symbol.wl = {t_si=!}
+                si_arrow_d.wl = {t_si=!}
+                si_arrow_l.wl = {t_si=!}
+                si_arrow_ld.wl = {t_si=!}
+                si_arrow_lu.wl = {t_si=!}
+                si_arrow_r.wl = {t_si=!}
+                si_arrow_rd.wl = {t_si=!}
+                si_arrow_ru.wl = {t_si=!}
+                si_arrow_u.wl = {t_si=!}
+      }
+    }
+  }
+}

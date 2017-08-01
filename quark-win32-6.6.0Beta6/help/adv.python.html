@@ -1,0 +1,234 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"  "http://www.w3.org/TR/html4/loose.dtd">
+<html lang="en">
+<head>
+  <title>Python</title>
+  <meta name="Description" content="QuArK Information Database - Page: 3.5.&nbsp;Python">
+  <meta name="Keywords" content="QuArK InfoBase Quake Army Knife QRK QKM Python PY Map Editor Hexen Heretic Half-Life Sin Kingpin Soldier-of-Fortune Star-Trek-Voyager Elite-Force">
+  <link rel=stylesheet href="standard.css" type="text/css">
+</head>
+
+<body>
+<a name="__top__"></a>
+<table width="100%" border=0 cellspacing=0>
+  <tr>
+    <td width=213>
+      <a target="_blank" href="http://quark.sourceforge.net/"><img src="quarkicon.png" width=213 height=90 border=0 alt="Go to QuArK Web Site"></a>
+    </td>
+    <td width="70%" align=center>
+      <div class="topheadline">Python</div>
+      <div class="sm">Updated&nbsp;25 Jul 2009</div>
+    </td>
+    <td width="30%" valign=bottom nowrap>
+      Upper&nbsp;levels:<br>-&nbsp;<a href="index.html">QuArK&nbsp;Information&nbsp;Base</a><br>-&nbsp;<a href="adv.html">3.&nbsp;Advanced&nbsp;customization</a><br>
+    </td>
+  </tr>
+</table>
+<table width="100%" border=0 cellspacing=0>
+  <tr class="headline">
+    <td width="99%">
+      <p class="headline">&nbsp;3.5.&nbsp;Python</p>
+    </td>
+    <td width="1%" align=right nowrap>
+      &nbsp;[&nbsp;<span class="navenable"><a href="adv.addons.html">Prev</a></span>&nbsp;-&nbsp;<span class="navenable"><a href="adv.html">Up</a></span>&nbsp;-&nbsp;<span class="navenable"><a href="adv.plugins.html">Next</a></span>&nbsp;]&nbsp;
+    </td>
+  </tr>
+</table>
+<table border=0 width="100%" cellspacing=10><tr><td><p>Python is a very flexible, interpreted language that much of
+QuArK is written in.  QuArK (versions 6.4 and higher) includes
+a Python compiler, so all you have to do to change to the python
+code is edit a *.py file in a text editor, save it, and run QuArK:
+compilation of changed .py files into .pyc files is automatic.
+</p><p>If you want to develop in Python however, you will probably
+want the full distribution from
+<a href="http://www.python.org">www.python.org</a>, since this includes documentation including
+a tutorial, command-line listener for testing out what functions do, etc.
+</p>
+</td></tr></table>
+<br>
+
+<table width="100%" border=0 cellspacing=0>
+  <tr class="headline">
+    <td width="100%">
+      <p class="subheadline">&nbsp;Index</p>
+    </td>
+  </tr>
+</table>
+<ul class="index">
+  <li>- <a href="#learning">Learning Python</a>&nbsp;<span class="added">(15 Feb 2001)</span>
+  <li>- <a href="#notes">Python Notes</a>&nbsp;<span class="added">(12 Sep 2008)</span>
+  <li>- <a href="#gotchas">Gotchas</a>&nbsp;<span class="added">(25 Jul 2009)</span>
+</ul>
+<br>
+
+
+<a name="learning"></a>
+  <table width="100%" border=0 cellspacing=0>
+    <tr class="headline">
+      <td>
+        <p class="item">&nbsp;Learning Python</p>
+      </td>
+      <td align=right>
+        <font size=-2>tiglari&nbsp;-&nbsp;15 Feb 2001</font>
+      </td>
+      <td width="1%" align=right nowrap>
+        &nbsp;&nbsp;[&nbsp;<a href="#__top__">Top</a>&nbsp;]&nbsp;
+      </td>
+    </tr>
+  </table>
+  <table border=0 width="100%" cellspacing=10><tr><td>
+<p>There are introductions to Python available at various levels:
+<UL>
+<LI>The tutorial etc. that comes with Python: Quite
+    usable if you're a reasonably experienced (intermediate?)
+    programmer.
+<LI><strong>Programming Python</strong>
+    (OReilly): All the info is
+    there, but the presentation is not for beginners.
+<LI><strong>Learning Python</strong>
+    (OReilly): Looks like a good
+    introduction for newbie programmers.
+<LI><strong> Learn Python in 24 Hours</strong>
+    (SAMS): This one looks like
+    it could be used by absolute newbie programmers, since it
+    seems to introduce basic programming concepts from scratch.
+    HINT HINT: if some reader of this is an absolute newbie
+    programmer, their reactions to this book would be useful
+    information.
+</UL>
+</p>
+  </td></tr></table>
+  <br>
+
+<a name="notes"></a>
+  <table width="100%" border=0 cellspacing=0>
+    <tr class="headline">
+      <td>
+        <p class="item">&nbsp;Python Notes</p>
+      </td>
+      <td align=right>
+        <font size=-2>Tiglari&nbsp;-&nbsp;12 Sep 2008</font>
+      </td>
+      <td width="1%" align=right nowrap>
+        &nbsp;&nbsp;[&nbsp;<a href="#__top__">Top</a>&nbsp;]&nbsp;
+      </td>
+    </tr>
+  </table>
+  <table border=0 width="100%" cellspacing=10><tr><td>
+<p>Since Python is interpreted, its class system is far more
+flexible than C++ or Delphi, and you can do stuff that you
+can't even dream of in these languages (some of which is
+very useful for GUI-building).  The downside of being
+interpreted is that it's relatively slow.
+</p><p>So things that need to be fast are coded in Delphi, and made available
+to be called as functions in the Python.  These are both
+functions and procedures called as part of the module
+<strong>quarkx</strong>, and also attributes and methods
+of map objects such as faces, poly's etc. that are defined
+in the Delphi code, but need to be accessed from the Python
+code as well.
+</p><p>All of the Delphi-defined stuff is all documented in
+<a href="src.quarkx.html">'QuarkX'</a> which is a fine reference manual.  The Delphi-defined
+stuff integrates very smoothly into Python, and looks native.
+So if you can't find a method-name in the Python code,
+check the Delphi, starting with the quarkx module.
+</p><p>Although your first Python project will probably be a plugin,
+you'll need to use not only quarkx, but also perhaps some of
+the facilities in the module <strong>quarkpy</strong>, where
+many basic facilities are also defined.  Unfortunately the
+contents of quarkpy aren't very well cataloged. Info about
+this, such as it is, is in <a href="adv.quarkpy.html">'QuarkPy'</a>.
+</p>
+  </td></tr></table>
+  <br>
+
+<a name="gotchas"></a>
+  <table width="100%" border=0 cellspacing=0>
+    <tr class="headline">
+      <td>
+        <p class="item">&nbsp;Gotchas</p>
+      </td>
+      <td align=right>
+        <font size=-2>tiglari&nbsp;-&nbsp;25 Jul 2009</font>
+      </td>
+      <td width="1%" align=right nowrap>
+        &nbsp;&nbsp;[&nbsp;<a href="#__top__">Top</a>&nbsp;]&nbsp;
+      </td>
+    </tr>
+  </table>
+  <table border=0 width="100%" cellspacing=10><tr><td>
+<p><strong>QuarkX functions &amp; None</strong>:
+If you write something like:
+<div class="doccode"><pre>
+    if quarkx.function():
+      blah
+      blah
+</pre></div>
+</p><p>expecting blah blah to not execute when function()
+returns None as a value, you'll probably get a bizarre
+run-time error.  Instead write:
+</p><div class="doccode"><pre>
+    if quarkx.function() is not None:
+      blah
+      blah
+</pre></div>
+
+<p>This is because most of the Python objects implemented in
+Delphi do not explicitely support 'truth' evaluation.
+Armin thought the Python core would detect it but it
+seems it just tries to do the evaluation anyway, thus
+calling a Nil function. Everything in Python can be true
+or false, including the Delphi-defined objects -- at least
+the Python core expects it so, and the Delphi code doesn't
+do it right :-(  So always explicitely compare with None.
+</p><p><strong>Vector equality</strong>:
+Don't try to compare QuarkX vectors with equality,
+rather test their difference for being zero.  Armin discusses
+this in the <a href="src.quarkx.html">'QuarkX'</a> document.
+</p><p><strong>Tuples &amp; assigment</strong>:
+Python has a concept of `tuple', which is a sequence of numbers whose members can't
+be changed (they're `immutable').  1-element tuples are
+written with a comma after them, which leads to wierd
+looking things like:
+<div class="doccode"><pre>
+  mytuple = mynumber,
+</pre></div>
+and
+<div class="doccode"><pre>
+  mynumber, = mytuple
+</pre></div>
+</p><p>This latter is an example of `tuple assignment', if the right
+hand side of an assignemt is a tuple, then on the left hand side
+you can put a tuple-expression, and the appropriate assignments
+will get made to its variables.
+</p><p>These commas are a bit unusual and easy to miss at first, and
+since many of the most useful specifics in dialog boxes
+are of tuple-type, missing them can lead to a lot of frustration.
+</p><p><strong>Tabs &amp; whitespace</strong>:
+One of Python's distinctive features is `whitespace structuring', whereby all members of
+the same block have to be indented the same distance, and
+sub-blocks are indented more.  This saves hunting around for
+matching curlies, but can lead to at least one kind of
+serious screwup, involving tabs:  if Python's idea of what
+a tab is different from your editors, you can screw up
+functioning code just by saving it.  I have my text editor
+set to convert all tabs to 4 spaces.
+</p>
+  </td></tr></table>
+  <br>
+
+<br>
+
+<table width="100%" border=0 cellspacing=0>
+  <tr class="headline">
+    <td width="99%" align=center>
+      <p class="sm">
+        Copyright (c) 2009, GNU General Public License by The QuArK (Quake Army Knife) Community - <a target="_blank" href="http://quark.sourceforge.net/">http://quark.sourceforge.net/</a><br>
+      </p>
+    </td>
+    <td width="1%" align=right nowrap>
+      &nbsp;[&nbsp;<span class="navenable"><a href="adv.addons.html">Prev</a></span>&nbsp;-&nbsp;<a href="#__top__">Top</a>&nbsp;-&nbsp;<span class="navenable"><a href="adv.plugins.html">Next</a></span>&nbsp;]&nbsp;
+    </td>
+  </tr>
+</table>
+</body>
+</html>

@@ -1,0 +1,3284 @@
+QQRKSRC1
+// QuArK data add-on, made by cdunde@roadrunner.com
+// Derived from files at:
+// http://bit7.org/quake/mirrors/documentation/quake2/zaero/
+// Entities from files at:
+// http://tastyspleen.net/quake/downloads/mods/zaero/
+//     zaero-src-1.1-2.zip (q_spawn.c file for entity listing)
+
+//$Header: /cvsroot/quark/runtime/addons/Quake_2/Zaeroq2.qrk,v 1.2 2012/04/15 07:45:49 cdunde Exp $
+// ----------- REVISION HISTORY ------------
+//$Log: Zaeroq2.qrk,v $
+//Revision 1.2  2012/04/15 07:45:49  cdunde
+//Update for additional items.
+//
+//Revision 1.1  2012/04/13 20:48:42  cdunde
+//Added mission pak support for Zaero.
+//
+//
+
+{
+    QuArKProtected = "1"
+    Description = "Zaero - Quake 2"
+
+    Game Context.qctx =
+    {
+        Game = "Quake 2"       // based on Quake 2
+        SourceDir = "zaero"    // looks there for files
+        GameDir = "zaero"      // starts Quake 2 with "+set game zaero"
+    }
+
+  Textures.qtx =
+  {
+    ToolBox = "Texture Browser..."
+    Root = "Zaero Textures.qtxfolder"
+    HTML = "intro.texturebrowser.html"
+
+    t_zaero:incl =      { a = "zaero" }
+
+    Zaero Textures.qtxfolder =
+    {
+      textures.txlist =
+      {
+        clip.wl                                    = { t_zaero=! }
+        clip_mon.wl                                = { t_zaero=! }
+        hint.wl                                    = { t_zaero=! }
+        origin.wl                                  = { t_zaero=! }
+        skip.wl                                    = { t_zaero=! }
+        trigger.wl                                 = { t_zaero=! }
+      }
+      z1.txlist =
+      {
+        z1/+0cgrate1_1.wl                          = { t_zaero=! }
+        z1/+0comp11_1.wl                           = { t_zaero=! }
+        z1/+1cgrate1_1.wl                          = { t_zaero=! }
+        z1/+1comp11_1.wl                           = { t_zaero=! }
+        z1/+2comp11_1.wl                           = { t_zaero=! }
+        z1/+3comp11_1.wl                           = { t_zaero=! }
+        z1/+4comp11_1.wl                           = { t_zaero=! }
+        z1/+5comp11_1.wl                           = { t_zaero=! }
+        z1/+6comp11_1.wl                           = { t_zaero=! }
+        z1/+7comp11_1.wl                           = { t_zaero=! }
+        z1/+8comp11_1.wl                           = { t_zaero=! }
+        z1/+9comp11_1.wl                           = { t_zaero=! }
+        z1/baselt_2.wl                             = { t_zaero=! }
+        z1/box1_5.wl                               = { t_zaero=! }
+        z1/box1_6.wl                               = { t_zaero=! }
+        z1/box3_1.wl                               = { t_zaero=! }
+        z1/box3_2.wl                               = { t_zaero=! }
+        z1/box3_3.wl                               = { t_zaero=! }
+        z1/box3_4.wl                               = { t_zaero=! }
+        z1/box3_5.wl                               = { t_zaero=! }
+        z1/box3_6.wl                               = { t_zaero=! }
+        z1/broken2_1.wl                            = { t_zaero=! }
+        z1/broken2_1a.wl                           = { t_zaero=! }
+        z1/brwater.wl                              = { t_zaero=! }
+        z1/btactmach0.wl                           = { t_zaero=! }
+        z1/btactmach1.wl                           = { t_zaero=! }
+        z1/btactmach2.wl                           = { t_zaero=! }
+        z1/btactmach3.wl                           = { t_zaero=! }
+        z1/ceil1_1.wl                              = { t_zaero=! }
+        z1/ceil1_3.wl                              = { t_zaero=! }
+        z1/ceil1_4.wl                              = { t_zaero=! }
+        z1/ceil1_7.wl                              = { t_zaero=! }
+        z1/clip.wl                                 = { t_zaero=! }
+        z1/clip_mon.wl                             = { t_zaero=! }
+        z1/cmet51a.wl                              = { t_zaero=! }
+        z1/color1_2.wl                             = { t_zaero=! }
+        z1/color1_3.wl                             = { t_zaero=! }
+        z1/color1_4.wl                             = { t_zaero=! }
+        z1/color1_6.wl                             = { t_zaero=! }
+        z1/color1_7.wl                             = { t_zaero=! }
+        z1/color2_4.wl                             = { t_zaero=! }
+        z1/c_met51a.wl                             = { t_zaero=! }
+        z1/c_met5_1.wl                             = { t_zaero=! }
+        z1/c_met7_2.wl                             = { t_zaero=! }
+        z1/dr02_2.wl                               = { t_zaero=! }
+        z1/exit1.wl                                = { t_zaero=! }
+        z1/flat1_1.wl                              = { t_zaero=! }
+        z1/flat1_2.wl                              = { t_zaero=! }
+        z1/floor3_1.wl                             = { t_zaero=! }
+        z1/floor3_1a.wl                            = { t_zaero=! }
+        z1/floor3_2.wl                             = { t_zaero=! }
+        z1/floor3_3.wl                             = { t_zaero=! }
+        z1/florr1_5.wl                             = { t_zaero=! }
+        z1/ggrat12_2.wl                            = { t_zaero=! }
+        z1/ggrat4_1.wl                             = { t_zaero=! }
+        z1/ggrat4_2.wl                             = { t_zaero=! }
+        z1/ggrat5_1.wl                             = { t_zaero=! }
+        z1/ggrat5_2.wl                             = { t_zaero=! }
+        z1/ggrat6_1.wl                             = { t_zaero=! }
+        z1/ggrat6_2.wl                             = { t_zaero=! }
+        z1/ggrat7_1.wl                             = { t_zaero=! }
+        z1/ggrate7_1.wl                            = { t_zaero=! }
+        z1/grass1_4.wl                             = { t_zaero=! }
+        z1/grate1_1.wl                             = { t_zaero=! }
+        z1/grate1_2.wl                             = { t_zaero=! }
+        z1/grate1_3.wl                             = { t_zaero=! }
+        z1/grate1_4.wl                             = { t_zaero=! }
+        z1/grate1_6.wl                             = { t_zaero=! }
+        z1/grate2_1.wl                             = { t_zaero=! }
+        z1/grate2_2.wl                             = { t_zaero=! }
+        z1/grate2_3.wl                             = { t_zaero=! }
+        z1/grate2_5.wl                             = { t_zaero=! }
+        z1/grate2_6.wl                             = { t_zaero=! }
+        z1/grate2_7.wl                             = { t_zaero=! }
+        z1/grate2_7a.wl                            = { t_zaero=! }
+        z1/grate2_8.wl                             = { t_zaero=! }
+        z1/grnx1_2.wl                              = { t_zaero=! }
+        z1/grnx2_1.wl                              = { t_zaero=! }
+        z1/hint.wl                                 = { t_zaero=! }
+        z1/lever2.wl                               = { t_zaero=! }
+        z1/lever3.wl                               = { t_zaero=! }
+        z1/metal1_4.wl                             = { t_zaero=! }
+        z1/metal1_5.wl                             = { t_zaero=! }
+        z1/metal1_8.wl                             = { t_zaero=! }
+        z1/metal2_1.wl                             = { t_zaero=! }
+        z1/metal2_1a.wl                            = { t_zaero=! }
+        z1/metal2_2.wl                             = { t_zaero=! }
+        z1/metal2_3.wl                             = { t_zaero=! }
+        z1/metal2_4.wl                             = { t_zaero=! }
+        z1/metal3_2.wl                             = { t_zaero=! }
+        z1/metal3_2a.wl                            = { t_zaero=! }
+        z1/metal3_3.wl                             = { t_zaero=! }
+        z1/metal3_4.wl                             = { t_zaero=! }
+        z1/metal3_5.wl                             = { t_zaero=! }
+        z1/metal3_6.wl                             = { t_zaero=! }
+        z1/metal5_2.wl                             = { t_zaero=! }
+        z1/origin.wl                               = { t_zaero=! }
+        z1/redkeypad.wl                            = { t_zaero=! }
+        z1/rocks19_1.wl                            = { t_zaero=! }
+        z1/skip.wl                                 = { t_zaero=! }
+        z1/trigger.wl                              = { t_zaero=! }
+        z1/wgrate1_4.wl                            = { t_zaero=! }
+        z1/wndow1_2.wl                             = { t_zaero=! }
+        z1/xsky1.wl                                = { t_zaero=! }
+      }
+      z2.txlist =
+      {
+        z2/+0butn4.wl                              = { t_zaero=! }
+        z2/+0comp10_1.wl                           = { t_zaero=! }
+        z2/+1comp10_1.wl                           = { t_zaero=! }
+        z2/+2comp10_1.wl                           = { t_zaero=! }
+        z2/+3comp10_1.wl                           = { t_zaero=! }
+        z2/+4comp10_1.wl                           = { t_zaero=! }
+        z2/airduc1_2.wl                            = { t_zaero=! }
+        z2/airduct1_2.wl                           = { t_zaero=! }
+        z2/arrowup0.wl                             = { t_zaero=! }
+        z2/arrowup1.wl                             = { t_zaero=! }
+        z2/arrowup2.wl                             = { t_zaero=! }
+        z2/arrowup3.wl                             = { t_zaero=! }
+        z2/awater.wl                               = { t_zaero=! }
+        z2/baselt_3.wl                             = { t_zaero=! }
+        z2/baselt_4.wl                             = { t_zaero=! }
+        z2/baselt_b.wl                             = { t_zaero=! }
+        z2/baselt_blu.wl                           = { t_zaero=! }
+        z2/basemap.wl                              = { t_zaero=! }
+        z2/basic.wl                                = { t_zaero=! }
+        z2/basic2.wl                               = { t_zaero=! }
+        z2/basic3.wl                               = { t_zaero=! }
+        z2/baslt3_1.wl                             = { t_zaero=! }
+        z2/bigmet1_1.wl                            = { t_zaero=! }
+        z2/bigmet1_2.wl                            = { t_zaero=! }
+        z2/bluekeypad.wl                           = { t_zaero=! }
+        z2/bmetal11_1.wl                           = { t_zaero=! }
+        z2/bmetal11_2.wl                           = { t_zaero=! }
+        z2/box14.wl                                = { t_zaero=! }
+        z2/box1_3.wl                               = { t_zaero=! }
+        z2/box1_4.wl                               = { t_zaero=! }
+        z2/box4_2.wl                               = { t_zaero=! }
+        z2/box4_4.wl                               = { t_zaero=! }
+        z2/box_14.wl                               = { t_zaero=! }
+        z2/btdoor.wl                               = { t_zaero=! }
+        z2/btdoor_op.wl                            = { t_zaero=! }
+        z2/btelev_dn.wl                            = { t_zaero=! }
+        z2/btelev_up.wl                            = { t_zaero=! }
+        z2/caution1_1.wl                           = { t_zaero=! }
+        z2/ceil1_1.wl                              = { t_zaero=! }
+        z2/ceil1_2.wl                              = { t_zaero=! }
+        z2/ceil1_7.wl                              = { t_zaero=! }
+        z2/clip.wl                                 = { t_zaero=! }
+        z2/clip_mon.wl                             = { t_zaero=! }
+        z2/comp1_1.wl                              = { t_zaero=! }
+        z2/comp1_3.wl                              = { t_zaero=! }
+        z2/comp1_3a.wl                             = { t_zaero=! }
+        z2/comp2_1.wl                              = { t_zaero=! }
+        z2/comp2_3.wl                              = { t_zaero=! }
+        z2/comp3_1.wl                              = { t_zaero=! }
+        z2/comp3_2.wl                              = { t_zaero=! }
+        z2/comp3_4.wl                              = { t_zaero=! }
+        z2/comp3_5.wl                              = { t_zaero=! }
+        z2/comp3_6.wl                              = { t_zaero=! }
+        z2/comp3_7.wl                              = { t_zaero=! }
+        z2/comp3_8.wl                              = { t_zaero=! }
+        z2/comp4_2.wl                              = { t_zaero=! }
+        z2/comp5_1.wl                              = { t_zaero=! }
+        z2/comp5_2.wl                              = { t_zaero=! }
+        z2/comp5_3.wl                              = { t_zaero=! }
+        z2/comp5_4.wl                              = { t_zaero=! }
+        z2/comp8_1.wl                              = { t_zaero=! }
+        z2/comp9_3.wl                              = { t_zaero=! }
+        z2/compu1_2.wl                             = { t_zaero=! }
+        z2/core1_3.wl                              = { t_zaero=! }
+        z2/crate1_1.wl                             = { t_zaero=! }
+        z2/crate1_6.wl                             = { t_zaero=! }
+        z2/c_met51a.wl                             = { t_zaero=! }
+        z2/c_met51b.wl                             = { t_zaero=! }
+        z2/c_met51c.wl                             = { t_zaero=! }
+        z2/c_met5_1.wl                             = { t_zaero=! }
+        z2/dr02_1.wl                               = { t_zaero=! }
+        z2/dr02_2.wl                               = { t_zaero=! }
+        z2/flat1_1.wl                              = { t_zaero=! }
+        z2/flat1_2.wl                              = { t_zaero=! }
+        z2/floor2_1.wl                             = { t_zaero=! }
+        z2/floor3_1.wl                             = { t_zaero=! }
+        z2/floor3_2.wl                             = { t_zaero=! }
+        z2/floor3_3.wl                             = { t_zaero=! }
+        z2/florr1_2.wl                             = { t_zaero=! }
+        z2/florr1_5.wl                             = { t_zaero=! }
+        z2/florr1_8.wl                             = { t_zaero=! }
+        z2/fmet1_2.wl                              = { t_zaero=! }
+        z2/fmet1_3.wl                              = { t_zaero=! }
+        z2/fmet3_1.wl                              = { t_zaero=! }
+        z2/fmet3_5.wl                              = { t_zaero=! }
+        z2/fuse1_3.wl                              = { t_zaero=! }
+        z2/grass1_3.wl                             = { t_zaero=! }
+        z2/grnx2_6.wl                              = { t_zaero=! }
+        z2/grnx2_9.wl                              = { t_zaero=! }
+        z2/grnx3_1.wl                              = { t_zaero=! }
+        z2/hint.wl                                 = { t_zaero=! }
+        z2/hvy_dr1_2.wl                            = { t_zaero=! }
+        z2/hvy_dr2_1.wl                            = { t_zaero=! }
+        z2/hvy_dr3_1.wl                            = { t_zaero=! }
+        z2/lever3.wl                               = { t_zaero=! }
+        z2/lever8.wl                               = { t_zaero=! }
+        z2/light_01.wl                             = { t_zaero=! }
+        z2/met1_1.wl                               = { t_zaero=! }
+        z2/met1_1a.wl                              = { t_zaero=! }
+        z2/met1_1c.wl                              = { t_zaero=! }
+        z2/met1_2.wl                               = { t_zaero=! }
+        z2/met1_2b.wl                              = { t_zaero=! }
+        z2/met1_3.wl                               = { t_zaero=! }
+        z2/met1_3b.wl                              = { t_zaero=! }
+        z2/met1_3c.wl                              = { t_zaero=! }
+        z2/met1_3rb.wl                             = { t_zaero=! }
+        z2/met1_3rc.wl                             = { t_zaero=! }
+        z2/met1_5.wl                               = { t_zaero=! }
+        z2/met2_1.wl                               = { t_zaero=! }
+        z2/met2_2.wl                               = { t_zaero=! }
+        z2/met2_3.wl                               = { t_zaero=! }
+        z2/met2_3b.wl                              = { t_zaero=! }
+        z2/met2_3c.wl                              = { t_zaero=! }
+        z2/met2_4.wl                               = { t_zaero=! }
+        z2/met2_4a.wl                              = { t_zaero=! }
+        z2/met2_4b.wl                              = { t_zaero=! }
+        z2/met3_1.wl                               = { t_zaero=! }
+        z2/met3_2.wl                               = { t_zaero=! }
+        z2/met3_2a.wl                              = { t_zaero=! }
+        z2/met3_3.wl                               = { t_zaero=! }
+        z2/met4_2.wl                               = { t_zaero=! }
+        z2/met4_3.wl                               = { t_zaero=! }
+        z2/met4_4.wl                               = { t_zaero=! }
+        z2/met4_4a.wl                              = { t_zaero=! }
+        z2/met4_5.wl                               = { t_zaero=! }
+        z2/metal11_3.wl                            = { t_zaero=! }
+        z2/metal13_1.wl                            = { t_zaero=! }
+        z2/metal13_2.wl                            = { t_zaero=! }
+        z2/metal13_3.wl                            = { t_zaero=! }
+        z2/metal14_1.wl                            = { t_zaero=! }
+        z2/metal14_2.wl                            = { t_zaero=! }
+        z2/metal1_3.wl                             = { t_zaero=! }
+        z2/metal37_2.wl                            = { t_zaero=! }
+        z2/metal37_3.wl                            = { t_zaero=! }
+        z2/metal3_1.wl                             = { t_zaero=! }
+        z2/metal3_2.wl                             = { t_zaero=! }
+        z2/metal3_3.wl                             = { t_zaero=! }
+        z2/metal3_5.wl                             = { t_zaero=! }
+        z2/metal4_1.wl                             = { t_zaero=! }
+        z2/metal4_2.wl                             = { t_zaero=! }
+        z2/metal5_1.wl                             = { t_zaero=! }
+        z2/metal6_1.wl                             = { t_zaero=! }
+        z2/metal6_2.wl                             = { t_zaero=! }
+        z2/mine04_2.wl                             = { t_zaero=! }
+        z2/mine06_3.wl                             = { t_zaero=! }
+        z2/mine07_2.wl                             = { t_zaero=! }
+        z2/mine07_4.wl                             = { t_zaero=! }
+        z2/mine08_1.wl                             = { t_zaero=! }
+        z2/mine10_1.wl                             = { t_zaero=! }
+        z2/mine10_2.wl                             = { t_zaero=! }
+        z2/mine13_1.wl                             = { t_zaero=! }
+        z2/mine13_2.wl                             = { t_zaero=! }
+        z2/mine14_1.wl                             = { t_zaero=! }
+        z2/mine4_2.wl                              = { t_zaero=! }
+        z2/mine6_3.wl                              = { t_zaero=! }
+        z2/minpn3_1.wl                             = { t_zaero=! }
+        z2/mmtl19_2.wl                             = { t_zaero=! }
+        z2/mont1_3.wl                              = { t_zaero=! }
+        z2/mont1_4.wl                              = { t_zaero=! }
+        z2/mont3_1.wl                              = { t_zaero=! }
+        z2/mont3_2.wl                              = { t_zaero=! }
+        z2/origin.wl                               = { t_zaero=! }
+        z2/pdor1_1.wl                              = { t_zaero=! }
+        z2/pdor1_2.wl                              = { t_zaero=! }
+        z2/pillar1_1.wl                            = { t_zaero=! }
+        z2/pillar1_2.wl                            = { t_zaero=! }
+        z2/pilr03_3.wl                             = { t_zaero=! }
+        z2/pip01_2.wl                              = { t_zaero=! }
+        z2/pipe1_4.wl                              = { t_zaero=! }
+        z2/plate1_2.wl                             = { t_zaero=! }
+        z2/plate1_5.wl                             = { t_zaero=! }
+        z2/plite1_1.wl                             = { t_zaero=! }
+        z2/plite1_2.wl                             = { t_zaero=! }
+        z2/plite1_3.wl                             = { t_zaero=! }
+        z2/pow1_1.wl                               = { t_zaero=! }
+        z2/pwr_dr1_2.wl                            = { t_zaero=! }
+        z2/rcomp1_4.wl                             = { t_zaero=! }
+        z2/redfield.wl                             = { t_zaero=! }
+        z2/redkeypad.wl                            = { t_zaero=! }
+        z2/reflt3_5.wl                             = { t_zaero=! }
+        z2/rmetal4_1.wl                            = { t_zaero=! }
+        z2/rmtl36_4.wl                             = { t_zaero=! }
+        z2/rocks19_1.wl                            = { t_zaero=! }
+        z2/rpip2_1.wl                              = { t_zaero=! }
+        z2/sewer1.wl                               = { t_zaero=! }
+        z2/sflr1_1.wl                              = { t_zaero=! }
+        z2/sflr1_2.wl                              = { t_zaero=! }
+        z2/sflr1_3.wl                              = { t_zaero=! }
+        z2/skip.wl                                 = { t_zaero=! }
+        z2/slots1_4.wl                             = { t_zaero=! }
+        z2/slots1_5.wl                             = { t_zaero=! }
+        z2/slots1_6.wl                             = { t_zaero=! }
+        z2/slotwl2_1.wl                            = { t_zaero=! }
+        z2/slotwl4_1.wl                            = { t_zaero=! }
+        z2/slotwl4_2.wl                            = { t_zaero=! }
+        z2/slotwl4_4.wl                            = { t_zaero=! }
+        z2/slotwl5_5.wl                            = { t_zaero=! }
+        z2/sltfl2_1.wl                             = { t_zaero=! }
+        z2/sltfr2_4.wl                             = { t_zaero=! }
+        z2/subdr1_1.wl                             = { t_zaero=! }
+        z2/tcmet4_2.wl                             = { t_zaero=! }
+        z2/tcmet4_3.wl                             = { t_zaero=! }
+        z2/tcmet4_4.wl                             = { t_zaero=! }
+        z2/tcmet5_2.wl                             = { t_zaero=! }
+        z2/tcmet5_4.wl                             = { t_zaero=! }
+        z2/tcmt9_1.wl                              = { t_zaero=! }
+        z2/tcmt9_4.wl                              = { t_zaero=! }
+        z2/tram03_2.wl                             = { t_zaero=! }
+        z2/trigger.wl                              = { t_zaero=! }
+        z2/troof1_4.wl                             = { t_zaero=! }
+        z2/troof1_6.wl                             = { t_zaero=! }
+        z2/turret5_1.wl                            = { t_zaero=! }
+        z2/water8.wl                               = { t_zaero=! }
+        z2/wbasic1_1.wl                            = { t_zaero=! }
+        z2/wbasic1_1a.wl                           = { t_zaero=! }
+        z2/wgrate1_4.wl                            = { t_zaero=! }
+        z2/wincomp3_5.wl                           = { t_zaero=! }
+        z2/wincomp3_7.wl                           = { t_zaero=! }
+        z2/wire1_3.wl                              = { t_zaero=! }
+        z2/wmtal3_1.wl                             = { t_zaero=! }
+        z2/wndow0_1.wl                             = { t_zaero=! }
+        z2/wndow0_3.wl                             = { t_zaero=! }
+        z2/wndow1_2.wl                             = { t_zaero=! }
+        z2/wplat1_2.wl                             = { t_zaero=! }
+        z2/yellow1_4.wl                            = { t_zaero=! }
+      }
+      z3.txlist =
+      {
+        z3/black.wl                                = { t_zaero=! }
+        z3/blum10_2.wl                             = { t_zaero=! }
+        z3/blum12_1.wl                             = { t_zaero=! }
+        z3/blum13_1.wl                             = { t_zaero=! }
+        z3/blume4_1.wl                             = { t_zaero=! }
+        z3/blume4_1d.wl                            = { t_zaero=! }
+        z3/blume4_2.wl                             = { t_zaero=! }
+        z3/blume4_2d.wl                            = { t_zaero=! }
+        z3/blume6_1.wl                             = { t_zaero=! }
+        z3/blume6_2.wl                             = { t_zaero=! }
+        z3/blume6_2d.wl                            = { t_zaero=! }
+        z3/blume6_3d.wl                            = { t_zaero=! }
+        z3/blume7_1.wl                             = { t_zaero=! }
+        z3/blume7_1a.wl                            = { t_zaero=! }
+        z3/blume7_2.wl                             = { t_zaero=! }
+        z3/brwater.wl                              = { t_zaero=! }
+        z3/cable1_1.wl                             = { t_zaero=! }
+        z3/ceil1_11.wl                             = { t_zaero=! }
+        z3/ceil1_25.wl                             = { t_zaero=! }
+        z3/clip.wl                                 = { t_zaero=! }
+        z3/clip_mon.wl                             = { t_zaero=! }
+        z3/dr03_2.wl                               = { t_zaero=! }
+        z3/drsew1_1.wl                             = { t_zaero=! }
+        z3/drsew2_1.wl                             = { t_zaero=! }
+        z3/drsew2_2.wl                             = { t_zaero=! }
+        z3/floor1_2.wl                             = { t_zaero=! }
+        z3/floor1_2d.wl                            = { t_zaero=! }
+        z3/floor2_1.wl                             = { t_zaero=! }
+        z3/floor2_7.wl                             = { t_zaero=! }
+        z3/floor2_8.wl                             = { t_zaero=! }
+        z3/florr2_7.wl                             = { t_zaero=! }
+        z3/flr1_2.wl                               = { t_zaero=! }
+        z3/ggrat2_7.wl                             = { t_zaero=! }
+        z3/grate1_4.wl                             = { t_zaero=! }
+        z3/green0_1.wl                             = { t_zaero=! }
+        z3/green0_2.wl                             = { t_zaero=! }
+        z3/green2_1.wl                             = { t_zaero=! }
+        z3/green2_2.wl                             = { t_zaero=! }
+        z3/green2_3.wl                             = { t_zaero=! }
+        z3/green2_3d.wl                            = { t_zaero=! }
+        z3/green2_4d.wl                            = { t_zaero=! }
+        z3/green3_1.wl                             = { t_zaero=! }
+        z3/green3_1a.wl                            = { t_zaero=! }
+        z3/green3_1d.wl                            = { t_zaero=! }
+        z3/green3_2.wl                             = { t_zaero=! }
+        z3/green3_2a.wl                            = { t_zaero=! }
+        z3/green3_2d.wl                            = { t_zaero=! }
+        z3/green3_3.wl                             = { t_zaero=! }
+        z3/green3_3a.wl                            = { t_zaero=! }
+        z3/green3_3d.wl                            = { t_zaero=! }
+        z3/green3_4.wl                             = { t_zaero=! }
+        z3/green3_4d.wl                            = { t_zaero=! }
+        z3/grnx2_2.wl                              = { t_zaero=! }
+        z3/grnx2_5.wl                              = { t_zaero=! }
+        z3/hint.wl                                 = { t_zaero=! }
+        z3/jaildr2_3.wl                            = { t_zaero=! }
+        z3/keysign2.wl                             = { t_zaero=! }
+        z3/metal17_2.wl                            = { t_zaero=! }
+        z3/metal18_1.wl                            = { t_zaero=! }
+        z3/metal18_2.wl                            = { t_zaero=! }
+        z3/metal1_2.wl                             = { t_zaero=! }
+        z3/metal25_3.wl                            = { t_zaero=! }
+        z3/metal2_1.wl                             = { t_zaero=! }
+        z3/metal36_4.wl                            = { t_zaero=! }
+        z3/metal36_4d.wl                           = { t_zaero=! }
+        z3/metal6_1.wl                             = { t_zaero=! }
+        z3/metl5b_1.wl                             = { t_zaero=! }
+        z3/metl5b_1a.wl                            = { t_zaero=! }
+        z3/mindr1_1.wl                             = { t_zaero=! }
+        z3/mon1_3.wl                               = { t_zaero=! }
+        z3/origin.wl                               = { t_zaero=! }
+        z3/pipe1_3.wl                              = { t_zaero=! }
+        z3/pipes1_2.wl                             = { t_zaero=! }
+        z3/rocks17_2.wl                            = { t_zaero=! }
+        z3/rocks19_1.wl                            = { t_zaero=! }
+        z3/rust1_0.wl                              = { t_zaero=! }
+        z3/skip.wl                                 = { t_zaero=! }
+        z3/station1.wl                             = { t_zaero=! }
+        z3/stflr1_4.wl                             = { t_zaero=! }
+        z3/support1_5.wl                           = { t_zaero=! }
+        z3/trigger.wl                              = { t_zaero=! }
+        z3/wall1_1.wl                              = { t_zaero=! }
+        z3/wall1_2.wl                              = { t_zaero=! }
+        z3/wall1_3.wl                              = { t_zaero=! }
+        z3/wbasic1_7.wl                            = { t_zaero=! }
+        z3/wstfl2_6.wl                             = { t_zaero=! }
+        z3/wstlt1_1.wl                             = { t_zaero=! }
+        z3/wstlt1_2.wl                             = { t_zaero=! }
+        z3/wstlt1_8.wl                             = { t_zaero=! }
+        z3/yelfield.wl                             = { t_zaero=! }
+        z3/yellow1_2.wl                            = { t_zaero=! }
+      }
+      z4.txlist =
+      {
+        z4/+0btshoot1.wl                           = { t_zaero=! }
+        z4/+0btshoot2.wl                           = { t_zaero=! }
+        z4/+0butn4.wl                              = { t_zaero=! }
+        z4/+abtshoot2.wl                           = { t_zaero=! }
+        z4/+abtshoot3.wl                           = { t_zaero=! }
+        z4/baselt_b.wl                             = { t_zaero=! }
+        z4/baselt_blu.wl                           = { t_zaero=! }
+        z4/baselt_blu2.wl                          = { t_zaero=! }
+        z4/belt1_2.wl                              = { t_zaero=! }
+        z4/blbk2_1.wl                              = { t_zaero=! }
+        z4/bluesky.wl                              = { t_zaero=! }
+        z4/blum11_1.wl                             = { t_zaero=! }
+        z4/blum12_2.wl                             = { t_zaero=! }
+        z4/blum13_1.wl                             = { t_zaero=! }
+        z4/blume4_1.wl                             = { t_zaero=! }
+        z4/blume6_1.wl                             = { t_zaero=! }
+        z4/blume6_1a.wl                            = { t_zaero=! }
+        z4/blume6_2.wl                             = { t_zaero=! }
+        z4/blume7_2.wl                             = { t_zaero=! }
+        z4/blume8_1.wl                             = { t_zaero=! }
+        z4/blume9_2.wl                             = { t_zaero=! }
+        z4/blume9_2a.wl                            = { t_zaero=! }
+        z4/ceil1_2.wl                              = { t_zaero=! }
+        z4/ceil1_4.wl                              = { t_zaero=! }
+        z4/ceil1_5.wl                              = { t_zaero=! }
+        z4/ceil1_6.wl                              = { t_zaero=! }
+        z4/ceil1_8.wl                              = { t_zaero=! }
+        z4/clip.wl                                 = { t_zaero=! }
+        z4/clip_mon.wl                             = { t_zaero=! }
+        z4/comp1_5.wl                              = { t_zaero=! }
+        z4/comp7_1.wl                              = { t_zaero=! }
+        z4/comp7_2.wl                              = { t_zaero=! }
+        z4/comp9_2.wl                              = { t_zaero=! }
+        z4/door2_2.wl                              = { t_zaero=! }
+        z4/door2_2a.wl                             = { t_zaero=! }
+        z4/drag1_2.wl                              = { t_zaero=! }
+        z4/drag1_3.wl                              = { t_zaero=! }
+        z4/drag2_2.wl                              = { t_zaero=! }
+        z4/drag2_3.wl                              = { t_zaero=! }
+        z4/drag3_3.wl                              = { t_zaero=! }
+        z4/drag4_1.wl                              = { t_zaero=! }
+        z4/drag4_2.wl                              = { t_zaero=! }
+        z4/drag4_3.wl                              = { t_zaero=! }
+        z4/drag4_4.wl                              = { t_zaero=! }
+        z4/dump1_1.wl                              = { t_zaero=! }
+        z4/dump1_2.wl                              = { t_zaero=! }
+        z4/dump3_1.wl                              = { t_zaero=! }
+        z4/dump3_2.wl                              = { t_zaero=! }
+        z4/floor1_6.wl                             = { t_zaero=! }
+        z4/floor2_5.wl                             = { t_zaero=! }
+        z4/florr2_5.wl                             = { t_zaero=! }
+        z4/florr2_7.wl                             = { t_zaero=! }
+        z4/florr2_7a.wl                            = { t_zaero=! }
+        z4/flr1_1.wl                               = { t_zaero=! }
+        z4/flr1_3.wl                               = { t_zaero=! }
+        z4/geowaldi_1.wl                           = { t_zaero=! }
+        z4/geowaldi_2.wl                           = { t_zaero=! }
+        z4/geowalj1_4.wl                           = { t_zaero=! }
+        z4/geowalm1_1.wl                           = { t_zaero=! }
+        z4/geowalm1_1a.wl                          = { t_zaero=! }
+        z4/geowalm1_1b.wl                          = { t_zaero=! }
+        z4/geowalo1_1.wl                           = { t_zaero=! }
+        z4/geowalp1_1.wl                           = { t_zaero=! }
+        z4/geowal_02.wl                            = { t_zaero=! }
+        z4/grass1_7.wl                             = { t_zaero=! }
+        z4/grnx2_3.wl                              = { t_zaero=! }
+        z4/grnx2_3a.wl                             = { t_zaero=! }
+        z4/grnx2_3b.wl                             = { t_zaero=! }
+        z4/head1_1.wl                              = { t_zaero=! }
+        z4/hint.wl                                 = { t_zaero=! }
+        z4/hvy_dr3_1a.wl                           = { t_zaero=! }
+        z4/jaildr03_2.wl                           = { t_zaero=! }
+        z4/jaildr1_3.wl                            = { t_zaero=! }
+        z4/lava.wl                                 = { t_zaero=! }
+        z4/lead1_2.wl                              = { t_zaero=! }
+        z4/lead1_2a.wl                             = { t_zaero=! }
+        z4/lzr01_1.wl                              = { t_zaero=! }
+        z4/lzr01_1a.wl                             = { t_zaero=! }
+        z4/metal1_2.wl                             = { t_zaero=! }
+        z4/metal33_2.wl                            = { t_zaero=! }
+        z4/metal35_1.wl                            = { t_zaero=! }
+        z4/metal37_3.wl                            = { t_zaero=! }
+        z4/metal3_1.wl                             = { t_zaero=! }
+        z4/metal4_1.wl                             = { t_zaero=! }
+        z4/metal4_2.wl                             = { t_zaero=! }
+        z4/metal5_2.wl                             = { t_zaero=! }
+        z4/metal5_2a.wl                            = { t_zaero=! }
+        z4/metal5_2b.wl                            = { t_zaero=! }
+        z4/metal7_1.wl                             = { t_zaero=! }
+        z4/metal8_1.wl                             = { t_zaero=! }
+        z4/metal9_1.wl                             = { t_zaero=! }
+        z4/metl10_2.wl                             = { t_zaero=! }
+        z4/mvr1_2.wl                               = { t_zaero=! }
+        z4/origin.wl                               = { t_zaero=! }
+        z4/palmet10_2.wl                           = { t_zaero=! }
+        z4/palmet13_4.wl                           = { t_zaero=! }
+        z4/palmet14_1.wl                           = { t_zaero=! }
+        z4/palmet3_1.wl                            = { t_zaero=! }
+        z4/palmet3_2.wl                            = { t_zaero=! }
+        z4/palmet5_1.wl                            = { t_zaero=! }
+        z4/palmet5_1a.wl                           = { t_zaero=! }
+        z4/palmet5_2.wl                            = { t_zaero=! }
+        z4/palmet5_2a.wl                           = { t_zaero=! }
+        z4/palsup1_5.wl                            = { t_zaero=! }
+        z4/palsup1_5y.wl                           = { t_zaero=! }
+        z4/patwall0_2.wl                           = { t_zaero=! }
+        z4/pilr02_1.wl                             = { t_zaero=! }
+        z4/pilr02_2.wl                             = { t_zaero=! }
+        z4/pipe1_4.wl                              = { t_zaero=! }
+        z4/pipes1_2.wl                             = { t_zaero=! }
+        z4/plat1_1.wl                              = { t_zaero=! }
+        z4/plate5_2.wl                             = { t_zaero=! }
+        z4/rcomp1_4.wl                             = { t_zaero=! }
+        z4/reflt3_1.wl                             = { t_zaero=! }
+        z4/reflt3_2.wl                             = { t_zaero=! }
+        z4/sewer1.wl                               = { t_zaero=! }
+        z4/skip.wl                                 = { t_zaero=! }
+        z4/trigger.wl                              = { t_zaero=! }
+        z4/wastemap.wl                             = { t_zaero=! }
+        z4/water6.wl                               = { t_zaero=! }
+        z4/wbasic1_4.wl                            = { t_zaero=! }
+        z4/wires2_1.wl                             = { t_zaero=! }
+        z4/wndow0_3.wl                             = { t_zaero=! }
+        z4/wndow0_3a.wl                            = { t_zaero=! }
+        z4/wndw01_2.wl                             = { t_zaero=! }
+        z4/wplat1_3.wl                             = { t_zaero=! }
+        z4/wslt1_3.wl                              = { t_zaero=! }
+        z4/wslt1_5.wl                              = { t_zaero=! }
+        z4/wstlt1_3.wl                             = { t_zaero=! }
+        z4/wstlt1_5.wl                             = { t_zaero=! }
+        z4/zlogo.wl                                = { t_zaero=! }
+        z4/zlogo2.wl                               = { t_zaero=! }
+        z4/zlogo3.wl                               = { t_zaero=! }
+        z4/zlogo4.wl                               = { t_zaero=! }
+        z4/zlogo5.wl                               = { t_zaero=! }
+        z4/zlogo6.wl                               = { t_zaero=! }
+      }
+    }
+  }
+  NewMapItems.qtx =
+  {
+    ToolBox = "New Map Items..."
+    Root = "Zaero Entities.qtxfolder"
+    Zaero Entities.qtxfolder =
+    {
+      Weapon_* entities.qtxfolder =
+      {
+        weapon_flaregun:e =
+        {
+          origin = "0 0 0"
+          ;desc = "This is the FlareGun uses ammo_flares."
+        }
+        weapon_sniperrifle:e =
+        {
+          origin = "0 0 0"
+          ;desc = "This is the SniperRifle uses ammo_bullets."
+        }
+        weapon_soniccannon:e =
+        {
+          origin = "0 0 0"
+          ;desc = "This is the SonicCannon uses ammo_cells."
+        }
+      }
+      Ammo_* entities.qtxfolder =
+      {
+        ammo_a2k:e =
+        {
+          origin = "0 0 0"
+          angle = "360"
+          ;desc = "This is the a2k ammo."
+        }
+        ammo_empnuke:e =
+        {
+          origin = "0 0 0"
+          angle = "360"
+          ;desc = "This is the ammo for the EMPNuke."
+        }
+        ammo_flares:e =
+        {
+          origin = "0 0 0"
+          angle = "360"
+          ;desc = "This is the ammo_flares for the FlareGun."
+        }
+        ammo_ired:e =
+        {
+          origin = "0 0 0"
+          angle = "360"
+          ;desc = "This is the LaserTripBombs."
+        }
+        ammo_plasmashield:e =
+        {
+          origin = "0 0 0"
+          angle = "360"
+          ;desc = "This is the plasmashield ammo."
+        }
+      }
+      Monster_* entities.qtxfolder =
+      {
+        monster_autocannon:e =
+        {
+          origin = "0 0 0"
+          angle = "360"
+          style = "4"
+          ;desc = "Auto cannon ceiling type."
+        }
+        monster_autocannon_floor:e =
+        {
+          origin = "0 0 0"
+          angle = "360"
+          style = "4"
+          ;desc = "Auto cannon floor type."
+        }
+        monster_handler:e =
+        {
+          origin = "0 0 0"
+          angle = "360"
+          ;desc = "This is a monster handler (and dog)."
+        }
+        monster_hound:e =
+        {
+          origin = "0 0 0"
+          angle = "360"
+          ;desc = "This is a monster dog."
+        }
+        monster_sentien:e =
+        {
+          origin = "0 0 0"
+          angle = "360"
+          ;desc = "This is a monster sentien."
+        }
+        monster_zboss:e =
+        {
+          origin = "0 0 0"
+          angle = "360"
+          ;desc = "This is a Zboss."
+        }
+      }
+      Misc_* entities.qtxfolder =
+      {
+        misc_commdish:e =
+        {
+          origin = "0 0 0"
+          angle = "360"
+          ;desc = "Animated Comm Dish."
+        }
+        misc_crate:e =
+        {
+          origin = "0 0 0"
+          angles = "0 0 0"
+          ;desc = "Setup specific to this size, 64."
+        }
+        misc_crate_medium:e =
+        {
+          origin = "0 0 0"
+          angle = "360"
+          ;desc = "Setup specific to this size, 48."
+        }
+        misc_crate_small:e =
+        {
+          origin = "0 0 0"
+          angle = "360"
+          ;desc = "Setup specific to this size, 32."
+        }
+        misc_ired:e =
+        {
+          origin = "0 0 0"
+          angle = "360"
+          ;desc = "Misc ired laser trip bomb."
+        }
+        misc_seat:e =
+        {
+          origin = "0 0 0"
+          angle = "360"
+          ;desc = "A pushable seat."
+        }
+        misc_securitycamera:e =
+        {
+          origin = "0 0 0"
+          mangle = "0 0 0"
+          message = "I see you!"
+          ;desc = "This is where the visor locates too."
+        }
+      }
+      Key_* entities.qtxfolder =
+      {
+        key_clearancepass:e =
+        {
+          origin = "0 0 0"
+          ;desc = "Clearance pass for the security level."
+        }
+        key_energy:e =
+        {
+          origin = "0 0 0"
+          ;desc = "Energy Key."
+        }
+        key_lab:e =
+        {
+          origin = "0 0 0"
+          ;desc = "Security pass for the laboratory."
+        }
+        key_landing_area:e =
+        {
+          origin = "0 0 0"
+          ;desc = "Landing Area Key - blue."
+        }
+        key_lava:e =
+        {
+          origin = "0 0 0"
+          ;desc = "Lava Key."
+        }
+        key_slime:e =
+        {
+          origin = "0 0 0"
+          ;desc = "Slime Key."
+        }
+      }
+      Item_* entities.qtxfolder =
+      {
+        item_visor:e =
+        {
+          origin = "0 0 0"
+          ;desc = "This is the visor."
+        }
+      }
+      Func_* entities.qtxfolder =
+      {
+        func_barrier:e =
+        {
+          origin = "0 0 0"
+          angle = "360"
+          ;desc = "Makes a barrier area."
+        }
+      }
+      Target_* entities.qtxfolder =
+      {
+        target_zboss_target:e =
+        {
+          origin = "0 0 0"
+          ;desc = "Targets the zboss."
+        }
+      }
+      Trigger_* entities.qtxfolder =
+      {
+        trigger_laser:b =
+        {
+          ;desc = "Laser-type trigger."
+          poly:p =
+          {
+            east:f =
+            {
+              v = '64 0 0 64 128 0 64 0 128'
+              tex = "[trigger]"
+              Contents = "0"
+              Flags = "128"
+              Value = "0"
+            }
+            west:f =
+            {
+              v = '-64 0 0 -64 0 128 -64 128 0'
+              tex = "[trigger]"
+              m = "1"
+              Contents = "0"
+              Flags = "128"
+              Value = "0"
+            }
+            north:f =
+            {
+              v = '0 64 0 0 64 128 128 64 0'
+              tex = "[trigger]"
+              m = "1"
+              Contents = "0"
+              Flags = "128"
+              Value = "0"
+            }
+            south:f =
+            {
+              v = '0 -64 0 128 -64 0 0 -64 128'
+              tex = "[trigger]"
+              Contents = "0"
+              Flags = "128"
+              Value = "0"
+            }
+            up:f =
+            {
+              v = '0 0 64 128 0 64 0 128 64'
+              tex = "[trigger]"
+              Contents = "0"
+              Flags = "128"
+              Value = "0"
+            }
+            down:f =
+            {
+              v = '0 0 -64 0 128 -64 128 0 -64'
+              tex = "[trigger]"
+              m = "1"
+              Contents = "0"
+              Flags = "128"
+              Value = "0"
+            }
+          }
+        }
+      }
+      other entities.qtxfolder =
+      {
+        load_mirrorlevel:e =
+        {
+          origin = "0 0 0"
+          angle = "360"
+          ;desc = "To load a mirror level to this level."
+        }
+        sound_echo:e =
+        {
+          origin = "0 0 0"
+          angle = "360"
+          ;desc = "Echos sounds played within 'dmg_radius' radius."
+        }
+      }
+    }
+  }
+  Entity forms.fctx =
+  {
+    weapon_flaregun:form =
+    {
+      Help = "This is the FlareGun uses ammo_flares."
+      bbox = '-8 -4 14 8 4 26'
+      mdl = "models/weapons/g_flare/tris.md2"
+      delay: =
+      {
+        Txt = "&"
+        Hint = "Specifies the delay in seconds before target, killtarget and m"
+         "essage will fire after the weapon is touched by the player. (Default"
+         "=0)."
+      }
+      killtarget: =
+      {
+        Txt = "&"
+        Hint = "Targetname of the entity to be removed from the map when the w"
+         "eapon is touched by the player."
+      }
+      message: =
+      {
+        Txt = "&"
+        Hint = "Specifies the character string to print to the screen when the"
+         " weapon is touched by the player."
+      }
+      target: =
+      {
+        Txt = "&"
+        Hint = "Targetname of the entity to be triggered when the weapon is to"
+         "uched by the player."
+      }
+      targetname: =
+      {
+        Txt = "&"
+        Hint = "Use this to make it disappear by making it triggered by killta"
+         "rget."
+      }
+      team: =
+      {
+        Txt = "&"
+        Hint = "Use for changing Weapons Ammo & Powerups spawning."
+      }
+      spawnflags: =
+      {
+        Typ = "X256"
+        Txt = "&"
+        Hint = "The weapon_* entity will be inhibited and not appear when skil"
+         "l=0."
+        Cap = "Not in Easy"
+      }
+      spawnflags: =
+      {
+        Typ = "X512"
+        Txt = "&"
+        Hint = "The weapon_* entity will be inhibited and not appear when skil"
+         "l=1."
+        Cap = "Not in Normal"
+      }
+      spawnflags: =
+      {
+        Typ = "X1024"
+        Txt = "&"
+        Hint = "The weapon_* entity will be inhibited and not appear when skil"
+         "l=2 or greater."
+        Cap = "Not in Hard"
+      }
+      spawnflags: =
+      {
+        Typ = "X2048"
+        Txt = "&"
+        Hint = "The weapon_* entity will be inhibited and not appear when deat"
+         "hmatch=1."
+        Cap = "Not in Deathmatch"
+      }
+      _minlight: =
+      {
+        Txt = "&"
+        Hint = "Minimum light (optional)."
+      }
+    }
+    weapon_sniperrifle:form =
+    {
+      Help = "This is the SniperRifle uses ammo_bullets."
+      bbox = '-24 -4 12 20 4 28'
+      mdl = "models/weapons/g_sniper/tris.md2"
+      delay: =
+      {
+        Txt = "&"
+        Hint = "Specifies the delay in seconds before target, killtarget and m"
+         "essage will fire after the weapon is touched by the player. (Default"
+         "=0)."
+      }
+      killtarget: =
+      {
+        Txt = "&"
+        Hint = "Targetname of the entity to be removed from the map when the w"
+         "eapon is touched by the player."
+      }
+      message: =
+      {
+        Txt = "&"
+        Hint = "Specifies the character string to print to the screen when the"
+         " weapon is touched by the player."
+      }
+      target: =
+      {
+        Txt = "&"
+        Hint = "Targetname of the entity to be triggered when the weapon is to"
+         "uched by the player."
+      }
+      targetname: =
+      {
+        Txt = "&"
+        Hint = "Use this to make it disappear by making it triggered by killta"
+         "rget."
+      }
+      team: =
+      {
+        Txt = "&"
+        Hint = "Use for changing Weapons Ammo & Powerups spawning."
+      }
+      spawnflags: =
+      {
+        Typ = "X256"
+        Txt = "&"
+        Hint = "The weapon_* entity will be inhibited and not appear when skil"
+         "l=0."
+        Cap = "Not in Easy"
+      }
+      spawnflags: =
+      {
+        Typ = "X512"
+        Txt = "&"
+        Hint = "The weapon_* entity will be inhibited and not appear when skil"
+         "l=1."
+        Cap = "Not in Normal"
+      }
+      spawnflags: =
+      {
+        Typ = "X1024"
+        Txt = "&"
+        Hint = "The weapon_* entity will be inhibited and not appear when skil"
+         "l=2 or greater."
+        Cap = "Not in Hard"
+      }
+      spawnflags: =
+      {
+        Typ = "X2048"
+        Txt = "&"
+        Hint = "The weapon_* entity will be inhibited and not appear when deat"
+         "hmatch=1."
+        Cap = "Not in Deathmatch"
+      }
+      _minlight: =
+      {
+        Txt = "&"
+        Hint = "Minimum light (optional)."
+      }
+    }
+    weapon_soniccannon:form =
+    {
+      Help = "This is the SonicCannon uses ammo_cells."
+      bbox = '-32 -6 10 34 10 26'
+      mdl = "models/weapons/g_sonic/tris.md2"
+      delay: =
+      {
+        Txt = "&"
+        Hint = "Specifies the delay in seconds before target, killtarget and m"
+         "essage will fire after the weapon is touched by the player. (Default"
+         "=0)."
+      }
+      killtarget: =
+      {
+        Txt = "&"
+        Hint = "Targetname of the entity to be removed from the map when the w"
+         "eapon is touched by the player."
+      }
+      message: =
+      {
+        Txt = "&"
+        Hint = "Specifies the character string to print to the screen when the"
+         " weapon is touched by the player."
+      }
+      target: =
+      {
+        Txt = "&"
+        Hint = "Targetname of the entity to be triggered when the weapon is to"
+         "uched by the player."
+      }
+      targetname: =
+      {
+        Txt = "&"
+        Hint = "Use this to make it disappear by making it triggered by killta"
+         "rget."
+      }
+      team: =
+      {
+        Txt = "&"
+        Hint = "Use for changing Weapons Ammo & Powerups spawning."
+      }
+      spawnflags: =
+      {
+        Typ = "X256"
+        Txt = "&"
+        Hint = "The weapon_* entity will be inhibited and not appear when skil"
+         "l=0."
+        Cap = "Not in Easy"
+      }
+      spawnflags: =
+      {
+        Typ = "X512"
+        Txt = "&"
+        Hint = "The weapon_* entity will be inhibited and not appear when skil"
+         "l=1."
+        Cap = "Not in Normal"
+      }
+      spawnflags: =
+      {
+        Typ = "X1024"
+        Txt = "&"
+        Hint = "The weapon_* entity will be inhibited and not appear when skil"
+         "l=2 or greater."
+        Cap = "Not in Hard"
+      }
+      spawnflags: =
+      {
+        Typ = "X2048"
+        Txt = "&"
+        Hint = "The weapon_* entity will be inhibited and not appear when deat"
+         "hmatch=1."
+        Cap = "Not in Deathmatch"
+      }
+      _minlight: =
+      {
+        Txt = "&"
+        Hint = "Minimum light (optional)."
+      }
+    }
+    ammo_a2k:form =
+    {
+      Help = "This is the a2k ammo."
+      bbox = '-20 -18 -10 8 18 26'
+      mdl = "models/weapons/g_a2k/tris.md2"
+      angle: =
+      {
+        Txt = "&"
+        Hint = "Specifies a facing direction on the XY plane. (Default=0)."
+      }
+      angles: =
+      {
+        Txt = "&"
+        Hint = "Specifies a facing direction in 3 dimensions, defined by pitch"
+         ", yaw, and roll. (Default=0 0 0)."
+      }
+      delay: =
+      {
+        Txt = "&"
+        Hint = "Specifies the delay in seconds before target, killtarget and m"
+         "essage will fire after the ammo is touched by the player. (Default=0"
+         ")."
+      }
+      killtarget: =
+      {
+        Txt = "&"
+        Hint = "Targetname of the entity to be removed from the map when the a"
+         "mmo is touched by the player."
+      }
+      message: =
+      {
+        Txt = "&"
+        Hint = "Specifies the character string to print to the screen when the"
+         " ammo is touched by the player."
+      }
+      target: =
+      {
+        Txt = "&"
+        Hint = "Targetname of the entity to be triggered when the ammo is touc"
+         "hed by the player."
+      }
+      targetname: =
+      {
+        Txt = "&"
+        Hint = "Use this to make it disappear by making it triggered by killta"
+         "rget."
+      }
+      team: =
+      {
+        Txt = "&"
+        Hint = "Use for changing Weapons Ammo & Powerups spawning."
+      }
+      spawnflags: =
+      {
+        Typ = "X256"
+        Txt = "&"
+        Hint = "The ammo_* entity will be inhibited and not appear when skill="
+         "0."
+        Cap = "Not in Easy"
+      }
+      spawnflags: =
+      {
+        Typ = "X512"
+        Txt = "&"
+        Hint = "The ammo_* entity will be inhibited and not appear when skill="
+         "1."
+        Cap = "Not in Normal"
+      }
+      spawnflags: =
+      {
+        Typ = "X1024"
+        Txt = "&"
+        Hint = "The ammo_* entity will be inhibited and not appear when skill="
+         "2 or greater."
+        Cap = "Not in Hard"
+      }
+      spawnflags: =
+      {
+        Typ = "X2048"
+        Txt = "&"
+        Hint = "The ammo_* entity will be inhibited and not appear when deathm"
+         "atch=1."
+        Cap = "Not in Deathmatch"
+      }
+    }
+    ammo_empnuke:form =
+    {
+      Help = "This is the ammo for the EMPNuke."
+      bbox = '-4 -4 12 4 4 32'
+      mdl = "models/weapons/g_enuke/tris.md2"
+      angle: =
+      {
+        Txt = "&"
+        Hint = "Specifies a facing direction on the XY plane. (Default=0)."
+      }
+      angles: =
+      {
+        Txt = "&"
+        Hint = "Specifies a facing direction in 3 dimensions, defined by pitch"
+         ", yaw, and roll. (Default=0 0 0)."
+      }
+      delay: =
+      {
+        Txt = "&"
+        Hint = "Specifies the delay in seconds before target, killtarget and m"
+         "essage will fire after the ammo is touched by the player. (Default=0"
+         ")."
+      }
+      killtarget: =
+      {
+        Txt = "&"
+        Hint = "Targetname of the entity to be removed from the map when the a"
+         "mmo is touched by the player."
+      }
+      message: =
+      {
+        Txt = "&"
+        Hint = "Specifies the character string to print to the screen when the"
+         " ammo is touched by the player."
+      }
+      target: =
+      {
+        Txt = "&"
+        Hint = "Targetname of the entity to be triggered when the ammo is touc"
+         "hed by the player."
+      }
+      targetname: =
+      {
+        Txt = "&"
+        Hint = "Use this to make it disappear by making it triggered by killta"
+         "rget."
+      }
+      team: =
+      {
+        Txt = "&"
+        Hint = "Use for changing Weapons Ammo & Powerups spawning."
+      }
+      spawnflags: =
+      {
+        Typ = "X256"
+        Txt = "&"
+        Hint = "The ammo_* entity will be inhibited and not appear when skill="
+         "0."
+        Cap = "Not in Easy"
+      }
+      spawnflags: =
+      {
+        Typ = "X512"
+        Txt = "&"
+        Hint = "The ammo_* entity will be inhibited and not appear when skill="
+         "1."
+        Cap = "Not in Normal"
+      }
+      spawnflags: =
+      {
+        Typ = "X1024"
+        Txt = "&"
+        Hint = "The ammo_* entity will be inhibited and not appear when skill="
+         "2 or greater."
+        Cap = "Not in Hard"
+      }
+      spawnflags: =
+      {
+        Typ = "X2048"
+        Txt = "&"
+        Hint = "The ammo_* entity will be inhibited and not appear when deathm"
+         "atch=1."
+        Cap = "Not in Deathmatch"
+      }
+    }
+    ammo_flares:form =
+    {
+      Help = "This is the ammo_flares for the FlareGun."
+      bbox = '-12 -12 -16 12 12 -4'
+      mdl = "models/items/ammo/flares/tris.md2"
+      angle: =
+      {
+        Txt = "&"
+        Hint = "Specifies a facing direction on the XY plane. (Default=0)."
+      }
+      angles: =
+      {
+        Txt = "&"
+        Hint = "Specifies a facing direction in 3 dimensions, defined by pitch"
+         ", yaw, and roll. (Default=0 0 0)."
+      }
+      delay: =
+      {
+        Txt = "&"
+        Hint = "Specifies the delay in seconds before target, killtarget and m"
+         "essage will fire after the ammo is touched by the player. (Default=0"
+         ")."
+      }
+      killtarget: =
+      {
+        Txt = "&"
+        Hint = "Targetname of the entity to be removed from the map when the a"
+         "mmo is touched by the player."
+      }
+      message: =
+      {
+        Txt = "&"
+        Hint = "Specifies the character string to print to the screen when the"
+         " ammo is touched by the player."
+      }
+      target: =
+      {
+        Txt = "&"
+        Hint = "Targetname of the entity to be triggered when the ammo is touc"
+         "hed by the player."
+      }
+      targetname: =
+      {
+        Txt = "&"
+        Hint = "Use this to make it disappear by making it triggered by killta"
+         "rget."
+      }
+      team: =
+      {
+        Txt = "&"
+        Hint = "Use for changing Weapons Ammo & Powerups spawning."
+      }
+      spawnflags: =
+      {
+        Typ = "X256"
+        Txt = "&"
+        Hint = "The ammo_* entity will be inhibited and not appear when skill="
+         "0."
+        Cap = "Not in Easy"
+      }
+      spawnflags: =
+      {
+        Typ = "X512"
+        Txt = "&"
+        Hint = "The ammo_* entity will be inhibited and not appear when skill="
+         "1."
+        Cap = "Not in Normal"
+      }
+      spawnflags: =
+      {
+        Typ = "X1024"
+        Txt = "&"
+        Hint = "The ammo_* entity will be inhibited and not appear when skill="
+         "2 or greater."
+        Cap = "Not in Hard"
+      }
+      spawnflags: =
+      {
+        Typ = "X2048"
+        Txt = "&"
+        Hint = "The ammo_* entity will be inhibited and not appear when deathm"
+         "atch=1."
+        Cap = "Not in Deathmatch"
+      }
+    }
+    ammo_ired:form =
+    {
+      Help = "This is the LaserTripBombs."
+      bbox = '-6 -12 -16 8 12 6'
+      mdl = "models/items/ammo/ireds/tris.md2"
+      angle: =
+      {
+        Txt = "&"
+        Hint = "Specifies a facing direction on the XY plane. (Default=0)."
+      }
+      angles: =
+      {
+        Txt = "&"
+        Hint = "Specifies a facing direction in 3 dimensions, defined by pitch"
+         ", yaw, and roll. (Default=0 0 0)."
+      }
+      delay: =
+      {
+        Txt = "&"
+        Hint = "Specifies the delay in seconds before target, killtarget and m"
+         "essage will fire after the ammo is touched by the player. (Default=0"
+         ")."
+      }
+      killtarget: =
+      {
+        Txt = "&"
+        Hint = "Targetname of the entity to be removed from the map when the a"
+         "mmo is touched by the player."
+      }
+      message: =
+      {
+        Txt = "&"
+        Hint = "Specifies the character string to print to the screen when the"
+         " ammo is touched by the player."
+      }
+      target: =
+      {
+        Txt = "&"
+        Hint = "Targetname of the entity to be triggered when the ammo is touc"
+         "hed by the player."
+      }
+      targetname: =
+      {
+        Txt = "&"
+        Hint = "Use this to make it disappear by making it triggered by killta"
+         "rget."
+      }
+      team: =
+      {
+        Txt = "&"
+        Hint = "Use for changing Weapons Ammo & Powerups spawning."
+      }
+      spawnflags: =
+      {
+        Typ = "X256"
+        Txt = "&"
+        Hint = "The ammo_* entity will be inhibited and not appear when skill="
+         "0."
+        Cap = "Not in Easy"
+      }
+      spawnflags: =
+      {
+        Typ = "X512"
+        Txt = "&"
+        Hint = "The ammo_* entity will be inhibited and not appear when skill="
+         "1."
+        Cap = "Not in Normal"
+      }
+      spawnflags: =
+      {
+        Typ = "X1024"
+        Txt = "&"
+        Hint = "The ammo_* entity will be inhibited and not appear when skill="
+         "2 or greater."
+        Cap = "Not in Hard"
+      }
+      spawnflags: =
+      {
+        Typ = "X2048"
+        Txt = "&"
+        Hint = "The ammo_* entity will be inhibited and not appear when deathm"
+         "atch=1."
+        Cap = "Not in Deathmatch"
+      }
+    }
+    ammo_plasmashield:form =
+    {
+      Help = "This is the plasmashield ammo."
+      bbox = '-6 -8 14 6 8 36'
+      mdl = "models/items/plasma/tris.md2"
+      angle: =
+      {
+        Txt = "&"
+        Hint = "Specifies a facing direction on the XY plane. (Default=0)."
+      }
+      angles: =
+      {
+        Txt = "&"
+        Hint = "Specifies a facing direction in 3 dimensions, defined by pitch"
+         ", yaw, and roll. (Default=0 0 0)."
+      }
+      delay: =
+      {
+        Txt = "&"
+        Hint = "Specifies the delay in seconds before target, killtarget and m"
+         "essage will fire after the ammo is touched by the player. (Default=0"
+         ")."
+      }
+      killtarget: =
+      {
+        Txt = "&"
+        Hint = "Targetname of the entity to be removed from the map when the a"
+         "mmo is touched by the player."
+      }
+      message: =
+      {
+        Txt = "&"
+        Hint = "Specifies the character string to print to the screen when the"
+         " ammo is touched by the player."
+      }
+      target: =
+      {
+        Txt = "&"
+        Hint = "Targetname of the entity to be triggered when the ammo is touc"
+         "hed by the player."
+      }
+      targetname: =
+      {
+        Txt = "&"
+        Hint = "Use this to make it disappear by making it triggered by killta"
+         "rget."
+      }
+      team: =
+      {
+        Txt = "&"
+        Hint = "Use for changing Weapons Ammo & Powerups spawning."
+      }
+      spawnflags: =
+      {
+        Typ = "X256"
+        Txt = "&"
+        Hint = "The ammo_* entity will be inhibited and not appear when skill="
+         "0."
+        Cap = "Not in Easy"
+      }
+      spawnflags: =
+      {
+        Typ = "X512"
+        Txt = "&"
+        Hint = "The ammo_* entity will be inhibited and not appear when skill="
+         "1."
+        Cap = "Not in Normal"
+      }
+      spawnflags: =
+      {
+        Typ = "X1024"
+        Txt = "&"
+        Hint = "The ammo_* entity will be inhibited and not appear when skill="
+         "2 or greater."
+        Cap = "Not in Hard"
+      }
+      spawnflags: =
+      {
+        Typ = "X2048"
+        Txt = "&"
+        Hint = "The ammo_* entity will be inhibited and not appear when deathm"
+         "atch=1."
+        Cap = "Not in Deathmatch"
+      }
+    }
+    monster_autocannon:form =
+    {
+      Help = "Auto cannon ceiling type."
+      bbox = '-14 -12 -18 14 12 0'
+      mdl = "models/objects/acannon/turret/tris.md2"
+      style: =
+      {
+        Typ = "C"
+        Txt = "&"
+        Hint = "Type of ammo used."
+        Items = "laser"$0D
+                "rail gun"$0D
+                "rockets"
+        Values = "4"$0D
+                 "1"$0D
+                 "2"
+      }
+      angle: =
+      {
+        Txt = "&"
+        Hint = "Specifies a facing direction on the XY plane. (Default=0)."
+      }
+      target: =
+      {
+        Txt = "&"
+        Hint = "Name of the entity to be targeted by this one."
+      }
+      targetname: =
+      {
+        Txt = "&"
+        Hint = "This enmity’s specific name for targeting."
+      }
+      spawnflags: =
+      {
+        Typ = "X256"
+        Txt = "&"
+        Hint = "The monster will be inhibited and not appear when skill=0."
+        Cap = "Not in Easy"
+      }
+      spawnflags: =
+      {
+        Typ = "X512"
+        Txt = "&"
+        Hint = "The monster will be inhibited and not appear when skill=1."
+        Cap = "Not in Normal"
+      }
+      spawnflags: =
+      {
+        Typ = "X1024"
+        Txt = "&"
+        Hint = "The monster will be inhibited and not appear when skill=2 or g"
+         "reater."
+        Cap = "Not in Hard"
+      }
+      spawnflags: =
+      {
+        Typ = "X2048"
+        Txt = "&"
+        Hint = "The monster will be inhibited and not appear when deathmatch=1"
+         "."
+        Cap = "Not in Deathmatch"
+      }
+    }
+    monster_autocannon_floor:form =
+    {
+      Help = "Auto cannon floor type."
+      bbox = '-14 -12 0 14 12 18'
+      mdl = "models/objects/acannon/turret2/tris.md2"
+      style: =
+      {
+        Typ = "C"
+        Txt = "&"
+        Hint = "Type of ammo used."
+        Items = "laser"$0D
+                "rockets"
+        Values = "4"$0D
+                 "0"
+      }
+      angle: =
+      {
+        Txt = "&"
+        Hint = "Specifies a facing direction on the XY plane. (Default=0)."
+      }
+      target: =
+      {
+        Txt = "&"
+        Hint = "Name of the entity to be targeted by this one."
+      }
+      targetname: =
+      {
+        Txt = "&"
+        Hint = "This enmity’s specific name for targeting."
+      }
+      spawnflags: =
+      {
+        Typ = "X256"
+        Txt = "&"
+        Hint = "The monster will be inhibited and not appear when skill=0."
+        Cap = "Not in Easy"
+      }
+      spawnflags: =
+      {
+        Typ = "X512"
+        Txt = "&"
+        Hint = "The monster will be inhibited and not appear when skill=1."
+        Cap = "Not in Normal"
+      }
+      spawnflags: =
+      {
+        Typ = "X1024"
+        Txt = "&"
+        Hint = "The monster will be inhibited and not appear when skill=2 or g"
+         "reater."
+        Cap = "Not in Hard"
+      }
+      spawnflags: =
+      {
+        Typ = "X2048"
+        Txt = "&"
+        Hint = "The monster will be inhibited and not appear when deathmatch=1"
+         "."
+        Cap = "Not in Deathmatch"
+      }
+    }
+    monster_handler:form =
+    {
+      Help = "This is the monster handler (and dog)."
+      bbox = '-32 -34 -24 28 10 28'
+      mdl = "models/monsters/infantry/tris.md2"
+      angle: =
+      {
+        Txt = "&"
+        Hint = "Specifies the facing angle of the monster on the XY plane. (De"
+         "fault=0)."
+      }
+      angles: =
+      {
+        Txt = "&"
+        Hint = "Specifies the facing angle of the monster in 3 dimensions as d"
+         "efined by pitch, yaw, and roll. (Default=0 0 0)."
+      }
+      combattarget: =
+      {
+        Txt = "&"
+        Hint = "Targetname of the point_combat the monster will move to when a"
+         "ngered."
+      }
+      deathtarget: =
+      {
+        Txt = "&"
+        Hint = "Targetname of the entity to be triggered upon the monster's de"
+         "ath."
+      }
+      item: =
+      {
+        Txt = "&"
+        Hint = "Classname of the entity to be spawned by the monster upon his "
+         "death."
+      }
+      item: =
+      {
+        Typ = "B"
+        Txt = ""
+        Hint = "Available Classname Spawn"
+        Form = "t_item_form:form"
+        Cap = "classname spawn...."
+      }
+      killtarget: =
+      {
+        Txt = "&"
+        Hint = "Targetname of the entity to be removed from the map upon the m"
+         "onster's death."
+      }
+      target: =
+      {
+        Txt = "&"
+        Hint = "Targetname of the path_corner the monster will move to."
+      }
+      targetname: =
+      {
+        Txt = "&"
+        Hint = "Name of the specific monster."
+      }
+      spawnflags: =
+      {
+        Typ = "X1"
+        Txt = "&"
+        Hint = "Identical to SIGHT, except that the code will not call any idl"
+         "e sounds."
+        Cap = "Ambush"
+      }
+      spawnflags: =
+      {
+        Typ = "X2"
+        Txt = "&"
+        Hint = "The monster won't appear in the map until his targetname is ca"
+         "lled."
+        Cap = "Trigger Spawn"
+      }
+      spawnflags: =
+      {
+        Typ = "X4"
+        Txt = "&"
+        Hint = "The monster won't attack until angered or he has line-of-sight"
+         " to his enemy."
+        Cap = "Sight"
+      }
+      spawnflags: =
+      {
+        Typ = "X256"
+        Txt = "&"
+        Hint = "The monster will be inhibited and not appear when skill=0."
+        Cap = "Not in Easy"
+      }
+      spawnflags: =
+      {
+        Typ = "X512"
+        Txt = "&"
+        Hint = "The monster will be inhibited and not appear when skill=1."
+        Cap = "Not in Normal"
+      }
+      spawnflags: =
+      {
+        Typ = "X1024"
+        Txt = "&"
+        Hint = "The monster will be inhibited and not appear when skill=2 or g"
+         "reater."
+        Cap = "Not in Hard"
+      }
+      spawnflags: =
+      {
+        Typ = "X2048"
+        Txt = "&"
+        Hint = "The monster will be inhibited and not appear when deathmatch=1"
+         "."
+        Cap = "Not in Deathmatch"
+      }
+    }
+    monster_hound:form =
+    {
+      Help = "This is a monster dog."
+      bbox = '-30 -10 -24 12 10 4'
+      mdl = "models/monsters/guard/hound/tris.md2"
+      angle: =
+      {
+        Txt = "&"
+        Hint = "Specifies the facing angle of the monster on the XY plane. (De"
+         "fault=0)."
+      }
+      angles: =
+      {
+        Txt = "&"
+        Hint = "Specifies the facing angle of the monster in 3 dimensions as d"
+         "efined by pitch, yaw, and roll. (Default=0 0 0)."
+      }
+      combattarget: =
+      {
+        Txt = "&"
+        Hint = "Targetname of the point_combat the monster will move to when a"
+         "ngered."
+      }
+      deathtarget: =
+      {
+        Txt = "&"
+        Hint = "Targetname of the entity to be triggered upon the monster's de"
+         "ath."
+      }
+      item: =
+      {
+        Txt = "&"
+        Hint = "Classname of the entity to be spawned by the monster upon his "
+         "death."
+      }
+      item: =
+      {
+        Typ = "B"
+        Txt = ""
+        Hint = "Available Classname Spawn"
+        Form = "t_item_form:form"
+        Cap = "classname spawn...."
+      }
+      killtarget: =
+      {
+        Txt = "&"
+        Hint = "Targetname of the entity to be removed from the map upon the m"
+         "onster's death."
+      }
+      target: =
+      {
+        Txt = "&"
+        Hint = "Targetname of the path_corner the monster will move to."
+      }
+      targetname: =
+      {
+        Txt = "&"
+        Hint = "Name of the specific monster."
+      }
+      spawnflags: =
+      {
+        Typ = "X1"
+        Txt = "&"
+        Hint = "Identical to SIGHT, except that the code will not call any idl"
+         "e sounds."
+        Cap = "Ambush"
+      }
+      spawnflags: =
+      {
+        Typ = "X2"
+        Txt = "&"
+        Hint = "The monster won't appear in the map until his targetname is ca"
+         "lled."
+        Cap = "Trigger Spawn"
+      }
+      spawnflags: =
+      {
+        Typ = "X4"
+        Txt = "&"
+        Hint = "The monster won't attack until angered or he has line-of-sight"
+         " to his enemy."
+        Cap = "Sight"
+      }
+      spawnflags: =
+      {
+        Typ = "X256"
+        Txt = "&"
+        Hint = "The monster will be inhibited and not appear when skill=0."
+        Cap = "Not in Easy"
+      }
+      spawnflags: =
+      {
+        Typ = "X512"
+        Txt = "&"
+        Hint = "The monster will be inhibited and not appear when skill=1."
+        Cap = "Not in Normal"
+      }
+      spawnflags: =
+      {
+        Typ = "X1024"
+        Txt = "&"
+        Hint = "The monster will be inhibited and not appear when skill=2 or g"
+         "reater."
+        Cap = "Not in Hard"
+      }
+      spawnflags: =
+      {
+        Typ = "X2048"
+        Txt = "&"
+        Hint = "The monster will be inhibited and not appear when deathmatch=1"
+         "."
+        Cap = "Not in Deathmatch"
+      }
+    }
+    monster_sentien:form =
+    {
+      Help = "This is the monster sentien."
+      bbox = '-14 -26 -16 10 28 58'
+      mdl = "models/monsters/sentien/tris.md2"
+      angle: =
+      {
+        Txt = "&"
+        Hint = "Specifies the facing angle of the monster on the XY plane. (De"
+         "fault=0)."
+      }
+      angles: =
+      {
+        Txt = "&"
+        Hint = "Specifies the facing angle of the monster in 3 dimensions as d"
+         "efined by pitch, yaw, and roll. (Default=0 0 0)."
+      }
+      combattarget: =
+      {
+        Txt = "&"
+        Hint = "Targetname of the point_combat the monster will move to when a"
+         "ngered."
+      }
+      deathtarget: =
+      {
+        Txt = "&"
+        Hint = "Targetname of the entity to be triggered upon the monster's de"
+         "ath."
+      }
+      item: =
+      {
+        Txt = "&"
+        Hint = "Classname of the entity to be spawned by the monster upon his "
+         "death."
+      }
+      item: =
+      {
+        Typ = "B"
+        Txt = ""
+        Hint = "Available Classname Spawn"
+        Form = "t_item_form:form"
+        Cap = "classname spawn...."
+      }
+      killtarget: =
+      {
+        Txt = "&"
+        Hint = "Targetname of the entity to be removed from the map upon the m"
+         "onster's death."
+      }
+      target: =
+      {
+        Txt = "&"
+        Hint = "Targetname of the path_corner the monster will move to."
+      }
+      targetname: =
+      {
+        Txt = "&"
+        Hint = "Name of the specific monster."
+      }
+      spawnflags: =
+      {
+        Typ = "X1"
+        Txt = "&"
+        Hint = "Identical to SIGHT, except that the code will not call any idl"
+         "e sounds."
+        Cap = "Ambush"
+      }
+      spawnflags: =
+      {
+        Typ = "X2"
+        Txt = "&"
+        Hint = "The monster won't appear in the map until his targetname is ca"
+         "lled."
+        Cap = "Trigger Spawn"
+      }
+      spawnflags: =
+      {
+        Typ = "X4"
+        Txt = "&"
+        Hint = "The monster won't attack until angered or he has line-of-sight"
+         " to his enemy."
+        Cap = "Sight"
+      }
+      spawnflags: =
+      {
+        Typ = "X256"
+        Txt = "&"
+        Hint = "The monster will be inhibited and not appear when skill=0."
+        Cap = "Not in Easy"
+      }
+      spawnflags: =
+      {
+        Typ = "X512"
+        Txt = "&"
+        Hint = "The monster will be inhibited and not appear when skill=1."
+        Cap = "Not in Normal"
+      }
+      spawnflags: =
+      {
+        Typ = "X1024"
+        Txt = "&"
+        Hint = "The monster will be inhibited and not appear when skill=2 or g"
+         "reater."
+        Cap = "Not in Hard"
+      }
+      spawnflags: =
+      {
+        Typ = "X2048"
+        Txt = "&"
+        Hint = "The monster will be inhibited and not appear when deathmatch=1"
+         "."
+        Cap = "Not in Deathmatch"
+      }
+    }
+    monster_zboss:form =
+    {
+      Help = "This is the Zboss."
+      bbox = '-30 -64 -28 24 44 58'
+      mdl = "models/monsters/bossz/mech/tris.md2"
+      angle: =
+      {
+        Txt = "&"
+        Hint = "Specifies the facing angle of the monster on the XY plane. (De"
+         "fault=0)."
+      }
+      angles: =
+      {
+        Txt = "&"
+        Hint = "Specifies the facing angle of the monster in 3 dimensions as d"
+         "efined by pitch, yaw, and roll. (Default=0 0 0)."
+      }
+      combattarget: =
+      {
+        Txt = "&"
+        Hint = "Targetname of the point_combat the monster will move to when a"
+         "ngered."
+      }
+      deathtarget: =
+      {
+        Txt = "&"
+        Hint = "Targetname of the entity to be triggered upon the monster's de"
+         "ath."
+      }
+      item: =
+      {
+        Txt = "&"
+        Hint = "Classname of the entity to be spawned by the monster upon his "
+         "death."
+      }
+      item: =
+      {
+        Typ = "B"
+        Txt = ""
+        Hint = "Available Classname Spawn"
+        Form = "t_item_form:form"
+        Cap = "classname spawn...."
+      }
+      killtarget: =
+      {
+        Txt = "&"
+        Hint = "Targetname of the entity to be removed from the map upon the m"
+         "onster's death."
+      }
+      target: =
+      {
+        Txt = "&"
+        Hint = "Targetname of the path_corner the monster will move to."
+      }
+      targetname: =
+      {
+        Txt = "&"
+        Hint = "Name of the specific monster."
+      }
+      spawnflags: =
+      {
+        Typ = "X1"
+        Txt = "&"
+        Hint = "Identical to SIGHT, except that the code will not call any idl"
+         "e sounds."
+        Cap = "Ambush"
+      }
+      spawnflags: =
+      {
+        Typ = "X2"
+        Txt = "&"
+        Hint = "The monster won't appear in the map until his targetname is ca"
+         "lled."
+        Cap = "Trigger Spawn"
+      }
+      spawnflags: =
+      {
+        Typ = "X4"
+        Txt = "&"
+        Hint = "The monster won't attack until angered or he has line-of-sight"
+         " to his enemy."
+        Cap = "Sight"
+      }
+      spawnflags: =
+      {
+        Typ = "X256"
+        Txt = "&"
+        Hint = "The monster will be inhibited and not appear when skill=0."
+        Cap = "Not in Easy"
+      }
+      spawnflags: =
+      {
+        Typ = "X512"
+        Txt = "&"
+        Hint = "The monster will be inhibited and not appear when skill=1."
+        Cap = "Not in Normal"
+      }
+      spawnflags: =
+      {
+        Typ = "X1024"
+        Txt = "&"
+        Hint = "The monster will be inhibited and not appear when skill=2 or g"
+         "reater."
+        Cap = "Not in Hard"
+      }
+      spawnflags: =
+      {
+        Typ = "X2048"
+        Txt = "&"
+        Hint = "The monster will be inhibited and not appear when deathmatch=1"
+         "."
+        Cap = "Not in Deathmatch"
+      }
+    }
+    misc_commdish:form =
+    {
+      Help = "Animated Comm Dish."
+      bbox = '-100 -100 0 100 100 276'
+      mdl = "models/objects/satdish/tris.md2"
+      angle: =
+      {
+        Txt = "&"
+        Hint = "Specifies a facing direction on the XY plane. (Default=0)."
+      }
+      target: =
+      {
+        Txt = "&"
+        Hint = "Name of the entity to be targeted by this one."
+      }
+      targetname: =
+      {
+        Txt = "&"
+        Hint = "This enmity’s specific name for targeting."
+      }
+      spawnflags: =
+      {
+        Typ = "X256"
+        Txt = "&"
+        Hint = "The monster will be inhibited and not appear when skill=0."
+        Cap = "Not in Easy"
+      }
+      spawnflags: =
+      {
+        Typ = "X512"
+        Txt = "&"
+        Hint = "The monster will be inhibited and not appear when skill=1."
+        Cap = "Not in Normal"
+      }
+      spawnflags: =
+      {
+        Typ = "X1024"
+        Txt = "&"
+        Hint = "The monster will be inhibited and not appear when skill=2 or g"
+         "reater."
+        Cap = "Not in Hard"
+      }
+      spawnflags: =
+      {
+        Typ = "X2048"
+        Txt = "&"
+        Hint = "The monster will be inhibited and not appear when deathmatch=1"
+         "."
+        Cap = "Not in Deathmatch"
+      }
+    }
+    misc_crate:form =
+    {
+      Help = "Setup specific to this size, 64."
+      bbox = '-32 -32 0 32 32 64'
+      mdl = "models/objects/crate/crate64.md2"
+      angles: =
+      {
+        Txt = "&"
+        Hint = "Specifies a facing direction on the XY plane. (Default=0)."
+      }
+      target: =
+      {
+        Txt = "&"
+        Hint = "Name of the entity to be targeted by this one."
+      }
+      targetname: =
+      {
+        Txt = "&"
+        Hint = "This enmity’s specific name for targeting."
+      }
+      spawnflags: =
+      {
+        Typ = "X256"
+        Txt = "&"
+        Hint = "The monster will be inhibited and not appear when skill=0."
+        Cap = "Not in Easy"
+      }
+      spawnflags: =
+      {
+        Typ = "X512"
+        Txt = "&"
+        Hint = "The monster will be inhibited and not appear when skill=1."
+        Cap = "Not in Normal"
+      }
+      spawnflags: =
+      {
+        Typ = "X1024"
+        Txt = "&"
+        Hint = "The monster will be inhibited and not appear when skill=2 or g"
+         "reater."
+        Cap = "Not in Hard"
+      }
+      spawnflags: =
+      {
+        Typ = "X2048"
+        Txt = "&"
+        Hint = "The monster will be inhibited and not appear when deathmatch=1"
+         "."
+        Cap = "Not in Deathmatch"
+      }
+    }
+    misc_crate_medium:form =
+    {
+      Help = "Setup specific to this size, 48."
+      bbox = '-24 -24 0 24 24 48'
+      mdl = "models/objects/crate/crate48.md2"
+      angles: =
+      {
+        Txt = "&"
+        Hint = "Specifies a facing direction on the XY plane. (Default=0)."
+      }
+      target: =
+      {
+        Txt = "&"
+        Hint = "Name of the entity to be targeted by this one."
+      }
+      targetname: =
+      {
+        Txt = "&"
+        Hint = "This enmity’s specific name for targeting."
+      }
+      spawnflags: =
+      {
+        Typ = "X256"
+        Txt = "&"
+        Hint = "The monster will be inhibited and not appear when skill=0."
+        Cap = "Not in Easy"
+      }
+      spawnflags: =
+      {
+        Typ = "X512"
+        Txt = "&"
+        Hint = "The monster will be inhibited and not appear when skill=1."
+        Cap = "Not in Normal"
+      }
+      spawnflags: =
+      {
+        Typ = "X1024"
+        Txt = "&"
+        Hint = "The monster will be inhibited and not appear when skill=2 or g"
+         "reater."
+        Cap = "Not in Hard"
+      }
+      spawnflags: =
+      {
+        Typ = "X2048"
+        Txt = "&"
+        Hint = "The monster will be inhibited and not appear when deathmatch=1"
+         "."
+        Cap = "Not in Deathmatch"
+      }
+    }
+    misc_crate_small:form =
+    {
+      Help = "Setup specific to this size, 32."
+      bbox = '-16 -16 0 16 16 32'
+      mdl = "models/objects/crate/crate32.md2"
+      angles: =
+      {
+        Txt = "&"
+        Hint = "Specifies a facing direction on the XY plane. (Default=0)."
+      }
+      target: =
+      {
+        Txt = "&"
+        Hint = "Name of the entity to be targeted by this one."
+      }
+      targetname: =
+      {
+        Txt = "&"
+        Hint = "This enmity’s specific name for targeting."
+      }
+      spawnflags: =
+      {
+        Typ = "X256"
+        Txt = "&"
+        Hint = "The monster will be inhibited and not appear when skill=0."
+        Cap = "Not in Easy"
+      }
+      spawnflags: =
+      {
+        Typ = "X512"
+        Txt = "&"
+        Hint = "The monster will be inhibited and not appear when skill=1."
+        Cap = "Not in Normal"
+      }
+      spawnflags: =
+      {
+        Typ = "X1024"
+        Txt = "&"
+        Hint = "The monster will be inhibited and not appear when skill=2 or g"
+         "reater."
+        Cap = "Not in Hard"
+      }
+      spawnflags: =
+      {
+        Typ = "X2048"
+        Txt = "&"
+        Hint = "The monster will be inhibited and not appear when deathmatch=1"
+         "."
+        Cap = "Not in Deathmatch"
+      }
+    }
+    misc_ired:form =
+    {
+      Help = "Misc ired laser trip bomb."
+      bbox = '0 -18 -4 8 4 20'
+      mdl = "models/objects/ired/tris.md2"
+      angle: =
+      {
+        Txt = "&"
+        Hint = "Specifies a facing direction on the XY plane. (Default=0)."
+      }
+      target: =
+      {
+        Txt = "&"
+        Hint = "Name of the entity to be targeted by this one."
+      }
+      targetname: =
+      {
+        Txt = "&"
+        Hint = "This enmity’s specific name for targeting."
+      }
+      spawnflags: =
+      {
+        Typ = "X256"
+        Txt = "&"
+        Hint = "The monster will be inhibited and not appear when skill=0."
+        Cap = "Not in Easy"
+      }
+      spawnflags: =
+      {
+        Typ = "X512"
+        Txt = "&"
+        Hint = "The monster will be inhibited and not appear when skill=1."
+        Cap = "Not in Normal"
+      }
+      spawnflags: =
+      {
+        Typ = "X1024"
+        Txt = "&"
+        Hint = "The monster will be inhibited and not appear when skill=2 or g"
+         "reater."
+        Cap = "Not in Hard"
+      }
+      spawnflags: =
+      {
+        Typ = "X2048"
+        Txt = "&"
+        Hint = "The monster will be inhibited and not appear when deathmatch=1"
+         "."
+        Cap = "Not in Deathmatch"
+      }
+    }
+    misc_seat:form =
+    {
+      Help = "A pushable seat."
+      bbox = '-16 -18 0 20 18 54'
+      mdl = "models/objects/seat/tris.md2"
+      angle: =
+      {
+        Txt = "&"
+        Hint = "Specifies a facing direction on the XY plane. (Default=0)."
+      }
+      target: =
+      {
+        Txt = "&"
+        Hint = "Name of the entity to be targeted by this one."
+      }
+      targetname: =
+      {
+        Txt = "&"
+        Hint = "This enmity’s specific name for targeting."
+      }
+      spawnflags: =
+      {
+        Typ = "X256"
+        Txt = "&"
+        Hint = "The monster will be inhibited and not appear when skill=0."
+        Cap = "Not in Easy"
+      }
+      spawnflags: =
+      {
+        Typ = "X512"
+        Txt = "&"
+        Hint = "The monster will be inhibited and not appear when skill=1."
+        Cap = "Not in Normal"
+      }
+      spawnflags: =
+      {
+        Typ = "X1024"
+        Txt = "&"
+        Hint = "The monster will be inhibited and not appear when skill=2 or g"
+         "reater."
+        Cap = "Not in Hard"
+      }
+      spawnflags: =
+      {
+        Typ = "X2048"
+        Txt = "&"
+        Hint = "The monster will be inhibited and not appear when deathmatch=1"
+         "."
+        Cap = "Not in Deathmatch"
+      }
+    }
+    misc_securitycamera:form =
+    {
+      Help = "This is where the visor locates too."
+      bbox = '-12 -16 -26 12 8 0'
+      mdl = "models/objects/camera/tris.md2"
+      message: =
+      {
+        Txt = "&"
+        Hint = "Message to be displayed."
+      }
+      angle: =
+      {
+        Txt = "&"
+        Hint = "Specifies a facing direction on the XY plane. (Default=0)."
+      }
+      mangle: =
+      {
+        Txt = "&"
+        Hint = "Specifies the facing angle in 3 dimensions as"$0D
+         " defined by pitch, yaw, and roll. (Default=0 0 0)."
+      }
+      target: =
+      {
+        Txt = "&"
+        Hint = "Name of the entity to be targeted by this one."
+      }
+      targetname: =
+      {
+        Txt = "&"
+        Hint = "This enmity’s specific name for targeting."
+      }
+      spawnflags: =
+      {
+        Typ = "X256"
+        Txt = "&"
+        Hint = "The monster will be inhibited and not appear when skill=0."
+        Cap = "Not in Easy"
+      }
+      spawnflags: =
+      {
+        Typ = "X512"
+        Txt = "&"
+        Hint = "The monster will be inhibited and not appear when skill=1."
+        Cap = "Not in Normal"
+      }
+      spawnflags: =
+      {
+        Typ = "X1024"
+        Txt = "&"
+        Hint = "The monster will be inhibited and not appear when skill=2 or g"
+         "reater."
+        Cap = "Not in Hard"
+      }
+      spawnflags: =
+      {
+        Typ = "X2048"
+        Txt = "&"
+        Hint = "The monster will be inhibited and not appear when deathmatch=1"
+         "."
+        Cap = "Not in Deathmatch"
+      }
+    }
+    key_clearancepass:form =
+    {
+      Help = "Clearance pass for the security level."
+      bbox = '-2 -6 0 2 6 16'
+      mdl = "models/items/keys/pass/tris.md2"
+      delay: =
+      {
+        Txt = "&"
+        Hint = "Specifies the delay in seconds before target, killtarget and m"
+         "essage will fire after the key is touched by the player. (Default=0)"
+         "."
+      }
+      killtarget: =
+      {
+        Txt = "&"
+        Hint = "Targetname of the entity to be removed from the map when the k"
+         "ey is touched by the player."
+      }
+      message: =
+      {
+        Txt = "&"
+        Hint = "Specifies the character string to print to the screen when the"
+         " key is touched by the player."
+      }
+      target: =
+      {
+        Txt = "&"
+        Hint = "Targetname of the entity to be triggered when the key is touch"
+         "ed by the player."
+      }
+      targetname: =
+      {
+        Txt = "&"
+        Hint = "Name of the specific key entity."
+      }
+      spawnflags: =
+      {
+        Typ = "X256"
+        Txt = "&"
+        Hint = "The key_* entity will be inhibited and not appear when skill=0"
+         "."
+        Cap = "Not in Easy"
+      }
+      spawnflags: =
+      {
+        Typ = "X512"
+        Txt = "&"
+        Hint = "The key_* entity will be inhibited and not appear when skill=1"
+         "."
+        Cap = "Not in Normal"
+      }
+      spawnflags: =
+      {
+        Typ = "X1024"
+        Txt = "&"
+        Hint = "The key_* entity will be inhibited and not appear when skill=2"
+         " or greater."
+        Cap = "Not in Hard"
+      }
+      spawnflags: =
+      {
+        Typ = "X2048"
+        Txt = "&"
+        Hint = "The key_* entity will be inhibited and not appear when deathma"
+         "tch=1."
+        Cap = "Not in Deathmatch"
+      }
+    }
+    key_energy:form =
+    {
+      Help = "Energy Key."
+      bbox = '-4 -16 -6 4 14 22'
+      mdl = "models/items/keys/energy/tris.md2"
+      delay: =
+      {
+        Txt = "&"
+        Hint = "Specifies the delay in seconds before target, killtarget and m"
+         "essage will fire after the key is touched by the player. (Default=0)"
+         "."
+      }
+      killtarget: =
+      {
+        Txt = "&"
+        Hint = "Targetname of the entity to be removed from the map when the k"
+         "ey is touched by the player."
+      }
+      message: =
+      {
+        Txt = "&"
+        Hint = "Specifies the character string to print to the screen when the"
+         " key is touched by the player."
+      }
+      target: =
+      {
+        Txt = "&"
+        Hint = "Targetname of the entity to be triggered when the key is touch"
+         "ed by the player."
+      }
+      targetname: =
+      {
+        Txt = "&"
+        Hint = "Name of the specific key entity."
+      }
+      spawnflags: =
+      {
+        Typ = "X256"
+        Txt = "&"
+        Hint = "The key_* entity will be inhibited and not appear when skill=0"
+         "."
+        Cap = "Not in Easy"
+      }
+      spawnflags: =
+      {
+        Typ = "X512"
+        Txt = "&"
+        Hint = "The key_* entity will be inhibited and not appear when skill=1"
+         "."
+        Cap = "Not in Normal"
+      }
+      spawnflags: =
+      {
+        Typ = "X1024"
+        Txt = "&"
+        Hint = "The key_* entity will be inhibited and not appear when skill=2"
+         " or greater."
+        Cap = "Not in Hard"
+      }
+      spawnflags: =
+      {
+        Typ = "X2048"
+        Txt = "&"
+        Hint = "The key_* entity will be inhibited and not appear when deathma"
+         "tch=1."
+        Cap = "Not in Deathmatch"
+      }
+    }
+    key_lab:form =
+    {
+      Help = "Security pass for the laboratory."
+      bbox = '-2 -6 0 2 6 16'
+      mdl = "models/items/keys/pass/tris.md2"
+      delay: =
+      {
+        Txt = "&"
+        Hint = "Specifies the delay in seconds before target, killtarget and m"
+         "essage will fire after the key is touched by the player. (Default=0)"
+         "."
+      }
+      killtarget: =
+      {
+        Txt = "&"
+        Hint = "Targetname of the entity to be removed from the map when the k"
+         "ey is touched by the player."
+      }
+      message: =
+      {
+        Txt = "&"
+        Hint = "Specifies the character string to print to the screen when the"
+         " key is touched by the player."
+      }
+      target: =
+      {
+        Txt = "&"
+        Hint = "Targetname of the entity to be triggered when the key is touch"
+         "ed by the player."
+      }
+      targetname: =
+      {
+        Txt = "&"
+        Hint = "Name of the specific key entity."
+      }
+      spawnflags: =
+      {
+        Typ = "X256"
+        Txt = "&"
+        Hint = "The key_* entity will be inhibited and not appear when skill=0"
+         "."
+        Cap = "Not in Easy"
+      }
+      spawnflags: =
+      {
+        Typ = "X512"
+        Txt = "&"
+        Hint = "The key_* entity will be inhibited and not appear when skill=1"
+         "."
+        Cap = "Not in Normal"
+      }
+      spawnflags: =
+      {
+        Typ = "X1024"
+        Txt = "&"
+        Hint = "The key_* entity will be inhibited and not appear when skill=2"
+         " or greater."
+        Cap = "Not in Hard"
+      }
+      spawnflags: =
+      {
+        Typ = "X2048"
+        Txt = "&"
+        Hint = "The key_* entity will be inhibited and not appear when deathma"
+         "tch=1."
+        Cap = "Not in Deathmatch"
+      }
+    }
+    key_landing_area:form =
+    {
+      Help = "Landing Area Key - blue."
+      bbox = '-2 -6 0 2 6 16'
+      mdl = "models/items/keys/key/tris.md2"
+      delay: =
+      {
+        Txt = "&"
+        Hint = "Specifies the delay in seconds before target, killtarget and m"
+         "essage will fire after the key is touched by the player. (Default=0)"
+         "."
+      }
+      killtarget: =
+      {
+        Txt = "&"
+        Hint = "Targetname of the entity to be removed from the map when the k"
+         "ey is touched by the player."
+      }
+      message: =
+      {
+        Txt = "&"
+        Hint = "Specifies the character string to print to the screen when the"
+         " key is touched by the player."
+      }
+      target: =
+      {
+        Txt = "&"
+        Hint = "Targetname of the entity to be triggered when the key is touch"
+         "ed by the player."
+      }
+      targetname: =
+      {
+        Txt = "&"
+        Hint = "Name of the specific key entity."
+      }
+      spawnflags: =
+      {
+        Typ = "X256"
+        Txt = "&"
+        Hint = "The key_* entity will be inhibited and not appear when skill=0"
+         "."
+        Cap = "Not in Easy"
+      }
+      spawnflags: =
+      {
+        Typ = "X512"
+        Txt = "&"
+        Hint = "The key_* entity will be inhibited and not appear when skill=1"
+         "."
+        Cap = "Not in Normal"
+      }
+      spawnflags: =
+      {
+        Typ = "X1024"
+        Txt = "&"
+        Hint = "The key_* entity will be inhibited and not appear when skill=2"
+         " or greater."
+        Cap = "Not in Hard"
+      }
+      spawnflags: =
+      {
+        Typ = "X2048"
+        Txt = "&"
+        Hint = "The key_* entity will be inhibited and not appear when deathma"
+         "tch=1."
+        Cap = "Not in Deathmatch"
+      }
+    }
+    key_lava:form =
+    {
+      Help = "Lava Key."
+      bbox = '2 -8 -6 8 8 24'
+      mdl = "models/items/keys/lava/tris.md2"
+      delay: =
+      {
+        Txt = "&"
+        Hint = "Specifies the delay in seconds before target, killtarget and m"
+         "essage will fire after the key is touched by the player. (Default=0)"
+         "."
+      }
+      killtarget: =
+      {
+        Txt = "&"
+        Hint = "Targetname of the entity to be removed from the map when the k"
+         "ey is touched by the player."
+      }
+      message: =
+      {
+        Txt = "&"
+        Hint = "Specifies the character string to print to the screen when the"
+         " key is touched by the player."
+      }
+      target: =
+      {
+        Txt = "&"
+        Hint = "Targetname of the entity to be triggered when the key is touch"
+         "ed by the player."
+      }
+      targetname: =
+      {
+        Txt = "&"
+        Hint = "Name of the specific key entity."
+      }
+      spawnflags: =
+      {
+        Typ = "X256"
+        Txt = "&"
+        Hint = "The key_* entity will be inhibited and not appear when skill=0"
+         "."
+        Cap = "Not in Easy"
+      }
+      spawnflags: =
+      {
+        Typ = "X512"
+        Txt = "&"
+        Hint = "The key_* entity will be inhibited and not appear when skill=1"
+         "."
+        Cap = "Not in Normal"
+      }
+      spawnflags: =
+      {
+        Typ = "X1024"
+        Txt = "&"
+        Hint = "The key_* entity will be inhibited and not appear when skill=2"
+         " or greater."
+        Cap = "Not in Hard"
+      }
+      spawnflags: =
+      {
+        Typ = "X2048"
+        Txt = "&"
+        Hint = "The key_* entity will be inhibited and not appear when deathma"
+         "tch=1."
+        Cap = "Not in Deathmatch"
+      }
+    }
+    key_slime:form =
+    {
+      Help = "Slime Key."
+      bbox = '-6 -8 -10 6 4 26'
+      mdl = "models/items/keys/slime/tris.md2"
+      delay: =
+      {
+        Txt = "&"
+        Hint = "Specifies the delay in seconds before target, killtarget and m"
+         "essage will fire after the key is touched by the player. (Default=0)"
+         "."
+      }
+      killtarget: =
+      {
+        Txt = "&"
+        Hint = "Targetname of the entity to be removed from the map when the k"
+         "ey is touched by the player."
+      }
+      message: =
+      {
+        Txt = "&"
+        Hint = "Specifies the character string to print to the screen when the"
+         " key is touched by the player."
+      }
+      target: =
+      {
+        Txt = "&"
+        Hint = "Targetname of the entity to be triggered when the key is touch"
+         "ed by the player."
+      }
+      targetname: =
+      {
+        Txt = "&"
+        Hint = "Name of the specific key entity."
+      }
+      spawnflags: =
+      {
+        Typ = "X256"
+        Txt = "&"
+        Hint = "The key_* entity will be inhibited and not appear when skill=0"
+         "."
+        Cap = "Not in Easy"
+      }
+      spawnflags: =
+      {
+        Typ = "X512"
+        Txt = "&"
+        Hint = "The key_* entity will be inhibited and not appear when skill=1"
+         "."
+        Cap = "Not in Normal"
+      }
+      spawnflags: =
+      {
+        Typ = "X1024"
+        Txt = "&"
+        Hint = "The key_* entity will be inhibited and not appear when skill=2"
+         " or greater."
+        Cap = "Not in Hard"
+      }
+      spawnflags: =
+      {
+        Typ = "X2048"
+        Txt = "&"
+        Hint = "The key_* entity will be inhibited and not appear when deathma"
+         "tch=1."
+        Cap = "Not in Deathmatch"
+      }
+    }
+    item_visor:form =
+    {
+      Help = "This is the visor."
+      bbox = '-10 -10 10 10 10 32'
+      mdl = "models/items/visor/tris.md2"
+      delay: =
+      {
+        Txt = "&"
+        Hint = "Specifies the delay in seconds before target, killtarget and m"
+         "essage will fire after the item is touched by the player. (Default=0"
+         ")."
+      }
+      killtarget: =
+      {
+        Txt = "&"
+        Hint = "Targetname of the entity to be removed from the map when the i"
+         "tem is touched by the player."
+      }
+      message: =
+      {
+        Txt = "&"
+        Hint = "Specifies the character string to print to the screen when the"
+         " item is touched by the player."
+      }
+      target: =
+      {
+        Txt = "&"
+        Hint = "Targetname of the entity to be triggered when the item is touc"
+         "hed by the player."
+      }
+      targetname: =
+      {
+        Txt = "&"
+        Hint = "Name of the specific item entity. Use this to make it disappea"
+         "r by making it triggered by killtarget."
+      }
+      team: =
+      {
+        Txt = "&"
+        Hint = "Use for changing Weapons Ammo & Powerups spawning."
+      }
+      spawnflags: =
+      {
+        Typ = "X256"
+        Txt = "&"
+        Hint = "The item_* entity will be inhibited and not appear when skill="
+         "0."
+        Cap = "Not in Easy"
+      }
+      spawnflags: =
+      {
+        Typ = "X512"
+        Txt = "&"
+        Hint = "The item_* entity will be inhibited and not appear when skill="
+         "1."
+        Cap = "Not in Normal"
+      }
+      spawnflags: =
+      {
+        Txt = "&"
+        Typ = "X1024"
+        Hint = "The item_* entity will be inhibited and not appear when skill="
+         "2 or greater."
+        Cap = "Not in Hard"
+      }
+      spawnflags: =
+      {
+        Txt = "&"
+        Typ = "X2048"
+        Hint = "The item_* entity will be inhibited and not appear when deathm"
+         "atch=1."
+        Cap = "Not in Deathmatch"
+      }
+    }
+    func_barrier:form =
+    {
+      Help = "Makes a barrier area."
+      bbox = '-16 -16 -16 16 16 16'
+      maxs: =
+      {
+        Typ = "EF3"
+        Txt = "The three maxs values:"
+        Hint = "You must enter three whole values here. (ex: 50  72 56)"
+
+      }
+      mins: =
+      {
+        Typ = "EF3"
+        Txt = "The three mins values:"
+        Hint = "You must enter three whole values here. (ex: -50  -72 -56)"
+      }
+      angle: =
+      {
+        Txt = "&"
+        Hint = "Specifies a facing direction on the XY plane. (Default=0)."
+      }
+      target: =
+      {
+        Txt = "&"
+        Hint = "Name of the entity to be targeted by this one."
+      }
+      targetname: =
+      {
+        Txt = "&"
+        Hint = "This enmity’s specific name for targeting."
+      }
+      spawnflags: =
+      {
+        Typ = "X256"
+        Txt = "&"
+        Hint = "The monster will be inhibited and not appear when skill=0."
+        Cap = "Not in Easy"
+      }
+      spawnflags: =
+      {
+        Typ = "X512"
+        Txt = "&"
+        Hint = "The monster will be inhibited and not appear when skill=1."
+        Cap = "Not in Normal"
+      }
+      spawnflags: =
+      {
+        Typ = "X1024"
+        Txt = "&"
+        Hint = "The monster will be inhibited and not appear when skill=2 or g"
+         "reater."
+        Cap = "Not in Hard"
+      }
+      spawnflags: =
+      {
+        Typ = "X2048"
+        Txt = "&"
+        Hint = "The monster will be inhibited and not appear when deathmatch=1"
+         "."
+        Cap = "Not in Deathmatch"
+      }
+    }
+    target_zboss_target:form =
+    {
+      Help = "Targets the zboss."
+      bbox = '-16 -16 -16 16 16 16'
+      target: =
+      {
+        Txt = "&"
+        Hint = "Name of the entity to be targeted by this one."
+      }
+      targetname: =
+      {
+        Txt = "&"
+        Hint = "This enmity’s specific name for targeting."
+      }
+      spawnflags: =
+      {
+        Typ = "X256"
+        Txt = "&"
+        Hint = "The monster will be inhibited and not appear when skill=0."
+        Cap = "Not in Easy"
+      }
+      spawnflags: =
+      {
+        Typ = "X512"
+        Txt = "&"
+        Hint = "The monster will be inhibited and not appear when skill=1."
+        Cap = "Not in Normal"
+      }
+      spawnflags: =
+      {
+        Typ = "X1024"
+        Txt = "&"
+        Hint = "The monster will be inhibited and not appear when skill=2 or g"
+         "reater."
+        Cap = "Not in Hard"
+      }
+      spawnflags: =
+      {
+        Typ = "X2048"
+        Txt = "&"
+        Hint = "The monster will be inhibited and not appear when deathmatch=1"
+         "."
+        Cap = "Not in Deathmatch"
+      }
+    }
+    trigger_laser:form =
+    {
+      Help = "Laser-type trigger."
+      wait: =
+      {
+        Txt = "&"
+        Hint = "The delay before reactivation."
+      }
+      message: =
+      {
+        Txt = "&"
+        Hint = "Message to center print."
+      }
+      delay: =
+      {
+        Txt = "&"
+        Hint = "Delay before trigger."
+      }
+      target: =
+      {
+        Txt = "&"
+        Hint = "Name of the entity to be targeted by this one."
+      }
+      targetname: =
+      {
+        Txt = "&"
+        Hint = "This enmity’s specific name for targeting."
+      }
+      spawnflags: =
+      {
+        Typ = "X1"
+        Txt = "&"
+        Hint = ""
+        Cap = "TRIGGER_MULTIPLE"
+      }
+      spawnflags: =
+      {
+        Typ = "X256"
+        Txt = "&"
+        Hint = "The monster will be inhibited and not appear when skill=0."
+        Cap = "Not in Easy"
+      }
+      spawnflags: =
+      {
+        Typ = "X512"
+        Txt = "&"
+        Hint = "The monster will be inhibited and not appear when skill=1."
+        Cap = "Not in Normal"
+      }
+      spawnflags: =
+      {
+        Typ = "X1024"
+        Txt = "&"
+        Hint = "The monster will be inhibited and not appear when skill=2 or g"
+         "reater."
+        Cap = "Not in Hard"
+      }
+      spawnflags: =
+      {
+        Typ = "X2048"
+        Txt = "&"
+        Hint = "The monster will be inhibited and not appear when deathmatch=1"
+         "."
+        Cap = "Not in Deathmatch"
+      }
+    }
+    load_mirrorlevel:form =
+    {
+      Help = "To load a mirror level to this level."
+      bbox = '-16 -16 -16 16 16 16'
+      angle: =
+      {
+        Txt = "&"
+        Hint = "Specifies a facing direction on the XY plane. (Default=0)."
+      }
+      target: =
+      {
+        Txt = "&"
+        Hint = "Name of the entity to be targeted by this one."
+      }
+      targetname: =
+      {
+        Txt = "&"
+        Hint = "This enmity’s specific name for targeting."
+      }
+      spawnflags: =
+      {
+        Typ = "X256"
+        Txt = "&"
+        Hint = "The monster will be inhibited and not appear when skill=0."
+        Cap = "Not in Easy"
+      }
+      spawnflags: =
+      {
+        Typ = "X512"
+        Txt = "&"
+        Hint = "The monster will be inhibited and not appear when skill=1."
+        Cap = "Not in Normal"
+      }
+      spawnflags: =
+      {
+        Typ = "X1024"
+        Txt = "&"
+        Hint = "The monster will be inhibited and not appear when skill=2 or g"
+         "reater."
+        Cap = "Not in Hard"
+      }
+      spawnflags: =
+      {
+        Typ = "X2048"
+        Txt = "&"
+        Hint = "The monster will be inhibited and not appear when deathmatch=1"
+         "."
+        Cap = "Not in Deathmatch"
+      }
+    }
+    sound_echo:form =
+    {
+      Help = "Echo any sounds that are played within 'dmg_radius' radius."
+      bbox = '-16 -16 -16 16 16 16'
+      angle: =
+      {
+        Txt = "&"
+        Hint = "Specifies a facing direction on the XY plane. (Default=0)."
+      }
+      delay: =
+      {
+        Txt = "&"
+        Hint = "The delay between echo's."
+      }
+      wait: =
+      {
+        Txt = "&"
+        Hint = "The sound volume decay percent per echo (eg. 0.1 = 10%)."
+      }
+      dmg_radius: =
+      {
+        Txt = "&"
+        Hint = "The max distance that affects sounds."
+      }
+      target: =
+      {
+        Txt = "&"
+        Hint = "Name of the entity to be targeted by this one."
+      }
+      targetname: =
+      {
+        Txt = "&"
+        Hint = "This enmity’s specific name for targeting."
+      }
+      spawnflags: =
+      {
+        Typ = "X256"
+        Txt = "&"
+        Hint = "The monster will be inhibited and not appear when skill=0."
+        Cap = "Not in Easy"
+      }
+      spawnflags: =
+      {
+        Typ = "X512"
+        Txt = "&"
+        Hint = "The monster will be inhibited and not appear when skill=1."
+        Cap = "Not in Normal"
+      }
+      spawnflags: =
+      {
+        Typ = "X1024"
+        Txt = "&"
+        Hint = "The monster will be inhibited and not appear when skill=2 or g"
+         "reater."
+        Cap = "Not in Hard"
+      }
+      spawnflags: =
+      {
+        Typ = "X2048"
+        Txt = "&"
+        Hint = "The monster will be inhibited and not appear when deathmatch=1"
+         "."
+        Cap = "Not in Deathmatch"
+      }
+    }
+  }
+}

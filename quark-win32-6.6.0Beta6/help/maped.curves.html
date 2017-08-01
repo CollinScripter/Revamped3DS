@@ -1,0 +1,241 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"  "http://www.w3.org/TR/html4/loose.dtd">
+<html lang="en">
+<head>
+  <title>Curves (Patches)</title>
+  <meta name="Description" content="QuArK Information Database - Page: 2.3.&nbsp;Curves (Patches)">
+  <meta name="Keywords" content="QuArK InfoBase Quake Army Knife QRK QKM Python PY Map Editor Hexen Heretic Half-Life Sin Kingpin Soldier-of-Fortune Star-Trek-Voyager Elite-Force">
+  <link rel=stylesheet href="standard.css" type="text/css">
+</head>
+
+<body>
+<a name="__top__"></a>
+<table width="100%" border=0 cellspacing=0>
+  <tr>
+    <td width=213>
+      <a target="_blank" href="http://quark.sourceforge.net/"><img src="quarkicon.png" width=213 height=90 border=0 alt="Go to QuArK Web Site"></a>
+    </td>
+    <td width="70%" align=center>
+      <div class="topheadline">Curves (Patches)</div>
+      <div class="sm">Updated&nbsp;02 Mar 2001</div>
+    </td>
+    <td width="30%" valign=bottom nowrap>
+      Upper&nbsp;levels:<br>-&nbsp;<a href="index.html">QuArK&nbsp;Information&nbsp;Base</a><br>-&nbsp;<a href="maped.html">2.&nbsp;Map&nbsp;editing</a><br>
+    </td>
+  </tr>
+</table>
+<table width="100%" border=0 cellspacing=0>
+  <tr class="headline">
+    <td width="99%">
+      <p class="headline">&nbsp;2.3.&nbsp;Curves (Patches)</p>
+    </td>
+    <td width="1%" align=right nowrap>
+      &nbsp;[&nbsp;<span class="navenable"><a href="maped.duplicators.instance.html">Prev</a></span>&nbsp;-&nbsp;<span class="navenable"><a href="maped.html">Up</a></span>&nbsp;-&nbsp;<span class="navenable"><a href="maped.builders.html">Next</a></span>&nbsp;]&nbsp;
+    </td>
+  </tr>
+</table>
+<table border=0 width="100%" cellspacing=10><tr><td><p>Curves are one of the major new features of the Quake3 engine.
+Q3 curves are implemented mathematically as things called 'quadratic
+bezier patches' (one of many different kinds of 'parametric
+curve'), but happily you don't have
+to know anything about the math to use them in map-editing.
+</p>
+</td></tr></table>
+<br>
+
+<table width="100%" border=0 cellspacing=0>
+  <tr class="headline">
+    <td width="100%">
+      <p class="subheadline">&nbsp;Index</p>
+    </td>
+  </tr>
+</table>
+<ul class="index">
+  <li>- <a href="#basics">Patch Basics</a>&nbsp;<span class="added">(02 Mar 2001)</span>
+  <li>- <a href="#quilts">Quilts</a>&nbsp;<span class="added">(02 Mar 2001)</span>
+  <li>- <a href="#texmanag">Texture Management</a>&nbsp;<span class="added">(02 Mar 2001)</span>
+</ul>
+<br>
+
+
+<a name="basics"></a>
+  <table width="100%" border=0 cellspacing=0>
+    <tr class="headline">
+      <td>
+        <p class="item">&nbsp;Patch Basics</p>
+      </td>
+      <td align=right>
+        <font size=-2>tiglari&nbsp;-&nbsp;02 Mar 2001</font>
+      </td>
+      <td width="1%" align=right nowrap>
+        &nbsp;&nbsp;[&nbsp;<a href="#__top__">Top</a>&nbsp;]&nbsp;
+      </td>
+    </tr>
+  </table>
+  <table border=0 width="100%" cellspacing=10><tr><td>
+<p>A basic patch (there are also composite patches that we call 'quilts') can
+be thought of as a squarish sheet of material stretched out by a 3x3 grid
+of 9 'control points'.  To make one, start a basic map and click on the
+patch icon in the user panel (labelled 'bezier'). You will then see a grid
+of colored control points drop into the overhead view of the map:
+</p><p><table width=100% cellspacing=0 cellpadding=0 border=0>
+<tr><td align=middle>
+<img src="maped.curves.bez1.png">
+</td><td align=middle>
+<img src="maped.curves.bez2.png">
+</td></tr>
+</table>
+</p><p>The (here horizontal) lines of control points of the same hue are the rows,
+the vertical ones are the columns.  The points get darker as you move along
+the rows up from index zero.  If you leave the cursor
+sitting over a control point for a while, a rather large
+flyover hint appears, beginning with the control point's row
+and column indexes, and giving rather extensive information about
+stuff you can do.
+</p><p>The black dot is a handle which can be used to move the whole patch, and
+also has a few RMB (Right Menu Button) commands.
+</p><p>Now the patch is 'anchored' at the corners, in the
+sense that if you drag a corner point, the patch is pulled out
+with it, but it is only 'attracted' by the non-corner points;
+if one of them is dragged, the patch pulls out towards it,
+but does not stay attached.  This effect also appears with
+3-dimensional movement, as you can see by opening a 3d view
+and playing around with it:
+</p><p><table width=100% cellspacing=0 cellpadding=0 border=0>
+<tr><td align=middle>
+<img src="maped.curves.bez3.png">
+</td><td align=middle>
+<img src="maped.curves.bez4.png">
+</td></tr>
+</table>
+</p><p>If you play around with the patch and then run the map
+in Quake3, you'll find that the patch displays a texture
+on only one side, and also only blocks movement on that
+side, an fact which could be used to make some rather
+annoying effects in maps.
+</p><p>There is quite a bit more to patches, as we will see
+more of below, but direct patch
+editing is slow and difficult, and not a good way to approach
+basic tasks such as making archways and rounded corners.
+For these purposes we instead use
+<a href="maped.builders.html">'Shape Builders'</a>.
+</p>
+  </td></tr></table>
+  <br>
+
+<a name="quilts"></a>
+  <table width="100%" border=0 cellspacing=0>
+    <tr class="headline">
+      <td>
+        <p class="item">&nbsp;Quilts</p>
+      </td>
+      <td align=right>
+        <font size=-2>tiglari&nbsp;-&nbsp;02 Mar 2001</font>
+      </td>
+      <td width="1%" align=right nowrap>
+        &nbsp;&nbsp;[&nbsp;<a href="#__top__">Top</a>&nbsp;]&nbsp;
+      </td>
+    </tr>
+  </table>
+  <table border=0 width="100%" cellspacing=10><tr><td>
+<p>A basic patch has nine control points, arranged in 3 rows of 3
+elements each.  Given essential limitations on what these
+('quadratic bezier') patches can do, to make a full range of
+shapes, you need multiple 3x3 patches.  A semi-decent approximation
+to a circle for example needs at least four (although it's noticeably
+squarish, and to make it rounder you'd need more).  Typically
+lots of these patches will share edges, so it's natural to think
+of 'quilts' of 3x3 patches, sharing edges.
+</p><p>The Q3A engine provides direct support for such quilts, as long
+as they are rectangular.  If you think about the math you'll
+see that thanks to the edge sharing, a quilt of four patches
+in a square will have 5x5 = 25 different control points, and
+a strip of four patches that might be arranged in a row to be
+wrapped around to make a columns will be a 3x9 quilt. And
+that in these quilts, control points on odd-numbered rows/columns
+will lie on (basic) patch edges, and if the point is in an
+odd-numbered row <strong>and</strong> column it will be a patch
+corner.
+</p><p>In Q3Radiant documentation, quilts are called 'meshes', but there
+are lots of different kinds of meshes, and these quilts, or
+more precisely, quadratic quilts, have special properties,
+so we'll call them quilts to distinguish them from whatever
+amazing stuff might come next.
+</p><p>Currently you can make quilts by RMB on a patch control point,
+then <span class="act">'Thicken -&gt; Add Row/Column'</span>.  This has the effect of replacing
+one row or column of patches with two (and so adding two additional
+strips of control points).  Another way to make quilts is to dissociate
+the images from one of the shapebuilders, such as column.  Playing
+around with the quilts you can see the difference between the
+odd and even numbered rows and colums.  The column for example has
+a square of control points with the odd-numbered ones in the
+middle of the sides and the evens at the corners; if this were
+reversed the shape would be a rectangular rather than a rounded
+column.
+</p><p>QuArK definitely needs more elaborate facilities for creating and
+shaping quilts, hopefully these will develop over time.
+</p>
+
+  </td></tr></table>
+  <br>
+
+<a name="texmanag"></a>
+  <table width="100%" border=0 cellspacing=0>
+    <tr class="headline">
+      <td>
+        <p class="item">&nbsp;Texture Management</p>
+      </td>
+      <td align=right>
+        <font size=-2>tiglari&nbsp;-&nbsp;02 Mar 2001</font>
+      </td>
+      <td width="1%" align=right nowrap>
+        &nbsp;&nbsp;[&nbsp;<a href="#__top__">Top</a>&nbsp;]&nbsp;
+      </td>
+    </tr>
+  </table>
+  <table border=0 width="100%" cellspacing=10><tr><td>
+<p>There are currently three basic ways of manipulating textures
+on patches, dragging, a dialog box, and projection.  For
+dragging, drag on a point with the 'S' key depressed.  Not
+much will seem to happen, but when you stop dragging,
+the texture will be 'pulled' in the direction you dragged.
+</p><p>If you drag again and look closely in the message window at
+the bottom left of the screen while dragging, you'll see
+numbers, these are the texture coordinates of the point.
+In patches &amp; quilts, texture coordinates are 'OpenGL style';
+one corner of the basic texture tile is (0,0), the opposite
+(1,1).  Note that a patch where the far corner is (2,2), and the
+other coordinates correspondingly doubled, will have the texture
+scale <strong>reduced by half</strong>, since four tiles of
+texture will be squeezed into the patch instead of the one.
+</p><p>As with point dragging, you can hold down combinations of Shift
+and Alt to drag the texture CP's or rows, columns or the whole
+patch/quilt.
+</p><p>Then on the Control Point RMB menu there's an item Texture
+Coordinates; here you can enter them in numerically, with options
+to extend the resulting change to the row, column or whole
+patch/quilt.  This is functionally the same as dragging.
+</p><p>Then finally, if a face is tagged, you can project the texture
+of the patch from or to the tagged face.  This is a 'flat'
+projection, so it won't look too good on seriously curved patches
+(but would work fine for something like a buckled or warped
+plate on a floor or wall).
+</p>
+  </td></tr></table>
+  <br>
+
+<br>
+
+<table width="100%" border=0 cellspacing=0>
+  <tr class="headline">
+    <td width="99%" align=center>
+      <p class="sm">
+        Copyright (c) 2009, GNU General Public License by The QuArK (Quake Army Knife) Community - <a target="_blank" href="http://quark.sourceforge.net/">http://quark.sourceforge.net/</a><br>
+      </p>
+    </td>
+    <td width="1%" align=right nowrap>
+      &nbsp;[&nbsp;<span class="navenable"><a href="maped.duplicators.instance.html">Prev</a></span>&nbsp;-&nbsp;<a href="#__top__">Top</a>&nbsp;-&nbsp;<span class="navenable"><a href="maped.builders.html">Next</a></span>&nbsp;]&nbsp;
+    </td>
+  </tr>
+</table>
+</body>
+</html>
