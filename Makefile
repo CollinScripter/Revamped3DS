@@ -26,13 +26,14 @@ include $(DEVKITARM)/3ds_rules
 #     - icon.png
 #     - <libctru folder>/default_icon.png
 #---------------------------------------------------------------------------------
-TARGET		:=	CTRQuake
+TARGET		:=	Revamped
 BUILD		:=	build
 SOURCES		:=	source
 APP_AUTHOR := MasterFeizz-Flaming Ice-TCPixel
 APP_TITLE := Halo Revamped
 APP_DESCRIPTION := Halo Style Quake Mod
 
+NO_SMDH		:=	nope
 DATA		:=	data
 INCLUDES	:=	include
 
@@ -208,8 +209,15 @@ $(BUILD):
 #---------------------------------------------------------------------------------
 clean:
 	@echo clean ...
-	@rm -fr $(BUILD) $(TARGET).3dsx $(OUTPUT).smdh $(TARGET).elf
+	@rm -fr $(BUILD) $(TARGET).3dsx $(OUTPUT).smdh $(TARGET).elf $(TARGET).cia
 
+#---------------------------------------------------------------------------------
+cia: $(BUILD)
+	@$(MAKE) --no-print-directory -C $(BUILD) -f $(CURDIR)/Makefile cia
+
+#---------------------------------------------------------------------------------
+3dsx: $(BUILD)
+	@$(MAKE) --no-print-directory -C $(BUILD) -f $(CURDIR)/Makefile 3dsx
 
 #---------------------------------------------------------------------------------
 else
@@ -219,12 +227,24 @@ DEPENDS	:=	$(OFILES:.o=.d)
 #---------------------------------------------------------------------------------
 # main targets
 #---------------------------------------------------------------------------------
+all: $(OUTPUT).cia $(OUTPUT).3dsx
+
+3dsx: $(OUTPUT).3dsx
+
+cia: $(OUTPUT).cia
+
 ifeq ($(strip $(NO_SMDH)),)
 $(OUTPUT).3dsx	:	$(OUTPUT).elf $(OUTPUT).smdh
 else
 $(OUTPUT).3dsx	:	$(OUTPUT).elf
 endif
 $(OUTPUT).elf	:	$(OFILES)
+
+$(OUTPUT).cia   :   $(OUTPUT).elf
+		@makerom	-f cia -o $@ -elf $(OUTPUT).elf \
+						-rsf $(TOPDIR)/cia.rsf -banner $(TOPDIR)/banner.bin -icon $(TOPDIR)/icon.bin \
+						-exefslogo -target t
+		@echo "built ... $(notdir $@)"
 
 #---------------------------------------------------------------------------------
 # you need a rule like this for each extension you use as binary data

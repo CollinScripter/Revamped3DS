@@ -1,13 +1,13 @@
 # COPIED FROM RINNEGATAMANTE
 BasicInfo:
-  Title                   : "ctrQuake"
+  Title                   : "Halo-Revamped"
   CompanyCode             : "00"
-  ProductCode             : "CTR-P-QUAK"
-  ContentType             : Application
+  ProductCode             : "CTR-P-HALO"
+  ContentType             : Application # Application / SystemUpdate / Manual / Child / Trial
   Logo                    : Nintendo # Nintendo / Licensed / Distributed / iQue / iQueForSystem
 
 TitleInfo:
-  UniqueId                : 0xFF123
+  UniqueId                : 0x371EB
   Category                : Application
   
 CardInfo:
@@ -62,9 +62,10 @@ AccessControlInfo:
   
   ReleaseKernelMajor            : "02"
   ReleaseKernelMinor            : "33" 
-  MemoryType                    : Application
+  MemoryType                    : Application # Application / System / Base
   HandleTableSize: 512
   
+  SystemMode                    : 80MB
   SystemModeExt                 : Legacy # Legacy(Default)/124MB/178MB  Legacy:Use Old3DS SystemMode
   CpuSpeed                      : 804MHz # 268MHz(Default)/804MHz
   EnableL2Cache                 : true # false(default)/true
