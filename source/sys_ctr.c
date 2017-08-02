@@ -350,13 +350,30 @@ int main (int argc, char **argv)
 
 	static quakeparms_t    parms;
 
+	u64 id;
+	APT_GetProgramID(&id);
 	if(isN3DS) {
 		parms.membase = malloc(87*1024*1024);
 		parms.memsize = 87*1024*1024;
-	} else {
+	} else if (id == 0x000400000371eb00) {
 		parms.membase = malloc(43*1024*1024);
 		parms.memsize = 43*1024*1024;
+	} else {
+		printf("Running in low memory mode\nIf possible, use the CIA\nPress any button to continue\n");
+ 	 	gfxFlushBuffers();
+  	 	gfxSwapBuffers();
+   		gspWaitForVBlank();
+		/*Yeah, this is most likely the wrong way to do this, but whatever*/
+		while (1) {
+			hidScanInput();
+			if (hidKeysDown()) {
+				break;
+			}
+		}
+		parms.membase = malloc(27*1024*1024);
+		parms.memsize = 27*1024*1024;
 	}
+
 	parms.basedir = ".";
 
 	COM_InitArgv (argc, argv);

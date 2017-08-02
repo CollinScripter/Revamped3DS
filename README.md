@@ -30,6 +30,6 @@ Tevin Dahl (TCPixel) - Halo Revamped Mod
 Felipe Izzo (MasterFeizz) - ctrQuake developer  
 Rinnegatamante - Sound enhancements  
 ## Thanks to
-Id Software - Source code of Quake
-
-Smealum and other developers of libctru
+Id Software - Source code of Quake  
+Smealum and other developers of libctru  
+TuxSH and J-D-K  
