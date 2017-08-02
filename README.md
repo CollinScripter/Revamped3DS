@@ -1,12 +1,15 @@
-# ctrQuake
+# Halo Revamped 3DS
+Halo Revamped is a Halo Style Quake Mod using ctrQuake
 ctrQuake is a free, unofficial port of Quake for the Nintendo 3DS.
 
 ## Installation guide
 - Follow the guide for running homebrew at [http://smealum.github.io/3ds/](http://smealum.github.io/3ds/)
-- Download the latest `ctrQuake.zip` from the [releases page](https://github.com/masterfeizz/ctrQuake/releases)
-- Extract `ctrQuake.zip` to the root of your SD card
-- Launch ctrQuake from the Homebrew Launcher
+- Download the latest `Revamped.zip` from the [releases page](https://github.com/CollinScripter/Revamped3DS/releases)
+- Extract `Revamped.zip` to the root of your SD card
+- Install `Revamped.cia` using [FBI](https://github.com/Steveice10/FBI/releases)
+- Launch Halo Revamped from the Home Menu
 
+<!--
 ## Default keybinds
 - L Trigger: Jump
 - R Trigger: Shoot
@@ -16,20 +19,15 @@ ctrQuake is a free, unofficial port of Quake for the Nintendo 3DS.
 - CirclePad: Movement
 - C-Button: Camera controls (N3DS only)
 
-## Playing the full game
-The released version of ctrQuake only includes the shareware episode. To play the full game you must copy the pak1.pak from your copy of the game and place it in the id1 folder inside ctrQuake
-
-## Mods
-To use mods: place mod folder in the same directory as ctrQuake.3dsx and create a shortcut with the launch parameters. See tf.xml as example
-
 ## TODO List
 - [ ] Better input handling
 - [x] Networking
 - [ ] Hardware rendering
 - [x] Better sound processing ( Thanks to Rinnegatamante )
-
+-->
 ## Credits
-Felipe Izzo (MasterFeizz) - Main developer
+Tevin Dahl (TCPixel) - Halo Revamped Mod
+Felipe Izzo (MasterFeizz) - ctrQuake developer
 Rinnegatamante - Sound enhancements
 ## Thanks to
 Id Software - Source code of Quake
