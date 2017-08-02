@@ -305,12 +305,14 @@ void M_Main_Draw (void)
 	int		f;
 	qpic_t	*p;
 	int offset = 110;
+	char ver[5]; 
 
 	//M_DrawTransPic (16, 4, Draw_CachePic ("gfx/qplaque.lmp") );
 	//p = Draw_CachePic ("gfx/ttl_main.lmp");
 	//M_DrawTransPic ( (320-p->width)/2, 4, p);
-
-	M_Print (-25, 5, "Ver 1.1");
+	
+	sprintf(ver, "Ver %g", VERSION);
+	M_Print (-25, 5, ver);
 	M_DrawTextBox (2, offset+24+(m_main_cursor*20), 15, 1);
 
 	M_Print(10, offset+32, "Multiplayer");
