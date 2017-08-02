@@ -204,20 +204,13 @@ all: $(BUILD)
 
 $(BUILD):
 	@[ -d $@ ] || mkdir -p $@
+	@echo "#define GITVERSION \"$(shell git rev-parse --short HEAD)\"" > $(SOURCES)/gitversion.h 
 	@$(MAKE) --no-print-directory -C $(BUILD) -f $(CURDIR)/Makefile
 
 #---------------------------------------------------------------------------------
 clean:
 	@echo clean ...
-	@rm -fr $(BUILD) $(TARGET).3dsx $(OUTPUT).smdh $(TARGET).elf $(TARGET).cia
-
-#---------------------------------------------------------------------------------
-cia: $(BUILD)
-	@$(MAKE) --no-print-directory -C $(BUILD) -f $(CURDIR)/Makefile cia
-
-#---------------------------------------------------------------------------------
-3dsx: $(BUILD)
-	@$(MAKE) --no-print-directory -C $(BUILD) -f $(CURDIR)/Makefile 3dsx
+	@rm -fr $(BUILD) $(TARGET).3dsx $(OUTPUT).smdh $(TARGET).elf $(TARGET).cia $(SOURCES)/gitversion.h
 
 #---------------------------------------------------------------------------------
 else
@@ -228,10 +221,6 @@ DEPENDS	:=	$(OFILES:.o=.d)
 # main targets
 #---------------------------------------------------------------------------------
 all: $(OUTPUT).cia $(OUTPUT).3dsx
-
-3dsx: $(OUTPUT).3dsx
-
-cia: $(OUTPUT).cia
 
 ifeq ($(strip $(NO_SMDH)),)
 $(OUTPUT).3dsx	:	$(OUTPUT).elf $(OUTPUT).smdh

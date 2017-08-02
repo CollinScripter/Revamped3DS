@@ -6,6 +6,7 @@ build/
 Revamped.3dsx
 Revamped.elf
 Revamped.cia
+source/gitversion.h
 
 # =========================
 # Operating System Files

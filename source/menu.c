@@ -18,6 +18,7 @@ Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA  02111-1307, USA.
 
 */
 #include "quakedef.h"
+#include "gitversion.h"
 
 #ifdef _WIN32
 #include "winquake.h"
@@ -305,7 +306,7 @@ void M_Main_Draw (void)
 	int		f;
 	qpic_t	*p;
 	int offset = 110;
-	char ver[5]; 
+	char ver[9]; 
 
 	//M_DrawTransPic (16, 4, Draw_CachePic ("gfx/qplaque.lmp") );
 	//p = Draw_CachePic ("gfx/ttl_main.lmp");
@@ -313,6 +314,7 @@ void M_Main_Draw (void)
 	
 	sprintf(ver, "Ver %g", VERSION);
 	M_Print (-25, 5, ver);
+	M_Print (300, 5, GITVERSION);
 	M_DrawTextBox (2, offset+24+(m_main_cursor*20), 15, 1);
 
 	M_Print(10, offset+32, "Multiplayer");
