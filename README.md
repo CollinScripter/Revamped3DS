@@ -1,6 +1,6 @@
 # Halo Revamped 3DS
-Halo Revamped is a Halo Style Quake Mod using ctrQuake
-ctrQuake is a free, unofficial port of Quake for the Nintendo 3DS.
+Halo Revamped is a Halo Style Quake Mod using ctrQuake  
+ctrQuake is a free, unofficial port of Quake for the Nintendo 3DS.  
 
 ## Installation guide
 - Follow the guide for running homebrew at [http://smealum.github.io/3ds/](http://smealum.github.io/3ds/)
@@ -26,9 +26,9 @@ ctrQuake is a free, unofficial port of Quake for the Nintendo 3DS.
 - [x] Better sound processing ( Thanks to Rinnegatamante )
 -->
 ## Credits
-Tevin Dahl (TCPixel) - Halo Revamped Mod
-Felipe Izzo (MasterFeizz) - ctrQuake developer
-Rinnegatamante - Sound enhancements
+Tevin Dahl (TCPixel) - Halo Revamped Mod  
+Felipe Izzo (MasterFeizz) - ctrQuake developer  
+Rinnegatamante - Sound enhancements  
 ## Thanks to
 Id Software - Source code of Quake
 
