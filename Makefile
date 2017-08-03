@@ -33,7 +33,7 @@ APP_AUTHOR := MasterFeizz-Flaming Ice-TCPixel
 APP_TITLE := Halo Revamped
 APP_DESCRIPTION := Halo Style Quake Mod
 
-NO_SMDH		:=	nope
+#NO_SMDH		:=	nope
 DATA		:=	data
 INCLUDES	:=	include
 

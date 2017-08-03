@@ -27,6 +27,7 @@ ctrQuake is a free, unofficial port of Quake for the Nintendo 3DS.
 -->
 ## Credits
 Tevin Dahl (TCPixel) - Halo Revamped Mod  
+Flaming Ice - Halo Solitude  
 Felipe Izzo (MasterFeizz) - ctrQuake developer  
 Rinnegatamante - Sound enhancements  
 ## Thanks to

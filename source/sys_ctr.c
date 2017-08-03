@@ -24,6 +24,7 @@ Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA  02111-1307, USA.
 
 #include <3ds.h>
 #include <dirent.h>
+#include <time.h>
 #include "ctr.h"
 #include "touch_ctr.h"
 
@@ -330,7 +331,7 @@ void Sys_Init(void)
 
 int main (int argc, char **argv)
 {
-	float		time, oldtime;
+	//float		time, oldtime;
 
 	APT_CheckNew3DS(&isN3DS);
 	if(isN3DS)
@@ -339,7 +340,7 @@ int main (int argc, char **argv)
 	gfxInit(GSP_RGB565_OES,GSP_RGB565_OES,false);
 	gfxSetDoubleBuffering(GFX_TOP, false);
 	gfxSetDoubleBuffering(GFX_BOTTOM, false);
-	//gfxSet3D(true);
+	//gfxSet3D(true); /*Issue #13*/
 	gfxSet3D(false);
 	consoleInit(GFX_BOTTOM, NULL);
 
@@ -358,6 +359,10 @@ int main (int argc, char **argv)
 	} else if (id == 0x000400000371eb00) {
 		parms.membase = malloc(43*1024*1024);
 		parms.memsize = 43*1024*1024;
+//TEMP DELAY - See Issue #12
+		long int netDelay = time(0) + 4; //4 second delay, this is not the right way to do this
+    	while (time(0) < netDelay);
+//END TEMP
 	} else {
 		printf("Running in low memory mode\nIf possible, use the CIA\nPress any button to continue\n");
  	 	gfxFlushBuffers();
@@ -383,12 +388,14 @@ int main (int argc, char **argv)
 	Host_Init (&parms);
 
 	Sys_Init();
+	
+	float		time, oldtime;	
 
 	oldtime = Sys_FloatTime() -0.1;
 	while (aptMainLoop())
 	{
 		time = Sys_FloatTime();
-		//separation_distance = osGet3DSliderState();
+		//separation_distance = osGet3DSliderState(); /*Issue 13*/
 		separation_distance = 0;
 		Host_Frame (time - oldtime);
 		oldtime = time;
