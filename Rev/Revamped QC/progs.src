@@ -1,0 +1,88 @@
+// First non-comment character must be # to use
+// "new style" progs.src
+#pragma PROGS_DAT ../qwprogs.dat
+
+// uncomment based on desired compile
+#define NETQUAKE
+// #define FTE
+#define MONSTERS
+#define REPLACEMENTS
+
+// compile options
+#ifdef NETQUAKE
+// if netquake, use progs.dat file name
+#pragma PROGS_DAT ../progs.dat
+#endif
+
+#ifdef FTE
+// if FTE, use FTE style progs and use fteprogs.dat file name
+#pragma target fte
+#pragma PROGS_DAT fteprogs.dat
+#endif
+
+// includes
+#include "defs.qc"
+#include "sol_defs.qc"
+#include "engine.qc"
+
+// frikbot
+#include "frikbot/bot.qc"
+#include "frikbot/bot_way.qc"
+#include "frikbot/bot_fight.qc"
+#include "frikbot/bot_ai.qc"
+#include "frikbot/bot_misc.qc"
+#include "frikbot/bot_phys.qc"
+#include "frikbot/bot_move.qc"
+#include "frikbot/bot_ed.qc"
+
+#include "subs.qc"
+#include "effects.qc"
+#include "obituary.qc"
+#include "combat.qc"
+#include "items.qc"
+#include "proj.qc"
+#include "weapons.qc"
+#include "NeedleAI.qc"
+
+
+
+#include "world.qc"
+#include "ctf.qc"
+#include "client.qc"
+#include "spectate.qc"
+#include "player.qc"
+#include "doors.qc"
+#include "buttons.qc"
+#include "triggers.qc"
+#include "plats.qc"
+#include "misc.qc"
+
+#include "sol_items.qc"
+#include "sol_misc.qc"
+
+#ifdef MONSTERS
+#include "fight.qc"
+#include "ai.qc"
+#include "monsters.qc"
+#include "quakemons/dog.qc"
+#include "quakemons/soldier.qc"
+#include "quakemons/enforcer.qc"
+#include "quakemons/ogre.qc"
+#include "quakemons/wizard.qc"
+#include "quakemons/demon.qc"
+#include "quakemons/knight.qc"
+#include "quakemons/hknight.qc"
+#include "quakemons/shalrath.qc"
+#include "quakemons/shambler.qc"
+#include "quakemons/fish.qc"
+#include "quakemons/tarbaby.qc"
+#include "quakemons/zombie.qc"
+#include "quakemons/boss.qc"
+#include "quakemons/oldone.qc"
+#else
+#include "nomonst.qc"
+#endif
+
+#ifdef REPLACEMENTS
+#include "replace.qc"
+#endif 

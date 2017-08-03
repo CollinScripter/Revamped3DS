@@ -1,0 +1,4 @@
+warning: primedefs.qc:38:unkown directive define
+warning: subs.qc:25:SetMovedir: not all control paths return a value
+error: effects.qc:44:Unknown value "FOV_DEFAULT"
+error: effects.qc:158:= is not a name

@@ -1,0 +1,4 @@
+plaza
+pit
+maze
+longest
