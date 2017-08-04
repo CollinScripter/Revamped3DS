@@ -342,6 +342,7 @@ int main (int argc, char **argv)
 	gfxSetDoubleBuffering(GFX_BOTTOM, false);
 	//gfxSet3D(true); /*Issue #13*/
 	gfxSet3D(false);
+	acInit();
 	consoleInit(GFX_BOTTOM, NULL);
 
 	#ifdef _3DS_CIA
@@ -353,7 +354,7 @@ int main (int argc, char **argv)
 
 	u64 id;
 	APT_GetProgramID(&id);
-	if(isN3DS & id == 0x000400000371eb00) {
+	if(isN3DS && id == 0x000400000371eb00) {
 		parms.membase = malloc(87*1024*1024);
 		parms.memsize = 87*1024*1024;
 	} else if (isN3DS) {
@@ -362,15 +363,21 @@ int main (int argc, char **argv)
 	} else if (id == 0x000400000371eb00) {
 		parms.membase = malloc(43*1024*1024);
 		parms.memsize = 43*1024*1024;
-		//TEMP DELAY - See Issue #12
-		long int netDelay = time(0) + 6; //6 second delay, this is not the right way to do this
-    	while (time(0) < netDelay);
-		//END TEMP
+		u32 status = 0;
+		printf("Waiting for network...\nPress any button to skip...\n");
+		gfxFlushBuffers();
+  	 	gfxSwapBuffers();
+		while (status == 0) {
+			ACU_GetWifiStatus(&status);
+			hidScanInput();
+			if (hidKeysDown()) {
+				break;
+			}
+		}
 	} else {
 		printf("Running in low memory mode\nIf possible, use the CIA\nPress any button to continue\n");
  	 	gfxFlushBuffers();
   	 	gfxSwapBuffers();
-   		gspWaitForVBlank();
 		/*Yeah, this is most likely the wrong way to do this, but whatever*/
 		while (1) {
 			hidScanInput();
@@ -403,6 +410,7 @@ int main (int argc, char **argv)
 		Host_Frame (time - oldtime);
 		oldtime = time;
 	}
+	acExit();
 	gfxExit();
 	return 0;
 }
