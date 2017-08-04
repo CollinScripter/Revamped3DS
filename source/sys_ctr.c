@@ -353,16 +353,19 @@ int main (int argc, char **argv)
 
 	u64 id;
 	APT_GetProgramID(&id);
-	if(isN3DS) {
+	if(isN3DS & id == 0x000400000371eb00) {
 		parms.membase = malloc(87*1024*1024);
 		parms.memsize = 87*1024*1024;
+	} else if (isN3DS) {
+		parms.membase = malloc(48*1024*1024);
+		parms.memsize = 48*1024*1024;
 	} else if (id == 0x000400000371eb00) {
 		parms.membase = malloc(43*1024*1024);
 		parms.memsize = 43*1024*1024;
-//TEMP DELAY - See Issue #12
-		long int netDelay = time(0) + 4; //4 second delay, this is not the right way to do this
+		//TEMP DELAY - See Issue #12
+		long int netDelay = time(0) + 6; //6 second delay, this is not the right way to do this
     	while (time(0) < netDelay);
-//END TEMP
+		//END TEMP
 	} else {
 		printf("Running in low memory mode\nIf possible, use the CIA\nPress any button to continue\n");
  	 	gfxFlushBuffers();
