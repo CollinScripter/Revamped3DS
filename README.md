@@ -33,4 +33,4 @@ Rinnegatamante - Sound enhancements
 ## Thanks to
 Id Software - Source code of Quake  
 Smealum and other developers of libctru  
-TuxSH and J-D-K  
+TuxSH, J-D-K, PabloMK7  

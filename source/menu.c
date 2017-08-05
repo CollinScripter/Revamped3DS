@@ -1192,6 +1192,10 @@ void M_AdjustSliders (int dir)
 		Cvar_SetValue ("crosshair", !crosshair.value);
 		break;
 
+	case 14:
+		Cvar_SetValue ("threedimensions", !threedimensions.value);
+		break;
+
 #ifdef _WIN32
 	case 13:	// _windowed_mouse
 		Cvar_SetValue ("_windowed_mouse", !_windowed_mouse.value);
@@ -1307,6 +1311,9 @@ void M_Options_Draw (void)
 	M_Print(16, 136, "             Crosshair");
    	M_DrawCheckbox(220, 136, crosshair.value);
 
+	M_Print(16, 144, "                    3D");
+   	M_DrawCheckbox(220, 144, threedimensions.value);
+
 	if (vid_menudrawfn)
 		M_Print (16, 128, "         Video Options");
 
@@ -1366,7 +1373,7 @@ void M_Options_Key (int k)
 		S_LocalSound ("misc/menu1.wav");
 		options_cursor--;
 		if (options_cursor < 0)
-			options_cursor = OPTIONS_ITEMS-1;
+			options_cursor = OPTIONS_ITEMS;
 		break;
 
 	case K_DOWNARROW:

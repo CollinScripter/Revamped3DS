@@ -213,6 +213,10 @@ clean:
 	@rm -fr $(BUILD) $(TARGET).3dsx $(OUTPUT).smdh $(TARGET).elf $(TARGET).cia $(SOURCES)/gitversion.h
 
 #---------------------------------------------------------------------------------
+run: $(BUILD)
+	@citra $(TARGET).elf > /dev/null 2>&1 || :
+
+#---------------------------------------------------------------------------------
 else
 
 DEPENDS	:=	$(OFILES:.o=.d)
@@ -220,7 +224,7 @@ DEPENDS	:=	$(OFILES:.o=.d)
 #---------------------------------------------------------------------------------
 # main targets
 #---------------------------------------------------------------------------------
-all: $(OUTPUT).cia $(OUTPUT).3dsx
+all: $(OUTPUT).3dsx $(OUTPUT).cia
 
 ifeq ($(strip $(NO_SMDH)),)
 $(OUTPUT).3dsx	:	$(OUTPUT).elf $(OUTPUT).smdh
@@ -229,9 +233,9 @@ $(OUTPUT).3dsx	:	$(OUTPUT).elf
 endif
 $(OUTPUT).elf	:	$(OFILES)
 
-$(OUTPUT).cia   :   $(OUTPUT).elf
+$(OUTPUT).cia   :   $(OUTPUT).elf $(OUTPUT).smdh 
 		@makerom	-f cia -o $@ -elf $(OUTPUT).elf \
-						-rsf $(TOPDIR)/cia.rsf -banner $(TOPDIR)/banner.bin -icon $(TOPDIR)/icon.bin \
+						-rsf $(TOPDIR)/cia.rsf -banner $(TOPDIR)/banner.bin -icon $(TOPDIR)/$(TARGET).smdh -logo $(TOPDIR)/logo.bcma.lz \
 						-exefslogo -target t
 		@echo "built ... $(notdir $@)"
 

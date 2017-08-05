@@ -32,11 +32,13 @@ touchPosition oldtouch, touch;
 
 cvar_t  csensitivity = {"csensitivity","3", true};
 cvar_t  circlepadsensitivity = {"circlepadsensitivity","10.0", true};
+cvar_t  threedimensions = {"threedimensions","1", true};
 
 void IN_Init (void)
 {
   Cvar_RegisterVariable (&csensitivity);
   Cvar_RegisterVariable (&circlepadsensitivity);
+  Cvar_RegisterVariable (&threedimensions);
 }
 
 void IN_Shutdown (void)

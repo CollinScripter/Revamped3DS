@@ -318,6 +318,7 @@ void Sys_DefaultConfig(void)
 	Cbuf_AddText ("lookstrafe \"1.000000\"\n");
 	Cbuf_AddText ("lookspring \"0.000000\"\n");
 	Cbuf_AddText ("gamma \"0.700000\"\n");
+	Cbuf_AddText ("threedimensions \"1\"\n");
 
 }
 
@@ -331,8 +332,6 @@ void Sys_Init(void)
 
 int main (int argc, char **argv)
 {
-	//float		time, oldtime;
-
 	APT_CheckNew3DS(&isN3DS);
 	if(isN3DS)
 		osSetSpeedupEnable(true);
@@ -340,10 +339,9 @@ int main (int argc, char **argv)
 	gfxInit(GSP_RGB565_OES,GSP_RGB565_OES,false);
 	gfxSetDoubleBuffering(GFX_TOP, false);
 	gfxSetDoubleBuffering(GFX_BOTTOM, false);
-	//gfxSet3D(true); /*Issue #13*/
-	gfxSet3D(false);
-	acInit();
+	gfxSet3D(true); 
 	consoleInit(GFX_BOTTOM, NULL);
+	acInit();
 
 	#ifdef _3DS_CIA
 		if(chdir("sdmc:/3ds/Revamped") != 0)
@@ -375,6 +373,7 @@ int main (int argc, char **argv)
 			}
 		}
 	} else {
+		printf("%g\n", threedimensions.value);
 		printf("Running in low memory mode\nIf possible, use the CIA\nPress any button to continue\n");
  	 	gfxFlushBuffers();
   	 	gfxSwapBuffers();
@@ -399,14 +398,14 @@ int main (int argc, char **argv)
 
 	Sys_Init();
 	
-	float		time, oldtime;	
+	float		time, oldtime;
 
 	oldtime = Sys_FloatTime() -0.1;
 	while (aptMainLoop())
 	{
+		if (threedimensions.value == 0) {separation_distance = 0;}
+		else {separation_distance = osGet3DSliderState();}
 		time = Sys_FloatTime();
-		//separation_distance = osGet3DSliderState(); /*Issue 13*/
-		separation_distance = 0;
 		Host_Frame (time - oldtime);
 		oldtime = time;
 	}
