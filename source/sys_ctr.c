@@ -373,7 +373,6 @@ int main (int argc, char **argv)
 			}
 		}
 	} else {
-		printf("%g\n", threedimensions.value);
 		printf("Running in low memory mode\nIf possible, use the CIA\nPress any button to continue\n");
  	 	gfxFlushBuffers();
   	 	gfxSwapBuffers();
