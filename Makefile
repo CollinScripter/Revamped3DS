@@ -37,6 +37,9 @@ APP_DESCRIPTION := Halo Style Quake Mod
 DATA		:=	data
 INCLUDES	:=	include
 
+VERSION_MAJOR := 1
+VERSION_MINOR := 1
+VERSION_MICRO := 1
 #---------------------------------------------------------------------------------
 # options for code generation
 #---------------------------------------------------------------------------------
@@ -235,7 +238,11 @@ $(OUTPUT).elf	:	$(OFILES)
 
 $(OUTPUT).cia   :   $(OUTPUT).elf $(OUTPUT).smdh 
 		@makerom	-f cia -o $@ -elf $(OUTPUT).elf \
-						-rsf $(TOPDIR)/cia.rsf -banner $(TOPDIR)/banner.bin -icon $(TOPDIR)/$(TARGET).smdh -logo $(TOPDIR)/logo.bcma.lz \
+						-rsf $(TOPDIR)/cia.rsf \
+						-banner $(TOPDIR)/banner.bin \
+						-icon $(TOPDIR)/$(TARGET).smdh \
+						-logo $(TOPDIR)/logo.bcma.lz \
+						-ver "$$(($(VERSION_MAJOR)*1024+$(VERSION_MINOR)*16+$(VERSION_MICRO)))" \
 						-exefslogo -target t
 		@echo "built ... $(notdir $@)"
 
