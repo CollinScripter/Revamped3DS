@@ -55,7 +55,7 @@ void Touch_Init(){
   //Load overlay files from sdmc for easier testing
   FILE *texture = fopen("touchOverlay.bin", "rb");
   if(!texture)
-    Sys_Error("Could not open touchpadOverlay.bin\n");
+    Sys_Error("Could not open touchOverlay.bin\n");
   fseek(texture, 0, SEEK_END);
   int size = ftell(texture);
   fseek(texture, 0, SEEK_SET);

@@ -342,10 +342,11 @@ int main (int argc, char **argv)
 	gfxSet3D(true); 
 	consoleInit(GFX_BOTTOM, NULL);
 	acInit();
+	romfsInit();
 
 	#ifdef _3DS_CIA
-		if(chdir("sdmc:/3ds/Revamped") != 0)
-			Sys_Error("Could not find folder: sdmc:/3ds/Revamped");
+		if(chdir("romfs:/3ds/Revamped") != 0)
+			Sys_Error("Could not find folder: romfs:/3ds/Revamped");
 	#endif
 
 	static quakeparms_t    parms;

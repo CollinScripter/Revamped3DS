@@ -306,7 +306,7 @@ void M_Main_Draw (void)
 	int		f;
 	qpic_t	*p;
 	int offset = 110;
-	char ver[9]; 
+	char ver[12]; 
 
 	//M_DrawTransPic (16, 4, Draw_CachePic ("gfx/qplaque.lmp") );
 	//p = Draw_CachePic ("gfx/ttl_main.lmp");

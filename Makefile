@@ -36,6 +36,7 @@ APP_DESCRIPTION := Halo Style Quake Mod
 #NO_SMDH		:=	nope
 DATA		:=	data
 INCLUDES	:=	include
+ROMFS		:=	romfs
 
 VERSION_MAJOR := 1
 VERSION_MINOR := 1
@@ -200,6 +201,10 @@ ifeq ($(strip $(NO_SMDH)),)
 	export _3DSXFLAGS += --smdh=$(CURDIR)/$(TARGET).smdh
 endif
 
+ifneq ($(ROMFS),)
+	export _3DSXFLAGS += --romfs=$(CURDIR)/$(ROMFS)
+endif
+
 .PHONY: $(BUILD) clean all
 
 #---------------------------------------------------------------------------------
@@ -213,11 +218,11 @@ $(BUILD):
 #---------------------------------------------------------------------------------
 clean:
 	@echo clean ...
-	@rm -fr $(BUILD) $(TARGET).3dsx $(OUTPUT).smdh $(TARGET).elf $(TARGET).cia $(SOURCES)/gitversion.h
+	@rm -fr $(BUILD) $(TARGET).3dsx $(OUTPUT).smdh $(TARGET).elf $(TARGET).cia $(SOURCES)/gitversion.h $(TARGET).romfs
 
 #---------------------------------------------------------------------------------
 run: $(BUILD)
-	@citra $(TARGET).elf > /dev/null 2>&1 || :
+	@citra $(TARGET).3dsx > /dev/null 2>&1 || :
 
 #---------------------------------------------------------------------------------
 else
@@ -237,7 +242,9 @@ endif
 $(OUTPUT).elf	:	$(OFILES)
 
 $(OUTPUT).cia   :   $(OUTPUT).elf $(OUTPUT).smdh 
+		@3dstool -ctf romfs "$(TOPDIR)/$(TARGET).romfs" --romfs-dir "$(TOPDIR)/romfs"
 		@makerom	-f cia -o $@ -elf $(OUTPUT).elf \
+						-romfs $(TOPDIR)/$(TARGET).romfs \
 						-rsf $(TOPDIR)/cia.rsf \
 						-banner $(TOPDIR)/banner.bin \
 						-icon $(TOPDIR)/$(TARGET).smdh \
