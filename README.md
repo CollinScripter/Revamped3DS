@@ -1,3 +1,6 @@
+# This is created by TCPixel
+I am only mirroring it, along with a few modifications, such as O3DS support
+
 # Halo Revamped 3DS
 Halo Revamped is a Halo Style Quake Mod using ctrQuake  
 ctrQuake is a free, unofficial port of Quake for the Nintendo 3DS.  
