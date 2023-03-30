@@ -1,8 +1,9 @@
-# This is created by TCPixel
-I am only mirroring it, along with a few modifications, such as O3DS support
+# Check out RenewedSolitude3DS instead
+[Renewed Solitude](https://github.com/ArcadeJumpers/RenewedSolitude3DS) is an updated version of TCPixel's Halo Revamped for 3DS.
+
 
 # Halo Revamped 3DS
-Halo Revamped is a Halo Style Quake Mod using ctrQuake  
+Halo Revamped is a Halo Style Quake Mod using ctrQuake
 ctrQuake is a free, unofficial port of Quake for the Nintendo 3DS.  
 
 ## Installation guide
